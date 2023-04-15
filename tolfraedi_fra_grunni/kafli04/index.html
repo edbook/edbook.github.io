@@ -7,6 +7,10 @@
   <title>4. Lýsandi tölfræði &mdash; Tölfræði frá grunni 2023</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -339,7 +347,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">4. </span>Lýsandi tölfræði</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/tolfraedi_fra_grunni/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -504,7 +512,7 @@ Eingöngu er hægt að lýsa talnabreytum með miðju spannar.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. Látum <span class="math notranslate nohighlight">\(x_{\text{min}}\)</span> tákna þá minnstu
 og <span class="math notranslate nohighlight">\(x_{\text{max}}\)</span> þá stærstu. <em>Miðja spannar</em> er reiknuð með</p>
 <div class="math notranslate nohighlight" id="equation-eq-midjaspannar">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-eq-midjaspannar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Miðja spannar} = \frac{x_{\text{min}} + x_{\text{max}}}{2}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-midjaspannar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Miðja spannar} = \frac{x_{\text{min}} + x_{\text{max}}}{2}\]</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -514,7 +522,7 @@ og <span class="math notranslate nohighlight">\(x_{\text{max}}\)</span> þá st�
 <p class="admonition-title">Ábending</p>
 <p>Við höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15</span></code>. Finnið miðju
 spannar.</p>
-<p>Við finnum miðju spannar með jöfnu <a class="reference internal" href="#equation-eq-midjaspannar">4.1</a></p>
+<p>Við finnum miðju spannar með jöfnu <a class="reference internal" href="#equation-eq-midjaspannar">(1)</a></p>
 <div class="math notranslate nohighlight">
 \[\text{Miðja spannar} = \frac{x_{\text{min}} + x_{\text{max}}}{2} = \frac{1+15}{2} = 8\]</div>
 </div>
@@ -564,7 +572,7 @@ má nota til að lýsa öllum talnabreytum en einnig röðuðum flokkabreytum.</
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. Byrjum á að raða þessum mælingum upp í
 stærðarröð, frá minnsta gildi upp í stærsta gildið. Reiknum svo</p>
 <div class="math notranslate nohighlight" id="equation-eq-midgildi">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-eq-midgildi" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Sæti í röð} = 0.5 \cdot (n+1)\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-midgildi" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Sæti í röð} = 0.5 \cdot (n+1)\]</div>
 <p>Miðgildi er oft táknað með <span class="math notranslate nohighlight">\(M\)</span>. Það fer eftir því hvort <span class="math notranslate nohighlight">\(n\)</span>
 sé oddatala eða slétt tala hvernig við reiknum út miðgildið.</p>
 <ul class="simple">
@@ -585,7 +593,7 @@ miðgildið sjálft!</p>
 <p>Við höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15</span></code>. Finnið
 miðgildið.</p>
 <p>Mælingarnar eru í réttri röð, þ.e.a.s. frá lægsta gildi og upp í hæsta
-gildi. Við reiknum út sæti í röð með jöfnu <a class="reference internal" href="#equation-eq-midgildi">4.2</a>.</p>
+gildi. Við reiknum út sæti í röð með jöfnu <a class="reference internal" href="#equation-eq-midgildi">(2)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\text{Sæti í röð} = 0.5\cdot (n+1) = 0.5\cdot 8 = 4\]</div>
 <p>og þá fæst að miðgildið stendur í sæti númer 4. Miðgildið er því,
@@ -599,7 +607,7 @@ gildi. Við reiknum út sæti í röð með jöfnu <a class="reference internal"
 <p>Við höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15,</span> <span class="pre">17</span></code>. Finnið
 miðgildið.</p>
 <p>Mælingarnar eru í réttri röð, þ.e.a.s. frá lægsta gildi og upp í hæsta
-gildi. Við reiknum út sæti í röð með jöfnu <a class="reference internal" href="#equation-eq-midgildi">4.2</a>.</p>
+gildi. Við reiknum út sæti í röð með jöfnu <a class="reference internal" href="#equation-eq-midgildi">(2)</a>.</p>
 <div class="math notranslate nohighlight">
 \[\text{Sæti í röð} = 0.5 \cdot (n+1) = 0.5 \cdot 9 = 4.5\]</div>
 <p>miðgildið er því meðaltalið af tölunum sem standa í 4. og 5. sæti.
@@ -621,7 +629,7 @@ reikna fyrir talnabreytur.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. <em>Meðaltalið</em> fæst með því að leggja
 mælingarnar saman og deila í með fjölda mælinga.</p>
 <div class="math notranslate nohighlight" id="equation-eq-medaltal">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-eq-medaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} = \frac{x_1 + x_2 + ... x_n}{n} = \frac{\sum_{i=1}^{n} x_i}{n}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-medaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x} = \frac{x_1 + x_2 + ... x_n}{n} = \frac{\sum_{i=1}^{n} x_i}{n}\]</div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -650,7 +658,7 @@ fyrst gildið 1 þá 2 og svo öll heiltölugildi upp í <span class="math notra
 <p class="admonition-title">Ábending</p>
 <p>Við höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15</span></code>. Finnið
 meðaltal mælinganna.</p>
-<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-medaltal">4.3</a> og reiknum</p>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-medaltal">(3)</a> og reiknum</p>
 <div class="math notranslate nohighlight">
 \[\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n} = \frac{1 + 2 + 3 + 5 + 9 + 9 + 15}{7} = \frac{44}{7} = 6.29\]</div>
 </div>
@@ -659,7 +667,7 @@ meðaltal mælinganna.</p>
 <section id="vegi-mealtal">
 <span id="ss-vegidmedaltal"></span><h3><span class="section-number">4.2.6. </span>Vegið meðaltal<a class="headerlink" href="#vegi-mealtal" title="Permalink to this heading"></a></h3>
 <p>Þegar meðaltal er reiknað eins og hér að ofan, með jöfnu
-<a class="reference internal" href="#equation-eq-medaltal">4.3</a>, fá allar mælingarnar sama vægi. Í sumum tilfellum
+<a class="reference internal" href="#equation-eq-medaltal">(3)</a>, fá allar mælingarnar sama vægi. Í sumum tilfellum
 viljum við gefa mælingunum misjafnt vægi, þá er talað um <em>vegið
 meðaltal</em>. Vegið meðaltal er eingöngu reiknað fyrir talnabreytur.</p>
 <section id="vegi-mealtal-weighted-mean">
@@ -670,7 +678,7 @@ meðaltal</em>. Vegið meðaltal er eingöngu reiknað fyrir talnabreytur.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span> og vægi þeirra <span class="math notranslate nohighlight">\(w_1, w_2, ... w_n\)</span>.
 Vegið meðaltal er reiknað sem</p>
 <div class="math notranslate nohighlight" id="equation-eq-vegidmedaltal">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-eq-vegidmedaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_w = \frac{w_1 \cdot x_1 + w_2 \cdot x_2 + ... w_n \cdot x_n}{w_1 + w_2 + ... + w_n}
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-vegidmedaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{x}_w = \frac{w_1 \cdot x_1 + w_2 \cdot x_2 + ... w_n \cdot x_n}{w_1 + w_2 + ... + w_n}
 = \frac{\sum_{i=1}^{n} w_i \cdot x_i}{\sum_{i=1}^{n} w_i}\]</div>
 </div>
 </section>
@@ -728,7 +736,7 @@ einingar námskeiðin eru.</p>
 mismunandi einingafjölda námskeiðanna, þ.e.a.s. hver er vegin
 meðaleinkunn Gunnars landfræðinema?</p>
 <p>Til að reikna út vegið meðaltal einkunnanna notum við jöfnu
-<a class="reference internal" href="#equation-eq-vegidmedaltal">4.4</a>. <span class="math notranslate nohighlight">\(x\)</span>-in í jöfnunni eru einkunnirnar og
+<a class="reference internal" href="#equation-eq-vegidmedaltal">(4)</a>. <span class="math notranslate nohighlight">\(x\)</span>-in í jöfnunni eru einkunnirnar og
 <span class="math notranslate nohighlight">\(w\)</span>-in vægin (við viljum gefa einkunnunum misjafnt vægi eftir því
 hversu margar einingar námskeiðin eru). Við setjum inn í jöfnuna og fáum</p>
 <div class="math notranslate nohighlight">
@@ -755,12 +763,12 @@ svipuð og jöfn ef dreifingin er alveg samhverf.</p>
 <li><p>Ef dreifingin er samhverf er meðaltalið og miðgildið það sama.</p></li>
 <li><p>Ef dreifingin er skekkt til vinstri er meðaltalið lægra en miðgildið.</p></li>
 </ul>
-<p>Þetta má sjá á mynd <a class="reference internal" href="#g-medaltalmidgildi"><span class="std std-numref">4.1</span></a></p>
+<p>Þetta má sjá á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code></p>
 </div>
 <hr class="docutils" />
 <figure class="align-center" id="id18">
 <span id="g-medaltalmidgildi"></span><img alt="Samanburður á meðaltali og miðgildi" src="../_images/medaltal_midgildi.svg" /><figcaption>
-<p><span class="caption-number">Mynd 4.1: </span><span class="caption-text">Samanburður á meðaltali og miðgildi</span><a class="headerlink" href="#id18" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Samanburður á meðaltali og miðgildi</span><a class="headerlink" href="#id18" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Útlagar geta haft mikil áhrif á meðaltal. Hins vegar hafa þeir ekki
@@ -839,7 +847,7 @@ allar talnabreytur en einnig raðaðar flokkabreytur.</p>
 minnstu og <span class="math notranslate nohighlight">\(x_{\text{max}}\)</span> þá stærstu. <em>Spönn</em> gagnanna er
 reiknuð með</p>
 <div class="math notranslate nohighlight" id="equation-eq-sponn">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-eq-sponn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Spönn} = x_{\text{max}} - x_{\text{min}}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-sponn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\text{Spönn} = x_{\text{max}} - x_{\text{min}}\]</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -849,7 +857,7 @@ reiknuð með</p>
 <p class="admonition-title">Ábending</p>
 <p>Höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15.</span></code> Reiknið spönn
 mælinganna.</p>
-<p>Við reiknum spönn gagnanna með jöfnu <a class="reference internal" href="#equation-eq-sponn">4.5</a> og fáum</p>
+<p>Við reiknum spönn gagnanna með jöfnu <a class="reference internal" href="#equation-eq-sponn">(5)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[\text{Spönn} = x_{\text{max}} - x_{\text{min}} = 15 - 1 = 14\]</div>
 </div>
@@ -896,7 +904,7 @@ fyrir allar talnabreytur sem og raðaðar flokkabreytur.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. Byrjum á að raða mælingum upp í stærðarröð,
 frá lægsta gildinu upp í hæsta gildið. Reiknum svo</p>
 <div class="math notranslate nohighlight" id="equation-eq-fjordungsmork">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-eq-fjordungsmork" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-fjordungsmork" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{aligned}
 \text{$Q_1$ - sæti í röð:} &amp;= 0.25 \cdot (n+1) \\
 \text{$Q_2$ - sæti í röð:} &amp;= 0.50 \cdot  (n+1)\\
 \text{$Q_3$ - sæti í röð:} &amp;= 0.75 \cdot (n+1) \end{aligned}\end{split}\]</div>
@@ -923,7 +931,7 @@ fjórðungamörk mælinganna.</p>
 <p>Mælingarnar eru í réttri röð, þ.e.a.s. frá lægsta gildi og upp í hæsta
 gildi. Við byrjum því á að reikna í hvaða sæti gildin sem við þurfum til
 að reikna fjórðungamörkin sitja í. Til þess notum við jöfnu
-<a class="reference internal" href="#equation-eq-fjordungsmork">4.6</a>:</p>
+<a class="reference internal" href="#equation-eq-fjordungsmork">(6)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \text{$Q_1$ - sæti í röð: } 0.25 \cdot (n+1) &amp;=&amp; 0.25 \cdot 9 = 2.25 \\
@@ -991,7 +999,7 @@ raðar flokkabreytur.</p>
 fjórðungamark og <span class="math notranslate nohighlight">\(Q_3\)</span> þriðja fjórðungamark. <em>Fjórðungaspönn</em>
 gagnanna er táknuð með <span class="math notranslate nohighlight">\(IQR\)</span> og reiknuð með</p>
 <div class="math notranslate nohighlight" id="equation-eq-fjordungssponn">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-eq-fjordungssponn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[IQR = Q_3 - Q_1\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-fjordungssponn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[IQR = Q_3 - Q_1\]</div>
 </div>
 </section>
 <hr class="docutils" />
@@ -1002,7 +1010,7 @@ gagnanna er táknuð með <span class="math notranslate nohighlight">\(IQR\)</sp
 <p>Höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">9,</span> <span class="pre">9,</span> <span class="pre">15,</span> <span class="pre">17</span></code>. Finnið
 fjórðungaspönn mælinganna.</p>
 <p>Við sáum í dæmi <a class="reference internal" href="#ex-fjordungsmork"><span class="std std-numref">4.3.3.2</span></a> að <span class="math notranslate nohighlight">\(Q_1 = 2.5\)</span> og
-<span class="math notranslate nohighlight">\(Q_3 = 12\)</span>. Við notum nú jöfnu <a class="reference internal" href="#equation-eq-fjordungssponn">4.7</a> til að
+<span class="math notranslate nohighlight">\(Q_3 = 12\)</span>. Við notum nú jöfnu <a class="reference internal" href="#equation-eq-fjordungssponn">(7)</a> til að
 finna fjórðungaspönn gagnanna:</p>
 <div class="math notranslate nohighlight">
 \[IQR = 12-2.5 = 9.5\]</div>
@@ -1044,7 +1052,7 @@ eingöngu hægt að reikna dreifni fyrir talnabreytur.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. Dreifni mælinga er táknuð <span class="math notranslate nohighlight">\(s^2\)</span> og er
 reiknuð með</p>
 <div class="math notranslate nohighlight" id="equation-eq-dreifni">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-eq-dreifni" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-dreifni" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}\]</div>
 <p><span class="math notranslate nohighlight">\(s^2\)</span> = 0 þá og því aðeins að allar mælingarnar séu jafnar, annars
 er <span class="math notranslate nohighlight">\(s^2\)</span> ávallt stærra en 0. Því lengra sem mælingarnar liggja frá
 meðaltalinu því hærra verður <span class="math notranslate nohighlight">\(s^2\)</span>.</p>
@@ -1070,14 +1078,14 @@ meðaltalinu því hærra verður <span class="math notranslate nohighlight">\(s
 <p>Höfum eftirfarandi mælingar: <code class="docutils literal notranslate"><span class="pre">2,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">8</span></code>. Finnið dreifni
 mælisafnsins.</p>
 <p>Við byrjum á að finna meðaltalið og notum til þess jöfnu
-<a class="reference internal" href="#equation-eq-medaltal">4.3</a></p>
+<a class="reference internal" href="#equation-eq-medaltal">(3)</a></p>
 <div class="math notranslate nohighlight">
 \[\bar{x} = \frac{2 + 2 + 3 + 5 + 8}{5} = \frac{20}{5} = 4\]</div>
 <p>Gerum nú litla töflu. Fyrsti dálkurinn í töflunni inniheldur gögnin. Í
 dálki tvö er meðaltal gagnasafnsins dregið frá mælingunum línu fyrir
 línu. Í þriðja dálknum er talan í dálki númer tvö hafin í annað veldi og
 í síðustu línu dálksins eru allar tölur dálksins lagðar saman. Þetta er
-talan í teljaranum í jöfnu <a class="reference internal" href="#equation-eq-dreifni">4.8</a>.</p>
+talan í teljaranum í jöfnu <a class="reference internal" href="#equation-eq-dreifni">(8)</a>.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x_i\)</span></p></th>
@@ -1111,7 +1119,7 @@ talan í teljaranum í jöfnu <a class="reference internal" href="#equation-eq-d
 <div class="math notranslate nohighlight">
 \[\sum_{i=1}^{n}(x_i - \bar{x})^2 = 26\]</div>
 <p>Til að reikna dreifnina þurfum við að lokum að deila með <span class="math notranslate nohighlight">\((n-1)\)</span>
-samkvæmt jöfnu <a class="reference internal" href="#equation-eq-dreifni">4.8</a>.</p>
+samkvæmt jöfnu <a class="reference internal" href="#equation-eq-dreifni">(8)</a>.</p>
 <div class="math notranslate nohighlight">
 \[s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1} = \frac{26}{4} = 6.5\]</div>
 </div>
@@ -1133,7 +1141,7 @@ og skilningi á meðferð hennar.</p>
 <span class="math notranslate nohighlight">\(x_1, x_2, ... x_n\)</span>. Staðalfrávik mælinga er táknað með <span class="math notranslate nohighlight">\(s\)</span>
 og er reiknað með</p>
 <div class="math notranslate nohighlight" id="equation-eq-stadalfravik">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-eq-stadalfravik" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-stadalfravik" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}}\]</div>
 <p><span class="math notranslate nohighlight">\(s\)</span> = 0 þá og því aðeins að allar mælingarnar eru jafnar, annars
 er <span class="math notranslate nohighlight">\(s\)</span> ávallt stærra en 0. Því lengra sem mælingarnar liggja frá
 meðaltalinu því hærra verður <span class="math notranslate nohighlight">\(s\)</span>.</p>
@@ -1143,7 +1151,7 @@ meðaltalinu því hærra verður <span class="math notranslate nohighlight">\(s
 <p class="admonition-title">Athugasemd</p>
 <p>Til að reikna <em>staðalfrávik</em> þurfum við að:</p>
 <ol class="arabic simple">
-<li><p>Reikna dreifnina með því að nota jöfnu <a class="reference internal" href="#equation-eq-dreifni">4.8</a></p></li>
+<li><p>Reikna dreifnina með því að nota jöfnu <a class="reference internal" href="#equation-eq-dreifni">(8)</a></p></li>
 <li><p>Taka kvaðratrót af dreifninni</p></li>
 </ol>
 </div>
@@ -1158,7 +1166,7 @@ mælisafnsins.</p>
 <p>Við þurfum að byrja á að finna dreifni mælisafnsins en þar sem þetta eru
 sömu tölur og í dæmi <a class="reference internal" href="#ex-dreifni"><span class="std std-numref">4.3.7.2</span></a> höfum við nú þegar reiknað hana,
 <span class="math notranslate nohighlight">\(s^2 = 6.5\)</span>. Staðalfrávikið finnum við nú með því að taka
-kvaðratrót af dreifninni skv. jöfnu <a class="reference internal" href="#equation-eq-stadalfravik">4.9</a>.</p>
+kvaðratrót af dreifninni skv. jöfnu <a class="reference internal" href="#equation-eq-stadalfravik">(9)</a>.</p>
 <div class="math notranslate nohighlight">
 \[s = \sqrt{s^2} = \sqrt{6.5} = 2.55\]</div>
 </div>
@@ -1214,7 +1222,7 @@ fyrst rifja upp jöfnu beinnar línu.</p>
 <p>Jafna beinnar línu lýsir línulegu sambandi tveggja breyta, <span class="math notranslate nohighlight">\(y\)</span> og
 <span class="math notranslate nohighlight">\(x\)</span>. Jöfnuna má skrifa sem</p>
 <div class="math notranslate nohighlight" id="equation-eq-jafnabeinnarlinu">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-eq-jafnabeinnarlinu" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[y =  \beta_0 +  \beta_1x\]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-jafnabeinnarlinu" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[y =  \beta_0 +  \beta_1x\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(\beta_0\)</span> er <em>skurðpunktur</em> (e. intercept) línunnar við y-ás
 og <span class="math notranslate nohighlight">\(\beta_1\)</span> er <em>hallatala</em> (e. slope) línunnar.</p>
 </div>
@@ -1230,11 +1238,11 @@ og <span class="math notranslate nohighlight">\(\beta_1\)</span> er <em>hallatal
 \[\beta_1 = \frac{y_2-y_1}{x_2-x_1}\]</div>
 </div>
 <hr class="docutils" />
-<p>Á mynd <a class="reference internal" href="#g-jafnabeinnarlinu"><span class="std std-numref">4.2</span></a> má sjá beina línu og hvernig lesa má úr
+<p>Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá beina línu og hvernig lesa má úr
 gildi skurðpunkts og hallatölu línunnar.</p>
 <figure class="align-center" id="id19">
 <span id="g-jafnabeinnarlinu"></span><img alt="Jafna beinnar línu" src="../_images/beinlina.svg" /><figcaption>
-<p><span class="caption-number">Mynd 4.2: </span><span class="caption-text">Jafna beinnar línu</span><a class="headerlink" href="#id19" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Jafna beinnar línu</span><a class="headerlink" href="#id19" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1271,13 +1279,13 @@ nálægt 1 eða -1 segjum við að það sé mikil fylgni milli þeirra.</p>
 <p>Mikilvægt er að muna að fylgni og fylgnistuðull eru aðeins mælikvarðar á
 <strong>línulegt</strong> samband. Það getur verið skýrt samband á milli tveggja
 breyta þó það sé ekki endilega línulegt. Skoðum nú aftur mynd
-<a class="reference internal" href="#g-punktaritstefna"><span class="std std-numref">4.3</span></a>. Eðlilegt væri að nota <span class="math notranslate nohighlight">\(r\)</span> til að mæla
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Eðlilegt væri að nota <span class="math notranslate nohighlight">\(r\)</span> til að mæla
 samband breytanna á efri myndunum tveimur þar sem um er að ræða línulegt
 samband (jákvætt til vinstri en neikvætt til hægri) en ekki á myndunum
 fyrir neðan þar sem sambandið er ólínulegt.</p>
 <figure class="align-center" id="id20">
 <span id="g-punktaritstefna"></span><img alt="Punktarit þar sem samband breyta er línulegt (að ofan) og ólínulegt (að neðan)" src="../_images/xy1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 4.3: </span><span class="caption-text">Punktarit þar sem samband breyta er línulegt (að ofan) og ólínulegt (að neðan)</span><a class="headerlink" href="#id20" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Punktarit þar sem samband breyta er línulegt (að ofan) og ólínulegt (að neðan)</span><a class="headerlink" href="#id20" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1319,11 +1327,11 @@ breytanna en ef <span class="math notranslate nohighlight">\(r=1\)</span> segjum
 jákvætt</em>. Því lengra sem <span class="math notranslate nohighlight">\(r\)</span> liggur frá 0 (í báðar áttir) því
 sterkari er fylgnin, það er þeim betur getum við spáð fyrir um gildi
 háðu breytunnar út frá gildi óháðu breytunnar. Á mynd
-<a class="reference internal" href="#g-punktaritr"><span class="std std-numref">4.4</span></a> má sjá nokkur punktarit þar sem stefna og styrkleiki
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá nokkur punktarit þar sem stefna og styrkleiki
 fylgni breytanna er mismunandi.</p>
 <figure class="align-center" id="id21">
 <span id="g-punktaritr"></span><img alt="Punktarit fyrir mismunandi gildi á :math:`r`" src="../_images/mismunandir.svg" /><figcaption>
-<p><span class="caption-number">Mynd 4.4: </span><span class="caption-text">Punktarit fyrir mismunandi gildi á <span class="math notranslate nohighlight">\(r\)</span></span><a class="headerlink" href="#id21" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Punktarit fyrir mismunandi gildi á <span class="math notranslate nohighlight">\(r\)</span></span><a class="headerlink" href="#id21" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p><em>Orsakasamband</em> (e. causation) er til staðar þegar breyting á einni breytu
@@ -1388,7 +1396,7 @@ en í viðmiðunarþýðinu.</p></li>
 </div>
 <hr class="docutils" />
 <p>Gögn af þessu tagi eru oft sett upp í 2x2 töflur líkt og töflu
-<a class="reference internal" href="#t-tafla"><span class="std std-numref">4.1</span></a>. Þar sem við erum að skoða hlutföll tölum við til
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Þar sem við erum að skoða hlutföll tölum við til
 einföldunar um að mælingarnar sé ,,með“ eða ,,án“ breytunnar sem verið
 er að skoða. Ef við táknum fjölda mælinga með breytuna í áhugaverða
 þýðinu með <span class="math notranslate nohighlight">\(a\)</span>, fjölda mælinga án hennar í sama þýði <span class="math notranslate nohighlight">\(b\)</span>,
@@ -1396,7 +1404,7 @@ fjölda mælinga með breytuna í viðmiðunarþýðinu <span class="math notran
 mælinga án hennar með <span class="math notranslate nohighlight">\(d\)</span> þá verður áhættuhlutfallið einfaldlega
 talan <span class="math notranslate nohighlight">\(\frac{a}{a+b}/\frac{c}{c+d}\)</span>.</p>
 <span id="t-tafla"></span><table class="docutils align-default" id="id22">
-<caption><span class="caption-number">Tafla 4.1: </span><span class="caption-text">Framsetning mælinga þegar áhættuhlutfall og/eða gagnlíkindi eru könnuð.</span><a class="headerlink" href="#id22" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<caption><span class="caption-text">Framsetning mælinga þegar áhættuhlutfall og/eða gagnlíkindi eru könnuð.</span><a class="headerlink" href="#id22" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Áhugavert þýði</p></th>
@@ -1604,10 +1612,10 @@ eiginleikans en hafa hann <strong>í raun</strong>.</p></li>
 </div>
 <hr class="docutils" />
 <p>Mörgum finnst hugtökin skýrari þegar þau eru sett upp í litla töflu eins
-og töflu <a class="reference internal" href="#t-naemni"><span class="std std-numref">4.2</span></a>. Þá teljum við fjölda mælinga sem falla undir
+og töflu <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Þá teljum við fjölda mælinga sem falla undir
 hvern og einn flokk.</p>
 <span id="t-naemni"></span><table class="docutils align-default" id="id23">
-<caption><span class="caption-number">Tafla 4.2: </span><span class="caption-text">Sannar og falskar, jákvæðar og neikvæðar mælingar.</span><a class="headerlink" href="#id23" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<caption><span class="caption-text">Sannar og falskar, jákvæðar og neikvæðar mælingar.</span><a class="headerlink" href="#id23" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Með eiginleikann</p></th>
@@ -1752,11 +1760,11 @@ lýsistærðir sem lýsa einni breytu. Þar sáum við fimm lýsistærðir sem
 lýsa miðju og átta sem lýsa breytileika. Hvaða lýsistærðir eru
 viðeigandi hverju sinni fer eftir gerð og dreifingu gagnanna sem við
 ætlum að lýsa.</p>
-<p>Í Töflu <a class="reference internal" href="#t-lysitafla"><span class="std std-numref">4.3</span></a> hér fyrir neðan höfum við tekið saman þessar
+<p>Í Töflu <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> hér fyrir neðan höfum við tekið saman þessar
 lýsistærðir og birt í töflu sem sýnir með hvaða gerð af breytum er
 viðeigandi að nota þær.</p>
 <span id="t-lysitafla"></span><table class="docutils align-default" id="id24">
-<caption><span class="caption-number">Tafla 4.3: </span><span class="caption-text">Tafla sem sýnir hvaða lýsistærð er viðeigandi að nota fyrir hverja gerð af breytu.</span><a class="headerlink" href="#id24" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<caption><span class="caption-text">Tafla sem sýnir hvaða lýsistærð er viðeigandi að nota fyrir hverja gerð af breytu.</span><a class="headerlink" href="#id24" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <tbody>
 <tr class="row-odd"><td rowspan="2"></td>
 <td rowspan="2"></td>
@@ -1855,10 +1863,10 @@ meðaltal eða miðgildi til að lýsa miðju og staðalfrávik eða
 fjórðungamörk til að lýsa breytileika. Það fer eftir dreifingu gagnanna
 hvort par lýsistærða á við og því er góð regla að skoða gögnin myndrænt
 áður en ákveðið er hvort par af lýsistærðum skuli nota. Tafla
-<a class="reference internal" href="#t-meanmedtafla"><span class="std std-numref">4.4</span></a> hér að neðan sýnir hvaða par af lýsistærðum á við
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> hér að neðan sýnir hvaða par af lýsistærðum á við
 hverju sinni.</p>
 <span id="t-meanmedtafla"></span><table class="docutils align-default" id="id25">
-<caption><span class="caption-number">Tafla 4.4: </span><span class="caption-text">Tafla sem sýnir hvort meðaltal/staðalfrávik eða miðgildi/fjórðungamörk eru meira viðeigandi til að lýsa talnabreytum með tilsvarandi dreifingu.</span><a class="headerlink" href="#id25" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<caption><span class="caption-text">Tafla sem sýnir hvort meðaltal/staðalfrávik eða miðgildi/fjórðungamörk eru meira viðeigandi til að lýsa talnabreytum með tilsvarandi dreifingu.</span><a class="headerlink" href="#id25" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <tbody>
 <tr class="row-odd"><td rowspan="2"><p>Einkenni gagnanna</p></td>
 <td rowspan="2"><p>Miðja: meðaltal</p>

@@ -7,6 +7,10 @@
   <title>2. Frá tilraun til gagna &mdash; Tölfræði frá grunni 2023</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -281,7 +289,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">2. </span>Frá tilraun til gagna</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/tolfraedi_fra_grunni/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -349,12 +357,12 @@ undantekningarlaust aðeins með hluta þýðisins, sem við köllum <em>úrtak<
 <hr class="docutils" />
 <figure class="align-center" id="id25">
 <span id="g-thydiurtak"></span><img alt="Þýði og úrtak" src="../_images/Thydi_urtak.svg" /><figcaption>
-<p><span class="caption-number">Mynd 2.1: </span><span class="caption-text">Þýði og úrtak</span><a class="headerlink" href="#id25" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Þýði og úrtak</span><a class="headerlink" href="#id25" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Ef þýðið okkar er til dæmis allir íslenskir ríkisborgarar þá er úrtak úr
 því þýði safn einstaklinga með íslenskan ríkisborgararétt, það er hluti
-af öllum þeim sem ríkisborgararéttinn hafa. Mynd <a class="reference internal" href="#g-thydiurtak"><span class="std std-numref">2.1</span></a>
+af öllum þeim sem ríkisborgararéttinn hafa. Mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>
 sýnir dæmigert þýði og úrtak. Þýðið er allir karlarnir á myndinni og
 þeir sem búið er að draga hring um eru úrtakið. Best er ef viðfangsefnin
 í úrtakinu eru valin á handahófskenndan hátt en þá tölum við um
@@ -549,7 +557,7 @@ með háþrýsting eða ekki.</p>
 <h3><span class="section-number">2.3.1. </span>Bjagi og breytileiki<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>Tölfræðilega eru tvö meginatriði sem torvalda okkur að meta eðli þeirra
 breyta sem við erum að kanna. Þau eru <em>bjagi</em> og <em>breytileiki</em>
-mælinganna, sjá mynd <a class="reference internal" href="#g-bjagi"><span class="std std-numref">2.2</span></a>.</p>
+mælinganna, sjá mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>.</p>
 <section id="breytileiki-variability">
 <h4><span class="section-number">2.3.1.1. </span>Breytileiki (variability)<a class="headerlink" href="#breytileiki-variability" title="Permalink to this heading"></a></h4>
 <div class="admonition attention">
@@ -600,7 +608,7 @@ viðfangsefna valdið kerfisbundið bjöguðum mælingum. Þá er um
 lágmarka þann bjaga og er hún viðfangsefni kafla <a class="reference internal" href="#s-blindun"><span class="std std-numref">2.5</span></a>.</p>
 <figure class="align-center" id="id26">
 <span id="g-bjagi"></span><img alt="Bjagi og breytileiki" src="../_images/Bjagi_breytileiki.svg" /><figcaption>
-<p><span class="caption-number">Mynd 2.2: </span><span class="caption-text">Bjagi og breytileiki</span><a class="headerlink" href="#id26" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Bjagi og breytileiki</span><a class="headerlink" href="#id26" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -917,11 +925,11 @@ lyfið og sá sem fékk lyfleysuna verða fyrir lyfleysuáhrifum. Það er
 báðir hóparnir töldu sig vera að hljóta tiltekið inngrip og trú þeirra á
 að inngripið virki hafði áhrif á matið sem fékkst. Sá munur sem skýrist
 með virku efnunum í lyfjunum er því eingöngu <strong>munurinn</strong> á hópunum
-tveimur eftir að inngripinu var beitt, sjá mynd <a class="reference internal" href="#g-lyfleysuahrif"><span class="std std-numref">2.3</span></a>.
+tveimur eftir að inngripinu var beitt, sjá mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>.
 Því er þess krafist af lyfjum að þau sýni virkni umfram lyfleysuáhrif.</p>
 <figure class="align-center" id="id27">
 <span id="g-lyfleysuahrif"></span><img alt="Lyfleysuáhrif" src="../_images/lyfleysa.svg" /><figcaption>
-<p><span class="caption-number">Mynd 2.3: </span><span class="caption-text">Lyfleysuáhrif</span><a class="headerlink" href="#id27" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Lyfleysuáhrif</span><a class="headerlink" href="#id27" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Mörgum gæti þótt það smámunasemi að þurfa að leiðrétta fyrir
@@ -1060,14 +1068,14 @@ einfaldlega sú að þegar hlýtt er úti flykkist fólk á ströndina, þar sem
 það getur drukknað. Þá daga selst jafnframt mikið af ís. Á köldum dögum
 er enginn í sjónum og því lítill möguleiki á að drukkna. Þá daga selst
 minna af ís.</p>
-<p>Mynd <a class="reference internal" href="#g-orsakasamband"><span class="std std-numref">2.4</span></a> lýsir sambandi tveggja breyta, <span class="math notranslate nohighlight">\(x\)</span> og
+<p>Mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> lýsir sambandi tveggja breyta, <span class="math notranslate nohighlight">\(x\)</span> og
 <span class="math notranslate nohighlight">\(y\)</span>. Vinstra megin á myndinni er orsakasamband milli breytanna en
 ekki á myndinni hægra megin. Myndin hægra megin lýsir dæminu hér að ofan
 þar sem <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru drukknanir og ísát en <span class="math notranslate nohighlight">\(z\)</span> er
 hitastig.</p>
 <figure class="align-center" id="id28">
 <span id="g-orsakasamband"></span><img alt="Orsakasamband" src="../_images/Orsakasamband.svg" /><figcaption>
-<p><span class="caption-number">Mynd 2.4: </span><span class="caption-text">Orsakasamband</span><a class="headerlink" href="#id28" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Orsakasamband</span><a class="headerlink" href="#id28" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>

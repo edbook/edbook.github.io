@@ -7,6 +7,10 @@
   <title>9. Fervikagreining &mdash; Tölfræði frá grunni 2023</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -206,7 +214,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">9. </span>Fervikagreining</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli09.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/tolfraedi_fra_grunni/kafli09.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -258,7 +266,7 @@ blóðþrýstingurinn lækki mismikið milli hópa. Við sjáum auðveldlega að
 meðaltölin hér að ofan eru ólík en eru þau nógu ólík til að við getum
 fullyrt að lyfin valdi mismikilli lækkun?</p>
 <p>Byrjum á að skoða mælingarnar okkar myndrænt, sjá mynd
-<a class="reference internal" href="#g-fervikgogn"><span class="std std-numref">9.1</span></a>. Á þeirri mynd má, auk mælinganna, sjá meðaltal
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Á þeirri mynd má, auk mælinganna, sjá meðaltal
 hvers hóps (heilar línur) og sameiginlegt meðaltal allra mælinganna
 (brotalínur). Það er mikilvægt að dreifni hvers hóps fyrir sig sé ekki
 mjög ólík þar sem aðferðin gerir ráð fyrir að hún sé sú sama. Í þessu
@@ -266,7 +274,7 @@ tilviki virðist dreifnin vera svipuð og því er viðeigandi að nota
 einhliða fervikagreiningu.</p>
 <figure class="align-center" id="id5">
 <span id="g-fervikgogn"></span><img alt="Gögn fyrir fervikagreiningu" src="../_images/fervikgogn.svg" /><figcaption>
-<p><span class="caption-number">Mynd 9.1: </span><span class="caption-text">Gögn fyrir fervikagreiningu</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Gögn fyrir fervikagreiningu</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Fervikagreining gengur út á að skipta heildarbreytileika á gildum
@@ -305,12 +313,12 @@ fervikagreiningu.</p>
 <div class="line"><span class="math notranslate nohighlight">\(\bar{y}_{i.}:\)</span> Við notum <span class="math notranslate nohighlight">\(\bar{y}_{i.}\)</span> til að tákna meðaltal fyrir hóp <span class="math notranslate nohighlight">\(i\)</span></div>
 </div>
 <div class="math notranslate nohighlight" id="equation-eq-medaltalinnanhopa">
-<span class="eqno">(9.1)<a class="headerlink" href="#equation-eq-medaltalinnanhopa" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{y}_{i.} = \frac{\sum_{j=1}^{n_i} y_{ij}}{n_i}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-medaltalinnanhopa" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{y}_{i.} = \frac{\sum_{j=1}^{n_i} y_{ij}}{n_i}\]</div>
 <div class="line-block">
 <div class="line"><span class="math notranslate nohighlight">\(\bar{y}_{..}:\)</span> Við notum <span class="math notranslate nohighlight">\(\bar{y}_{..}\)</span> til að tákna meðaltal allra mælinga (úr öllum hópum)</div>
 </div>
 <div class="math notranslate nohighlight" id="equation-eq-heildamedaltal">
-<span class="eqno">(9.2)<a class="headerlink" href="#equation-eq-heildamedaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{y}_{..} = \frac{\sum_{i=1}^{a}\sum_{j=1}^{n_i}y_{ij}}{N}\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-heildamedaltal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\bar{y}_{..} = \frac{\sum_{i=1}^{a}\sum_{j=1}^{n_i}y_{ij}}{N}\]</div>
 </div></blockquote>
 </div>
 <hr class="docutils" />
@@ -329,22 +337,22 @@ hvers hóps frá meðaltali hópsins.</p>
 <p class="admonition-title">Athugið</p>
 <p>Fervikasummurnar eru reiknaðar með</p>
 <div class="math notranslate nohighlight" id="equation-eq-sst">
-<span class="eqno">(9.3)<a class="headerlink" href="#equation-eq-sst" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-sst" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 SS_T = &amp; \sum_{i = 1}^{a}  \sum_{j = 1}^{n_i} (y_{ij} - \bar{y}_{..})^2\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-sstr">
-<span class="eqno">(9.4)<a class="headerlink" href="#equation-eq-sstr" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-sstr" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 SS_{Tr} = &amp; \sum_{i = 1}^{a} n_i (\bar{y}_{i.} - \bar{y}_{..})^2\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-sse">
-<span class="eqno">(9.5)<a class="headerlink" href="#equation-eq-sse" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-sse" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 SS_E = &amp; \sum_{i = 1}^{a}  \sum_{j = 1}^{n_i} (y_{ij} - \bar{y}_{i.})^2\end{aligned}\]</div>
 <p>Heildarbreytileikanum má skipta upp í breytileika milli hópanna annars
 vegar og breytileika innan hópanna hins vegar eða</p>
 <div class="math notranslate nohighlight" id="equation-eq-anovauppskipting">
-<span class="eqno">(9.6)<a class="headerlink" href="#equation-eq-anovauppskipting" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[SS_T = SS_{Tr} + SS_E\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-anovauppskipting" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[SS_T = SS_{Tr} + SS_E\]</div>
 </div>
 <hr class="docutils" />
-<p>Til að skilja jöfnur <a class="reference internal" href="#equation-eq-sst">9.3</a> - <a class="reference internal" href="#equation-eq-sse">9.5</a> betur skulum við skoða
-mynd <a class="reference internal" href="#g-fervikasummur"><span class="std std-numref">9.2</span></a>. Á grafinu efst í vinstra horninu má sjá
+<p>Til að skilja jöfnur <a class="reference internal" href="#equation-eq-sst">(3)</a> - <a class="reference internal" href="#equation-eq-sse">(5)</a> betur skulum við skoða
+mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Á grafinu efst í vinstra horninu má sjá
 mælingarnar, <span class="math notranslate nohighlight">\(y_{ij}\)</span>, meðaltöl innan hópanna,
 <span class="math notranslate nohighlight">\(\bar{y}_{i.}\)</span>, (heilar línur) og heildarmeðaltalið,
 <span class="math notranslate nohighlight">\(\bar{y}_{..}\)</span>, (brotalína). Hinar myndirnar þrjár lýsa myndrænt
@@ -353,23 +361,23 @@ jöfnurnar innihalda eru teiknaðir svartir en hinir liðirnir, sem
 jöfnurnar innihalda ekki, eru gráir.</p>
 <figure class="align-center" id="id6">
 <span id="g-fervikasummur"></span><img alt="Fervikasummur" src="../_images/SSutskyringar.svg" /><figcaption>
-<p><span class="caption-number">Mynd 9.2: </span><span class="caption-text">Fervikasummur</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Fervikasummur</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
-<p>Sé jafna <a class="reference internal" href="#equation-eq-sst">9.3</a> og myndin efst í hægra horninu skoðuð má sjá að
+<p>Sé jafna <a class="reference internal" href="#equation-eq-sst">(3)</a> og myndin efst í hægra horninu skoðuð má sjá að
 <span class="math notranslate nohighlight">\(SS_T\)</span> inniheldur fjarlægðir mælinganna okkar frá
 heildarmeðaltalinu og er því mælikvarði á heildarbreytileika mælinganna.
-Sé jafna <a class="reference internal" href="#equation-eq-sstr">9.4</a> og myndin neðst í vinstra horninu skoðuð má sjá
+Sé jafna <a class="reference internal" href="#equation-eq-sstr">(4)</a> og myndin neðst í vinstra horninu skoðuð má sjá
 að <span class="math notranslate nohighlight">\(SS_{Tr}\)</span> inniheldur fjarlægðir meðaltala hópanna frá
 heildarmeðaltalinu og er því mælikvarði á breytileika meðaltalanna milli
-hópanna. Sé að lokum jafna <a class="reference internal" href="#equation-eq-sse">9.5</a> skoðuð og myndin neðst í hægra
+hópanna. Sé að lokum jafna <a class="reference internal" href="#equation-eq-sse">(5)</a> skoðuð og myndin neðst í hægra
 horninu má sjá að <span class="math notranslate nohighlight">\(SS_E\)</span> inniheldur fjarlægðir mælinganna frá
 meðaltali þess hóps sem þær tilheyra og er því mælikvarði á breytileika
 mælinganna innan hvers hóps.</p>
 <p>Algengt er að setja kvaðratsummurnar upp í svokallaða
 <em>fervikagreiningartöflu</em> (e. ANOVA table). Sú tafla samanstendur af þremur
 dálkum og þremur línum. Fyrsti dálkurinn inniheldur fervikasummurnar
-(reiknaðar með jöfnum <a class="reference internal" href="#equation-eq-sst">9.3</a> - <a class="reference internal" href="#equation-eq-sse">9.5</a>). Annar dálkurinn
+(reiknaðar með jöfnum <a class="reference internal" href="#equation-eq-sst">(3)</a> - <a class="reference internal" href="#equation-eq-sse">(5)</a>). Annar dálkurinn
 inniheldur fjölda <em>frígráða</em> fyrir hverja fervikasummu fyrir sig en það
 heiti bera stærðirnar <span class="math notranslate nohighlight">\(a-1\)</span>, <span class="math notranslate nohighlight">\(N-a\)</span> og <span class="math notranslate nohighlight">\(N-1\)</span>. Þriðji
 dálkurinn inniheldur svokallaðar meðalfervikasummur. Þær reiknum við með
@@ -419,9 +427,9 @@ megi ráð fyrir að dreifni hópanna sé sú sama.</p>
 \[H_1: \text{Að minnsta kosti eitt meðaltal er frábrugðið hinum}\]</div>
 <p>Prófstærðin er</p>
 <div class="math notranslate nohighlight" id="equation-eq-anovaprof">
-<span class="eqno">(9.7)<a class="headerlink" href="#equation-eq-anovaprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[F = \frac{SS_{Tr}/(a-1)}{SS_{E}/(N-a)} = \frac{MS_{Tr}}{MS_E}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-anovaprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[F = \frac{SS_{Tr}/(a-1)}{SS_{E}/(N-a)} = \frac{MS_{Tr}}{MS_E}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(SS_{Tr}\)</span> og <span class="math notranslate nohighlight">\(SS_{E}\)</span> má reikna með jöfnum
-<a class="reference internal" href="#equation-eq-sstr">9.4</a> og <a class="reference internal" href="#equation-eq-sse">9.5</a>. Sé núlltilgátan sönn fylgir prófstærðin
+<a class="reference internal" href="#equation-eq-sstr">(4)</a> og <a class="reference internal" href="#equation-eq-sse">(5)</a>. Sé núlltilgátan sönn fylgir prófstærðin
 F-dreifingu með <span class="math notranslate nohighlight">\(a-1\)</span> og <span class="math notranslate nohighlight">\(N-a\)</span> fjölda fríráða, eða
 <span class="math notranslate nohighlight">\(F \sim F_{(a-1,N-a)}\)</span>, þar sem <span class="math notranslate nohighlight">\(a\)</span> er fjöldi hópa og
 <span class="math notranslate nohighlight">\(N\)</span> er heildarfjöldi mælinga.</p>
@@ -438,7 +446,7 @@ Algeng próf eru Tukey’s próf og Duncan’s próf en ekki verður fjallað um
 þau hér.</p>
 <p>Í upphafi kaflans sögðum við að fervikagreining gengi út á að bera saman
 breytileika milli hópa og breytileika innan hópa. Sé jafna
-<a class="reference internal" href="#equation-eq-anovaprof">9.7</a> skoðuð má sjá að teljari prófstærðarinnar (fyrir ofan
+<a class="reference internal" href="#equation-eq-anovaprof">(7)</a> skoðuð má sjá að teljari prófstærðarinnar (fyrir ofan
 strik) er mælikvarði á breytileika milli hópanna og nefnarinn (fyrir
 neðan strik) er mælikvarði á breytileika innan hópanna. Sé þetta
 hlutfall nægilega hátt, fellur það á höfnunarsvæðið og við ályktum að
@@ -488,7 +496,7 @@ eftir lyfjum.</p>
 <p>Förum nú eftir samantektinni um framkvæmd tilgátuprófa.</p>
 <ol class="arabic">
 <li><p>Við ætlum að álykta um mun á meðaltölum þriggja þýða. Úrtökin eru
-<strong>óháð</strong>. Sé mynd <a class="reference internal" href="#g-fervikgogn"><span class="std std-numref">9.1</span></a> skoðuð má sjá að dreifni
+<strong>óháð</strong>. Sé mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> skoðuð má sjá að dreifni
 hópanna er svipuð og því óhætt að nota fervikagreiningu.</p></li>
 <li><p>Við notum <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span> að venju.</p></li>
 <li><p>Tilgáturnar eru</p>
@@ -503,10 +511,10 @@ fervikasummurnar.</p>
 <p>Þar sem hóparnir eru 3 er <span class="math notranslate nohighlight">\(a = 3\)</span>. Það eru sex mælingar í
 hverjum hóp og því er <span class="math notranslate nohighlight">\(n_1 = n_2 = n_3 = 6\)</span> og því er
 <span class="math notranslate nohighlight">\(N = 6 + 6 + 6 = 18\)</span>. Reiknum nú heildarmeðaltalið með jöfnu
-<a class="reference internal" href="#equation-eq-heildamedaltal">9.2</a></p>
+<a class="reference internal" href="#equation-eq-heildamedaltal">(2)</a></p>
 <div class="math notranslate nohighlight">
 \[\bar{y}_{..} = \frac{\sum_{i=1}^{a}\sum_{j=1}^{n_i}y_{ij}}{N} = \frac{4.29+10.32+12.89+11.28+...+11.15}{18} = 9.15\]</div>
-<p>og meðaltöl innan hópanna með jöfnu <a class="reference internal" href="#equation-eq-medaltalinnanhopa">9.1</a></p>
+<p>og meðaltöl innan hópanna með jöfnu <a class="reference internal" href="#equation-eq-medaltalinnanhopa">(1)</a></p>
 <div class="math notranslate nohighlight">
 \[\bar{y}_{1.} = \frac{\sum_{j=1}^{n_1} y_{1j}}{n_1} = \frac{4.29+11.28+...+11.93}{6} = 8.14,\]</div>
 <div class="math notranslate nohighlight">
@@ -514,18 +522,18 @@ hverjum hóp og því er <span class="math notranslate nohighlight">\(n_1 = n_2 
 <div class="math notranslate nohighlight">
 \[\bar{y}_{3.} = \frac{\sum_{j=1}^{n_3} y_{3j}}{n_3} = \frac{12.89+15.68+...+11.15}{6} = 13.01\]</div>
 <p>Þá erum við tilbúin til að reikna fervikasummurnar. Við byrjum á að
-reikna <span class="math notranslate nohighlight">\(SS_T\)</span> með jöfnu <a class="reference internal" href="#equation-eq-sst">9.3</a></p>
+reikna <span class="math notranslate nohighlight">\(SS_T\)</span> með jöfnu <a class="reference internal" href="#equation-eq-sst">(3)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 SS_T = &amp; \sum_{i = 1}^{a}  \sum_{j = 1}^{n_i} (y_{ij} - \bar{y}_{..})^2 \\
 = &amp; (4.29-9.15)^2 + (11.28-9.15)^2 + ... + (11.15-9.15)^2 =  262.16 \end{aligned}\end{split}\]</div>
-<p>Reiknum svo <span class="math notranslate nohighlight">\(SS_{Tr}\)</span> með jöfnu <a class="reference internal" href="#equation-eq-sstr">9.4</a></p>
+<p>Reiknum svo <span class="math notranslate nohighlight">\(SS_{Tr}\)</span> með jöfnu <a class="reference internal" href="#equation-eq-sstr">(4)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 SS_{Tr} = &amp; \sum_{i = 1}^{a} n_i (\bar{y}_{i.} - \bar{y}_{..})^2 \\
 = &amp; 6\cdot(8.14 - 9.15)^2 + 6\cdot(6.29 - 9.15)^2 + 6\cdot(13.01 - 9.15)^2 = 144.53 \end{aligned}\end{split}\]</div>
 <p>Að lokum getum við reiknað <span class="math notranslate nohighlight">\(SS_E\)</span> með hjálp jöfnu
-<a class="reference internal" href="#equation-eq-anovauppskipting">9.6</a></p>
+<a class="reference internal" href="#equation-eq-anovauppskipting">(6)</a></p>
 <div class="math notranslate nohighlight">
 \[SS_E = SS_{T} - SS_{Tr} = 117.63\]</div>
 <p>Setjum nú fervikasummurnar í fervikagreiningartöflu:</p>
@@ -552,7 +560,7 @@ SS_{Tr} = &amp; \sum_{i = 1}^{a} n_i (\bar{y}_{i.} - \bar{y}_{..})^2 \\
 </tbody>
 </table>
 <p>Til að kanna tilgátuna setjum við inn í prófstærðina í jöfnu
-<a class="reference internal" href="#equation-eq-anovaprof">9.7</a></p>
+<a class="reference internal" href="#equation-eq-anovaprof">(7)</a></p>
 <div class="math notranslate nohighlight">
 \[f = \frac{72.27}{7.84} = 9.21\]</div>
 </li>

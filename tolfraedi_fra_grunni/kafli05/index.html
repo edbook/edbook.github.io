@@ -7,6 +7,10 @@
   <title>5. Líkindafræðileg undirstaða &mdash; Tölfræði frá grunni 2023</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -332,7 +340,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">5. </span>Líkindafræðileg undirstaða</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli05.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/tolfraedi_fra_grunni/kafli05.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -750,10 +758,10 @@ tveggja er (1+1)/2, sem er líka einn. Meðaltal fyrstu þriggja er
 </table>
 <figure class="align-center" id="id39">
 <span id="g-lmfmynd"></span><img alt="Lögmál mikils fjölda" src="../_images/logmalmikilsfjolda1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.1: </span><span class="caption-text">Lögmál mikils fjölda</span><a class="headerlink" href="#id39" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Lögmál mikils fjölda</span><a class="headerlink" href="#id39" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
-<p>Vinstra megin á mynd <a class="reference internal" href="#g-lmfmynd"><span class="std std-numref">5.1</span></a> má sjá myndrænt hvernig meðaltalið
+<p>Vinstra megin á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá myndrænt hvernig meðaltalið
 á dæminu hér að ofan breytist. Hægra megin á sömu mynd má sjá svipaða
 tilraun þeirri hér að ofan en nú var krónunni kastað 1000 sinnum. Á
 myndinni má sjá hvernig meðaltal útkomanna okkar færðist nær og nær einu
@@ -884,13 +892,13 @@ líkindadreifingum er best lýst með <em>massafalli</em>.</p>
 strjálla slembistærða. Við táknum massafallið með <span class="math notranslate nohighlight">\(f(x)\)</span> og það má
 skrifa sem</p>
 <div class="math notranslate nohighlight" id="equation-eq-massafall">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-massafall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = P(X = x)\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-massafall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = P(X = x)\]</div>
 <p>Um massafallið gildir að</p>
 <div class="math notranslate nohighlight" id="equation-eq-strjalsstaerriedajafntognull">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-strjalsstaerriedajafntognull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-strjalsstaerriedajafntognull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 f(x) &amp;\geq 0\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-strjalsummaeinn">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-strjalsummaeinn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-strjalsummaeinn" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \sum_{\text{yfir öll x}} f(x) &amp; = 1 \end{aligned}\]</div>
 <p>Við notum stöplarit, sjá kafla <a class="reference internal" href="../kafli03/#s-myndraenastrjalumbreytum"><span class="std std-numref">3.1</span></a>, til að
 lýsa massafalli myndrænt.</p>
@@ -898,21 +906,21 @@ lýsa massafalli myndrænt.</p>
 <hr class="docutils" />
 <div class="admonition note">
 <p class="admonition-title">Athugasemd</p>
-<p>Jöfnu <a class="reference internal" href="#equation-eq-massafall">5.1</a> má lesa sem ,,massafallið gefur líkurnar á að
+<p>Jöfnu <a class="reference internal" href="#equation-eq-massafall">(1)</a> má lesa sem ,,massafallið gefur líkurnar á að
 slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(x\)</span>“, þar sem <span class="math notranslate nohighlight">\(x\)</span>
 getur verið hvaða tala sem er. Jafna
-<a class="reference internal" href="#equation-eq-strjalsstaerriedajafntognull">5.2</a> segir okkur að massafallið er
-alltaf stærra eða jafnt og núll og jafna <a class="reference internal" href="#equation-eq-strjalsummaeinn">5.3</a> segir
+<a class="reference internal" href="#equation-eq-strjalsstaerriedajafntognull">(2)</a> segir okkur að massafallið er
+alltaf stærra eða jafnt og núll og jafna <a class="reference internal" href="#equation-eq-strjalsummaeinn">(3)</a> segir
 okkur að ef við leggjum saman gildin sem massafall <span class="math notranslate nohighlight">\(X\)</span> tekur fyrir
 öll gildi á <span class="math notranslate nohighlight">\(x\)</span> verði útkoman einn.</p>
 </div>
 <hr class="docutils" />
 <p>Dæmigert stöplarit sem lýsir massafalli má sjá á mynd
-<a class="reference internal" href="#g-stoplaritmassafalls"><span class="std std-numref">5.2</span></a>. Á x-ásnum má sjá mögulegar útkomur
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Á x-ásnum má sjá mögulegar útkomur
 slembistærðarinnar og á y-ásnum má sjá líkurnar á þessum útkomum.</p>
 <figure class="align-center" id="id40">
 <span id="g-stoplaritmassafalls"></span><img alt="Stöplarit massafalls" src="../_images/binom0.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.2: </span><span class="caption-text">Stöplarit massafalls</span><a class="headerlink" href="#id40" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Stöplarit massafalls</span><a class="headerlink" href="#id40" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Takið eftir samsvörunni milli strjálla slembistærða og strjálla breyta.
@@ -934,17 +942,17 @@ umrita má líkur svo auðveldara verði fyrir okkur að reikna þær.</p>
 <p>Þegar reikna á líkur fyrir strjála slembistærð <span class="math notranslate nohighlight">\(X\)</span> má oft auðvelda
 útreikninga með því að snúa líkunum við</p>
 <div class="math notranslate nohighlight" id="equation-eq-reglur1">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-reglur1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-reglur1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 P(X \leq k)  = &amp;  1 - P(X &gt; k)\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-reglur2">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-reglur2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-reglur2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 %= 1 - P(X \geq {k+1})
 P(X &lt; k)     = &amp;  1 - P(X \geq k)\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-reglur3">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-reglur3" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-reglur3" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 P(X \geq k)  = &amp;  1 - P(X &lt; k)\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-reglur4">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-eq-reglur4" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-reglur4" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
  %= 1 - P(X \leq k-1)
 P(X &gt; k)     = &amp;  1 - P(X \leq k)\end{aligned}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(k\)</span> getur verið hvaða mögulega útkoma sem <span class="math notranslate nohighlight">\(X\)</span> getur
@@ -953,15 +961,15 @@ tekið.</p>
 <hr class="docutils" />
 <div class="admonition note">
 <p class="admonition-title">Athugasemd</p>
-<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur1">5.4</a> ef reikna á líkurnar að gildi
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur1">(4)</a> ef reikna á líkurnar að gildi
 slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>minna eða jafnt</strong> tölunni
 <span class="math notranslate nohighlight">\(k\)</span>.</p>
-<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur2">5.5</a> ef reikna á líkurnar að gildi
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur2">(5)</a> ef reikna á líkurnar að gildi
 slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>minna en</strong> talan <span class="math notranslate nohighlight">\(k\)</span>.</p>
-<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur3">5.6</a> ef reikna á líkurnar að gildi
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur3">(6)</a> ef reikna á líkurnar að gildi
 slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>stærra eða jafnt</strong> tölunni
 <span class="math notranslate nohighlight">\(k\)</span>.</p>
-<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> ef reikna á líkurnar að gildi
+<p>Nota skal jöfnu <a class="reference internal" href="#equation-eq-reglur4">(7)</a> ef reikna á líkurnar að gildi
 slembistærðarinnar <span class="math notranslate nohighlight">\(X\)</span> verði <strong>stærra en</strong> talan <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
 <hr class="docutils" />
@@ -1017,7 +1025,7 @@ gildanna <span class="math notranslate nohighlight">\(\{0,1,2,...\)</span>n<span
 slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(k\)</span> með massafalli
 tvíkostadreifingarinnar :</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvikostadreifing">
-<span class="eqno">(5.8)<a class="headerlink" href="#equation-eq-tvikostadreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \hspace{1cm} k = 0,1,2,...n\]</div>
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-tvikostadreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \hspace{1cm} k = 0,1,2,...n\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span> er tvíliðustuðullinn. Sjá kassa
 <a class="reference internal" href="#em-tvilidustudull"><span class="std std-numref">5.3.3.3</span></a>.</p>
 </div>
@@ -1040,7 +1048,7 @@ til <span class="math notranslate nohighlight">\(n\)</span> svo <span class="mat
 <span class="math notranslate nohighlight">\(\binom{n}{k}\)</span>. Hann er jafn fjölda möguleika á að fá <span class="math notranslate nohighlight">\(k\)</span>
 jákvæðar útkomur í <span class="math notranslate nohighlight">\(n\)</span> tilraunum og er reiknaður með</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvilidustudull">
-<span class="eqno">(5.9)<a class="headerlink" href="#equation-eq-tvilidustudull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\binom{n}{k} = \frac{n!}{k!(n-k)!},\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-tvilidustudull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\binom{n}{k} = \frac{n!}{k!(n-k)!},\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(k! = k\cdot(k-1)\cdot(k-2)\cdot ... \cdot(1)\)</span>. Sér í lagi
 er <span class="math notranslate nohighlight">\(0! = 1\)</span>.</p>
 </div>
@@ -1092,11 +1100,11 @@ alltaf 0.5) og útkomurnar eru óháðar.</p>
 <p>Þar sem við framkvæmum Bernoulli tilraunir 4 sinnum fylgir <span class="math notranslate nohighlight">\(X\)</span>
 tvíkostadreifingu með <span class="math notranslate nohighlight">\(n\)</span> = 4, <span class="math notranslate nohighlight">\(p\)</span> = 0.5 og við getum
 skrifað <span class="math notranslate nohighlight">\(X \sim B(4,0.5)\)</span>. Við getum því notað jöfnu
-<a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar. Byrjum á að reikna út
-gildið á tvíliðustuðlinum með jöfnu <a class="reference internal" href="#equation-eq-tvilidustudull">5.9</a></p>
+<a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> til að reikna líkurnar. Byrjum á að reikna út
+gildið á tvíliðustuðlinum með jöfnu <a class="reference internal" href="#equation-eq-tvilidustudull">(9)</a></p>
 <div class="math notranslate nohighlight">
 \[\binom{n}{k} = \binom{4}{2} = \frac{4!}{2!(4-2)!} = \frac{4 \cdot 3 \cdot 2 \cdot 1}{2\cdot 1 \cdot(2 \cdot 1)} = 6\]</div>
-<p>og reiknum svo líkurnar með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a></p>
+<p>og reiknum svo líkurnar með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a></p>
 <div class="math notranslate nohighlight">
 \[P(X = 2) = \binom{n}{k} p^k (1-p)^{n-k} = \binom{4}{2} 0.5^2 (1-0.5)^{4-2} = 6 \cdot 0.5^2 \cdot 0.5^2 = 0.3750\]</div>
 <p>Líkurnar á að fá 2 þorska þegar krónu er kastað 4 sinnum eru því 37.5%.</p>
@@ -1139,7 +1147,7 @@ sig (líkurnar eru alltaf 1/6) og útkomurnar eru óháðar.</p>
 <p>Þar sem við framkvæmum Bernoulli tilraunir 3 sinnum fylgir <span class="math notranslate nohighlight">\(X\)</span>
 tvíkostadreifingu með <span class="math notranslate nohighlight">\(n\)</span> = 3, <span class="math notranslate nohighlight">\(p\)</span> = 1/6 og við getum
 skrifað <span class="math notranslate nohighlight">\(X \in B(3,1/6)\)</span>. Við getum því notað jöfnu
-<a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar og fáum</p>
+<a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> til að reikna líkurnar og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(X = 1) = \binom{3}{1} (1/6)^1 (1-1/6)^{3-1} = 3 \cdot (1/6)^1 \cdot (5/6)^2 = 0.3472\]</div>
 <p>Líkurnar eru því um 34.7%.</p>
@@ -1162,7 +1170,7 @@ líkurnar á að öll fræin hans Jóa verði að fullvaxta radísum og hvaða
 forsendur þurfa að gilda svo útreikningarnir séu réttir?</p>
 <p>Reikna má líkurnar með að því að nota tvíkostadreifinguna en þá verður
 að gilda að atburðirnir séu óháðir. Gerum ráð fyrir at atburðirnir séu
-óháðir og notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar.
+óháðir og notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> til að reikna líkurnar.
 Notum <span class="math notranslate nohighlight">\(X\)</span> til að tákna fjölda radísufræja sem verða að radísu,
 <span class="math notranslate nohighlight">\(X \in B(8,0.75)\)</span>.</p>
 <div class="math notranslate nohighlight">
@@ -1181,18 +1189,18 @@ gölluð séu 0.1%. Séu 100 vörur frá fyrirtækinu valdar af handahófi,
 hverjar eru líkurnar á að engin þeirra sé gölluð? Gerið ráð fyrir að
 atburðirnir séu óháðir.</p>
 <p>Látum <span class="math notranslate nohighlight">\(X\)</span> tákna fjölda gallaðra vara, <span class="math notranslate nohighlight">\(X \in B(100,0.001)\)</span>.
-Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> til að reikna líkurnar á að
+Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> til að reikna líkurnar á að
 engin vara sé gölluð:</p>
 <div class="math notranslate nohighlight">
 \[P(X = 0) = \binom{100}{0} (0.001)^0 (1-0.001)^{100-0} = 0.999^{100} = 0.90\]</div>
 <p>Líkurnar eru því 90%.</p>
 </div>
 <p>Við höfum nú séð að reikna má líkurnar á að slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki
-eitthvert ákveðið gildi <span class="math notranslate nohighlight">\(k\)</span> með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a>.
+eitthvert ákveðið gildi <span class="math notranslate nohighlight">\(k\)</span> með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a>.
 Auk þess að reikna <span class="math notranslate nohighlight">\(P(X=k)\)</span> höfum við oft áhuga á að reikna
 <span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span>, <span class="math notranslate nohighlight">\(P(a &lt; X &lt; b)\)</span>, <span class="math notranslate nohighlight">\(P(X \leq k))\)</span>,
 <span class="math notranslate nohighlight">\((X &lt; k)\)</span>, <span class="math notranslate nohighlight">\(P(X \geq k))\)</span> eða <span class="math notranslate nohighlight">\((X &gt; k)\)</span>. Við getum
-reiknað allar þessar líkur með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> ásamt því
+reiknað allar þessar líkur með jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> ásamt því
 að nota reglurnar í kassa <a class="reference internal" href="#e-reglur"><span class="std std-numref">5.3.2.1</span></a>. Skoðum nú nokkur dæmi sem
 sýna hvernig þetta er gert.</p>
 </section>
@@ -1215,7 +1223,7 @@ sýna hvernig þetta er gert.</p>
 fá 4, 5 og 6 þorska eða</p>
 <div class="math notranslate nohighlight">
 \[P(4 \leq X \leq 6) = P(X = 4) + P(X = 5) + P(X = 6)\]</div>
-<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(4 \leq X \leq 6) = 0.2051 + 0.2461 + 0.2051 = 0.6563\]</div>
 <p>Líkurnar á því að fá milli 4 og 6 þorska þegar krónu er kastað 10 sinnum
@@ -1226,7 +1234,7 @@ eru því um 65.6%.</p>
 1, 2 og 3 þorska eða</p>
 <div class="math notranslate nohighlight">
 \[P(X \leq 3) = P(X = 0) + P(X = 1) + P(X = 2) + P(X = 3)\]</div>
-<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(X \leq 3) = 0.0010 + 0.0098 + 0.0439 + 0.1172 = 0.1719\]</div>
 <p>Líkurnar eru því um 17.2%.</p>
@@ -1241,7 +1249,7 @@ fá 8, 9, eða 10 þorska (við köstum krónunni 10 sinnum og því getur
 fjöldi þorska ekki verið fleiri en 10) eða</p>
 <div class="math notranslate nohighlight">
 \[P(X \geq 8) = P(X = 8) + P(X = 9) + P(X = 10)\]</div>
-<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(X \geq 8) = 0.0439 + 0.0098 + 0.0010 = 0.0547\]</div>
 <p>Líkurnar eru því um 5.5%.</p>
@@ -1254,10 +1262,10 @@ líkurnar</p>
 <p>Við getum reiknað þessar líkur sem</p>
 <div class="math notranslate nohighlight">
 \[P(X &gt; 2) = P(X = 3) + P(X = 4) + ... + P(X = 10)\]</div>
-<p>en auðveldara er að nota jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> til að umskrifa líkurnar</p>
+<p>en auðveldara er að nota jöfnu <a class="reference internal" href="#equation-eq-reglur4">(7)</a> til að umskrifa líkurnar</p>
 <div class="math notranslate nohighlight">
 \[P (X &gt; 2) = 1 - P(X \leq 2) = 1 - (P(X = 2) + P(X = 1) + P(X = 0))\]</div>
-<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">5.8</a> og fáum</p>
+<p>Við notum jöfnu <a class="reference internal" href="#equation-eq-tvikostadreifing">(8)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P (X &gt; 2) = 1 - (0.0439 + 0.0098 + 0.0010) = 0.9453\]</div>
 <p>Líkurnar á að fá fleiri en tvo þorska eru því um 94.5%.</p>
@@ -1273,10 +1281,10 @@ líkurnar</p>
 <p class="admonition-title">Athugið</p>
 <p>Ef <span class="math notranslate nohighlight">\(X\)</span> fylgir tvíkostadreifingu, <span class="math notranslate nohighlight">\(X \sim B(n,p)\)</span> þá gildir</p>
 <div class="math notranslate nohighlight" id="equation-eq-vaentigilditvikostadreifingar">
-<span class="eqno">(5.10)<a class="headerlink" href="#equation-eq-vaentigilditvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-vaentigilditvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \text{E}[X] &amp; =  np\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-dreifnitvikostadreifingar">
-<span class="eqno">(5.11)<a class="headerlink" href="#equation-eq-dreifnitvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-dreifnitvikostadreifingar" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \text{Var}[X] &amp; =  np(1-p)\end{aligned}\]</div>
 </div>
 </section>
@@ -1288,8 +1296,8 @@ líkurnar</p>
 <p>Árni Pétur ætlar að kasta teningi 900 sinnum. Látum <span class="math notranslate nohighlight">\(X\)</span> tákna
 fjölda skipta sem fjarki kemur upp, <span class="math notranslate nohighlight">\(X \sim B(900,1/6)\)</span>. Finnið
 <span class="math notranslate nohighlight">\(\text{E}[X]\)</span> og <span class="math notranslate nohighlight">\(\text{Var}[X]\)</span>.</p>
-<p>Við notum jöfnur <a class="reference internal" href="#equation-eq-vaentigilditvikostadreifingar">5.10</a> og
-<a class="reference internal" href="#equation-eq-dreifnitvikostadreifingar">5.11</a> og fáum</p>
+<p>Við notum jöfnur <a class="reference internal" href="#equation-eq-vaentigilditvikostadreifingar">(10)</a> og
+<a class="reference internal" href="#equation-eq-dreifnitvikostadreifingar">(11)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 \text{E}[X] &amp; = np \ = \ 900 \cdot 1/6 = 150\\
@@ -1322,7 +1330,7 @@ jákvætt heiltölugildi (núll meðtalið) má reikna líkurnar á að
 slembistærðin <span class="math notranslate nohighlight">\(X\)</span> taki gildið <span class="math notranslate nohighlight">\(k\)</span> með massafalli Poisson
 dreifingarinnar :</p>
 <div class="math notranslate nohighlight" id="equation-eq-poisson">
-<span class="eqno">(5.12)<a class="headerlink" href="#equation-eq-poisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-poisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!}\]</div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -1331,7 +1339,7 @@ dreifingarinnar :</p>
 mælieiningu, þar sem <span class="math notranslate nohighlight">\(\lambda\)</span> er meðafjöldi jákvæðra útkoma á
 hverja einingu. Það eru engin efri mörk á fjölda jákvæðra útkoma svo
 <span class="math notranslate nohighlight">\(X\)</span> getur mögulega tekið hvaða gildi <span class="math notranslate nohighlight">\(\{0,1,2,...\}\)</span> sem er.</p>
-<p>Bókstafurinn <span class="math notranslate nohighlight">\(e\)</span> í jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a>, stendur fyrir ákveðna
+<p>Bókstafurinn <span class="math notranslate nohighlight">\(e\)</span> í jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a>, stendur fyrir ákveðna
 tölu, sem er kölluð <span class="math notranslate nohighlight">\(e\)</span>. Gildi hennar er um það bil 2.72. Töluna
 <span class="math notranslate nohighlight">\(e\)</span> má, líkt og töluna <span class="math notranslate nohighlight">\(\pi\)</span>, finna á flestum vasareiknum.
 Hún er þá yfirleitt táknuð með <span class="math notranslate nohighlight">\(e^x\)</span>.</p>
@@ -1352,13 +1360,13 @@ mínútu. Því notum við Poisson dreifinguna til að lýsa fjölda kúnna sem
 koma að kassanum á hverri mínútu með stikann <span class="math notranslate nohighlight">\(\lambda = 1.5\)</span> eða
 <span class="math notranslate nohighlight">\(X \sim \text{Pois}(1.5)\)</span></p>
 </div>
-<p>Jafna <a class="reference internal" href="#equation-eq-poisson">5.12</a> sýnir okkur hvernig reikna má líkurnar á að
+<p>Jafna <a class="reference internal" href="#equation-eq-poisson">(12)</a> sýnir okkur hvernig reikna má líkurnar á að
 slembistærð <span class="math notranslate nohighlight">\(X\)</span> sem fylgir Poisson dreifingunni taki eitthvert
 ákveðið gildi <span class="math notranslate nohighlight">\(k\)</span>. Eins og með tvíkostadreifinguna höfum við oft
 áhuga á að reikna aðrar líkur eða <span class="math notranslate nohighlight">\(P(a \leq X \leq b)\)</span>,
 <span class="math notranslate nohighlight">\(P(a &lt; X &lt; b)\)</span>, <span class="math notranslate nohighlight">\(P(X \leq k)\)</span>, <span class="math notranslate nohighlight">\(P(X &lt; k)\)</span>,
 <span class="math notranslate nohighlight">\(P(X \geq k)\)</span> eða <span class="math notranslate nohighlight">\(P(X &gt; k)\)</span>. Við getum reiknað allar þessar
-líkur með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> ásamt því að nota reglurnar í kassa
+líkur með jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a> ásamt því að nota reglurnar í kassa
 <a class="reference internal" href="#e-reglur"><span class="std std-numref">5.3.2.1</span></a>.</p>
 </section>
 <section id="id9">
@@ -1378,7 +1386,7 @@ kassanum er 1.5 á mínútu.</p>
 <li><p>Finnum líkurnar á að 3 kúnnar komi að kassanum á einni mínútu.</p></li>
 </ol>
 <p>Við vitum að meðalfjöldi kúnna á mínútu er 1.5. Því er
-<span class="math notranslate nohighlight">\(\lambda = 1.5\)</span>. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> og fáum</p>
+<span class="math notranslate nohighlight">\(\lambda = 1.5\)</span>. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(X = 3) = \frac{e^{-1.5}1.5^3}{3!} = 0.1255\]</div>
 <p>Líkurnar eru því um 12.5%.</p>
@@ -1386,7 +1394,7 @@ kassanum er 1.5 á mínútu.</p>
 mínútu.</p>
 <p>Til að reikna líkurnar á að í mesta lagi 2 kúnnar komi að kassanum
 þurfum við að leggja saman líkurnar á að það komi enginn, ein eða tvær
-manneskjur að kassanum á einni mínútu. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></p>
+manneskjur að kassanum á einni mínútu. Við notum jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 P(X \leq 2) &amp;=&amp; P(X = 0) + P(X = 1) + P(X = 2)\\
@@ -1399,7 +1407,7 @@ mínútu.</p>
 <div class="math notranslate nohighlight">
 \[P(X \geq 1)\]</div>
 <p>Þessar líkur getum við ekki reiknað beint þar sem það eru engin efri
-mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur3">5.6</a> til að umskrifa líkurnar og
+mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur3">(6)</a> til að umskrifa líkurnar og
 fáum</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -1462,7 +1470,7 @@ kassanum á <strong>tveimur</strong> mínútum og þarf því að aðlaga <span 
 nýrri einingu.</p>
 <p>Þar sem meðalfjöldi kúnna á einni mínútu er 1.5 reiknum við með því að á
 meðaltali komi <span class="math notranslate nohighlight">\(2 \cdot 1.5 = 3\)</span> kúnnar á tveimur mínútum. Við
-notum því <span class="math notranslate nohighlight">\(\lambda = 3\)</span>. Notum jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> og fáum</p>
+notum því <span class="math notranslate nohighlight">\(\lambda = 3\)</span>. Notum jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a> og fáum</p>
 <div class="math notranslate nohighlight">
 \[P(X = 4) = \frac{e^{-3}3^4}{4!} = 0.1680\]</div>
 <p>Líkurnar eru því um 16.8%.</p>
@@ -1481,8 +1489,8 @@ dreifingu með meðaltal 3 fæðingar á vakt.</p>
 <ol class="loweralpha">
 <li><p>Við vitum að meðalfjöldi fæðinga er 3. Því er <span class="math notranslate nohighlight">\(\lambda = 3\)</span>.
 Við gerum ekki reiknað líkurnar beint þar sem það eru engin efri
-mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur4">5.7</a> til að umskrifa líkurnar
-og jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a> til að reikna líkurnar og fáum</p>
+mörk. Við notum því jöfnu <a class="reference internal" href="#equation-eq-reglur4">(7)</a> til að umskrifa líkurnar
+og jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a> til að reikna líkurnar og fáum</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 P(X &gt; 1) &amp;=&amp; 1 - P(X \leq 1)\\
@@ -1492,7 +1500,7 @@ P(X &gt; 1) &amp;=&amp; 1 - P(X \leq 1)\\
 </li>
 <li><p>Við eigum að finna líkurnar á að á tveimur vöktum fæðist sex börn,
 því notum við <span class="math notranslate nohighlight">\(\lambda = 2\cdot 3 = 6\)</span>. Við reiknum líkurnar
-með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></p>
+með jöfnu <a class="reference internal" href="#equation-eq-poisson">(12)</a></p>
 <div class="math notranslate nohighlight">
 \[P(Y = 6) = \frac{e^{-6}6^6}{6!} = 0.16\]</div>
 <p>Líkurnar eru því 16%.</p>
@@ -1507,10 +1515,10 @@ með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></
 <p>Ef <span class="math notranslate nohighlight">\(X\)</span> fylgir Poisson dreifingu,
 <span class="math notranslate nohighlight">\(X \in \text{Pois}(\lambda)\)</span> þá gildir</p>
 <div class="math notranslate nohighlight" id="equation-eq-vaentigildipoisson">
-<span class="eqno">(5.13)<a class="headerlink" href="#equation-eq-vaentigildipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-vaentigildipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \text{E}[X] &amp; =  \lambda\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-dreifnipoisson">
-<span class="eqno">(5.14)<a class="headerlink" href="#equation-eq-dreifnipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-dreifnipoisson" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \text{Var}[X] &amp; =  \lambda \end{aligned}\]</div>
 </div>
 </section>
@@ -1521,7 +1529,7 @@ með jöfnu <a class="reference internal" href="#equation-eq-poisson">5.12</a></
 <p class="admonition-title">Ábending</p>
 <p>Látum <span class="math notranslate nohighlight">\(X\)</span> tákna slembistærð sem fylgir Poisson dreifingu með
 <span class="math notranslate nohighlight">\(\lambda = 2\)</span>. Finnið væntigildi og dreifni <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>Notum jöfnur <a class="reference internal" href="#equation-eq-vaentigildipoisson">5.13</a> og <a class="reference internal" href="#equation-eq-dreifnipoisson">5.14</a> og
+<p>Notum jöfnur <a class="reference internal" href="#equation-eq-vaentigildipoisson">(13)</a> og <a class="reference internal" href="#equation-eq-dreifnipoisson">(14)</a> og
 fáum</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
@@ -1565,7 +1573,7 @@ slembistærðir geta tekið hvaða gildi sem er á einhverju bili. Þar af
 leiðandi eru líkurnar á að samfelld slembistærð taki eitthvert eitt
 tiltekið gildi engar, þ.e.</p>
 <div class="math notranslate nohighlight" id="equation-eq-samfelldnull">
-<span class="eqno">(5.15)<a class="headerlink" href="#equation-eq-samfelldnull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = x) = 0\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-samfelldnull" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X = x) = 0\]</div>
 <p>Athugið að þetta gildir um hvert eitt og einasta gildi sem slembistærðin
 getur tekið! Því gildir að</p>
 <div class="math notranslate nohighlight">
@@ -1578,9 +1586,9 @@ strjálar slembistærðir, samanber kassa <a class="reference internal" href="#e
 <p class="admonition-title">Athugið</p>
 <p>Um samfellda slembistærð <span class="math notranslate nohighlight">\(X\)</span> gildir að:</p>
 <div class="math notranslate nohighlight" id="equation-eq-snualikindum">
-<span class="eqno">(5.16)<a class="headerlink" href="#equation-eq-snualikindum" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X &gt; a) = 1 - P(X &lt; a)\]</div>
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-snualikindum" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X &gt; a) = 1 - P(X &lt; a)\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-likindiabili">
-<span class="eqno">(5.17)<a class="headerlink" href="#equation-eq-likindiabili" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(a &lt; X &lt;  b) = P(X &lt; b) - P(X &lt; a)\]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-eq-likindiabili" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(a &lt; X &lt;  b) = P(X &lt; b) - P(X &lt; a)\]</div>
 </div>
 <hr class="docutils" />
 <p>Við sáum hvernig sérhverri strjálli dreifingu er lýst með massafalli sem
@@ -1588,7 +1596,7 @@ við notum til að reikna líkur á að slembistærð sem fylgir strjálli
 dreifingu taki ákveðið gildi. Sú aðferð er hins vegar ónothæf til að
 lýsa samfelldum slembistærðum, þar sem líkurnar á því að þær taki
 ákveðið stakt gildi eru alltaf núll, sama hvert gildið er, samanber
-jöfnu <a class="reference internal" href="#equation-eq-samfelldnull">5.15</a>. Þess í stað lýsum við líkunum á því að
+jöfnu <a class="reference internal" href="#equation-eq-samfelldnull">(15)</a>. Þess í stað lýsum við líkunum á því að
 samfelldar slembistærðir taki gildi á tilteknum <strong>bilum</strong>.</p>
 <p>Skoðum nú aftur reiknireglurnar í kassa <a class="reference internal" href="#e-reiknireglursamfelldar"><span class="std std-numref">5.4.1.1</span></a>.
 Þær fela í sér að ef við viljum reikna líkurnar á því að <span class="math notranslate nohighlight">\(X\)</span> lendi
@@ -1629,7 +1637,7 @@ henni lýst með <em>þéttifalli</em> líkindadreifingarinnar.</p>
 graf þess <em>þéttiferill</em> (density curve). Flatarmálið undir þéttiferlinum
 milli tveggja stærða <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> er jafnt <span class="math notranslate nohighlight">\(P(a&lt;X&lt;b)\)</span>,
 líkunum á því að slembistærðin taki gildi á milli <span class="math notranslate nohighlight">\(a\)</span> og
-<span class="math notranslate nohighlight">\(b\)</span>. Þetta er sýnt á mynd <a class="reference internal" href="#g-thettiferill"><span class="std std-numref">5.3</span></a>.</p>
+<span class="math notranslate nohighlight">\(b\)</span>. Þetta er sýnt á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>.</p>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -1642,7 +1650,7 @@ dreififallið er einmitt stofnfall þéttifallsins.</p>
 <hr class="docutils" />
 <figure class="align-center" id="id41">
 <span id="g-thettiferill"></span><img alt="Þéttiferill þéttifalls samfelldrar dreifingar" src="../_images/norm10.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.3: </span><span class="caption-text">Þéttiferill þéttifalls samfelldrar dreifingar</span><a class="headerlink" href="#id41" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Þéttiferill þéttifalls samfelldrar dreifingar</span><a class="headerlink" href="#id41" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1665,7 +1673,7 @@ meðaltal <span class="math notranslate nohighlight">\(\mu\)</span> og dreifni <
 <span class="math notranslate nohighlight">\(X \sim N(\mu , \sigma^2)\)</span>. Þá er þéttifall hennar, táknað með
 <span class="math notranslate nohighlight">\(\phi(x)\)</span>, gefið með</p>
 <div class="math notranslate nohighlight" id="equation-eq-normaldreifing">
-<span class="eqno">(5.18)<a class="headerlink" href="#equation-eq-normaldreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = \phi(x) = \frac{1}{\sigma \sqrt{2 \pi }}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\]</div>
+<span class="eqno">(18)<a class="headerlink" href="#equation-eq-normaldreifing" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[f(x) = \phi(x) = \frac{1}{\sigma \sqrt{2 \pi }}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\]</div>
 <p>Dreififall normaldreifingarinnar er táknað með <span class="math notranslate nohighlight">\(\Phi(x)\)</span>.</p>
 </div>
 <hr class="docutils" />
@@ -1686,20 +1694,20 @@ samhverfur og bjöllulaga og miðja hans er <span class="math notranslate nohigh
 dreifingarinnar. Dreifnin, <span class="math notranslate nohighlight">\(\sigma^2\)</span> stýrir því hins vegar hversu
 flatur ferillinn er. Þeim stærri sem <span class="math notranslate nohighlight">\(\sigma^2\)</span> er, þeim flatari
 er ferillinn og toppur hans lægri.</p>
-<p>Á mynd <a class="reference internal" href="#g-tvaernormaldreifingar"><span class="std std-numref">5.4</span></a> má sjá tvær normaldreifingar.
+<p>Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá tvær normaldreifingar.
 Meðaltal dreifinganna, <span class="math notranslate nohighlight">\(\mu\)</span>, er það sama þar sem miðja þeirra er
 á sama stað. Dreifni dreifingar 1 er hins vegar minni en dreifni
-dreifingar 2. Á mynd <a class="reference internal" href="#g-thrjarnormaldreifingar"><span class="std std-numref">5.5</span></a> má sjá þrjár
+dreifingar 2. Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá þrjár
 normaldreifingar sem allar hafa sömu dreifnina. Meðaltal dreifingar 1 er
 það lægsta og meðaltal dreifingar 3 það hæsta.</p>
 <figure class="align-center" id="id42">
 <span id="g-tvaernormaldreifingar"></span><img alt="Tvær normaldreifingar með sama meðaltal en ólíka dreifni" src="../_images/norm1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.4: </span><span class="caption-text">Tvær normaldreifingar með sama meðaltal en ólíka dreifni</span><a class="headerlink" href="#id42" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Tvær normaldreifingar með sama meðaltal en ólíka dreifni</span><a class="headerlink" href="#id42" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="id43">
 <span id="g-thrjarnormaldreifingar"></span><img alt="Þrjár normaldreifingar með sömu dreifni en ólík meðaltöl" src="../_images/norm2.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.5: </span><span class="caption-text">Þrjár normaldreifingar með sömu dreifni en ólík meðaltöl</span><a class="headerlink" href="#id43" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Þrjár normaldreifingar með sömu dreifni en ólík meðaltöl</span><a class="headerlink" href="#id43" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1718,12 +1726,12 @@ meðaltalinu</p></li>
 <li><p>u.þ.b. 99.7% mælinga munu liggja innan við þrjú staðalfrávik frá
 meðaltalinu</p></li>
 </ul>
-<p>Þetta má sjá á mynd <a class="reference internal" href="#g-68reglan"><span class="std std-numref">5.6</span></a></p>
+<p>Þetta má sjá á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code></p>
 </div>
 <hr class="docutils" />
 <figure class="align-center" id="id44">
 <span id="g-68reglan"></span><img alt="68-95-99.7% reglan" src="../_images/norm3.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.6: </span><span class="caption-text">68-95-99.7% reglan</span><a class="headerlink" href="#id44" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">68-95-99.7% reglan</span><a class="headerlink" href="#id44" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1744,7 +1752,7 @@ bókstafnum <span class="math notranslate nohighlight">\(Z\)</span>.</p>
 \[X \sim N(\mu,\sigma^2)\]</div>
 <p>þá fylgir</p>
 <div class="math notranslate nohighlight" id="equation-eq-stadladanormal">
-<span class="eqno">(5.19)<a class="headerlink" href="#equation-eq-stadladanormal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - \mu}{\sigma}\]</div>
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq-stadladanormal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - \mu}{\sigma}\]</div>
 <p>normaldreifingu með meðaltal 0 og dreifni 1, skrifað</p>
 <div class="math notranslate nohighlight">
 \[Z \sim N(0,1)\]</div>
@@ -1760,7 +1768,7 @@ bókstafnum <span class="math notranslate nohighlight">\(Z\)</span>.</p>
 og slembistærðin <span class="math notranslate nohighlight">\(Z\)</span> fylgir stöðluðu normaldreifingunni,
 <span class="math notranslate nohighlight">\(Z \in N(0,1)\)</span>, þá gildir að</p>
 <div class="math notranslate nohighlight" id="equation-eq-xz">
-<span class="eqno">(5.20)<a class="headerlink" href="#equation-eq-xz" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X \leq x) = P(Z \leq z)\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-eq-xz" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[P(X \leq x) = P(Z \leq z)\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(z = \frac{x- \mu}{\sigma}\)</span>.</p>
 </div>
 <hr class="docutils" />
@@ -1777,13 +1785,13 @@ fylgir stöðluðu normaldreifingunni taki gildi sem er minna en <span class="ma
 <div class="math notranslate nohighlight">
 \[\Phi(z) = P(Z &lt; z)\]</div>
 <p>Viðmiðunargildið <span class="math notranslate nohighlight">\(z\)</span> sem við reiknum líkurnar fyrir er kallað
-<span class="math notranslate nohighlight">\(z\)</span> <em>-gildið</em>. Mynd <a class="reference internal" href="#g-normtafla"><span class="std std-numref">5.7</span></a> sýnir samband dreififallsins
+<span class="math notranslate nohighlight">\(z\)</span> <em>-gildið</em>. Mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> sýnir samband dreififallsins
 <span class="math notranslate nohighlight">\(\Phi(z)\)</span> og þéttiferils normaldreifingarinnar. Líkurnar
 <span class="math notranslate nohighlight">\(\Phi(z)\)</span> eru jafnar flatarmálinu undir þéttiferlinum vinstra
 megin við <span class="math notranslate nohighlight">\(z\)</span>-gildið.</p>
 <figure class="align-center" id="id45">
 <span id="g-normtafla"></span><img alt="Staðalaða normaldreifingin." src="../_images/norm4.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.7: </span><span class="caption-text">Staðalaða normaldreifingin.</span><a class="headerlink" href="#id45" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Staðalaða normaldreifingin.</span><a class="headerlink" href="#id45" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Þar sem ekki er hægt að skrifa einfalda formúlu fyrir <span class="math notranslate nohighlight">\(\Phi(z)\)</span>
@@ -1796,19 +1804,19 @@ má finna gildistöflu fyrir stöðluðu normaldreifinguna.</p>
 <p>Ef finna á líkurnar</p>
 <div class="math notranslate nohighlight">
 \[P(Z &gt; z)\]</div>
-<p>notum við okkur jöfnu <a class="reference internal" href="#equation-eq-snualikindum">5.16</a></p>
+<p>notum við okkur jöfnu <a class="reference internal" href="#equation-eq-snualikindum">(16)</a></p>
 <div class="math notranslate nohighlight">
 \[P(Z &gt; z) = 1 - P(Z &lt; z)\]</div>
-<p>Þetta er sýnt vinstra megin á mynd <a class="reference internal" href="#g-normreglur"><span class="std std-numref">5.8</span></a>. Ef finna á
+<p>Þetta er sýnt vinstra megin á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Ef finna á
 líkurnar á að <span class="math notranslate nohighlight">\(Z\)</span> liggi á bilinu frá <span class="math notranslate nohighlight">\(a\)</span> til <span class="math notranslate nohighlight">\(b\)</span> notum
-við jöfnu <a class="reference internal" href="#equation-eq-likindiabili">5.17</a></p>
+við jöfnu <a class="reference internal" href="#equation-eq-likindiabili">(17)</a></p>
 <div class="math notranslate nohighlight">
 \[P(a &lt; Z &lt; b) = P(Z &lt; b) - P(Z &lt; a)\]</div>
-<p>Þetta er sýnt hægra megin á mynd <a class="reference internal" href="#g-normreglur"><span class="std std-numref">5.8</span></a>. Munið að töfluna
+<p>Þetta er sýnt hægra megin á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code>. Munið að töfluna
 er eingöngu hægt að nota fyrir stöðluðu normaldreifinguna.</p>
 <figure class="align-center" id="id46">
 <span id="g-normreglur"></span><img alt=":math:`P(Z &gt; z)` og :math:`P(a &lt; Z &lt; b)` þar sem :math:`Z \sim N(0,1)`" src="../_images/norm5.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.8: </span><span class="caption-text"><span class="math notranslate nohighlight">\(P(Z &gt; z)\)</span> og <span class="math notranslate nohighlight">\(P(a &lt; Z &lt; b)\)</span> þar sem <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span></span><a class="headerlink" href="#id46" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text"><span class="math notranslate nohighlight">\(P(Z &gt; z)\)</span> og <span class="math notranslate nohighlight">\(P(a &lt; Z &lt; b)\)</span> þar sem <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span></span><a class="headerlink" href="#id46" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -1835,7 +1843,7 @@ meðal <span class="math notranslate nohighlight">\(\Phi(z)\)</span>-gildanna í
 þurfum við að <em>varpa</em> <span class="math notranslate nohighlight">\(z\)</span>-gildinu aftur í upphaflegu
 dreifinguna, svo tilsvarandi gildi verður</p>
 <div class="math notranslate nohighlight" id="equation-eq-varpaurstadlada">
-<span class="eqno">(5.21)<a class="headerlink" href="#equation-eq-varpaurstadlada" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[x = \mu + z \sigma\]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-eq-varpaurstadlada" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[x = \mu + z \sigma\]</div>
 </li>
 </ol>
 </div>
@@ -1869,7 +1877,7 @@ af handahófi sé á bilinu 720 og 820, þ.e.a.s.
 <p>Áður en við getum notað töfluna þurfum við að staðla:</p>
 <div class="math notranslate nohighlight">
 \[\frac{720 - 1026}{209} = -1.46\]</div>
-<p>Þá fæst, skv. jöfnu <a class="reference internal" href="#equation-eq-xz">5.20</a></p>
+<p>Þá fæst, skv. jöfnu <a class="reference internal" href="#equation-eq-xz">(20)</a></p>
 <div class="math notranslate nohighlight">
 \[P(X &lt; 720) = P(Z &lt; -1.46)\]</div>
 <p>Við notum töfluna og finnum að <span class="math notranslate nohighlight">\(\Phi(z) = 0.0721\)</span> eða u.þ.b. 7%
@@ -1884,7 +1892,7 @@ líkur.</p>
 <p>Áður en við getum notað töfluna þurfum við að staðla:</p>
 <div class="math notranslate nohighlight">
 \[\frac{820 - 1026}{209} = -0.99\]</div>
-<p>Þá fæst, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">5.16</a> og <a class="reference internal" href="#equation-eq-xz">5.20</a></p>
+<p>Þá fæst, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">(16)</a> og <a class="reference internal" href="#equation-eq-xz">(20)</a></p>
 <div class="math notranslate nohighlight">
 \[P(X &gt; 820) = P(Z &gt; -0.99) = 1 - P(Z &lt; -0.99)\]</div>
 <p><span class="math notranslate nohighlight">\(\Phi(-0.99) = 0.1611\)</span>, svo líkurnar eru 1-0.1611 = 0.8389 eða
@@ -1897,7 +1905,7 @@ u.þ.b. 84%.</p>
 <div class="math notranslate nohighlight">
 \[P(720 &lt; X &lt; 820)\]</div>
 <p>Við náum í stöðluðu gildin frá í a) og b) lið.</p>
-<p>Við fáum þá, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">5.16</a> og <a class="reference internal" href="#equation-eq-xz">5.20</a>:</p>
+<p>Við fáum þá, skv. jöfnum <a class="reference internal" href="#equation-eq-snualikindum">(16)</a> og <a class="reference internal" href="#equation-eq-xz">(20)</a>:</p>
 <div class="math notranslate nohighlight">
 \[P(720 &lt; X &lt; 820) = P(-1.46 &lt; Z &lt; -0.99) = P(Z &lt; - 0.99) - P(Z &lt; -1.46)\]</div>
 <p>Við vorum búin að fletta upp að <span class="math notranslate nohighlight">\(\Phi(-0.99) = 0.1611\)</span> og
@@ -1925,7 +1933,7 @@ kemst næst því er <span class="math notranslate nohighlight">\(z=1.28\)</span
 mjög nærri 0.9.</p>
 <p>Einkunnir nemendanna fylgdu ekki stöðluðu normaldreifingunni heldur var
 <span class="math notranslate nohighlight">\(X \sim N(1026,209^2)\)</span> svo við verðum að varpa <span class="math notranslate nohighlight">\(z\)</span>-gildinu í
-upphaflegu dreifinguna með því að nota jöfnu <a class="reference internal" href="#equation-eq-varpaurstadlada">5.21</a></p>
+upphaflegu dreifinguna með því að nota jöfnu <a class="reference internal" href="#equation-eq-varpaurstadlada">(21)</a></p>
 <div class="math notranslate nohighlight">
 \[x = \mu + z \sigma\]</div>
 <p>Lágmarkseinkunnin er því
@@ -1999,7 +2007,7 @@ upp eða niður þá er ásættanlegt að gera ráð fyrir að gögnin fylgi
 normaldreifingu.</p>
 </div>
 <hr class="docutils" />
-<p>Á mynd <a class="reference internal" href="#g-normaldreifingarrit"><span class="std std-numref">5.9</span></a> má sjá stuðlarit og
+<p>Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá stuðlarit og
 normaldreifingarrit af þremur gagnasöfnum. Ekki er hægt að gera ráð
 fyrir að gagnasöfn 1 og 3 fylgi normaldreifingu þar sem punktarnir eru
 ekki nægilega nálægt beinu línunni. Það má aftur á móti gera ráð fyrir
@@ -2007,7 +2015,7 @@ að gagnasafn 2 fylgi normaldreifingu þar sem punktarnir á
 normaldreifingarritinu liggja nálægt beinu línunni.</p>
 <figure class="align-center" id="id47">
 <span id="g-normaldreifingarrit"></span><img alt="Normaldreifingarrit" src="../_images/normaldreifingarrit.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.9: </span><span class="caption-text">Normaldreifingarrit</span><a class="headerlink" href="#id47" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Normaldreifingarrit</span><a class="headerlink" href="#id47" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -2048,11 +2056,11 @@ líkurnar <span class="math notranslate nohighlight">\(a\)</span> að taka gildi
 </div>
 <hr class="docutils" />
 <p>Eftir því sem fjöldi frígráða eykst því meira líkist t-dreifingin
-stöðluðu normaldreifingunni. Á mynd <a class="reference internal" href="#g-tdreifingar"><span class="std std-numref">5.10</span></a> má sjá nokkrar
+stöðluðu normaldreifingunni. Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá nokkrar
 t-dreifingar ásamt stöðluðu normaldreifingunni.</p>
 <figure class="align-center" id="id48">
 <span id="g-tdreifingar"></span><img alt="Nokkrar t-dreifingar" src="../_images/t1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.10: </span><span class="caption-text">Nokkrar t-dreifingar</span><a class="headerlink" href="#id48" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Nokkrar t-dreifingar</span><a class="headerlink" href="#id48" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -2077,11 +2085,11 @@ stika, kallaður frígráður, sem ræður lögun hennar. Eins og í
 t-dreifingunni notum við <span class="math notranslate nohighlight">\(k\)</span> til að tákna fjölda frígráða.
 <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með <span class="math notranslate nohighlight">\(k\)</span> frígráður táknum við með
 <span class="math notranslate nohighlight">\(\chi^2_{(k)}\)</span>. Meðaltal <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar er jafnt fjölda
-frígráða hennar. Á mynd <a class="reference internal" href="#g-chisqdreifingar"><span class="std std-numref">5.11</span></a> má sjá nokkrar
+frígráða hennar. Á mynd <code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá nokkrar
 <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar.</p>
 <figure class="align-center" id="id49">
 <span id="g-chisqdreifingar"></span><img alt="Nokkrar :math:`\chi^2`-dreifingar" src="../_images/chisq1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.11: </span><span class="caption-text">Nokkrar <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar</span><a class="headerlink" href="#id49" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Nokkrar <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingar</span><a class="headerlink" href="#id49" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p><span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu má finna í kafla <a class="reference internal" href="../toflur_all_final/#a-chisqtafla"><span class="std std-ref">T.3</span></a>. Við
@@ -2138,10 +2146,10 @@ fáum út úr töflunni táknum við svo með <span class="math notranslate nohi
 <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span> gildir að slembistærð sem fylgir F-dreifingu með
 <span class="math notranslate nohighlight">\(v_1\)</span> og <span class="math notranslate nohighlight">\(v_2\)</span> frígráður hefur líkurnar <span class="math notranslate nohighlight">\(a\)</span> á að taka
 gildi sem er <strong>minna</strong> en <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span>. Á mynd
-<a class="reference internal" href="#g-fdreifingar"><span class="std std-numref">5.12</span></a> má sjá nokkrar F-dreifingar.</p>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">%s</span></code> má sjá nokkrar F-dreifingar.</p>
 <figure class="align-center" id="id50">
 <span id="g-fdreifingar"></span><img alt="Nokkrar F-dreifingar" src="../_images/f1.svg" /><figcaption>
-<p><span class="caption-number">Mynd 5.12: </span><span class="caption-text">Nokkrar F-dreifingar</span><a class="headerlink" href="#id50" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Nokkrar F-dreifingar</span><a class="headerlink" href="#id50" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>

@@ -7,6 +7,10 @@
   <title>7. Ályktanir um flokkabreytur &mdash; Tölfræði frá grunni 2023</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -15,8 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -239,7 +247,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">7. </span>Ályktanir um flokkabreytur</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/tolfraedi_fra_grunni/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/tolfraedi_fra_grunni/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -288,7 +296,7 @@ finna mat á óþekkta hlutfallinu og notum við <span class="math notranslate n
 <span class="math notranslate nohighlight">\(p\)</span> -hatt) til að tákna það mat. Við metum þýðishlutfallið
 <span class="math notranslate nohighlight">\(p\)</span>, með úrtakshlutfallinu, það er</p>
 <div class="math notranslate nohighlight" id="equation-eq-phat">
-<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq-phat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} = \frac{x}{n}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-phat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} = \frac{x}{n}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(x\)</span> er fjöldi þeirra mælinga sem hljóta viðkomandi útkomu
 (,,já“ í dæminu hér að ofan) og <span class="math notranslate nohighlight">\(n\)</span> er stærð úrtaksins.</p>
 <p>Tilgátuprófið í þessum hluta prófar núlltilgátuna hvort hlutfall
@@ -335,10 +343,10 @@ tilgátupróf sem byggir beint á tvíkostadreifingunni, eða þá
  <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og  <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>  eru stærri en 15 má reikna
 neðra öryggismark fyrir <span class="math notranslate nohighlight">\(p\)</span> með:</p>
 <div class="math notranslate nohighlight" id="equation-eq-pnedra">
-<span class="eqno">(7.2)<a class="headerlink" href="#equation-eq-pnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-pnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
 <p>og efra öryggismarkið með</p>
 <div class="math notranslate nohighlight" id="equation-eq-pefra">
-<span class="eqno">(7.3)<a class="headerlink" href="#equation-eq-pefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-eq-pefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(\hat{p} = \frac{x}{n}\)</span> og <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> fæst með
 að fletta upp í töflu stöðluðu normaldreifingarinnar í kafla
 <a class="reference internal" href="../toflur_all_final/#a-normaltafla"><span class="std std-ref">T.1</span></a>.</p>
@@ -362,7 +370,7 @@ eftirfarandi tilgátupróf.</p>
 \[\text{H}_0: p = p_0\]</div>
 <p>Prófstærðin er:</p>
 <div class="math notranslate nohighlight" id="equation-eq-pprofstaerd">
-<span class="eqno">(7.4)<a class="headerlink" href="#equation-eq-pprofstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - np_0}{\sqrt{np_0(1-p_0)}}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-eq-pprofstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - np_0}{\sqrt{np_0(1-p_0)}}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(X\)</span> er fjöldi heppnaðra tilrauna og <span class="math notranslate nohighlight">\(n\)</span> er stærð
 úrtaksins.</p>
 <p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
@@ -400,16 +408,16 @@ hafi verið til fyrirmyndar. Niðurstaðan var að af þeim 8750 sem spurðir
 voru “styður þú ríkisstjórnina“ sögðu 4530 já og 4220 nei. Finnið 95%
 öryggisbil fyrir <span class="math notranslate nohighlight">\(p\)</span>, hlutfall þeirra sem styðja ríkisstjórnina.
 Taka skal fram að tölurnar í þessu dæmi eru uppspuni.</p>
-<p>Byrjum á að finna <span class="math notranslate nohighlight">\(p\)</span> með jöfnu <a class="reference internal" href="#equation-eq-phat">7.1</a></p>
+<p>Byrjum á að finna <span class="math notranslate nohighlight">\(p\)</span> með jöfnu <a class="reference internal" href="#equation-eq-phat">(1)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p} = \frac{x}{n} = \frac{4530}{8750} = 0.5177\]</div>
 <p>Skilyrðin um normalnálgun eru uppfyllt þar sem  <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og
  <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>  eru bæði stærri en 15 . Nú má reikna neðra
-öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pnedra">7.2</a></p>
+öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pnedra">(2)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} =
 0.5177 - 1.96 \cdot \sqrt{\frac{0.5177(1-0.5177)}{8750}} = 0.5072\]</div>
-<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pefra">7.3</a></p>
+<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pefra">(3)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} =
 0.5177 + 1.96 \cdot \sqrt{\frac{0.5177(1-0.5177)}{8750}} =  0.5282\]</div>
@@ -438,10 +446,10 @@ köllum hlutföll heppnaðra tilrauna í þýðunum tveimur <span class="math no
 <span class="math notranslate nohighlight">\(\hat{p}_2\)</span> notuð til að meta þýðishlutföllin <span class="math notranslate nohighlight">\(p_1\)</span> og
 <span class="math notranslate nohighlight">\(p_2\)</span>. Jöfnur þeirra eru</p>
 <div class="math notranslate nohighlight" id="equation-eq-p1hat">
-<span class="eqno">(7.5)<a class="headerlink" href="#equation-eq-p1hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-p1hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \hat{p}_1 = \frac{x_1}{n_1}\end{aligned}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-p2hat">
-<span class="eqno">(7.6)<a class="headerlink" href="#equation-eq-p2hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-p2hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
 \hat{p}_2 = \frac{x_2}{n_2}\end{aligned}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(x_1\)</span> og <span class="math notranslate nohighlight">\(x_2\)</span> eru fjöldi heppnaðra tilrauna í
 úrtökunum tveimur.</p>
@@ -466,11 +474,11 @@ tölfræðihugbúnuðum.</p>
  og  <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri en 15 má reikna neðra
 öryggismark fyrir muninn á <span class="math notranslate nohighlight">\(p_1\)</span> og <span class="math notranslate nohighlight">\(p_2\)</span> með:</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvopnedra">
-<span class="eqno">(7.7)<a class="headerlink" href="#equation-eq-tvopnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 - z_{1-\alpha/2} \cdot
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-tvopnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 - z_{1-\alpha/2} \cdot
 \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}\]</div>
 <p>og efra öryggismarkið með</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvopefra">
-<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-tvopefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 + z_{1-\alpha/2} \cdot
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-tvopefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 + z_{1-\alpha/2} \cdot
 \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(\hat{p}_1 = \frac{x_1}{n_1}\)</span>,
 <span class="math notranslate nohighlight">\(\hat{p}_2 = \frac{x_2}{n_2}\)</span> og <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> fæst með
@@ -492,7 +500,7 @@ tilgátupróf:</p>
 \[\text{H}_0: p_1 = p_2\]</div>
 <p>Prófstærðin er:</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvopprof">
-<span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-tvopprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hspace{5mm}
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-tvopprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hspace{5mm}
 Z = \frac{\frac{X_1}{n_1} - \frac{X_2}{n_2}}{\sqrt{\hat p(1- \hat p)\left(\frac{1}{n_1} + \frac{1}{n_2} \right)}},
 \ \ \text{þar sem} \ \ \hat p = \frac{X_1 + X_2}{n_1 + n_2}\]</div>
 <p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
@@ -540,17 +548,17 @@ dæminu að fjöldi karla og fjöldi kvenna er jafn,
 styðja ríkisstjórnina er 2337 og fjöldi karla því 4530-2337 = 2193, því
 eru <span class="math notranslate nohighlight">\(x_1 = 2337\)</span> og <span class="math notranslate nohighlight">\(x_2 = 2193\)</span>.</p>
 <p>Reiknum nú <span class="math notranslate nohighlight">\(\hat{p}_1\)</span> og <span class="math notranslate nohighlight">\(\hat{p}_2\)</span> með jöfnum
-<a class="reference internal" href="#equation-eq-p1hat">7.5</a> og <a class="reference internal" href="#equation-eq-p2hat">7.6</a></p>
+<a class="reference internal" href="#equation-eq-p1hat">(5)</a> og <a class="reference internal" href="#equation-eq-p2hat">(6)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p}_1 = \frac{x_1}{n_1} = \frac{2337}{4375} = 0.5342 \ \ \text{og}
 \ \ \hat{p}_2 = \frac{x_2}{n_2} = \frac{2193}{4375} = 0.5013\]</div>
-<p>Nú má reikna neðra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopnedra">7.7</a></p>
+<p>Nú má reikna neðra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopnedra">(7)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p}_1 - \hat{p}_2 - z_{1-\alpha/2} \cdot
 \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}=\]</div>
 <div class="math notranslate nohighlight">
 \[0.5342 - 0.5013 - 1.96\sqrt{\frac{0.5342(1-0.5342)}{4375} + \frac{0.5013(1-0.5013)}{4375}} = 0.0119\]</div>
-<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopefra">7.8</a></p>
+<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopefra">(8)</a></p>
 <div class="math notranslate nohighlight">
 \[\hat{p}_1 - \hat{p}_2 + z_{1-\alpha/2} \cdot
 \sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}} =\]</div>
@@ -577,10 +585,10 @@ H_1&amp;:&amp; p_1 \neq p_2\end{aligned}\end{split}\]</div>
 </li>
 <li><p>Við vitum að <span class="math notranslate nohighlight">\(\hat{p}_1 = 0.5342\)</span> og
 <span class="math notranslate nohighlight">\(\hat{p}_2 = 0.5013\)</span>. Reiknum nú <span class="math notranslate nohighlight">\(\hat p\)</span>, sjá jöfnu
-<a class="reference internal" href="#equation-eq-tvopprof">7.9</a>, þar sem <span class="math notranslate nohighlight">\(\hat p\)</span> kemur fyrir í prófstærðinni</p>
+<a class="reference internal" href="#equation-eq-tvopprof">(9)</a>, þar sem <span class="math notranslate nohighlight">\(\hat p\)</span> kemur fyrir í prófstærðinni</p>
 <div class="math notranslate nohighlight">
 \[\hat p= \frac{x_1 + x_2}{n_1 + n_2} = \frac{4530}{8750} = 0.5177\]</div>
-<p>Prófstærðina má svo reikna með jöfnu <a class="reference internal" href="#equation-eq-tvopprof">7.9</a></p>
+<p>Prófstærðina má svo reikna með jöfnu <a class="reference internal" href="#equation-eq-tvopprof">(9)</a></p>
 <div class="math notranslate nohighlight">
 \[z = \frac{\frac{x_1}{n_1} - \frac{x_2}{n_2}}{\sqrt{\hat p(1-\hat p)\left(\frac{1}{n_1} + \frac{1}{n_2} \right)}}
 = \frac{0.5342 - 0.5013}{\sqrt{0.5177(1-0.5177)\left(\frac{1}{4375} + \frac{1}{4375} \right)}} = 3.08\]</div>
@@ -658,7 +666,7 @@ prófstærðar lagðar saman til að fá gildið á prófstærðinni (sjá kassa
 \[H_1: \text{hlutföllin eru ekki öll jöfn}\]</div>
 <p>Prófstærðin er:</p>
 <div class="math notranslate nohighlight" id="equation-eq-kikvadrat2">
-<span class="eqno">(7.10)<a class="headerlink" href="#equation-eq-kikvadrat2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-kikvadrat2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(l\)</span> er fjöldi lína, <span class="math notranslate nohighlight">\(d\)</span> er fjöldi dálka, <span class="math notranslate nohighlight">\(o\)</span>
 er mæld tíðni og <span class="math notranslate nohighlight">\(e\)</span> er væntanleg tíðni.</p>
 <p>Sé núlltilgátan sönn fylgir prófstærðin <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með
@@ -1051,7 +1059,7 @@ H_0&amp;:&amp; \text{Það er ekki samband á milli breytanna tveggja}\\
 H_1&amp;:&amp; \text{Það er samband á milli breytanna tveggja}\end{aligned}\end{split}\]</div>
 <p>Prófstærðin er</p>
 <div class="math notranslate nohighlight" id="equation-eq-kikvadrat">
-<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-kikvadrat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-kikvadrat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(l\)</span> er fjöldi lína, <span class="math notranslate nohighlight">\(j\)</span> er fjöldi dálka, <span class="math notranslate nohighlight">\(o\)</span>
 er mæld tíðni og <span class="math notranslate nohighlight">\(e\)</span> er væntanleg tíðni. Sé núlltilgátan sönn
 fylgir prófstærðin <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með (<span class="math notranslate nohighlight">\(l\)</span> - 1)

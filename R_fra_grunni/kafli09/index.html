@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9. Einþátta fervikagreining &mdash; R frá Grunni 2023</title>
+  <title>9. Einþátta fervikagreining &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,11 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -141,12 +141,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -180,14 +177,14 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#stikalaus-prof-ast">9.3. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">9.3.1. Stikalaus próf<span class="math">\(^\ast\)</span></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stikalaus-prof-ast">9.3. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">9.3.1. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#kruskal-test">9.3.1.1. kruskal.test()</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#fleiri-en-tveir-aettir-ast">9.4. Fleiri en tveir þættir<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fleiri-en-tveir-aettir-ast">9.4. Fleiri en tveir þættir<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">9.5. Leiksvæði fyrir R kóða</a></li>
 </ul>
 </li>
@@ -207,7 +204,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -217,7 +214,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">9. </span>Einþátta fervikagreining</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli09.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli09.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -259,7 +256,7 @@ fyrri breytan heiti <code class="docutils literal notranslate"><span class="pre"
 <p>Þegar framkvæma á fervikagreiningu með <code class="docutils literal notranslate"><span class="pre">aov()</span></code> er skynsamlegt að vista
 úttakið í hlut því eins og við sjáum hér að neðan er ýmislegt að finna í
 úttakinu. Hér vistum við það undir nafninu <em>fervik</em>.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">maeling</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">hopur</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span> <span class="o">&lt;-</span> <span class="n">aov</span><span class="p">(</span><span class="n">maeling</span> <span class="o">~</span> <span class="n">hopur</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Það er mjög mikilvægt að breytan <code class="docutils literal notranslate"><span class="pre">hopur</span></code> sé skilgreind sem
@@ -277,7 +274,7 @@ að breyta henni).</p>
 <hr class="docutils" />
 <p>Til að fá fervikagreiningartöflu mötum við <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðina með
 fervikagreiningarhlut:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Snúum okkur nú að gagnasafninu okkar. Í kafla <a class="reference internal" href="../kafli02/#s-kodun"><span class="std std-numref">2.6</span></a> bjuggum við
@@ -287,16 +284,16 @@ meðalpúls einstaklinga í hópunum þremur í kafla <a class="reference intern
 Nú getum við kannað með fervikagreiningu hvort munur sé á meðalpúlsi í
 hópunum þremur. Byrjum á því að skoða kassarit af púlsmælingum eftir
 líkamsræktarástundun:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">gogn</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">na.omit</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span><span class="w"> </span><span class="c1"># sleppum NA gildum</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gogn</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">likamsraektf</span><span class="p">,</span><span class="n">fyrriPuls</span><span class="p">))</span><span class="o">+</span><span class="nf">geom_boxplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Líkamsræktarástundun&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Púls (slög/mínútu)&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gogn</span> <span class="o">&lt;-</span> <span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span> <span class="c1"># sleppum NA gildum</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gogn</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">likamsraektf</span><span class="p">,</span><span class="n">fyrriPuls</span><span class="p">))</span><span class="o">+</span><span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Líkamsræktarástundun&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Púls (slög/mínútu)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
 <img alt="../_images/unnamed-chunk-217-1.svg" src="../_images/unnamed-chunk-217-1.svg" /></figure>
 <p>Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
 Því næst framkvæmum við Bartlett prófið fyrir dreifnina:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">bartlett.test</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">likamsraektf</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puls</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bartlett</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">fyrriPuls</span> <span class="o">~</span> <span class="n">likamsraektf</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">##  Bartlett test of homogeneity of variances</span>
 <span class="c1">##</span>
@@ -312,13 +309,13 @@ núlltilgátur). Í þessu tilviki er fjöldi mælinga hár og styrkur prófsins
 því væntanlega sæmilegur. Við getum því litið á þetta háa p-gildi sem
 vísbendingu um það að dreifnin í hópunum sé ekki misjöfn.</p>
 <p>Við framkvæmum fervikagreiningu með eftirfarandi skipunum:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">likamsraektf</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puls</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span> <span class="o">&lt;-</span> <span class="n">aov</span><span class="p">(</span><span class="n">fyrriPuls</span> <span class="o">~</span> <span class="n">likamsraektf</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Takið eftir að við tilgreinum fyrst nöfnin á breytunum og svo nafnið á
 gagnatöflunni. Til að fá fervikasummutöfluna notum við <code class="docutils literal notranslate"><span class="pre">anova()</span></code>
 aðferðina.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
 <span class="c1">## Response: fyrriPuls</span>
@@ -334,9 +331,9 @@ og 446).</p>
 <p>Það er einnig búið að reikna meðalfervikasummurnar (1289.9 og 135.7) og
 finna hlutfall þeirra, sem er einmitt F-prófstærðin (9.505). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
-(<span class="math">\(9.07\times 10^{-5}\)</span>). Eins og sjá má er ýmislegt annað að finna
+(<span class="math notranslate nohighlight">\(9.07\times 10^{-5}\)</span>). Eins og sjá má er ýmislegt annað að finna
 í <code class="docutils literal notranslate"><span class="pre">aov()</span></code> úttakinu:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 <span class="c1">##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;</span>
 <span class="c1">##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;</span>
 <span class="c1">##  [9] &quot;na.action&quot;     &quot;contrasts&quot;     &quot;xlevels&quot;       &quot;call&quot;</span>
@@ -344,7 +341,7 @@ fyrir tilgátuprófið er svo lengst til hægri
 </pre></div>
 </div>
 <p>Viljum við t.d. nálgast leifarnar gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="o">$</span><span class="n">residuals</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fervik$residuals
 </pre></div>
 </div>
 </section>
@@ -370,7 +367,7 @@ slíkt próf.</p>
 <hr class="docutils" />
 <p>Til að framkvæma prófið í R notum við skipunina <code class="docutils literal notranslate"><span class="pre">TukeyHSD()</span></code> og mötum
 hana með fervikagreiningarhlut.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">TukeyHSD</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TukeyHSD</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 <span class="c1">##   Tukey multiple comparisons of means</span>
 <span class="c1">##     95% family-wise confidence level</span>
 <span class="c1">##</span>
@@ -384,7 +381,7 @@ hana með fervikagreiningarhlut.</p>
 </pre></div>
 </div>
 <p>Það má líka skoð niðurstöðuna myndrænt með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="nf">TukeyHSD</span><span class="p">(</span><span class="n">fervik</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">TukeyHSD</span><span class="p">(</span><span class="n">fervik</span><span class="p">))</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -393,9 +390,9 @@ hana með fervikagreiningarhlut.</p>
 </section>
 </section>
 <section id="stikalaus-prof-ast">
-<h2><span class="section-number">9.3. </span>Stikalaus próf<span class="math">\(^\ast\)</span><a class="headerlink" href="#stikalaus-prof-ast" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.3. </span>Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#stikalaus-prof-ast" title="Permalink to this heading"></a></h2>
 <section id="id3">
-<h3><span class="section-number">9.3.1. </span>Stikalaus próf<span class="math">\(^\ast\)</span><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.3.1. </span>Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>Ef skilyrði þess að hægt sé að framkvæma fervikagreiningu eru ekki
 uppfyllt er í sumum tilvikum hægt að nota stikalaus próf þess í stað
 (það er algengur misskilningur að það sé ávalt hægt að nota stikalaus
@@ -415,7 +412,7 @@ prófið sem hægt er framkvæma með skipuninni <code class="docutils literal n
 </section>
 </section>
 <section id="fleiri-en-tveir-aettir-ast">
-<span id="s-aovfleiribreytur"></span><h2><span class="section-number">9.4. </span>Fleiri en tveir þættir<span class="math">\(^\ast\)</span><a class="headerlink" href="#fleiri-en-tveir-aettir-ast" title="Permalink to this heading"></a></h2>
+<span id="s-aovfleiribreytur"></span><h2><span class="section-number">9.4. </span>Fleiri en tveir þættir<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#fleiri-en-tveir-aettir-ast" title="Permalink to this heading"></a></h2>
 <p>Hægt er að framkvæma fervikagreiningu með fleiri en einum þátt. Það er
 margt sem þarf að gæta að, s.s. misjafn fjöldi mælinga í hópunum
 (e. unbalanced design), <em>gruggun</em> (e. confounding) og margt fleira. Við
@@ -434,9 +431,9 @@ til að kanna hvort víxlhrif séu til staðar. Við gerum það í R með
 aðferðinni úr <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>. Hún er viðkvæm fyrir vöntun mælinga á
 flokkabreytum og búum við því til gagnasafn þar sem ekki vantar neinar
 mælingar.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls.na</span><span class="o">&lt;-</span><span class="nf">na.omit</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="n">puls.na</span><span class="p">,</span><span class="nf">aes</span><span class="p">(</span><span class="n">likamsraektf</span><span class="p">,</span><span class="n">fyrriPuls</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="n">kyn</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
-<span class="nf">stat_summary</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">kyn</span><span class="p">),</span><span class="n">fun.y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geom</span><span class="o">=</span><span class="s">&#39;line&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="o">&lt;-</span><span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">likamsraektf</span><span class="p">,</span><span class="n">fyrriPuls</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">stat_summary</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">kyn</span><span class="p">),</span><span class="n">fun</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geom</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
@@ -449,8 +446,8 @@ einstaklinga sem stunda litla líkamsrækt.</p>
 prófum við ekki hina þættina í líkaninu. Ef engin víxlhrif eru til
 staðar þá fjarlægjum við víxlhrifin úr líkaninu, metum það upp á nýtt og
 prófum hina þættina tvo.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fervik.2</span><span class="o">&lt;-</span><span class="nf">aov</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="o">~</span><span class="n">likamsraektf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kyn</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">likamsraektf</span><span class="o">:</span><span class="n">kyn</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
-<span class="nf">anova</span><span class="p">(</span><span class="n">fervik.2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.2</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="o">~</span><span class="n">likamsraektf</span> <span class="o">+</span> <span class="n">kyn</span> <span class="o">+</span> <span class="n">likamsraektf</span><span class="p">:</span><span class="n">kyn</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
+<span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.2</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
 <span class="c1">## Response: fyrriPuls</span>
@@ -468,8 +465,8 @@ og prófstærð.</p>
 <p>Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.45026 og höfum við
 því ekki sýnt fram á að munur sé á áhrif líkamsræktar eftir kynjum. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">fervik.3</span><span class="o">&lt;-</span><span class="nf">aov</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="o">~</span><span class="n">likamsraektf</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">kyn</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
-<span class="nf">anova</span><span class="p">(</span><span class="n">fervik.3</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.3</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="o">~</span><span class="n">likamsraektf</span> <span class="o">+</span> <span class="n">kyn</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
+<span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.3</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
 <span class="c1">## Response: fyrriPuls</span>
@@ -486,7 +483,7 @@ fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
 (type III SS) og í <code class="docutils literal notranslate"><span class="pre">car</span></code> pakkanum má finna aðferðina <code class="docutils literal notranslate"><span class="pre">Anova()</span></code> en
 með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
 <code class="docutils literal notranslate"><span class="pre">drop1()</span></code> aðferðinni:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">drop1</span><span class="p">(</span><span class="n">fervik.3</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="o">=</span><span class="s">&quot;F&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">drop1</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.3</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
 <span class="c1">## Single term deletions</span>
 <span class="c1">##</span>
 <span class="c1">## Model:</span>

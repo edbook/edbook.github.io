@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Lýsandi tölfræði &mdash; R frá Grunni 2023</title>
+  <title>4. Lýsandi tölfræði &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,10 +19,10 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
     <script src="../_static/js/theme.js"></script>
 
@@ -141,12 +140,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -224,7 +220,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -234,7 +230,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">4. </span>Lýsandi tölfræði</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -276,14 +272,14 @@ hluta.</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">max()</span></code> gefur hæsta gildið. Viljum við finna hæsta gildið af
 3, 4, 7 og 8 gerum við það með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="c1">## [1] 8</span>
 </pre></div>
 </div>
 <p>en viljum við finna hæsta gildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">## [1] 198</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max(puls$haed, na.rm=T)
+## [1] 198
 </pre></div>
 </div>
 </section>
@@ -298,14 +294,14 @@ mata aðferðina með nafni breytunnar.</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">min()</span></code> gefur lægsta gildið. Viljum við finna lægsta gildið
 af 3, 4, 7 og 8 gerum við það með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">min</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">),</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">na</span><span class="o">.</span><span class="n">rm</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
 <span class="c1">## [1] 3</span>
 </pre></div>
 </div>
 <p>en viljum við finna lægsta gildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">min</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">## [1] 150</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min(puls$haed, na.rm=T)
+## [1] 150
 </pre></div>
 </div>
 </section>
@@ -323,14 +319,14 @@ mata aðferðina með nafni breytunnar.</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">mean()</span></code> reiknar meðaltal. Viljum við reikna meðaltal
 talnanna 3, 4, 7 og 8 gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mean</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="c1">## [1] 5.5</span>
 </pre></div>
 </div>
 <p>Viljum við reikna meðaltal ákveðinnar breytu gerum við það með að mata
 aðferðina með nafni breytunnar.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">## [1] 173.2532</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mean(puls$haed, na.rm=T)
+## [1] 173.2532
 </pre></div>
 </div>
 </section>
@@ -345,14 +341,14 @@ aðferðina með nafni breytunnar.</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">median()</span></code> reiknar miðgildi. Viljum við reikna miðgildi
 talnanna 3, 4, 7 og 8 gerum við það með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">median</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">median</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="c1">## [1] 5.5</span>
 </pre></div>
 </div>
 <p>en viljum við reikna miðgildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">median</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">## [1] 172</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>median(puls$haed, na.rm=T)
+## [1] 172
 </pre></div>
 </div>
 </section>
@@ -370,12 +366,12 @@ mata aðferðina með nafni breytunnar:</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">var()</span></code> reiknar dreifni. Viljum við reikna dreifni talnanna
 3, 4, 7 og 8 gerum við það með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">var</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>en viljum við reikna dreifni ákveðinnar breytu gerum við það með að mata
 aðferðina með nafni breytunnar:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">var</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var(puls$haed, na.rm=T)
 </pre></div>
 </div>
 </section>
@@ -390,14 +386,14 @@ aðferðina með nafni breytunnar:</p>
 <hr class="docutils" />
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">sd()</span></code> reiknar staðalfrávik. Viljum við reikna staðalfrávik
 talnanna 3, 4, 7 og 8 gerum við það með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sd</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sd</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="c1">## [1] 2.380476</span>
 </pre></div>
 </div>
 <p>en viljum við reikna staðalfrávik ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sd</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">## [1] 9.774032</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sd(puls$haed, na.rm=T)
+## [1] 9.774032
 </pre></div>
 </div>
 </section>
@@ -413,9 +409,9 @@ mata aðferðina með nafni breytunnar:</p>
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">quantile</span></code> reiknar út hlutfallsmörk. Sjálfgefna stilling
 aðferðarinnar skilar okkur fjórðungamörkunum. Við mötum aðferðina með
 nafninu á breytunni:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">quantile</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
-<span class="c1">##   0%  25%  50%  75% 100%</span>
-<span class="c1">##  150  166  172  181  198</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>quantile(puls$haed, na.rm=T)
+##   0%  25%  50%  75% 100%
+##  150  166  172  181  198
 </pre></div>
 </div>
 <p>Við getum notað <code class="docutils literal notranslate"><span class="pre">probs</span></code> stillinguna til að reikna hvaða hlutfallsmörk
@@ -437,8 +433,8 @@ sem er.</p>
 þurfum að mata aðferðina með heitunum á breytunum sem við ætlum að
 reikna fylgnina á milli. Viljum við reikna fylgnina á milli breytanna
 <code class="docutils literal notranslate"><span class="pre">haed</span></code> og <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> notum við skipunina:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">cor</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">thyngd</span><span class="p">,</span><span class="n">use</span><span class="o">=</span><span class="s">&quot;complete.obs&quot;</span><span class="p">)</span>
-<span class="c1">## [1] 0.6765718</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor(puls$haed,puls$thyngd,use=&quot;complete.obs&quot;)
+## [1] 0.6765718
 </pre></div>
 </div>
 <p>Stillinguna <code class="docutils literal notranslate"><span class="pre">use=&quot;complete.obs&quot;</span></code> notum við vanti einhverjar mælingar.
@@ -465,21 +461,21 @@ skoðum svo lýsistærðir sem lýsa sambandi tveggja flokkabreyta.</p>
 <p><code class="docutils literal notranslate"><span class="pre">table()</span></code> skipunin telur hversu oft hver og ein útkoma flokkabreytu
 kemur fyrir. Viljum við sjá hversu margir nemendur voru í LAN203 og
 STÆ209 í gagnasafninu okkar gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##  LAN203 STAE209</span>
-<span class="c1">##     172     299</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(puls$namskeid)
+##
+##  LAN203 STAE209
+##     172     299
 </pre></div>
 </div>
 <p>Við getum líka matað <code class="docutils literal notranslate"><span class="pre">table()</span></code> með tveimur flokkabreytum og þá telur
 hún hversu oft hversu mörg viðfangsefni hljóta hverja og eina af
 mögulegum samsetningum útkoma beggja breytanna eins og er sýnt hér að
 neðan.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##           kvk  kk</span>
-<span class="c1">##   LAN203  111  61</span>
-<span class="c1">##   STAE209 196 103</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(puls$namskeid,puls$kyn)
+##
+##           kvk  kk
+##   LAN203  111  61
+##   STAE209 196 103
 </pre></div>
 </div>
 </section>
@@ -495,39 +491,39 @@ neðan.</p>
 <p><code class="docutils literal notranslate"><span class="pre">table()</span></code> skipunin skilar okkur fjölda/tíðni en viljum við frekar
 hlutföll getum við notað <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> aðferðina. Við mötum hana með
 því sem <code class="docutils literal notranslate"><span class="pre">table()</span></code> aðferðin skilar:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##    LAN203   STAE209</span>
-<span class="c1">## 0.3651805 0.6348195</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$namskeid))
+##
+##    LAN203   STAE209
+## 0.3651805 0.6348195
 </pre></div>
 </div>
 <p>Séum við að vinna með tvær breytur má mata <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> aðferðina á
 þrennan hátt. Viljum við fá heildarhlutföllin gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##                 kvk        kk</span>
-<span class="c1">##   LAN203  0.2356688 0.1295117</span>
-<span class="c1">##   STAE209 0.4161359 0.2186837</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$namskeid,puls$kyn))
+##
+##                 kvk        kk
+##   LAN203  0.2356688 0.1295117
+##   STAE209 0.4161359 0.2186837
 </pre></div>
 </div>
 <p>Í töflunni má t.d. sjá að um 23.6% nemenda í gagnasafninu eru kvenkyns
 nemendur í LAN203. Viljum við aftur á máti skoða hlutföllin eftir línum
 í töflunni gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">),</span><span class="n">margin</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##                 kvk        kk</span>
-<span class="c1">##   LAN203  0.6453488 0.3546512</span>
-<span class="c1">##   STAE209 0.6555184 0.3444816</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$namskeid,puls$kyn),margin=1)
+##
+##                 kvk        kk
+##   LAN203  0.6453488 0.3546512
+##   STAE209 0.6555184 0.3444816
 </pre></div>
 </div>
 <p>Í töflunni má t.d. sjá að um 64.5% nemenda í LAN203 eru kvenkyns. Viljum
 við hins vegar skoða hlutföllin eftir dálkum í töflunni gerum við það
 með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">),</span><span class="n">margin</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##                 kvk        kk</span>
-<span class="c1">##   LAN203  0.3615635 0.3719512</span>
-<span class="c1">##   STAE209 0.6384365 0.6280488</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$namskeid,puls$kyn),margin=2)
+##
+##                 kvk        kk
+##   LAN203  0.3615635 0.3719512
+##   STAE209 0.6384365 0.6280488
 </pre></div>
 </div>
 <p>Í töflunni má t.d. sjá að um 36.2% kvenkyns nemenda er í LAN203.</p>
@@ -554,11 +550,11 @@ næmi (e. sensitivity) og sértæki (e. specificity).</p>
 Við mötum aðferðina með því sem reikna á og fjölda aukastafa sem á að
 skila. Skoðum t.d. töfluna hér að ofan. Viljum við aðeins að þremur
 aukastöfum sé skilað gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">round</span><span class="p">(</span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">),</span><span class="m">2</span><span class="p">),</span><span class="m">3</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##             kvk    kk</span>
-<span class="c1">##   LAN203  0.362 0.372</span>
-<span class="c1">##   STAE209 0.638 0.628</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>round(prop.table(table(puls$namskeid,puls$kyn),2),3)
+##
+##             kvk    kk
+##   LAN203  0.362 0.372
+##   STAE209 0.638 0.628
 </pre></div>
 </div>
 </section>
@@ -574,15 +570,15 @@ aukastöfum sé skilað gerum við það með:</p>
 Skipunin skilar mismunandi úttaki eftir því með hverju hún er mötuð. Sé
 hún mötuð með talnabreytu gefur <code class="docutils literal notranslate"><span class="pre">summary()</span></code> aðferðin okkur fimm tölu
 samantekt og meðaltal. Það er bæði hægt að mata aðferðina með tölum</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">8</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="c1">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.</span>
 <span class="c1">##    3.00    3.75    5.50    5.50    7.25    8.00</span>
 </pre></div>
 </div>
 <p>og með nafni breytu:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">haed</span><span class="p">)</span>
-<span class="c1">##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s</span>
-<span class="c1">##   150.0   166.0   172.0   173.3   181.0   198.0       1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>summary(puls$haed)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s
+##   150.0   166.0   172.0   173.3   181.0   198.0       1
 </pre></div>
 </div>
 <p>Ef breytan sem við erum að skoða er flokkabreyta gefur <code class="docutils literal notranslate"><span class="pre">summary()</span></code>
@@ -590,7 +586,7 @@ aðferðin okkur nafnið á flokkunum og fjölda viðfangsefna í hverjum
 flokki.</p>
 <p>Það er líka hægt að mata <code class="docutils literal notranslate"><span class="pre">summary()</span></code> aðferðina með nafninu á
 gagnatöflu og fáum við þá upplýsingar um allar breyturnar í töflunni.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">puls</span><span class="p">)</span>
 <span class="c1">##        id           namskeid        haed           thyngd</span>
 <span class="c1">##  Min.   :  1.0   LAN203 :172   Min.   :150.0   Min.   : 40.00</span>
 <span class="c1">##  1st Qu.:118.5   STAE209:299   1st Qu.:166.0   1st Qu.: 60.00</span>
@@ -644,9 +640,9 @@ aðferðinni sem við viljum beita. Ef það vantar einhver gildi þurfum við
 að nota <code class="docutils literal notranslate"><span class="pre">na.rm=TRUE</span></code> líkt og áður. Viljum við t.d. reikna út meðaltal
 fyrri púlsmælinganna í líkamsræktarhópunum þremur sem við mynduðum hér að
 ofan gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">tapply</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">fyrriPuls</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">,</span><span class="n">mean</span><span class="p">,</span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="c1">##    Lítil Miðlungs    Mikil</span>
-<span class="c1">## 75.14815 73.21739 69.13587</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(puls$fyrriPuls,puls$likamsraektf,mean,na.rm=TRUE)
+##    Lítil Miðlungs    Mikil
+## 75.14815 73.21739 69.13587
 </pre></div>
 </div>
 </section>

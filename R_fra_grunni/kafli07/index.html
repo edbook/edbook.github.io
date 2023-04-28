@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Ályktanir um flokkabreytur &mdash; R frá Grunni 2023</title>
+  <title>7. Ályktanir um flokkabreytur &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,11 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -141,12 +141,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -206,7 +203,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -216,7 +213,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">7. </span>Ályktanir um flokkabreytur</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -256,37 +253,37 @@ hvort kynjahlutfallið sé jafnt í nemendahópnum sem púlsgögnin byggja á.</
 <hr class="docutils" />
 <p>Byrjum á því að nota <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> skipunina, (kassa
 <a class="reference internal" href="../kafli04/#rf-prop-table"><span class="std std-numref">4.2.1.2</span></a>) til að sjá hvert kynjahlutfallið er:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##       kvk        kk</span>
-<span class="c1">## 0.6518047 0.3481953</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$kyn))
+##
+##       kvk        kk
+## 0.6518047 0.3481953
 </pre></div>
 </div>
 <p>Tilgátuprófið, öryggisbilið, prófstærðin og tilgátuprófið fást öll í
 einu með einni skipun:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">binom.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##  Exact binomial test</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls$kyn)</span>
-<span class="c1">## number of successes = 307, number of trials = 471, p-value =</span>
-<span class="c1">## 4.308e-11</span>
-<span class="c1">## alternative hypothesis: true probability of success is not equal to 0.5</span>
-<span class="c1">## 95 percent confidence interval:</span>
-<span class="c1">##  0.6068703 0.6948191</span>
-<span class="c1">## sample estimates:</span>
-<span class="c1">## probability of success</span>
-<span class="c1">##              0.6518047</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>binom.test(table(puls$kyn))
+##
+##  Exact binomial test
+##
+## data:  table(puls$kyn)
+## number of successes = 307, number of trials = 471, p-value =
+## 4.308e-11
+## alternative hypothesis: true probability of success is not equal to 0.5
+## 95 percent confidence interval:
+##  0.6068703 0.6948191
+## sample estimates:
+## probability of success
+##              0.6518047
 </pre></div>
 </div>
 <p>Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
 heppnaðra tilrauna (sem í þessu tilviki er fjöldi kvenna) er 307,
 heildarfjöldi nemenda er 471 og p-gildi tilgátuprófsins er
-<span class="math">\(4.3078955\times 10^{-11}\)</span>.</p>
+<span class="math notranslate nohighlight">\(4.3078955\times 10^{-11}\)</span>.</p>
 <p>Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir hlutfallið, sem reyndist
-<span class="math">\([0.6068703, 0.6948191]\)</span>. Að lokum sjáum við sjálft matið á
-hlutfalli kvenna í námskeiðinu, <span class="math">\(\hat{p} = 0.6518047\)</span>.</p>
+<span class="math notranslate nohighlight">\([0.6068703, 0.6948191]\)</span>. Að lokum sjáum við sjálft matið á
+hlutfalli kvenna í námskeiðinu, <span class="math notranslate nohighlight">\(\hat{p} = 0.6518047\)</span>.</p>
 </section>
 </section>
 </section>
@@ -311,35 +308,35 @@ flestum kennslubókum.</p>
 <p>Skoðum nú hvort kynjahlutfallið sé það sama í námskeiðunum LAN203 og
 STAE209. Byrjum sem fyrr á því að skoða hvert kynjahlutfallið er með
 <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> (kassi <a class="reference internal" href="../kafli04/#rf-prop-table"><span class="std std-numref">4.2.1.2</span></a>).</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.table</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">),</span><span class="n">margin</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##          LAN203   STAE209</span>
-<span class="c1">##   kvk 0.6453488 0.6555184</span>
-<span class="c1">##   kk  0.3546512 0.3444816</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(puls$kyn, puls$namskeid),margin=2)
+##
+##          LAN203   STAE209
+##   kvk 0.6453488 0.6555184
+##   kk  0.3546512 0.3444816
 </pre></div>
 </div>
 <p>Tilgátuprófið, öryggisbilið, prófstærðin og tilgátuprófið fást öll í
 einu með einni skipun:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##  2-sample test for equality of proportions with continuity</span>
-<span class="c1">##  correction</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls$namskeid, puls$kyn)</span>
-<span class="c1">## X-squared = 0.015035, df = 1, p-value = 0.9024</span>
-<span class="c1">## alternative hypothesis: two.sided</span>
-<span class="c1">## 95 percent confidence interval:</span>
-<span class="c1">##  -0.10426340  0.08392429</span>
-<span class="c1">## sample estimates:</span>
-<span class="c1">##    prop 1    prop 2</span>
-<span class="c1">## 0.6453488 0.6555184</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.test(table(puls$namskeid, puls$kyn))
+##
+##  2-sample test for equality of proportions with continuity
+##  correction
+##
+## data:  table(puls$namskeid, puls$kyn)
+## X-squared = 0.015035, df = 1, p-value = 0.9024
+## alternative hypothesis: two.sided
+## 95 percent confidence interval:
+##  -0.10426340  0.08392429
+## sample estimates:
+##    prop 1    prop 2
+## 0.6453488 0.6555184
 </pre></div>
 </div>
 <p>Fyrst sjáum við að prófstærðin er 0.015035, sem fylgir kí-kvaðrat prófi
 með 1 frígráðu og p-gildi tilgátuprófsins er 0.9024.</p>
 <p>Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
-<span class="math">\([-0.1042634, 0.0839243]\)</span>.</p>
+<span class="math notranslate nohighlight">\([-0.1042634, 0.0839243]\)</span>.</p>
 <p>Að lokum sjáum við sjálf mötin á hlutfalli kvenna í námskeiðunum
 tveimur, 0.6453488 og 0.6555184.</p>
 <p>Einnig er hægt að nota skipunina <code class="docutils literal notranslate"><span class="pre">prop.test()</span></code> til að bera saman
@@ -347,22 +344,22 @@ hlutföll fleiri en tveggja hópa. Þá þarf að gæta þess að tengslataflan
 snúi rétt, þ.e.a.s. að hún hafi eingöngu tvo dálka en ekki fleiri. Í því
 felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 þeirri sem hefur eingöngu tvo flokka:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##  3-sample test for equality of proportions without continuity</span>
-<span class="c1">##  correction</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls$likamsraektf, puls$kyn)</span>
-<span class="c1">## X-squared = 11.3, df = 2, p-value = 0.003518</span>
-<span class="c1">## alternative hypothesis: two.sided</span>
-<span class="c1">## sample estimates:</span>
-<span class="c1">##    prop 1    prop 2    prop 3</span>
-<span class="c1">## 0.6117647 0.7382199 0.5789474</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.test(table(puls$likamsraektf, puls$kyn))
+##
+##  3-sample test for equality of proportions without continuity
+##  correction
+##
+## data:  table(puls$likamsraektf, puls$kyn)
+## X-squared = 11.3, df = 2, p-value = 0.003518
+## alternative hypothesis: two.sided
+## sample estimates:
+##    prop 1    prop 2    prop 3
+## 0.6117647 0.7382199 0.5789474
 </pre></div>
 </div>
 <p>Sé þessu snúið öfugt fæst villa og ekki er hægt að meta tilgátuprófið:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">prop.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">kyn</span><span class="p">,</span><span class="w"> </span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">))</span>
-<span class="c1">## Error in prop.test(table(puls$kyn, puls$likamsraektf)): ’x’ must have 2 columns</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.test(table(puls$kyn, puls$likamsraektf))
+## Error in prop.test(table(puls$kyn, puls$likamsraektf)): ’x’ must have 2 columns
 </pre></div>
 </div>
 </section>
@@ -387,12 +384,12 @@ ekki öryggisbil eins og <code class="docutils literal notranslate"><span class=
 <hr class="docutils" />
 <p>Könnum nú hvort samband sé á milli námskeiðs og líkamsræktarástundunar.
 Við byrjum á að búa til töflu mældrar tíðni:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">chisq.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##  Pearson&#39;s Chi-squared test</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls$namskeid, puls$likamsraektf)</span>
-<span class="c1">## X-squared = 4.1576, df = 2, p-value = 0.1251</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(puls$namskeid,puls$likamsraektf))
+##
+##  Pearson&#39;s Chi-squared test
+##
+## data:  table(puls$namskeid, puls$likamsraektf)
+## X-squared = 4.1576, df = 2, p-value = 0.1251
 </pre></div>
 </div>
 <p>Hér sést að prófstærðin er 4.1576, sem fylgir kí-kvaðrat prófi með 2
@@ -401,50 +398,50 @@ frígráður og p-gildi tilgátuprófsins er 0.1251.</p>
 væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnitöflu
 út úr R með að vista það sem <code class="docutils literal notranslate"><span class="pre">chisq.test()</span></code> aðferðin skilar sem hlut
 (hann má heita hvað sem er) og draga svo <code class="docutils literal notranslate"><span class="pre">expected</span></code> hlutann fram:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">kikv1</span><span class="o">&lt;-</span><span class="nf">chisq.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls</span><span class="o">$</span><span class="n">namskeid</span><span class="p">,</span><span class="n">puls</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">))</span>
-<span class="n">kikv1</span><span class="o">$</span><span class="n">expected</span>
-<span class="c1">##</span>
-<span class="c1">##              Lítil  Miðlungs     Mikil</span>
-<span class="c1">##   LAN203  31.19099  70.08798  69.72103</span>
-<span class="c1">##   STAE209 53.80901 120.91202 120.27897</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kikv1&lt;-chisq.test(table(puls$namskeid,puls$likamsraektf))
+kikv1$expected
+##
+##              Lítil  Miðlungs     Mikil
+##   LAN203  31.19099  70.08798  69.72103
+##   STAE209 53.80901 120.91202 120.27897
 </pre></div>
 </div>
 <p>Ef einhverjar tölur eru minni en fimm í væntitíðnitöflunni varar R okkur
 við. Sjáum til dæmis hvað gerist ef við viljum skoða samband reykinga og
 hreyfingar fyrir eingöngu þá nemendur sem sátu námskeiðið árið 2013:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls2013</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span><span class="w"> </span><span class="n">ar</span><span class="o">==</span><span class="m">2013</span><span class="p">)</span>
-<span class="nf">chisq.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls2013</span><span class="o">$</span><span class="n">reykir</span><span class="p">,</span><span class="n">puls2013</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>puls2013 &lt;- filter(puls, ar==2013)
+chisq.test(table(puls2013$reykir,puls2013$likamsraektf))
 
-<span class="c1">## Warning in chisq.test(table(puls2013$reykir, puls2013$likamsraektf)):</span>
-<span class="c1">## Chi-squared approximation may be incorrect</span>
+## Warning in chisq.test(table(puls2013$reykir, puls2013$likamsraektf)):
+## Chi-squared approximation may be incorrect
 
-<span class="c1">##</span>
-<span class="c1">##  Pearson&#39;s Chi-squared test</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls2013$reykir, puls2013$likamsraektf)</span>
-<span class="c1">## X-squared = 11.247, df = 2, p-value = 0.003612</span>
+##
+##  Pearson&#39;s Chi-squared test
+##
+## data:  table(puls2013$reykir, puls2013$likamsraektf)
+## X-squared = 11.247, df = 2, p-value = 0.003612
 </pre></div>
 </div>
 <p>Þá getum við annað hvort reiknað prófstærðina með endurvalsaðferðum, sem
 er tilgreint með stillingunni <code class="docutils literal notranslate"><span class="pre">simulate.p.value</span></code>:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">chisq.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls2013</span><span class="o">$</span><span class="n">reykir</span><span class="p">,</span><span class="n">puls2013</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">),</span><span class="w"> </span><span class="n">simulate.p.value</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="c1">##</span>
-<span class="c1">##  Pearson&#39;s Chi-squared test with simulated p-value (based on 2000</span>
-<span class="c1">##  replicates)</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls2013$reykir, puls2013$likamsraektf)</span>
-<span class="c1">## X-squared = 11.247, df = NA, p-value = 0.002999</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(puls2013$reykir,puls2013$likamsraektf), simulate.p.value=TRUE)
+##
+##  Pearson&#39;s Chi-squared test with simulated p-value (based on 2000
+##  replicates)
+##
+## data:  table(puls2013$reykir, puls2013$likamsraektf)
+## X-squared = 11.247, df = NA, p-value = 0.002999
 </pre></div>
 </div>
 <p>eða þá framkvæmt annað tilgátupróf sem kallast Fisher próf. Það er gert
 með skipuninni <code class="docutils literal notranslate"><span class="pre">fisher.test()</span></code>:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">fisher.test</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">puls2013</span><span class="o">$</span><span class="n">reykir</span><span class="p">,</span><span class="n">puls2013</span><span class="o">$</span><span class="n">likamsraektf</span><span class="p">))</span>
-<span class="c1">##</span>
-<span class="c1">##  Fisher&#39;s Exact Test for Count Data</span>
-<span class="c1">##</span>
-<span class="c1">## data:  table(puls2013$reykir, puls2013$likamsraektf)</span>
-<span class="c1">## p-value = 0.001259</span>
-<span class="c1">## alternative hypothesis: two.sided</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fisher.test(table(puls2013$reykir,puls2013$likamsraektf))
+##
+##  Fisher&#39;s Exact Test for Count Data
+##
+## data:  table(puls2013$reykir, puls2013$likamsraektf)
+## p-value = 0.001259
+## alternative hypothesis: two.sided
 </pre></div>
 </div>
 </section>

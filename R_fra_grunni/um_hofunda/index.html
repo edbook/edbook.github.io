@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Um höfunda &mdash; R frá Grunni 2023</title>
+  <title>Um höfunda &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,10 +19,10 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
     <script src="../_static/js/theme.js"></script>
 
@@ -141,12 +140,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -186,7 +182,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -196,7 +192,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Um höfunda</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/um_hofunda.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/um_hofunda.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -216,7 +212,7 @@ Hún hefur kennt tölfræði við DTU og HÍ síðan vorið 2006 og komið að n
 <div><figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/ahj_2016_cropped.jpg"><img alt="Anna Helga Jónsdóttir" src="../_images/ahj_2016_cropped.jpg" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-number">Mynd 1: </span><span class="caption-text">Anna Helga Jónsdóttir</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Anna Helga Jónsdóttir</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -232,7 +228,7 @@ Einnig hefur hún kennt og komið að námsefnisgerð við KHÍ, EHÍ, MH og í 
 <div><figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/sigrun_helga_lund_stor_210218_cropped.jpg"><img alt="Sigrún Helga Lund" src="../_images/sigrun_helga_lund_stor_210218_cropped.jpg" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-number">Mynd 2: </span><span class="caption-text">Sigrún Helga Lund</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Sigrún Helga Lund</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>
@@ -247,7 +243,7 @@ smíði áhættulíkana hjá áhættustýringu Glitnis og við stofnmat hjá Haf
 <div><figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/bjarki_cropped.jpg"><img alt="Bjarki Þór Elvarsson" src="../_images/bjarki_cropped.jpg" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-number">Mynd 3: </span><span class="caption-text">Bjarki Þór Elvarsson</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-text">Bjarki Þór Elvarsson</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </div></blockquote>

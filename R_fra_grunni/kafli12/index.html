@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12. Knitr &mdash; R frá Grunni 2023</title>
+  <title>12. Knitr &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,11 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -141,12 +141,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -170,7 +167,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">12. Knitr</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#umbrot-a-texta">12.1. Umbrot á texta</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#markdown-html-ea-docx">12.1.1. Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math">\(^\ast\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#jofnur">12.2. Jöfnur</a></li>
@@ -191,7 +188,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -201,7 +198,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">12. </span>Knitr</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli12.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli12.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -282,9 +279,9 @@ R-klump á <code class="docutils literal notranslate"><span class="pre">```{r}</
 klumpnum notum við <code class="docutils literal notranslate"><span class="pre">```</span></code>. Línurnar tvær má fá á auðveldan hátt með að
 velja <code class="docutils literal notranslate"><span class="pre">Chunks</span></code> og <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">chunks</span></code> eða halda niðri <code class="docutils literal notranslate"><span class="pre">Ctrl,</span> <span class="pre">Alt</span></code> og
 <code class="docutils literal notranslate"><span class="pre">I</span></code>. Hér er dæmigerður R-klumpur í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrá:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r}</span>
-<span class="n">puls&lt;-read.table(&quot;pulsAll.csv&quot;,sep=&quot;;&quot;,header=T)</span>
-<span class="n">```</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{r}
+puls&lt;-read.table(&quot;pulsAll.csv&quot;,sep=&quot;;&quot;,header=T)
+```
 </pre></div>
 </div>
 <p>Þær R-skipanir sem eru í klumpum keyrast þegar ýtt er á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann
@@ -299,7 +296,7 @@ keyra allar R-skipanirnar í einu með að velja <code class="docutils literal n
 texta. Viljum við t.d. tilgreina gildið á meðalhæð einstaklinganna í
 <code class="docutils literal notranslate"><span class="pre">puls</span></code> gagnasafninu getum við skrifað eftirfarandi í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skrána
 okkar:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Meðalhæð</span><span class="w"> </span><span class="n">einstaklinganna</span><span class="w"> </span><span class="n">er</span><span class="w"> </span><span class="n">`r mean(puls$haed)`</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Meðalhæð einstaklinganna er `r mean(puls$haed)`
 </pre></div>
 </div>
 <p>og útkoma <code class="docutils literal notranslate"><span class="pre">mean(puls$haed)</span></code> mun birtast í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu.</p>
@@ -307,38 +304,38 @@ okkar:</p>
 ívafsmálið Markdown. Aðeins verður fjallað um það helsta hér en við
 hvetjum ykkur til að skoða efni sem finna má á netinu.</p>
 <p>Fyrstu línurnar í <code class="docutils literal notranslate"><span class="pre">.Rmd</span></code> skjali geta verið eftirfarandi:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
-<span class="n">title</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Skilaverkefni&quot;</span>
-<span class="n">author</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Sigrún Anna Bjarkadóttir - sigrunannabjarka@hi.is&quot;</span>
-<span class="n">output</span><span class="o">:</span><span class="w"> </span><span class="n">html_document</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---</span>
+<span class="n">title</span><span class="p">:</span> <span class="s2">&quot;Skilaverkefni&quot;</span>
+<span class="n">author</span><span class="p">:</span> <span class="s2">&quot;Sigrún Anna Bjarkadóttir - sigrunannabjarka@hi.is&quot;</span>
+<span class="n">output</span><span class="p">:</span> <span class="n">html_document</span>
 <span class="o">---</span>
 </pre></div>
 </div>
 <p>Þið ráðið hvort þið hafið dagsetninguna líka inni.</p>
 <p>Við notum myllumerki (#) til að tákna fyrirsagnir. Letrið minnkar með
 fleiri myllumerkjum:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Þetta verður mjög stór fyrirsögn</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Þetta verður mjög stór fyrirsögn</span>
 <span class="c1">## Þessi fyrirsögn verður minni</span>
 <span class="c1">### Þessi fyrirsögn verður enn minni</span>
 </pre></div>
 </div>
 <p>Auðvelt er að skáletra og feitletra orð:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>Þ<span class="n">etta</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">skáletrað</span><span class="o">*</span><span class="w"> </span><span class="n">og</span><span class="w"> </span><span class="o">**</span>þ<span class="n">etta</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">feitletrað</span><span class="o">**</span><span class="w"> </span><span class="n">en</span><span class="w"> </span>þ<span class="n">essi</span>
-<span class="n">texti</span><span class="w"> </span><span class="n">verður</span><span class="w"> </span><span class="n">hvorki</span><span class="w"> </span><span class="n">skáletraður</span><span class="w"> </span><span class="n">né</span><span class="w"> </span><span class="n">feitletraður.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">Þetta</span> <span class="n">verður</span> <span class="n">skáletrað</span><span class="o">*</span> <span class="n">og</span> <span class="o">**</span><span class="n">þetta</span> <span class="n">verður</span> <span class="n">feitletrað</span><span class="o">**</span> <span class="n">en</span> <span class="n">þessi</span>
+<span class="n">texti</span> <span class="n">verður</span> <span class="n">hvorki</span> <span class="n">skáletraður</span> <span class="n">né</span> <span class="n">feitletraður</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>Viljum við útbúa lista gerum við það svona:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Trallalallalaaa</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Trallalallalaaa</span>
 
-<span class="o">-</span><span class="w"> </span>þ<span class="n">að</span><span class="w"> </span>þ<span class="n">arf</span><span class="w"> </span><span class="n">að</span><span class="w"> </span><span class="n">passa</span><span class="w"> </span><span class="n">að</span><span class="w"> </span>þ<span class="n">að</span><span class="w"> </span><span class="n">sé</span>
-<span class="o">-</span><span class="w"> </span><span class="n">auð</span><span class="w"> </span><span class="n">lína</span><span class="w"> </span><span class="n">fyrir</span><span class="w"> </span><span class="n">ofan</span><span class="w"> </span><span class="n">og</span><span class="w"> </span><span class="n">neðan...</span>
+<span class="o">-</span> <span class="n">það</span> <span class="n">þarf</span> <span class="n">að</span> <span class="n">passa</span> <span class="n">að</span> <span class="n">það</span> <span class="n">sé</span>
+<span class="o">-</span> <span class="n">auð</span> <span class="n">lína</span> <span class="n">fyrir</span> <span class="n">ofan</span> <span class="n">og</span> <span class="n">neðan</span><span class="o">...</span>
 
-<span class="n">Dúddiraríreiii.</span>
+<span class="n">Dúddiraríreiii</span><span class="o">.</span>
 </pre></div>
 </div>
 </section>
 <section id="latex-pdf-ast">
-<h3><span class="section-number">12.1.2. </span>LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math">\(^\ast\)</span><a class="headerlink" href="#latex-pdf-ast" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">12.1.2. </span>LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#latex-pdf-ast" title="Permalink to this heading"></a></h3>
 <p>Það er fyrir utan efni þessara bókar að kenna á LaTeX en finna má
 ógrynni af efni um LaTeX á netinu. Í þessum undirkafla er því gert ráð
 fyrir LaTeX kunnáttu.</p>
@@ -360,7 +357,7 @@ að loka klumpnum skrifum við <code class="docutils literal notranslate"><span 
 með að velja <code class="docutils literal notranslate"><span class="pre">Chunks</span></code> og <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">chunks</span></code> eða halda niðri
 <code class="docutils literal notranslate"><span class="pre">Ctrl,</span> <span class="pre">Alt</span></code> og <code class="docutils literal notranslate"><span class="pre">I</span></code>. Hér er dæmigerður R-klumpur í <code class="docutils literal notranslate"><span class="pre">.Rnw</span></code> skrá:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;&lt;&gt;&gt;=</span></code></p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">&lt;-</span><span class="nf">read.table</span><span class="p">(</span><span class="s">&quot;pulsAll.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;;&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="bp">T</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">&lt;-</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;pulsAll.csv&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p>
@@ -382,26 +379,24 @@ textann. Við sýnum aðeins eitt lítið dæmi hér fyrir neðan en hvetjum þ�
 sem ekki hafa notað LaTeX kynna sér málið frekar.</p>
 <p>Hægt er að nota stærðfræðitákn inni í textanum og skrifa jöfnur/stæður
 sem standa einar og sér:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">Viljum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="n">stærðfræðitákn</span><span class="w"> </span><span class="n">inni</span><span class="w"> </span>í<span class="w"> </span><span class="n">texta</span><span class="w"> </span><span class="n">notum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">eitt</span>
-<span class="n">dollaramerki</span><span class="o">:</span><span class="w"> </span><span class="n">Meðaltal</span><span class="w"> </span>ú<span class="n">rtaks</span><span class="w"> </span><span class="n">táknum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">með</span><span class="w"> </span><span class="n">gríska</span><span class="w"> </span><span class="n">bókstafnum</span><span class="w"> </span><span class="o">$</span>\<span class="n">mu</span><span class="o">$</span><span class="n">.</span>
-<span class="n">Viljum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">láta</span><span class="w"> </span><span class="n">jöfnur</span><span class="o">/</span><span class="n">stæður</span><span class="w"> </span><span class="n">standa</span><span class="w"> </span><span class="n">einar</span><span class="w"> </span>í<span class="w"> </span><span class="n">línu</span><span class="w"> </span><span class="n">notum</span><span class="w"> </span><span class="n">við</span><span class="w"> </span><span class="n">tvö</span>
-<span class="n">dollaramerki</span><span class="o">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Viljum við nota stærðfræðitákn inni í texta notum við eitt
+dollaramerki: Meðaltal úrtaks táknum við með gríska bókstafnum $\mu$.
+Viljum við láta jöfnur/stæður standa einar í línu notum við tvö
+dollaramerki:
 
-<span class="o">$$</span>
+$$
 
-\<span class="n">bar</span><span class="p">{</span><span class="n">x</span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>\<span class="n">frac</span><span class="p">{</span>\<span class="n">sum_</span><span class="p">{</span><span class="n">i</span><span class="o">=</span><span class="m">1</span><span class="p">}</span><span class="o">^</span><span class="p">{</span><span class="n">n</span><span class="p">}</span><span class="n">x_i</span><span class="p">}{</span><span class="n">n</span><span class="p">}</span><span class="n">.</span>
+\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}.
 
-<span class="o">$$</span>
+$$
 </pre></div>
 </div>
 <p>Textinn hér að ofan birtist svona:</p>
 <p>Viljum við nota stærðfræðitákn inni í texta notum við eitt dollaramerki:
-Meðaltal úrtaks táknum við með gríska bókstafnum <span class="math">\(\mu\)</span>. Viljum við
+Meðaltal úrtaks táknum við með gríska bókstafnum <span class="math notranslate nohighlight">\(\mu\)</span>. Viljum við
 láta jöfnur/stæður standa einar og sér notum við tvö dollaramerki:</p>
-<div class="math">
-\[\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}.
-
-\]</div>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}.\]</div>
 <p>Ef unnið er í Markdown og villa leynist í LaTeX kóðanum birtist kassi
 sem inniheldur LaTeX kóðann í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu, ekki jafnan sjálf. Þá
 þurfið þið að laga villuna og ýta svo aftur á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann.</p>
@@ -473,9 +468,9 @@ neðan:</p>
 <p><a class="reference external" href="http://yihui.name/knitr/options/">http://yihui.name/knitr/options/</a>.</p>
 <p>Viljum við t.d. lesa inn pakka með <code class="docutils literal notranslate"><span class="pre">library()</span></code> aðferðinni en viljum
 ekki að kóðinn birtist í <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu okkar notum við:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r, echo = F}</span>
-<span class="n">library(ggplot2)</span>
-<span class="n">```</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{r, echo = F}
+library(ggplot2)
+```
 </pre></div>
 </div>
 <p>Þá keyrist <code class="docutils literal notranslate"><span class="pre">library(ggplot2)</span></code> en skipunin birtist ekki í <code class="docutils literal notranslate"><span class="pre">.html</span></code>
@@ -484,10 +479,10 @@ hluti af grunnpökkum R (t.d. <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">library()</span></code> aðferðina til að sækja pakkann.</p>
 <p>Viljum við teikna stöplarit, stjórna stærðinni á myndinni en láta aðeins
 myndina birtast i <code class="docutils literal notranslate"><span class="pre">.html</span></code> skjalinu, ekki R-kóðann, gerum við það með:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">```{r, echo=F, fig.width=5, fig.height=3}</span>
-<span class="n">ggplot(puls, aes(x=namskeid)) + geom_bar() + xlab(&quot;Námskeið&quot;) +</span>
-<span class="n">ylab(&quot;Fjöldi&quot;)</span>
-<span class="n">```</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{r, echo=F, fig.width=5, fig.height=3}
+ggplot(puls, aes(x=namskeid)) + geom_bar() + xlab(&quot;Námskeið&quot;) +
+ylab(&quot;Fjöldi&quot;)
+```
 </pre></div>
 </div>
 </section>

@@ -4,13 +4,12 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. Inngangur &mdash; R frá Grunni 2023</title>
+  <title>1. Inngangur &mdash; R frá grunni </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/katex-math.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/strei.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
   <!--[if lt IE 9]>
@@ -20,11 +19,12 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
-        <script src="../_static/katex.min.js"></script>
-        <script src="../_static/auto-render.min.js"></script>
-        <script src="../_static/katex_autorenderer.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -124,7 +124,7 @@
     <link rel="index" title="Atriðaskrá" href="../genindex/" />
     <link rel="search" title="Leit" href="../search/" />
     <link rel="next" title="2. Frá tilraun til gagna" href="../kafli02/" />
-    <link rel="prev" title="R frá grunni" href="../" /> 
+    <link rel="prev" title="R frá grunni, Háskóli Íslands" href="../" /> 
 
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
@@ -141,12 +141,9 @@
           
           
           <a href="../" class="icon icon-home">
-            R frá Grunni
+            R frá grunni
               <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2023
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -221,7 +218,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">R frá Grunni</a>
+          <a href="../">R frá grunni</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -231,7 +228,7 @@
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active"><span class="section-number">1. </span>Inngangur</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/edbook/haskoli-islands/blob/master/src/projects/R_fra_grunni/kafli01.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli01.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -315,7 +312,7 @@ eiginleika hennar lýst með gulum kassa:</p>
 </div>
 <hr class="docutils" />
 <p>Að því loknu taka við dæmi um beitingu aðferðarinnar í hvítum kössum:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">aðferð</span><span class="w"> </span><span class="n">sem</span><span class="w"> </span><span class="n">hægt</span><span class="w"> </span><span class="n">er</span><span class="w"> </span><span class="n">að</span><span class="w"> </span><span class="n">keyra</span><span class="w"> </span>í<span class="w"> </span><span class="n">R</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aðferð</span> <span class="n">sem</span> <span class="n">hægt</span> <span class="n">er</span> <span class="n">að</span> <span class="n">keyra</span> <span class="n">í</span> <span class="n">R</span>
 </pre></div>
 </div>
 <p>Allar skipanirnar byggja á aðgengilegum gögnum svo lesandinn getur hermt
@@ -350,10 +347,8 @@ unnið frekar með hann (geymi hann í kassanum).</p></li>
 allt í kassanum verður að hafa eitthvað heiti og gildir það jafnt um
 gögn sem aðferðir eða greiningar. Þegar við gefum hlut eitthvað heiti
 notum við ritháttinn:</p>
-<div class="math">
-\[\texttt{nafn <- skipun}
-
-\]</div>
+<div class="math notranslate nohighlight">
+\[\texttt{nafn &lt;- skipun}\]</div>
 <p>þar sem í stað <code class="docutils literal notranslate"><span class="pre">nafn</span></code> kemur nafnið sem við viljum gefa hlutnum og í
 stað <code class="docutils literal notranslate"><span class="pre">skipun</span></code> kemur sú skipun sem býr til hlutinn. Táknin þar á milli
 eru „minna en merkið“ og bandstrik. Skipunin getur samanstaðið af
@@ -461,16 +456,16 @@ hjálpina í R síðar í kaflanum.</p>
 </figure>
 <p>Það fyrsta sem við gerum þegar við opnum RStudio er að staðsetja okkur í
 réttri möppu, þ.e.a.s. vinnumöppunni okkar. Við staðsetjum okkur í
-réttri möppu með því að velja <code class="docutils literal notranslate"><span class="pre">Session</span></code><span class="math">\(\rightarrow\)</span>
-<code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Working</span> <span class="pre">Directory</span></code> <span class="math">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Directory</span></code> og
+réttri möppu með því að velja <code class="docutils literal notranslate"><span class="pre">Session</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Working</span> <span class="pre">Directory</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Directory</span></code> og
 velja þar möppuna. Rstudio sýnir okkur þá innhald möppunnar í
 úttaksglugganum undir <code class="docutils literal notranslate"><span class="pre">Files</span></code>.</p>
 <figure class="align-center">
 <img alt="Mynd" src="../_images/files.png" />
 </figure>
 <p>Þegar RStudio er ræst í fyrsta skipti þarf að opna sérstaklega
-skipanaglugga með því að fara í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math">\(\rightarrow\)</span>
-<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Document</span></code><span class="math">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">script</span></code>. Þá birtist
+skipanaglugga með því að fara í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Document</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">script</span></code>. Þá birtist
 skipanagluggi á skjánum. Viljum við koma aftur að skipanaskrá sem
 viðhöfum áður unnið með förum við í <code class="docutils literal notranslate"><span class="pre">Open</span></code> í stað <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Document</span></code>.</p>
 <section id="verkefnautanumhald-i-rstudio">
@@ -484,7 +479,7 @@ reikninga trufli ekki þá sem notandinn vill vinna með) og opnar þær
 skrár sem notandinn var að vinna með seinast. Hægt er að hafa sértækar
 stillingar fyrir sérhvert verkefni sem og að hafa mörg verkefni opin í
 einu, eitt í hverjum glugga. Nýtt verkefni er stofnað með því að velja
-<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math">\(\rightarrow\)</span><code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">project</span></code> og svo í framhaldinu
+<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span><code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">project</span></code> og svo í framhaldinu
 velja viðeigandi hluti í valglugga sem þá birtist:</p>
 <figure class="align-center">
 <img alt="Mynd" src="../_images/project1.png" />
@@ -539,7 +534,7 @@ sem er svo keyrð þegar þarf.</p>
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> Nafn á falli</p>
 <p><strong>Úttak:</strong> Kallar fram hjálparsíðuna fyrir fallið</p>
-<p><strong>Helstu stillingar:</strong> package, help<span class="math">\(\_\)</span>type</p>
+<p><strong>Helstu stillingar:</strong> package, help<span class="math notranslate nohighlight">\(\_\)</span>type</p>
 </div>
 <hr class="docutils" />
 <p>R hefur, eins og áður sagði, fjölda innbyggðra falla sem auðvelda
@@ -548,7 +543,7 @@ smíða sín eigin föll. Til þess að fá yfirsýn yfir þessi innbyggðu föl
 hefur R innbyggða <em>hjálp</em> sem gefur okkur nánari upplýsingar um þá
 skipun/aðferð/fall sem við viljum fræðast meira um. Þannig gefur
 skipunin</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">help</span><span class="p">(</span><span class="n">read.table</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>okkur nánari upplýsingar um skipunina <code class="docutils literal notranslate"><span class="pre">read.table()</span></code>. Nánari
@@ -590,7 +585,7 @@ fleira sem gæti komið að góðum notum.</p></li>
 </div>
 <hr class="docutils" />
 <p>Ef við þekkjum ekki nafnið á fallinu má leita eftir efnisatriði:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">help.search</span><span class="p">(</span><span class="s">&quot;efnisatridi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Þá er þó aðeins leitað í þeim <em>pökkum</em> sem hefur verið hlaðin niður á
@@ -609,7 +604,7 @@ hlaðið niður má nota skipunina <code class="docutils literal notranslate"><s
 </div>
 <hr class="docutils" />
 <p>Til að leita á heimasíðu R eftir efnisatriði má nota</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">RSiteSearch</span><span class="p">(</span><span class="s">&quot;efnisatridi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSiteSearch</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>sem gefur notandanum lista yfir pakka og föll sem til eru á heimasíðu R
@@ -628,10 +623,10 @@ hlaðið niður má nota skipunina <code class="docutils literal notranslate"><s
 alveg allt, þá getum við notað fallið <code class="docutils literal notranslate"><span class="pre">apropos</span></code>. Það skilar lista af
 nöfnum falla sem hafa ákveðinn <code class="docutils literal notranslate"><span class="pre">strenghluta</span></code>, þ.e. nafnið á fallinu
 inniheldur þann textabút.</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">apropos</span><span class="p">(</span><span class="s">&#39;spss&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">## skilar villu ef foreign pakkinn</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span> <span class="c1">## skilar villu ef foreign pakkinn</span>
 <span class="c1">## er ekki virkur i minni</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span><span class="w"> </span><span class="c1">## pakki sem inniheldur read.spss fallid</span>
-<span class="nf">apropos</span><span class="p">(</span><span class="s">&#39;spss&#39;</span><span class="p">)</span>
+<span class="n">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span> <span class="c1">## pakki sem inniheldur read.spss fallid</span>
+<span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Athugið að <code class="docutils literal notranslate"><span class="pre">apropos</span></code> skilar aðeins nöfnum falla sem eru í minni.</p>
@@ -646,7 +641,7 @@ inniheldur þann textabút.</p>
 <hr class="docutils" />
 <p>Vilji notandinn aðeins skoða hver inntökin í fallið eru er hægt að nota
 fallið <code class="docutils literal notranslate"><span class="pre">args</span></code>:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">args</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">args</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
 <span class="c1">## function (x, ...)</span>
 <span class="c1">## NULL</span>
 </pre></div>
@@ -658,20 +653,20 @@ fallið <code class="docutils literal notranslate"><span class="pre">args</span>
 <h2><span class="section-number">1.5. </span>R sem vasareiknir<a class="headerlink" href="#r-sem-vasareiknir" title="Permalink to this heading"></a></h2>
 <p>Í R má framkvæma allar þær aðgerðir sem finna má á venjulegum
 vasareiknum. Þannig leggur skipunin</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3+5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span>
 <span class="c1">## [1] 8</span>
 </pre></div>
 </div>
 <p>einfaldlega saman tölurnar 3 og 5. Á sama hátt og við erum vön notum við
-mínus (-), margföldun (*) og deilingu (<span class="math">\(\backslash\)</span>).</p>
+mínus (-), margföldun (*) og deilingu (<span class="math notranslate nohighlight">\(\backslash\)</span>).</p>
 <p>Aðferðin ** hefur tölur í veldi. Skipunin</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">2</span><span class="o">**</span><span class="m">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span>
 <span class="c1">## [1] 16</span>
 </pre></div>
 </div>
-<p>reiknar því stærðina <span class="math">\(2^4\)</span>.</p>
+<p>reiknar því stærðina <span class="math notranslate nohighlight">\(2^4\)</span>.</p>
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> tekur rótina af tölunum sem við mötum hana með</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sqrt</span><span class="p">(</span><span class="m">9</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
 <span class="c1">## [1] 3</span>
 </pre></div>
 </div>
@@ -679,50 +674,50 @@ mínus (-), margföldun (*) og deilingu (<span class="math">\(\backslash\)</span
 <p>R beitir réttri röð reikniaðgerða. Það er að segja, það byrjar á því að
 hefja í veldi eða taka rætur, því næst margfaldar það eða deilir og að
 lokum leggur það saman eða dregur frá. Gefum við því skipunina</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3+5</span><span class="o">*</span><span class="m">4</span><span class="o">**</span><span class="m">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">**</span><span class="mi">2</span>
 <span class="c1">## [1] 83</span>
 </pre></div>
 </div>
-<p>byrjar það á því að reikna <span class="math">\(4^2\)</span> (16) síðan margfaldar það þá
+<p>byrjar það á því að reikna <span class="math notranslate nohighlight">\(4^2\)</span> (16) síðan margfaldar það þá
 stærð með 5 (80) og leggur á endanum þrjá við (83).</p>
 <p>Við notum sviga á sama hátt í R og hefðbundnum vasareiknum. Ef við notum
 sviga þá byrjar R á því að reikna stæðuna sem stendur innan svigans eins
 og við viljum. Gætið ykkar samt á því að R skilur ekki skipunina:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span><span class="p">(</span><span class="m">6-8</span><span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1">## Error in eval(expr, envir, enclos): attempt to apply non-function</span>
 </pre></div>
 </div>
 <p>Ef við viljum margfalda töluna 3 við innihald svigans þá verðum við að
 muna eftir að setja margföldunarmerkið (*) á milli, þ.e. skrifa:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">3</span><span class="o">*</span><span class="p">(</span><span class="m">6-8</span><span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1">## [1] 6</span>
 </pre></div>
 </div>
 <p>Þessi skipun reiknar stærðina
-<span class="math">\(3 \cdot (6 - 8/2) = 3 \cdot (6-4) = 3\cdot 2\)</span> og gefur því
+<span class="math notranslate nohighlight">\(3 \cdot (6 - 8/2) = 3 \cdot (6-4) = 3\cdot 2\)</span> og gefur því
 útkomuna 6.</p>
 <p>Skipunin <code class="docutils literal notranslate"><span class="pre">exp()</span></code> hefur e í það veldi sem hún er mötuð með. Viljum við
-hefja <span class="math">\(e\)</span> í veldið 3, þ.e.a.s. reikna <span class="math">\(e^3\)</span> gefum við
+hefja <span class="math notranslate nohighlight">\(e\)</span> í veldið 3, þ.e.a.s. reikna <span class="math notranslate nohighlight">\(e^3\)</span> gefum við
 skipunina:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="c1">## [1] 20.08554</span>
 </pre></div>
 </div>
 <p>Skipunin <code class="docutils literal notranslate"><span class="pre">log()</span></code> tekur logarithma af því sem við mötum hana með. Gætið
 ykkar þó að sjálfgefna stillingin í R reiknar náttúrulega logarithmann
-(með grunntöluna <span class="math">\(e\)</span>). Ef við viljum logarithma með grunntöluna 10
+(með grunntöluna <span class="math notranslate nohighlight">\(e\)</span>). Ef við viljum logarithma með grunntöluna 10
 notum við stillinguna <code class="docutils literal notranslate"><span class="pre">base=10</span></code>. Þá myndum við gefa skipunina</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">log</span><span class="p">(</span><span class="m">33</span><span class="p">,</span><span class="w"> </span><span class="n">base</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="c1">## [1] 1.518514</span>
 </pre></div>
 </div>
 <p>til að reikna log(33) svo dæmi sé nefnt.</p>
 <p>Viljum við geyma niðurstöður reikninga, eða aðgerða almennt, má alltaf
 vista niðurstöðurnar sem <code class="docutils literal notranslate"><span class="pre">hlut</span></code>:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">a</span>
 <span class="c1">## [1] 2</span>
-<span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span>
+<span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="n">b</span>
 <span class="c1">## [1] 3</span>
 </pre></div>
@@ -751,13 +746,13 @@ tilheyra þessum grunnpökkum þurfum við að hlaða þeim niður á tölvuna
 okkar með aðferðinni <code class="docutils literal notranslate"><span class="pre">install.packages()</span></code>. Það þarf aðeins að gera
 einu sinni á hverri tölvu. Viljum við t.d ná í <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> pakkann gerum
 við það með skipuninni:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;ggplot2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Ef við viljum svo vinna með aðferðirnar í tilteknum pakka þurfum við að
 láta R vita af því. Það þarf að gera í hvert sinn sem ný vinnulota hefst
 í R. Við gerum aðferðirnar úr pakkanum aðgengilegar með skipuninni:</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Við getum hugsað það sem svo að með skipuninni <code class="docutils literal notranslate"><span class="pre">library()</span></code> stingum við
@@ -781,7 +776,7 @@ heimshluta hjá sama stýrikerfi. Á íslenskum tölvum er algengast að
 <code class="docutils literal notranslate"><span class="pre">latin-1</span></code> staðallinn notaður á Windows tölvum á meðan nýrri <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>
 staðall er notaður á MacOSX/Linux tölvum.</p>
 <p>Þegar skjöl birtast á þennan hátt er mikilvægt að <strong>vista ekki skjalið</strong>
-heldur fara beint í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math">\(\rightarrow\)</span>
+heldur fara beint í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
 <code class="docutils literal notranslate"><span class="pre">Reopen</span> <span class="pre">with</span> <span class="pre">Encoding...</span></code> og velja þá</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ISO-8859-1</span></code> ef unnið er í MacOsX tölvu en skjalið var búið til í
@@ -790,12 +785,12 @@ Windows tölvu.</p></li>
 MacOsX tölvu.</p></li>
 </ul>
 <p>ef þið hyggist vinna áfram með skjalið borgar sig svo að fara í
-<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">with</span> <span class="pre">Encoding...</span></code> og velja þar
+<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">with</span> <span class="pre">Encoding...</span></code> og velja þar
 þann staðal sem tölvan ykkar notar.</p>
 <p>Einnig lenda MacOsX notendur stundum í því að íslenskir stafir birtast
 rétt í .R skrám en rangt á gröfum. Það er hægt að laga með því að gefa
 skipunina</p>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">system</span><span class="p">(</span><span class="s">&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
@@ -887,7 +882,7 @@ head(puls)</code></div></section>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../" class="btn btn-neutral float-left" title="R frá grunni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../" class="btn btn-neutral float-left" title="R frá grunni, Háskóli Íslands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../kafli02/" class="btn btn-neutral float-right" title="2. Frá tilraun til gagna" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

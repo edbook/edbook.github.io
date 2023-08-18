@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Kafli - Varmi og einangrun &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="5. Kafli - Raki" href="../kafli05/" />
+    <link rel="prev" title="3. Kafli - Holrýmd og efnisþéttleiki" href="../kafli03/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Kafli - Varmi og einangrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#geislun">4.1. Geislun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#streymi">4.2. Streymi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leini">4.3. Leiðni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#samsiatengt-hlitengt-likan">4.3.1. Samsíðatengt/hliðtengt líkan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ratengt-likan">4.3.2. Raðtengt líkan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#maeling-leinitolu">4.4. Mæling leiðnitölu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#einangrunarefni-tegundir-og-framleisluaferir">4.5. Einangrunarefni – tegundir og framleiðsluaðferðir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Kafli - Varmi og einangrun</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-varmi-og-einangrun">
+<h1><span class="section-number">4. </span>Kafli - Varmi og einangrun<a class="headerlink" href="#kafli-varmi-og-einangrun" title="Permalink to this heading"></a></h1>
+<p>Varmaflutningur getur verið eftir þrem leiðum;</p>
+<ul class="simple">
+<li><p>Geislun</p></li>
+<li><p>Streymi</p></li>
+<li><p>Leiðni</p></li>
+</ul>
+<p>Varmaflutningsþéttleiki, q er ákvarðaður fyrir hverja flutningsleið (eða sambland af
+leiðum). Fyrir þekktan varmaflutningsþéttleika má auðveldlega reikna orkuna Q yfir
+ákveðið tímabil (og öfugt) útfrá jöfnu 4.1;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.1</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[Q = \Phi \cdot \Delta t = q\cdot A \cdot \Delta t\]</div>
+</div></blockquote>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td><p>orka</p></td>
+<td><p>J</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Phi\)</span></p></td>
+<td><p>varmaflutningur</p></td>
+<td><p>W</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta t\)</span></p></td>
+<td><p>tími</p></td>
+<td><p>s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
+<td><p>varmaflutningsþéttleiki</p></td>
+<td><p><span class="math notranslate nohighlight">\(W/m^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p>þverskurðarflatarmál varmaflutningsleiðar</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^2\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<section id="geislun">
+<h2><span class="section-number">4.1. </span>Geislun<a class="headerlink" href="#geislun" title="Permalink to this heading"></a></h2>
+<p>Varmaflutningsþéttleiki vegna geislunar, <span class="math notranslate nohighlight">\(q_s\)</span>, frá yfirborði er gefin sem;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.2</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[q_s = \sigma \cdot \varepsilon \cdot T^4\]</div>
+</div></blockquote>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_s\)</span></p></td>
+<td><p>varmaflutningsþéttleiki vegna geislunar</p></td>
+<td><p><span class="math notranslate nohighlight">\(W/m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>Stefan-Boltzmann fastinn <span class="math notranslate nohighlight">\(5,6697\cdot 10^{-8}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(W/(m2\cdot K^4)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+<td><p>útgeislunartala yfirborðs</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>aflfræðilegt hitastig</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
+<p>Útgeislunartalan, <span class="math notranslate nohighlight">\(\varepsilon\)</span>, er háð yfirborðseiginleikum;</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Yfirborð</p></th>
+<th class="head"><p>Útgeislunartala, <span class="math notranslate nohighlight">\(\varepsilon\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>„svart“ (e. black)</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Algeng byggingarefni</p></td>
+<td><p>0,8-0,9</p></td>
+</tr>
+<tr class="row-even"><td><p>Fægt stál eða ál</p></td>
+<td><p>0,02-0,04</p></td>
+</tr>
+</tbody>
+</table>
+<p>Orkugeislun sem fellur á yfirborð, skiptist í þrennt;</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\alpha\)</span> tekin upp sem varmi (d: absorberet)</div>
+<div class="line"><span class="math notranslate nohighlight">\(\rho\)</span> endurkastast (d: reflekteret)</div>
+<div class="line"><span class="math notranslate nohighlight">\(\tau\)</span> hleypt í gegn (d: transmitteret)</div>
+</div>
+<p>og þá gildir vitaskuld að</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.3</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\alpha + \rho + \tau = 1\]</div>
+</div></blockquote>
+</div>
+<p>Þegar varmi flyst með geislun milli yfirborða þá hafa yfirborðseiginleikar beggja efna
+áhrif á hverju þetta nemur, jafna 4.2 er þá iðulega umskrifuð þannig fyrir nettó
+varmaflutnings-þéttleika frá fleti 1 til flatar 2, jafna 4.4;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.4</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[q_{s1-2} = C \cdot \left(T_1^4 - T_2^4\right)\]</div>
+</div></blockquote>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_{s1-2}\)</span></p></td>
+<td><p>nettó varmaflutningsþéttleiki vegna geislunar frá 1 til 2</p></td>
+<td><p><span class="math notranslate nohighlight">\(W/m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(C\)</span></p></td>
+<td><p>stuðull sem tekur tillit til yfirborðseiginleika og Stefan-Boltzmann fastans</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_1\)</span></p></td>
+<td><p>aflfræðilegt hitastig yfirborðs 1</p></td>
+<td><p>K</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_2\)</span></p></td>
+<td><p>aflfræðilegt hitastig yfirborðs 2</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(C = F_{12}\cdot \sigma \cdot \varepsilon\)</span> fjallað verður um <span class="math notranslate nohighlight">\(F_{12}\)</span> stuðulinn í „Húsagerð“</p>
+</div></blockquote>
+</div>
+</section>
+<section id="streymi">
+<h2><span class="section-number">4.2. </span>Streymi<a class="headerlink" href="#streymi" title="Permalink to this heading"></a></h2>
+<p>Varmaflutningur vegna efnisstreymis (lofttegundar eða vökva) sem ber með sér varma
+milli staða; streymið er alltaf orsakað af þrýstingsmun, sem getur átt sér tvær mismunandi
+orsakir;</p>
+<div class="line-block">
+<div class="line"><em>Óþvingað streymi</em> (d: naturlig konvektion, e: natural convection)</div>
+<div class="line">Streymið orsakast af hitamun, heitt efni (lofttegundir og vökvi) léttara en kalt.</div>
+</div>
+<div class="line-block">
+<div class="line"><em>Þvingað streymi</em> (d: tvungen konvektion, e: forced convection).</div>
+<div class="line">Ytri þrýstingsmunur, t.d. vindur</div>
+</div>
+</section>
+<section id="leini">
+<h2><span class="section-number">4.3. </span>Leiðni<a class="headerlink" href="#leini" title="Permalink to this heading"></a></h2>
+<p>Efnishiti er til marks um óreglulega hreyfingu efniseinda, orkuflutningur á sér stað þegar
+eindir með hærri hraða rekast á eindir með lægri hraða (varmi flyst frá heitari stað til
+kaldari).</p>
+<p>Varmaleiðniþéttleika í gegnum efnislag má ákvarða samkvæmt jöfnu 4.5;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.5</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[q_{l} = \frac{\lambda}{d} \cdot \left(T_1 - T_2 \right)\]</div>
+</div></blockquote>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_{l}\)</span></p></td>
+<td><p>varmaleiðniþéttleiki</p></td>
+<td><p><span class="math notranslate nohighlight">\(W/m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+<td><p>leiðnitala efnis</p></td>
+<td><p><span class="math notranslate nohighlight">\(W/(m\cdot K)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(d\)</span></p></td>
+<td><p>þykkt efnislags</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_n\)</span></p></td>
+<td><p>hitastig yfirborðanna 1 og 2</p></td>
+<td><p>K eða <span class="math notranslate nohighlight">\(^{\circ}C\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Eðlisvarmi</em> (d: varmekapacitet) og varmadreifð (d: varmediffusivitet)</p>
+<p>Eðlisvarminn (d: specifikk varmekapacitet, varmefylde), <span class="math notranslate nohighlight">\(c_p\)</span>, segir til um orkuþörf sem
+þarf til að hækka hitastig af 1 kg efnis um eina gráðu Celsíus (eða Kelvin), einingin er
+J/(kg·K)</p>
+<p>Stundum er notuð afleidd stærð, <span class="math notranslate nohighlight">\(c_p’\)</span>, sem er nauðsynleg orkuþörf til að hækka hitastig 1
+<span class="math notranslate nohighlight">\(m^3\)</span> efnis um 1 gráðu Celsíus;</p>
+<div class="math notranslate nohighlight">
+\[c_p’=\rho \cdot c_p\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(c_p’\)</span></p></td>
+<td><p>rúmmáls eðlisvarmi</p></td>
+<td><p><span class="math notranslate nohighlight">\(J/(m^3 \cdot K)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>efnisþéttleiki</p></td>
+<td><p><span class="math notranslate nohighlight">\(J/(kg \cdot K)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(c_p\)</span></p></td>
+<td><p>eðlisvarmi</p></td>
+<td><p><span class="math notranslate nohighlight">\(J/(kg\cdot K)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Hraði hitastigsbreytinga er mjög áhugaverður, sérstaklega í útreikningum á tímaháðum
+hitabreytingum, en einnig sem mat á varmatapshraða t.d. yfirborðs. Varmadreifð, a, er til
+mats um þennan hraða, en hún er háð leiðnitölu efnis, efnisþéttleika og eðlisvarma;</p>
+<div class="math notranslate nohighlight">
+\[a = \frac{\lambda}{\rho \cdot c_p} [m^2/s]\]</div>
+<p>Við snertingu virðist efni með háa varmadreifð kaldara (varminn leiðist hraðar burt)
+heldur en efni með lága varmadreifð. Dæmi um varmadreifð nokkurra efna;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/varmadreifd.png"><img alt="../_images/varmadreifd.png" src="../_images/varmadreifd.png" style="width: 100%;" /></a>
+</figure>
+<p><em>Varmaflutningur í samsettu efnislagi</em> (gildir ekki bara fyrir pórótt efnslög)</p>
+<p>Fæst efni eru alveg einsleit, og að auki eru efnislög (byggingarhlutar) iðulega samsettir úr
+tveim eða fleiri efnum. Í umfjöllun kennslubókar eru byggt á hlutfallskiptingu rúmmáls
+eftir mismunandi efnafösum (þar sem aðallega er verið að tala um áhrif holrýmdar), en í
+útreikningum þarf þverskurðarflatarmál varmaflutnings, og lengd að vera þekkt, jafna
+4.1.</p>
+<p>Hægt er að líta á samsett efnislag sem <strong>samsíðatengt/hliðtengt</strong> eða <strong>raðtengt</strong>, en í reynd er það
+eitthvað sambland af þessu tvennu.</p>
+<p>Þar sem rúmmál efnisfasa fæst sem margfeldi af þverskurðarflatarmáli <span class="math notranslate nohighlight">\(A_i\)</span> og lengd
+varmaflutnings í fasa, <span class="math notranslate nohighlight">\(d_i\)</span>, þá gildir</p>
+<div class="math notranslate nohighlight">
+\[V_i = A_i \cdot d_i\]</div>
+<p>Í umfjölluninni, fyrir samsíða/hlið tengt líkan, er d=fasti og gert ráð fyrir að
+þverskurðarflatarmál varmaflutnings, A, fyrir einstaka efnisfasa sé í sama hlutfalli af
+heildarflatarmálinu eins og rúmmálssamsetning efnisins;</p>
+<div class="math notranslate nohighlight">
+\[A_1 \cong V_1\]</div>
+<p>o.s.frv.</p>
+<p>Hliðstæða gildir fyrir raðtengt módel, þverskurðarflatarmál A=fasti, þá gildir fyrir
+“lengd” varmaflutnings, d;</p>
+<div class="math notranslate nohighlight">
+\[d_1 \cong V_1\]</div>
+<p>o.s.frv.</p>
+<p>Þetta má þó einnig setja upp eins og sýnt er hér á eftir;</p>
+<section id="samsiatengt-hlitengt-likan">
+<h3><span class="section-number">4.3.1. </span>Samsíðatengt/hliðtengt líkan<a class="headerlink" href="#samsiatengt-hlitengt-likan" title="Permalink to this heading"></a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hlidtengt.png"><img alt="../_images/hlidtengt.png" src="../_images/hlidtengt.png" style="width: 100%;" /></a>
+</figure>
+<p>Hér gildir:</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.6</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{\Phi}{A} = \frac{\Phi_1 + \Phi_2}{A} =  \frac{A_1\cdot q_1 + A_2\cdot q_2}{A} = \frac{A_1}{A} \cdot \frac{\lambda_1}{d} \cdot \left(T_1-T_2\right) + \frac{A_2}{A} \cdot \frac{\lambda_1}{d} \cdot \left(T_1-T_2\right)\]</div>
+<div class="math notranslate nohighlight">
+\[= \left(\frac{A_1}{A}\cdot \lambda_1 + \frac{A_2}{A}\cdot \lambda_2 \right) \cdot \frac{\left(T_1-T_2 \right)}{d} = \frac{\lambda_{vegið}}{d} \cdot \left(T_1-T_2 \right)\]</div>
+</div>
+</section>
+<section id="ratengt-likan">
+<h3><span class="section-number">4.3.2. </span>Raðtengt líkan<a class="headerlink" href="#ratengt-likan" title="Permalink to this heading"></a></h3>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/radtengt.png"><img alt="../_images/radtengt.png" src="../_images/radtengt.png" style="width: 100%;" /></a>
+</figure>
+<p>Hér gildir;</p>
+<ol class="lowerroman simple">
+<li><p><span class="math notranslate nohighlight">\(q = \frac{\Phi}{A} = \frac{\Phi_1}{A} = \frac{\Phi_2}{A} = q_1 = q_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(q_1 = \frac{\lambda_1}{d_1} \cdot \left(T_1-T \right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(q_2 = \frac{\lambda_2}{d_2} \cdot \left(T-T_2 \right)\)</span></p></li>
+</ol>
+<p>Jöfnurnar þrjár gefa (eftir smá umskrift; T einangrað úr t.d. ii og sett inn í iii) jöfnu 4.7;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.7</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{1}{\left( \frac{d_2 \cdot \lambda_1 + d_1 \cdot \lambda_2}{\lambda_1 \cdot \lambda_2} \right)} \cdot (T_1-T_2)\]</div>
+</div>
+<p>Þegar brotið, í sviga neðan striks, er skoðað sést að það má umskrifa (og innfærðar
+stærðir R) þannig;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.8</p>
+<div class="math notranslate nohighlight">
+\[\left( \frac{d_2 \cdot \lambda_1 + d_1 \cdot \lambda_2}{\lambda_1 \cdot \lambda_2} \right) = \frac{d_1}{\lambda_1} + \frac{d_2}{\lambda_2} = R_1 + R_2 = R\]</div>
+</div>
+<p>Þannig hafa verið skilgreindar nýjar stærðir, mótstöðutölur <span class="math notranslate nohighlight">\(R_i\)</span>, fyrir hvort efnislag, og
+heildarmótstaða fyrir samsetta efnislagið (samsvörun við samlagningaraðferð fyrir
+raðtengdar mótstöður í rafmagnsfræði er augljós!)- aðferðin hefur almennt gildi, óháð
+fjölda eða tegund efnislaganna.</p>
+<p>Til samræmis við jöfnu 4.6 má útfrá jöfnu 4.8 skilgreina <span class="math notranslate nohighlight">\(\lambda_{vegið}\)</span> fyrir raðtengt líkan, jafna
+4.9;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.9</p>
+<div class="math notranslate nohighlight">
+\[R = \frac{d}{\lambda_{vegið}} = \frac{d_1}{\lambda_1} + \frac{d_2}{\lambda_2} = V_1 \cdot \frac{d}{\lambda_1} + V_2 \cdot \frac{d}{\lambda_2} = \frac{d}{\left( \frac{\lambda_1 \cdot \lambda_2}{\left( \lambda_1 \cdot V_2 + \lambda_2 \cdot V_1 \right)}\right)}\]</div>
+</div>
+<p>Andhverfa stærðin við R er skilgreind sem kólnunartala, U-gildi. Jafnan 4.7 er þá
+endurskrifuð sem 4.10;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.10</p>
+<div class="math notranslate nohighlight">
+\[q = \frac{1}{R} \cdot \left( T_1-T_2 \right) = U \cdot \left( T_1-T_2 \right)\]</div>
+</div>
+<p>Í reynd gefur samsíðatengda líkanið efri mörk fyrir heildarleiðnitölu samsetta
+efnislagsins, raungildi, en raðtengda líkanið gefur neðri mörk;</p>
+<div class="math notranslate nohighlight">
+\[\lambda_{vegið-rað} &lt; \lambda_{raungildi} &lt; \lambda_{vegið-samsíða}\]</div>
+<p>Leiðnitala efnis er augljóslega mjög háð holrýmd efnisins, en einnig efnisþéttleika;
+Varmaflutningur</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Leidnitala.png"><img alt="../_images/Leidnitala.png" src="../_images/Leidnitala.png" style="width: 70%;" /></a>
+</figure>
+<p>Varmaflutningur er háður geislun, streymi og leiðni, en iðulega eru þessir liðir sameinaðir
+í leiðnitölu efnisins, sem þá er breytileg eftir m.a. efnisþéttleika og rakastigi.Dæmigerð
+áhrif þessara leiða fyrir trefjakennt einangrunarefni, háð efnisþéttleika, eru sýnd á mynd
+4.1</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Leidnivsthettleiki.png"><img alt="../_images/Leidnivsthettleiki.png" src="../_images/Leidnivsthettleiki.png" style="width: 70%;" /></a>
+</figure>
+<p>Mynd 4.1. Áhrif leiðni og geislunnar á leiðnitölu trefjakennds einangrunarefnis.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Leidnivshitastig.png"><img alt="../_images/Leidnivshitastig.png" src="../_images/Leidnivshitastig.png" style="width: 70%;" /></a>
+</figure>
+<p>Varmaleiðnitala efnis er háð vatnsinnihaldi og ástandi vatnsfasans (vatn eða ís).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Varmeogfugttransport.png"><img alt="../_images/Varmeogfugttransport.png" src="../_images/Varmeogfugttransport.png" style="width: 70%;" /></a>
+</figure>
+<p>Varmi flyst með leiðni, geislun og streymi, og má þá ekki gleyma áhrifum
+uppgufunarvarmans sem er margfalt hærri heldur en eðlisvarminn;</p>
+<ul class="simple">
+<li><p>Eðlisvarmi vatns <span class="math notranslate nohighlight">\(c_{p_w} = 4,23 kJ/(kg \cdot K)\)</span></p></li>
+<li><p>Uppgufunarvarmi vatns <span class="math notranslate nohighlight">\(h_{fg}  = 2257 kJ/kg\)</span></p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Leidnitalabyggingarefna.png"><img alt="../_images/Leidnitalabyggingarefna.png" src="../_images/Leidnitalabyggingarefna.png" style="width: 70%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Leidnitalalettrabyggingarefna.png"><img alt="../_images/Leidnitalalettrabyggingarefna.png" src="../_images/Leidnitalalettrabyggingarefna.png" style="width: 70%;" /></a>
+</figure>
+</section>
+</section>
+<section id="maeling-leinitolu">
+<h2><span class="section-number">4.4. </span>Mæling leiðnitölu<a class="headerlink" href="#maeling-leinitolu" title="Permalink to this heading"></a></h2>
+<p>Leiðnitala efnis er mæld með þrennu móti;
+a) Orkuþörf mæld
+Tvö sýni mæld samtímis til að fá samhverfu í mæliuppsetninguna, tekið meðaltal
+mælinganna. Uppbyggingin er :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Uppbygging1.png"><img alt="../_images/Uppbygging1.png" src="../_images/Uppbygging1.png" style="width: 100%;" /></a>
+</figure>
+<p>b) Hitafall yfir mælisýni og þekkt viðmiðunarsýni mælt
+Eitt sýni mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Uppbygging2.png"><img alt="../_images/Uppbygging2.png" src="../_images/Uppbygging2.png" style="width: 100%;" /></a>
+</figure>
+<p>c) Varmaflutningur í gegnum sýnið mældur (þetta er keimlíkt og í lið b). Eitt sýni
+mælt – og þá skiptir máli í hvaða átt varmaflutningurinn er! Uppbyggingin er:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Uppbygging3.png"><img alt="../_images/Uppbygging3.png" src="../_images/Uppbygging3.png" style="width: 100%;" /></a>
+</figure>
+<p>Óháð aðferð þá er varmaleiðnitala einangrunarefna almennt mæld við <span class="math notranslate nohighlight">\(10^{\circ}C\)</span> meðalhita í
+sýninu, og mæligildið nefnt <span class="math notranslate nohighlight">\(\lambda_{10}\)</span>.</p>
+<p>Mælda gildið er leiðrétt fyrir eftirfarandi áhrifsþáttum;</p>
+<ul class="simple">
+<li><p>Dreifingu í mæligildum</p></li>
+<li><p>Öðrum efnisraka í reynd heldur en í rannsóknastofu</p></li>
+<li><p>Öðrum meðalhita í reynd heldur en <span class="math notranslate nohighlight">\(10^{\circ}C\)</span></p></li>
+<li><p>Frágangi efnislags í byggingarhluta</p></li>
+</ul>
+<p>og leiðrétta gildið nefnt “uppgefin leiðnitala” (deklareret værdi, e: declared value).</p>
+</section>
+<section id="einangrunarefni-tegundir-og-framleisluaferir">
+<h2><span class="section-number">4.5. </span>Einangrunarefni – tegundir og framleiðsluaðferðir<a class="headerlink" href="#einangrunarefni-tegundir-og-framleisluaferir" title="Permalink to this heading"></a></h2>
+<p>Algengustu einangrunarefnin hérlendis eru nú</p>
+<ul class="simple">
+<li><p>Steinull</p></li>
+<li><p>Frauðplast (þanið)</p></li>
+<li><p>Frauðplast (freytt)</p></li>
+</ul>
+<p>En áður tíðkuðust einnig</p>
+<ul class="simple">
+<li><p>Vikurplötur og laus vikur</p></li>
+<li><p>Korkur</p></li>
+<li><p>Wellit (bylgjupappi)</p></li>
+<li><p>Dagblöð, sementspokar, hefilspænir, mosi…..</p></li>
+</ul>
+<p><em>Frauðplast (þanið) – framleiðsluferli (e: expanded polystyren, EPS)</em>
+Plastkúlur (innfluttar) eru gjarnan forþandar með heitu lofti (gufu), þannig að kúlan er
+þunnveggja skel utanum loftbólu, og geymdar þannig í síló (þetta var iðulega ekki gert
+svona áður fyrr!). Kúlurnar eru svo settar í mót, gufu hleypt í gegnum mótið þannig að
+kúlurnar þenjast aðeins og klessast þá saman í klump (oft um 1 x 1x 2m).
+Klumpurinn er látinn jafna sig (ná eðlilegum efnishita og gjarnan látinn þorna ef þörf er
+á) og síðan sagaður niður í plötur, sjá t.d. www.varmamot.is/fraud.htm
+Freytt frauðplast (e:extruded polystyren, XPS)</p>
+<p><em>Steinull – framleiðsluferli (Ísland)</em>
+Basaltsandur (aðalefnið, efnisþörf um 1200 kg pr. tonn einangrunar) og skeljasandur
+bræddur á ofni við tæplega 1600 <span class="math notranslate nohighlight">\(^{\circ}C\)</span>, þá fellur járn til botns og er því tappað frá. Bráðinni
+er hellt á “spinner” (fjögur stálhjól sem snúast í sama plani) og þegar bráðin þeytist af
+hjólunum þá lenda droparnir í loftblæstri sem dregur þá út í þræði, rakafælu og bindiefni
+(hvorutveggja innflutt) er úðað á þræðina og loftstraumurinn feykir þeim á færiband.
+“Mottan” á færibandinu fer í hersluofn þar sem einangrunin er pressuð saman og hert við
+250 °C, (sjá t.d. www.steinull.is / vöruskrá /bls. 2).</p>
+<p>Uppgefnar leiðnitölur algengra einangrunarefna</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Einangrunarefni.png"><img alt="../_images/Einangrunarefni.png" src="../_images/Einangrunarefni.png" style="width: 100%;" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli03/" class="btn btn-neutral float-left" title="3. Kafli - Holrýmd og efnisþéttleiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli05/" class="btn btn-neutral float-right" title="5. Kafli - Raki" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

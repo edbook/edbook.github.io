@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12. Kafli - Fjölliður &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="13. Kafli - Lím" href="../lim/" />
+    <link rel="prev" title="11. Kafli - Gler" href="../gler/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Kafli - Fjölliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#framleisla">12.1. Framleiðsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uppbygging">12.2. Uppbygging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#styrkeiginleikar-fjolliu-efna">12.3. Styrkeiginleikar fjölliðu efna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nokkrar-mikilvaegar-tegundir-plastefna">12.4. Nokkrar mikilvægar tegundir plastefna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hitadeigt-plast-e-thermoplastic-polymer-s-termoplast">12.4.1. Hitadeigt plast (e: thermoplastic polymer, s:termoplast)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hitafast-plast-e-thermosetting-polymer-s-hardplast">12.4.2. Hitafast plast (e:thermosetting polymer, s: härdplast)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gummi">12.4.3. Gúmmí</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12. </span>Kafli - Fjölliður</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/fjollidur.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-fjolliur">
+<h1><span class="section-number">12. </span>Kafli - Fjölliður<a class="headerlink" href="#kafli-fjolliur" title="Permalink to this heading"></a></h1>
+<p>(byggt á S. G. Bergström et al., 1970, P. G. Burström, 2001, Páll Árnason, 2001, ofl.) <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
+<p>Efni sem hafa uppbyggingu sem byggist á fjölliðum eru stór og mikilvægur efnisflokkur.
+Efnin hafa það sameiginlegt að byggjast upp af lífrænum fjölliðum, sem á einhverju
+skeiði framleiðslunnar eru seig (“plastískt”) formanlegar í fast efni.</p>
+<p>Fjölliður eru tiltölulega nýr efnisflokkur, aðalþróun þeirra hófst á tíma seinni
+heimsstyrjaldarinnar en saga þeirra hefst þó á nítjándu öldinni. Fyrsta fjölliðuefnið,
+celluloid, uppgötvaðist uppúr 1860 og fyrsta verksmiðjan hóf rekstur 1872. Á tímabilinu
+1905-1910 framleiddi Belginn Baekeland fyrsta al-gerfiefnið, byggt á formaldehýði og
+fenól, þekkt undir nafninu bakelit. Fjölliðuefnum fjölgaði síðan hratt,
+pólýmetýlmetakrýlat (stytt í Akrýlplast) kom til sögunnar 1928, pólývinýlklóríð (PVC)
+og pólývinýlasetat 1932-33, pólýamið og pólýester 1938, pólýeten 1940, sílikon 1945 og
+epoxíplast upp úr 1950. Stöðugt bætast ný efni á markaðinn, og notkun plastefna vex
+hratt, á heimsmarkaði ráða þrjár tegundir, <em>pólýeten (PE), pólýstýren (PS) og
+pólývinýlkloríð (PVC).</em></p>
+<p>Fjölliðum má skipta í þrjá flokka (skilin eru þó ekki alltaf greinileg);
+Hitadeigt plast (e: thermoplastic polymers, thermoplasts), hitafast plast (e:thermosetting
+polymer, thermosets) og gúmmí (e:rubber).</p>
+<section id="framleisla">
+<h2><span class="section-number">12.1. </span>Framleiðsla<a class="headerlink" href="#framleisla" title="Permalink to this heading"></a></h2>
+<p>Fjölliður (e::polymers) eru langar keðjur myndaðar af tengingu fjölda minni eininga
+einliða (e: monomer), gott dæmi um slíkt er t.d. ethýlen hópurinn og myndun
+pólýethýlen:</p>
+<p>Etýlen hópurinn (<span class="math notranslate nohighlight">\(\ce{C2H4}\)</span>) samanstendur af tveim kolvetnisfrumeindum og fjórum
+vetnisfrumeindum; milli kolvetnisfrumeindanna er tvöfaldur kovalentbindingur (merktur með
+tveim strikum á mynd) en einfaldur kovalentbindingur bindur vetnis- og kolefnisfrumeindir
+saman. Þegar bindingur er tvö- eða þrefaldur þá er hann sagður ómettaður og færsla getur orðið
+á bindingum, ný efni tekið yfir bindinga, við heppilegar aðstæður (samsvarandi er einfaldur
+bindingur sagður mettaður, hann er stöðugur í samanburði við ómettaða bindinga sömu
+frumeinda). Etýlen er lofttegund við venjulegar hita- og þrýstingsaðstæður, en með hækkuðum
+hita og þrýstingi þá má mynda fjölliður úr þessum grunneiningum.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/polymer.png"><img alt="../_images/polymer.png" src="../_images/polymer.png" style="width: 80%;" /></a>
+</figure>
+<p>Mynd; Etýlen hópar (einliður, e: monomer) tengjast í fjölliðu (e: polymer); póýetýlen</p>
+<p>Ferlið er kallað fjölliðun (e: polymerization, sjá Örn og Örlyg) og er stærð hverrar
+fjölliðu sem myndast (þetta er háð tegund ) iðulega gefin með upp fjölliðunargráðunni (e:
+degree of polimerization) sem gefur upp meðalfjölda “mer” eininga í fjölliðukeðju.
+Fjölliður eru ekki endilega byggðar upp úr einliðum sem allar eru sömu gerðar, þegar
+tengjast mismunandi einliður þá kallast slík keðja samfjölliða (e: co-polymer).</p>
+<p>Fjölliður tengjast innbyrðis á mismunandi vegu, og er tengingin háð tegund fjölliðanna,
+sjá mynd.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/tengingfjollida.png"><img alt="../_images/tengingfjollida.png" src="../_images/tengingfjollida.png" style="width: 80%;" /></a>
+</figure>
+<p><strong>Hitadeigt plast</strong> er fremur deigt og mýkist enn frekar við hitun (og flýtur loks) en harðnar á
+ný við kælingu, ferlið er fullkomlega afturkræft (e:totally reversible) án þess að
+eiginleikar breytist, ef hitun er ekki mjög mikil. Efnin hafa ekki skýrt skilgreint
+bræðsluhitastig. Þessi tegund plasts er almennt framleidd undir samverkandi hita og
+þrýstingi. Efnið getur verið ókristallað eða krystallað að hluta (e: semi-crystalline).
+Krosstengingar milli fjölliða eru óalgengar.</p>
+<p><strong>Hitafast plast</strong> verður hart við framleiðsluhitun, þegar krosstengingar myndast milli
+fjölliða. Krosstengingin er umfangsmikil, þannig að 10 – 50 % af grunneiningunum (e:
+mers) eru tengdar, og bindur þannig fjölliður saman og takmarkar hreyfigetu við hátt
+hitastig. Efnið brotnar niður við of mikla hitun, en er við nothitastig almennt með meiri
+hörku, styrk og formheldnara heldur en hitadeigt plast. Flest efni úr krosstengdum eða
+nettengdum fjölliðum, m.a. gúmmí, epoxý-, phenól- og pólýesterblöndur eru hitaföst.</p>
+</section>
+<section id="uppbygging">
+<h2><span class="section-number">12.2. </span>Uppbygging<a class="headerlink" href="#uppbygging" title="Permalink to this heading"></a></h2>
+<p>Efni úr fjölliðum er iðulega samsett úr nokkrum efnisþáttum, s.s. trefjum, fylliefnum og
+aukaefnum, auk sjálfrar fjölliðunnar, en heitið er dregið af þeirri grunneiningu
+fjölliðunnar sem er ráðandi.</p>
+<p><em>Fylliefni</em>; minnka sjálfa fjölliðuþörfina, einnig til að hafa áhrif á eðlisþéttleika og
+aflfræðilega eiginleika.</p>
+<p><em>Trefjar</em>; bending efnislags til að bæta aflfræðilega eiginleika</p>
+<p><em>Aukaefnin</em>; geta verið allt að 2% af lokaþyngdinni hvert fyrir sig og eru notuð til að hafa
+áhrif á efniseiginleika og auka endingu lokavörunnar;</p>
+<ul class="simple">
+<li><p>mýkingarefni; gera efnið mýkra og ekki eins stökkt</p></li>
+<li><p>brunavarnarefni; draga úr eldfimi, t.d. gera það brunatregt (ekki lengur eldfæðandi)</p></li>
+<li><p>“rafhleðsluvarnandi”; (e: anti- static) draga rafhleðsluvirkni</p></li>
+<li><p>andoxunarefni; til að koma í veg fyrir að aðalefnið hvarfist við súrefni</p></li>
+<li><p>ljósþolniefni; auka ljósþol (einkum UV þol)</p></li>
+</ul>
+</section>
+<section id="styrkeiginleikar-fjolliu-efna">
+<h2><span class="section-number">12.3. </span>Styrkeiginleikar fjölliðu efna<a class="headerlink" href="#styrkeiginleikar-fjolliu-efna" title="Permalink to this heading"></a></h2>
+<p>Formbreytingarferlar fjölliða eru þrennskonar, háð tegund. Stökk efni, seig (e: plastic)og
+mjög seig (e: highly plastic, elastomeric), sjá mynd. Efnin sem sýna mesta
+seigjueiginleika nefnast “elastomerar” (e: elastomers).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/styrkeiginleikar.png"><img alt="../_images/styrkeiginleikar.png" src="../_images/styrkeiginleikar.png" style="width: 80%;" /></a>
+</figure>
+<p>Mynd: Formbreytingarferlar fjölliða (Callister, 2001)</p>
+<p>Fjölliður hafa mjög breytilega aflfræðilega eiginleika, sjá töflu, þau spanna allan skalann
+ef svo má segja- en eru almennt veikari, sveigjanlegri hafa mun meiri brotlengingu heldur
+gildir um málma.</p>
+<p>Tafla: Aflfræðilegir eiginleikar fjölliða við stofuhita (Callister, 2001)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/aflfraedilegireiginleikar.png"><img alt="../_images/aflfraedilegireiginleikar.png" src="../_images/aflfraedilegireiginleikar.png" style="width: 100%;" /></a>
+</figure>
+<p>Aflfræðilegir eiginleikar eru jafnframt mjög háðir hitastigi, sjá línurit.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vinnulinur.png"><img alt="../_images/vinnulinur.png" src="../_images/vinnulinur.png" style="width: 100%;" /></a>
+</figure>
+<p>Línurit: Aflfræðilegir eiginleikar fjölliða, háð hitastigi (Callister, 2001)</p>
+</section>
+<section id="nokkrar-mikilvaegar-tegundir-plastefna">
+<h2><span class="section-number">12.4. </span>Nokkrar mikilvægar tegundir plastefna<a class="headerlink" href="#nokkrar-mikilvaegar-tegundir-plastefna" title="Permalink to this heading"></a></h2>
+<section id="hitadeigt-plast-e-thermoplastic-polymer-s-termoplast">
+<h3><span class="section-number">12.4.1. </span>Hitadeigt plast (e: thermoplastic polymer, s:termoplast)<a class="headerlink" href="#hitadeigt-plast-e-thermoplastic-polymer-s-termoplast" title="Permalink to this heading"></a></h3>
+<p><strong>Pólýester</strong></p>
+<p>Hitadeigur pólýester er til í fjölda mismunandi gerða;</p>
+<ul class="simple">
+<li><p>polýkarbonat (PC) sem er gagnsætt, með gott högg- og hitaþol og nærir ekki eld.</p></li>
+<li><p>pólýetýlenteretalat (PET) hefur takmarkað efnaþol og stuttan líftíma. Notað í plastflöskur.</p></li>
+<li><p>gerðirnar PBT og PEN.</p></li>
+</ul>
+<p><strong>Pólýeten (PE)</strong></p>
+<p>Þrjár gerðir til; LD polyeten (lítill efnisþéttleiki), PEM (skammstöfun notuð á Íslandi)
+fyrir miðlungsþungt efni og loks HD-polyeten (mikill þéttleiki). LD efnið er mjúkt
+og notað í plastfilmur, m.a. rakavarnarlög, plastpoka og pakkningar. HD efnið er
+stífara og notað í heimilisvörur, bakka, flöskur ofl.</p>
+<p>Það er ennfremur til krosstengt PE og nefnist þá PEX, efnið er notað í rör.
+PE er hérlendis m.a. notað í stofnæðar vatns- og fráveitukerfa (svart á lit) og
+rakavarnarlög, og í síðara tilvikinu helst gert öldrunarþolið (t.d. Þolplast frá
+Plastprent).</p>
+<p>Hlífðarkápa röra fyrir heitt vatn frá SET (þegar stálrör er einangrað með polýúrethan).
+PEM er notað í snjóbræðslukerfi (SET á Selfossi) og affall hitaveitukerfa, þessi rör
+eru ekki eins hitaþolin og rör úr PP og PB.</p>
+<p>Reykjalundur framleiðir rör úr PE , undir nafninu Weholit.</p>
+<p><strong>Pólýprópýlen (PP)</strong></p>
+<p>Efnið er til í nokkrum mismunandi gerðum, hreint hefur efnið lágt höggþol í frosti en
+með íblöndun má breyta eiginleikum nokkuð. PP er til sem sampólýmer (oft með
+PE). PP hefur hátt hitaþol og hérlendis er efnið notað í snjóbræðslurör og fyrir
+geislahitun (grá að lit), efnið einnig notað í frárennslislagnir innanhúss (gráar að lit).</p>
+<p><strong>Pólýbútýlen (PB)</strong></p>
+<p>Svipar um margt til PE og PP en er dýrara í framleiðslu. Efnið er notað í t.d. rör
+þegar þörf er fyrir mikinn hönnunarstyrk fyrir í snjóbræðslur og geislahitun,
+iðnaðarnot, skip og báta.</p>
+<p><strong>Pólýstýren (PS)</strong></p>
+<p>Hart og stökkt efni, en með íblöndun af gúmmí fjölliðum má auka slaghörku efnisins.
+Notað í hnífapör, einnota drykkjarílát og frauðplasteinangrun.</p>
+<p><strong>ABS-plast</strong></p>
+<p>Notað í rör.</p>
+<p><strong>Pólýmetýlmetakrýlat (PMMA, akrýlplast)</strong></p>
+<p>Mikilvægasta akrýlplastið, oft selt undir heitinu plexigler. Hefur mikla ljóshleypni
+(betri heldur en venjulegt gler), gott veðrunarþol og hlutfallslega góða
+yfirborðshörku. Er notað í þakkúpla, og í stað glers í t.d. garðskála og gróðurhús.</p>
+<p><strong>Pólývinýlklóríð (PVC)</strong></p>
+<p>PVC fjölliðan er stíf og hornótt, efn úr PVC eru þó bæði til í mjúkri og stífri útfærslu.
+Til að mýkja PVC er alltaf notað mýkingarefni (íblöndun allt upp í 40 %). Stíft PVC
+er notað í gluggakarma, rör og þakrennur, mjúkt PVC í gólfefni, plastfilmur,
+veggfóður og slöngur. Hérlendis notað í frárennslisrör innanhúss og í jörðu (rauðbrún
+á lit).</p>
+<p><strong>Pólývinýlasetat (PVAc)</strong></p>
+<p>Mikið notað sem bindiefni í málningar.</p>
+<p><strong>Polýtetraflúoretan (PTFE)</strong></p>
+<p>Þekkist best undir söluheitinu “teflon”. Efnið hefur sérlega gott efna-, hita- og
+veðrunarþol, og lágan viðnámsstuðul (<span class="math notranslate nohighlight">\(\mu = 0,01 – 0,05\)</span>). Nothitastig er -200 til 260
+°C, efnið er dýrt og því helst notað í legur, slöngur og sem húðun á steikarpönnur
+o.þ.h.</p>
+</section>
+<section id="hitafast-plast-e-thermosetting-polymer-s-hardplast">
+<h3><span class="section-number">12.4.2. </span>Hitafast plast (e:thermosetting polymer, s: härdplast)<a class="headerlink" href="#hitafast-plast-e-thermosetting-polymer-s-hardplast" title="Permalink to this heading"></a></h3>
+<p><strong>Epoxý (EP)</strong></p>
+<p>Fremur dýrt, en með góða eiginleika. Mest notað í trefjaplast ásamt gler-, kolefniseða Kevlar þráðum. Bindiefni í málningar og lím.</p>
+<p><strong>Pólýúretan (PUR)</strong></p>
+<p>Hægt er að framleiða efnið með mjög breytilegum eiginleikum, allt frá mjúkum
+gúmmíefnum og í hart, hitafast plast. Notað í frauðeinangrun, mikilvægt bindiefni í
+málningu og lím og í fúguefni.</p>
+<p><strong>Pólýester (UP)</strong></p>
+<p>Mikilvægasta notkunin fyrir hitafastan polýester er sem glertrefjastyrkt plast í t.d.
+báta, í ljóshleypna þakkúpla og þakefni.</p>
+<p><strong>Fenólformaldehýð (PF)</strong></p>
+<p>Mikilvægasta notkunarsviðið er sem bindiefni í rakaþolin lím og sem hluti af
+“lamineruðum” plötum, t.d. Perstorp, en lamineraðar plötur eru algengt gólfefni (og
+innréttingum þegar mikið mæðir á).</p>
+<p><strong>Karbamíðformaldehýð (UF) - karbamíðharts</strong></p>
+<p>Notað í lím og bindiefni í krossvið og trjákenndum plötum almennt sem ekki er ætlað
+að ver arakaþolnum.</p>
+<p><strong>Melamínformaldehýð (MF) - melamínharts</strong></p>
+<p>Einkum notað sem yfirborðshúð á trjákenndar plötur (góðir litamöguleikar)</p>
+</section>
+<section id="gummi">
+<h3><span class="section-number">12.4.3. </span>Gúmmí<a class="headerlink" href="#gummi" title="Permalink to this heading"></a></h3>
+<p>Gúmmí er fjölliðað með vúlkaníseringu (e: vulcanize, sjá Örn og Örlyg), þ.e.
+brennisteinsmeðhöndlun til að skapa krosstengi og gera efnið fjaðurmagnað.
+Krossbindingar eru færri og lengri heldur en gildir fyrir hitafast plast.</p>
+<p>Nokkrar gúmmítegundir:</p>
+<p><strong>Etenprópan (EPDM)</strong></p>
+<p>Brotnar rekki niður vegna ósonáhrifa og með gott varma- og efnaþol. Mest notað
+utanhúss í þétti- og glerjunarlista og hylki utan um kapla.</p>
+<p><strong>Klórópren (CR)</strong></p>
+<p>Gott veðrunarþol. Notað í þétti- og glerjunarlista, einnig í legur til að gefa
+byggingarhlutum hreyfanleika. Bindiefni í lím (þá kallað “kontaktlím” hérlendis t.d.
+Jötungrip). Algengt söluheiti er “Neopren”.</p>
+<p><strong>Butýl (IIR)</strong></p>
+<p>Mjög há flæðimótstaða fyrir lofttegundir og þessvegna notað í hjóla- og bílslöngur en
+einnig í þéttidúka fyrir vatnstanka, þök og brýr.</p>
+<p><strong>Silikon (Si)</strong></p>
+<p>Gott veðrunar- og osonþol, og heldur aflfræðilegum eiginleikum yfir stórt
+hitastigssvið; eða um -100 til 250 °C. Í byggingariðnaði einkum notað sem bindiefni
+í fúguefni.</p>
+<p><strong>Náttúrulegt gúmmí (NR)</strong></p>
+<p>Unnið úr gúmmítrénu og enn eitt af mikilvægustu gúmmíefnunum. Notað í bíldekk,
+en vegna takmarkaðs þols gegn hita og oson þá er efnið lítið notað í byggingariðnaði.</p>
+<p>Fjölliður eru, eiginleika sinna vegna, algengar í byggingariðnaði;</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Notkunarsvið</p></th>
+<th class="head"><p>Umfang</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>einangrunarefni</p></td>
+<td><p>algengt</p></td>
+</tr>
+<tr class="row-odd"><td><p>festifrauð</p></td>
+<td><p>allsráðandi</p></td>
+</tr>
+<tr class="row-even"><td><p>rör</p></td>
+<td><p>algengt</p></td>
+</tr>
+<tr class="row-odd"><td><p>dúkar (rakavarnarlög, þéttidúkar,…)</p></td>
+<td><p>allsráðandi sem aðalefni eða trefjastyrking</p></td>
+</tr>
+<tr class="row-even"><td><p>fúguefni</p></td>
+<td><p>allsráðandi</p></td>
+</tr>
+<tr class="row-odd"><td><p>fylliefni í málningar</p></td>
+<td><p>svo til allsráðandi</p></td>
+</tr>
+<tr class="row-even"><td><p>lím</p></td>
+<td><p>svo til allsráðandi</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../gler/" class="btn btn-neutral float-left" title="11. Kafli - Gler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lim/" class="btn btn-neutral float-right" title="13. Kafli - Lím" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

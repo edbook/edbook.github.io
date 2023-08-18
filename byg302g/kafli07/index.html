@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Kafli - Rúmmálsstöðugleiki &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="8. Kafli - Niðurbrot efna og ending" href="../kafli08/" />
+    <link rel="prev" title="6. Kafli - Styrkur og stífleiki" href="../kafli06/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Kafli - Rúmmálsstöðugleiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hitahaar-staerarbreytingar">7.1. Hitaháðar stærðarbreytingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rakahaar-staerarbreytingar">7.2. Rakaháðar stærðarbreytingar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Kafli - Rúmmálsstöðugleiki</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-rummalsstougleiki">
+<h1><span class="section-number">7. </span>Kafli - Rúmmálsstöðugleiki<a class="headerlink" href="#kafli-rummalsstougleiki" title="Permalink to this heading"></a></h1>
+<p>Í kafla 6 var getið um hlutfallsstærðarbreytingar, <span class="math notranslate nohighlight">\(\varepsilon_1\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_2\)</span>, (í lengdar- og þverstefnu) vegna
+álags. Hlutfallslegar stærðarbreytingar geta einnig orðið vegna hita- eða rakaáhrifa, og
+samfara þessum stærðarbreytingum verður vitaskuld einnig rúmmálsbreyting, <span class="math notranslate nohighlight">\(\Delta V\)</span> og
+hægt er að skilgreina hlutfallslega rúmmálsbreytingu <span class="math notranslate nohighlight">\(\varepsilon_V\)</span>;</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon_V = \frac{\Delta V}{V}\]</div>
+<p>þá fæst rúmmál eftir stærðarbreytingu sem</p>
+<div class="math notranslate nohighlight">
+\[V_1 = V_0 + \Delta V = V_0 \cdot (1+\varepsilon_V)\]</div>
+<p>Fyrir upphafsstærðirnar <span class="math notranslate nohighlight">\(l_{x,0}\)</span>, <span class="math notranslate nohighlight">\(l_{y,0}\)</span> og <span class="math notranslate nohighlight">\(l_{z,0}\)</span> og samsvarandi stærðarbreytingar <span class="math notranslate nohighlight">\(\varepsilon_x\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_y\)</span>,  <span class="math notranslate nohighlight">\(\varepsilon_z\)</span>, fæst</p>
+<div class="math notranslate nohighlight">
+\[V_1 = l_x \cdot l_y \cdot l_z = l_{x,0} \cdot (1+\varepsilon_x) \cdot l_{y,0} \cdot (1+\varepsilon_y) \cdot l_{z,0} \cdot (1+\varepsilon_z)\]</div>
+<div class="math notranslate nohighlight">
+\[= V_0 \cdot (1+\varepsilon_x) \cdot (1+\varepsilon_y) \cdot (1+\varepsilon_z)
+\approx V_0 \cdot (1+\varepsilon_x+\varepsilon_y+\varepsilon_z)\]</div>
+<p>(gildir þokkalega fyrir hlutfallsbreytingar &lt;1%)</p>
+<section id="hitahaar-staerarbreytingar">
+<h2><span class="section-number">7.1. </span>Hitaháðar stærðarbreytingar<a class="headerlink" href="#hitahaar-staerarbreytingar" title="Permalink to this heading"></a></h2>
+<p>Hitabreyting í efni veldur almennt einhverri stærðarbreytingu; aukið hitastig veldur
+aukinni hreyfingu rafeinda í efninu, stærð frumeindanna vex og meðalfjarlægð þeirra
+innbyrðis einnig.</p>
+<p>Hitaþensla er fundin þannig;</p>
+<div class="math notranslate nohighlight">
+\[\Delta l = \alpha \cdot \Delta T \cdot l_0\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta l\)</span></p></td>
+<td><p>stærðarbreyting</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+<td><p>hitaþanstuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{1}/^{\circ} C\)</span> eða 1/K</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta T\)</span></p></td>
+<td><p>hitabreyting</p></td>
+<td><p><span class="math notranslate nohighlight">\(^{\circ} C\)</span> eða K</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(l_0\)</span></p></td>
+<td><p>upphafslengd</p></td>
+<td><p>m</p></td>
+</tr>
+</tbody>
+</table>
+<p>útfrá skilgreiningu á hlutfallslengingu fæst;</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon = \frac{\Delta l}{l_0} = \alpha \cdot \Delta T\]</div>
+<p>og fyrir línulega fjaðrandi efni, þar sem lengdarfærslan er hindruð (!), fæst spenna, <span class="math notranslate nohighlight">\(\sigma\)</span>,
+vegna hitabreytingar sem</p>
+<div class="math notranslate nohighlight">
+\[\sigma = E \cdot \varepsilon = E \cdot \alpha \cdot \Delta T\]</div>
+<p>Tafla 10 í bókinni gefur gildi á hitaþanstuðlinum <span class="math notranslate nohighlight">\(\alpha\)</span> fyrir nokkur algeng efni.</p>
+<p>Vert er að athuga að;</p>
+<ul class="simple">
+<li><p>varmaþenslustuðull margra plastefna er mjög hár samanborið við önnur byggingarefni</p></li>
+<li><p>varmaþenslustuðull timburs er mjög mismunandi eftir stefnu í efninu.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Taflahitathanstudull.png"><img alt="../_images/Taflahitathanstudull.png" src="../_images/Taflahitathanstudull.png" style="width: 100%;" /></a>
+</figure>
+<p>Dæmi:</p>
+<p>Hitaþanstuðull fyrir stál er <span class="math notranslate nohighlight">\(\alpha = 12 \cdot 10^{-6} 1/^{\circ}C\)</span>, hvað þenst stálstöng á hvern
+lengdarmetra við það að hitna um <span class="math notranslate nohighlight">\(50 ^{\circ}C\)</span> ?</p>
+<p>Svar:</p>
+<div class="math notranslate nohighlight">
+\[\Delta l = \alpha \cdot \Delta T \cdot l_0 = 12 \cdot 10^{-6} \cdot 50 \cdot 1 = 6 \cdot 10^{-4} \textrm{m}\]</div>
+</section>
+<section id="rakahaar-staerarbreytingar">
+<h2><span class="section-number">7.2. </span>Rakaháðar stærðarbreytingar<a class="headerlink" href="#rakahaar-staerarbreytingar" title="Permalink to this heading"></a></h2>
+<p>Þegar rakadræg efni taka rakabreytingu, þá veldur slíkt almennt einhverri
+stærðarbreytingu; efnin skreppa saman við minnkandi efnisraka, en þrútna út við aukinn
+raka.</p>
+<p>Ástæður stærðarbreytinganna má rekja til</p>
+<ul class="simple">
+<li><p>Þrýstings í vatnsfilmu á póruveggjum</p></li>
+<li><p>Þrýstingsaukningar (í smáum pórum)</p></li>
+<li><p>Undirþrýstings í háræðum (gildir einungis fyrir háan hlutfallsraka)</p></li>
+</ul>
+<p>Rakaþenslur efna eru því mjög háðar stærðardreifingu póra í efninu og styrkeiginleikum.
+Rakaþensla í timbri er vegna þess að vatns kemst inn á milli fjölliðukeðja í efninu, sem
+veldur rúmmálsaukningu (mest þvert á keðjurnar). Við vaxandi rakainnihald (yfir
+trefjamettunarmörkum) byrjar vatn að safnast saman í holrými frumanna en þetta vatn
+hefur engin áhrif til rúmmálsbreytinga í efninu.</p>
+<p>Rakaþenslur eru fundnar á hliðstæðan hátt við hitaþenslur;,</p>
+<div class="math notranslate nohighlight">
+\[\Delta l = \alpha \cdot \Delta u \cdot l_0 / 100\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta l\)</span></p></td>
+<td><p>stærðarbreyting</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>rakaþenslustuðull</p></td>
+<td><p>%/%</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Delta u\)</span></p></td>
+<td><p>breyting í efnisraka</p></td>
+<td><p>%</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(l_0\)</span></p></td>
+<td><p>upphafslengd</p></td>
+<td><p>m</p></td>
+</tr>
+</tbody>
+</table>
+<p>Rakaþenslustuðull efna er alltaf gefinn upp fyrir einhverja breytingu í efnisraka, en þessi
+breyting getur verið af mismunandi stærð. Fyrir timbur sjást iðulega gildi fyrir
+rakabreytingu úr “blautu” ástandi í þurrt (þ.e. <span class="math notranslate nohighlight">\(\Delta u \approx 30 \%\)</span>).</p>
+<p>Í töflu 11 í kennslubókinni eru gefin gildi fyrir nokkur efni, og mismunandi
+rakabreytingu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Taflarakathenslustudull.png"><img alt="../_images/Taflarakathenslustudull.png" src="../_images/Taflarakathenslustudull.png" style="width: 100%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/rakabreytingsteypa.png"><img alt="../_images/rakabreytingsteypa.png" src="../_images/rakabreytingsteypa.png" style="width: 70%;" /></a>
+</figure>
+<p>Steypa tekur allnokkrum stærðarbreytingum háð rakabreytingu – það má vænta þess að
+rakaþensla sé svipuð og rýrnunin á línuritinu 7.4</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/rakabreytingPVC.png"><img alt="../_images/rakabreytingPVC.png" src="../_images/rakabreytingPVC.png" style="width: 70%;" /></a>
+</figure>
+<p>Plast hefur miklar rakahreyfingar.. og einnig miklar hitahreyfingar eins og áður getur.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli06/" class="btn btn-neutral float-left" title="6. Kafli - Styrkur og stífleiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli08/" class="btn btn-neutral float-right" title="8. Kafli - Niðurbrot efna og ending" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

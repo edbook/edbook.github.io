@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Kafli - Niðurbrot efna og ending &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="9. Kafli - Hitastigsháðar breytingar og bruni" href="../kafli09/" />
+    <link rel="prev" title="7. Kafli - Rúmmálsstöðugleiki" href="../kafli07/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. Kafli - Niðurbrot efna og ending</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#efnafraeilegt-ferli">8.1. Efnafræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raf-efnafraeilegt-ferli">8.2. Raf-efnafræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#elisfraeilegt-ferli">8.3. Eðlisfræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#liffraeilegt-ferli">8.4. Líffræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geislun">8.5. Geislun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samantekt">8.6. Samantekt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>Kafli - Niðurbrot efna og ending</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli08.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-niurbrot-efna-og-ending">
+<h1><span class="section-number">8. </span>Kafli - Niðurbrot efna og ending<a class="headerlink" href="#kafli-niurbrot-efna-og-ending" title="Permalink to this heading"></a></h1>
+<p>Öll efni verða fyrir áraun á notkunartímanum sem veldur niðurbroti efnanna, hæfileiki
+efnis til að standast niðurbrotsáraunina nefnist ending (holdbarhed, e:durability).
+Tæknilegur nottími (levetid) efnis eða mannvirkis er sá tími sem efnið heldur
+nægjanlegum gæðum..
+Áraunin sem veldur niðurbroti má skipta upp í flokka eftir tegund;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/nidurbrotsflokkar.png"><img alt="../_images/nidurbrotsflokkar.png" src="../_images/nidurbrotsflokkar.png" style="width: 100%;" /></a>
+</figure>
+<section id="efnafraeilegt-ferli">
+<h2><span class="section-number">8.1. </span>Efnafræðilegt ferli<a class="headerlink" href="#efnafraeilegt-ferli" title="Permalink to this heading"></a></h2>
+<p>Algeng áraun er t.d.:</p>
+<ul>
+<li><dl class="simple">
+<dt>Upplausn efna (t.d. í vatni)</dt><dd><p>Dæmi: kalk þvæst úr steypu</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Efnabreyting (nýtt efni myndast)</dt><dd><dl>
+<dt>Dæmi:</dt><dd><ul class="simple">
+<li><p>Oxun málma; <span class="math notranslate nohighlight">\(2 Fe + 3/2 O_2 \rightarrow Fe_2O_3\)</span></p></li>
+</ul>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<p>Málmurinn oxast frá yfirborði (aðgengi að súrefni) og í þeim tilfellum sem oxuð
+málmfilman hindrar áframhald oxunar(súrefni kemst ekki í gegnum filmuna) þá
+er sagt að málmurinn sé orðinn “passífur” – þetta gerist t.d. á áli og riðfríu
+stáli, annars nefnist ástandið “aktíft”</p>
+</div>
+<ul class="simple">
+<li><p>Alkalí-kísil efnahvörf;</p></li>
+<li><p>Kolsýring steypu; <span class="math notranslate nohighlight">\(Ca(OH)_2 + CO_2 \rightarrow CaCO_3 + H_2O\)</span></p></li>
+</ul>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<p>Kolsýring eykur styrk steypunnar (þetta er helsta ástæðan fyrir því að steypa
+eykur styrk sinn með tímanum) – en breytir jafnframt sýrustigi hennar, sjá
+síðar!</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Hraði breytingarinnar (niðurbrots) er háður;</p>
+<ul class="simple">
+<li><p>Samsetningu efnisins</p></li>
+<li><p>Þéttleika</p></li>
+<li><p>Hversu hratt efni berast burt</p></li>
+<li><p>Hitastigi (þumalfingursregla: hraðinn tvöfaldast fyrir <span class="math notranslate nohighlight">\(10^{\circ}C\)</span> hitastigshækkun)</p></li>
+</ul>
+</section>
+<section id="raf-efnafraeilegt-ferli">
+<h2><span class="section-number">8.2. </span>Raf-efnafræðilegt ferli<a class="headerlink" href="#raf-efnafraeilegt-ferli" title="Permalink to this heading"></a></h2>
+<p>Flestir málmar finnast í náttúrunni í einhverjum efnasamböndum; súlföt, oxíð, klóríð,
+karbónöt,… og eru hreinsaðir í einhverju orkukræfu framleiðsluferli. Hreinir málmarnir
+hafa tilhneigingu til að hvarfast til að ná orkurýrara ástandi á ný…
+Tæring málma er raf-efnafræðilegt ferli sem getur verið tvenns konar;</p>
+<ul class="simple">
+<li><p>Gastæring (þurr, krefst almennt að hitastig sé hátt)</p></li>
+<li><p>Vökvatæring (elektrolyt)</p></li>
+</ul>
+<p>Vökva-raftæring járns</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/taeringjarns.png"><img alt="../_images/taeringjarns.png" src="../_images/taeringjarns.png" style="width: 100%;" /></a>
+</figure>
+<p>Dæmi:</p>
+<p>Rafeindir eru teknar upp af rafleiðandi vökva sem rafeindaþyggjanda (elektronacceptor)
+sem inniheldur súrefni og eða vetni, hvort um ræðir ræðst m.a. af súrleika lausnarinnar;</p>
+<div class="math notranslate nohighlight">
+\[\textrm{Súrefni} (O_2); \qquad \frac{1}{2}O_2 + 2e^- + H_2O \rightarrow 2OH^-\]</div>
+<div class="math notranslate nohighlight">
+\[\textrm{Vetni} (H^+); \qquad 2H^+ + 2e^- \rightarrow H_2(g)\]</div>
+<p>Fyrir járn, og súrefni sem rafeindaþyggjanda</p>
+<div class="math notranslate nohighlight">
+\[\textrm{Anóða}; \qquad Fe \rightarrow Fe^{2+} + 2e^-\]</div>
+<div class="math notranslate nohighlight">
+\[\textrm{Katóða}; \qquad \frac{1}{2}O_2 + 2e^- + H_2O \rightarrow 2OH^-\]</div>
+<div class="math notranslate nohighlight">
+\[Fe^{2+} + 2OH^- \rightarrow Fe(OH)_2\]</div>
+<p>Járn, og vetnisjónir sem rafeindaþyggjanda;</p>
+<div class="math notranslate nohighlight">
+\[FeCO_3, FeCl_2, FeSO_4, FeS_2, Fe_4N\]</div>
+<div class="caution admonition">
+<p class="admonition-title">Aðgát</p>
+<blockquote>
+<div><p>Katóðan tærist ekki</p>
+</div></blockquote>
+</div>
+<p>Forsendur tæringar eru;</p>
+<ul class="simple">
+<li><p>rafleiðara (elektrolyt), oftast vatn, sem tengir anóðu og katóðu</p></li>
+<li><p>spennumunur milli anóðu og katóðu (annars er engin anóða né katóða!)</p></li>
+<li><p>rafeindaþyggjandi ferli</p></li>
+</ul>
+<p>Rafstraumur í málmi getur verið tilkominn vegna (i) ytri áhrifa (t.d. spennu), eða (ii)
+snertingar mismunandi málma</p>
+<p>Tæringarvörn og spennuröðin</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/spennurod.png"><img alt="../_images/spennurod.png" src="../_images/spennurod.png" style="width: 100%;" /></a>
+</figure>
+<p>Rafleiðandi vökvi getur verið svo þunnt lag á yfirborði málma að málmurinn virðist þurr,
+tæring stáls verður t.d. merkjanleg þegar loftraki fer yfir <span class="math notranslate nohighlight">\(60%HR\)</span>..</p>
+<p>Almennt þarf að verja málma fyrir tæringu; þetta er gert með fórnarvörn (t.d.
+galvanhúðun) og yfirborðsmeðhöndlun (t.d. málun).</p>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<blockquote>
+<div><p>Báraðar stálklæðningar eru almennt með 0,4 – 0,5mm þykkan kjarna úr stáli og
+tæringarvörnin er gerð með heitgalvanhúðun; Z275 eða Z350 (zink 275 eða 350 <span class="math notranslate nohighlight">\(\textrm{g}/\textrm{m}^2\)</span>, samtals beggja vegna). <span class="math notranslate nohighlight">\(\rho_{zink} = 7,133 \textrm{g}/\textrm{cm}^3\)</span>, sem gefur <span class="math notranslate nohighlight">\(38,6 \mu \textrm{m}\)</span> þykka zinkhúð á stálið.</p>
+</div></blockquote>
+</div>
+<p>Tæring málma í andrúmslofti er mjög mismunandi eftir tegund málms og ytri aðstæðum,
+á Íslandi eru áhrif seltu mikil en <span class="math notranslate nohighlight">\(SO_2\)</span> lítil (Björn og Jón, 2002);</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/corrosionrate.png"><img alt="../_images/corrosionrate.png" src="../_images/corrosionrate.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="elisfraeilegt-ferli">
+<h2><span class="section-number">8.3. </span>Eðlisfræðilegt ferli<a class="headerlink" href="#elisfraeilegt-ferli" title="Permalink to this heading"></a></h2>
+<p>Innri, tímaháðar, spennur eða spennubreyting sem skemmir efni…
+Osök spennu getur verið;</p>
+<ul class="simple">
+<li><p>Bein áraun (kraftur)</p></li>
+<li><p>Hiti</p></li>
+<li><p>Raki</p></li>
+</ul>
+<p>Dæmi um eðlisfræðilegt niðurbrot;</p>
+<ul class="simple">
+<li><p>Núningur</p></li>
+<li><p>Þreyta undir breytilegu álagi (málmar) eða rakabreytingu (timbur)</p></li>
+<li><p>“Þreyta” timburs undir langtímaálagi</p></li>
+<li><p>Yfirborðsflögnun stökkra efna (vegna hitaáraunar)</p></li>
+<li><p>Hita- eða rakahreyfingar geta valdið sprungum í efni; sem opnar leið fyrir raka
+inn í efnið, og orsakar raf-efnafræðilegt niðurbrot (t.d. ryðmyndun) og loks
+eðlisfræðilega áraun á efnið (vegna þenslu)</p></li>
+<li><p>Frostþol steypu</p></li>
+</ul>
+<p>Frostþol steypu</p>
+<p>Vatn, a.m.k. hluti þess, í steypu getur frosið, umfang þessa hluta vatnsins fer eftir
+pórudreifingu og hitastigi (sjá línurit)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ikkefrysbartvand.png"><img alt="../_images/ikkefrysbartvand.png" src="../_images/ikkefrysbartvand.png" style="width: 70%;" /></a>
+</figure>
+<p>Frostsprenging – fræðilega ”krítisk” mettunargráða</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/rummalsskipting.png"><img alt="../_images/rummalsskipting.png" src="../_images/rummalsskipting.png" style="width: 70%;" /></a>
+</figure>
+<p>“Krítísk” mettunarmörk (þannig að steypa skemmist ekki þótt hún frjósi) -&gt; vatn sem frýs
+verður að fá að þenjast út sem nemur rúmmálsbreytingu vatn-&gt; ís:</p>
+<div class="math notranslate nohighlight">
+\[S_{crit}^{teor} = \frac{\textrm{uppgufanlegt vatn}}{\textrm{heildar rúmmál}} = \frac{V_{frost}}{V_{frost} + 0,09V_{frost}} = 0,917\]</div>
+<p>í reynd liggja mörkin neðar þar sem jafnan að ofan gerir ráð fyrir að allt loftrúmmálið
+nýtist, en svo er ekki í reynd, sbr. tilgátu Fagerlund um áhrif <strong>vatnsþrýstings</strong> í pórunum..</p>
+<p>Nauðsynlegar forsendur eðlisfræðilegs niðurbrotsferlis;
+<em>Kraftáraun, hiti, raki</em></p>
+</section>
+<section id="liffraeilegt-ferli">
+<h2><span class="section-number">8.4. </span>Líffræðilegt ferli<a class="headerlink" href="#liffraeilegt-ferli" title="Permalink to this heading"></a></h2>
+<p>Hér er átt við lífverur sem valda niðurbroti; þ.e. skordýr, veirur og sveppir (einnig
+smádýr, trjárætur..)</p>
+<p>Sveppir brjóta niður timbur, niðurbrotið (og nauðsynleg mörk) eru raka- og hitaháð..
+jafnframt sýnir sig að þau eru “kúmúlatíf”..</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/nidurbrottimburs.png"><img alt="../_images/nidurbrottimburs.png" src="../_images/nidurbrottimburs.png" style="width: 70%;" /></a>
+</figure>
+<p>Niðurbrot timburs (fúasveppir); tími sem þarf svo þyngdartap nemi 5 % (Viitanen 1996)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/nidurbrotstimi.png"><img alt="../_images/nidurbrotstimi.png" src="../_images/nidurbrotstimi.png" style="width: 70%;" /></a>
+</figure>
+<p>Steypa í frárennslisrörum getur grotnað vegna veira sem gefa frá sér <span class="math notranslate nohighlight">\(H_2S\)</span> og aðrar veirur
+sem umbreyta <span class="math notranslate nohighlight">\(H_2S\)</span> í <span class="math notranslate nohighlight">\(H_2SO_4\)</span> (sjá dæmið í bókinni)</p>
+</section>
+<section id="geislun">
+<h2><span class="section-number">8.5. </span>Geislun<a class="headerlink" href="#geislun" title="Permalink to this heading"></a></h2>
+<p>Rafsegulbylgjur: ljós, varmageislun, útvarpsbylgjur, <span class="math notranslate nohighlight">\(\gamma\)</span>- og röntgengeislun
+Eindir: róteindir, nifteindir, rafeindir (<span class="math notranslate nohighlight">\(\beta\)</span>) ..</p>
+<p>UV geislun brýtur niður fjölliður (og þar með lignin í timbri)
+Varmageislun; Hækkar hitastig -&gt; efnafræðilegir- og eðlisfræðilegir ferlar byrja</p>
+</section>
+<section id="samantekt">
+<h2><span class="section-number">8.6. </span>Samantekt<a class="headerlink" href="#samantekt" title="Permalink to this heading"></a></h2>
+<p>Niðurbrotsferlar og mikilvægar forsendur:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Efnafræðilegir</p></td>
+<td><p>vatn / raki, hiti, pH</p></td>
+</tr>
+<tr class="row-even"><td><p>Raf-efnafræðilegir</p></td>
+<td><p>rafleiðari (vatn/raki), <span class="math notranslate nohighlight">\(O_2\)</span>, vetnisjónir (pH), hiti</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eðlisfræðilegir</p></td>
+<td><p>kraftáraun, hiti, raki</p></td>
+</tr>
+<tr class="row-even"><td><p>Lífrænir</p></td>
+<td><p>hiti, raki</p></td>
+</tr>
+<tr class="row-odd"><td><p>Geislun</p></td>
+<td><p>UV</p></td>
+</tr>
+</tbody>
+</table>
+<div class="important admonition">
+<p class="admonition-title">Mikilvægt</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Samlagningaráhrif (superposition)</strong></dt><dd><p>Almennt er gengið út frá því að samlagningarreglan gildi; þ.e. heildaráhrif jöfn summu
+hlutáhrifa</p>
+</dd>
+<dt><strong>Samlegðaráhrif (synergi)</strong></dt><dd><p>Samanlögð áhrif tveggja eða fleiri ferla stærri heldur en summa einstakra þátta; t.d.
+tæring vegna áhrifa <span class="math notranslate nohighlight">\(O_3 + NO_2\)</span> fyrir suma málma og áhrifin vaxa hratt með hækkandi
+loftraka..
+Fjölliður brotna almennt hraðar niður í UV ef þau eru rök..(hraðar en sem nemur summu
+áhrifaþáttanna hvors í sínu lagi)..</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli07/" class="btn btn-neutral float-left" title="7. Kafli - Rúmmálsstöðugleiki" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli09/" class="btn btn-neutral float-right" title="9. Kafli - Hitastigsháðar breytingar og bruni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11. Kafli - Gler &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="12. Kafli - Fjölliður" href="../fjollidur/" />
+    <link rel="prev" title="10. Kafli - Stál" href="../stal/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Kafli - Gler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#samsetning">11.1. Samsetning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eiginleikar">11.2. Eiginleikar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ruugler-framleisla">11.3. Rúðugler - framleiðsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hert-gler">11.4. Hert gler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oryggisgler">11.5. Öryggisgler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ending">11.6. Ending</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Kafli - Gler</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/gler.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-gler">
+<h1><span class="section-number">11. </span>Kafli - Gler<a class="headerlink" href="#kafli-gler" title="Permalink to this heading"></a></h1>
+<p>(byggt á Burström, 2001, ofl.)</p>
+<p>Gler er algengt byggingarefni og ber mest á því sem rúðugleri, en er einnig notað í
+glerjung á ýmsa hluti s.s. hreinlætistæki. <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
+<section id="samsetning">
+<h2><span class="section-number">11.1. </span>Samsetning<a class="headerlink" href="#samsetning" title="Permalink to this heading"></a></h2>
+<p>Gler samanstendur af glermyndunarefni (oxíð sem krystallast ekki við kælingu),
+algengast er kísiloxíð (<span class="math notranslate nohighlight">\(\ce{SiO2}\)</span>) og bóroxíð (<span class="math notranslate nohighlight">\(\ce{B2O3}\)</span>), það síðarnefnda er þó vatnsleysanlegt og
+því aðeins notað með kísiloxíði. Kísiloxíð er um 70 % þyngdar í gleri, og er unnið úr
+kvartssandi. Þar sem bræðsluhiti sandsins er um 1700 <span class="math notranslate nohighlight">\(^{\circ}C\)</span> þá er bætt við öðrum oxíðum,
+flússefnum, til að lækka bræðsluhitann (fæst með lækkun á seigju bráðinnar). Flússefnin,
+t.d. <span class="math notranslate nohighlight">\(\ce{Na2O}\)</span>, sem slík mynda ekki gler. Einnig er bætt við öðrum efnum til að auka rakaog efnaþol, venjulegust eru <span class="math notranslate nohighlight">\(\ce{CaO}\)</span> og <span class="math notranslate nohighlight">\(\ce{Al2O3}\)</span>.</p>
+</section>
+<section id="eiginleikar">
+<h2><span class="section-number">11.2. </span>Eiginleikar<a class="headerlink" href="#eiginleikar" title="Permalink to this heading"></a></h2>
+<p>Gler er “amorft”, þ.e. myndar ekki kristalla (sbr. kafla 2 í kennslubókinni). Við upphitun
+þá breytist það úr stökku ástandi í teygjanlegt (plastískt) án þess að fara í gegnum
+skilgreind bræðslumörk. Í þessu tilliti hefur gler því svipaða eiginleika eins og
+undirkældur vökvi, seigja við venjulegt hitastig er hinsvegar mjög há og efnið tekur mjög
+litlum tímaháðum formbreytingum (nema á mjög löngum tíma).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/efniseiginleikar.png"><img alt="../_images/efniseiginleikar.png" src="../_images/efniseiginleikar.png" style="width: 70%;" /></a>
+</figure>
+<p>Gler getur tekið miklum formbreytingum undir álagi og þetta, ásamt því að um stökkt
+efni er að ræða, gera útreikninga snúna. Útbeygjur geta verið af stærðargráðunni 5-10
+sinnum glerþykktin, en ákvörðun á styrk plötu með mikla útbeygju fer eftir aðferð sem
+Timoshenko setti fram (Timoshenko and Woinowsky-Krieger, 1959). Stökkir
+eiginleikarnir ger að verkum að hönnunin þarf að taka mið af líkindafræði og til
+einföldunar er ákvörðun glerþykktar því almennt gerð útfrá línuriti þar sem tekið er tillit
+til leyfilegrar svignunar, sjá t.d. Rb-blað Rb(31).104.2 eða upplýsingar glerframleiðanda
+(línuritin eru byggð á “empírískum” grunni).</p>
+</section>
+<section id="ruugler-framleisla">
+<h2><span class="section-number">11.3. </span>Rúðugler - framleiðsla<a class="headerlink" href="#ruugler-framleisla" title="Permalink to this heading"></a></h2>
+<p>(byggt á B. Adamson og H. Backman, 1975, ofl.)</p>
+<p>Lengi vel var aðeins hægt að blása gler. Þegar gera átti rúðugler var það í fyrstu blásið
+þannig að mynduð var hnöttótt flaska, síðan var festur stafur í botninn, stúturinn skorinn
+BYG302G Efnisfræði Háskóli Íslands
+Björn Marteinsson Umhverfis og byggingarverkfræðideild
+Ýmis efni 2
+af og kringlótt rúða mótuð með snúningi á opinni “flöskunni”. Rétthyrnd rúðan var loks
+skorin útúr hringlaga fletinum, og í henni miðri sást greinilega miðjugáran þar sem
+stafurinn hafði verið, slíkar rúður eru stundum nefndar á ensku “bulls eye”. Þessar rúður
+gátu framleiðslunnar vegna ekki orðið stórar og mikil vinna fór í hverja um sig, varan var
+því hlutfallslega dýr. Um árið 1000 eru menn að ná tökum á því að blása aflanga flösku
+(sívalning) sem botn og toppur var skorinn af meðan glerið var enn deigt og belgurinn
+síðan ristur upp og rétt út í slétta rúðu. Árið 1688 var byrjað að valsa gler og 1867 er
+byggður fyrsti ofninn sem var í stöðugri framleiðslu á flotgleri, þá er glerbráðinni fleytt út
+yfir bráðið tin og þannig fást alveg sléttar rúður í mun meiri stærð heldur en áður var
+gerlegt að fá.</p>
+<p>Í rúðugleri skipta ljóseiginleikar miklu máli (sjá skilgreiningu á ljóshleypni og endurkasti
+m.m. í kafla 4 í kennslubókinni), en með lit glersins og filmum má hafa mjög mikil áhrif
+á þessa eiginleika.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/orkuhleypni.png"><img alt="../_images/orkuhleypni.png" src="../_images/orkuhleypni.png" style="width: 70%;" /></a>
+</figure>
+<p>Orkuhleypni glers, háð bylgjulengd geislunar og lit glers (heimild: Wiggington, 1996)</p>
+</section>
+<section id="hert-gler">
+<h2><span class="section-number">11.4. </span>Hert gler<a class="headerlink" href="#hert-gler" title="Permalink to this heading"></a></h2>
+<p>Með jafnri hitun á flotgleri upp í rúmlega 600 °C og síðan snöggri kælingu á yfirborðinu
+má mynda þrýstispennur í yfirborðinu, en samtímis togspennur í miðjuhluta glersins.
+Hliðstæðum áhrifum má ná með efnameðferð, og þá þarf glerþykkt ekki að vera jafn
+mikil og er nauðsynlegt fyrir hitaherslu. Með herslunni fæst hagstæðari spennudreifing í
+glerinu þar sem herslan bætir upp annars lélegt togþol glersins (áhrifunum má líkja við
+það sem gildir fyrir eftirspennta steypu). Áhrifin auka beygjutogþol glersins um 5 falt á
+við venjulegt gler, og rúðan þolir betur en áður snöggar hitabreytingar.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/spennudreifing.png"><img alt="../_images/spennudreifing.png" src="../_images/spennudreifing.png" style="width: 70%;" /></a>
+</figure>
+<p>Mynd: Spennudreifing í hertu gleri (B. Adamsson og
+H. Backman, 1975)
+Efri myndin (A) sýnir hitahert gler, sú neðri (B)
+efnahert gler.</p>
+</section>
+<section id="oryggisgler">
+<h2><span class="section-number">11.5. </span>Öryggisgler<a class="headerlink" href="#oryggisgler" title="Permalink to this heading"></a></h2>
+<p>Þráðgler er gert þannig að þráðnet er valsað inn í hálfdeigt glerið, rúðurnar hafa ekki
+sama styrk og venjulegt gler. Kosturinn við þessar rúður er að ef glerið brotnar (vegna
+högga eða springur í hita) þá falla glerstykkin ekki niður.
+Samlímt gler dugir ágætlega sem öryggisgler, ef einungis er hugsað um höggáraun. Tvær
+glerrúður eru límdar saman með plasti sem myndar filmu á milli glerjanna (“laminerað”
+gler), en þær gefa sig í bruna miklu fyrr heldur en þráðglerið.</p>
+</section>
+<section id="ending">
+<h2><span class="section-number">11.6. </span>Ending<a class="headerlink" href="#ending" title="Permalink to this heading"></a></h2>
+<p>Gler hefur almennt ágætt efnaþol, nema gagnvart flúor- og alkalískum samböndum.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../stal/" class="btn btn-neutral float-left" title="10. Kafli - Stál" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../fjollidur/" class="btn btn-neutral float-right" title="12. Kafli - Fjölliður" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

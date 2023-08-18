@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Kafli - Gerð og uppbygging efna &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="3. Kafli - Holrýmd og efnisþéttleiki" href="../kafli03/" />
+    <link rel="prev" title="1. Kafli – Kynning" href="../kafli01/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Kafli - Gerð og uppbygging efna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#frumeindir-e-atom">2.1. Frumeindir (e. atom)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#frumeinda-massi-mol-og-avogadros-talan">2.1.1. Frumeinda massi, mól og Avogadros-talan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam">2.1.2. Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#orka-i-bindingum-og-kraftar-milli-frumeinda">2.2. Orka í bindingum og kraftar milli frumeinda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#efnafraeilegir-bindingar-myndun-sameinda">2.3. Efnafræðilegir bindingar (myndun sameinda)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kristallar">2.4. Kristallar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#efni-sem-ekki-mynda-kristalla">2.5. Efni sem ekki mynda kristalla</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Kafli - Gerð og uppbygging efna</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-ger-og-uppbygging-efna">
+<h1><span class="section-number">2. </span>Kafli - Gerð og uppbygging efna<a class="headerlink" href="#kafli-ger-og-uppbygging-efna" title="Permalink to this heading"></a></h1>
+<p>Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur,
+stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.</p>
+<section id="frumeindir-e-atom">
+<h2><span class="section-number">2.1. </span>Frumeindir (e. atom)<a class="headerlink" href="#frumeindir-e-atom" title="Permalink to this heading"></a></h2>
+<p>Byggðar upp úr þremur tegundum einda; jákvætt hlaðin róteind (e. proton), óhlaðin nifteind (e. neutron) og neikvætt hlaðin rafeind (e. electron).
+Kjarninn (e. nucleus) er iðulega samsettur úr jafnmörgum róteindum (fjöldi; Z) og nifteindum (fjöldi; N) –
+vetni og mismunandi ísótópar eru undantekning frá þessu. Í frumeind sem er óhlaðin útávið þá er fjöldi rafeinda sá sami og róteinda (Z).
+Í módeli Bohr’s er gert ráð fyrir að rafeindirnar raðist á sammiðja hvel (e. electron shell) um kjarnann.
+Hvert rafeindahvel getur innihaldið mest <span class="math notranslate nohighlight">\(2\cdot n^2\)</span> rafeindir, þar sem <span class="math notranslate nohighlight">\(n\)</span> er númer hvels innanfrá.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Heiti rafeindahvels talið innanfrá</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Hver nr. (n)</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+<th class="head"><p>7</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Heiti</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>M</p></td>
+<td><p>N</p></td>
+<td><p>O</p></td>
+<td><p>P</p></td>
+<td><p>Q</p></td>
+</tr>
+</tbody>
+</table>
+<p>Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið. <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/bohr-model-nitrogen-atom.png"><img alt="../_images/bohr-model-nitrogen-atom.png" src="../_images/bohr-model-nitrogen-atom.png" style="width: 70%;" /></a>
+</figure>
+<section id="frumeinda-massi-mol-og-avogadros-talan">
+<h3><span class="section-number">2.1.1. </span>Frumeinda massi, mól og Avogadros-talan<a class="headerlink" href="#frumeinda-massi-mol-og-avogadros-talan" title="Permalink to this heading"></a></h3>
+<p>Frumeind vegur mjög lítið, eða stærðargráðan <span class="math notranslate nohighlight">\(10^{-27}\)</span> kg, því er til einföldunar iðulega
+notaður hlutfallslegur frumeindamassi, <span class="math notranslate nohighlight">\(A_r\)</span>; <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
+<div class="math notranslate nohighlight">
+\[A_r = \frac{m}{m_u}\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>frumeindamassi</p></td>
+<td><p>kg</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(m_u\)</span></p></td>
+<td><p>frumeinda-massa-einingin (atomic mass unit)</p>
+<p>= 1/12 af massa <span class="math notranslate nohighlight">\(\ce{C12}\)</span> frumeindar, eða <span class="math notranslate nohighlight">\(m_u = 1,6605 \cdot 10^{-27} \textrm{kg}\)</span></p>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>massi frumeinda er iðulega gefinn upp í fjölda frumeinda-massa-eininga, <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(1u = m_u\)</span></p>
+<p>Mól er það efnismagn sem hefur jafnmargar grunneiningar eins og eru í 12 g af <span class="math notranslate nohighlight">\(\ce{C12}\)</span>
+frumeindum, þessi tala er nefnd Avogadros-talan;
+<span class="math notranslate nohighlight">\(N_A = 6,022 \cdot 10^{23} \textrm{einingar}\)</span>.</p>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<p>Athuga skal að uppgefinn hlutfallslegur frumeindamassi efnis, <span class="math notranslate nohighlight">\(A_r\)</span>, fyrir eitt mól af efninu
+er jafngildir mólmassa í einingunni g/mól.</p>
+</div>
+<p>Til að finna massa frumefnis í grömmum þegar massinn er gefinn í frumeinda-massaeiningum
+(u), þá gildir</p>
+<div class="math notranslate nohighlight">
+\[m_{grömm} = \frac{m_{amu}}{N_A}\]</div>
+<p>Lotukerfið (skipting þess í svið og upplýsingar um eiginleika). Í góðri töflu má finna ýmis konar efnisupplýsingar.</p>
+
+<a href="https://ptable.com/?lang=is#Eiginleikar">
+    <span class="button">Gagnvirkt lotukerfi á íslensku</span>
+</a></section>
+<section id="innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam">
+<h3><span class="section-number">2.1.2. </span>Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).<a class="headerlink" href="#innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(1 \mu \textrm{m} = 10^{-6} \textrm{m}\)</span> (míkrómeter)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{nm} = 10^{-9} \textrm{m}\)</span> (nanómeter)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{Å} = 10^{-10} \textrm{m}\)</span> (Ångström)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{pm} = 10^{-12} \textrm{m}\)</span> (píkómeter)</div>
+</div>
+<p>Stærðargráður „smárra“ eininga;</p>
+<p>Algeng frumefni hafa frumefnaradía á bilinu 0,5-2 Å (1 Ångström = <span class="math notranslate nohighlight">\(10^{-10}\)</span> m) eða 50-200 pm.</p>
+<p>Stærð vatnssameindar (sjá t.d. Wikipedia; water);</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vatn.png"><img alt="../_images/vatn.png" src="../_images/vatn.png" style="width: 40%;" /></a>
+</figure>
+<p>Mannshár er með þvermál á bilinu 17-181 <span class="math notranslate nohighlight">\(\mu \textrm{m}\)</span> (1 <span class="math notranslate nohighlight">\(\mu \textrm{m}\)</span> = <span class="math notranslate nohighlight">\(10^{-6}\)</span> m), eða 0,017-0,181 mm.
+(<a class="reference external" href="http://hypertextbook.com/facts/1999/BrianLey.shtml">http://hypertextbook.com/facts/1999/BrianLey.shtml</a>).</p>
+<p>Uppleysni; minnsta stærð sem greina má</p>
+<p>Með berum augum getur maður með venjulega sjón greint á milli grófgerðs hárs og
+fíngerðs hárs, uppleysni augans gæti því verið um 0,02 mm?</p>
+<p>Ljóssmásjá (Holland 1590 – 1608);</p>
+<p>Stækkun allt að 1 000 X, og uppleysni þá allt að 0,2 <span class="math notranslate nohighlight">\(\mu\)</span> m. Stafræn ljóssmásjá (sjá t.d. www.lsw.com), dæmigerð stækkun 400 X, uppleysni allt
+að 0,5 <span class="math notranslate nohighlight">\(\mu\)</span> m.</p>
+<p>Rafeindasmásjá (e: scanning electron microscope, SEM);
+Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)</p>
+<div class="tip admonition">
+<p class="admonition-title">Dæmi (2.3 í bókinni)</p>
+<p>Dæmi (2.3 í bókinni):
+Ákvarðið sameindamassann (molekylmassen) fyrir gifs (“calciumsulfat, dihydrat”)
+<span class="math notranslate nohighlight">\(\ce{CaSO4, 2H2O}\)</span></p>
+<p>Lausn: Ekki ljóst hvort beðið er um mólmassa eða massa á einni sameind (sbr. Dæmi 2.4!); reikna bæði:</p>
+<ul class="simple">
+<li><p>Mólmassinn fæst þegar lagður er saman hlutfallslegur frumeindamassi (atomvægt)- tafla 15, fyrir allar einingarnar.</p></li>
+<li><p>Sameindamassinn = mólmassi/Avogadrostalan,</p></li>
+</ul>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Lausn á dæmi 2.3 í bókinni</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Frumefni</p></th>
+<th class="head"><p>Massi/mól [g/mól]</p></th>
+<th class="head"><p>Fjöldi móla</p></th>
+<th class="head"><p>Alls [g]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ca</p></td>
+<td><p>40,08</p></td>
+<td><p>1</p></td>
+<td><p>40,08</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>32,064</p></td>
+<td><p>1</p></td>
+<td><p>30,064</p></td>
+</tr>
+<tr class="row-even"><td><p>O</p></td>
+<td><p>16</p></td>
+<td><p>6</p></td>
+<td><p>96</p></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>1,008</p></td>
+<td><p>4</p></td>
+<td><p>4,032</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>mólmassi =</p></td>
+<td><p>172,176</p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math notranslate nohighlight">\(\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}\)</span></p>
+</div>
+</section>
+</section>
+<section id="orka-i-bindingum-og-kraftar-milli-frumeinda">
+<h2><span class="section-number">2.2. </span>Orka í bindingum og kraftar milli frumeinda<a class="headerlink" href="#orka-i-bindingum-og-kraftar-milli-frumeinda" title="Permalink to this heading"></a></h2>
+<figure><iframe src='https://hi.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=24fb07ae-23e9-4068-9002-b04d00a47940' width=100% height=400 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><p>Lennard- Jones (Breti, setti tilgátuna fram 1931) ;</p>
+<p>Orkan er</p>
+<div class="math notranslate nohighlight">
+\[\Phi_r = \Phi_0\cdot\left[\left(\frac{r_0}{r}\right)^{12}-2\cdot\left(\frac{r_0}{r}\right)^{6}\right]\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/LennardJonesPotentialet.png"><img alt="../_images/LennardJonesPotentialet.png" src="../_images/LennardJonesPotentialet.png" style="width: 70%;" /></a>
+</figure>
+<p>Krafturinn</p>
+<div class="math notranslate nohighlight">
+\[F_r = -\frac{\delta\Phi_r}{\delta r} = 12\cdot\frac{\Phi_r}{r_0} \cdot \left[\left(\frac{r_0}{r}\right)^{13}-\left(\frac{r_0}{r}\right)^{7}\right]\]</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/LennardJonesKraften.png"><img alt="../_images/LennardJonesKraften.png" src="../_images/LennardJonesKraften.png" style="width: 70%;" /></a>
+</figure>
+<p>Jafnframt gildir (almennt);</p>
+<ul class="simple">
+<li><p>Efni með háa bindiorku (<span class="math notranslate nohighlight">\(\Phi_0\)</span>) hafa hátt bræðsluhitastig, og mynda fast efni við stofuhita..</p></li>
+<li><p>Fjaðurstuðull <span class="math notranslate nohighlight">\(E_{mod}=\frac{\delta F_r}{\delta r}\)</span>, .. því dýpri og krappari sem “dældin” á <span class="math notranslate nohighlight">\(\Phi-r\)</span> línuritinu
+er, því stífara er efnið..</p></li>
+</ul>
+</section>
+<section id="efnafraeilegir-bindingar-myndun-sameinda">
+<h2><span class="section-number">2.3. </span>Efnafræðilegir bindingar (myndun sameinda)<a class="headerlink" href="#efnafraeilegir-bindingar-myndun-sameinda" title="Permalink to this heading"></a></h2>
+<p>Jónabindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/jonabinding.png"><img alt="../_images/jonabinding.png" src="../_images/jonabinding.png" style="width: 70%;" /></a>
+</figure>
+<p>Kóvalentbindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/kovalentbinding.png"><img alt="../_images/kovalentbinding.png" src="../_images/kovalentbinding.png" style="width: 70%;" /></a>
+</figure>
+<p>Málmbindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/malmbinding.png"><img alt="../_images/malmbinding.png" src="../_images/malmbinding.png" style="width: 70%;" /></a>
+</figure>
+<p>van der Waal bindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/VanDerWaalbinding.png"><img alt="../_images/VanDerWaalbinding.png" src="../_images/VanDerWaalbinding.png" style="width: 70%;" /></a>
+</figure>
+<p>Vetnisbindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vetnisbinding.png"><img alt="../_images/vetnisbinding.png" src="../_images/vetnisbinding.png" style="width: 70%;" /></a>
+</figure>
+<p>Yfirlit yfir efnabindingar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Efnabindingar.png"><img alt="../_images/Efnabindingar.png" src="../_images/Efnabindingar.png" style="width: 70%;" /></a>
+</figure>
+</section>
+<section id="kristallar">
+<h2><span class="section-number">2.4. </span>Kristallar<a class="headerlink" href="#kristallar" title="Permalink to this heading"></a></h2>
+<p>Frumeindir geta tengst þannig að þær myndi reglulega, samfellda kristalla og er innbyrðis
+röðun þeirra þá með ýmsu móti. Í þessum tilvikum er efninu lýst með minnsta “kerfinu”
+sem lýsir heildinni;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Kristallar.png"><img alt="../_images/Kristallar.png" src="../_images/Kristallar.png" style="width: 70%;" /></a>
+</figure>
+<p>BCC (“Body center cubic”) eining (myndin fengin úr Callister, 2003)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/BCC.png"><img alt="../_images/BCC.png" src="../_images/BCC.png" style="width: 70%;" /></a>
+</figure>
+<p>Kristallagerð er iðulega lýst með samtals fjölda frumeinda sem eru í einingunni, fyrir
+BCC einingu er talan n=8*1/8 +1=2. Útfrá frumeindaradíus má reikna kantstærðir
+einingar og þannig reikna út m.a. þéttleika efnis byggt á grunnuppbyggingu þess.
+Kristallauppbyggingin er sjaldnast gallalaus;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/punktfejl.png"><img alt="../_images/punktfejl.png" src="../_images/punktfejl.png" style="width: 70%;" /></a>
+</figure>
+<p>Útfrá kristalgerð efnis má reikna út “op” í kristalnum og þannig sjá hvaða innskotsefni
+geta komist fyrir án þess að valda spennu í efninu.
+Línu- og “skrúfu” gallar í efni valda innri spennu, sem gerir að verkum að efnið gefur sig
+frekar útfrá slíkum göllum;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/liniefejl.png"><img alt="../_images/liniefejl.png" src="../_images/liniefejl.png" style="width: 70%;" /></a>
+</figure>
+<p>Áraun á efni sem er byggt upp sem kristall; áraun eftir kristallaplani og formbreyting;
+veikasta plan er þéttsetnasta planið (stystir bindingar í plani), þ.e. efni formbreytist helst
+samsíða slíku plani….</p>
+<p>Það ber síðan að hafa í huga að þegar efni, jafnvel krystallað, er samsett úr mismunandi
+frumefnum (eða sama frumefni með mismunandi krystallagerð) þá er efnið ekki endilega
+eins krystallað í heild sinni;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/smasjarmynd.png"><img alt="../_images/smasjarmynd.png" src="../_images/smasjarmynd.png" style="width: 70%;" /></a>
+</figure>
+<p>Smásjármynd af steypujárni með mismunandi uppbyggingu (myndin tekin úr : W. D.
+Callister (2003) Materials Science and Engineering – an Introduction)</p>
+</section>
+<section id="efni-sem-ekki-mynda-kristalla">
+<h2><span class="section-number">2.5. </span>Efni sem ekki mynda kristalla<a class="headerlink" href="#efni-sem-ekki-mynda-kristalla" title="Permalink to this heading"></a></h2>
+<p><em>Lífræn efni eru uppbyggð úr fjölliðum</em></p>
+<p>Hver fjölliða er keðja af frumefnum, en fjölliður tengjast innbyrðis lauslega og óreglulega
+með t.d. vetnisbindingum.</p>
+<p>Dæmi:</p>
+<ul class="simple">
+<li><p>Timbur</p></li>
+<li><p>Plastefni</p></li>
+<li><p>Gúmmí</p></li>
+</ul>
+<p><em>Blandefni (disperse material) og þeytur (kolloider)</em></p>
+<p>Efni geta verið uppbyggð sem blanda tveggja eða fleiri ólíkra efna sem ekki tengjast
+einhverju af áður nefndum efnafræðilegum böndum heldur fremur eðlisfræðilega
+(“læsast” saman), blandefni, eða að fast efni er hrært upp í leysiefni (þeyta)
+Í þessum tilvikum er iðulega aðeins eitt efni sem myndar samfelldan fasa
+(dispersionsmidlet) og hin efnin eru dreifð, (dispergeret) í samfellda fasanum.</p>
+<p>Dæmi:</p>
+<ul class="simple">
+<li><p>Trefjaplast (plast; samfelldi fasinn + trefjar)</p></li>
+<li><p>Steypa (Hörðnuð; hörðnuð sementsefja; samfelldi fasinn + fylliefni)</p></li>
+<li><p>Málning (blaut; leysiefni; samfelldi fasinn + fylliefni)</p></li>
+</ul>
+<p><em>Gel</em></p>
+<p>Sambland vökva og fasts efnis, þar sem bæði efnin mynda samfelldan fasa
+(kerfisuppbygging eins og í vatnsfylltum svampi).
+Gelið getur tekið upp vökva og eykur þá rúmmál sitt, en rýrnar á ný við vökvatap.</p>
+<p>Dæmi;</p>
+<ul class="simple">
+<li><p>Alkalí-kísil gel</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli01/" class="btn btn-neutral float-left" title="1. Kafli – Kynning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli03/" class="btn btn-neutral float-right" title="3. Kafli - Holrýmd og efnisþéttleiki" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

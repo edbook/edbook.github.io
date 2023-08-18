@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9. Kafli - Hitastigsháðar breytingar og bruni &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="10. Kafli - Stál" href="../stal/" />
+    <link rel="prev" title="8. Kafli - Niðurbrot efna og ending" href="../kafli08/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Kafli - Hitastigsháðar breytingar og bruni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#breyting-efniseiginleika-vi-hatt-hitastig">9.1. Breyting efniseiginleika við hátt hitastig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#niurbrot-efna">9.2. Niðurbrot efna</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Kafli - Hitastigsháðar breytingar og bruni</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli09.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-hitastigshaar-breytingar-og-bruni">
+<h1><span class="section-number">9. </span>Kafli - Hitastigsháðar breytingar og bruni<a class="headerlink" href="#kafli-hitastigshaar-breytingar-og-bruni" title="Permalink to this heading"></a></h1>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hitastig.png"><img alt="../_images/hitastig.png" src="../_images/hitastig.png" style="width: 100%;" /></a>
+</figure>
+<p>Efni sem eru notuð í byggingariðnaði eru flest á föstu formi, hitastig þegar efni bráðnar er
+nefnt bræðsluhiti (sjá töflu 9.1 í “bókinni”):</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/braedsluvarmi.png"><img alt="../_images/braedsluvarmi.png" src="../_images/braedsluvarmi.png" style="width: 100%;" /></a>
+</figure>
+<p>Sum efni bráðna ekki heldur brenna, önnur efni bráðna fyrst og brenna við enn hærra
+hitastig (tendrunarhitatsig), bruni efna er ýmist orkukræfur (þarf orku til að halda bruna
+gangandi) eða orkugæfur (orkan sem verður til við brunann nægir til að viðhalda
+brunanum).</p>
+<p>Til þess að bruni geti átt sér stað þarf;</p>
+<ul class="simple">
+<li><p>Brennanlegt efni</p></li>
+<li><p>Súrefni</p></li>
+<li><p>Varma (til að hækka efnishita upp að tendrunarhitastigi)</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/brunagildi.png"><img alt="../_images/brunagildi.png" src="../_images/brunagildi.png" style="width: 100%;" /></a>
+</figure>
+<p>Tendrunarhitastig efna er mjög mismunandi;</p>
+<ul class="simple">
+<li><p>Timbur á bilinu <span class="math notranslate nohighlight">\(250 - 280 ^{\circ}C\)</span></p></li>
+<li><p>Blaðapappír <span class="math notranslate nohighlight">\(180 ^{\circ}C\)</span></p></li>
+</ul>
+<p>Varmatregða efna (d: termisk træghed) hefur áhrif á hversu hratt, eða auðveldlega,
+efnishiti breytist;</p>
+<div class="math notranslate nohighlight">
+\[\textrm{Varmatregða} =  \sqrt{c_p \cdot \rho \cdot \lambda}\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(c_p\)</span></p></td>
+<td><p>eðlisvarmi</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{J}/(\textrm{kg} \cdot \textrm{K})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>eðlisþéttleiki</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{kg}/(\textrm{m}^3)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+<td><p>leiðnitala</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{W}/(\textrm{m} \cdot \textrm{K})\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Brunahraði</em> efna skiptir einnig mjög miklu máli (atriði í brunahönnun);
+Barrviður brennur (samkvæmt “bókinni”) 0,8 mm/mín (oft er miðað við 0,5 mm/mín í
+brunahönnun)..</p>
+<p>Brunahraði efna fer eftir aðgangi að súrefni, og þá jafnframt yfirborðinu sem súrefni
+kemst að.. hægt er að auka brunahraða með því að mala efni niður..
+Brunahraði timburs er svo hægur sem raun ber vitni vegna þess m.a. að gas sem leitar
+útúr efninu heldur súrefni frá yfirborðinu..</p>
+<p>Efnisraki hefur áhrif á brunahraða.. !</p>
+<section id="breyting-efniseiginleika-vi-hatt-hitastig">
+<h2><span class="section-number">9.1. </span>Breyting efniseiginleika við hátt hitastig<a class="headerlink" href="#breyting-efniseiginleika-vi-hatt-hitastig" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hitahadirefniseiginleikar.png"><img alt="../_images/hitahadirefniseiginleikar.png" src="../_images/hitahadirefniseiginleikar.png" style="width: 70%;" /></a>
+</figure>
+<p>Almennt breytast allir styrk og stífleikaeiginleikar efna með hækkuðu hitastigi, gott dæmi
+um þetta er stál;</p>
+<p>Við <span class="math notranslate nohighlight">\(600^{\circ}C\)</span> er flotspenna stáls = 0.. og brotstyrkur lítillega hærri..</p>
+<p>Við <span class="math notranslate nohighlight">\(600^{\circ}C\)</span> er þrýstiþol steypu helmingur af þrýstiþoli við <span class="math notranslate nohighlight">\(20^{\circ}C\)</span>, og við <span class="math notranslate nohighlight">\(100^{\circ}C\)</span> er þrýstiþolið svo til ekkert..</p>
+<p>Ástæður breytinga í þrýstiþoli steypu eru (bls. 207);</p>
+<ul class="simple">
+<li><p>Aukinn gufuþrýstingur</p></li>
+<li><p>Hitaspennur vegna hitahreyfinga</p></li>
+<li><p>Breyting í gerð fylliefnis</p></li>
+<li><p>Breyting í gerð sementsefjunnar</p></li>
+</ul>
+<p>Skrið efna vex með hækkandi hitastigi ..
+Hæsta nothitastig efna stýrist af eiginleikum við hátt hitastig, tímalengd sem hiti stendur
+yfir; breyting í eiginleikum, brunahættu ofl. (tafla 9.4)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/mestanothitastig.png"><img alt="../_images/mestanothitastig.png" src="../_images/mestanothitastig.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="niurbrot-efna">
+<h2><span class="section-number">9.2. </span>Niðurbrot efna<a class="headerlink" href="#niurbrot-efna" title="Permalink to this heading"></a></h2>
+<p>Við snögga hitabreytingu, sérstaklega snögga kælingu eftir upphitun, hættir (stökkum)
+efnum til að springa… til marks um þessa hættu er</p>
+<div class="math notranslate nohighlight">
+\[\textrm{&quot;hitasjokk&quot; stuðullinn} = \frac{\lambda \cdot f_t}{E \cdot \alpha}\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+<td><p>leiðnitala</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{W}/(\textrm{m} \cdot \textrm{K})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(f_t\)</span></p></td>
+<td><p>togþol</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{Pa}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+<td><p>hitaþanstuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{1/}^{\circ}\textrm{C}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td><p>fjaðurstuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(\textrm{Pa}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>… því stærri sem sjokk stuðullinn er, því betur þolir efnið snöggar hitabreytingar</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli08/" class="btn btn-neutral float-left" title="8. Kafli - Niðurbrot efna og ending" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../stal/" class="btn btn-neutral float-right" title="10. Kafli - Stál" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

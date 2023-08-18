@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Kafli - Raki &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="6. Kafli - Styrkur og stífleiki" href="../kafli06/" />
+    <link rel="prev" title="4. Kafli - Varmi og einangrun" href="../kafli04/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Kafli - Raki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rakarystingur-og-rakainnihald-lofts">5.1. Rakaþrýstingur og rakainnihald lofts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#undirrystingur-i-poru-harpipu">5.1.1. Undirþrýstingur í póru (hárpípu)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rishae-h-i-harpipu">5.1.2. Rishæð, H, í hárpípu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vatn-i-byggingarefnum">5.2. Vatn í byggingarefnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rakaupptaka-efna">5.2.1. Rakaupptaka efna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">5.2.2. Rakaupptaka efna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rakaflutningur">5.3. Rakaflutningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vatnsflutningur-vegna-mismunarystings-i-vatni">5.3.1. Vatnsflutningur vegna mismunaþrýstings í vatni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flutningur-me-harpipukroftum">5.3.2. Flutningur með hárpípukröftum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#harpipukraftar-almennt">5.3.2.1. Hárpípukraftar almennt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rakaflutningur-vegna-gufurystings">5.3.3. Rakaflutningur vegna gufuþrýstings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stal/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gler/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fjollidur/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lim/">13. Kafli - Lím</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Kafli - Raki</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli05.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-raki">
+<h1><span class="section-number">5. </span>Kafli - Raki<a class="headerlink" href="#kafli-raki" title="Permalink to this heading"></a></h1>
+<p>Raki hefur mjög mikil áhrif á byggingarefni og eiginleika þeirra, og einnig á bygginguna
+sem slíka og umhverfi. Það er í vaxandi mæli talað um nauðsyn “rakahönnunar” samfara
+öðrum hönnunarferlum (útlit og fyrirkomulag, burðarkerfi, hita-og kælikerfi, vatn og
+frárennsli).</p>
+<p>Rakaálag stafar frá;</p>
+<ul class="simple">
+<li><p>Byggingarraka</p></li>
+<li><p>Veðurfari</p></li>
+<li><p>Innilofti</p></li>
+<li><p>Jarðraki</p></li>
+<li><p>Lekum lögnum</p></li>
+</ul>
+<p>Áhrif raka á byggingarefni, <strong>með hækkandi efnisraka</strong>;</p>
+<ul class="simple">
+<li><p>Vex rakur efnisþéttleiki (og þar með eigið álag byggingarefna)</p></li>
+<li><p>Breytast stærðir breytast (efni þrútna eða lengjast)</p></li>
+<li><p>Minnkar styrkur og stífleiki</p></li>
+<li><p>Vex skrið (d: krybning, þ.e. tímaháð formbreyting)</p></li>
+<li><p>Hækkar varmaleiðni efna (leiðnitalan vex)</p></li>
+<li><p>Aukast líkur á niðurbroti og ending styttist (fúi í timbri, niðurbrot plastefna, frost og alkalískemmdir í steypu…)</p></li>
+</ul>
+<p>Fyrir flest efni gildir að ef efnisrakinn nær “krítískum” mörkum (háð efnistegund) þá vex
+hætta á niðurbroti og skemmdum mjög (þó þurfa önnur skilyrði iðulega að vera uppfyllt
+einnig);</p>
+<ul class="simple">
+<li><p>fúi í timbri eða myglusveppir (<span class="math notranslate nohighlight">\(HR&gt;70 \%, \theta&gt;5 ^{\circ}C\)</span>)</p></li>
+<li><p>niðurbrot plastefna (rakafilma á yfirborði og UV geislun)</p></li>
+<li><p>frost- og alkalískemmdir í steypu (frost: skrit og frost-þýðusveiflur)</p></li>
+<li><p>tæring málma (<span class="math notranslate nohighlight">\(HR&gt;65 \%\)</span>)</p></li>
+</ul>
+<section id="rakarystingur-og-rakainnihald-lofts">
+<h2><span class="section-number">5.1. </span>Rakaþrýstingur og rakainnihald lofts<a class="headerlink" href="#rakarystingur-og-rakainnihald-lofts" title="Permalink to this heading"></a></h2>
+<p>Andrúmsloft samanstendur af fjölda gastegunda; ca. 78% köfnunarfeni (N), 21% súrefni
+(O) og 1% eðalgös, til viðbótar er almennt einhver raki til staðar.</p>
+<p>Loftþrýstingurinn er summa hlutþrýstings allra loftegundanna (Lögmál Daltons);</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.1</p>
+<div class="math notranslate nohighlight">
+\[p_{tot} = \sum_i p_i\]</div>
+</div>
+<p>Fyrir hverja og eina af gastegundunum má nota eðalgasjöfnuna sem nálgunarfall;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.2</p>
+<div class="math notranslate nohighlight">
+\[p \cdot V = \frac{m}{M} \cdot R \cdot T\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>þrýstingur (hlutþrýstingur)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>rúmmál</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>massi efnis</p></td>
+<td><p>kg</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(M\)</span></p></td>
+<td><p>mólmassinn</p></td>
+<td><p>kg/mól</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>almenni gasfastinn</p></td>
+<td><p><span class="math notranslate nohighlight">\(8,314 J/(mól \cdot K)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>aflfræðilegt hitastig</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Áhugaverðir fastar og kennitölur</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Almenni gasfastinn R</p></td>
+<td><p><span class="math notranslate nohighlight">\(8,314\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathrm{J/(mól} \cdot \mathrm{K})\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Þurr loft, mólmasi</p></td>
+<td><p><span class="math notranslate nohighlight">\(28,96 \cdot 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/mól\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Vatnsgufa, mólmassi</p></td>
+<td><p><span class="math notranslate nohighlight">\(18,02 \cdot 10^{-3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathrm{kg}/mól\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Yfirborðsspenna vatns við <span class="math notranslate nohighlight">\(20^{\circ}C\)</span></p></td>
+<td><p>0,0728</p></td>
+<td><p>N/m</p></td>
+</tr>
+</tbody>
+</table>
+<p>Við gefið hitastig og þrýsting getur andrúmsloft innihaldið ákveðið hámarksmagn
+vatnsgufu, <span class="math notranslate nohighlight">\(c_s (kg/m^3)\)</span>, samsvarandi gufuþrýstingur (hlutþrýstingur vatnsgufu í
+andrúmslofti), <span class="math notranslate nohighlight">\(p_s (Pa)\)</span> kallast mettunarþrýstingur vatnsgufu (tafla 5.1).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Vanddamp.png"><img alt="../_images/Vanddamp.png" src="../_images/Vanddamp.png" style="width: 100%;" /></a>
+</figure>
+<p>Mollierlínurit:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Mollier.png"><img alt="../_images/Mollier.png" src="../_images/Mollier.png" style="width: 100%;" /></a>
+</figure>
+<p>Fyrir loft sem inniheldur loftraka <span class="math notranslate nohighlight">\(c\)</span>, með hlutþrýstingi <span class="math notranslate nohighlight">\(p\)</span>, er skilgreindur hlutfallsraki, <span class="math notranslate nohighlight">\(HR (\%)\)</span> eða <span class="math notranslate nohighlight">\(\varphi (-)\)</span></p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.3</p>
+<div class="math notranslate nohighlight">
+\[\varphi = \frac{c}{c_s} = \frac{p}{p_s}\]</div>
+<p>og <span class="math notranslate nohighlight">\(HR(\%) = 100 \cdot \varphi\)</span></p>
+</div>
+<p>Hitastigið þegar rakaþétting á sér stað, fyrir loft með gefið rakainnihald (eða
+hlutfallsraka), er nefnt <strong>daggarmark</strong>.</p>
+<p>Dæmi:
+Inniloft; lofthiti <span class="math notranslate nohighlight">\(20^{\circ}C\)</span>, hlutfallsraki <span class="math notranslate nohighlight">\(35 \%HR\)</span></p>
+<ol class="loweralpha simple">
+<li><p>Hvert er rakainnihald loftsins <span class="math notranslate nohighlight">\((g/m^3)\)</span>?</p></li>
+<li><p>Hvert er daggarmark loftsins <span class="math notranslate nohighlight">\((^{\circ}C)\)</span>?</p></li>
+</ol>
+<p>Svar:</p>
+<ol class="loweralpha simple">
+<li><p>Mettunarraki lofts við <span class="math notranslate nohighlight">\(20^{\circ}C\)</span> er <span class="math notranslate nohighlight">\(c_s= 17,3 g/m^3\)</span>. Rakainnihald við <span class="math notranslate nohighlight">\(35 \%HR\)</span> er þá; <span class="math notranslate nohighlight">\(c=(35/100)\cdot 17,3 = 6,05 g/m^3\)</span></p></li>
+<li><p>Mettunarrakinn <span class="math notranslate nohighlight">\(c_s=6,05 g/m^3\)</span> samsvarar hitastigi <span class="math notranslate nohighlight">\(\theta\)</span>; <span class="math notranslate nohighlight">\(\theta = 3,3 ^{\circ}\)</span> (fæst með brúun á töflugildum)</p></li>
+</ol>
+<div class="caution admonition">
+<p class="admonition-title">Aðgát</p>
+<blockquote>
+<div><p>það fæst ekki rétt niðurstaða ef þessir reikningar eru gerðir útfrá rakaþrýstingi; ástæðan er sú að rakainnihald lofts <span class="math notranslate nohighlight">\((g/m^3)\)</span> breytist ekki þó svo hitastigi þess sé breytt, en það gerir rakaþrýstingurinn hins vegar.</p>
+</div></blockquote>
+</div>
+<p>Væting yfirborðs; vatnssækin (d:hydrofil, e hydrophilic) efni og vatnsfælin (d:hydrofob, e: hydrophobic)
+– ath. Fig 5.3 í bók; „snertihornið alltaf mælt milli flatar og yfirborðs vökva, mælt í gegnum vökvann“</p>
+<p>Vatnsyfirborð í hárpípu, eða póru, mun alltaf hafa sveigt (íhvolft) yfirborð—sem kallast vökvakúpull (d. menisk).</p>
+<section id="undirrystingur-i-poru-harpipu">
+<h3><span class="section-number">5.1.1. </span>Undirþrýstingur í póru (hárpípu)<a class="headerlink" href="#undirrystingur-i-poru-harpipu" title="Permalink to this heading"></a></h3>
+<p>Í hárpípu gildir</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.4</p>
+<div class="math notranslate nohighlight">
+\[r_m = r_k \cdot \cos(\theta)\]</div>
+</div>
+<p>og ekki gildir endilega að radíus vökvakúpulsins, <span class="math notranslate nohighlight">\(r_m\)</span>, sé jafn
+radíus pórunnar, <span class="math notranslate nohighlight">\(r_p\)</span>, þetta ræðst af því hvort vatn er bundið
+fyrir við póruvegginn.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vokvakupull.png"><img alt="../_images/vokvakupull.png" src="../_images/vokvakupull.png" style="width: 50%;" /></a>
+</figure>
+<p>Þegar tekið er tillit til ytri loftþrýstings á annan enda
+pípunnar, þá fæst undirþrýstingurinn p’ sem</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.5</p>
+<div class="math notranslate nohighlight">
+\[p \cdot \pi \cdot r_m^2 = p’ \cdot \pi \cdot r_m^2 + 2 \cdot \pi \cdot r_m \cdot \sigma \cdot \cos(\theta)\]</div>
+</div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.6</p>
+<div class="math notranslate nohighlight">
+\[p’ = p - \frac{2 \cdot \sigma \cdot \cos(\theta)}{r_m} = p - \frac{2 \cdot \sigma}{r_k}\]</div>
+</div>
+<p>Undirþrýstingurinn í póruvatninu minnkar fría orku vatnsins og þar með er
+gufuþrýstingur í pórunni (yfir sveigðu vatnsyfirborðinu) lægri heldur en
+mettunarþrýstingur yfir sléttu vatnsyfirborði (eins og sjá má ef <span class="math notranslate nohighlight">\(r_k \to \infty\)</span> í jöfnunni..)</p>
+<p>Líking Kelvins;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.7</p>
+<div class="math notranslate nohighlight">
+\[\ln(\varphi) = \ln \left( \frac{p}{p_s} \right) = - \frac{ 2 \cdot \sigma \cdot M \cdot \cos(\theta)}{r \cdot \rho_w \cdot R \cdot T} = - \frac{2 \cdot \sigma \cdot M}{r_k \cdot \rho_w \cdot R \cdot T}\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\varphi\)</span></p></td>
+<td><p>hlutfallsraki lofts í pórunni</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>rakaþrýstingur lofts</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_s\)</span></p></td>
+<td><p>mettunarþrýstingur lofts við hitastig T</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>yfirborðsspenna vatns við hitastig T</p></td>
+<td><p>N/m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M\)</span></p></td>
+<td><p>mólmassi vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/(mól)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>snertihorn vökvans</p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>radíi hárpípunnar</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_w\)</span></p></td>
+<td><p>eðlisþéttleiki vökvans við hitastig T</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>almenni gasfastinn</p></td>
+<td><p><span class="math notranslate nohighlight">\(J/(mól \cdot K)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>aflfræðilegt hitastig</p></td>
+<td><p>K</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(r_k\)</span></p></td>
+<td><p>radíi vökvakúpulsins, Kelvin radíi</p></td>
+<td><p>m</p></td>
+</tr>
+</tbody>
+</table>
+<p>Af líkingu Kelvins má sjá að fyrir grannar hárpípur þá er lækkun rakaþrýstings í pórunni
+veruleg (sjá töflu í kennslubókinni).</p>
+<p>Iðulega er gert ráð fyrir að snertihornið <span class="math notranslate nohighlight">\(\theta = 0\)</span> (gildir þokkalega fyrir vatn í snertingu við
+flest byggingarefni) <span class="math notranslate nohighlight">\(\Rightarrow r_m = r_k\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Kelvinjafnan.png"><img alt="../_images/Kelvinjafnan.png" src="../_images/Kelvinjafnan.png" style="width: 50%;" /></a>
+</figure>
+<p>Fyrir t.d. sementsefju þá er póruradíi á bilinu 10-100 nm (sbr kafla 3)</p>
+</section>
+<section id="rishae-h-i-harpipu">
+<h3><span class="section-number">5.1.2. </span>Rishæð, H, í hárpípu<a class="headerlink" href="#rishae-h-i-harpipu" title="Permalink to this heading"></a></h3>
+<p>Gert er ráð fyrir að sami ytri loftþrýstingur verki á báða
+enda pípunnar, þá gildir um kraftajafnvægi fyrir hárpípu
+(mynd 5.1), sem er í snertingu við vatnsyfirborð, gefur
+jöfnu 5.8;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.8</p>
+<div class="math notranslate nohighlight">
+\[\pi \cdot r^2 \cdot \rho \cdot g \cdot H =  2 \cdot \pi \cdot r \cdot \sigma \cdot \cos(\theta)\]</div>
+<div class="math notranslate nohighlight">
+\[H = \frac{2 \cdot \sigma}{r \cdot \rho \cdot g} \cdot \cos(\theta)\]</div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>radíus hárpípu</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>eðlisþéttleiki vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H\)</span></p></td>
+<td><p>vökvahæð í pípunni</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>yfirborðsspenna vatns við hitastig T</p></td>
+<td><p>N/m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>snertihorn vökvans við pípuna</p></td>
+<td><p>–</p></td>
+</tr>
+</tbody>
+</table>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Harpipa.png"><img alt="../_images/Harpipa.png" src="../_images/Harpipa.png" style="width: 30%;" /></a>
+</figure>
+<p>Uppgufun frá saltlausn er alltaf minni heldur en frá hreinu vatni, sjá töflu í bókinni.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/uppgufunsaltlausn.png"><img alt="../_images/uppgufunsaltlausn.png" src="../_images/uppgufunsaltlausn.png" style="width: 70%;" /></a>
+</figure>
+</section>
+</section>
+<section id="vatn-i-byggingarefnum">
+<h2><span class="section-number">5.2. </span>Vatn í byggingarefnum<a class="headerlink" href="#vatn-i-byggingarefnum" title="Permalink to this heading"></a></h2>
+<p>Vatn er með ýmsu móti í byggingarefnum;</p>
+<div class="line-block">
+<div class="line">Bundið efnafræðilega (d:kemisk bundet) - t.d. í sementsefju og gifsi</div>
+<div class="line">Bundið eðlisfræðilega (d:fysisk bundet) – vatnsfilma innan á póruveggjum</div>
+<div class="line">Í pórum (d:fysisk fastholdt) – vatn í pórum og háræðum</div>
+<div class="line">Frítt vatn (d:frit vand) – í stærri glufum og yfirborðsvatn</div>
+</div>
+<p>Vatn sem telst til síðari flokkanna tveggja getur gufað upp við venjulegan efnishita
+(nothita) en til að losna við vatn í fyrri flokkunum tveim þá þarf verulega hækkun á
+hitastigi.
+- iðulega er þó bara talað um fatsbundið vatn og frítt vatn, þar sem síðarnefnda vatnið fer
+við upphitun í <span class="math notranslate nohighlight">\(105^{\circ}\)</span> (þá er efnafræðilega bundna vatnið eftir- og hugsanlega eitthvað af
+því eðlisfræðilega bundna).</p>
+<p>Vatn í efnum .. jöfnur 5.11 og 5.12, gerður greinarmunur á því hvort efnið er algerlega
+vatnsmettað eða mettað með hárpípukröftum einungis (sbr. það sem áður var rætt í kafla
+um holrýmd).</p>
+<section id="rakaupptaka-efna">
+<h3><span class="section-number">5.2.1. </span>Rakaupptaka efna<a class="headerlink" href="#rakaupptaka-efna" title="Permalink to this heading"></a></h3>
+<p>Raki binst við yfirborð póra – en þetta er háð hitastigi og umhverfisraka. Efni í
+rakajafnvægi við umhverfið: rakaþrýstingur í pórum sá sami og er í umhverfinu (lofti
+utan við sýnið).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Rakaupptakaefna.png"><img alt="../_images/Rakaupptakaefna.png" src="../_images/Rakaupptakaefna.png" style="width: 70%;" /></a>
+</figure>
+<p>Jafnvægisrakinn er mismunandi eftir því hvort
+efnið er að bæta við sig raka, eða að þorna út
+(d:Adsorption – desorption).. .. og hver er
+eiginlega rakinn í sýninu í reynd ?</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Jafnvaegisrakalina.png"><img alt="../_images/Jafnvaegisrakalina.png" src="../_images/Jafnvaegisrakalina.png" style="width: 60%;" /></a>
+</figure>
+<p>Jafnvægisrakalínurit timburs;</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Jafnvaegisrakalinatimburs.png"><img alt="../_images/Jafnvaegisrakalinatimburs.png" src="../_images/Jafnvaegisrakalinatimburs.png" style="width: 50%;" /></a>
+</figure>
+<p>Dæmi:</p>
+<p>Hver er jafnvægisraki timburs innanhúss þar sem loftraki er 60 %HR?</p>
+<p>Svar:</p>
+<p>12-14 %, háð því hvort efnið er að taka upp raka eða losa sig við raka</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">5.2.2. </span>Rakaupptaka efna<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Jafnvægisrakalínan er illa skilgreind við mjög háan efnisraka… og þá stundum
+notuð “suctions” kúrfa í staðinn… á milli þessara kúrfa er þó samband:
+Útfrá jöfnu 5.6 er mismunaþrýstingurinn <span class="math notranslate nohighlight">\(p_{suc}\)</span> skilgreindur sem</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.9</p>
+<div class="math notranslate nohighlight">
+\[p_{suc} = p'-p = -\frac{2 \cdot \sigma}{r_k}\]</div>
+</div>
+<p>Jafna 5.9 og líking Kelvins (5.7) gefa saman;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.10</p>
+<div class="math notranslate nohighlight">
+\[p_suc = -\frac{2 \cdot \sigma}{r_k} = \frac{\ln(\varphi) \cdot R \cdot \rho_w \cdot T}{M}\]</div>
+</div>
+<p>skýring tákna sem fyrr.</p>
+<p>Í kennslubókinni er talað um að reikna “suctions”kúrfuna útfrá mældri
+jafnvægisrakakúrfu, en í reynd gerist hið andstæða, það þarf að mæla “suctions”kúrfuna
+þar sem sviðið sem er áhugavert (við hátt RF) fæst ekki út úr jafnvægisrakalínuritinu með
+nægri nákvæmni. Enn sem komið er eru “suctions”kúrfur aðeins til fyrir fáein efni..
+Samanburður á jafnvægisrakalínu og “suctions”kúrfu fyrir frauðsteypu (d:gasbeton) sýnir
+vel hve miklar upplýsingar fást úr “suctions”kúrfunni á bilinu 98-100 %HR og hvað
+jafnvægisrakalínan gefur rangar hugmyndir varðandi efnisraka á þessu rakabili.</p>
+<p>Frauðsteypa; jafnvægisrakalínurit og „suctions“ kúrfa</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Jafnvaegisrakalinasteypu.png"><img alt="../_images/Jafnvaegisrakalinasteypu.png" src="../_images/Jafnvaegisrakalinasteypu.png" style="width: 30%;" /></a>
+</figure>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Suctionskurfa.png"><img alt="../_images/Suctionskurfa.png" src="../_images/Suctionskurfa.png" style="width: 70%;" /></a>
+</figure>
+</section>
+</section>
+<section id="rakaflutningur">
+<h2><span class="section-number">5.3. </span>Rakaflutningur<a class="headerlink" href="#rakaflutningur" title="Permalink to this heading"></a></h2>
+<p>Rakaflutningur verður með þrennu móti;</p>
+<ul class="simple">
+<li><p>Vatnsflutningur (v. vatnsþrýstings eða hárpípukrafta)</p></li>
+<li><p>Rakaflæði</p></li>
+<li><p>Rakastreymi</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Rakaflutningur.png"><img alt="../_images/Rakaflutningur.png" src="../_images/Rakaflutningur.png" style="width: 70%;" /></a>
+</figure>
+<p>Skoðuð eru einfölduð, afmörkuð tilvik, í reynd samverka þau eitthvað en háð aðstæðum.</p>
+<section id="vatnsflutningur-vegna-mismunarystings-i-vatni">
+<h3><span class="section-number">5.3.1. </span>Vatnsflutningur vegna mismunaþrýstings í vatni<a class="headerlink" href="#vatnsflutningur-vegna-mismunarystings-i-vatni" title="Permalink to this heading"></a></h3>
+<p>Einfaldað líkan: Vatnsflutningur í pípu
+Meðalvökvahraða í sívalri pípu má ákvarða ef þrýstistigullinn (d:gradient) er þekktur
+(búið að taka tillit til eðlilegrar hrýfni fyrir umræðuna);</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.12</p>
+<div class="math notranslate nohighlight">
+\[\frac{\delta p}{\delta x} = 8 \mu \cdot \frac{v}{r^2}\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\delta p / \delta x\)</span></p></td>
+<td><p>þrýstistigull</p></td>
+<td><p>Pa/m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>kvik seigja vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa \cdot s\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>meðalhraði vökvans</p></td>
+<td><p>m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>radíi pípunnar</p></td>
+<td><p>m</p></td>
+</tr>
+</tbody>
+</table>
+<p>við stöðug skilyrði má skrifa stigulinn sem</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.13</p>
+<div class="math notranslate nohighlight">
+\[\frac{\delta p}{\delta x} = \frac{dp}{dx} = \frac{\Delta p}{\Delta x}\]</div>
+</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\Delta p\)</span> er þrýstifall (Pa) yfir lengdina <span class="math notranslate nohighlight">\(\Delta l\)</span> (m).</p>
+<p>jöfnuna 5.13 má þá skrifa þannig (einangrað fyrir meðalhraðanum);</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.14</p>
+<div class="math notranslate nohighlight">
+\[v = \frac{r^2}{8 \cdot \mu}\cdot\frac{\Delta p}{\Delta l} = k \cdot \frac{\Delta p}{\Delta l}\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(k\)</span></p></td>
+<td><p>vökvarhleypnistuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^2 / (Pa \cdot s)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Vökvahleypnistuðullinn (d:permeabilitetskoefficient) er háður eiginleikum vökvans og póruuppbyggingu efnisins.</p>
+<p>Iðulega er reiknaður vökvaflutningur á fereiningu (þéttleiki vökvaflutnings) í gegnum efni;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.15</p>
+<div class="math notranslate nohighlight">
+\[q_m = \rho_v \cdot v\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q_m\)</span></p></td>
+<td><p>þéttleiki vökvaflutnings á tímaeiningu</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg / (m^2 \cdot s)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_v\)</span></p></td>
+<td><p>þéttleiki vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg / m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>meðalhraði vökva í gegnum efnið, jafna 4.14</p></td>
+<td><p><span class="math notranslate nohighlight">\(m / s\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Iðulega er innfærð stærðin K sem sameinar stærðirnar k og eðlisþéttleika vökvans; <span class="math notranslate nohighlight">\(K = k \cdot \rho_v\)</span>. Gildi á vökvahleypnistuðli fyrir vatn í nokkrum gerðum steypu eru gefin í töflu 5.7 í
+bókinni…</p>
+<p>Dæmi bls. 87..</p>
+</section>
+<section id="flutningur-me-harpipukroftum">
+<h3><span class="section-number">5.3.2. </span>Flutningur með hárpípukröftum<a class="headerlink" href="#flutningur-me-harpipukroftum" title="Permalink to this heading"></a></h3>
+<p>Ef við hugsum okkur efnislag sem annarsvegar, hlið 1, er í snertingu við vatn með
+þrýstingi p1 og hinsvegar á hlið 2 í snertingu við loft með stöðugt hitatsig T og
+hlutfallsraka HR. Þá má reikna Kelvin radía, rk, efnislags eins og áður er rætt (í
+sambandi við jöfnu 5.7 í fyrirlestrarnótum).</p>
+<div class="math notranslate nohighlight">
+\[r_k = - \frac{2 \cdot \sigma \cdot M}{\rho_w \cdot R \cdot T \cdot \ln{\varphi}}\]</div>
+<div class="caution admonition">
+<p class="admonition-title">Aðgát</p>
+<blockquote>
+<div><p>fundið <span class="math notranslate nohighlight">\(r_k\)</span> er hér eingöngu viðmiðunarstærð þar sem efnislag samanstendur almennt mörgum mismunandi pórustærðum!!</p>
+</div></blockquote>
+</div>
+<p>Fyrir skífuna getum við litið svo á að loftþrýstingur sé hinn sami beggja vegna og í
+pórunum er þá undirþrýstingur sem er gefinn samkvæmt 5.16 (sjá jöfnur 5.6 og 5.7 í
+fyrirlestrarnótum);
+[í fyrra tilvikinu, jafna 5.6, að framan var formerki undirþrýstings negatíft af því að
+loftþrýstingur ofan á filmu var +, nú reiknum við allan þrýsting frá 1 til 2;
+..vatnsþrýstingur á hlið 1 þrýstir vatni inn í efnislagið og undirþrýstingurinn <span class="math notranslate nohighlight">\(p_2\)</span> dregur
+vatn í átt að yfirborði 2 – kraftarnir ættu að vinna saman og <span class="math notranslate nohighlight">\(\Delta p=p_1+p_2\)</span>, en ekki <span class="math notranslate nohighlight">\(\Delta p=p_1-p_2\)</span>
+eins og bókin sýnir ???]</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.16</p>
+<div class="math notranslate nohighlight">
+\[p_2 = \frac{2 \cdot \sigma}{r_k}\]</div>
+</div>
+<p>Í pórum með póruradía minni en <span class="math notranslate nohighlight">\(r_k\)</span> verður rakaþétting (sbr. fyrri umfjöllun) og hún
+hjálpar til að byggja upp samfelldan vatnsfasa frá yfirborði 1 og að meniskum sem hafa
+myndast. Undirþrýstingurinn dregur vatn að loftaða yfirborðinu, þar sem vatnið síðan
+gufar upp.. [ATH: uppgufunarhraðinn ræðst af rakaþrýstingi umhverfis og í yfirborði,
+það þarf því yfirleitt að skoða hvort er ráðandi fyrir flutninginn; hárpípukraftarnir eða
+uppgufunin..].</p>
+<p>Rakaflutning vegna hárpípukrafta má skrifa sem</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.17 (jafna 5.28 bls 89)</p>
+<div class="math notranslate nohighlight">
+\[q_m = -K \cdot \frac{\rho_w \cdot R \cdot T \cdot \ln{\varphi} }{2 \cdot \sigma \cdot M}\]</div>
+</div>
+<p>skýring tákna sem fyrr.</p>
+<p>Til þess að jafna 5.17 gildi þarf loftrakinn <span class="math notranslate nohighlight">\(\varphi\)</span> við yfirborð efnisins einnig að vera stöðugur,
+sem þýðir í reynd;</p>
+<ol class="lowerroman simple">
+<li><p>hæfilega lofthreyfingu við yfirborðið</p></li>
+<li><p>rýmið sem yfirborðið snýr að þarf að vera svo stórt að uppgufun frá yfirborðinu breyti ekki hlutfallsraka lofts í rýminu</p></li>
+</ol>
+<p>Fyrir tilvik þegar <span class="math notranslate nohighlight">\(r_k\)</span> er lítil stærð, þá sést að áhrif <span class="math notranslate nohighlight">\(p_2\)</span> verða fljótt mun meiri heldur en <span class="math notranslate nohighlight">\(p_1\)</span>.</p>
+<p>ATH: Dæmi bls. 90</p>
+<section id="harpipukraftar-almennt">
+<h4><span class="section-number">5.3.2.1. </span>Hárpípukraftar almennt<a class="headerlink" href="#harpipukraftar-almennt" title="Permalink to this heading"></a></h4>
+<p>Kaflinn „kapillær opsugning“ er síðan áframhald af hárpípukrafta umfjölluninni, en fyrir
+óstöðugt tilvik, þ.e. vökvinn er á hreyfingu (tímaháð ástand);</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Harpipukraftar.png"><img alt="../_images/Harpipukraftar.png" src="../_images/Harpipukraftar.png" style="width: 70%;" /></a>
+</figure>
+<p>Fyrir vökva á hreyfingu í pípu þá er skúfáraun milli vökvayfirborðs og pípu;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.18</p>
+<div class="math notranslate nohighlight">
+\[\tau = 4 \cdot \mu \cdot \frac{v(t)}{r} = 4 \cdot \frac{\mu}{r} \cdot \frac{\delta z}{\delta t}\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\tau\)</span></p></td>
+<td><p>skúfáraun</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa / m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>kvik seigja vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(N \cdot s / m^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(v(t)\)</span></p></td>
+<td><p>meðalsteymishraði vökva í þversniði</p></td>
+<td><p><span class="math notranslate nohighlight">\(m / s\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>innri þversniðsradíi pípunnar</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Á vökvakúpulinn verkar krafturinn</p>
+<div class="math notranslate nohighlight">
+\[p_{kap} = \frac{2 \cdot \sigma}{r_k} = \frac{2 \cdot \sigma \cdot \cos{\theta}}{r}\]</div>
+<p>þar sem skýring tákna er sem fyrr
+gefum okkur að nettó þrýstingur við rörendann <span class="math notranslate nohighlight">\(p=0\)</span>, jafnvægisjafna krafta verður þá;</p>
+<div class="math notranslate nohighlight">
+\[\pi \cdot r^2 \cdot p_{kap} - 2 \cdot \pi \cdot r \cdot z(t) \cdot \tau = 0\]</div>
+<p>Með innsetningu stærða, heildun, og einföldun (sjá bókina) fæst;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.19</p>
+<div class="math notranslate nohighlight">
+\[z(t) = \sqrt{\frac{t}{m}}\]</div>
+</div>
+<p>þá má auðveldlega reikna hversu mikill vökvi hefur gengið inn í sýnið á hverjum tíma..</p>
+<div class="math notranslate nohighlight">
+\[Q(t) = \rho_w \cdot p_å \cdot z(t)\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_å\)</span></p></td>
+<td><p>opna holrýmdin</p></td>
+<td><p>–</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="rakaflutningur-vegna-gufurystings">
+<h3><span class="section-number">5.3.3. </span>Rakaflutningur vegna gufuþrýstings<a class="headerlink" href="#rakaflutningur-vegna-gufurystings" title="Permalink to this heading"></a></h3>
+<p>Lögmál Fick’s; rakaflutningur vegna kraftstiguls (gradients) má skrifa fyrir mismunandi
+tegundir stiguls; t.d. efnisraka (c) eða rakaþrýsting (p);</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 5.20</p>
+<div class="math notranslate nohighlight">
+\[q_d = -D \cdot \frac{dc}{dx} = -k \cdot \frac{dp}{dx}\]</div>
+</div>
+<p>Fyrir rakaþrýsting sem stigul má ákvarða rakaflutningstölu efna <span class="math notranslate nohighlight">\(\delta\)</span> (háð efnisgerð og
+pórudreifingu), sjá töflugildi í bókinni (tabel 5.9).</p>
+<p>Rakaflutningur er samsettur úr áhrifum frá hárpípukröftum og rakaþrýstingi, sem eru
+iðulega tekin saman í gildi á rakaflutningstölu og rakaflutningurinn síðan reiknaður útfrá
+lögmáli Fick’s. Rakaflutningstalan er þá iðulega táknuð með <span class="math notranslate nohighlight">\(\delta\)</span> (þegar tekið er tillit til
+áhrifa hitastigs eru aðrar stærðir innfærðar og efniseiginleikinn þá táknaður með <span class="math notranslate nohighlight">\(\mu\)</span>)</p>
+<p>Fyrir þunn efnislög er iðulega skilgreind stærðin mótstaðan <span class="math notranslate nohighlight">\(Z\)</span></p>
+<div class="math notranslate nohighlight">
+\[Z = \frac{d}{\delta}\]</div>
+<p>og jafna Fick’s þá sem</p>
+<div class="math notranslate nohighlight">
+\[q_d = \frac{p_1-p_2}{Z}\]</div>
+<p>Það verður að hafa í huga að rakaflutningstalan er háð efnisraka, sbr. Figur 5.22 !</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli04/" class="btn btn-neutral float-left" title="4. Kafli - Varmi og einangrun" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli06/" class="btn btn-neutral float-right" title="6. Kafli - Styrkur og stífleiki" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

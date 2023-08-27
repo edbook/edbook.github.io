@@ -565,16 +565,16 @@ stakið <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
 <p class="admonition-title">Dæmi</p>
 <p>Skoðum föllin <span class="math notranslate nohighlight">\(f:\mathbb R \to \mathbb R, f(x) = 2x-1\)</span>
 og <span class="math notranslate nohighlight">\(g:\mathbb R \to \mathbb R, g(x) = x^2\)</span>.
-Finnum <span class="math notranslate nohighlight">\(g\circ f\)</span>.</p>
+Finnum <span class="math notranslate nohighlight">\(g\circ f(x)\)</span>.</p>
 </div>
 <div class="daemi dropdown admonition">
 <p class="admonition-title">Lausn</p>
 <p>Höfum að</p>
 <div class="math notranslate nohighlight">
-\[g \circ f = g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1\]</div>
+\[g \circ f(x) = g(f(x)) = g(2x -1) = (2x-1)^2 = 4x^2-4x+1\]</div>
 <p>Athugið að samskeytingin <span class="math notranslate nohighlight">\(f \circ g\)</span> er ekki sama fallið:</p>
 <div class="math notranslate nohighlight">
-\[f \circ g = f(g(x)) = f(x^2) = 2x^2-1\]</div>
+\[f \circ g(x) = f(g(x)) = f(x^2) = 2x^2-1\]</div>
 </div>
 </section>
 <section id="skilgreining-ataekni-og-eintaekni">
@@ -658,9 +658,15 @@ orðið <a class="tooltip"  href="https://www.stae.is/os/leita/function"  target
 </a> í stað orðsins <em>vörpun</em>.</p>
 </div></blockquote>
 </div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<blockquote>
+<div><p>Til þess að fall sé andhverfanlegt þarf það að vera <em>gagntækt</em>.</p>
+</div></blockquote>
+</div>
 </section>
 <section id="daemi-andhverfa">
-<span id="index-9"></span><h3><span class="section-number">1.4.9. </span>Dæmi: Andhverfa<a class="headerlink" href="#daemi-andhverfa" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">1.4.9. </span>Dæmi: Andhverfa<a class="headerlink" href="#daemi-andhverfa" title="Permalink to this heading"></a></h3>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Látum <span class="math notranslate nohighlight">\(X=[0,2]\)</span>, <span class="math notranslate nohighlight">\(Y=[0,4]\)</span> og <span class="math notranslate nohighlight">\(f:X \to Y, f(x) = x^2\)</span>.
@@ -668,17 +674,17 @@ Finnum andhverfu fallsins.</p>
 </div>
 <div class="daemi dropdown admonition">
 <p class="admonition-title">Lausn</p>
-<p>Þar sem <span class="math notranslate nohighlight">\(f\)</span> gagntæk vörpun er andhverfan er gefin með
+<p>Þar sem <span class="math notranslate nohighlight">\(f\)</span> er gagntæk vörpun er andhverfan til og er gefin með
 <span class="math notranslate nohighlight">\(f^{-1}(x) = \sqrt x\)</span>.</p>
 <a class="reference internal image-reference" href="../_images/04_andhverfa.png"><img alt="../_images/04_andhverfa.png" class="align-center" src="../_images/04_andhverfa.png" style="width: 50%;" /></a>
 </div>
 <p>Athugum að hér má velja <span class="math notranslate nohighlight">\(X\)</span> sem önnur mengi en <span class="math notranslate nohighlight">\([0,2]\)</span> svo lengi sem
 <span class="math notranslate nohighlight">\(X\)</span> inniheldur ekki bæði <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(-a\)</span>, <span class="math notranslate nohighlight">\(a\neq 0\)</span>,
-því þá er <span class="math notranslate nohighlight">\(f\)</span> ekki lengur eintæk.</p>
-<p>Mengið <span class="math notranslate nohighlight">\(Y\)</span> er svo valið sem myndmengið <span class="math notranslate nohighlight">\(f(X)\)</span>.</p>
+því þá er <span class="math notranslate nohighlight">\(f\)</span> ekki lengur eintæk. Mengið <span class="math notranslate nohighlight">\(Y\)</span> yrði svo valið sem
+myndmengið <span class="math notranslate nohighlight">\(f(X)\)</span>.</p>
 </section>
 <section id="skilgreining-graf">
-<h3><span class="section-number">1.4.10. </span>Skilgreining: Graf<a class="headerlink" href="#skilgreining-graf" title="Permalink to this heading"></a></h3>
+<span id="index-9"></span><h3><span class="section-number">1.4.10. </span>Skilgreining: Graf<a class="headerlink" href="#skilgreining-graf" title="Permalink to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(f:X \to Y\)</span> vera fall þannig að <span class="math notranslate nohighlight">\(X\)</span>
@@ -686,9 +692,9 @@ og <span class="math notranslate nohighlight">\(Y\)</span> eru mengi af rauntöl
 mengi allra punkta í planinu <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> af gerðinni
 <span class="math notranslate nohighlight">\((x,f(x))\)</span> þar sem <span class="math notranslate nohighlight">\(x\in X\)</span>. Hér notum við oft <span class="math notranslate nohighlight">\(y\)</span> í stað
 <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
-<div id="kW17FK08TCxbAMvkkUzwzdCibXUoRz"></div>
+<div id="HRFkrlb4IhiFLmCa0vxLPHPsSzY6MK"></div>
 <script>
-var ggbApp_kW17FK08TCxbAMvkkUzwzdCibXUoRz = new GGBApplet({
+var ggbApp_HRFkrlb4IhiFLmCa0vxLPHPsSzY6MK = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 400, 
@@ -696,7 +702,7 @@ var ggbApp_kW17FK08TCxbAMvkkUzwzdCibXUoRz = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["kW17FK08TCxbAMvkkUzwzdCibXUoRz"] = ggbApp_kW17FK08TCxbAMvkkUzwzdCibXUoRz;
+ggbAppletId["HRFkrlb4IhiFLmCa0vxLPHPsSzY6MK"] = ggbApp_HRFkrlb4IhiFLmCa0vxLPHPsSzY6MK;
 </script>
 <p></p>
 </div>
@@ -782,9 +788,9 @@ staðalform hennar og er línan þá sett fram með</p>
 </div>
 <p>Dragðu stikuna til og frá til að sjá hvernig línan breytist við það að breyta
 hallatölunni, <span class="math notranslate nohighlight">\(a\)</span> og skurðpunktinum við <span class="math notranslate nohighlight">\(y\)</span>-ás, <span class="math notranslate nohighlight">\(b\)</span>.</p>
-<div id="FdO9jMMsJiy9AbbhgMfcZfZPXjAh8L"></div>
+<div id="ZaZ21BzHtMNthah3K67iHDdT3dB5YQ"></div>
 <script>
-var ggbApp_FdO9jMMsJiy9AbbhgMfcZfZPXjAh8L = new GGBApplet({
+var ggbApp_ZaZ21BzHtMNthah3K67iHDdT3dB5YQ = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 400, 
@@ -792,7 +798,7 @@ var ggbApp_FdO9jMMsJiy9AbbhgMfcZfZPXjAh8L = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["FdO9jMMsJiy9AbbhgMfcZfZPXjAh8L"] = ggbApp_FdO9jMMsJiy9AbbhgMfcZfZPXjAh8L;
+ggbAppletId["ZaZ21BzHtMNthah3K67iHDdT3dB5YQ"] = ggbApp_ZaZ21BzHtMNthah3K67iHDdT3dB5YQ;
 </script>
 <p></p>
 </section>
@@ -820,9 +826,9 @@ fleygboginn <em>kúptur</em> (uppsveigður) en ef <span class="math notranslate 
 <p>þar sem <span class="math notranslate nohighlight">\(a,n\in \mathbb{R}\)</span> nefnist veldisfall. Í því tilfelli sem <span class="math notranslate nohighlight">\(n \in \mathbb{N}_0\)</span> (þ.e.a.s <span class="math notranslate nohighlight">\(n\)</span> er einhver náttúruleg tala eða 0) og <span class="math notranslate nohighlight">\(a \neq 0\)</span> þá er veldisfallið margliða af <span class="math notranslate nohighlight">\(n\)</span>-ta stigi þar sem allir stuðlar nema forystustuðullinn eru 0, þ.e. <span class="math notranslate nohighlight">\(a_{n-1}=a_{n-2} = \ldots =a_0 = 0\)</span>. Ef <span class="math notranslate nohighlight">\(n\)</span> er slétt tala þá er fallið <span class="math notranslate nohighlight">\(f(x)\)</span> jafnstætt en oddstætt ef
 <span class="math notranslate nohighlight">\(n\)</span> er oddatala.</p>
 <p>Hér er fallið <span class="math notranslate nohighlight">\(g(x)\)</span> oddstætt en <span class="math notranslate nohighlight">\(f(x)\)</span> jafnstætt.</p>
-<div id="B6jR3E5PahEdW9KwdvWiZlY4adxXdm"></div>
+<div id="Eq0N9Inbv6RiryncfwwmqTe8wqokNc"></div>
 <script>
-var ggbApp_B6jR3E5PahEdW9KwdvWiZlY4adxXdm = new GGBApplet({
+var ggbApp_Eq0N9Inbv6RiryncfwwmqTe8wqokNc = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 400, 
@@ -830,7 +836,7 @@ var ggbApp_B6jR3E5PahEdW9KwdvWiZlY4adxXdm = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["B6jR3E5PahEdW9KwdvWiZlY4adxXdm"] = ggbApp_B6jR3E5PahEdW9KwdvWiZlY4adxXdm;
+ggbAppletId["Eq0N9Inbv6RiryncfwwmqTe8wqokNc"] = ggbApp_Eq0N9Inbv6RiryncfwwmqTe8wqokNc;
 </script>
 <p></p>
 </section>
@@ -883,9 +889,9 @@ umrita sem brotið veldi.</p>
 sem einkennist af því hvort <span class="math notranslate nohighlight">\(n\)</span> sé oddatala eða slétt. Hér að neðan hefur fallið
 <span class="math notranslate nohighlight">\(f(x)\)</span> veldið <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> þar sem <span class="math notranslate nohighlight">\(n\)</span> er slétt tala en
 <span class="math notranslate nohighlight">\(g(x)\)</span> veldið <span class="math notranslate nohighlight">\(\frac{1}{m}\)</span> þar sem <span class="math notranslate nohighlight">\(m\)</span> er oddatala.</p>
-<div id="U1CMVVm8tWlk1uADoi1UKxhC3oVuBp"></div>
+<div id="8bBYkPogr9oeQnUYcn9rXRnYawEpgL"></div>
 <script>
-var ggbApp_U1CMVVm8tWlk1uADoi1UKxhC3oVuBp = new GGBApplet({
+var ggbApp_8bBYkPogr9oeQnUYcn9rXRnYawEpgL = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 400, 
@@ -893,7 +899,7 @@ var ggbApp_U1CMVVm8tWlk1uADoi1UKxhC3oVuBp = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["U1CMVVm8tWlk1uADoi1UKxhC3oVuBp"] = ggbApp_U1CMVVm8tWlk1uADoi1UKxhC3oVuBp;
+ggbAppletId["8bBYkPogr9oeQnUYcn9rXRnYawEpgL"] = ggbApp_8bBYkPogr9oeQnUYcn9rXRnYawEpgL;
 </script>
 <p></p>
 </section>
@@ -948,7 +954,7 @@ um <span class="math notranslate nohighlight">\(a\)</span> ef <span class="math 
 <p><strong>Lárétt hliðrun</strong></p>
 <p>Hér fyrir neðan er sama falli hliðrað til hægri og vinstri um 2, meðfram <span class="math notranslate nohighlight">\(x\)</span>-ásnum.</p>
 <a class="reference internal image-reference" href="../_images/PMA_hlidrun_vinstri.png"><img alt="../_images/PMA_hlidrun_vinstri.png" class="align-center" src="../_images/PMA_hlidrun_vinstri.png" style="width: 75%;" /></a>
-<p>Almennt gildir fyrir fallið <span class="math notranslate nohighlight">\(y=f(x)\)</span> að <span class="math notranslate nohighlight">\(y=f(x+b)\)</span> hliðrar fallinu til hægri
+<p>Almennt gildir fyrir fallið <span class="math notranslate nohighlight">\(y=f(x)\)</span> að <span class="math notranslate nohighlight">\(y=f(x-b)\)</span> hliðrar fallinu til hægri
 um <span class="math notranslate nohighlight">\(b\)</span> ef <span class="math notranslate nohighlight">\(b&gt;0\)</span> en til vinstri um <span class="math notranslate nohighlight">\(b\)</span> ef <span class="math notranslate nohighlight">\(b&lt;0\)</span>.</p>
 </section>
 <section id="skolun-me-jakvaeum-fasta">
@@ -1082,9 +1088,9 @@ undirstaðan í öllum hornafallareikningi og öll önnur hornaföll, eins og
 og sínus með því að nota einingahringin á þessa vegu: Fyrir punktinn <span class="math notranslate nohighlight">\(A=(x,y)\)</span> á
 einingahringnum og hornið <span class="math notranslate nohighlight">\(\theta\)</span> sem myndast á milli <span class="math notranslate nohighlight">\(x\)</span>-ássins og
 <span class="math notranslate nohighlight">\(A\)</span> þá er <span class="math notranslate nohighlight">\(\cos(\theta)=x\)</span> og <span class="math notranslate nohighlight">\(\sin(\theta)=y\)</span>.</p>
-<div id="KwtxuPh6R1JLcBLTyge1M2Gal8BRVW"></div>
+<div id="RQMsK0R7LrNf5Ov7rwBocBUoBoxw8s"></div>
 <script>
-var ggbApp_KwtxuPh6R1JLcBLTyge1M2Gal8BRVW = new GGBApplet({
+var ggbApp_RQMsK0R7LrNf5Ov7rwBocBUoBoxw8s = new GGBApplet({
 "appName": "calculator", 
 "width": 1000, 
 "height": 500, 
@@ -1092,7 +1098,7 @@ var ggbApp_KwtxuPh6R1JLcBLTyge1M2Gal8BRVW = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["KwtxuPh6R1JLcBLTyge1M2Gal8BRVW"] = ggbApp_KwtxuPh6R1JLcBLTyge1M2Gal8BRVW;
+ggbAppletId["RQMsK0R7LrNf5Ov7rwBocBUoBoxw8s"] = ggbApp_RQMsK0R7LrNf5Ov7rwBocBUoBoxw8s;
 </script>
 <p></p>
 <p>Gott getur verið að kannast við helstu hornafallastærðirnar.</p>
@@ -1183,9 +1189,9 @@ til að sýna að</p>
 <div class="math notranslate nohighlight">
 \[\cos(\theta)^2 + \sin(\theta)^2 = 1\]</div>
 <p>gildi almennt, óháð gildinu á <span class="math notranslate nohighlight">\(\theta\)</span>, eins og sést hér að neðan.</p>
-<div id="Pkw32GjTjTvNPKRMZvg9E6RBoNGKyr"></div>
+<div id="gBsGLMCdZWOhhnJ83wQVF8nLk8FZtR"></div>
 <script>
-var ggbApp_Pkw32GjTjTvNPKRMZvg9E6RBoNGKyr = new GGBApplet({
+var ggbApp_gBsGLMCdZWOhhnJ83wQVF8nLk8FZtR = new GGBApplet({
 "appName": "calculator", 
 "width": 800, 
 "height": 400, 
@@ -1193,7 +1199,7 @@ var ggbApp_Pkw32GjTjTvNPKRMZvg9E6RBoNGKyr = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["Pkw32GjTjTvNPKRMZvg9E6RBoNGKyr"] = ggbApp_Pkw32GjTjTvNPKRMZvg9E6RBoNGKyr;
+ggbAppletId["gBsGLMCdZWOhhnJ83wQVF8nLk8FZtR"] = ggbApp_gBsGLMCdZWOhhnJ83wQVF8nLk8FZtR;
 </script>
 <p></p>
 <p>Hægt er að útvíkka regluna þannig að hún virki fyrir aðra hringi en einingahringinn.
@@ -1207,9 +1213,9 @@ reglu Pýþagórasar fæst að</p>
 = r^2(cos^2(\theta)+\sin^2(\theta))=r^2\]</div>
 <p>samkvæmt því sem við leiddum út hér að ofan. Þetta gildir fyrir öll <span class="math notranslate nohighlight">\(r\)</span> og
 óháð horninu <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
-<div id="9KESOtvirWp9IS5eUcgqhHVzL2EubM"></div>
+<div id="mChIWjrCdrgfEc8u5oR6jI7U7LSnZE"></div>
 <script>
-var ggbApp_9KESOtvirWp9IS5eUcgqhHVzL2EubM = new GGBApplet({
+var ggbApp_mChIWjrCdrgfEc8u5oR6jI7U7LSnZE = new GGBApplet({
 "appName": "calculator", 
 "width": 850, 
 "height": 500, 
@@ -1217,7 +1223,7 @@ var ggbApp_9KESOtvirWp9IS5eUcgqhHVzL2EubM = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["9KESOtvirWp9IS5eUcgqhHVzL2EubM"] = ggbApp_9KESOtvirWp9IS5eUcgqhHVzL2EubM;
+ggbAppletId["mChIWjrCdrgfEc8u5oR6jI7U7LSnZE"] = ggbApp_mChIWjrCdrgfEc8u5oR6jI7U7LSnZE;
 </script>
 <p></p>
 <div class="athugasemd admonition">

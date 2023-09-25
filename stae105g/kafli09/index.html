@@ -149,10 +149,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#daemi-loka-form">9.1.3. Dæmi: Lokað form</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">9.1.4. Dæmi: Lokað form</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#markgildi-runa">9.1.5. Markgildi runa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#skilgreining-markgildi-runu">9.1.6. Skilgreining: Markgildi runu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#skilgreining">9.1.7. Skilgreining</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-markgildi-runu-oformlega">9.1.6. Skilgreining: Markgildi runu (óformlega)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-markgildi-runu-formlega">9.1.7. Skilgreining: Markgildi runu (formlega)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#daemi-samleitin-og-osamleitin-runa">9.1.8. Dæmi: Samleitin og ósamleitin runa</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setning-markgildi-runu-skilgreint-me-falli">9.1.9. Setning: Markgildi runu skilgreint með falli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-markgildi-runu-reikna-me-markgildi-falls">9.1.9. Setning: Markgildi runu reiknað með markgildi falls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setning-markgildisreglur-fyrir-runur">9.1.10. Setning: Markgildisreglur fyrir runur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#daemi-akvara-samleitni-og-reikna-markgildi">9.1.11. Dæmi: Ákvarða samleitni og reikna markgildið</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setning-samfelld-foll-skilgreind-a-samleitnum-runum">9.1.12. Setning: Samfelld föll skilgreind á samleitnum runum</a></li>
@@ -180,7 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#daemi-kikisro">9.2.10. Dæmi: Kíkisröð</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#sundurleitniprof-og-heildisprof">9.3. Sundurleitnipróf og heildispróf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sundurleitniprof">9.3. Sundurleitnipróf</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#setning-sundurleitniprof">9.3.1. Setning: Sundurleitnipróf</a></li>
 </ul>
 </li>
@@ -302,7 +302,7 @@ runur eru það, sem þýðir að röðin í runum skiptir máli en ekki í meng
 eru mengin <span class="math notranslate nohighlight">\(\{1,2,3\}\)</span> og <span class="math notranslate nohighlight">\(\{3,1,2\}\)</span> þau sömu en runurnar <span class="math notranslate nohighlight">\(1,2,3,\dots\)</span>
 og <span class="math notranslate nohighlight">\(3,1,2,\dots\)</span> það ekki. Ef við skoðum rununa</p>
 <div class="math notranslate nohighlight">
-\[2,4,8,18,32,\dots\]</div>
+\[2,4,8,16,32,\dots\]</div>
 <p>sjáum við að hún inniheldur öll jákvæð heiltöluveldi af 2 í stækkandi röð. Hana má því
 tákna með</p>
 <div class="math notranslate nohighlight">
@@ -347,15 +347,15 @@ kölluð <em>mismunaruna</em>) og <em>geómetrísk runa</em>.</p>
 <p>til að lýsa henni. Þar sem fyrsti liður rununnar er <span class="math notranslate nohighlight">\(3\)</span> og mismunur á milli liða er
 <span class="math notranslate nohighlight">\(4\)</span> má einnig lýsa <span class="math notranslate nohighlight">\(n\)</span>-ta lið rununnar með</p>
 <div class="math notranslate nohighlight">
-\[a_n=3n+4.\]</div>
-<p>Jafnmunarunur hafa almennt lokaða formið <span class="math notranslate nohighlight">\(a_n=cn+b\)</span> þar sem <span class="math notranslate nohighlight">\(a_1 = c\)</span> er
+\[a_n=3+4n.\]</div>
+<p>Jafnmunarunur hafa almennt lokaða formið <span class="math notranslate nohighlight">\(a_n=c+bn\)</span> ef <span class="math notranslate nohighlight">\(a_1 = c\)</span> er
 fyrsti liður rununnar og <span class="math notranslate nohighlight">\(b\)</span> er mismunurmunurinn aðliggjandi liða.</p>
 <p>Í <strong>geómetrískri runu</strong> er hlutfallið milli allra liða það sama. Til að mynda er
 runan</p>
 <div class="math notranslate nohighlight">
 \[2, \frac{-2}{3}, \frac{2}{9}, -\frac{2}{27}, \frac{2}{81},\dots\]</div>
 <p>geómetrísk runa því hlutfallið milli hverra tveggja aðliggjandi liða er
-<span class="math notranslate nohighlight">\(-\frac{1}{3}\)</span> og not má rakningarvenslin</p>
+<span class="math notranslate nohighlight">\(-\frac{1}{3}\)</span> og nota má rakningarvenslin</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
   a_1=2\\
@@ -364,9 +364,9 @@ runan</p>
 <p>til að lýsa henni. Þar sem fyrsti liður rununnar er <span class="math notranslate nohighlight">\(2\)</span> og hlutfallið <span class="math notranslate nohighlight">\(-\frac{1}{3}\)</span>
 má lýsa <span class="math notranslate nohighlight">\(n\)</span>-ta lið rununnar með</p>
 <div class="math notranslate nohighlight">
-\[a_n = 2\left(-\frac{1}{3}\right)^{n-1}.\]</div>
-<p>Almennt hefur geómetrísk runa lokaða formið <span class="math notranslate nohighlight">\(a_n=cr^{n-1}\)</span> þar sem <span class="math notranslate nohighlight">\(c\)</span> er
-fyrsti liður rununnar og <span class="math notranslate nohighlight">\(a_1=r\)</span> er hlutfallið milli aðliggjandi liða.</p>
+\[a_n = 2\left(-\frac{1}{3}\right)^{n-1}, \quad n\geq 1.\]</div>
+<p>Almennt hefur geómetrísk runa lokaða formið <span class="math notranslate nohighlight">\(a_n=cr^{n-1}\)</span> ef <span class="math notranslate nohighlight">\(a_1=c\)</span> er
+fyrsti liður rununnar og <span class="math notranslate nohighlight">\(r\)</span> er hlutfallið milli aðliggjandi liða.</p>
 </section>
 <section id="daemi-loka-form">
 <h3><span class="section-number">9.1.3. </span>Dæmi: Lokað form<a class="headerlink" href="#daemi-loka-form" title="Permalink to this heading"></a></h3>
@@ -387,7 +387,7 @@ en liðurinn á undan á meðan seinni runan er jafnmunaruna þar sem það muna
 hverjum tveimur aðliggjandi liðum. Fyrri rununni má því lýsa með <span class="math notranslate nohighlight">\(3^n\)</span> en
 þeirri seinni <span class="math notranslate nohighlight">\(3n+1\)</span>. Lokað form rununnar er því</p>
 <div class="math notranslate nohighlight">
-\[a_n = \frac{3^n}{3n+1}.\]</div>
+\[a_n = \frac{3^n}{3n+1}, \quad n\geq 1.\]</div>
 </div></blockquote>
 </div>
 </section>
@@ -414,12 +414,13 @@ hennar.</p>
   a_1 &amp;= 2\\
   a_2 &amp;= -3 a_1 = (-3)\cdot 2\\
   a_3 &amp;= -3 a_2 = (-3) \cdot (-3) \cdot 2\\
-  a_4 &amp;= -3 a_3 = (-3) \cdot (-3) \cdot (-3) \cdot 2\\.
+  a_4 &amp;= -3 a_3 = (-3) \cdot (-3) \cdot (-3) \cdot 2\\
+  &amp;\vdots
 \end{align}\end{split}\]</div>
 <p>Oft getur hjálpað að reikna útreikningana ekki alveg til enda til að auðveldara
 sé að koma auga á mynstrið. Hér sést að</p>
 <div class="math notranslate nohighlight">
-\[a_n = (-3)^{n-1}\cdot2.\]</div>
+\[a_n = (-3)^{n-1}\cdot2, \quad n\geq 1.\]</div>
 </div></blockquote>
 </div>
 </section>
@@ -431,13 +432,13 @@ hvernig runan hegðar sér þegar knévísirinn <span class="math notranslate no
 leiða hugann að því hvort allir liðirnir stefni á sama gildið, þ.e. hvort
 markgildi liðanna í rununni sé samleitið.</p>
 </section>
-<section id="skilgreining-markgildi-runu">
-<h3><span class="section-number">9.1.6. </span>Skilgreining: Markgildi runu<a class="headerlink" href="#skilgreining-markgildi-runu" title="Permalink to this heading"></a></h3>
+<section id="skilgreining-markgildi-runu-oformlega">
+<h3><span class="section-number">9.1.6. </span>Skilgreining: Markgildi runu (óformlega)<a class="headerlink" href="#skilgreining-markgildi-runu-oformlega" title="Permalink to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <blockquote>
-<div><p>Af því gefnu að liðir rununnar <span class="math notranslate nohighlight">\(\{a_n\}\)</span> nálgist gildið <span class="math notranslate nohighlight">\(L\)</span> óendanlega
-mikið eftir því sem <span class="math notranslate nohighlight">\(n\)</span> stækkar segjum við að <span class="math notranslate nohighlight">\(\{a_n\}\)</span> sé <em>samleitin runa</em>
+<div><p>Af því gefnu að liðir rununnar <span class="math notranslate nohighlight">\(\{a_n\}\)</span> nálgist gildið <span class="math notranslate nohighlight">\(L\)</span> eins mikið og vera skal eftir því sem <span class="math notranslate nohighlight">\(n\)</span> stækkar segjum við
+að <span class="math notranslate nohighlight">\(\{a_n\}\)</span> sé <em>samleitin runa</em>
 og að <span class="math notranslate nohighlight">\(L\)</span> sé <em>markgildi rununnar</em>. Við ritum þá að</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \rightarrow \infty} a_n = L.\]</div>
@@ -445,13 +446,13 @@ og að <span class="math notranslate nohighlight">\(L\)</span> sé <em>markgildi
 </div></blockquote>
 </div>
 </section>
-<section id="skilgreining">
-<h3><span class="section-number">9.1.7. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this heading"></a></h3>
+<section id="skilgreining-markgildi-runu-formlega">
+<h3><span class="section-number">9.1.7. </span>Skilgreining: Markgildi runu (formlega)<a class="headerlink" href="#skilgreining-markgildi-runu-formlega" title="Permalink to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <blockquote>
-<div><p>Runan <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er samleitin að rauntölu <span class="math notranslate nohighlight">\(L\)</span> ef fyrir öll <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
-er til heil tala <span class="math notranslate nohighlight">\(N\)</span> þannig að <span class="math notranslate nohighlight">\(|a_n - L|&lt;\varepsilon\)</span> fyrir <span class="math notranslate nohighlight">\(n \geq N\)</span>.
+<div><p>Runan <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er samleitin að rauntölu <span class="math notranslate nohighlight">\(L\)</span> ef fyrir sérhvert <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
+er til heil tala <span class="math notranslate nohighlight">\(N\)</span> þannig að <span class="math notranslate nohighlight">\(|a_n - L|&lt;\varepsilon\)</span> fyrir öll <span class="math notranslate nohighlight">\(n \geq N\)</span>.
 Þá er talan <span class="math notranslate nohighlight">\(L\)</span> kölluð <em>markgildi</em> rununnar og við skrifum</p>
 <div class="math notranslate nohighlight">
 \[\lim_{n \rightarrow \infty} a_n = L \text{ eða } a_n \rightarrow L.\]</div>
@@ -479,7 +480,7 @@ eina ákveðna tölu <span class="math notranslate nohighlight">\(L\)</span>.</p
 <div class="math notranslate nohighlight">
 \[\lim_{n \rightarrow \infty} a_n = \infty\]</div>
 <p>og til þess að runa sé samleitin verður markgildi hennar að vera einhver
-tala <span class="math notranslate nohighlight">\(L &lt; \infty\)</span>. Hinsvegar er runan</p>
+rauntala <span class="math notranslate nohighlight">\(L\)</span>, sem <span class="math notranslate nohighlight">\(\infty\)</span> er vissulega ekki. Hinsvegar er runan</p>
 <div class="math notranslate nohighlight">
 \[1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \frac{1}{5}, \dots = \left\{\frac{1}{n}\right\}\]</div>
 <p>samleitin þar sem liðirnir verða alltaf minni og minni og stefna á endanum á 0,
@@ -489,8 +490,8 @@ tala <span class="math notranslate nohighlight">\(L &lt; \infty\)</span>. Hinsve
 </div></blockquote>
 </div>
 </section>
-<section id="setning-markgildi-runu-skilgreint-me-falli">
-<h3><span class="section-number">9.1.9. </span>Setning: Markgildi runu skilgreint með falli<a class="headerlink" href="#setning-markgildi-runu-skilgreint-me-falli" title="Permalink to this heading"></a></h3>
+<section id="setning-markgildi-runu-reikna-me-markgildi-falls">
+<h3><span class="section-number">9.1.9. </span>Setning: Markgildi runu reiknað með markgildi falls<a class="headerlink" href="#setning-markgildi-runu-reikna-me-markgildi-falls" title="Permalink to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <blockquote>
@@ -546,7 +547,7 @@ og <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty} b_n 
 <li><p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} ca_n = c\lim_{n\rightarrow \infty}a_n = cA\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} (a_n \pm b_n) = \lim_{n\rightarrow \infty} a_n \pm \lim_{n\rightarrow \infty} b_n = A \pm B\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} (a_n \cdot b_n) = \left(\lim_{n\rightarrow \infty} a_n \right) \cdot \left(\lim_{n\rightarrow \infty} b_n \right) = A \cdot B\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} \lim_{n\rightarrow \infty} \left( \frac{a_n}{b_n} \right) = \frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n} = \frac{A}{B}\)</span> af því gefnu að <span class="math notranslate nohighlight">\(B \neq 0\)</span> og hvert <span class="math notranslate nohighlight">\(b_n \neq 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\rightarrow \infty} \left( \frac{a_n}{b_n} \right) = \frac{\lim_{n\rightarrow \infty} a_n}{\lim_{n\rightarrow \infty} b_n} = \frac{A}{B}\)</span> af því gefnu að <span class="math notranslate nohighlight">\(B \neq 0\)</span> og hvert <span class="math notranslate nohighlight">\(b_n \neq 0\)</span>.</p></li>
 </ol>
 </div></blockquote>
 </div></blockquote>
@@ -581,10 +582,11 @@ og <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty} b_n 
 <div><p>Látum <span class="math notranslate nohighlight">\(\{a_n\}\)</span> vera runu og gerum ráð fyrir að til sé tala <span class="math notranslate nohighlight">\(L\)</span> þannig
 að</p>
 <div class="math notranslate nohighlight">
-\[\lim_{n \rightarrow n} a_n = L.\]</div>
-<p>Gerum einnig ráð fyrir að fallið <span class="math notranslate nohighlight">\(f\)</span> sé samfellt í <span class="math notranslate nohighlight">\(L\)</span>. Þá er til
+\[\lim_{n \rightarrow \infty} a_n = L.\]</div>
+<p>Gerum einnig ráð fyrir að fall <span class="math notranslate nohighlight">\(f\)</span> sé samfellt í <span class="math notranslate nohighlight">\(L\)</span>. Þá er til
 heil tala <span class="math notranslate nohighlight">\(N\)</span> sem uppfyllir að <span class="math notranslate nohighlight">\(f\)</span> er skilgreint í öllum <span class="math notranslate nohighlight">\(a_n\)</span>
 fyrir <span class="math notranslate nohighlight">\(n \geq N\)</span> og runan <span class="math notranslate nohighlight">\(\{f(a_n)\}\)</span> er samleitin að <span class="math notranslate nohighlight">\(f(L)\)</span>.</p>
+<p>Með öðrum orðum segir setningin að það má taka markgildi inn fyrir föll ef þau eru samfelld.</p>
 </div></blockquote>
 </div>
 </section>
@@ -669,7 +671,7 @@ Ef runa er ekki takmörkuð er hún sögð vera <em>ótakmörku runa</em>.</p>
 </div>
 <p>Til að mynda er runan <span class="math notranslate nohighlight">\(\{1/n\}\)</span> takmörkuð að ofan af því að <span class="math notranslate nohighlight">\(1/n \leq 1\)</span>
 fyrir allar jákvæðar heiltölur <span class="math notranslate nohighlight">\(n\)</span>. Hún er einnig takmörkuð að neðan þar sem
-<span class="math notranslate nohighlight">\(1/n \geq 0\)</span> fyrir allar jákvæðar heiltölur <span class="math notranslate nohighlight">\(n\)</span>. Ef við lítum hins
+<span class="math notranslate nohighlight">\(1/n \geq 0\)</span> fyrir allar stranglega jákvæðar heiltölur <span class="math notranslate nohighlight">\(n\)</span>. Ef við lítum hins
 vegar á rununa <span class="math notranslate nohighlight">\(\{2^n\}\)</span> þá er hú ekki takmörkuð að ofan þar sem <span class="math notranslate nohighlight">\(\lim_{n \rightarrow \infty} 2^n = \infty\)</span>
 og jafnvel þó hún sé takmörkuð að neðan þar sem <span class="math notranslate nohighlight">\(2^n &gt; 0\)</span> fyrir allar
 jákvæðar heiltölur þá segjum við samt sem áður að runan sé ótakmörkuð þar sem
@@ -695,14 +697,13 @@ hún er ekki takmörkuð að ofan og neðan.</p>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <blockquote>
-<div><p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>vaxandi</em> fyrir öll <span class="math notranslate nohighlight">\(n \geq n_0\)</span> ef</p>
+<div><p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>vaxandi</em> ef</p>
 <div class="math notranslate nohighlight">
-\[a_n \leq a_{n+1} \text{ fyrir öll } n \geq n_0.\]</div>
-<p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>minnkandi</em> fyrir öll <span class="math notranslate nohighlight">\(n \geq n_0\)</span> ef</p>
+\[a_n \leq a_{n+1} \text{ fyrir öll } n \geq 1.\]</div>
+<p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>minnkandi</em> ef</p>
 <div class="math notranslate nohighlight">
-\[a_n \geq a_{n+1} \text{ fyrir öll } n \geq n_0.\]</div>
-<p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>einhalla</em> fyrir öll <span class="math notranslate nohighlight">\(n \geq n_0\)</span> er hún
-er vaxandi fyrir öll <span class="math notranslate nohighlight">\(n \geq n_0\)</span> eða minnkandi fyrir öll <span class="math notranslate nohighlight">\(n \geq n_0\)</span>.</p>
+\[a_n \geq a_{n+1} \text{ fyrir öll } n \geq 1.\]</div>
+<p>Runa <span class="math notranslate nohighlight">\(\{a_n\}\)</span> er sögð <em>einhalla</em> ef hún er vaxandi eða minnkandi.</p>
 </div></blockquote>
 </div>
 <p>Þá er ekkert annað að gera en að setja fram setninguna um einhalla runur.</p>
@@ -1002,7 +1003,7 @@ og eftir standa aðeins endanlega margir af fyrstu og síðustu liðum hlutsumma
 <p>Almennt gildir því að</p>
 <div class="math notranslate nohighlight">
 \[S_k = \cos(1) - \cos(1/(k+1)).\]</div>
-<p>Þar sem <span class="math notranslate nohighlight">\(1/(k+1) \rightarrow 0\)</span> þegar <span class="math notranslate nohighlight">\(k \rightarrow 0\)</span> og
+<p>Þar sem <span class="math notranslate nohighlight">\(1/(k+1) \rightarrow 0\)</span> þegar <span class="math notranslate nohighlight">\(k \rightarrow \infty\)</span> og
 <span class="math notranslate nohighlight">\(\cos(x)\)</span> er samfellt fall þá gildir að <span class="math notranslate nohighlight">\(\cos(1/(k+1)) \rightarrow \cos(0)=1\)</span>.
 Þar með fæst að <span class="math notranslate nohighlight">\(S_k \rightarrow \cos(1)-1\)</span>. Kíkisröðin er því samleitin og
 summa hennar er gefin með</p>
@@ -1013,8 +1014,8 @@ summa hennar er gefin með</p>
 </section>
 </section>
 <hr class="docutils" />
-<section id="sundurleitniprof-og-heildisprof">
-<h2><span class="section-number">9.3. </span>Sundurleitnipróf og heildispróf<a class="headerlink" href="#sundurleitniprof-og-heildisprof" title="Permalink to this heading"></a></h2>
+<section id="sundurleitniprof">
+<h2><span class="section-number">9.3. </span>Sundurleitnipróf<a class="headerlink" href="#sundurleitniprof" title="Permalink to this heading"></a></h2>
 <p>Ef röðin <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> á að vera samleitin verður að gilda
 að <span class="math notranslate nohighlight">\(a_n \rightarrow 0\)</span> þegar <span class="math notranslate nohighlight">\(n \rightarrow \infty\)</span>. Því er hægt að setja
 fram eftirfarandi setningu.</p>
@@ -1063,7 +1064,7 @@ gerum einnig ráð fyrir að til sé fall <span class="math notranslate nohighli
 </div></blockquote>
 <p>Þá gildir að</p>
 <div class="math notranslate nohighlight">
-\[\int_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx.\]</div>
+\[\sum_{n=1}^\infty a_n \text{ og } \int_N^\infty f(x) dx\]</div>
 <p>eru annað hvort bæði samleitin eða bæði ósamleitin.
 Athugum að jafnvel þó samleitni heildisins <span class="math notranslate nohighlight">\(\int_N^\infty f(x) dx\)</span> hafi það í
 för með sér að <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_n\)</span> sé samleitið þýðir það ekki að

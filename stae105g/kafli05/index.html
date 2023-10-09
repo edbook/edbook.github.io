@@ -182,7 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#akvein-heildi">5.5. Ákveðin heildi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#skilgreining-akvei-heildi">5.5.1. Skilgreining: Ákveðið heildi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setning-samfelld-foll-eru-heildanleg">5.5.2. Setning: Samfelld föll eru heildanleg</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#daemi-akvei-heildi">5.5.3. Dæmi: Ákveðið heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-akvei-heildi-reikna-ut-fra-skilgreiningu">5.5.3. Dæmi: Ákveðið heildi reiknað út frá skilgreiningu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#flatarmal-falla-sem-ekki-eru-jakvae">5.5.4. Flatarmál falla sem ekki eru jákvæð</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setning-reiknireglur-akvein-heildi">5.5.5. Setning: Reiknireglur: ákveðin heildi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setning-samanburur-heilda">5.5.6. Setning: Samanburður heilda</a></li>
@@ -192,11 +192,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#undirstousetning-staerfraeigreiningar">5.6. Undirstöðusetning stærðfræðigreiningar</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#mealgildissetningin-fyrir-heildi">5.6.1. Meðalgildissetningin fyrir heildi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#athugasemd-rithattur">5.6.2. Athugasemd: Ritháttur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#daemi-mealgildissetningin-fyrir-heildi">5.6.3. Dæmi: Meðalgildissetningin fyrir heildi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningar-i">5.6.4. Setning: Undirstöðusetning stærðfræðigreiningar (I)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#daemi-undirstousetning-staerfraeigreiningarinnar-i">5.6.5. Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningarinnar-ii">5.6.6. Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-mealgildissetningin-fyrir-heildi">5.6.2. Dæmi: Meðalgildissetningin fyrir heildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningar-i">5.6.3. Setning: Undirstöðusetning stærðfræðigreiningar (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-undirstousetning-staerfraeigreiningarinnar-i">5.6.4. Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-undirstousetning-staerfraeigreiningarinnar-ii">5.6.5. Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#athugasemd-mikilvaegi-undirstousetningar-staerfraeigreiningarinnar">5.6.6. Athugasemd: Mikilvægi undirstöðusetningar stærðfræðigreiningarinnar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#daemi-undirstousetning-staerfraeigreiningarinnar">5.6.7. Dæmi: Undirstöðusetning stærðfræðigreiningarinnar</a></li>
 </ul>
 </li>
@@ -371,7 +371,7 @@ til að tákna stofnfall <span class="math notranslate nohighlight">\(f\)</span>
 <em>antiderivatives/integrals</em>. Sem dæmi má nefna:</p>
 <ol class="arabic simple">
 <li><p>Í MR og víðar er talað um að diffra og tegra. Nafnorðin eru þá diffur og tegur.</p></li>
-<li><p>Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu <strong>differ</strong>ernation og tegur er dregið af orðinu in<strong>tegra</strong>l.</p></li>
+<li><p>Víða er talað um að heilda og deilda og nafnorðin heildun og deildun, sem formlegri tilraun til að íslenska orðin, en orðið diffur kemur af orðinu <strong>differ</strong>entiation og tegur er dregið af orðinu in<strong>tegra</strong>l.</p></li>
 <li><p>Víðast hvar eru orðin afleiða og stofnfall notuð að einhverju leyti.</p></li>
 </ol>
 </div></blockquote>
@@ -437,7 +437,7 @@ með tilliti til.</p>
 <td><p><span class="math notranslate nohighlight">\(\int \sin(x) dx = -\cos(x)+C\)</span></p></td>
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{d}{dx} \tan(x) = \frac{1}{\cos^2(x)}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(\int frac{1}{\cos^2(x)} dx = \tan(x)+C\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int \frac{1}{\cos^2(x)} dx = \tan(x)+C\)</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -842,7 +842,7 @@ yfir <span class="math notranslate nohighlight">\(f\)</span> frá <span class="m
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) dx = \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i^*) \Delta x,\]</div>
 <p>af því gefnu að markgildið sé til. Ef markgildið er til, þá er fallið <span class="math notranslate nohighlight">\(f(x)\)</span>
-sagt vera heildanlegt á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> eða einfaldlega bara heildanlegt.</p>
+sagt vera <em>heildanlegt</em> á bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> eða einfaldlega bara heildanlegt.</p>
 </div></blockquote>
 </div>
 <div class="advorun admonition">
@@ -868,8 +868,8 @@ sagt vera heildanlegt á bilinu <span class="math notranslate nohighlight">\([a,
 </div></blockquote>
 </div>
 </section>
-<section id="daemi-akvei-heildi">
-<h3><span class="section-number">5.5.3. </span>Dæmi: Ákveðið heildi<a class="headerlink" href="#daemi-akvei-heildi" title="Permalink to this heading"></a></h3>
+<section id="daemi-akvei-heildi-reikna-ut-fra-skilgreiningu">
+<h3><span class="section-number">5.5.3. </span>Dæmi: Ákveðið heildi reiknað út frá skilgreiningu<a class="headerlink" href="#daemi-akvei-heildi-reikna-ut-fra-skilgreiningu" title="Permalink to this heading"></a></h3>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <blockquote>
@@ -909,9 +909,9 @@ fyrir sérhvert <span class="math notranslate nohighlight">\(i\)</span>. Hægri 
 \[\int_0^2 x^2 dx = \frac{8}{3}.\]</div>
 <p>Hér fyrir neðan má draga stikuna <span class="math notranslate nohighlight">\(k\)</span> til og frá til að sjá
 nálgunina þegar notaðir eru <span class="math notranslate nohighlight">\(k\)</span> rétthyrningar í Riemann summunni.</p>
-<div id="OdWpVgTZmgCsM9DFHZkeOFk8rynme0"></div>
+<div id="e2sRgzYQfySv2peLz7lsEiQcxtz4Rd"></div>
 <script>
-var ggbApp_OdWpVgTZmgCsM9DFHZkeOFk8rynme0 = new GGBApplet({
+var ggbApp_e2sRgzYQfySv2peLz7lsEiQcxtz4Rd = new GGBApplet({
 "appName": "calculator", 
 "width": 900, 
 "height": 450, 
@@ -919,7 +919,7 @@ var ggbApp_OdWpVgTZmgCsM9DFHZkeOFk8rynme0 = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["OdWpVgTZmgCsM9DFHZkeOFk8rynme0"] = ggbApp_OdWpVgTZmgCsM9DFHZkeOFk8rynme0;
+ggbAppletId["e2sRgzYQfySv2peLz7lsEiQcxtz4Rd"] = ggbApp_e2sRgzYQfySv2peLz7lsEiQcxtz4Rd;
 </script>
 <p></p>
 </div></blockquote>
@@ -1031,6 +1031,7 @@ er notaður í flestum áföngum Háskóla Íslands.</p>
 <hr class="docutils" />
 <section id="undirstousetning-staerfraeigreiningar">
 <h2><span class="section-number">5.6. </span>Undirstöðusetning stærðfræðigreiningar<a class="headerlink" href="#undirstousetning-staerfraeigreiningar" title="Permalink to this heading"></a></h2>
+<p>Eftirfarandi setning er notuð sem hjálparsetningu við sönnunina á undirstöðusetning stærðfræðigreiningarinnar.</p>
 <section id="mealgildissetningin-fyrir-heildi">
 <h3><span class="section-number">5.6.1. </span>Meðalgildissetningin fyrir heildi<a class="headerlink" href="#mealgildissetningin-fyrir-heildi" title="Permalink to this heading"></a></h3>
 <div class="setning admonition">
@@ -1043,21 +1044,8 @@ punktur <span class="math notranslate nohighlight">\(c\in [a,b]\)</span> sem upp
 </div></blockquote>
 </div>
 </section>
-<section id="athugasemd-rithattur">
-<h3><span class="section-number">5.6.2. </span>Athugasemd: Ritháttur<a class="headerlink" href="#athugasemd-rithattur" title="Permalink to this heading"></a></h3>
-<div class="athugasemd admonition">
-<p class="admonition-title">Athugasemd</p>
-<blockquote>
-<div><p>Oft er ritað að</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f(x) dx = \left[F(x)\right]_a^b = F(b)-F(a).\]</div>
-<p>Þessi ritháttur gefur manni tækifæri til að finna fyrst stofnfallið <span class="math notranslate nohighlight">\(F(x)\)</span> og
-stinga svo heildismörkunum <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> inn í af því loknu.</p>
-</div></blockquote>
-</div>
-</section>
 <section id="daemi-mealgildissetningin-fyrir-heildi">
-<h3><span class="section-number">5.6.3. </span>Dæmi: Meðalgildissetningin fyrir heildi<a class="headerlink" href="#daemi-mealgildissetningin-fyrir-heildi" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.2. </span>Dæmi: Meðalgildissetningin fyrir heildi<a class="headerlink" href="#daemi-mealgildissetningin-fyrir-heildi" title="Permalink to this heading"></a></h3>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <blockquote>
@@ -1083,7 +1071,7 @@ stinga svo heildismörkunum <span class="math notranslate nohighlight">\(a\)</sp
 </div>
 </section>
 <section id="setning-undirstousetning-staerfraeigreiningar-i">
-<h3><span class="section-number">5.6.4. </span>Setning: Undirstöðusetning stærðfræðigreiningar (I)<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningar-i" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.3. </span>Setning: Undirstöðusetning stærðfræðigreiningar (I)<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningar-i" title="Permalink to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Undirstöðusetning stærðfræðigreining (I)</p>
 <blockquote>
@@ -1096,7 +1084,7 @@ skilgreint þannig að</p>
 </div>
 </section>
 <section id="daemi-undirstousetning-staerfraeigreiningarinnar-i">
-<h3><span class="section-number">5.6.5. </span>Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)<a class="headerlink" href="#daemi-undirstousetning-staerfraeigreiningarinnar-i" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.4. </span>Dæmi: Undirstöðusetning stærðfræðigreiningarinnar (I)<a class="headerlink" href="#daemi-undirstousetning-staerfraeigreiningarinnar-i" title="Permalink to this heading"></a></h3>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <blockquote>
@@ -1114,7 +1102,7 @@ skilgreint þannig að</p>
 </div>
 </section>
 <section id="setning-undirstousetning-staerfraeigreiningarinnar-ii">
-<h3><span class="section-number">5.6.6. </span>Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningarinnar-ii" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.5. </span>Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)<a class="headerlink" href="#setning-undirstousetning-staerfraeigreiningarinnar-ii" title="Permalink to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning: Undirstöðusetning stærðfræðigreiningarinnar (II)</p>
 <blockquote>
@@ -1124,6 +1112,19 @@ eitthvað stofnfall fyrir <span class="math notranslate nohighlight">\(f(x)\)</s
 \[\int_a^b f(x) dx = F(b)-F(a).\]</div>
 </div></blockquote>
 </div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<blockquote>
+<div><p>Oft er ritað að</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f(x) dx = \left[F(x)\right]_a^b = F(b)-F(a).\]</div>
+<p>Þessi ritháttur gefur manni tækifæri til að finna fyrst stofnfallið <span class="math notranslate nohighlight">\(F(x)\)</span> og
+stinga svo heildismörkunum <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> inn í af því loknu.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="athugasemd-mikilvaegi-undirstousetningar-staerfraeigreiningarinnar">
+<h3><span class="section-number">5.6.6. </span>Athugasemd: Mikilvægi undirstöðusetningar stærðfræðigreiningarinnar<a class="headerlink" href="#athugasemd-mikilvaegi-undirstousetningar-staerfraeigreiningarinnar" title="Permalink to this heading"></a></h3>
 <div class="athugasemd admonition">
 <p class="admonition-title">Athugasemd</p>
 <blockquote>

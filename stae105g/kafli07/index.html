@@ -96,7 +96,7 @@
     
     <link rel="index" title="Atriðaskrá" href="../genindex/" />
     <link rel="search" title="Leit" href="../search/" />
-    <link rel="next" title="8. Inngagur að diffurjöfnur" href="../kafli08/" />
+    <link rel="next" title="8. Inngangur að diffurjöfnur" href="../kafli08/" />
     <link rel="prev" title="6. Hagnýting á heildun" href="../kafli06/" />
 
 
@@ -168,14 +168,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngagur að diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngangur að diffurjöfnur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Runur og raðir</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Veldaraðir</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli_linuleg_algebra/">11. Inngangur að línulegri algebru</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
 </ul>
 
@@ -345,7 +343,7 @@ að flestu leyti sú sama fyrir ákveðin heildi.</p>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <blockquote>
-<div><p>H áfram með dæmið hér að ofan, þar sem við mátum heildið</p>
+<div><p>Höldum áfram með dæmið hér að ofan, þar sem við mátum heildið</p>
 <div class="math notranslate nohighlight">
 \[\int x \sin(x) dx.\]</div>
 <p>Nú skulum við bæta við heilda það yfir bilið <span class="math notranslate nohighlight">\([0,\pi]\)</span>, þ.e.</p>
@@ -436,13 +434,13 @@ yfir <span class="math notranslate nohighlight">\(x\)</span>-ásinum og hægra m
 <p>Höfum</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
-        A &amp;= \int_1^\infty\\
+        A &amp;= \int_1^\infty \frac{1}{x}dx\\
         &amp;= \lim_{t \rightarrow \infty} \int_1^t \frac{1}{x} dx\\
-        &amp;= \lim_{t \rightarrow \infty} \left[|x|\right]_1^t\\
+        &amp;= \lim_{t \rightarrow \infty} \left[\ln|x|\right]_1^t\\
         &amp;= \lim_{t \rightarrow \infty} (\ln|t|-\ln(1))\\
         &amp;= \infty
 \end{align}\end{split}\]</div>
-<p>Sjáum að heildið er ósamleitið sem þýðir að flatarmál svæðisins er óendanlega stórt.</p>
+<p>Sjáum að heildið er ósamleitið þar sem flatarmál svæðisins er óendanlega stórt.</p>
 </div></blockquote>
 </div>
 </section>
@@ -463,7 +461,7 @@ yfir <span class="math notranslate nohighlight">\(x\)</span>-ásinum og hægra m
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
         \int_{-\infty}^0 \frac{1}{x^2+4}dx &amp;= \lim_{x \rightarrow -\infty} \int_t^0 \frac{1}{x^2+4}dx\\
-        &amp;= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}(\frac{1}{2})\right]_t^0\\
+        &amp;= \lim_{t \rightarrow -\infty } \left[\frac{1}{2}\tan^{-1}\left(\frac{x}{2}\right)\right]_t^0\\
         &amp;= \frac{1}{2}\lim_{t \rightarrow -\infty}(\tan^{-1}(0)-\tan^{-1}(t/2))\\
         &amp;= \frac{\pi}{4}
 \end{align}\end{split}\]</div>
@@ -497,7 +495,7 @@ Annars segjum við að það sé ósamleitið.</p>
 </ol>
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx,\]</div>
-<p>af því gefnu að bæði <span class="math notranslate nohighlight">\(\int_a^b f(x) dx\)</span> og <span class="math notranslate nohighlight">\(\int_c^b f(x) dx\)</span>
+<p>af því gefnu að bæði <span class="math notranslate nohighlight">\(\int_a^c f(x) dx\)</span> og <span class="math notranslate nohighlight">\(\int_c^b f(x) dx\)</span>
 séu samleitin. Annars er sagt að heildið <span class="math notranslate nohighlight">\(\int_a^b f(x) dx\)</span> sé ósamleitið.</p>
 </div></blockquote>
 </div>
@@ -521,7 +519,7 @@ séu samleitin. Annars er sagt að heildið <span class="math notranslate nohigh
 \[\begin{split}\begin{align}
         \int_0^4 \frac{1}{\sqrt{4-x}} dx &amp;= \lim_{t \rightarrow 4^-} \int_0^t \frac{1}{\sqrt{4-x}}\\
         &amp;= \lim_{t \rightarrow 4^-} [(-2–\sqrt{4-x})]_0^t\\
-        &amp;= \lim_{t \rightarrow 4^-} (-2\sqrt{4-t}+4)\\
+        &amp;= \lim_{t \rightarrow 4^-} (-2-\sqrt{4-t}+4)\\
         &amp;=4
 \end{align}\end{split}\]</div>
 <p>Svo heildið er samleitið að 4.</p>
@@ -602,7 +600,7 @@ Fáum að</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../kafli08/" class="btn btn-neutral float-right" title="8. Inngagur að diffurjöfnur" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../kafli08/" class="btn btn-neutral float-right" title="8. Inngangur að diffurjöfnur" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../kafli06/" class="btn btn-neutral" title="6. Hagnýting á heildun" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

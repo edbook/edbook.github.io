@@ -228,14 +228,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Hagnýting á heildun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Aðferðir í heildun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngagur að diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngangur að diffurjöfnur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Runur og raðir</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Veldaraðir</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli_linuleg_algebra/">11. Inngangur að línulegri algebru</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
 </ul>
 
@@ -675,7 +673,7 @@ bili <span class="math notranslate nohighlight">\(x_, x_1, x_2, \dots, x_n\)</sp
 <p class="admonition-title">Skilgreining</p>
 <blockquote>
 <div><p>Mengi punkta <span class="math notranslate nohighlight">\(P=\{x_0,x_1,\dots,x_n\}\)</span> þar sem <span class="math notranslate nohighlight">\(a&lt;x_0&lt;x_1&lt;\dots &lt; x_n=b\)</span>
-sem skiptir bilinu [a,b] í hlutbil á forminu <span class="math notranslate nohighlight">\([x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]\)</span>
+sem skiptir bilinu <span class="math notranslate nohighlight">\([a,b]\)</span> í hlutbil á forminu <span class="math notranslate nohighlight">\([x_0,x_1], [x_1,x_2], \dots, [x_{n-1},x_n]\)</span>
 kallast <em>skipting</em> bilsins <span class="math notranslate nohighlight">\([a,b]\)</span>. Ef hlutbilin hafa öll sömu lengd, er
 myndar mengi punktanna <em>reglulega skiptingu</em> bilsins <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
 </div></blockquote>
@@ -909,9 +907,9 @@ fyrir sérhvert <span class="math notranslate nohighlight">\(i\)</span>. Hægri 
 \[\int_0^2 x^2 dx = \frac{8}{3}.\]</div>
 <p>Hér fyrir neðan má draga stikuna <span class="math notranslate nohighlight">\(k\)</span> til og frá til að sjá
 nálgunina þegar notaðir eru <span class="math notranslate nohighlight">\(k\)</span> rétthyrningar í Riemann summunni.</p>
-<div id="WnRMVLQV6MuzLjCqDSrxaP6PFh1xQQ"></div>
+<div id="gtnwmjy4WDP2aSOg0ZbEAld0hyvNgo"></div>
 <script>
-var ggbApp_WnRMVLQV6MuzLjCqDSrxaP6PFh1xQQ = new GGBApplet({
+var ggbApp_gtnwmjy4WDP2aSOg0ZbEAld0hyvNgo = new GGBApplet({
 "appName": "calculator", 
 "width": 900, 
 "height": 450, 
@@ -919,7 +917,7 @@ var ggbApp_WnRMVLQV6MuzLjCqDSrxaP6PFh1xQQ = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": false 
 }, true);
-ggbAppletId["WnRMVLQV6MuzLjCqDSrxaP6PFh1xQQ"] = ggbApp_WnRMVLQV6MuzLjCqDSrxaP6PFh1xQQ;
+ggbAppletId["gtnwmjy4WDP2aSOg0ZbEAld0hyvNgo"] = ggbApp_gtnwmjy4WDP2aSOg0ZbEAld0hyvNgo;
 </script>
 <p></p>
 </div></blockquote>
@@ -1372,7 +1370,7 @@ nemendur að ná tökum á innsetningu svo gott getur verið að skoða fleiri d
 <blockquote>
 <div><p>Metum heildið</p>
 <div class="math notranslate nohighlight">
-\[\int \frac{3}{x-10}.\]</div>
+\[\int \frac{3}{x-10}dx.\]</div>
 </div></blockquote>
 </div>
 <div class="daemi dropdown admonition">
@@ -1380,15 +1378,15 @@ nemendur að ná tökum á innsetningu svo gott getur verið að skoða fleiri d
 <blockquote>
 <div><p>Tökum fyrst 3 út fyrir heildið</p>
 <div class="math notranslate nohighlight">
-\[3 \int \frac{1}{x-10}.\]</div>
+\[3 \int \frac{1}{x-10}dx.\]</div>
 <p>Og notum svo innsetningu með <span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span> og <span class="math notranslate nohighlight">\(g(x)=x-10\)</span>.
 Þá er <span class="math notranslate nohighlight">\(du = 1 dx\)</span> þar sem <span class="math notranslate nohighlight">\(g'(x)=1\)</span>. Þetta gefur því</p>
 <div class="math notranslate nohighlight">
 \[3 \int \frac{1}{u} du = 3\ln|u|+C.\]</div>
-<p>Við getum nú skipt <span class="math notranslate nohighlight">\(u\)</span> aftur út fyrir <span class="math notranslate nohighlight">\(g(x)=x-10\)</span> og valið <span class="math notranslate nohighlight">\(C=0\)</span>.
+<p>Við getum nú skipt <span class="math notranslate nohighlight">\(u\)</span> aftur út fyrir <span class="math notranslate nohighlight">\(g(x)=x-10\)</span>.
 Þá fæst</p>
 <div class="math notranslate nohighlight">
-\[= 3 \ln|x-10|.\]</div>
+\[= \int \frac{3}{x-10} 3 = \ln|x-10|+C.\]</div>
 <p>Munum að lograr eru ekki skilgreindir í núlli og því gildi að <span class="math notranslate nohighlight">\(x \in \mathbb{R}\setminus \{10\}\)</span>.</p>
 </div></blockquote>
 </div>

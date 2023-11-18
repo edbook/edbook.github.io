@@ -141,7 +141,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Heildun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Hagnýting á heildun</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Aðferðir í heildun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngagur að diffurjöfnur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Inngangur að diffurjöfnur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Runur og raðir</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. Veldaraðir</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#veldarair-og-foll">10.1. Veldaraðir og föll</a><ul>
@@ -191,8 +191,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli_linuleg_algebra/">11. Inngangur að línulegri algebru</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../vidauki/">Viðauki</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../umnamskeidid/">Gagnlegar upplýsingar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
 </ul>
 
@@ -246,7 +244,8 @@
 <p>Röð á forminu</p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=0}^\infty c_n x^n = c_0 + c_1 x + c_2 x^2 + \dots\]</div>
-<p>nefnist <em>veldaröð með miðju í</em> <span class="math notranslate nohighlight">\(x=0\)</span>. Röð á forminu</p>
+<p>nefnist <em>veldaröð með miðju í</em> <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
+<p>Röð á forminu</p>
 <div class="math notranslate nohighlight">
 \[\sum_{n=0}^\infty c_n (x-a)^n = c_0 + c_1(x-a) + c_2(x-a)^2+\dots\]</div>
 <p>nefnist <em>veldaröð með miðju í</em> <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
@@ -484,7 +483,7 @@ endapunktum bilsins.</p>
   &amp;= \sum_{n=0}^\infty x^n\\
   &amp;= 1 + x + x^2 + x^3 + \dots
 \end{aligned}\end{split}\]</div>
-<p>fyrir <span class="math notranslate nohighlight">\(|x|&lt;1\)</span> til að</p>
+<p>fyrir <span class="math notranslate nohighlight">\(|x|&lt;1\)</span>.</p>
 </div></blockquote>
 </div>
 <div class="daemi dropdown admonition">
@@ -535,7 +534,7 @@ við heildað röðina lið fyrir lið.</p>
 \end{aligned}\end{split}\]</div>
 <p>Þar sem <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> er stofnfall fallsins <span class="math notranslate nohighlight">\(\frac{1}{1+x}\)</span> þá er aðeins
 eftir að ákvarða fastann <span class="math notranslate nohighlight">\(C\)</span>. Þar sem <span class="math notranslate nohighlight">\(\ln(1+0)=0\)</span> höfum við að <span class="math notranslate nohighlight">\(C=0\)</span>.
-Þar me ðfæst að veldaröð fallsins <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> sé</p>
+Þar með fæst að veldaröð fallsins <span class="math notranslate nohighlight">\(f(x)=\ln(1+x)\)</span> sé</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
   \ln(x) &amp;= x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \dots\\
@@ -570,7 +569,7 @@ fyrir öll <span class="math notranslate nohighlight">\(n \geq 0\)</span>.</p>
 <p>Ef <span class="math notranslate nohighlight">\(f\)</span> er óendanlega oft diffranlegt í <span class="math notranslate nohighlight">\(x=a\)</span> þá er <em>Taylor-röð</em> fallsins
 <span class="math notranslate nohighlight">\(f\)</span> í <span class="math notranslate nohighlight">\(a\)</span> röðin</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!} = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .\]</div>
+\[\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n + \dots .\]</div>
 <p>Taylor-röð fallsins <span class="math notranslate nohighlight">\(f\)</span> í <span class="math notranslate nohighlight">\(x=0\)</span> er kölluð <em>Maclaurin-röð</em> fallsins <span class="math notranslate nohighlight">\(f\)</span>.</p>
 </div>
 </section>
@@ -678,7 +677,7 @@ fyrir öll <span class="math notranslate nohighlight">\(x \in I\)</span> þá gi
 \[\begin{split}\begin{aligned}
                 p_1(x) &amp;= f(8)+f'(8)(x-8)\\
                 &amp;= 2 + \tfrac{1}{12}(x-8)\\
-                p_2 &amp;= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
+                p_2(x) &amp;= f(8)+f'(8)(x-8) + \frac{f''(8)}{2!}(x-8)^2\\
                 &amp;= 2 + \tfrac{1}{12}(x-8) - \tfrac{1}{288}(x-8)^2.
 \end{aligned}\end{split}\]</div>
 </dd>
@@ -743,7 +742,7 @@ samleitnibil raðarinnar.</p>
 \[\sum_{n=0}^\infty \frac{f^{(n)}(1)}{n!}(x-1)^n = \sum_{n=0}^\infty (-1)^n(x-1)^n.\]</div>
 <p>Til að finna samleitnibilið getum við notað kvótaprófið. Fáum að</p>
 <div class="math notranslate nohighlight">
-\[\frac{|a_{n-1}|}{|a_n|} = \frac{\left|(-1)^{n+1}(x-1)^{n+1}\right|}{\left| (-1)^n(x-1)^n \right|} = |x-1|.\]</div>
+\[\frac{|a_{n+1}|}{|a_n|} = \frac{\left|(-1)^{n+1}(x-1)^{n+1}\right|}{\left| (-1)^n(x-1)^n \right|} = |x-1|.\]</div>
 <p>Þar með er röðin samleitin ef <span class="math notranslate nohighlight">\(|x-1|&lt;1\)</span>, þ.e. röðin er samleitin ef <span class="math notranslate nohighlight">\(0&lt;x&lt;2\)</span>.
 Næst athugum við endapunktana. Við sjáum að</p>
 <div class="math notranslate nohighlight">

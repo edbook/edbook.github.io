@@ -128,9 +128,10 @@
     <link rel="next" title="3. Eigingildisverkefni" href="../kafli03/" />
     <link rel="prev" title="1. Hlutafleiðujöfnur" href="../kafli01/" /> 
 
-
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = []; </script>
+
    
 </head>
 
@@ -305,9 +306,9 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<div id="mjiAbLkX9bdmnNT062MaJtJj7mlTvl"></div>
+<div id="HjYRYGFWN11AZBjdAkAFdGkHAiHVx9"></div>
 <script>
-var ggbApp_mjiAbLkX9bdmnNT062MaJtJj7mlTvl = new GGBApplet({
+var ggbApp_HjYRYGFWN11AZBjdAkAFdGkHAiHVx9 = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 300, 
@@ -315,7 +316,7 @@ var ggbApp_mjiAbLkX9bdmnNT062MaJtJj7mlTvl = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": true 
 }, true);
-ggbAppletId["mjiAbLkX9bdmnNT062MaJtJj7mlTvl"] = ggbApp_mjiAbLkX9bdmnNT062MaJtJj7mlTvl;
+ggbAppletId["HjYRYGFWN11AZBjdAkAFdGkHAiHVx9"] = ggbApp_HjYRYGFWN11AZBjdAkAFdGkHAiHVx9;
 </script>
 <p></p>
 <p><span class="math notranslate nohighlight">\(2\pi\)</span>-lotubundna fallið er skilgreint með því að gefa formúlu fyrir því á bilinu <span class="math notranslate nohighlight">\([0,2\pi]\)</span>.</p>
@@ -808,6 +809,13 @@ með miðað við breytuna <span class="math notranslate nohighlight">\(x\)</spa
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
+<script>
+    window.addEventListener("load", function(){
+        for(var i in ggbAppletId){
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
 <style>
     /* Sidebar header (and topbar for mobile) */
     

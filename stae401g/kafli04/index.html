@@ -128,9 +128,10 @@
     <link rel="next" title="5. Mismunaaðferðir" href="../kafli05/" />
     <link rel="prev" title="3. Eigingildisverkefni" href="../kafli03/" /> 
 
-
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = []; </script>
+
    
 </head>
 
@@ -654,9 +655,9 @@ Niðurstaðan er</p>
 +\dfrac 1{2c}\int_{x-ct}^{x+ct}\psi({\xi})\, d{\xi}.\]</div>
 </div>
 <p>Formúlan kallst d’Alembert-formúlan. Hún gefur almenna lausn í <span class="math notranslate nohighlight">\(C^2({{\mathbb R}}^2)\)</span> á upphafsgildisverkefninu.</p>
-<div id="9mW6Ks7XMcpOnUyR37c7fGXAJ8zsRy"></div>
+<div id="tWJ96W4JaVQr0nF7RBTecAPBBU7hjv"></div>
 <script>
-var ggbApp_9mW6Ks7XMcpOnUyR37c7fGXAJ8zsRy = new GGBApplet({
+var ggbApp_tWJ96W4JaVQr0nF7RBTecAPBBU7hjv = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 320, 
@@ -664,7 +665,7 @@ var ggbApp_9mW6Ks7XMcpOnUyR37c7fGXAJ8zsRy = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": true 
 }, true);
-ggbAppletId["9mW6Ks7XMcpOnUyR37c7fGXAJ8zsRy"] = ggbApp_9mW6Ks7XMcpOnUyR37c7fGXAJ8zsRy;
+ggbAppletId["tWJ96W4JaVQr0nF7RBTecAPBBU7hjv"] = ggbApp_tWJ96W4JaVQr0nF7RBTecAPBBU7hjv;
 </script>
 <p></p>
 <div class="line-block">
@@ -1142,6 +1143,13 @@ g(t)&amp;= \sum\limits_{\alpha=1,i,-i} {{\operatorname{Res}}}\bigg(\dfrac{e^{\ze
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
+<script>
+    window.addEventListener("load", function(){
+        for(var i in ggbAppletId){
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
 <style>
     /* Sidebar header (and topbar for mobile) */
     

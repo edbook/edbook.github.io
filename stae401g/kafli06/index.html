@@ -128,9 +128,10 @@
     <link rel="next" title="Viðauki" href="../vidauki/" />
     <link rel="prev" title="5. Mismunaaðferðir" href="../kafli05/" /> 
 
-
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = []; </script>
+
    
 </head>
 
@@ -1581,6 +1582,13 @@ p(m_{A,B})
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
+<script>
+    window.addEventListener("load", function(){
+        for(var i in ggbAppletId){
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
 <style>
     /* Sidebar header (and topbar for mobile) */
     

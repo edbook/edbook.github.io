@@ -128,9 +128,10 @@
     <link rel="next" title="2. Fourier-raðir" href="../kafli02/" />
     <link rel="prev" title="Formáli" href="../formali/" /> 
 
-
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = []; </script>
+
    
 </head>
 
@@ -302,9 +303,9 @@ einhverjum eftirfarandi tákna</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial^2 u(x,t)}{\partial t^2} - c^2  \frac{\partial^2 u(x,t)}{\partial x^2} = 0\]</div>
 <p>fyrir <span class="math notranslate nohighlight">\(x\)</span> á bilinu <span class="math notranslate nohighlight">\([0,L]\)</span> með jaðarskilyrðunum <span class="math notranslate nohighlight">\(u(0,t) = u(L,t)=0\)</span> (strengurinn er fastur í báða enda) og upphafsskilyrðunum <span class="math notranslate nohighlight">\(u(x,0) = a(x),~\partial_t u(x,0) = b(x)\)</span>. Upphaflegu stillingarnar eru <span class="math notranslate nohighlight">\(L=2\pi\)</span>, <span class="math notranslate nohighlight">\(a(x) = \sin(2x)+\sin(3x)\)</span> og <span class="math notranslate nohighlight">\(b(x) = \sin(x)\)</span>.</p>
-<div id="V9l3niUFukLzsDWYA3yUVvZRWtAz2V"></div>
+<div id="b9rdLeuT3Ob5NrkyggHt1qohViFXKh"></div>
 <script>
-var ggbApp_V9l3niUFukLzsDWYA3yUVvZRWtAz2V = new GGBApplet({
+var ggbApp_b9rdLeuT3Ob5NrkyggHt1qohViFXKh = new GGBApplet({
 "appName": "calculator", 
 "width": 700, 
 "height": 550, 
@@ -312,13 +313,9 @@ var ggbApp_V9l3niUFukLzsDWYA3yUVvZRWtAz2V = new GGBApplet({
 "preventFocus": true, 
 "enableShiftDragZoom": true 
 }, true);
-ggbAppletId["V9l3niUFukLzsDWYA3yUVvZRWtAz2V"] = ggbApp_V9l3niUFukLzsDWYA3yUVvZRWtAz2V;
+ggbAppletId["b9rdLeuT3Ob5NrkyggHt1qohViFXKh"] = ggbApp_b9rdLeuT3Ob5NrkyggHt1qohViFXKh;
 </script>
 <p></p>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
 </div>
 </section>
 </section>
@@ -490,6 +487,13 @@ u(x,0) = u(0,t) = 0.
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
+<script>
+    window.addEventListener("load", function(){
+        for(var i in ggbAppletId){
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
 <style>
     /* Sidebar header (and topbar for mobile) */
     

@@ -228,7 +228,7 @@
 <h2><span class="section-number">5.1. </span>Mismunaaðferð fyrir venjulegar afleiðujöfnur<a class="headerlink" href="#mismunaafer-fyrir-venjulegar-afleiujofnur" title="Permalink to this heading"></a></h2>
 <p id="ch-5-1">Við skoðum fyrst jaðargildisverkefni fyrir almenna annars stigs afleiðujöfnu á bili <span class="math notranslate nohighlight">\([a,b]\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-ode1">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-ode1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-ode1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
   Lu=a_2u''+a_1u'+a_0u=f,&amp; \text{ á } ]a,b[\\
   B_1u=\alpha_1u(a)-\beta_1u'(a)=\gamma_1,&amp;(\alpha_1,\beta_1)\neq (0,0),\\
   B_2u=\alpha_2u(b)+\beta_2u'(b)=\gamma_2,&amp;(\alpha_2,\beta_2)\neq (0,0).
@@ -261,15 +261,15 @@ j=1,\dots,N-1,\\
 <li><p>Í innri punktum bilsins <span class="math notranslate nohighlight">\(x_1, \dots, x_{N-1}\)</span>, notum við</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-eq-approxder">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-approxder" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[u'(x)\approx \dfrac{u(x+h)-u(x-h)}{2h} \qquad \text{ og } \qquad
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-approxder" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[u'(x)\approx \dfrac{u(x+h)-u(x-h)}{2h} \qquad \text{ og } \qquad
 u''(x)\approx \dfrac{u(x-h)-2u(x)+u(x+h)}{h^2},\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Í hægri endapunkti <span class="math notranslate nohighlight">\(x_N=b\)</span>, notum við</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[u'(x)\approx \dfrac{u(x)-u(x-h)}h,\]</div>
-<p>Hugmyndin er að umrita hneppi <a class="reference internal" href="#equation-eq-ode1">(1)</a> með nálgununum að ofan og finna lausnir <span class="math notranslate nohighlight">\(u(x_j)\)</span>.</p>
-<p>Af hverjum veljum við nálgunarformúlur <a class="reference internal" href="#equation-eq-ode1">(1)</a>?
+<p>Hugmyndin er að umrita hneppi <a class="reference internal" href="#equation-eq-ode1">(5.1)</a> með nálgununum að ofan og finna lausnir <span class="math notranslate nohighlight">\(u(x_j)\)</span>.</p>
+<p>Af hverjum veljum við nálgunarformúlur <a class="reference internal" href="#equation-eq-ode1">(5.1)</a>?
 Við metum skekkju í nálgunarformúlunum sem við höfum skrifað að ofan.
 Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(\varphi\in C^4(I)\)</span> á bili <span class="math notranslate nohighlight">\(I\)</span>, og <span class="math notranslate nohighlight">\(x, x+h, x-h\)</span> séu í <span class="math notranslate nohighlight">\(I\)</span>. Þá er</p>
 <div class="math notranslate nohighlight">
@@ -297,7 +297,7 @@ Gerum ráð fyrir að fall <span class="math notranslate nohighlight">\(\varphi\
 \[\varphi''(x)-\dfrac{\varphi(x-h)-2\varphi(x)+\varphi(x+h)}{h^2}
 =-\tfrac 1{24}
 \big(\varphi^{(4)}(\xi)+\varphi^{(4)}(\eta)\big) h^2.\]</div>
-<p>Við sjáum að ef við notum nálgunarformúluna <a class="reference internal" href="#equation-eq-approxder">(2)</a> þá er skekkjan af öðru stigi í <span class="math notranslate nohighlight">\(h\)</span>. Ef við notum fyrstu tvær formúlurnar, þá er skekkjan af fyrsta stigi í <span class="math notranslate nohighlight">\(h\)</span>. Það segir okkur að þegar <span class="math notranslate nohighlight">\(h \ll 1\)</span>, þá stefnir skekkjan í nálgunarformúlunni sem við viljum nota hraðar á núll, sem er auðvitað miklu betra.</p>
+<p>Við sjáum að ef við notum nálgunarformúluna <a class="reference internal" href="#equation-eq-approxder">(5.2)</a> þá er skekkjan af öðru stigi í <span class="math notranslate nohighlight">\(h\)</span>. Ef við notum fyrstu tvær formúlurnar, þá er skekkjan af fyrsta stigi í <span class="math notranslate nohighlight">\(h\)</span>. Það segir okkur að þegar <span class="math notranslate nohighlight">\(h \ll 1\)</span>, þá stefnir skekkjan í nálgunarformúlunni sem við viljum nota hraðar á núll, sem er auðvitað miklu betra.</p>
 <p>Til þess að einfalda rithátt skrifum við <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span>  og  <span class="math notranslate nohighlight">\(f_j=f(x_j)\)</span>.
 Ennfremur, til þess að leggja áherslu á að <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span> er óþekkt stærð sem við viljum reikna út, setjum við að lokum <span class="math notranslate nohighlight">\(c_j\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_j=u(x_j)\)</span>.</p>
 <p><strong>Mismunajafna í vinstri endapunkti</strong></p>
@@ -311,7 +311,7 @@ Ennfremur, til þess að leggja áherslu á að <span class="math notranslate no
 <div class="math notranslate nohighlight">
 \[\alpha_1c_0-\beta_1\dfrac{c_1-c_0}h= \gamma_1.\]</div>
 <p><strong>Mismunajafna í innri punktum bilsins</strong></p>
-<p>Í innri punktum bilsins <span class="math notranslate nohighlight">\(x_1, \dots, x_{N-1}\)</span>, notum við nálgunarformúlur <a class="reference internal" href="#equation-eq-approxder">(2)</a>, og að lokum fáum við</p>
+<p>Í innri punktum bilsins <span class="math notranslate nohighlight">\(x_1, \dots, x_{N-1}\)</span>, notum við nálgunarformúlur <a class="reference internal" href="#equation-eq-approxder">(5.2)</a>, og að lokum fáum við</p>
 <div class="math notranslate nohighlight">
 \[a_2(x_j)\dfrac{u_{j-1}-2u_j+u_{j+1}}{h^2}+a_1(x_j)
 \dfrac{u_{j+1}-u_{j-1}}{2h}+a_0(x_j)u_j\approx f_j,\]</div>
@@ -337,7 +337,7 @@ a_2(x_j)\dfrac{c_{j-1}-2c_j+c_{j+1}}{h^2}+a_1(x_j)
 \end{cases}\end{split}\]</div>
 <p>sem við getum umskrifað sem</p>
 <div class="math notranslate nohighlight" id="equation-eq-firstapprox">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-firstapprox" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-firstapprox" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
 \big(\alpha_1+\tfrac {\beta_1}h\big)c_0
 -\tfrac {\beta_1}h c_1= \gamma_1,\\
 \big(\tfrac{a_2(x_j)}{h^2}-\tfrac{a_1(x_j)}{2h}\big) c_{j-1}
@@ -359,7 +359,7 @@ a_2(x_j)\dfrac{c_{j-1}-2c_j+c_{j+1}}{h^2}+a_1(x_j)
 <p>Fyrst skiptum við bilinu jafnt í tvo hluta,  þ.e.</p>
 <div class="math notranslate nohighlight">
 \[x_0=0, \qquad x_1= 1/2 , \qquad x_2 = 1, \qquad N=2, \qquad h={1 \over 2},\]</div>
-<p>og við notum nálgunarjöfnurnar <a class="reference internal" href="#equation-eq-firstapprox">(3)</a>, og þá fáum við</p>
+<p>og við notum nálgunarjöfnurnar <a class="reference internal" href="#equation-eq-firstapprox">(5.3)</a>, og þá fáum við</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{cases}
 &amp; 2 c_1-c_0=0, \\
@@ -391,7 +391,7 @@ a_2(x_j)\dfrac{c_{j-1}-2c_j+c_{j+1}}{h^2}+a_1(x_j)
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/error-difference-method.png"><img alt="../_images/error-difference-method.png" src="../_images/error-difference-method.png" style="width: 85%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Skekkjan</em> <span class="math notranslate nohighlight">\(|u_j-c_j|\)</span>  <em>í</em>  <span class="math notranslate nohighlight">\(x=1/2\)</span>  <em>sem fall af</em>  <span class="math notranslate nohighlight">\(N\)</span>.</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.1 </span><span class="caption-text"><em>Skekkjan</em> <span class="math notranslate nohighlight">\(|u_j-c_j|\)</span>  <em>í</em>  <span class="math notranslate nohighlight">\(x=1/2\)</span>  <em>sem fall af</em>  <span class="math notranslate nohighlight">\(N\)</span>.</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </div>
@@ -623,7 +623,7 @@ Við getum notað línulega samantekt til að finna <em>nálgunarfall</em> <span
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../_images/tent-functions.png"><img alt="../_images/tent-functions.png" src="../_images/tent-functions.png" style="width: 85%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Þúfugrunnföllin</em> <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.2 </span><span class="caption-text"><em>Þúfugrunnföllin</em> <span class="math notranslate nohighlight">\(\varphi_j(x)\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Þá skilgreinum við nálgunarfall <span class="math notranslate nohighlight">\(v\)</span>, með því að setja</p>
@@ -636,7 +636,7 @@ Við getum notað línulega samantekt til að finna <em>nálgunarfall</em> <span
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="../_images/v-functions.png"><img alt="../_images/v-functions.png" src="../_images/v-functions.png" style="width: 85%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Nálgunarföllin</em> <span class="math notranslate nohighlight">\(v\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.3 </span><span class="caption-text"><em>Nálgunarföllin</em> <span class="math notranslate nohighlight">\(v\)</span> <em>fyrir dæmin</em> <a class="reference internal" href="#example-5-1-1"><span class="std std-ref">5.1.1</span></a> <em>og</em> <a class="reference internal" href="#example-5-2-1"><span class="std std-ref">5.2.1</span></a>. <em>Hér</em> <span class="math notranslate nohighlight">\(N=4\)</span>.</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -655,14 +655,14 @@ Lu=-\nabla\cdot (p\nabla u)+qu=
 <p>Við gerum ráð fyrir að <span class="math notranslate nohighlight">\(p\in C^1(\mathbb R^2)\)</span> og <span class="math notranslate nohighlight">\(q, f\)</span> séu samfelld á <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>. <span class="math notranslate nohighlight">\(\alpha,\beta\)</span> og <span class="math notranslate nohighlight">\(\gamma\)</span> séu gefin föll á jaðrinum  <span class="math notranslate nohighlight">\(\partial D\)</span> þ.a. <span class="math notranslate nohighlight">\((\alpha, \beta)\neq (0,0)\)</span> á <span class="math notranslate nohighlight">\(\partial D\)</span>.</p>
 <p>Látum <span class="math notranslate nohighlight">\(\partial D_1\)</span> vera þann hluta jaðarsins þ.a. <span class="math notranslate nohighlight">\(\beta=0\)</span>, þá er <span class="math notranslate nohighlight">\(u(x,y)=\gamma(x,y)/\alpha(x,y)\)</span> fyrir öll <span class="math notranslate nohighlight">\((x,y)\in \partial D_1\)</span>. Þá skiptum við jaðrinum í tvö sundurlæg mengi <span class="math notranslate nohighlight">\(\partial D=\partial D_1\cup \partial D_2\)</span>, og við umskrifum jaðargildisverkenið sem</p>
 <div class="math notranslate nohighlight" id="equation-eq-pde1">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-pde1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-pde1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
 Lu=-\nabla\cdot (p\nabla u)+qu=f, \quad &amp;\text{á } D\\
 u=\gamma,\quad &amp;\text{á } \ \partial_1 D,\\
 \alpha u+\beta\dfrac{\partial u}{\partial n}
 =\gamma, \quad  &amp;\text{á } \ \partial_2 D,
 \end{cases}\end{split}\]</div>
 <p>þar sem höfum við táknað <span class="math notranslate nohighlight">\(\gamma(x,y)/\alpha(x,y)\)</span> með <span class="math notranslate nohighlight">\(\gamma\)</span> á <span class="math notranslate nohighlight">\(\partial_1 D\)</span> að ofan.</p>
-<p>Til þess að nálga lausn <span class="math notranslate nohighlight">\(u\)</span> á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(4)</a> þurfum við að undirbúa net á svipaðan hátt og við gerðum í <a class="reference internal" href="#ch-5-1"><span class="std std-ref">5.1</span></a>. Það sem er ólíkt hér er að við erum í <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>, þ.e.a.s. við þurfum að byggja skiptingu eftir <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<p>Til þess að nálga lausn <span class="math notranslate nohighlight">\(u\)</span> á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(5.4)</a> þurfum við að undirbúa net á svipaðan hátt og við gerðum í <a class="reference internal" href="#ch-5-1"><span class="std std-ref">5.1</span></a>. Það sem er ólíkt hér er að við erum í <span class="math notranslate nohighlight">\(\mathbb R^2\)</span>, þ.e.a.s. við þurfum að byggja skiptingu eftir <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>.</p>
 <p><strong>Net</strong></p>
 <p>Gerum ráð fyrir að svæðið <span class="math notranslate nohighlight">\(D\)</span> sé innihaldið í rétthyrningi</p>
 <div class="math notranslate nohighlight">
@@ -673,7 +673,7 @@ u=\gamma,\quad &amp;\text{á } \ \partial_1 D,\\
 <figure class="align-center" id="id5">
 <a class="reference internal image-reference" href="../_images/ex-grid-rectangle.png"><img alt="../_images/ex-grid-rectangle.png" src="../_images/ex-grid-rectangle.png" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Dæmi af</em>  <span class="math notranslate nohighlight">\(D \subset R \subset {\mathbb R^2}\)</span>.</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.4 </span><span class="caption-text"><em>Dæmi af</em>  <span class="math notranslate nohighlight">\(D \subset R \subset {\mathbb R^2}\)</span>.</span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Hnútpunktar í netinu eru <span class="math notranslate nohighlight">\((x_i, y_k)\)</span> og línurnar gegnum hnútpunktana eru stikaðar með</p>
@@ -695,14 +695,14 @@ u=\gamma,\quad &amp;\text{á } \ \partial_1 D,\\
 <div class="math notranslate nohighlight">
 \[\iint_\Omega \nabla\cdot\big(p\nabla u\big) \, dxdy
 =\int_{\partial\Omega} p\dfrac{\partial u}{\partial n}\, ds,\]</div>
-<p>þá er jafnan í <a class="reference internal" href="#equation-eq-pde1">(4)</a></p>
+<p>þá er jafnan í <a class="reference internal" href="#equation-eq-pde1">(5.4)</a></p>
 <div class="math notranslate nohighlight">
 \[-\int_{\partial\Omega } p\dfrac{\partial u}{\partial n}\, ds
 +\iint_\Omega qu\, dxdy =\iint_\Omega f\, dxdy.\]</div>
 <p>Við ætlum að nota þessi heildi til þess að nálga lausn <span class="math notranslate nohighlight">\(u\)</span> í punktunum <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> fyrir  <span class="math notranslate nohighlight">\(j=1,\dots, N\)</span>.</p>
 <section id="nalgunarjafna">
 <h3><span class="section-number">5.3.1. </span>Nálgunarjafna<a class="headerlink" href="#nalgunarjafna" title="Permalink to this heading"></a></h3>
-<p>Nú erum við tilbúin til að leiða út nálgunarjöfnur fyrir jaðargildisverkenið <a class="reference internal" href="#equation-eq-pde1">(4)</a>. Eins og áður greinum við á milli innri punkta og jaðarpunkta.</p>
+<p>Nú erum við tilbúin til að leiða út nálgunarjöfnur fyrir jaðargildisverkenið <a class="reference internal" href="#equation-eq-pde1">(5.4)</a>. Eins og áður greinum við á milli innri punkta og jaðarpunkta.</p>
 <p><strong>Nálgunarjafna í innri punkti</strong></p>
 <p>Látum <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> vera innri punkt í <span class="math notranslate nohighlight">\(D\)</span>, og <span class="math notranslate nohighlight">\(\Omega_j\)</span> vera ferninginn með miðju í <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> og kantlengdina <span class="math notranslate nohighlight">\(h\)</span>.
 Látum grannpunkta <span class="math notranslate nohighlight">\((x_j, y_j)\)</span> vera <span class="math notranslate nohighlight">\((x_l,y_l), (x_r,y_r), (x_s,y_s)\)</span> og <span class="math notranslate nohighlight">\((x_t,y_t)\)</span>.
@@ -712,7 +712,7 @@ Athugum að hér eru <span class="math notranslate nohighlight">\(j, l, r\)</spa
 <figure class="align-center" id="id6">
 <a class="reference internal image-reference" href="../_images/internal-points.png"><img alt="../_images/internal-points.png" src="../_images/internal-points.png" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Dæmi af innri punktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.5 </span><span class="caption-text"><em>Dæmi af innri punktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Þá er yfir <span class="math notranslate nohighlight">\(\Omega_j\)</span></p>
@@ -730,7 +730,7 @@ Athugum að hér eru <span class="math notranslate nohighlight">\(j, l, r\)</spa
 \[\iint_{\Omega_j}q u \, dxdy \approx q(x_j,y_j)u(x_j,y_j)\,  h^2,\]</div>
 <div class="math notranslate nohighlight">
 \[\iint_{\Omega_j}f \, dxdy \approx f(x_j,y_j)\,  h^2.\]</div>
-<p>Til þess að einfalda rithátt, setjum við <span class="math notranslate nohighlight">\(u_k=u(x_k,y_k), q_k=q(x_k,y_k), f_k=f(x_k,y_k)\)</span> og <span class="math notranslate nohighlight">\(p_{j,k}=p(m_{j,k})\)</span>, og að lokum fáum við að jafnan <a class="reference internal" href="#equation-eq-pde1">(4)</a> er nálguð með</p>
+<p>Til þess að einfalda rithátt, setjum við <span class="math notranslate nohighlight">\(u_k=u(x_k,y_k), q_k=q(x_k,y_k), f_k=f(x_k,y_k)\)</span> og <span class="math notranslate nohighlight">\(p_{j,k}=p(m_{j,k})\)</span>, og að lokum fáum við að jafnan <a class="reference internal" href="#equation-eq-pde1">(5.4)</a> er nálguð með</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;&amp;-\int_{\partial\Omega } p\dfrac{\partial u}{\partial n}\, ds
 +\iint_\Omega qu\, dxdy =\iint_\Omega f\, dxdy\\
@@ -743,7 +743,7 @@ Athugum að hér eru <span class="math notranslate nohighlight">\(j, l, r\)</spa
 +q_ju_jh^2\approx f_jh^2.\end{split}\]</div>
 <p>Við notum <span class="math notranslate nohighlight">\(c_k\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_k\)</span> fyrir <span class="math notranslate nohighlight">\(k=j,l,r,s,t\)</span>, og þá er nálgunarformúlan fyrir innri punktana</p>
 <div class="math notranslate nohighlight" id="equation-eq-approx1">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-approx1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{gathered}
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-approx1" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{gathered}
 \big(h^{-2}\big({p_{j,l}+p_{j,r}+p_{j,s}+p_{j,t}}\big)+q_j\big)c_j
 \\
 -h^{-2}p_{j,l}c_l
@@ -754,7 +754,7 @@ Athugum að hér eru <span class="math notranslate nohighlight">\(j, l, r\)</spa
 \end{gathered}\end{split}\]</div>
 <p>Í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, þá fáum við</p>
 <div class="math notranslate nohighlight" id="equation-eq-approx1s">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-approx1s" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\big(4{h^{-2}}+q_j\big)c_j
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-approx1s" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\big(4{h^{-2}}+q_j\big)c_j
 -{h^{-2}}c_l
 -{h^{-2}}c_r
 -{h^{-2}}c_s
@@ -768,7 +768,7 @@ Athugum að hér er <span class="math notranslate nohighlight">\(k=s, l, t\)</sp
 <figure class="align-center" id="id7">
 <a class="reference internal image-reference" href="../_images/boundary-points.png"><img alt="../_images/boundary-points.png" src="../_images/boundary-points.png" style="width: 45%;" /></a>
 <figcaption>
-<p><span class="caption-text"><em>Dæmi af jaðarpunktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 5.6 </span><span class="caption-text"><em>Dæmi af jaðarpunktum</em>  <span class="math notranslate nohighlight">\((x_j,y_j)\)</span>.</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
 <p>Við höfum</p>
@@ -802,7 +802,7 @@ p_j \dfrac{\partial u}{\partial n}(x_j,y_j) \approx p_j {\gamma_j-\alpha_j u_j\o
 \approx f_j \tfrac 12 h^2.\]</div>
 <p>Að lokum að lokum setjum við saman alla liði og þá er</p>
 <div class="math notranslate nohighlight" id="equation-eq-approx2">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-approx2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{gathered}
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-eq-approx2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{gathered}
 \big(2h^{-2}p_{j,l}+h^{-2}p_{j,s}+h^{-2}p_{j,t}
 +2h^{-1}p_j\tfrac{\alpha_j}{\beta_j}+q_j\big)c_j
 \\
@@ -812,12 +812,12 @@ p_j \dfrac{\partial u}{\partial n}(x_j,y_j) \approx p_j {\gamma_j-\alpha_j u_j\o
 <p>þar sem við höfum skrifað <span class="math notranslate nohighlight">\(c_j\)</span> í staðinn fyrir <span class="math notranslate nohighlight">\(u_j\)</span>.</p>
 <p>Í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, þá fáum við</p>
 <div class="math notranslate nohighlight" id="equation-eq-approx2s">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq-approx2s" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\big(4h^{-2}
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-eq-approx2s" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\big(4h^{-2}
 +q_j+2h^{-1}\tfrac{\alpha_j}{\beta_j}\big)c_j
 -2h^{-2}c_l-h^{-2}c_s-h^{-2}c_t
 =f_j+2h^{-1}\tfrac{\gamma_j}{\beta_j}\]</div>
 <p><strong>Samantekt</strong></p>
-<p>Til þess að nálga lausnagildi á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(4)</a> getum við leyst eftirfarandi  jöfnuhneppi:</p>
+<p>Til þess að nálga lausnagildi á jaðargildisverkefninu <a class="reference internal" href="#equation-eq-pde1">(5.4)</a> getum við leyst eftirfarandi  jöfnuhneppi:</p>
 <p>Fyrir <span class="math notranslate nohighlight">\((x_j, y_j)\in D\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{gathered}
@@ -853,14 +853,14 @@ u(x,y)=\gamma(x,y),&amp; (x,y)\in \partial D.
 <p>Hér erum við í sértilfellinu þegar <span class="math notranslate nohighlight">\(p=1\)</span>, og <span class="math notranslate nohighlight">\(\partial D_2\)</span> er ekki til.</p>
 <p>Setjum <span class="math notranslate nohighlight">\(h={1\over 3}\)</span>. Við röðum punktum þ.a. punktar <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=1, \dots, 4\)</span> eru innri punktar og <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> fyrir <span class="math notranslate nohighlight">\(j=5,\dots, 16\)</span> eru jaðarpunktar. Við sjáum þetta á eftirfarandi mynd</p>
 <a class="reference internal image-reference" href="../_images/dirichlet-example.png"><img alt="../_images/dirichlet-example.png" class="align-center" src="../_images/dirichlet-example.png" style="width: 45%;" /></a>
-<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1, \dots, 4\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(6)</a>, og þá er</p>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1, \dots, 4\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(5.6)</a>, og þá er</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 (36+q_1)c_1-9c_2-9c_3-9c_6-9c_9&amp;=f_1,\\
 (36+q_2)c_2-9c_1-9c_4-9c_7-9c_{10}&amp;=f_2,\\
 (36+q_3)c_3-9c_1-9c_4-9c_{11}-9c_{14}&amp;=f_3,\\
 (36+q_4)c_4-9c_2-9c_3-9c_{12}-9c_{15}&amp;=f_4.\\\end{aligned}\end{split}\]</div>
-<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með  <span class="math notranslate nohighlight">\(j=5,\dots, 16\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(8)</a>, og þá er</p>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með  <span class="math notranslate nohighlight">\(j=5,\dots, 16\)</span>, notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(5.8)</a>, og þá er</p>
 <div class="math notranslate nohighlight">
 \[c_j = \gamma_j.\]</div>
 <p>Það þýðir að við getum leyst jöfnuhneppið fyrir <span class="math notranslate nohighlight">\(c_1, \dots, c_4\)</span> og þá höfum við</p>
@@ -910,7 +910,7 @@ Setjum <span class="math notranslate nohighlight">\(h={1\over 3}\)</span>, og r�
 <p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með  <span class="math notranslate nohighlight">\(j=7,\dots, 16\)</span>, þá er</p>
 <div class="math notranslate nohighlight">
 \[c_j = \gamma_j.\]</div>
-<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1,2,4,5\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(6)</a>, fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=3,6\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(8)</a>, og þá er</p>
+<p>Fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=1,2,4,5\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx1s">(5.6)</a>, fyrir punkta <span class="math notranslate nohighlight">\((x_j,y_j)\)</span> með <span class="math notranslate nohighlight">\(j=3,6\)</span> notum við nálgunarjöfnur <a class="reference internal" href="#equation-eq-approx2s">(5.8)</a>, og þá er</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
 (36+q_1)c_1-9c_2-9c_4-9c_8-9c_{11}&amp;=f_1,\\
@@ -953,7 +953,7 @@ f_6+9\gamma_{16}+6\gamma_6\\
 <h2><span class="section-number">5.4. </span>Almenn mismunaaðferð á rétthyrningi<a class="headerlink" href="#almenn-mismunaafer-a-retthyrningi" title="Permalink to this heading"></a></h2>
 <p>Við lítum nú á almennt jaðargildisverkefni</p>
 <div class="math notranslate nohighlight" id="equation-eq-exercise">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-exercise" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-eq-exercise" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{split}\begin{cases}
 -\nabla\cdot\big(p\nabla u\big)+qu=f, &amp;\text{í } D,\\
 \alpha  u + \beta \dfrac{\partial u}{\partial n} = \gamma,&amp;
 \text{á } \partial D,
@@ -983,12 +983,12 @@ Setjum <span class="math notranslate nohighlight">\(N=(b-a)/h\)</span> og <span 
 </ol>
 <p>Hér  tölusetjum við netpunktana með <span class="math notranslate nohighlight">\((x_i, y_i)\)</span> þar sem <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)\)</span>. Til dæmis setjum við  <span class="math notranslate nohighlight">\(k=1\)</span> og skoðum punkta með <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)=j\)</span>, þar sem <span class="math notranslate nohighlight">\(j=1, \dots, N+1\)</span>. Síðan veljum við <span class="math notranslate nohighlight">\(k=2\)</span> og skoðum punkta með <span class="math notranslate nohighlight">\(i= j+(k-1)(N+1)=j+(N+1)\)</span>, þar sem <span class="math notranslate nohighlight">\(j=1, \dots, N+1\)</span>, og svo framvegis.</p>
 <p><strong>Uppbygging forrits</strong></p>
-<p>Til þess að byggja upp jöfnuhneppi <span class="math notranslate nohighlight">\(A{\mathbf c}={\mathbf b}\)</span> sem nálgar gildi lausna <span class="math notranslate nohighlight">\(u(x_j,y_k)\)</span> á <a class="reference internal" href="#equation-eq-exercise">(9)</a>, þurfum við líta á eftirfarandi tilvik:</p>
+<p>Til þess að byggja upp jöfnuhneppi <span class="math notranslate nohighlight">\(A{\mathbf c}={\mathbf b}\)</span> sem nálgar gildi lausna <span class="math notranslate nohighlight">\(u(x_j,y_k)\)</span> á <a class="reference internal" href="#equation-eq-exercise">(5.9)</a>, þurfum við líta á eftirfarandi tilvik:</p>
 <ol class="arabic simple">
 <li><p>Innri punktar</p></li>
 </ol>
 <blockquote>
-<div><p>Skoðum innri punkta <span class="math notranslate nohighlight">\((x_j,y_k)\)</span>  þar sem <span class="math notranslate nohighlight">\(1&lt;j&lt;N+1\)</span> og <span class="math notranslate nohighlight">\(1&lt;k&lt;M+1\)</span>. Við notum nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(7)</a> hér, og við fáum fylkjastök <span class="math notranslate nohighlight">\(a_{i,i-\ell}, a_{i,i-1}, a_{i,i+1}, a_{i,i+\ell}\)</span> og <span class="math notranslate nohighlight">\(a_{i,i}\)</span>, þar sem <span class="math notranslate nohighlight">\(\ell=N+1\)</span>. Í hægri hlið hneppisins er <span class="math notranslate nohighlight">\(f_i=f(x_j,y_k)\)</span>.</p>
+<div><p>Skoðum innri punkta <span class="math notranslate nohighlight">\((x_j,y_k)\)</span>  þar sem <span class="math notranslate nohighlight">\(1&lt;j&lt;N+1\)</span> og <span class="math notranslate nohighlight">\(1&lt;k&lt;M+1\)</span>. Við notum nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(5.7)</a> hér, og við fáum fylkjastök <span class="math notranslate nohighlight">\(a_{i,i-\ell}, a_{i,i-1}, a_{i,i+1}, a_{i,i+\ell}\)</span> og <span class="math notranslate nohighlight">\(a_{i,i}\)</span>, þar sem <span class="math notranslate nohighlight">\(\ell=N+1\)</span>. Í hægri hlið hneppisins er <span class="math notranslate nohighlight">\(f_i=f(x_j,y_k)\)</span>.</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>Punktar á jöðrum en ekki hornpunktar</p></li>
@@ -1000,7 +1000,7 @@ Setjum <span class="math notranslate nohighlight">\(N=(b-a)/h\)</span> og <span 
 \[c_i=\gamma(x_j,y_k)/\alpha(x_j,y_k).\]</div>
 <p>Það þýðir að jöfnuhneppið hér er <span class="math notranslate nohighlight">\(a_{i,i}=1\)</span> og í hægri hliðinni <span class="math notranslate nohighlight">\(b_i=\gamma(x_j,y_k)/\alpha(x_j,y_k)\)</span>.</p>
 <blockquote>
-<div><p>Ef <span class="math notranslate nohighlight">\(\beta(x_j,y_k))\neq 0\)</span>, þá þurfum við nota  nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(7)</a>.</p>
+<div><p>Ef <span class="math notranslate nohighlight">\(\beta(x_j,y_k))\neq 0\)</span>, þá þurfum við nota  nálgunarjöfnuna <a class="reference internal" href="#equation-eq-approx2">(5.7)</a>.</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
 <li><p>Hornpunktar</p></li>

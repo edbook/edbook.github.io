@@ -264,7 +264,7 @@ fyrir annan möguleikann en talan einn hinn. Til samanburðar gat
 svarbreytan í línulegri aðhvarfsgreiningu tekið hvaða gildi sem er. Í
 línulegri aðhvarfsgreiningu lýstum við sambandi svarbreytu og
 skýribreytu með jöfnu beinnar línu, <span class="math notranslate nohighlight">\(y = \beta_0 + \beta_1 x\)</span>
-(jafna <a class="reference internal" href="../kafli04/#equation-eq-jafnabeinnarlinu">(10)</a>). Sú framsetning er hins vegar ótæk
+(jafna <a class="reference internal" href="../kafli04/#equation-eq-jafnabeinnarlinu">(4.10)</a>). Sú framsetning er hins vegar ótæk
 þegar útkoman er tvíkosta, því þá eru útkomurnar víðsfjarri því að detta
 á beina línu, gildið á <span class="math notranslate nohighlight">\(y\)</span> ás er annað hvort núll eða einn og
 ekkert þar á milli.</p>
@@ -277,10 +277,10 @@ kallast logistic fallið en ekki hefur gengið vel að þýða á íslensku.</p>
 <p class="admonition-title">Athugið</p>
 <p>Tengifallið</p>
 <div class="math notranslate nohighlight" id="equation-eq-tengifall">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-tengifall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[p(t) = \frac{e^t}{1+e^t}\]</div>
+<span class="eqno">(11.1)<a class="headerlink" href="#equation-eq-tengifall" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[p(t) = \frac{e^t}{1+e^t}\]</div>
 <p>varpar hvaða tölu sem er yfir í gildi á milli 0 og 1. Andhverfa þess er</p>
 <div class="math notranslate nohighlight" id="equation-eq-logit">
-<span class="eqno">(2)<a class="headerlink" href="#equation-eq-logit" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[g(p) = \log \left( \frac{p}{1-p} \right)\]</div>
+<span class="eqno">(11.2)<a class="headerlink" href="#equation-eq-logit" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[g(p) = \log \left( \frac{p}{1-p} \right)\]</div>
 </div>
 <hr class="docutils" />
 <p>Með aðstoð tengifallsins opnast nýr möguleiki, með því að stinga
@@ -295,11 +295,11 @@ tvíkosta aðhvarfsgreining.</p>
 <p class="admonition-title">Athugið</p>
 <p>Tvíkosta aðhvarfsgreiningarlíkanið er</p>
 <div class="math notranslate nohighlight" id="equation-eq-tvikostaadhvarf">
-<span class="eqno">(3)<a class="headerlink" href="#equation-eq-tvikostaadhvarf" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_1 x + \varepsilon\]</div>
+<span class="eqno">(11.3)<a class="headerlink" href="#equation-eq-tvikostaadhvarf" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\log \left( \frac{p}{1-p} \right)  = \beta_0 + \beta_1 x + \varepsilon\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(p\)</span> eru líkurnar á því að svarbreytan taki gildið 1.</p>
 </div>
 <hr class="docutils" />
-<p>Takið eftir því að á vinstri hlið jöfnu <a class="reference internal" href="#equation-eq-tvikostaadhvarf">(3)</a> stendur
+<p>Takið eftir því að á vinstri hlið jöfnu <a class="reference internal" href="#equation-eq-tvikostaadhvarf">(11.3)</a> stendur
 lógarithminn af stærðinni <span class="math notranslate nohighlight">\(\frac{p}{1-p}\)</span> sem er einmitt
 gagnlíkindin á því að svarbreytan taki gildið 1. Gagnlíkindum kynntumst
 við í kassa <a class="reference internal" href="../kafli04/#em-gagnlikindi"><span class="std std-numref">4.5.2.1</span></a> í kafla <a class="reference internal" href="../kafli04/#ss-gagnlikindahlutfall"><span class="std std-numref">4.5.2</span></a>.</p>
@@ -413,10 +413,10 @@ taki gildið 1 megi lýsa með tvíkosta aðhvarfsgreiningarlíkaninu</p>
 <p>Þá eru líkurnar á því að svarbreytan taki gildið 1 þegar gildi
 skýribreytunnar er <span class="math notranslate nohighlight">\(x\)</span> eru gefnar með</p>
 <div class="math notranslate nohighlight" id="equation-eq-logitlikur">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-logitlikur" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_1 x}}{1 + e^{\hat \beta_0 + \hat \beta_1 x }}\]</div>
+<span class="eqno">(11.4)<a class="headerlink" href="#equation-eq-logitlikur" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_1 x}}{1 + e^{\hat \beta_0 + \hat \beta_1 x }}\]</div>
 <p>ef skýribreytan er samfelld en</p>
 <div class="math notranslate nohighlight" id="equation-eq-logitlikurstrjal">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-logitlikurstrjal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_a I_{x=a}}}{1 + e^{\hat \beta_0 + \hat \beta_a I_{x=a} }}\]</div>
+<span class="eqno">(11.5)<a class="headerlink" href="#equation-eq-logitlikurstrjal" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat p = \frac{e^{\hat \beta_0 + \hat \beta_a I_{x=a}}}{1 + e^{\hat \beta_0 + \hat \beta_a I_{x=a} }}\]</div>
 <p>ef skýribreytan er strjál.</p>
 </div>
 </section>

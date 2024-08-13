@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Fylkjaaðgerðir &mdash; Línuleg Algebra </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="3. Ákveður" href="../kafli03/" />
+    <link rel="prev" title="1. Línuleg jöfnuhneppi" href="../kafli01/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Línuleg Algebra
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Línuleg jöfnuhneppi</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Fylkjaaðgerðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#nokkrar-gerir-fylkja">2.1. Nokkrar gerðir fylkja</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#samlagning-og-skolun">2.2. Samlagning og skölun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-samlagning-fylkja">2.2.1. Setning: Samlagning fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-reglur-um-fylkjasamlagningu-og-margfoldun-me-tolu">2.2.2. Setning: Reglur um fylkjasamlagningu og margföldun með tölu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-samlagning-fylkja">2.2.2.1. Sýnidæmi: Samlagning fylkja</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-margfoldun-me-tolu">2.2.2.2. Sýnidæmi: Margföldun með tölu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fylkjamargfoldun">2.3. Fylkjamargföldun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-fylkjamargfoldun">2.3.1. Skilgreining: Fylkjamargföldun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fylkjamargfoldun">2.3.1.1. Sýnidæmi: Fylkjamargföldun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-veldi-af-fylkjum">2.3.2. Skilgreining: Veldi af fylkjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reikniafer-fyrir-fylkjamargfoldun">2.3.3. Reikniaðferð fyrir fylkjamargföldun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2.3.3.1. Sýnidæmi: Fylkjamargföldun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eiginleikar-fylkjamargfoldunar">2.3.4. Setning: Eiginleikar fylkjamargföldunar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bylt-fylki">2.4. Bylt fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-bylt-fylki">2.4.1. Skilgreining: Bylt fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-bylt-fylki">2.4.1.1. Sýnidæmi: Bylt fylki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-reiknireglur-fyrir-bylt-fylki">2.4.2. Setning: Reiknireglur fyrir bylt fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hegun-byltra-fylkja">2.4.2.1. Sýnidæmi: Hegðun byltra fylkja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#andhverfur-fylkja">2.5. Andhverfur fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-andhverfur-fylkja">2.5.1. Skilgreining: Andhverfur fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhverfa-er-otviraett-akvoru">2.5.2. Setning: Andhverfa er ótvírætt ákvörðuð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eru-fylkin-andhverfanleg">2.5.2.1. Sýnidæmi: Eru fylkin andhverfanleg?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhverfa-2-times-2-fylkja">2.5.3. Setning: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-andhverfa-2-times-2-fylkja">2.5.3.1. Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-lausnir-fylkjajafna">2.5.4. Setning: Lausnir fylkjajafna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fylkjajafna-leyst-me-andhverfu">2.5.4.1. Sýnidæmi: Fylkjajafna leyst með andhverfu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-reiknireglur-andhverfa">2.5.5. Setning: Reiknireglur andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknirit-andhverfa-n-times-n-fylkja">2.5.6. Reiknirit andhverfa <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-andhverfa-3-times3-fylkis">2.5.6.1. Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(3\times3\)</span> fylkis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#andhverfanlegar-varpanir">2.6. Andhverfanlegar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-andhverfanlegar-varpanir">2.6.1. Skilgreining: Andhverfanlegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-andhverfanlegar-linulegar-varpanir">2.6.2. Setning: Andhverfanlegar línulegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eintaekni-og-ataekni-linulegra-varpana">2.6.3. Setning: Eintækni og átækni línulegra varpana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-langa-setningin-um-andhverfanleg-fylki">2.6.4. Setning: Langa setningin um andhverfanleg fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-er-fylki-andhverfanlegt">2.6.4.1. Sýnidæmi: Er fylkið andhverfanlegt?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lu-attun">2.7. LU-þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-lu-attun">2.7.1. Skilgreining: LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknirit-lu-attunar">2.7.2. Reiknirit LU-þáttunar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-lu-attun">2.7.2.1. Sýnidæmi: LU-þáttun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-lu-attun-til-ess-a-leysa-fylkjajofnu">2.7.2.2. Sýnidæmi: LU-þáttun til þess að leysa fylkjajöfnu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Ákveður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Vigurrúm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Eigingildi og eiginvigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Innfeldi og hornrétt ofanvörp</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Fylkjaaðgerðir</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/stae107g/kafli02.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fylkjaagerir">
+<h1><span class="section-number">2. </span>Fylkjaaðgerðir<a class="headerlink" href="#fylkjaagerir" title="Permalink to this heading"></a></h1>
+<section id="nokkrar-gerir-fylkja">
+<h2><span class="section-number">2.1. </span>Nokkrar gerðir fylkja<a class="headerlink" href="#nokkrar-gerir-fylkja" title="Permalink to this heading"></a></h2>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Hornalínufylki</strong> (e. diagonal matrix) er <span class="math notranslate nohighlight">\(n \times n\)</span> fylki þar sem öll stök utan hornalínu eru
+núll,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; a_{22} &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; a_{nn}
+\end{bmatrix}.\end{split}\]</div>
+<p>m.ö.o. <span class="math notranslate nohighlight">\(D = [d_{ij}]\)</span> er hornalínufylki ef <span class="math notranslate nohighlight">\(d_{ij}=0\)</span> fyrir öll <span class="math notranslate nohighlight">\(i\)</span> og <span class="math notranslate nohighlight">\(j\)</span> þannig að <span class="math notranslate nohighlight">\(i \neq j\)</span>.</p>
+<p><strong>Einingarfylki</strong> (e. identity matrix) <span class="math notranslate nohighlight">\(I\)</span>, er hornalínufylki þar sem
+öll stökin á hornalínu eru 1,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I=\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}.\end{split}\]</div>
+<p>stundum er einingarfylki merkt stærð sinni með vísi, t.d. hér <span class="math notranslate nohighlight">\(I_3\)</span>.</p>
+<p><strong>Núllfylki</strong> (e. zero matrix) er fylki þar sem öll stökin eru núll,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}0=\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}.\end{split}\]</div>
+<p><strong>Frumfylki</strong> (e. elementary matrix) er fylki sem er fengið með því að beita einni einfaldri línuaðgerð á einingarfylkið,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0
+\end{bmatrix}.\end{split}\]</div>
+<p><strong>Þríhyrningsfylki</strong> (e. triangular matrix) eru fylki þar sem öll stökin eru núll öðru hvoru megin við hornalínuna. <em>Efra þríhyrningsfylki</em> en fylki þar sem öll stökin fyrir neðan hornalínu eru 0,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \dots &amp; a_{1n} \\
+0 &amp; a_{22} &amp; a_{23} &amp; \dots &amp; a_{2n} \\
+0 &amp; 0 &amp; a_{33} &amp; \dots &amp; a_{3n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \dots &amp; a_{nn} \\
+\end{bmatrix},\end{split}\]</div>
+<p>og <em>neðra þríhyrningsfylki</em> er fylki þar sem öll stök fyrir ofan hornalínuna eru 0,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
+a_{21} &amp; a_{22} &amp; 0 &amp; \dots &amp; 0 \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; \dots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n1} &amp; a_{n2} &amp; a_{n3} &amp; \dots &amp; a_{nn} \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+<section id="samlagning-og-skolun">
+<h2><span class="section-number">2.2. </span>Samlagning og skölun<a class="headerlink" href="#samlagning-og-skolun" title="Permalink to this heading"></a></h2>
+<section id="setning-samlagning-fylkja">
+<h3><span class="section-number">2.2.1. </span>Setning: Samlagning fylkja<a class="headerlink" href="#setning-samlagning-fylkja" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Tvö jafnstór fylki eru lögð saman með því að að leggja saman stuðlana í báðum fylkjunum.
+Ekki er hægt að leggja saman misstór fylki.</p>
+</div>
+</section>
+<section id="setning-reglur-um-fylkjasamlagningu-og-margfoldun-me-tolu">
+<h3><span class="section-number">2.2.2. </span>Setning: Reglur um fylkjasamlagningu og margföldun með tölu<a class="headerlink" href="#setning-reglur-um-fylkjasamlagningu-og-margfoldun-me-tolu" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki og <span class="math notranslate nohighlight">\(r\)</span> og <span class="math notranslate nohighlight">\(s\)</span> vera rauntölur.
+Þá gildir:</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(A+B=B+A\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\((A+B)+C = A+(B+C)\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A+ 0 = A\)</span>, þar sem <span class="math notranslate nohighlight">\(0\)</span> er núllfylkið</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(r(A+B)=rA+rB\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\((r+s)A= rA+sA\)</span></p>
+<p><strong>6.</strong> <span class="math notranslate nohighlight">\(r(sA)=(rs)A\)</span></p>
+</div></blockquote>
+</div>
+<div class="setning dropdown admonition">
+<p class="admonition-title">Rökstuðningur</p>
+<p>Auðveldast er að sanna með skoða með því að skoða hvern stuðul fyrir sig.
+Tökum t.d. lið 1. Ef við skoðum stuðul í sæti <span class="math notranslate nohighlight">\((i,j)\)</span> fyrir fylkið <span class="math notranslate nohighlight">\(A+B\)</span> fáum við <span class="math notranslate nohighlight">\(a_{ij}+b_{ij}\)</span>.
+En við vitum að það er sama og <span class="math notranslate nohighlight">\(b_{ij}+a_{ij}\)</span> þar sem samlagning er víxlin fyrir rauntölur.
+En <span class="math notranslate nohighlight">\(b_{ij}+a_{ij}\)</span> er einmitt stuðull <span class="math notranslate nohighlight">\(B+A\)</span> í sæti <span class="math notranslate nohighlight">\((j,i)\)</span>.
+Þar sem stuðlar <span class="math notranslate nohighlight">\(A+B\)</span> og <span class="math notranslate nohighlight">\(B+A\)</span> eru alls staðar þeir sömu fylkin þau sömu einnig.</p>
+</div>
+<section id="synidaemi-samlagning-fylkja">
+<h4><span class="section-number">2.2.2.1. </span>Sýnidæmi: Samlagning fylkja<a class="headerlink" href="#synidaemi-samlagning-fylkja" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið <span class="math notranslate nohighlight">\(A+B\)</span> og <span class="math notranslate nohighlight">\(A+C\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; 4 &amp; 6 \\
+1 &amp; 3 &amp; 5
+\end{bmatrix}\text{, } B=\begin{bmatrix}
+7 &amp; 9 &amp; 11 \\
+6 &amp; 8 &amp; 10
+\end{bmatrix} \text{og } C=\begin{bmatrix}
+13 &amp; 15 \\
+12 &amp; 14
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A+B=\begin{bmatrix}
+2+7 &amp; 4+9 &amp; 6+11 \\
+1+6 &amp; 3+8 &amp; 5+10
+\end{bmatrix}=\begin{bmatrix}
+9 &amp; 13 &amp; 17 \\
+7 &amp; 11 &amp; 15
+\end{bmatrix}\end{split}\]</div>
+<p>en <span class="math notranslate nohighlight">\(A+C\)</span> er ekki skilgreint því fylkin eru misstór.</p>
+</div>
+</section>
+<section id="synidaemi-margfoldun-me-tolu">
+<h4><span class="section-number">2.2.2.2. </span>Sýnidæmi: Margföldun með tölu<a class="headerlink" href="#synidaemi-margfoldun-me-tolu" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið <span class="math notranslate nohighlight">\(3A\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}3A=  3\cdot\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{bmatrix}=
+\begin{bmatrix}
+3\cdot 1 &amp;3\cdot  2 &amp;3\cdot  3 \\
+3\cdot 4 &amp;3\cdot  5 &amp;3\cdot  6 \\
+\end{bmatrix}
+= \begin{bmatrix}
+3 &amp;6 &amp;9 \\
+12 &amp;15 &amp;18 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="fylkjamargfoldun">
+<h2><span class="section-number">2.3. </span>Fylkjamargföldun<a class="headerlink" href="#fylkjamargfoldun" title="Permalink to this heading"></a></h2>
+<p>Lítum á tvær línulegar varpanir <span class="math notranslate nohighlight">\(T\colon\mathbb{R}^n\to\mathbb{R}^p\)</span> og <span class="math notranslate nohighlight">\(\mathbb{R}^p\to\mathbb{R}^m\)</span>.
+Fyrst <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(S\)</span> eru línulegar má tákna þau með fylkjum þannig að
+<span class="math notranslate nohighlight">\(T(\textbf{x}) = B\textbf{x}\)</span> og <span class="math notranslate nohighlight">\(S(\textbf{v}) = A\textbf{v}\)</span>. Út frá <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(S\)</span>
+höfum við einnig nýja samsetta línulega vörpun <span class="math notranslate nohighlight">\(S\circ T\colon\mathbb{R}^n\to\mathbb{R}^m\)</span> sem hefur þann eiginleika að
+<span class="math notranslate nohighlight">\(S\circ T=S(T(\textbf{x}))=S(B\textbf{x})=AB\textbf{x}\)</span>. Fylki þessarar nýju vörpunar er því <span class="math notranslate nohighlight">\(AB\)</span>.</p>
+<section id="skilgreining-fylkjamargfoldun">
+<h3><span class="section-number">2.3.1. </span>Skilgreining: Fylkjamargföldun<a class="headerlink" href="#skilgreining-fylkjamargfoldun" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum  <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times p\)</span> fylki og <span class="math notranslate nohighlight">\(B=[\textbf{b}_1 \ldots \textbf{b}_n]\)</span> vera <span class="math notranslate nohighlight">\(p \times n\)</span> fylki.
+Fylkjamargföldun þeirra er skilgreind <span class="math notranslate nohighlight">\(AB=[A\textbf{b}_1 \ldots A\textbf{b}_n]\)</span>.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Margfeldið <span class="math notranslate nohighlight">\(AB\)</span> er aðeins skilgreint ef fjöldi dálka í fylkinu
+<span class="math notranslate nohighlight">\(A\)</span> er jafn fjölda lína í fylkinu <span class="math notranslate nohighlight">\(B\)</span>. Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(B\)</span> er <span class="math notranslate nohighlight">\(n \times k\)</span>
+fylki þá er margfeldið skilgreint og stærð þess er <span class="math notranslate nohighlight">\(m \times k\)</span>.</p>
+</div>
+<section id="synidaemi-fylkjamargfoldun">
+<h4><span class="section-number">2.3.1.1. </span>Sýnidæmi: Fylkjamargföldun<a class="headerlink" href="#synidaemi-fylkjamargfoldun" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið <span class="math notranslate nohighlight">\(AB\)</span> ef</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{bmatrix} \text{ og } B=\begin{bmatrix}
+-1 &amp; 0 \\
+0 &amp; 1 \\
+1 &amp; -1
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\textbf{b}_1=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{bmatrix}\cdot\begin{bmatrix}
+-1 \\
+0 \\
+1
+\end{bmatrix}=\begin{bmatrix}
+2 \\
+2
+\end{bmatrix} \text{ og } A\textbf{b}_2=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6
+\end{bmatrix}\cdot\begin{bmatrix}
+0 \\
+1 \\
+-1
+\end{bmatrix}=\begin{bmatrix}
+-1 \\
+-1
+\end{bmatrix}\end{split}\]</div>
+<p>svo að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB=[A\textbf{b}_1 \ A\textbf{b}_2]=\begin{bmatrix}
+2 &amp; -1 \\
+2 &amp; -1
+\end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="skilgreining-veldi-af-fylkjum">
+<h3><span class="section-number">2.3.2. </span>Skilgreining: Veldi af fylkjum<a class="headerlink" href="#skilgreining-veldi-af-fylkjum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(n\times n\)</span> ferningsfylki þá skilgreinum við <span class="math notranslate nohighlight">\(A^0=I_n\)</span>
+og svo <span class="math notranslate nohighlight">\(A^n=A\cdot A^{n-1}\)</span> fyrir <span class="math notranslate nohighlight">\(n&gt;1\)</span>. Sem sagt <span class="math notranslate nohighlight">\(A^2=A\cdot A\)</span>,
+<span class="math notranslate nohighlight">\(A^3=A\cdot A\cdot A\)</span> og svo framvegis.</p>
+</div>
+</section>
+<section id="reikniafer-fyrir-fylkjamargfoldun">
+<h3><span class="section-number">2.3.3. </span>Reikniaðferð fyrir fylkjamargföldun<a class="headerlink" href="#reikniafer-fyrir-fylkjamargfoldun" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Aðferð</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+a_{11} &amp; \cdots &amp; a_{1p} \\
+\vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; \cdots &amp; a_{mp}
+\end{bmatrix}
+\text{ og }
+B = \begin{bmatrix}
+b_{11} &amp; \cdots &amp; b_{1n} \\
+\vdots &amp; \ddots &amp; \vdots \\
+b_{p1} &amp; \cdots &amp; b_{pn}
+\end{bmatrix}\end{split}\]</div>
+<p>Margfeldið er þá</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}AB = \begin{bmatrix}
+(AB)_{11} &amp; \cdots &amp; (AB)_{1n} \\
+\vdots &amp; \ddots &amp; \vdots \\
+(AB)_{m1} &amp; \cdots &amp; (AB)_{mn}
+\end{bmatrix}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\((AB)_{ij}\)</span> er summa af margfeldum stakanna í <span class="math notranslate nohighlight">\(i\)</span>-tu línu <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(j\)</span>-ta dálki <span class="math notranslate nohighlight">\(B\)</span>.
+<strong>Munum:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\\\rightarrow\\\\
+\end{bmatrix}\textbf{[}\quad \downarrow \quad \textbf{]}.\end{split}\]</div>
+</div>
+<section id="id1">
+<h4><span class="section-number">2.3.3.1. </span>Sýnidæmi: Fylkjamargföldun<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; 3 \\
+1 &amp; 4 \\
+\end{bmatrix} \text, \quad B=\begin{bmatrix}
+5 &amp; 6 \\
+7 &amp; 8 \\
+\end{bmatrix} \text, \quad C=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{bmatrix} \text{ og } D=\begin{bmatrix}
+12 &amp; 11 \\
+10 &amp; 9 \\
+8 &amp; 7
+\end{bmatrix}\end{split}\]</div>
+<p>Reiknið <span class="math notranslate nohighlight">\(AB\)</span> og <span class="math notranslate nohighlight">\(CD\)</span></p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}AB=\begin{bmatrix}
+2 \cdot 5 + 3\cdot 7 &amp; 2 \cdot 6 + 3\cdot 8 \\
+1 \cdot 5 + 4\cdot 7 &amp; 1 \cdot 6 + 4\cdot 8 \\
+\end{bmatrix}=\begin{bmatrix}
+31 &amp; 36 \\
+33 &amp; 38 \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}CD=\begin{bmatrix}
+1 \cdot 12 + 2\cdot 10 +3\cdot 8 &amp; 1\cdot 11 &amp; 2 \cdot 9 + 3\cdot 7 \\
+4 \cdot 12 + 5\cdot 10 +6\cdot 8 &amp; 4\cdot 11 &amp; 5 \cdot 9 + 6\cdot 7 \\
+7 \cdot 12 + 8\cdot 10 +9\cdot 8 &amp; 7\cdot 11 &amp; 8 \cdot 9 + 9\cdot 7 \\
+\end{bmatrix}=\begin{bmatrix}
+56 &amp; 50  \\
+146 &amp; 131 \\
+236 &amp; 212
+\end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="setning-eiginleikar-fylkjamargfoldunar">
+<h3><span class="section-number">2.3.4. </span>Setning: Eiginleikar fylkjamargföldunar<a class="headerlink" href="#setning-eiginleikar-fylkjamargfoldunar" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki og <span class="math notranslate nohighlight">\(B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> vera fylki með þannig stærðir að
+hlutaðeigandi margfeldi séu skilgreind.
+Þá gildir</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(A(BC) = (AB)C\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(A(B+C) = AB+AC\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\((B+C)A = BA+CA\)</span></p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(r(AB) = (rA)B = A(rB)\)</span>, þar sem <span class="math notranslate nohighlight">\(r\)</span> er fasti.</p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(I_m A = A = AI_m\)</span></p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="bylt-fylki">
+<h2><span class="section-number">2.4. </span>Bylt fylki<a class="headerlink" href="#bylt-fylki" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-bylt-fylki">
+<h3><span class="section-number">2.4.1. </span>Skilgreining: Bylt fylki<a class="headerlink" href="#skilgreining-bylt-fylki" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(m\times n\)</span> fylki þá skilgreinum við <em>bylta fylkið</em> <span class="math notranslate nohighlight">\(A^T\)</span>  (e. transpose) sem <span class="math notranslate nohighlight">\(n\times m\)</span> fylkið
+sem fæst með því að mynda dálkvigra úr línuvigrum <span class="math notranslate nohighlight">\(A\)</span> og öfugt.
+Höfum því <span class="math notranslate nohighlight">\(A^T_{ij}=A_{ji}\)</span>.</p>
+</div>
+<section id="synidaemi-bylt-fylki">
+<h4><span class="section-number">2.4.1.1. </span>Sýnidæmi: Bylt fylki<a class="headerlink" href="#synidaemi-bylt-fylki" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Byltið eftirfarandi fylkjum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; -1 \\
+0 &amp; 3 \\
+\end{bmatrix} \text, \quad B=\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+\end{bmatrix} \text{ og } C=\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+13 &amp; 14 &amp; 15 &amp; 16 \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^T=\begin{bmatrix}
+2 &amp; 0 \\
+-1 &amp; 3 \\
+\end{bmatrix}\text, \quad B^T=\begin{bmatrix}
+1 &amp; 4 \\
+2 &amp; 5 \\
+3 &amp; 6 \\
+\end{bmatrix}\text{ og } C^T=\begin{bmatrix}
+1 &amp; 5 &amp; 9 &amp; 13 \\
+2 &amp; 6 &amp; 10 &amp; 14 \\
+3 &amp; 7 &amp; 11 &amp; 15 \\
+4 &amp; 8 &amp; 12 &amp; 16 \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="setning-reiknireglur-fyrir-bylt-fylki">
+<h3><span class="section-number">2.4.2. </span>Setning: Reiknireglur fyrir bylt fylki<a class="headerlink" href="#setning-reiknireglur-fyrir-bylt-fylki" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> vera fylki þannig að hlutaðeigandi margfeldi og summur séu skilgreind. Þá gildir</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\((A^T)^T = A\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\((A+B)^T = A^T+B^T\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\((rA)^T = rA^T\)</span>, þar sem <span class="math notranslate nohighlight">\(r\)</span> er fasti.</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\((AB)^T = B^TA^T\)</span></p>
+</div></blockquote>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Fylkjamargföldun er almennt ekki víxlin, þ.e. <span class="math notranslate nohighlight">\(AB \neq BA\)</span>. Röðin á byltingu margföldunar skiptir máli!</p>
+</div>
+<section id="synidaemi-hegun-byltra-fylkja">
+<h4><span class="section-number">2.4.2.1. </span>Sýnidæmi: Hegðun byltra fylkja<a class="headerlink" href="#synidaemi-hegun-byltra-fylkja" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið <span class="math notranslate nohighlight">\(\textbf{v}^T\textbf{v}\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}\textbf{v}^T\)</span> ef <span class="math notranslate nohighlight">\(\textbf{v}=\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}^T\textbf{v} = \begin{bmatrix} 1 &amp; 2 &amp; 3\end{bmatrix} \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} = 1^2+2^2+3^3 = 14\end{split}\]</div>
+<p>en hins vegar er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}\textbf{v}^T = \begin{bmatrix} 1 \\ 2 \\ 3\end{bmatrix} \begin{bmatrix} 1 &amp; 2 &amp; 3\end{bmatrix} =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+2 &amp; 4 &amp; 6 \\
+3 &amp; 6 &amp; 9 \end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="andhverfur-fylkja">
+<h2><span class="section-number">2.5. </span>Andhverfur fylkja<a class="headerlink" href="#andhverfur-fylkja" title="Permalink to this heading"></a></h2>
+<p>Látum <span class="math notranslate nohighlight">\(T\colon \mathbb{R}^n\to\mathbb{R}^n\)</span> vera gagntæka línulega vörpun með samsvarandi fylki <span class="math notranslate nohighlight">\(A\)</span>. Fyrst <span class="math notranslate nohighlight">\(T\)</span> er gagntæk á hún sér andhverfu <span class="math notranslate nohighlight">\(T^{-1}\)</span>.
+Hægt er að sýna að þessi andhverfa er líka línuleg og því má tákna hana með venjulegu fylki hennar sem við skulum kalla <span class="math notranslate nohighlight">\(C\)</span>.
+Við vitum að</p>
+<div class="math notranslate nohighlight">
+\[(CA)\textbf{x}=T(T^{-1}(\textbf{x}))=\textbf{x}\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(x\)</span>, svo að <span class="math notranslate nohighlight">\((CA)\)</span> hlýtur að vera einingarfylkið. Það sama gildir um <span class="math notranslate nohighlight">\(AC\)</span>.</p>
+<section id="skilgreining-andhverfur-fylkja">
+<h3><span class="section-number">2.5.1. </span>Skilgreining: Andhverfur fylkja<a class="headerlink" href="#skilgreining-andhverfur-fylkja" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><span class="math notranslate nohighlight">\(n\times n\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> er <strong>andhverfanlegt</strong> (e. invertible) ef til er fylki <span class="math notranslate nohighlight">\(C\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[AC = CA = I.\]</div>
+<p>Fylkið <span class="math notranslate nohighlight">\(C\)</span> kallast þá <strong>andhverfa</strong> <span class="math notranslate nohighlight">\(A\)</span> (e. inverse), og er táknað með <span class="math notranslate nohighlight">\(A^{-1}\)</span>.
+Ef <span class="math notranslate nohighlight">\(A\)</span> er ekki andhverfanlegt á segjum við það sé <strong>óandhverfanlegt</strong> (e. singular).</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Einungis ferningsfylki, <span class="math notranslate nohighlight">\(n \times n\)</span>, geta verið andhverfanleg. Þó eru ekki öll ferningsfylki andhverfanleg.</p>
+</div>
+</section>
+<section id="setning-andhverfa-er-otviraett-akvoru">
+<h3><span class="section-number">2.5.2. </span>Setning: Andhverfa er ótvírætt ákvörðuð<a class="headerlink" href="#setning-andhverfa-er-otviraett-akvoru" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Sérhvert fylki hefur aðeins eina andhverfu. Hugsum okkur að <span class="math notranslate nohighlight">\(B\)</span> og <span class="math notranslate nohighlight">\(C\)</span> séu tvær mismunandi andhverfur <span class="math notranslate nohighlight">\(A\)</span>. Við fáum að</p>
+<div class="math notranslate nohighlight">
+\[B = IB = (CA)B = CAB = C(AB) = CI = C.\]</div>
+<p>Táknum andhverfu <span class="math notranslate nohighlight">\(A\)</span> með <span class="math notranslate nohighlight">\(A^{-1}\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[A\cdot A^{-1} = A^{-1}\cdot A = I.\]</div>
+<p>Við sjáum að andhverfa fylkis er ótvírætt ákvörðuð.</p>
+</div>
+<section id="synidaemi-eru-fylkin-andhverfanleg">
+<h4><span class="section-number">2.5.2.1. </span>Sýnidæmi: Eru fylkin andhverfanleg?<a class="headerlink" href="#synidaemi-eru-fylkin-andhverfanleg" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Eru eftirfarandi fylki andhverfanleg?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A =\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix}, \quad B= \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix}, \quad C= \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 2 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Til að leita að andhverfum skulum við margfalda þessi fylki með almennu <span class="math notranslate nohighlight">\(2\times 2\)</span> fylki og athuga
+hvort mögulegt sé að finna andhverfu þeirra. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix} \begin{bmatrix}
+a &amp; b \\
+c &amp; d \\
+\end{bmatrix} = \begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix} \neq I,\end{split}\]</div>
+<p>svo að núllfylkið <span class="math notranslate nohighlight">\(A\)</span> á sér ekki andhverfu. Því næst,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 0 \\
+\end{bmatrix} \begin{bmatrix}
+a &amp; b \\
+c &amp; d \\
+\end{bmatrix} = \begin{bmatrix}
+a &amp; b \\
+0 &amp; 0 \\
+\end{bmatrix} \neq I,\end{split}\]</div>
+<p>svo fylkið <span class="math notranslate nohighlight">\(B\)</span> getur heldur ekki verið andhverfanlegt. Loks höfum við að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 2 \\
+\end{bmatrix} \begin{bmatrix}
+a &amp; b \\
+c &amp; d \\
+\end{bmatrix} = \begin{bmatrix}
+a &amp; b \\
+2c &amp; 2d \\
+\end{bmatrix},\end{split}\]</div>
+<p>svo ef við veljum <span class="math notranslate nohighlight">\(a=1, b=c=0\)</span> og <span class="math notranslate nohighlight">\(d=\frac{1}{2}\)</span> fáum við einingarfylkið út úr margfölduninni.
+Því er fylki <span class="math notranslate nohighlight">\(C\)</span> andhverfanlegt og er andhverfa þess</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; \frac{1}{2} \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="setning-andhverfa-2-times-2-fylkja">
+<h3><span class="section-number">2.5.3. </span>Setning: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja<a class="headerlink" href="#setning-andhverfa-2-times-2-fylkja" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A=\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span> vera <span class="math notranslate nohighlight">\(2\times 2\)</span> fylki. Fylkið <span class="math notranslate nohighlight">\(A\)</span> er
+andhverfanlegt ef og aðeins ef <span class="math notranslate nohighlight">\(ad-bc\neq 0\)</span> og í þeim tilfellum er andhverfan gefin með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix}.\end{split}\]</div>
+<p>Stærðin <span class="math notranslate nohighlight">\(ad-bc\)</span> kallast <em>ákveða</em> (e. determinant) fylkisins <span class="math notranslate nohighlight">\(A\)</span> og er táknuð <span class="math notranslate nohighlight">\(\text{det}(A)\)</span>. Meir um ákveður í kafla 3.</p>
+</div>
+<section id="synidaemi-andhverfa-2-times-2-fylkja">
+<h4><span class="section-number">2.5.3.1. </span>Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja<a class="headerlink" href="#synidaemi-andhverfa-2-times-2-fylkja" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið andhverfu eftirfarandi fylkja ef til eru</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+-3 &amp; 7 \\
+2 &amp; 5 \\
+\end{bmatrix}, \quad B=\begin{bmatrix}
+-2 &amp; 3 \\
+4 &amp; -6 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Formúlan gefur okkur að <span class="math notranslate nohighlight">\(\det(A)=-3\cdot5-2\cdot7=-15-14=-29\)</span> svo að <span class="math notranslate nohighlight">\(A\)</span> á sér andhverfu og hún er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}-\frac{1}{29}\begin{bmatrix} 5 &amp; -7 \\ -2 &amp; -3 \end{bmatrix}.\end{split}\]</div>
+<p>Fáum að <span class="math notranslate nohighlight">\(\det(B)=-2\cdot (-6)-4\cdot3=0\)</span> svo fylkið <span class="math notranslate nohighlight">\(B\)</span> er á sér ekki andhverfu.</p>
+</div>
+</section>
+</section>
+<section id="setning-lausnir-fylkjajafna">
+<h3><span class="section-number">2.5.4. </span>Setning: Lausnir fylkjajafna<a class="headerlink" href="#setning-lausnir-fylkjajafna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera andhverfanlegt <span class="math notranslate nohighlight">\(n\times n\)</span> fylki. Þá hefur fylkjajafnan <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{b}\)</span>
+nákvæmlega eina lausn fyrir sérhvert <span class="math notranslate nohighlight">\(\textbf{b}\in\mathbb{R}^n\)</span> og sú lausn er</p>
+<div class="math notranslate nohighlight">
+\[\textbf{x}=A^{-1}\textbf{b}.\]</div>
+</div>
+<section id="synidaemi-fylkjajafna-leyst-me-andhverfu">
+<h4><span class="section-number">2.5.4.1. </span>Sýnidæmi: Fylkjajafna leyst með andhverfu<a class="headerlink" href="#synidaemi-fylkjajafna-leyst-me-andhverfu" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+-3 &amp; 7 \\
+2 &amp; 5 \\
+\end{bmatrix} \begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix} = \begin{bmatrix}
+10 \\
+20
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Andhverfa fylkisins var reiknuð í sýnidæmi <span class="math notranslate nohighlight">\(2.5.3.1\)</span> hér að ofan. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x}=-\frac{1}{29}\begin{bmatrix}
+5 &amp; -7 \\
+-2 &amp; -3
+\end{bmatrix}\begin{bmatrix}
+10 \\
+20
+\end{bmatrix} = -\frac{1}{29}\begin{bmatrix}
+50-140 \\
+-20-60
+\end{bmatrix} = \frac{1}{29}\begin{bmatrix} 90 \\ 80 \end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Setningin á undan er oftast ekki notuð beint þegar reikna á stórar fylkjajöfnur af
+gerðinni <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{b}\)</span>. Það er tímafrekt og að reikna andhverfur stórra fylkja og oftast fljótlega að leysa
+jöfnuna beint með Gauss-eyðingu eða öðrum aðferðum.</p>
+</div>
+</section>
+</section>
+<section id="setning-reiknireglur-andhverfa">
+<h3><span class="section-number">2.5.5. </span>Setning: Reiknireglur andhverfa<a class="headerlink" href="#setning-reiknireglur-andhverfa" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> vera andhverfanleg <span class="math notranslate nohighlight">\(n\times n\)</span> fylki. Þá gildir að</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(A^{-1}\)</span> er andhverfanlegt fylki og</p>
+<div class="math notranslate nohighlight">
+\[(A^{-1})^{-1}=A.\]</div>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(AB\)</span> er andhverfanlegt fylki og</p>
+<div class="math notranslate nohighlight">
+\[(AB)^{-1}=B^{-1}A^{-1}.\]</div>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A^T\)</span> er andhverfanlegt fylki og</p>
+<div class="math notranslate nohighlight">
+\[(A^T)^{-1}=(A^{-1})^T.\]</div>
+</div>
+</section>
+<section id="reiknirit-andhverfa-n-times-n-fylkja">
+<h3><span class="section-number">2.5.6. </span>Reiknirit andhverfa <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja<a class="headerlink" href="#reiknirit-andhverfa-n-times-n-fylkja" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Aðferð</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki og <span class="math notranslate nohighlight">\(I_n\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> einingarfylki. Setjum upp aukna fylkið</p>
+<div class="math notranslate nohighlight">
+\[[A \ | \ I]\]</div>
+<p>og beitum Gauss-Jordan eyðingu til að breyta fylkinu <span class="math notranslate nohighlight">\(A\)</span> yfir í einingarfylkið <span class="math notranslate nohighlight">\(I_n\)</span>. Ef núlllína kemur upp á einhverjum tímapunkti í vinstri hliðina þá
+er fylkið <span class="math notranslate nohighlight">\(A\)</span> ekki andhverfanleg. Ef tekst að breyta <span class="math notranslate nohighlight">\(A\)</span> í einingarfylkið þá situr andhverfan eftir í hægri hliðinni,</p>
+<div class="math notranslate nohighlight">
+\[[A  \ | \  I] \sim [I  \ | \  A^{-1}].\]</div>
+</div>
+<section id="synidaemi-andhverfa-3-times3-fylkis">
+<h4><span class="section-number">2.5.6.1. </span>Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(3\times3\)</span> fylkis<a class="headerlink" href="#synidaemi-andhverfa-3-times3-fylkis" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið andhverfu fylkisins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+0 &amp; 1 &amp; 4 \\
+5 &amp; 6 &amp; 0
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Búum til aukna fylkið og beitum einföldum línuaðgerðum:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align} [A  \ | \  I_3] =
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \\
+5 &amp; 6 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{array}\right]
+&amp;\overset{\substack{R_3-5R_1}}{\sim}
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp;-4 &amp;-15&amp;-5 &amp; 0 &amp; 1 \\
+\end{array}\right] \\
+&amp;\overset{\substack{R_3+4R_2}} \sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 2 &amp; 3 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp;-5 &amp; 4 &amp; 1 \\
+\end{array}\right]  \\
+&amp;\overset{\substack{R_1-2R_2}} \sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp;-5 &amp; 1 &amp;-2 &amp; 0 \\
+0 &amp; 1 &amp; 4 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp;-5 &amp; 4 &amp; 1 \\
+\end{array}\right] \\
+&amp;\overset{\substack{R_1+5R_3\\R_2-4R_3}}  \sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 0 &amp; -24 &amp;18 &amp; 5 \\
+0 &amp; 1 &amp; 0 &amp; 20 &amp; -15 &amp; -4 \\
+0 &amp; 0 &amp; 1 &amp;-5 &amp; 4 &amp; 1 \\
+\end{array}\right]
+\end{align}\end{split}\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^{-1} = \begin{bmatrix}
+-24 &amp;18 &amp; 5 \\
+20 &amp; -15 &amp; -4 \\
+-5 &amp; 4 &amp; 1
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="andhverfanlegar-varpanir">
+<h2><span class="section-number">2.6. </span>Andhverfanlegar varpanir<a class="headerlink" href="#andhverfanlegar-varpanir" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-andhverfanlegar-varpanir">
+<h3><span class="section-number">2.6.1. </span>Skilgreining: Andhverfanlegar varpanir<a class="headerlink" href="#skilgreining-andhverfanlegar-varpanir" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Vörpun <span class="math notranslate nohighlight">\(f\colon X \rightarrow Y\)</span> er andhverfanleg ef til er vörpun <span class="math notranslate nohighlight">\(f^{-1}\colon Y \rightarrow X\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[f(f^{-1}(y))=y \quad \text{og}\quad f^{-1}(f(x))=x\]</div>
+<p>fyrir öll <span class="math notranslate nohighlight">\(y \in Y\)</span> og <span class="math notranslate nohighlight">\(x \in X\)</span>. Þá kallast <span class="math notranslate nohighlight">\(f^{-1}\)</span> andhverfa vörpunarinnar <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<div class="setning admonition">
+<p class="admonition-title">Fylgisetning</p>
+<p>Vörpun <span class="math notranslate nohighlight">\(f\colon X \rightarrow Y\)</span> er andhverfanleg ef og aðeins ef hún er gagntæk.</p>
+</div>
+</section>
+<section id="setning-andhverfanlegar-linulegar-varpanir">
+<h3><span class="section-number">2.6.2. </span>Setning: Andhverfanlegar línulegar varpanir<a class="headerlink" href="#setning-andhverfanlegar-linulegar-varpanir" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T:\mathbb{R}^n \rightarrow \mathbb{R}^n\)</span> vera línulega vörpun með <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span>.
+Ef fylkið <span class="math notranslate nohighlight">\(A\)</span> er andhverfanlegt þá er vörpunin</p>
+<div class="math notranslate nohighlight">
+\[\R^n \rightarrow \R^n, \ \ve x\mapsto A^{-1} \ve x\]</div>
+<p>andhverfa vörpunarinnar <span class="math notranslate nohighlight">\(T\)</span>. Andhverfan er einnig línuleg vörpun. Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er andhverfanleg ef og aðeins ef <span class="math notranslate nohighlight">\(A\)</span> er andhverfanlegt fylki.</p>
+</div>
+</section>
+<section id="setning-eintaekni-og-ataekni-linulegra-varpana">
+<h3><span class="section-number">2.6.3. </span>Setning: Eintækni og átækni línulegra varpana<a class="headerlink" href="#setning-eintaekni-og-ataekni-linulegra-varpana" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^n\)</span> vera línulega vörpun. Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er eintæk þá og því aðeins að hún er átæk.</p>
+</div>
+<div class="setning dropdown admonition">
+<p class="admonition-title">Rökstuðningur</p>
+<p>Skrifum <span class="math notranslate nohighlight">\(T(\textbf{x})=A\textbf{x}\)</span>.
+Gerum ráð fyrir að <span class="math notranslate nohighlight">\(T\)</span> sé eintæk. Fáum að <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{0}\)</span> hefur aðeins augljósu lausnina.</p>
+<p>Skoðum efri stallagerð <span class="math notranslate nohighlight">\(A\)</span>. Fyrst jafnan hefur aðeins augljósu lausnina þá hefur
+efri stallagerðin forystustuðul í hverjum dálki (og engar frjálsar breytur), þ.e. <span class="math notranslate nohighlight">\(n\)</span> forystustuðla.</p>
+<p>Þar með hefur stallagerðin líka forystustuðul í hverri línu (því fylkið er <span class="math notranslate nohighlight">\(n\times n\)</span> fylki).</p>
+<p>Jafnan <span class="math notranslate nohighlight">\(A \textbf{x} = \textbf{b}\)</span> hefur lausn fyrir alla vigra <span class="math notranslate nohighlight">\(\textbf{b}\in\mathbb{R}^n\)</span> og
+því er vörpunin <span class="math notranslate nohighlight">\(T(\textbf{x})=A\textbf{x}\)</span> átæk.</p>
+<p>Athugið að leiðingarnar hér gilda í báðar áttir.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Þessi setning gildir aðeins um <strong>línulegar varpanir</strong> <span class="math notranslate nohighlight">\(\R^n \rightarrow \R^n\)</span>. Hún gildir ekki um varpanir sem eru ólínulegar né varpanir þar sem <span class="math notranslate nohighlight">\(\R^n \rightarrow \R^m\)</span>, <span class="math notranslate nohighlight">\(n \neq m\)</span>.</p>
+</div>
+<p>Eftirfarandi setning inniheldur jafngild skilyrði þess að ferningsfylki sé andhverfanlegt.</p>
+</section>
+<section id="setning-langa-setningin-um-andhverfanleg-fylki">
+<h3><span class="section-number">2.6.4. </span>Setning: Langa setningin um andhverfanleg fylki<a class="headerlink" href="#setning-langa-setningin-um-andhverfanleg-fylki" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n\times n\)</span> fylki.
+Þá eru eftirfarandi fullyrðingar annað hvort allar sannar eða allar ósannar.</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(A\)</span> er andhverfanlegt.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(A\)</span> er línu-jafngilt (og þar með jafngilt) <span class="math notranslate nohighlight">\(n\times n\)</span> einingarfylkinu <span class="math notranslate nohighlight">\(I_n\)</span>.</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A\)</span> hefur <span class="math notranslate nohighlight">\(n\)</span> forystustuðla (þ.e. efra stallaform <span class="math notranslate nohighlight">\(A\)</span>).</p>
+<p><strong>4.</strong> Jafnan <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{0}\)</span> hefur aðeins augljósu lausnina <span class="math notranslate nohighlight">\(\ve x = \ve 0\)</span>.</p>
+<p><strong>5.</strong> Dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> eru línulega óháðir.</p>
+<p><strong>6.</strong> Línulega vörpunin <span class="math notranslate nohighlight">\(\textbf{x}\mapsto A\textbf{x}\)</span> er eintæk.</p>
+<p><strong>7.</strong> Jafnan <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{b}\)</span> hefur a.m.k eina lausn fyrir sérhvert <span class="math notranslate nohighlight">\(\textbf{b} \in \mathbb{R}^n\)</span>.</p>
+<p><strong>8.</strong> Dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> spanna allt <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+<p><strong>9.</strong> Línulega vörpunin <span class="math notranslate nohighlight">\(\textbf{x}\mapsto A\textbf{x}\)</span> er átæk.</p>
+<p><strong>10.</strong> Til er <span class="math notranslate nohighlight">\(n\times n\)</span> fylki <span class="math notranslate nohighlight">\(C\)</span> þannig að <span class="math notranslate nohighlight">\(CA=I_n\)</span>.</p>
+<p><strong>11.</strong> Til er <span class="math notranslate nohighlight">\(n\times n\)</span> fylki <span class="math notranslate nohighlight">\(D\)</span> þannig að <span class="math notranslate nohighlight">\(AD=I_n\)</span>.</p>
+<p><strong>12.</strong> Bylta fylkið <span class="math notranslate nohighlight">\(A^T\)</span> er andhverfanlegt.</p>
+</div>
+<section id="synidaemi-er-fylki-andhverfanlegt">
+<h4><span class="section-number">2.6.4.1. </span>Sýnidæmi: Er fylkið andhverfanlegt?<a class="headerlink" href="#synidaemi-er-fylki-andhverfanlegt" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Er gefið fylkið <span class="math notranslate nohighlight">\(A\)</span> andhverfanlegt?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; 3 &amp; 5 \\
+0 &amp; -1 &amp; 4 \\
+0 &amp; 1 &amp; 2 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Sjáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; 3 &amp; 5 \\
+0 &amp; -1 &amp; 4 \\
+0 &amp; 1 &amp; 2 \\
+\end{bmatrix}&amp;\overset{\substack{ R_3+R_2}} \sim
+\begin{bmatrix}
+2 &amp; 3 &amp; 5 \\
+0 &amp; -1 &amp; 4 \\
+0 &amp; 0 &amp; 5 \\
+\end{bmatrix}\end{split}\]</div>
+<p>svo fylkið hefur þrjá forystustuðla. Þar með er fylkið andhverfanlegt.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>1.</strong> Látum <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki þannig að <span class="math notranslate nohighlight">\(AB=I\)</span> þá eru <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> andhverfanleg.</p>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru andhverfanleg þá eru <span class="math notranslate nohighlight">\(AB\)</span> og <span class="math notranslate nohighlight">\(BA\)</span> það einnig.</p>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru óandhverfanleg þá eru <span class="math notranslate nohighlight">\(AB\)</span> og <span class="math notranslate nohighlight">\(BA\)</span> það einnig.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="lu-attun">
+<h2><span class="section-number">2.7. </span>LU-þáttun<a class="headerlink" href="#lu-attun" title="Permalink to this heading"></a></h2>
+<p>LU-þáttun er gagnleg þegar leysa á stór línuleg jöfnuhneppi, t.a.m. fyrir marga ólíka vigra <span class="math notranslate nohighlight">\(\ve b\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[A\textbf{x} = \textbf{b}_1, A\textbf{x} = \textbf{b}_2, \dots, A\textbf{x} = \textbf{b}_k.\]</div>
+<p>Þessi aðferð t.d. sparar útreikninga í tölvu. Meir um LU-þáttun í áfanganum Töluleg Greining.</p>
+<section id="skilgreining-lu-attun">
+<h3><span class="section-number">2.7.1. </span>Skilgreining: LU-þáttun<a class="headerlink" href="#skilgreining-lu-attun" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki sem hægt er að koma á efra stallaform með því að nota einungis umskiptingar þar sem margfeldi af einni línu er lagt við línu neðar í fylkinu. Þá má þátta <span class="math notranslate nohighlight">\(A\)</span> í margfeldi tveggja fylkja</p>
+<div class="math notranslate nohighlight">
+\[A=LU\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(L\)</span> er <span class="math notranslate nohighlight">\(m\times m\)</span> neðra þríhyrningsfylki með <span class="math notranslate nohighlight">\(1\)</span> á hornalínunni og
+U er <span class="math notranslate nohighlight">\(m\times n\)</span> fylki af efri stallagerð. Þessi þáttun nefnist <strong>LU-þáttun</strong> (e. LU-factorization).</p>
+<p>Við sjáum þetta fyrir okkur svona</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A= \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+* &amp; 1 &amp; 0 \\
+* &amp; * &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+\blacksquare &amp; * &amp; * &amp; * \\
+0 &amp; \blacksquare &amp; * &amp; * \\
+0 &amp; 0 &amp; 0 &amp; \blacksquare
+\end{bmatrix} = LU.\end{split}\]</div>
+</div>
+</section>
+<section id="reiknirit-lu-attunar">
+<h3><span class="section-number">2.7.2. </span>Reiknirit LU-þáttunar<a class="headerlink" href="#reiknirit-lu-attunar" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Reiknirit</p>
+<p>Aðferð til þess að finna LU-þáttun fylks <span class="math notranslate nohighlight">\(A\)</span> og nota til þess að leysa fylkjajöfnu <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span>.</p>
+<blockquote>
+<div><p><strong>1.</strong> Finna <span class="math notranslate nohighlight">\(U\)</span>: koma <span class="math notranslate nohighlight">\(A\)</span> yfir á efri stallagerð með umskiptingum á borð við <span class="math notranslate nohighlight">\(R_j\rightarrow R_j+cR_i\)</span> þar sem <span class="math notranslate nohighlight">\(i&lt;j\)</span>.</p>
+<p><strong>2.</strong> Finna <span class="math notranslate nohighlight">\(L\)</span>: búa til neðra þríhyrningsfylki með 1 á hornalínunni og fylla í það með föstunum <span class="math notranslate nohighlight">\(c\)</span> sem notaðir voru í línuaðgerðunum í skrefinu á undan.</p>
+</div></blockquote>
+<p>Til að skoða hvort rétt sé reiknað er auðvelt að margfalda fylkin saman og athuga hvort <span class="math notranslate nohighlight">\(A = LU\)</span>. Ef leysa á fylkjajöfnu höldum við áfram</p>
+<blockquote>
+<div><p><strong>3.</strong> Skrifum <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> sem <span class="math notranslate nohighlight">\(L (U \ve x) = \ve b\)</span> og látum <span class="math notranslate nohighlight">\(\ve y = U \ve x\)</span>. Síðan leysum við <span class="math notranslate nohighlight">\(L \ve y = \ve b\)</span> og köllum lausnina <span class="math notranslate nohighlight">\(\ve z\)</span>.</p>
+<p><strong>4.</strong> Leysum <span class="math notranslate nohighlight">\(U \ve x = \ve z\)</span> með aftur-á-bak innsetningu.</p>
+</div></blockquote>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ekki má nota hinar tvær línuaðgerðirnar í Skrefi 1, þ.e.
+margfalda línur með fasta (<span class="math notranslate nohighlight">\(R_i \rightarrow c R_i\)</span>) eða víxla á línum (<span class="math notranslate nohighlight">\(R_i\leftrightarrow R_j\)</span>). Oft verður ekki hjá því komist að víxla á línum. Í þeim tilfellum virkar reikniaðferðin ekki.
+Til eru leiðir til að vinna sig fram hjá þessu en það verður ekki farið í þær nú.</p>
+</div>
+<section id="synidaemi-lu-attun">
+<h4><span class="section-number">2.7.2.1. </span>Sýnidæmi: LU-þáttun<a class="headerlink" href="#synidaemi-lu-attun" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>LU-þáttið eftirfarandi fylki</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+2 &amp; 1 &amp; 3\\
+4 &amp; 2 &amp; 8
+\end{bmatrix}, \quad B=\begin{bmatrix}
+3 &amp; 1 &amp; -2\\
+-6 &amp; 0 &amp; 7 \\
+9 &amp; 5 &amp; 1
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Komum <span class="math notranslate nohighlight">\(A\)</span> yfir á efri stallagerð með Gauss eyðingu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+2 &amp; 1 &amp; 3\\
+  4 &amp; 2 &amp; 8
+\end{bmatrix} \overset{R_2-2R_1}{\longrightarrow}
+\begin{bmatrix}
+2 &amp; 1 &amp; 3 \\
+0 &amp; 0 &amp; 2
+\end{bmatrix}.\end{split}\]</div>
+<p>Búum til fylki <span class="math notranslate nohighlight">\(L\)</span> fylki með því að skoða hvaða línuaðgerðum var beitt (ath. við snúum þeim við í <span class="math notranslate nohighlight">\(L\)</span> fylkinu),</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}L=\begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 1 \\
+\end{bmatrix}.\end{split}\]</div>
+<p>LU-þáttun á <span class="math notranslate nohighlight">\(A\)</span> er gefin með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=LU=\begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+2 &amp; 1 &amp; 3 \\
+0 &amp; 0 &amp; 2
+\end{bmatrix}.\end{split}\]</div>
+<p>Framkvæmum nú Gauss eyðingu á fylki <span class="math notranslate nohighlight">\(B\)</span> til að koma því á efri stallagerð</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+3 &amp; 1 &amp; -2 \\
+-6 &amp; 0 &amp; 7 \\
+9 &amp; 5 &amp; 1
+\end{bmatrix} \overset{R_2+2R_1}{\longrightarrow}
+\begin{bmatrix}
+3 &amp; 1 &amp; -2 \\
+0 &amp; 2 &amp; 3 \\
+9 &amp; 5 &amp; 1
+\end{bmatrix} \overset{R_3-3R_1}{\longrightarrow}
+\begin{bmatrix}
+3 &amp; 1 &amp; -2 \\
+0 &amp; 2 &amp; 3 \\
+0 &amp; 2 &amp; 7
+\end{bmatrix}\\
+\overset{R_3-R_2}{\longrightarrow}
+\begin{bmatrix}
+3 &amp; 1 &amp; -2 \\
+0 &amp; 2 &amp; 3 \\
+0 &amp; 0 &amp; 4
+\end{bmatrix}.\end{split}\]</div>
+<p>Finnum <span class="math notranslate nohighlight">\(L\)</span> fylkið út frá aðgerðunum sem notaðar voru.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+&amp;\\\\
+\end{bmatrix} \overset{R_2+2R_1}{\longrightarrow}
+\begin{bmatrix}
+&amp;\\\\
+\end{bmatrix} \overset{R_3-3R_1}{\longrightarrow}
+\begin{bmatrix}
+&amp;\\\\
+\end{bmatrix}
+\overset{R_3-R_2}{\longrightarrow}
+\begin{bmatrix}
+&amp;\\\\
+\end{bmatrix},\end{split}\]</div>
+</div></blockquote>
+<p>sjáum að</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}L=\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+3 &amp; 1 &amp; 1 \\
+\end{bmatrix}.\end{split}\]</div>
+</div></blockquote>
+<p>LU-þáttun á <span class="math notranslate nohighlight">\(B\)</span> er gefin með</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}B=LU=\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+3 &amp; 1 &amp; 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+3 &amp; 1 &amp; -2 \\
+0 &amp; 2 &amp; 3 \\
+0 &amp; 0 &amp; 4 \\
+\end{bmatrix}.\end{split}\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="synidaemi-lu-attun-til-ess-a-leysa-fylkjajofnu">
+<h4><span class="section-number">2.7.2.2. </span>Sýnidæmi: LU-þáttun til þess að leysa fylkjajöfnu<a class="headerlink" href="#synidaemi-lu-attun-til-ess-a-leysa-fylkjajofnu" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum fylki <span class="math notranslate nohighlight">\(A\)</span> í sýnidæminu að ofan,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=LU=\begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+2 &amp; 1 &amp; 3 \\
+0 &amp; 0 &amp; 2 \\
+\end{bmatrix}.\end{split}\]</div>
+<p>Nota á LU-þáttun <span class="math notranslate nohighlight">\(A\)</span> til þess að leysa <span class="math notranslate nohighlight">\(A\textbf{x}=\ve b\)</span> þegar <span class="math notranslate nohighlight">\(\textbf{b}=\begin{bmatrix} 4 \\ 6 \end{bmatrix}\)</span></p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Leysum fyrir <span class="math notranslate nohighlight">\(\ve y=(y_1,y_2)\)</span> í <span class="math notranslate nohighlight">\(L \ve y = \ve b\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 1 \\
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\
+y_2 \\
+\end{bmatrix} =
+\begin{bmatrix}
+4 \\
+6 \\
+\end{bmatrix}.\end{split}\]</div>
+<p>Fáum <span class="math notranslate nohighlight">\(y_1 = 4\)</span> og <span class="math notranslate nohighlight">\(2y_1+ y_2 = 6\)</span> sem gefur</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{y}=\begin{bmatrix}
+4 \\
+-2
+\end{bmatrix},\end{split}\]</div>
+<p>við skulum kalla þessa lausn <span class="math notranslate nohighlight">\(\ve z\)</span>. Leysum nú fyrir <span class="math notranslate nohighlight">\(\textbf{x}\)</span> í jöfnunni <span class="math notranslate nohighlight">\(U\textbf{x}=\textbf{z}\)</span>. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+2 &amp; 1 &amp; 3 \\
+0 &amp; 0 &amp; 2
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}=
+\begin{bmatrix}
+4 \\
+-2
+\end{bmatrix}\end{split}\]</div>
+<p>Sem gefur</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2x_1+x_2+3x_3=4 \\
+2x_3=-2\end{split}\]</div>
+<p>svo <span class="math notranslate nohighlight">\(x_3=-1\)</span> og <span class="math notranslate nohighlight">\(2x_1+x_2=7\)</span>, þar með
+<span class="math notranslate nohighlight">\(x_1=-(\frac{1}{2})x_2+\frac{7}{2}\)</span>
+. Fáum því:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x}=\begin{bmatrix}
+\frac{7}{2}-\frac{1}{2}x_2 \\
+x_2 \\
+-1
+\end{bmatrix}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(x_2\)</span> er frjáls breyta.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli01/" class="btn btn-neutral float-left" title="1. Línuleg jöfnuhneppi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli03/" class="btn btn-neutral float-right" title="3. Ákveður" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

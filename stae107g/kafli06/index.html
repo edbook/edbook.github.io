@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Innfeldi og hornrétt ofanvörp &mdash; Línuleg Algebra </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Orðaskrá" href="../ordaskra/" />
+    <link rel="prev" title="5. Eigingildi og eiginvigrar" href="../kafli05/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Línuleg Algebra
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Línuleg jöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fylkjaaðgerðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Ákveður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Vigurrúm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Eigingildi og eiginvigrar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Innfeldi og hornrétt ofanvörp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#innfeldi">6.1. Innfeldi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-innfeldi">6.1.1. Skilgreining: Innfeldi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-innfeldi">6.1.1.1. Sýnidæmi: Innfeldi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-um-innfeldi-a-r-n">6.1.2. Reiknireglur um innfeldi á <span class="math notranslate nohighlight">\(\R^n\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#lengd">6.2. Lengd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-lengd">6.2.1. Skilgreining: Lengd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-lengd-vigurs">6.2.1.1. Sýnidæmi: Lengd vigurs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-um-lengd">6.2.2. Reiknireglur um lengd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-einingarvigur">6.2.3. Skilgreining: Einingarvigur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fjarlaegir-i-r-n">6.3. Fjarlægðir í <span class="math notranslate nohighlight">\(\R^n\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-fjarlaeg-milli-punkta-i-r-n">6.3.1. Skilgreining: Fjarlægð milli punkta í <span class="math notranslate nohighlight">\(\R^n\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fjarlaeg-milli-punkta">6.3.1.1. Sýnidæmi: Fjarlægð milli punkta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-um-fjarlaegir">6.3.2. Reiknireglur um fjarlægðir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hornrettir-vigrar">6.4. Hornréttir vigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornrett">6.4.1. Skilgreining: Hornrétt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-horn-milli-vigra">6.4.2. Skilgreining: Horn milli vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regla-pyagorasar">6.4.3. Regla Pýþagórasar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hornrett-fyllirum">6.5. Hornrétt fyllirúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornrett-fyllirum">6.5.1. Skilgreining: Hornrétt fyllirúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hornrett-fyllirum">6.5.2. Setning: Hornrétt fyllirúm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verstae-og-verstolu-mengi">6.6. Þverstæð og þverstöðluð mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-verstae-og-verstolu-mengi">6.6.1. Skilgreining: Þverstæð og þverstöðluð mengi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-verstae-og-verstolu-mengi">6.6.1.1. Sýnidæmi: Þverstæð og þverstöðluð mengi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-verstae-mengi">6.6.1.2. Sýnidæmi: Þverstæð mengi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-verstae-mengi-eru-linulega-oha">6.6.2. Setning: Þverstæð mengi eru línulega óháð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#verstaeir-og-verstalair-grunnar">6.7. Þverstæðir og þverstaðlaðir grunnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-verstaeir-og-verstalair-grunnar">6.7.1. Skilgreining: Þverstæðir og þverstaðlaðir grunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hnit-m-t-t-verstaera-og-verstalaa-grunna">6.7.2. Skilgreining: Hnit m.t.t. þverstæðra og þverstaðlaða grunna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hnit-vigurs-m-t-t-grunns">6.7.2.1. Sýnidæmi: Hnit vigurs m.t.t. grunns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-anna-daemi-um-hnit-vigurs-m-t-t-grunns">6.7.2.2. Sýnidæmi: Annað dæmi um hnit vigurs m.t.t. grunns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hornrett-ofanvarp">6.8. Hornrétt ofanvarp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornrett-ofanvarp">6.8.1. Skilgreining: Hornrétt ofanvarp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hornrett-ofanvarp">6.8.1.1. Sýnidæmi: Hornrétt ofanvarp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornrett-ofanvarp-a-hlutrum">6.8.2. Skilgreining: Hornrétt ofanvarp á hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eiginleikar-ofanvarps">6.8.3. Eiginleikar ofanvarps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hornrettir-grunnar-fyrir-hlutrum">6.8.4. Setning: Hornréttir grunnar fyrir hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hornrett-liun-e-orthogonal-decomposition">6.8.5. Setning: Hornrétt liðun (e. orthogonal decomposition)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-fylki-fyrir-ofanvarp">6.8.6. Skilgreining: Fylki fyrir ofanvarp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gram-schmidt">6.9. Gram-Schmidt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-afer-gram-schmidt">6.9.1. Setning: Aðferð Gram-Schmidt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-gram-schmidt">6.9.1.1. Sýnidæmi: Gram-Schmidt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-finna-verstalaan-grunn-fyrir-hlutrum-w">6.9.1.2. Að finna þverstaðlaðan grunn fyrir hlutrúm <span class="math notranslate nohighlight">\(W\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#afer-minnstu-kvarata">6.10. Aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-afer-minnstu-kvarata">6.10.1. Skilgreining: Aðferð minnstu kvaðrata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-lausnarmengi-afer-minnstu-kvarata">6.10.2. Setning: Lausnarmengi aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-afer-minnstu-kvarata">6.10.2.1. Sýnidæmi: Aðferð minnstu kvaðrata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Innfeldi og hornrétt ofanvörp</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/stae107g/kafli06.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="innfeldi-og-hornrett-ofanvorp">
+<h1><span class="section-number">6. </span>Innfeldi og hornrétt ofanvörp<a class="headerlink" href="#innfeldi-og-hornrett-ofanvorp" title="Permalink to this heading"></a></h1>
+<section id="innfeldi">
+<h2><span class="section-number">6.1. </span>Innfeldi<a class="headerlink" href="#innfeldi" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-innfeldi">
+<h3><span class="section-number">6.1.1. </span>Skilgreining: Innfeldi<a class="headerlink" href="#skilgreining-innfeldi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{u}=(u_1,u_2,\dots,u_n)\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}=(v_1,v_2,\dots,v_n)\)</span> vera vigra í <span class="math notranslate nohighlight">\(\R^n\)</span>.
+<strong>Innfeldi</strong> (e. inner product) er vörpun <span class="math notranslate nohighlight">\(\R^n \times \R^n\ \rightarrow \R\)</span> sem tekur inn tvo vigra <span class="math notranslate nohighlight">\(\bf u\)</span> og <span class="math notranslate nohighlight">\(\bf v\)</span> og skilar tölunni <span class="math notranslate nohighlight">\(\bf u^T v\)</span>.
+Oftast ritað</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{u} \cdot \textbf{v}=\left(
+\begin{array}{cccc}
+u_1 &amp; u_2 &amp; \dots &amp; u_n \\
+\end{array}
+\right)
+\cdot
+\left(
+\begin{array}{c}
+v_1 \\
+v_2 \\
+\dots \\
+v_n \\
+\end{array}
+\right)=
+u_1 v_1 + u_2 v_2 + ... u_n v_n.\end{split}\]</div>
+</div>
+<p>Skilgreina má innfeldi fyrir almenn vigurrúm, ekki bara <span class="math notranslate nohighlight">\(\R^n\)</span>. Stundum er innfeldið á <span class="math notranslate nohighlight">\(\R^n\)</span> kallað <em>depilmargfeldi</em>.</p>
+<section id="synidaemi-innfeldi">
+<h4><span class="section-number">6.1.1.1. </span>Sýnidæmi: Innfeldi<a class="headerlink" href="#synidaemi-innfeldi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{u}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> og
+<span class="math notranslate nohighlight">\(\textbf{v}=\begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span> reiknið innfeldið.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<div class="math notranslate nohighlight">
+\[\textbf{u} \cdot \textbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3+8=11\]</div>
+</div>
+</section>
+</section>
+<section id="reiknireglur-um-innfeldi-a-r-n">
+<h3><span class="section-number">6.1.2. </span>Reiknireglur um innfeldi á <span class="math notranslate nohighlight">\(\R^n\)</span><a class="headerlink" href="#reiknireglur-um-innfeldi-a-r-n" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\bf u,v\)</span> og <span class="math notranslate nohighlight">\(\bf w\)</span> vera vigra í <span class="math notranslate nohighlight">\(\R^n\)</span> og <span class="math notranslate nohighlight">\(c \in \R\)</span>. Þá gildir</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\bf u \cdot v = \bf v \cdot u\)</span>.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\((\ve u+ \ve v)\cdot \ve w = \bf u \cdot w + v \cdot u\)</span>.</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\((c \ve u)\cdot  \ve v = c ( \ve u\cdot \ve v)= \ve u \cdot (c \ve v)\)</span>.</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(\ve u \cdot \ve u \geq 0\)</span>, og <span class="math notranslate nohighlight">\(\ve u \cdot \ve u = 0\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(\bf u=0\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="lengd">
+<h2><span class="section-number">6.2. </span>Lengd<a class="headerlink" href="#lengd" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-lengd">
+<h3><span class="section-number">6.2.1. </span>Skilgreining: Lengd<a class="headerlink" href="#skilgreining-lengd" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{u}=(u_1,u_2,\dots,u_n)\)</span> vera vigur í <span class="math notranslate nohighlight">\(\R^n\)</span>. <strong>Lengd</strong>, stundum kallað <em>staðall</em> eða <em>norm</em>, vigursins <span class="math notranslate nohighlight">\(\bf u\)</span> er talan</p>
+<div class="math notranslate nohighlight">
+\[||\ve u||:=\sqrt{\ve u \cdot \ve u}=\sqrt{u_1^2+u_2^2+\dots + u_n^2}\]</div>
+</div>
+<section id="synidaemi-lengd-vigurs">
+<h4><span class="section-number">6.2.1.1. </span>Sýnidæmi: Lengd vigurs<a class="headerlink" href="#synidaemi-lengd-vigurs" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknið lengd vigursins <span class="math notranslate nohighlight">\(\textbf{u} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\)</span></p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<div class="math notranslate nohighlight">
+\[||\textbf{u}|| = ||(1,2,3)||=\sqrt{1^2+2^2+3^2}=\sqrt{1+4+9}=\sqrt{14}\]</div>
+</div>
+</section>
+</section>
+<section id="reiknireglur-um-lengd">
+<h3><span class="section-number">6.2.2. </span>Reiknireglur um lengd<a class="headerlink" href="#reiknireglur-um-lengd" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\bf u\)</span> og <span class="math notranslate nohighlight">\(\bf v\)</span> vera vigra í <span class="math notranslate nohighlight">\(\R^n\)</span> og <span class="math notranslate nohighlight">\(c \in \R\)</span>. Þá gildir</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(||\ve u||\geq 0\)</span> og <span class="math notranslate nohighlight">\(||\ve u||=0\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(\ve u=\ve 0\)</span>.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(|| \ve u + \ve v || \leq ||\ve u|| + ||\ve v||\)</span>.</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(|| c \ve u|| = |c| ||\ve u||\)</span>.</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(|\ve u \cdot\ve v | \leq ||\ve u || || \ve v ||\)</span></p>
+</div>
+</section>
+<section id="skilgreining-einingarvigur">
+<h3><span class="section-number">6.2.3. </span>Skilgreining: Einingarvigur<a class="headerlink" href="#skilgreining-einingarvigur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Vigur <span class="math notranslate nohighlight">\(\ve u \in \R^n\)</span> sem hefur lengdina <span class="math notranslate nohighlight">\(||\ve u||=1\)</span> kallast <strong>einingarvigur</strong> (e. unit vector). Stundum ritað <span class="math notranslate nohighlight">\(\hat{\ve u}\)</span>.</p>
+</div>
+<p>Sérhvern vigur <span class="math notranslate nohighlight">\(\ve u \in \R^n\)</span> (að undanskildum núllvigri) má <em>staðla</em>, þ.e. gera að einingarvigri, með því að deila með lengdinni, <span class="math notranslate nohighlight">\(\hat{\ve u} = \ve u / || \ve u ||\)</span>.</p>
+</section>
+</section>
+<section id="fjarlaegir-i-r-n">
+<h2><span class="section-number">6.3. </span>Fjarlægðir í <span class="math notranslate nohighlight">\(\R^n\)</span><a class="headerlink" href="#fjarlaegir-i-r-n" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-fjarlaeg-milli-punkta-i-r-n">
+<h3><span class="section-number">6.3.1. </span>Skilgreining: Fjarlægð milli punkta í <span class="math notranslate nohighlight">\(\R^n\)</span><a class="headerlink" href="#skilgreining-fjarlaeg-milli-punkta-i-r-n" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> vera vigra í <span class="math notranslate nohighlight">\(\R^n\)</span>. <strong>Fjarlægðin</strong> milli <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> er skilgreind sem lengdin á vigrinum <span class="math notranslate nohighlight">\(\ve u- \ve v\)</span>, þ.e.</p>
+<div class="math notranslate nohighlight">
+\[d(\ve u, \ve v):=||\ve u - \ve v || = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_n-v_n)^2}.\]</div>
+</div>
+<p>Í skilgreiningunni hér að ofan hugsum við um <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> ýmist sem vigra eða punkt í <span class="math notranslate nohighlight">\(\R^n\)</span>. Á eftirfarandi mynd má sjá fjarlægð milli tveggja vigra.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lengd.png"><img alt="../_images/lengd.png" src="../_images/lengd.png" style="width: 271.6px; height: 173.8px;" /></a>
+</figure>
+<section id="synidaemi-fjarlaeg-milli-punkta">
+<h4><span class="section-number">6.3.1.1. </span>Sýnidæmi: Fjarlægð milli punkta<a class="headerlink" href="#synidaemi-fjarlaeg-milli-punkta" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknum fjarlægð milli <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> og  <span class="math notranslate nohighlight">\(\begin{bmatrix} -3 \\ 4 \end{bmatrix}\)</span></p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{(1-(-3))^2+(2-4)^2}=\sqrt{4^2+(-2)^2}=\sqrt{16+4}=\sqrt{20}\]</div>
+</div>
+</section>
+</section>
+<section id="reiknireglur-um-fjarlaegir">
+<h3><span class="section-number">6.3.2. </span>Reiknireglur um fjarlægðir<a class="headerlink" href="#reiknireglur-um-fjarlaegir" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<dl>
+<dt>Látum <span class="math notranslate nohighlight">\(\ve u, \ve v\)</span> og <span class="math notranslate nohighlight">\(\ve w\)</span> vera punkta í <span class="math notranslate nohighlight">\(\R^n\)</span>. Þá gildir</dt><dd><p><strong>1.</strong> <span class="math notranslate nohighlight">\(d(\ve u, \ve v) \geq 0\)</span> og <span class="math notranslate nohighlight">\(d(\ve u, \ve v)=0\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(\ve u= \ve v\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(d(\ve u, \ve v) = d(\ve v, \ve u)\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(d(\ve u, \ve w) \leq d(\ve u + \ve v) + d(\ve v + \ve w)\)</span></p>
+</dd>
+</dl>
+</div>
+<p>Fall <span class="math notranslate nohighlight">\(d: \R^n \times \R^n \rightarrow \R\)</span> sem uppfyllir þessi þrjú skilyrði kallast <em>firð</em> (e. metric).</p>
+</section>
+</section>
+<section id="hornrettir-vigrar">
+<h2><span class="section-number">6.4. </span>Hornréttir vigrar<a class="headerlink" href="#hornrettir-vigrar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-hornrett">
+<h3><span class="section-number">6.4.1. </span>Skilgreining: Hornrétt<a class="headerlink" href="#skilgreining-hornrett" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> vera vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.
+Vigrarnir <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> eru sagðir <strong>hornréttir</strong> (á hvorn annan) (e. orthogonal)
+ef <span class="math notranslate nohighlight">\(\ve u \cdot \ve v=0\)</span></p>
+</div>
+</section>
+<section id="skilgreining-horn-milli-vigra">
+<h3><span class="section-number">6.4.2. </span>Skilgreining: Horn milli vigra<a class="headerlink" href="#skilgreining-horn-milli-vigra" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> eru vigrar í  <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, sem er hvorugur núll, þá
+skilgreinum við <strong>hornið milli</strong> (e. angle between) þeirra sem töluna</p>
+<div class="math notranslate nohighlight">
+\[\theta = \arccos\big(\frac{\textbf{u}\cdot\textbf{v}}{||\textbf{u}|| ||\textbf{v}||}\big)\]</div>
+</div>
+</section>
+<section id="regla-pyagorasar">
+<h3><span class="section-number">6.4.3. </span>Regla Pýþagórasar<a class="headerlink" href="#regla-pyagorasar" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Vigrarnir <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> eru hornréttir hvor á annan þá
+og því aðeins að</p>
+<div class="math notranslate nohighlight">
+\[||\ve u||^2+||\ve v||^2=||\ve u + \ve v||^2\]</div>
+</div>
+</section>
+</section>
+<section id="hornrett-fyllirum">
+<h2><span class="section-number">6.5. </span>Hornrétt fyllirúm<a class="headerlink" href="#hornrett-fyllirum" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-hornrett-fyllirum">
+<h3><span class="section-number">6.5.1. </span>Skilgreining: Hornrétt fyllirúm<a class="headerlink" href="#skilgreining-hornrett-fyllirum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera mengi vigra í <span class="math notranslate nohighlight">\(\R^n\)</span>. <strong>Hornrétt fyllirúm</strong> (e. orthogonal complement) er mengi <span class="math notranslate nohighlight">\(W^{\perp}\)</span> allra þeirra vigra í <span class="math notranslate nohighlight">\(\R^n\)</span> sem eru hornréttir á sérhvern vigur í <span class="math notranslate nohighlight">\(W\)</span>, þ.e.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[W^{\perp}=\{ z \in \R^n : z \cdot w =0, \forall w \in W \}\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-hornrett-fyllirum">
+<h3><span class="section-number">6.5.2. </span>Setning: Hornrétt fyllirúm<a class="headerlink" href="#setning-hornrett-fyllirum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p><strong>a.</strong> Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutmengi í <span class="math notranslate nohighlight">\(\R^n\)</span>. Hornrétta fyllirúmið <span class="math notranslate nohighlight">\(W^{\perp}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+<p><strong>b.</strong> Ef <span class="math notranslate nohighlight">\(W\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span> þá <span class="math notranslate nohighlight">\(W \cap W^{\perp}=\{\ve 0\}\)</span> og <span class="math notranslate nohighlight">\((W^{\perp})^{\perp}=W\)</span>.</p>
+<p><strong>c.</strong> Látum <span class="math notranslate nohighlight">\(W=\text{Span}\{v_1,...,v_p\}\)</span>. Vigur <span class="math notranslate nohighlight">\(x\)</span> er í <span class="math notranslate nohighlight">\(W^{\perp}\)</span> ef og aðeins ef hann er hornréttur á sérhvern vigranna <span class="math notranslate nohighlight">\(v_1,...,v_p\)</span>.</p>
+<p><strong>d.</strong> Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki. Þá er <span class="math notranslate nohighlight">\(\text{Row}(A)^{\perp}=\text{Nul}(A)\)</span> og <span class="math notranslate nohighlight">\(\text{Col}(A)^{\perp}=\text{Nul}(A^{T})\)</span>.</p>
+</div>
+<p>Sönnum <strong>a.</strong> í setningunni hér að ofan.</p>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutmengi í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+<blockquote>
+<div><p><strong>1.</strong> Vigurinn <span class="math notranslate nohighlight">\(\ve 0\)</span> er hornréttur á öll stök í <span class="math notranslate nohighlight">\(W\)</span> svo <span class="math notranslate nohighlight">\(\ve 0 \in W^\perp\)</span>.</p>
+<p><strong>2.</strong> Látum <span class="math notranslate nohighlight">\(\ve u, \ve v \in W^\perp\)</span> og látum <span class="math notranslate nohighlight">\(\ve w\)</span> vera hvaða vigur sem er í <span class="math notranslate nohighlight">\(W\)</span>.
+Þá er</p>
+<p><span class="math notranslate nohighlight">\((\ve u + \ve v)\cdot\ve w = \ve u \cdot \ve w + \ve v \cdot \ve w =0+0=0\)</span></p>
+<p>svo <span class="math notranslate nohighlight">\((\ve u+\ve v)\)</span> er hornrétt á alla vigra <span class="math notranslate nohighlight">\(W\)</span> og því er <span class="math notranslate nohighlight">\((\ve u + \ve v) \in W^\perp\)</span>.</p>
+<p><strong>3.</strong> Látum <span class="math notranslate nohighlight">\(\ve u \in W^\perp\)</span>, <span class="math notranslate nohighlight">\(\ve w\)</span> vera hvaða vigru sem er í <span class="math notranslate nohighlight">\(W\)</span> og <span class="math notranslate nohighlight">\(c\)</span> vera rauntölu. Þá er</p>
+<div class="math notranslate nohighlight">
+\[(c\textbf{u})\cdot \textbf{w} = c\ve u \cdot \ve w = c \cdot 0 = 0\]</div>
+<p>svo <span class="math notranslate nohighlight">\(c\ve u\)</span> er hornréttu á alla vigra í <span class="math notranslate nohighlight">\(W\)</span> og því er <span class="math notranslate nohighlight">\(c\ve u\in W^\perp\)</span>.</p>
+</div></blockquote>
+<p>Þetta sýnir að <span class="math notranslate nohighlight">\(W^\perp\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="verstae-og-verstolu-mengi">
+<h2><span class="section-number">6.6. </span>Þverstæð og þverstöðluð mengi<a class="headerlink" href="#verstae-og-verstolu-mengi" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-verstae-og-verstolu-mengi">
+<h3><span class="section-number">6.6.1. </span>Skilgreining: Þverstæð og þverstöðluð mengi<a class="headerlink" href="#skilgreining-verstae-og-verstolu-mengi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Mengi <span class="math notranslate nohighlight">\(W\)</span> í <span class="math notranslate nohighlight">\(\R^n\)</span> er <strong>þverstætt</strong> (e. orthogonal) ef sérhverjir tveir vigrar í menginu eru hornréttir hvor á annan.
+Mengið er sagt <strong>þverstaðlað</strong> (e. orthonormal) ef það er þverstætt og allir vigrarnir í <span class="math notranslate nohighlight">\(W\)</span> hafa lengdina 1.</p>
+</div>
+<section id="synidaemi-verstae-og-verstolu-mengi">
+<h4><span class="section-number">6.6.1.1. </span>Sýnidæmi: Þverstæð og þverstöðluð mengi<a class="headerlink" href="#synidaemi-verstae-og-verstolu-mengi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p><strong>1.</strong> Venjulegi grunnurinn <span class="math notranslate nohighlight">\(\{\ve e_1, \dots, \ve e_n \}\)</span> í <span class="math notranslate nohighlight">\(\R^n\)</span> er þverstaðlað mengi. Þeir hafa allir lengdina einn þar sem þeir eru einingarvigrar og þeir eru hornréttir samkvæmt skilgreiningu.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(\{v_1, v_2, v_3 \}\)</span> þar sem <span class="math notranslate nohighlight">\(v_1=(3,1,1), v_2=(-1,2,1)\)</span> og <span class="math notranslate nohighlight">\(v_3=(-1/2,-2,7/2)\)</span> er þverstætt mengi. Það má auðveldlega sannfæra sig að svo sé með því að sýna fram á að öll innfeldin <span class="math notranslate nohighlight">\(v_1 \cdot v_2, v_1 \cdot v_3\)</span> og <span class="math notranslate nohighlight">\(v_2 \cdot v_3\)</span> séu núll, og lengdir vigranna eru ekki 1.</p>
+</div>
+</section>
+<section id="synidaemi-verstae-mengi">
+<h4><span class="section-number">6.6.1.2. </span>Sýnidæmi: Þverstæð mengi<a class="headerlink" href="#synidaemi-verstae-mengi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið dæmi um þrjá vigra sem mynda þverstætt mengi og þrjá vigra sem gera það ekki, af eftirfarandi vigrum.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\ve u=\begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix},
+\ve v=\begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix},
+\ve w=\begin{bmatrix} 1 \\ 1 \\ -1 \end{bmatrix},
+\ve q=\begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix}.\end{split}\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Athugum fyrst <span class="math notranslate nohighlight">\(\ve u, \ve v\)</span> og <span class="math notranslate nohighlight">\(\ve w\)</span>.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\ve u \cdot \ve v = (1)(2)+(-2)(1)+(0)(3)=0\]</div>
+<div class="math notranslate nohighlight">
+\[\ve v \cdot \ve w = (2)(1)+(1)(1)+(3)(-1)=0\]</div>
+<div class="math notranslate nohighlight">
+\[\ve u \cdot \ve w = (1)(1)+(-2)(1)+(0)(-1)=-1\]</div>
+</div></blockquote>
+<p>Þar sem innfeldið er ekki 0 í öllum tilfellum svo vigrarnir mynda ekki þverstætt mengi.</p>
+<p>Athugum því næst <span class="math notranslate nohighlight">\(\ve u, \ve v\)</span> og <span class="math notranslate nohighlight">\(\ve q\)</span>.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\ve u \cdot \ve v = (1)(2)+(-2)(1)+(0)(3)=0\]</div>
+<div class="math notranslate nohighlight">
+\[\ve v \cdot \ve q = (2)(0)+(1)(0)+(0)(3)=0\]</div>
+<div class="math notranslate nohighlight">
+\[\ve u \cdot \ve q = (1)(0)+(-2)(0)+(0)(3)=0\]</div>
+</div></blockquote>
+<p>Þar sem innfeldið er 0 í öllum tilfellum mynda vigrarnir þverstætt mengi.</p>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/thverstaed.png"><img alt="../_images/thverstaed.png" src="../_images/thverstaed.png" style="width: 515.1999999999999px; height: 315.0px;" /></a>
+</figure>
+</section>
+</section>
+<section id="setning-verstae-mengi-eru-linulega-oha">
+<h3><span class="section-number">6.6.2. </span>Setning: Þverstæð mengi eru línulega óháð<a class="headerlink" href="#setning-verstae-mengi-eru-linulega-oha" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(S=\{\ve u_1, \dots, \ve u_p\}\)</span> vera þverstætt hlutmengi í <span class="math notranslate nohighlight">\(\R^n\)</span> sem inniheldur engan núllvigur.
+Þá er <span class="math notranslate nohighlight">\(S\)</span> línulega óháð og er því grunnur fyrir hlutmengið spannað af <span class="math notranslate nohighlight">\(S\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="verstaeir-og-verstalair-grunnar">
+<h2><span class="section-number">6.7. </span>Þverstæðir og þverstaðlaðir grunnar<a class="headerlink" href="#verstaeir-og-verstalair-grunnar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-verstaeir-og-verstalair-grunnar">
+<h3><span class="section-number">6.7.1. </span>Skilgreining: Þverstæðir og þverstaðlaðir grunnar<a class="headerlink" href="#skilgreining-verstaeir-og-verstalair-grunnar" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span> og <span class="math notranslate nohighlight">\(\{\ve u_1, \dots, \ve u_p \}\)</span> vera grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>1.</strong> Grunnurinn fyrir <span class="math notranslate nohighlight">\(W\)</span> er <strong>þverstæður</strong> (e. orthogonal basis) ef sérhverjir tveir ólíkir vigrar í grunninum eru hornréttir hvor á annan, m.o.ö.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[u_i \cdot u_j =0\  \text{ ef } \ i \neq j.\]</div>
+</div></blockquote>
+<p><strong>2.</strong> Grunnurinn fyrir <span class="math notranslate nohighlight">\(W\)</span> er <strong>þverstaðlaður</strong> (e. orthonormal basis) ef sérhverjir tveir vigrar í grunninum eru hornréttir hvor og annan og allir vigrarnir eru einingarvigrar, m.ö.o.</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}u_i \cdot u_j = \begin{cases}
+1\ \text{ ef } \ i = j \\
+0\ \text{ ef } \ i \neq j
+\end{cases}\end{split}\]</div>
+</div></blockquote>
+</div>
+<p>Sýnidæmi <span class="math notranslate nohighlight">\(\bf 6.6.1.1.\)</span> um þverstæð og þverstöðluð mengi er einnig dæmi um þverstæða og þverstaðlaða grunna.</p>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ef mengið <span class="math notranslate nohighlight">\(\{\ve v_1, \dots, \ve v_p \}\)</span> er þverstæður grunnur fyrir hlutrúm <span class="math notranslate nohighlight">\(W\)</span> í <span class="math notranslate nohighlight">\(\R^n\)</span> þá er mengið</p>
+<div class="math notranslate nohighlight">
+\[\Big\{ \frac{\ve v_1}{|| \ve v_1 ||}, \dots, \frac{\ve v_p}{|| \ve v_p ||} \Big\}\]</div>
+<p>þverstaðlaður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span>. Niðurstaðan er sú að ef við höfum þverstæðan grunn er hægt að búa til þverstaðlaðan grunn.</p>
+</div>
+</section>
+<section id="skilgreining-hnit-m-t-t-verstaera-og-verstalaa-grunna">
+<h3><span class="section-number">6.7.2. </span>Skilgreining: Hnit m.t.t. þverstæðra og þverstaðlaða grunna<a class="headerlink" href="#skilgreining-hnit-m-t-t-verstaera-og-verstalaa-grunna" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span> og <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve u_1, \dots, \ve u_p \}\)</span> vera grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>1.</strong> Ef <span class="math notranslate nohighlight">\(\ve y \in W\)</span> og <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> er þverstæður þá er</p>
+<div class="math notranslate nohighlight">
+\[\ve y = c_1 \ve u_1 + \dots + c_p \ve u_p\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[c_j = \frac{\ve y \cdot \ve u_j}{\ve u_j \cdot \ve u_j},\ \text{fyrir}\ j=1,...,p.\]</div>
+<p>Þ.e., hnitavigur <span class="math notranslate nohighlight">\(\ve y\)</span> m.t.t. grunnsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[[\ve y]_{\mathcal{B}} = \Big(\frac{\ve y \cdot \ve u_1}{\ve u_1 \cdot \ve u_1}, \dots, \frac{\ve y \cdot \ve u_p}{\ve u_p \cdot \ve u_p} \Big).\]</div>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(\ve y \in W\)</span> og <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> er þverstaðlaður þá er</p>
+<div class="math notranslate nohighlight">
+\[\ve y = c_1 \ve u_1 + \dots + c_p \ve u_p\]</div>
+<p>þar sem</p>
+<div class="math notranslate nohighlight">
+\[c_j = \ve y \cdot \ve u_j,\ \text{fyrir}\ j=1,...,p.\]</div>
+<p>Þ.e., hnitavigur <span class="math notranslate nohighlight">\(\ve y\)</span> m.t.t. grunnsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[[\ve y]_{\mathcal{B}} = \Big(\ve y \cdot \ve u_1, \dots, \ve y \cdot \ve u_p \Big).\]</div>
+</div>
+<section id="synidaemi-hnit-vigurs-m-t-t-grunns">
+<h4><span class="section-number">6.7.2.1. </span>Sýnidæmi: Hnit vigurs m.t.t. grunns<a class="headerlink" href="#synidaemi-hnit-vigurs-m-t-t-grunns" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reikna á hint vigursins <span class="math notranslate nohighlight">\(\ve v = (3,-2)\)</span> m.t.t. grunnanna <span class="math notranslate nohighlight">\(\mathcal{B}=\{(1,1),(-1,1) \}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{C}=\{\frac{1}{\sqrt{2}}(1,1), \frac{1}{\sqrt{2}}(-1,1) \}\)</span> fyrir <span class="math notranslate nohighlight">\(\R^2\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p><strong>1.</strong> Hnit <span class="math notranslate nohighlight">\(\ve v\)</span> m.t.t. þverstæða grunnsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> eru</p>
+<div class="math notranslate nohighlight">
+\[c_1 = \frac{(3,-2)\cdot (1,1)}{(1,1)\cdot (1,1)}=\frac{1}{2},\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[c_2 = \frac{(3,-2)\cdot(-1,1)}{(-1,1)\cdot (-1,1)}=\frac{-5}{2},\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[(3,-2)=c_1 (1,1)+ c_2 (-1,1)=\frac{1}{2}(1,1) - \frac{5}{2}(-1,1)\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[[(3,-2)]_{\mathcal{B}}=(\frac{1}{2},\frac{-5}{2}).\]</div>
+<p><strong>2.</strong> Hnit <span class="math notranslate nohighlight">\(\ve v\)</span> m.t.t. þverstaðlaða grunnsins <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> eru</p>
+<div class="math notranslate nohighlight">
+\[c_1 = (3,-2)\cdot \big(\frac{1}{\sqrt{2}}(1,1) \big)= \frac{1}{\sqrt{2}}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[c_2 = (3,-2)\cdot \big(\frac{1}{\sqrt{2}}(-1,1) \big)= \frac{-5}{\sqrt{2}}\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[[(3,-2)]_{\mathcal{C}}=(\frac{1}{\sqrt{2}},\frac{-5}{\sqrt{2}}).\]</div>
+</div>
+</section>
+<section id="synidaemi-anna-daemi-um-hnit-vigurs-m-t-t-grunns">
+<h4><span class="section-number">6.7.2.2. </span>Sýnidæmi: Annað dæmi um hnit vigurs m.t.t. grunns<a class="headerlink" href="#synidaemi-anna-daemi-um-hnit-vigurs-m-t-t-grunns" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið hnit punktsins <span class="math notranslate nohighlight">\(\ve y=(1,1,1)\)</span> með tilliti til þverstæða grunnsins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{B}=
+\left\{
+\begin{bmatrix} 1 \\ -2 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix}
+\right\}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum að</p>
+<div class="math notranslate nohighlight">
+\[c_1 = \frac{(1,1,1)\cdot (1,-2,0)}{(1,-2,0)\cdot (1,-2,0)}=
+\frac{1-2+0}{1+(-2)^2+0^2}=-\frac{1}{5}\]</div>
+<div class="math notranslate nohighlight">
+\[c_2 = \frac{(1,1,1)\cdot (2,1,0)}{(2,1,0)\cdot (2,1,0)}=
+\frac{2+1+0}{2^2+1^2+0^2}=\frac{3}{5}\]</div>
+<div class="math notranslate nohighlight">
+\[c_3 = \frac{(1,1,1)\cdot (0,0,3)}{(0,0,3)\cdot(0,0,3)}=
+\frac{0+0+3}{0^2+0^2+3^2}=\frac{3}{9}=\frac{1}{3}\]</div>
+<p>Svo</p>
+<div class="math notranslate nohighlight">
+\[[\ve y]_\mathcal{B}=\left(-\frac{1}{5}, \frac{3}{5}, \frac{1}{3}\right)\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="hornrett-ofanvarp">
+<h2><span class="section-number">6.8. </span>Hornrétt ofanvarp<a class="headerlink" href="#hornrett-ofanvarp" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-hornrett-ofanvarp">
+<h3><span class="section-number">6.8.1. </span>Skilgreining: Hornrétt ofanvarp<a class="headerlink" href="#skilgreining-hornrett-ofanvarp" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\ve u \neq \ve 0\)</span> og <span class="math notranslate nohighlight">\(\ve y\)</span> vera vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.
+Við skilgreinum</p>
+<div class="math notranslate nohighlight">
+\[\hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}\cdot \ve u\]</div>
+<p>sem <strong>hornrétt ofanvarp</strong> (e. orthogonal projection) <span class="math notranslate nohighlight">\(\ve y\)</span> á <span class="math notranslate nohighlight">\(\ve u\)</span>. Stundum er ofanvarp táknað með <span class="math notranslate nohighlight">\(\text{proj}(\ve y)\)</span>.</p>
+</div>
+<p>Liða má vigur <span class="math notranslate nohighlight">\(\ve y \in \R\)</span> upp í samsíða og hornréttan þátt, þ.e. <span class="math notranslate nohighlight">\(\ve y=\hat{\ve y}+\ve z\)</span>, eins og sjá má á eftirfarandi mynd.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ofanvarp.png"><img alt="../_images/ofanvarp.png" src="../_images/ofanvarp.png" style="width: 385.2px; height: 391.2px;" /></a>
+</figure>
+<p>Punkturinn <span class="math notranslate nohighlight">\(\hat{\ve y}\)</span> er sá punktur á línunni í planinu sem er í minnstri fjarlægð frá punktinum <span class="math notranslate nohighlight">\(\ve y\)</span>.</p>
+<section id="synidaemi-hornrett-ofanvarp">
+<h4><span class="section-number">6.8.1.1. </span>Sýnidæmi: Hornrétt ofanvarp<a class="headerlink" href="#synidaemi-hornrett-ofanvarp" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reikna á hornrétt
+ofanvarp <span class="math notranslate nohighlight">\(\ve u=(3,1)\)</span> á <span class="math notranslate nohighlight">\(\ve y=(1,3)\)</span>, þverþáttinn <span class="math notranslate nohighlight">\(\ve z\)</span> og <span class="math notranslate nohighlight">\(||\ve z ||\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\ve y} = \frac{\ve y \cdot \ve u}{\ve u \cdot \ve u}=\frac{(3,1)\cdot(1,3)}{(3,1)\cdot(3,1)}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{6}{10}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\frac{3}{5}\begin{bmatrix} 3 \\ 1 \end{bmatrix}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix},\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ve z = \ve y - \hat{\ve y}=\begin{bmatrix}1 \\3 \end{bmatrix}-\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}.\end{split}\]</div>
+<p>Í kjölfarið finnum við fjarlægð <span class="math notranslate nohighlight">\(\ve y\)</span> frá rúminu sem <span class="math notranslate nohighlight">\(\ve u\)</span> spannar, þ.e.
+<span class="math notranslate nohighlight">\(||\ve z||\)</span>, með</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{\left(-\frac{4}{5}\right)^2+\left(\frac{12}{5}\right)^2}=\sqrt{\frac{16}{25}+\frac{144}{25}}=\sqrt{32}.\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausnir prófaðar</p>
+<p>Við fengum að
+<span class="math notranslate nohighlight">\(\hat{\ve y}=\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}\)</span> og
+<span class="math notranslate nohighlight">\(\hat{\ve z}=\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}\)</span>. Prófum þessar lausnir</p>
+<blockquote>
+<div><p><strong>1.</strong>  <span class="math notranslate nohighlight">\(\ve y\)</span> er summan af  <span class="math notranslate nohighlight">\(\hat{\ve y}\)</span> og  <span class="math notranslate nohighlight">\(\ve z\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\ve y}+\ve z =\begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix}+\begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix}=\begin{bmatrix} 1 \\ 3 \end{bmatrix}.\end{split}\]</div>
+<p>Já.</p>
+<p><strong>2.</strong>  <span class="math notranslate nohighlight">\(\hat{\ve y}\)</span> er samsíða <span class="math notranslate nohighlight">\(\ve u\)</span> því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\ve y} = \begin{bmatrix} \frac{9}{5} \\ \frac{3}{5} \end{bmatrix} = \frac{3}{5} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \frac{3}{5} \ve u.\end{split}\]</div>
+<p>Já.</p>
+<p><strong>3.</strong>  <span class="math notranslate nohighlight">\(\ve z\)</span> er hornrétt á <span class="math notranslate nohighlight">\(\ve u\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ve z \cdot \ve u = \begin{bmatrix} -\frac{4}{5} \\ \frac{12}{5} \end{bmatrix} \cdot \begin{bmatrix} 3 \\1 \end{bmatrix} = -\frac{12}{3}+\frac{12}{3}=0.\end{split}\]</div>
+<p>Já.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="skilgreining-hornrett-ofanvarp-a-hlutrum">
+<h3><span class="section-number">6.8.2. </span>Skilgreining: Hornrétt ofanvarp á hlutrúm<a class="headerlink" href="#skilgreining-hornrett-ofanvarp-a-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm og <span class="math notranslate nohighlight">\(\ve y\)</span> vera vigur í <span class="math notranslate nohighlight">\(\R^n\)</span>. Við skilgreinum <strong>hornrétt ofanvarp á hlutrúm</strong> <span class="math notranslate nohighlight">\(W\)</span> sem
+<span class="math notranslate nohighlight">\(\text{proj}_W: \R^n \rightarrow \R^n\)</span> þannig að <span class="math notranslate nohighlight">\(\text{proj}_W \ve y = \hat{\ve y}\in W\)</span> er hornrétt ofanvarp vigurs <span class="math notranslate nohighlight">\(\ve y\)</span> á <span class="math notranslate nohighlight">\(W\)</span> og
+<span class="math notranslate nohighlight">\(\ve z=\ve y - \hat{\ve y} \in W^{\perp}\)</span>.</p>
+</div>
+</section>
+<section id="eiginleikar-ofanvarps">
+<h3><span class="section-number">6.8.3. </span>Eiginleikar ofanvarps<a class="headerlink" href="#eiginleikar-ofanvarps" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+<blockquote>
+<div><p><strong>1.</strong> Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve y \in \R^n\)</span> þá er <span class="math notranslate nohighlight">\(\text{proj}_W(\ve y) \in W\)</span>.</p>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(\ve y \in W\)</span> þá er <span class="math notranslate nohighlight">\(\text{proj}_W \ve y=\ve y\)</span>.</p>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(\ve y \in W^\perp\)</span> þá er <span class="math notranslate nohighlight">\(\text{proj}_W \ve y=\ve 0\)</span></p>
+<p><strong>4.</strong> Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve y \in \mathbb{R}^n\)</span> gildir að <span class="math notranslate nohighlight">\(\text{proj}_W(\text{proj}_W \ve y)=\text{proj}_W \ve y\)</span> svo
+um vörpunina <span class="math notranslate nohighlight">\(\text{proj}_W\)</span> gildir því að <span class="math notranslate nohighlight">\(\text{proj}_W \circ  \text{proj}_W = \text{proj}_W\)</span></p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-hornrettir-grunnar-fyrir-hlutrum">
+<h3><span class="section-number">6.8.4. </span>Setning: Hornréttir grunnar fyrir hlutrúm<a class="headerlink" href="#setning-hornrettir-grunnar-fyrir-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>. Ef <span class="math notranslate nohighlight">\(\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}\)</span> er þverstæður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span> þá er</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(W=\text{span}\{\ve u_1, \cdots \ve u_p\}\)</span>.</p>
+<p><strong>2.</strong> Mengið <span class="math notranslate nohighlight">\(\{\ve u_1, \cdots \ve u_p\}\)</span> er línulega óháð.</p>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(i \neq j\)</span> þá eru <span class="math notranslate nohighlight">\(\ve u_i\)</span> og  <span class="math notranslate nohighlight">\(\ve u_j\)</span> hornréttir horn á annan, m.ö.o.  <span class="math notranslate nohighlight">\(\ve u_i \cdot \ve u_j =0\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-hornrett-liun-e-orthogonal-decomposition">
+<h3><span class="section-number">6.8.5. </span>Setning: Hornrétt liðun (e. orthogonal decomposition)<a class="headerlink" href="#setning-hornrett-liun-e-orthogonal-decomposition" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm og <span class="math notranslate nohighlight">\(\ve y\)</span> vera vigur í <span class="math notranslate nohighlight">\(\R^n\)</span>. Þá er til ótvírætt ákvarðaður vigur <span class="math notranslate nohighlight">\(\hat{\ve y}\in W\)</span> þannig að <span class="math notranslate nohighlight">\(\ve z = \ve y - \hat{\ve y}\in W^{\perp}\)</span>.
+Ef <span class="math notranslate nohighlight">\(\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}\)</span> er þverstæður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\hat{\ve y} = \frac{\ve y \cdot \ve u_1}{\ve u_1 \cdot \ve u_1} \ve u_1 + \frac{\ve y \cdot \ve u_2}{\ve u_2 \cdot \ve u_2} \ve u_2 + \cdots + \frac{\ve y \cdot \ve u_p}{\ve u_p \cdot \ve u_p} \ve u_p.\]</div>
+<p>Eins ef <span class="math notranslate nohighlight">\(\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}\)</span> er þverstaðlaður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\hat{\ve y} = (\ve y \cdot \ve u_1)\ve u_1 + (\ve y \cdot \ve u_2)\ve u_2 + \cdots + (\ve y \cdot \ve u_p)\ve u_p.\]</div>
+</div>
+</section>
+<section id="skilgreining-fylki-fyrir-ofanvarp">
+<h3><span class="section-number">6.8.6. </span>Skilgreining: Fylki fyrir ofanvarp<a class="headerlink" href="#skilgreining-fylki-fyrir-ofanvarp" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(W\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> og gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(\{ \ve u_1, \ve u_2, \cdots, \ve u_p \}\)</span> sé þverstaðlaður grunnur fyrir
+<span class="math notranslate nohighlight">\(W\)</span>. Skilgreinum <span class="math notranslate nohighlight">\(n \times p\)</span> fylkið</p>
+<div class="math notranslate nohighlight">
+\[U = \begin{bmatrix} \ve u_1 &amp; \ve u_2 &amp; \cdots &amp; \ve u_p \end{bmatrix}\]</div>
+<p>Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve y \in \mathbb{R}^n\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\text{proj}_W \ve y = UU^T \ve y.\]</div>
+<p>Fylkið <span class="math notranslate nohighlight">\(P_W=UU^T\)</span> er af stærð <span class="math notranslate nohighlight">\(n \times n\)</span> og er kallað <strong>ofanvarpsfylkið</strong> (e. projection matrix) á hlutrúmið <span class="math notranslate nohighlight">\(W\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="gram-schmidt">
+<h2><span class="section-number">6.9. </span>Gram-Schmidt<a class="headerlink" href="#gram-schmidt" title="Permalink to this heading"></a></h2>
+<p>Aðferð Gram-Schmidt er reiknirit til þess að búa til þverstæðan eða þverstaðlaðan grunn fyrir hlutrúm, að undanskildu núllrúmi, í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+<section id="setning-afer-gram-schmidt">
+<h3><span class="section-number">6.9.1. </span>Setning: Aðferð Gram-Schmidt<a class="headerlink" href="#setning-afer-gram-schmidt" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\{\ve x_1, \cdots, \ve x_p\}\)</span> vera grunn fyrir hlutrúm <span class="math notranslate nohighlight">\(W\)</span> ( og <span class="math notranslate nohighlight">\(W \neq {\ve 0}\)</span>)
+í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Setjum</p>
+<div class="math notranslate nohighlight">
+\[\ve v_1 = \ve x_1\]</div>
+<div class="math notranslate nohighlight">
+\[\ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1\]</div>
+<div class="math notranslate nohighlight">
+\[\ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2\]</div>
+<div class="math notranslate nohighlight">
+\[\vdots\]</div>
+<div class="math notranslate nohighlight">
+\[\ve v_p = \ve x_p- \frac{\ve x_p \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1
+- \frac{\ve x_p \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2 -
+\cdots - \frac{\ve x_p \cdot \ve v_{p-1}}{\ve v_{p-1} \cdot \ve v_{p-1}}\ve v_{p-1}\]</div>
+<p>Þá er <span class="math notranslate nohighlight">\(\{\ve v_1, \cdots, \ve v_p\}\)</span> þverstæður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\text{Span}(\{\ve v_1, \cdots, \ve v_p\})=\text{Span}(\{\ve x_1, \cdots, \ve x_p\})\]</div>
+<p>fyrir <span class="math notranslate nohighlight">\(k=1, \cdots, p\)</span>.</p>
+</div>
+<section id="synidaemi-gram-schmidt">
+<h4><span class="section-number">6.9.1.1. </span>Sýnidæmi: Gram-Schmidt<a class="headerlink" href="#synidaemi-gram-schmidt" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finna á þverstæðan og þverstaðlaðan grunn fyrir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}W=\text{Span}\left\{\begin{bmatrix} 1 \\ 3 \\ 1 \\ 1 \end{bmatrix},
+\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}
+-1 \\ 5 \\ 2 \\ 2 \end{bmatrix}\right\} \subseteq \mathbb{R}^4.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Notum reiknirit Gram-Schmidt</p>
+<p><strong>Skref 1:</strong> Við sjáum að vigrarnir <span class="math notranslate nohighlight">\(\ve x_1=(1,3,1,1), \ve x_2=(1,1,1,1) \text{ og } \ve x_3=(-1,5,2,2)\)</span>
+eru línulega óháðir og mynda því grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>Skref 2:</strong> Setjum <span class="math notranslate nohighlight">\(\ve v_1=\ve x_1=(1,3,1,1)\)</span>. Svo setjum við</p>
+<div class="math notranslate nohighlight">
+\[\ve v_2 = \ve x_2 - \frac{\ve x_2 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1\]</div>
+<div class="math notranslate nohighlight">
+\[= (1,1,1,1)-
+\frac{(1,1,1,1)
+\cdot (1,3,1,1)}{(1,3,1,1)
+\cdot (1,3,1,1)}
+(1,3,1,1)\]</div>
+<div class="math notranslate nohighlight">
+\[(1,1,1,1) - \frac{6}{12}(1,3,1,1)
+= (1/2, -1/2, 1/2, 1/2)
+= \frac{1}{2}(1,-1,1,1).\]</div>
+<p>Prófun sýnir að <span class="math notranslate nohighlight">\(\ve v_2\)</span> er hornréttur á <span class="math notranslate nohighlight">\(\ve v_1\)</span>. Að lokum setjum við</p>
+<div class="math notranslate nohighlight">
+\[\ve v_3 = \ve x_3 - \frac{\ve x_3 \cdot \ve v_1}{\ve v_1 \cdot \ve v_1}\ve v_1 - \frac{\ve x_3 \cdot \ve v_2}{\ve v_2 \cdot \ve v_2}\ve v_2\]</div>
+<div class="math notranslate nohighlight">
+\[= (-1,5,2,2)-
+\frac{(-1,5,2,2) \cdot (1,3,1,1)}
+{(1,3,1,1) \cdot (1,3,1,1)}
+(1,3,1,1)\]</div>
+<div class="math notranslate nohighlight">
+\[- \frac{(-1,5,2,2) \cdot \frac{1}{2}(1,-1,1,1)}
+{\frac{1}{2}(1,-1,1,1) \cdot \frac{1}{2}(1,-1,1,1)}
+\frac{1}{2}(1,-1,1,1)\]</div>
+<div class="math notranslate nohighlight">
+\[= (-1,5,2,2)-(18/12(1,3,1,1)-\frac{1}{2}(1,-1,1,1))\]</div>
+<div class="math notranslate nohighlight">
+\[=(-2,0,1,1)\]</div>
+<p>Prófun sýnir að <span class="math notranslate nohighlight">\(\ve v_3\)</span> er hornréttur á <span class="math notranslate nohighlight">\(\ve v_1\)</span> og <span class="math notranslate nohighlight">\(\ve v_2\)</span>. Vigrarnir <span class="math notranslate nohighlight">\(\ve v_1, \ve v_2, \ve v_3\)</span> mynda þverstæðan grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>Skref 3:</strong> Þverstaðlaður grunnur fyrir <span class="math notranslate nohighlight">\(W\)</span> fæst með</p>
+<div class="math notranslate nohighlight">
+\[\left\{\frac{(1,3,1,1)}{||(1,3,1,1)||}, \frac{\frac{1}{2}(1,-1,1,1)}{||(1,-1,1,1)||}, \frac{-2,0,1,1}{||(-2,0,1,1)||}\right\}\]</div>
+<div class="math notranslate nohighlight">
+\[= \left\{\frac{(1,3,1,1)}{2\sqrt{3}}, \frac{1}{2}(1,-1,1,1), \frac{-2,0,1,1}{\sqrt{6}}\right\}\]</div>
+</div>
+</section>
+<section id="a-finna-verstalaan-grunn-fyrir-hlutrum-w">
+<h4><span class="section-number">6.9.1.2. </span>Að finna þverstaðlaðan grunn fyrir hlutrúm <span class="math notranslate nohighlight">\(W\)</span><a class="headerlink" href="#a-finna-verstalaan-grunn-fyrir-hlutrum-w" title="Permalink to this heading"></a></h4>
+<p><strong>Skref 1.</strong> Byrjum á því að finna einhvern grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>Skref 2.</strong> Notum aðferð Gram-Schmidt til að finna þverstæðan grunn fyrir <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p><strong>Skref 3.</strong> Staðla grunninn <span class="math notranslate nohighlight">\(\{\ve v_1, \ve v_2, \cdots, \ve v_p\}\)</span> sem fékkst í skrefi 2, ef hann var ekki þverstaðlaður nú þegar, með því að deila með lengdinni</p>
+<div class="math notranslate nohighlight">
+\[\left\{\frac{\ve v_1}{||\ve v_1||}, \frac{\ve v_2}{||\ve v_2||}, \cdots, \frac{\ve v_p}{||\ve v_p||}\right\}.\]</div>
+</section>
+</section>
+</section>
+<section id="afer-minnstu-kvarata">
+<h2><span class="section-number">6.10. </span>Aðferð minnstu kvaðrata<a class="headerlink" href="#afer-minnstu-kvarata" title="Permalink to this heading"></a></h2>
+<p>Aðferð minnstu kvaðrata (e. least squares) snýst um að finna nálgunarlausn á <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> þegar ekki er til nákvæm lausn. Heitið kemur frá því að ef við höfum
+<span class="math notranslate nohighlight">\(\ve b = (\ve b_1, \cdots, \ve b_n)\)</span> og <span class="math notranslate nohighlight">\(A \ve x = (\ve y_1, \cdots, \ve y_n)\)</span> og setjum <span class="math notranslate nohighlight">\(\ve x = \hat{\ve x}\)</span> þá er summa minnstu kvaðratanna,</p>
+<div class="math notranslate nohighlight">
+\[||\ve b - A \ve x ||^2=(\ve b_1 - \ve y_1)^2+ \cdots + (\ve b_n - \ve y_n)^2,\]</div>
+<p>eins lítil og mögulegt er.</p>
+<section id="skilgreining-afer-minnstu-kvarata">
+<h3><span class="section-number">6.10.1. </span>Skilgreining: Aðferð minnstu kvaðrata<a class="headerlink" href="#skilgreining-afer-minnstu-kvarata" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(\ve b\in \R^m\)</span>. <strong>Minnstu kvaðrata lausn</strong> (e. least squares solution) á <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> er vigur
+<span class="math notranslate nohighlight">\(\hat{\ve x}\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[||\ve b - A \hat{\ve x} || \leq || \ve b - A \hat{\ve x}||\]</div>
+<p>fyrir alla vigra <span class="math notranslate nohighlight">\(\ve x \in \R^n\)</span>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ef engin lasun er til á <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> þá er <span class="math notranslate nohighlight">\(\ve b \notin \text{Col}(A)\)</span>. Aðferð minnstu kvaðrata er notuð til þess að finna hvaða punktur í dálkrúminu er næstur <span class="math notranslate nohighlight">\(\ve b\)</span>. Það er punkturinn <span class="math notranslate nohighlight">\(\hat{\ve b}\)</span> sem er hornrétta ofanvarpið af <span class="math notranslate nohighlight">\(\ve b\)</span> á dálkrúm <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+</section>
+<section id="setning-lausnarmengi-afer-minnstu-kvarata">
+<h3><span class="section-number">6.10.2. </span>Setning: Lausnarmengi aðferð minnstu kvaðrata<a class="headerlink" href="#setning-lausnarmengi-afer-minnstu-kvarata" title="Permalink to this heading"></a></h3>
+<p>Þessi niðurstaða er mjög gagnleg í útreikningum!</p>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(\ve b \in \R^m\)</span>. Mengi minnstu kvaðrata lausna <span class="math notranslate nohighlight">\(A\ve x = \ve b\)</span> er jafnt lausnarmengi <span class="math notranslate nohighlight">\(A^T A \ve x = A^T \ve b\)</span> sem hefur alltaf lausn.</p>
+</div>
+<div class="setning admonition">
+<p class="admonition-title">Fylgisetning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(\ve b \in \R^m\)</span>. Ef dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> eru línulega óháðir þá er fylkið <span class="math notranslate nohighlight">\(A^T A\)</span> andhverfanlegt og minnstu kvaðrata lausn <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\hat{\ve x} = \left(A^T A\right)^{-1} A^T \ve b.\]</div>
+</div>
+<section id="synidaemi-afer-minnstu-kvarata">
+<h4><span class="section-number">6.10.2.1. </span>Sýnidæmi: Aðferð minnstu kvaðrata<a class="headerlink" href="#synidaemi-afer-minnstu-kvarata" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Finna á nálgunarlausn á eftirfarandi jöfnuhneppi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+3 &amp; 2 &amp; 1 \\
+1 &amp; -4 &amp; 3 \\
+1 &amp; 10 &amp; -7
+\end{bmatrix},\ \ \
+\mathbf{b} = \begin{bmatrix}
+2 \\
+-2 \\
+1
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Ef við reynum að leysa <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> komumst við að því að það er engin lausn. Notum aðferð minnstu kvaðrata til að finna nálgunarlausn. Reiknum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^T A = \begin{bmatrix}
+11 &amp; 12 &amp; -7 \\
+12 &amp; 120 &amp; -84 \\
+-7 &amp; -84 &amp; 59
+\end{bmatrix}, \ \ \
+\text{og} \ \ \
+A^T \ve b = \begin{bmatrix}
+5 \\ 22 \\ -15
+\end{bmatrix}\end{split}\]</div>
+<p>Nú leysum við <span class="math notranslate nohighlight">\(A^T A \ve x = A^T \ve b\)</span> og fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat{\ve x}= \begin{bmatrix}
+2/7 - t/7 \\
+13/84 + 5t/7 \\
+t
+\end{bmatrix} =
+\begin{bmatrix}
+2/7 \\ 13/84 \\ 0
+\end{bmatrix}
++ t \begin{bmatrix}
+-1/7 \\ 5/7 \\ 1
+\end{bmatrix}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(t \in \R\)</span>.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli05/" class="btn btn-neutral float-left" title="5. Eigingildi og eiginvigrar" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ordaskra/" class="btn btn-neutral float-right" title="Orðaskrá" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

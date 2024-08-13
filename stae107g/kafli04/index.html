@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Vigurrúm &mdash; Línuleg Algebra </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="5. Eigingildi og eiginvigrar" href="../kafli05/" />
+    <link rel="prev" title="3. Ákveður" href="../kafli03/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Línuleg Algebra
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Línuleg jöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fylkjaaðgerðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Ákveður</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Vigurrúm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#vigurrum-og-hlutrum">4.1. Vigurrúm og hlutrúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-vigurrum">4.1.1. Skilgreining: Vigurrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-vigurrum">4.1.1.1. Sýnidæmi: Vigurrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hlutrum">4.1.2. Skilgreining: Hlutrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hlutrum">4.1.2.1. Sýnidæmi: Hlutrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-alhaefing-linuleg-samantekt-og-spann">4.1.3. Skilgreining: Alhæfing línuleg samantekt og spann</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-spann-er-hlutrum">4.1.4. Setning: Spann er hlutrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fleiri-hlutrum">4.1.4.1. Sýnidæmi: Fleiri hlutrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-vigursumma">4.1.5. Skilgreining: Vigursumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning">4.1.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#null-col-ker-og-range">4.2. Null, Col, Ker og Range</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-nullrum-fylkis">4.2.1. Skilgreining: Núllrúm fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-nullrum-er-hlutrum">4.2.2. Setning: Núllrúm er hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-dalkrum-fylkis">4.2.3. Skilgreining: Dálkrúm fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-dalkrum-er-hlutrum">4.2.4. Setning: Dálkrúm er hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samanburur-a-nullrumum-og-dalkrumum">4.2.5. Samanburður á núllrúmum og dálkrúmum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-nullrum">4.2.5.1. Sýnidæmi: Núllrúm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-dalkrum">4.2.5.2. Sýnidæmi: Dálkrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-kjarni-og-mynd-vorpunar">4.2.6. Skilgreining: Kjarni og mynd vörpunar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-kjarni-og-mynd-eru-hlutrum">4.2.7. Setning: Kjarni og mynd eru hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eintaekni-og-ataekni-varpana">4.2.8. Setning: Eintækni og átækni varpana</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#grunnar-og-hnit">4.3. Grunnar og hnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-grunnur">4.3.1. Skilgreining: Grunnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-venjulegi-grunnurinn">4.3.1.1. Sýnidæmi: Venjulegi grunnurinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-linulega-ohair-dalkvigrar-mynda-grunn">4.3.1.2. Sýnidæmi: Línulega óháðir dálkvigrar mynda grunn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-grunnar">4.3.1.3. Sýnidæmi: Grunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-um-spann-mengja">4.3.2. Setning: Um spann mengja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-grunnur-fyrir-nullrum">4.3.2.1. Sýnidæmi: Grunnur fyrir núllrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-a-finna-grunn-fyrir-dalkrum">4.3.3. Setning: Að finna grunn fyrir dálkrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-grunnur-fyrir-dalkrum">4.3.3.1. Sýnidæmi: Grunnur fyrir dálkrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-tveir-eiginleikar-grunna">4.3.4. Setning: Tveir eiginleikar grunna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-um-tilvist-hnita">4.3.5. Setning: Um tilvist hnita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-mathcal-b-hnit">4.3.6. Skilgreining: <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hnitavigur-ve-x-mathcal-b">4.3.7. Skilgreining: Hnitavigur <span class="math notranslate nohighlight">\([\ve x]_{\mathcal{B}}\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-a-skipta-um-grunn">4.3.7.1. Sýnidæmi: Að skipta um grunn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hnitavorpun">4.3.8. Skilgreining: Hnitavörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hnitavorpun-er-linuleg">4.3.9. Setning: hnitavörpun er línuleg</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vidd-og-rankur">4.4. Vídd og rankur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-linulegt-haei-mengja-staerri-en-grunns">4.4.1. Setning: Línulegt hæði mengja stærri en grunns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-um-staer-grunna">4.4.2. Setning: Um stærð grunna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-vidd">4.4.3. Skilgreining: Vídd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-vidd">4.4.3.1. Sýnidæmi: Vídd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-vidd-hlutrums">4.4.4. Setning: Vídd hlutrúms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-samsemd-linulegs-ohaeis-og-spanns">4.4.5. Setning: Samsemd línulegs óhæðis og spanns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-forystustular-og-vidd">4.4.6. Setning: Forystustuðlar og vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linurum">4.4.7. Skilgreining: Línurúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-linujafngild-fylki-hafa-sama-linurum">4.4.8. Setning: Línujafngild fylki hafa sama línurúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-grunnur-fyrir-linurum">4.4.9. Setning: Grunnur fyrir línurúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-grunnur-fyrir-linurum">4.4.9.1. Sýnidæmi: Grunnur fyrir línurúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-rankur">4.4.10. Skilgreining: Rankur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-ranksetningin">4.4.11. Setning: Ranksetningin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-rankur-og-vidd">4.4.11.1. Sýnidæmi: Rankur og vídd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-vibot-vi-longu-setninguna-um-andhverfur">4.4.12. Setning: Viðbót við löngu setninguna um andhverfur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hnitaskipti">4.5. Hnitaskipti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hnitaskiptafylki">4.5.1. Skilgreining: Hnitaskiptafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hnitaskiptafylki">4.5.2. Setning: Hnitaskiptafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hnitaskiptafylki-yfir-i-venjulega-grunninn">4.5.3. Setning: Hnitaskiptafylki yfir í venjulega grunninn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hnitaskiptafylki-yfir-i-venjulega-grunninn">4.5.3.1. Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-formula-fyrir-hnitaskiptifylki">4.5.4. Setning: Formúla fyrir hnitaskiptifylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknirit-fyrir-hnitaskiptafylki">4.5.5. Reiknirit fyrir hnitaskiptafylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hnitaskiptafylki">4.5.5.1. Sýnidæmi: Hnitaskiptafylki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-fylki-vorpunar-me-tilliti-til-grunns">4.5.6. Skilgreining: Fylki vörpunar með tilliti til grunns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-fylki-fyrir-mismunandi-grunna">4.5.7. Setning: Fylki fyrir mismunandi grunna</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Eigingildi og eiginvigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Innfeldi og hornrétt ofanvörp</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Vigurrúm</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/stae107g/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vigurrum">
+<h1><span class="section-number">4. </span>Vigurrúm<a class="headerlink" href="#vigurrum" title="Permalink to this heading"></a></h1>
+<p>Markmið þessa kafla er að alhæfa hugtakið vigur.
+Við höfum séð hvernig það má leggja saman vigra, margfalda þá með tölu og hvernig þessar tvær aðgerðir tengjast með dreifireglu.
+Nú viljum við telja til alla eiginleika vigra og skilgreina mismunandi „heimili“ þeirra.
+Í stað vigurrúms með margföldun með rauntölu gætum við t.d. skilgreint vigurrúm með margföldun með tvinntölu. Við viljum einnig alhæfa hugtök sem við höfum áður séð eins og
+<em>spann</em>, <em>línuleg vörpun</em> o.fl. fyrir almenn vigurrúm.</p>
+<section id="vigurrum-og-hlutrum">
+<h2><span class="section-number">4.1. </span>Vigurrúm og hlutrúm<a class="headerlink" href="#vigurrum-og-hlutrum" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-vigurrum">
+<span id="id1"></span><h3><span class="section-number">4.1.1. </span>Skilgreining: Vigurrúm<a class="headerlink" href="#skilgreining-vigurrum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Vigurrúm</strong> (e. vector space) er ekki tómt mengi <span class="math notranslate nohighlight">\(V\)</span> með stökum sem
+nefnd eru vigrar (e. vectors) ásamt tveimur aðgerðum
+samlagningu og margföldun með rauntölu, sem fullnægja
+eftirfarandi frumsendum fyrir alla vigra <span class="math notranslate nohighlight">\(\ve u, \ve v\in V\)</span> og allar tölur <span class="math notranslate nohighlight">\(c\)</span> og <span class="math notranslate nohighlight">\(d\)</span>
+:</p>
+<blockquote>
+<div><p><strong>1.</strong> Ef <span class="math notranslate nohighlight">\(\ve u,\ve v\in V\)</span> þá er <span class="math notranslate nohighlight">\(\ve u+\ve v\in V\)</span>. <em>lokun við samlagningu</em></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(\ve u + \ve v = \ve v + \ve u\)</span>. <em>víxlregla samlagningar</em></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\((\ve u + \ve v) +\ve w =\ve u + (\ve v +\ve w)\)</span>. <em>tengiregla samlagningar</em></p>
+<p><strong>4.</strong> Til er stak <span class="math notranslate nohighlight">\(\ve{0}\)</span> í <span class="math notranslate nohighlight">\(V\)</span> kallað núll eða núllvigur þannig að <span class="math notranslate nohighlight">\(\ve 0 + \ve u = \ve u\)</span>. <em>samlagningarhlutleysa</em></p>
+<p><strong>5.</strong> Fyrir sérhvert <span class="math notranslate nohighlight">\(\ve u \in V\)</span> er til stak <span class="math notranslate nohighlight">\(-\ve u \in V\)</span> þannig að <span class="math notranslate nohighlight">\(\ve u +(-\ve u) =\ve 0\)</span> . <em>samlagningarandhverfa</em></p>
+<p><strong>6.</strong> Ef <span class="math notranslate nohighlight">\(\ve u\in V\)</span> þá er <span class="math notranslate nohighlight">\(c\ve u\in V\)</span>. <em>lokun við margföldun með tölu</em></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(c(d\ve u) = (cd)\ve u\)</span>. <em>tengiregla margföldunar</em></p>
+<p><strong>8.</strong> <span class="math notranslate nohighlight">\(1\ve u = \ve u\)</span>. <em>margföldunarhlutleysa</em></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(c(\ve u+\ve v) = c\ve u +c\ve v\)</span>. <em>dreifiregla</em></p>
+<p><strong>10.</strong> <span class="math notranslate nohighlight">\((c+d)\ve u = c\ve u + d\ve u\)</span>. <em>dreifiregla</em></p>
+</div></blockquote>
+</div>
+<p>Nokkrar afleiðingar af þessari skilgreiningu eru að:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve u\in V\)</span> gildir að <span class="math notranslate nohighlight">\(0\ve u = \ve 0\)</span>.</p></li>
+<li><p>Fyrir sérhverja tölu <span class="math notranslate nohighlight">\(c\)</span> gildir að <span class="math notranslate nohighlight">\(c\ve 0 = \ve 0\)</span>.</p></li>
+<li><p>Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve u\in V\)</span> er vigurinn <span class="math notranslate nohighlight">\(-\ve u\)</span> ótvírætt ákvarðaður.</p></li>
+<li><p>Fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve u\in V\)</span> gildir að <span class="math notranslate nohighlight">\(-\ve u=(-1)\ve u\)</span>.</p></li>
+<li><p>Núllvigurinn er ótvírætt ákvarðaður.</p></li>
+</ul>
+</div></blockquote>
+<section id="synidaemi-vigurrum">
+<h4><span class="section-number">4.1.1.1. </span>Sýnidæmi: Vigurrúm<a class="headerlink" href="#synidaemi-vigurrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\R^n\)</span> ásamt venjulegri samlagningu og margföldun með rauntölu er vigurrúm.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(\R^{m\times n}\)</span>, mengi allra <span class="math notranslate nohighlight">\(m\times n\)</span> fylkja, er vigurrúm þar sem aðgerðirnar eru venjuleg samlagning fylkja og margföldun fylkis með tölu.</p>
+<p><strong>3.</strong> Mengi allra runa <span class="math notranslate nohighlight">\({y_k} = (\ldots, y_{-1}, y_0, y_1, y_2, \ldots)\)</span> af rauntölum.
+Samlagning og margföldun með tölu eru skilgreind þannig að</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}{y_k } + {z_k } =(\ldots, y_{-1}+z_{-1}, y_0+z_0, y_1+z_1, y_2+z_2, \ldots)={y_k+z_k},\\r{y_k}= (\ldots, ry_{-1}, ry_0, ry_1, ry_2, \ldots)={ry_k}\end{aligned}\end{align} \]</div>
+<p>Mengið ásamt þessum tveimur aðgerðum er vigurrúm.</p>
+<p><strong>4.</strong> Látum <span class="math notranslate nohighlight">\(\mathbb{P}_n\)</span> vera mengi allra margliða af stigi minna en eða jafnt <span class="math notranslate nohighlight">\(n\)</span>. Stökin í <span class="math notranslate nohighlight">\(\mathbb{P}_n\)</span>
+eru margliður af taginu</p>
+<div class="math notranslate nohighlight">
+\[\ve p(t)=a_0+a_1 t+a_2 t^2+\cdots +a_n t^n\]</div>
+<p>Samlagning og margföldun með tölu eru skilgreind á venjulegan mátann. Með þessum tveimur aðgerðum er <span class="math notranslate nohighlight">\(\mathbb{P}_n\)</span> vigurrúm.</p>
+<p><strong>5.</strong> Mengi allra margliða (af öllum stigum):math:<cite>mathbb{P_n}</cite> er vigurrúm.</p>
+<p>Tökum einhverjar rauntölur <span class="math notranslate nohighlight">\(a&lt;b\)</span> og látum <span class="math notranslate nohighlight">\((a,b)\)</span> tákna opna bilið <span class="math notranslate nohighlight">\(\{x \in \R\colon a &lt; x &lt; b\}\subset R\)</span>.</p>
+<p><strong>6.</strong> Látum <span class="math notranslate nohighlight">\(\mathcal{V}(a,b)\)</span> vera mengi allra falla <span class="math notranslate nohighlight">\(f\colon (a,b)\to\R\)</span>. Samlagning og margföldun með tölu eru skilgreind á venjulega mátann.
+Með þessum tveimur aðgerðum er <span class="math notranslate nohighlight">\(\mathcal{V}(a,b)\)</span> vigurrúm. Athugið að núllvigurinn í <span class="math notranslate nohighlight">\(\mathcal{V}(a,b)\)</span> er fastafallið sem tekur gildið 0 í öllum punktum.</p>
+<p><strong>7.</strong> Látum <span class="math notranslate nohighlight">\(\mathcal{C}(a,b)\)</span> vera mengi allra samfelldra falla <span class="math notranslate nohighlight">\(f\colon (a,b)\to\R\)</span>.
+Samlagning og margföldun með tölu eru skilgreind á venjulega mátann.
+Athugið að þegar við leggjum saman tvö samfelld föll er útkoman samfellt fall og þegar við margföldum samfellt fall með tölu þá er útkoman samfellt fall.
+Með þessum tveimur aðgerðum er <span class="math notranslate nohighlight">\(\mathcal{C}(a,b)\)</span> vigurrúm.</p>
+<p><strong>8.</strong> Látum <span class="math notranslate nohighlight">\(\mathcal{D}(a,b)\)</span> vera mengi allra diffranlegra falla <span class="math notranslate nohighlight">\(f\colon (a,b)\to\R\)</span>.
+Samlagning og margföldun með tölu eru skilgreind á venjulega mátann.
+Athugið að þegar við leggjum saman tvö diffranleg föll er útkoman diffranlegt fall og þegar við margföldum diffranlegt fall með tölu þá er útkoman diffranlegt fall.
+Með þessum tveimur aðgerðum er <span class="math notranslate nohighlight">\(\mathcal{D}(a,b)\)</span> vigurrúm.</p>
+<p>Athugum að hér höfum við að <span class="math notranslate nohighlight">\(\mathcal{D}(a,b)\subseteq\mathcal{C}(a,b)\subseteq\mathcal{V}(a,b)\)</span> svo hér er dæmi um að eitt vigurrúm er hlutmengi í öðru.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-hlutrum">
+<h3><span class="section-number">4.1.2. </span>Skilgreining: Hlutrúm<a class="headerlink" href="#skilgreining-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Hlutmengi <span class="math notranslate nohighlight">\(H\)</span> í vigurrúmi <span class="math notranslate nohighlight">\(V\)</span> kallast <strong>hlutrúm</strong> (e. subspace) ef eftirfarandi þrjú skilyrði eru öll uppfyllt
+:</p>
+<p><strong>1.</strong>  Núllvigurinn er stak í <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> eru vigrar í <span class="math notranslate nohighlight">\(H\)</span> þá er vigurinn <span class="math notranslate nohighlight">\(\ve u + \ve v\)</span> í <span class="math notranslate nohighlight">\(H\)</span>. Við segjum að mengi <span class="math notranslate nohighlight">\(H\)</span> sé <em>lokað undir samlagningu.</em></p>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(\ve u\)</span> er vigur í <span class="math notranslate nohighlight">\(H\)</span> og <span class="math notranslate nohighlight">\(c\)</span> er rauntala þá er vigurinn <span class="math notranslate nohighlight">\(c\ve u\)</span> í <span class="math notranslate nohighlight">\(H\)</span>. Við segjum að mengi <span class="math notranslate nohighlight">\(H\)</span> sé <em>lokað undir margföldun með tölu.</em></p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>(i)</strong> Í stað skilyrðis <strong>1.</strong> er stundum sagt að mengið <span class="math notranslate nohighlight">\(H\)</span> sé ekki tómt.
+Þá má svo nota skilyrði <strong>3.</strong> til að sýna að <span class="math notranslate nohighlight">\(\ve 0\in H\)</span>.</p>
+<p><strong>(ii)</strong> Ef <span class="math notranslate nohighlight">\(U\)</span> er hlutrúm í vigurrúminu <span class="math notranslate nohighlight">\(V\)</span>, þá er <span class="math notranslate nohighlight">\(U\)</span> vigurrúm með reikningsaðgerðunum sem það „erfir“ frá <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>(iii)</strong> <span class="math notranslate nohighlight">\(\{\ve 0\}\)</span> og <span class="math notranslate nohighlight">\(V\)</span> eru hlutrúm í <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div>
+<section id="synidaemi-hlutrum">
+<h4><span class="section-number">4.1.2.1. </span>Sýnidæmi: Hlutrúm<a class="headerlink" href="#synidaemi-hlutrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p><strong>1.</strong> Höfum vigurrúmið <span class="math notranslate nohighlight">\(V=\R^3\)</span>. Mengin</p>
+<div class="math notranslate nohighlight">
+\[H_1=\{(x,0,0)^T\colon x\in\R\}, H_2=\{(x,y,0)^T\colon x,y\in\R\}, H_3=\{(x,x,x)^T\colon x\in\R\}\]</div>
+<p>eru allt dæmi um hlutrúm.</p>
+<p><strong>2.</strong>  Mengi allra efri þríhyrningsfylkja í vigurrúminu <span class="math notranslate nohighlight">\(\R^{n\times n}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^{n\times n}\)</span>.</p>
+<p><strong>3.</strong> Mengið <span class="math notranslate nohighlight">\(\mathbb{P}_n\)</span> af öllum margliðum af stigi <span class="math notranslate nohighlight">\(n\)</span> eða lægra er hlutrúm í <span class="math notranslate nohighlight">\(\mathbb{P}\)</span> mengi allra margliðna.</p>
+<p><strong>4.</strong> Mengið <span class="math notranslate nohighlight">\(\mathcal{D}(a,b)\)</span> af öllum diffranlegum föllum á opna bilinu <span class="math notranslate nohighlight">\((a,b)\)</span> er hlutrúm í
+<span class="math notranslate nohighlight">\(\mathcal{C}(a,b)\)</span>, mengi allra samfelldra falla á opna bilinu <span class="math notranslate nohighlight">\((a,b)\)</span>. Svo er <span class="math notranslate nohighlight">\(\mathcal{C}(a,b)\)</span>
+sjálft hlutrúm í <span class="math notranslate nohighlight">\(\mathcal{V}(a,b)\)</span>, mengi allra falla skilgreindra á opna bilinu <span class="math notranslate nohighlight">\((a,b)\)</span>. Við mættum einnig segja
+að <span class="math notranslate nohighlight">\(\mathcal{D}(a,b)\)</span> sé hlutrúm í <span class="math notranslate nohighlight">\(\mathcal{V}(a,b)\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-alhaefing-linuleg-samantekt-og-spann">
+<h3><span class="section-number">4.1.3. </span>Skilgreining: Alhæfing línuleg samantekt og spann<a class="headerlink" href="#skilgreining-alhaefing-linuleg-samantekt-og-spann" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm, <span class="math notranslate nohighlight">\(\ve v_1, \dots, \ve v_p \in V\)</span> og <span class="math notranslate nohighlight">\(c_1, \dots, c_p \in \R\)</span>. Vigurinn</p>
+<div class="math notranslate nohighlight">
+\[c_1 \ve v_1 + \dots + c_p \ve v_p \in V\]</div>
+<p>kallast <strong>línuleg samantekt</strong> vigranna. Mengi allra línulegra samantekta <span class="math notranslate nohighlight">\(\ve v_1, \dots, \ve v_p\)</span> kallast <strong>spann</strong> vigranna,</p>
+<div class="math notranslate nohighlight">
+\[\text{Span}\{\ve v_1, \dots, \ve v_p\} \subseteq V.\]</div>
+</div>
+<p>Áður skilgreindum við línulega samantekt og spann fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Nú höfum við almennari skilgreiningu fyrir hverskyns vigurrúm.</p>
+</section>
+<section id="setning-spann-er-hlutrum">
+<h3><span class="section-number">4.1.4. </span>Setning: Spann er hlutrúm<a class="headerlink" href="#setning-spann-er-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\ve v_1, \dots, \ve v_p \in V\)</span>. Þá er <span class="math notranslate nohighlight">\(\text{Span}\{\ve v_1, \dots, \ve v_p\}\)</span> hlutrúm í <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Látum <span class="math notranslate nohighlight">\(U\)</span> vera hlutrúm í vigurrúmi <span class="math notranslate nohighlight">\(V\)</span>. Ef <span class="math notranslate nohighlight">\(\ve u_1, \ve u_2, \ldots, \ve u_p\)</span> eru vigrar í <span class="math notranslate nohighlight">\(U\)</span> þá er
+<span class="math notranslate nohighlight">\(\text{Span}\{\ve u_1, \ve u_2, \ldots, \ve u_p\}\subseteq U\)</span>.</p>
+</div>
+<section id="synidaemi-fleiri-hlutrum">
+<h4><span class="section-number">4.1.4.1. </span>Sýnidæmi: Fleiri hlutrúm<a class="headerlink" href="#synidaemi-fleiri-hlutrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum upptalningu á öllu hlutrúmum eftirfarandi vigurrúma: <span class="math notranslate nohighlight">\(\R\)</span>, <span class="math notranslate nohighlight">\(\R^2\)</span> og <span class="math notranslate nohighlight">\(\R^3\)</span></p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p><strong>1.</strong> Einu hlutrúmin í <span class="math notranslate nohighlight">\(\R\)</span> eru <span class="math notranslate nohighlight">\(\{0\}\)</span> og <span class="math notranslate nohighlight">\(\R\)</span>.</p>
+<p><strong>2.</strong> Hlutrúmin í <span class="math notranslate nohighlight">\(\R^2\)</span> eru <span class="math notranslate nohighlight">\(\{\ve 0\}\)</span> og <span class="math notranslate nohighlight">\(\R^2\)</span> ásamt öllum línum sem liggja um núllpunktinn.
+Lína gegnum núllpunktinn með stefnuvigur <span class="math notranslate nohighlight">\(\ve v\)</span> er jöfn <span class="math notranslate nohighlight">\(\text{Span}\{\ve v\}\)</span>.</p>
+<p><strong>3.</strong> Hlutrúmin í <span class="math notranslate nohighlight">\(\R^3\)</span> eru <span class="math notranslate nohighlight">\(\{\ve 0\}\)</span> og <span class="math notranslate nohighlight">\(\R^3\)</span> ásamt öllum línum og öllum sléttum sem liggja um núllpunktinn.
+Ef <span class="math notranslate nohighlight">\(\Gamma\)</span> er slétta í <span class="math notranslate nohighlight">\(\R^3\)</span> sem inniheldur núllpunktinn og <span class="math notranslate nohighlight">\(\ve u\)</span> og <span class="math notranslate nohighlight">\(\ve v\)</span> eru vigrar sem liggja í planinu
+þannig að hvorugur sé margfeldi af hinum þá er <span class="math notranslate nohighlight">\(\Gamma=\text{Span}\{\ve u, \ve v\}\)</span>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Athugið að eftirfarandi eru <strong>ekki</strong> hlutrúm:</p>
+<p><strong>1.</strong> Lína í <span class="math notranslate nohighlight">\(\R^n\)</span> sem fer ekki í gegnum núllpunktinn er <strong>ekki</strong> hlutrúm.</p>
+<p><strong>2.</strong> Slétta í <span class="math notranslate nohighlight">\(\R^3\)</span> sem fer ekki í gegnum núllpunktinn er <strong>ekki</strong> hlutrúm.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-vigursumma">
+<h3><span class="section-number">4.1.5. </span>Skilgreining: Vigursumma<a class="headerlink" href="#skilgreining-vigursumma" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(U_1\)</span> og <span class="math notranslate nohighlight">\(U_2\)</span> vera hlutrúm í vigurrúmi <span class="math notranslate nohighlight">\(V\)</span>. Þá kallast hlutmengið</p>
+<div class="math notranslate nohighlight">
+\[U_1+U_2=\{\ve x+\ve y\colon \ve x\in U_1, \ve y\in U_1 \}\]</div>
+<p><strong>vigursumma</strong> (e. vector sum), eða einfaldlega summa, þeirra.</p>
+</div>
+</section>
+<section id="setning">
+<h3><span class="section-number">4.1.6. </span>Setning<a class="headerlink" href="#setning" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(U_1\)</span> og <span class="math notranslate nohighlight">\(U_2\)</span> vera hlutrúm í <span class="math notranslate nohighlight">\(V\)</span>.
+Þá eru bæði <span class="math notranslate nohighlight">\(U_1\cap U_2\)</span> og <span class="math notranslate nohighlight">\(U_1+U_2\)</span> hlutrúm í <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="null-col-ker-og-range">
+<h2><span class="section-number">4.2. </span>Null, Col, Ker og Range<a class="headerlink" href="#null-col-ker-og-range" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-nullrum-fylkis">
+<h3><span class="section-number">4.2.1. </span>Skilgreining: Núllrúm fylkis<a class="headerlink" href="#skilgreining-nullrum-fylkis" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. <strong>Núllrúm</strong> <span class="math notranslate nohighlight">\(A\)</span> (e. nullspace) er skilgreint sem
+mengi allra vigra <span class="math notranslate nohighlight">\(\ve x\in\R^n\)</span> þannig að <span class="math notranslate nohighlight">\(A\ve x=\ve 0\)</span>. Núllrúmið er táknað með <span class="math notranslate nohighlight">\(\nul{A}\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\nul{A}=\{\ve x\in\R^n\colon A\ve x=\ve 0\}\]</div>
+<p>Núllrúmið er sem sagt mengi allra lausna jöfnunar <span class="math notranslate nohighlight">\(A\ve x=\ve 0\)</span>.</p>
+</div>
+</section>
+<section id="setning-nullrum-er-hlutrum">
+<h3><span class="section-number">4.2.2. </span>Setning: Núllrúm er hlutrúm<a class="headerlink" href="#setning-nullrum-er-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. Núllrúm <span class="math notranslate nohighlight">\(A\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>, táknað <span class="math notranslate nohighlight">\(\nul{A}\)</span>,
+m.ö.o. lausnarúm óhliðraðar jöfnu <span class="math notranslate nohighlight">\(A\ve x=\ve 0\)</span> með <span class="math notranslate nohighlight">\(n\)</span> óþekktum stærðum er
+hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Lausnarmengi hliðraðar jöfnu <span class="math notranslate nohighlight">\(A\ve x=\ve b\)</span> þar sem <span class="math notranslate nohighlight">\(b\neq\ve 0\)</span> er <strong>ekki</strong> hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.
+Það sést til dæmis af því að <span class="math notranslate nohighlight">\(\ve 0\)</span> er ekki í lausnarmenginu.</p>
+</div>
+</section>
+<section id="skilgreining-dalkrum-fylkis">
+<h3><span class="section-number">4.2.3. </span>Skilgreining: Dálkrúm fylkis<a class="headerlink" href="#skilgreining-dalkrum-fylkis" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. Mengið sem dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> spanna kallast
+<strong>dálkrúm</strong> <span class="math notranslate nohighlight">\(A\)</span> (e. column space) og er táknað með <span class="math notranslate nohighlight">\(\col{A}\)</span>. Ef <span class="math notranslate nohighlight">\(A=[a_1 a_2 \cdots a_n]\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[\col{A}=\text{Span}\{a_1,a_2,\ldots,a_n\}.\]</div>
+</div>
+</section>
+<section id="setning-dalkrum-er-hlutrum">
+<h3><span class="section-number">4.2.4. </span>Setning: Dálkrúm er hlutrúm<a class="headerlink" href="#setning-dalkrum-er-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. Dálkrúm <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(\col{A}\)</span>, er hlutrúm í <span class="math notranslate nohighlight">\(\R^m\)</span>.</p>
+</div>
+</section>
+<section id="samanburur-a-nullrumum-og-dalkrumum">
+<h3><span class="section-number">4.2.5. </span>Samanburður á núllrúmum og dálkrúmum<a class="headerlink" href="#samanburur-a-nullrumum-og-dalkrumum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki.</p>
+<ul class="simple">
+<li><p>Núllrúmið <span class="math notranslate nohighlight">\(\nul{A}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span> en dálkrúmið <span class="math notranslate nohighlight">\(\col{A}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^m\)</span>.</p></li>
+<li><p>Við finnum <span class="math notranslate nohighlight">\(\nul{A}\)</span> með því að leysa jöfnuna <span class="math notranslate nohighlight">\(A\ve x=\ve 0\)</span>.</p></li>
+<li><p>Við finnum <span class="math notranslate nohighlight">\(\col{A}\)</span> með því að skoða spann dálkvigra <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Vigur <span class="math notranslate nohighlight">\(\ve v\in\R^n\)</span> er í <span class="math notranslate nohighlight">\(\nul{A}\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(A\ve v=\ve 0\)</span>.</p></li>
+<li><p>Vigur <span class="math notranslate nohighlight">\(\ve b\in\R^m\)</span> er í <span class="math notranslate nohighlight">\(\col{A}\)</span> ef og aðeins ef jafnan <span class="math notranslate nohighlight">\(A\ve x=\ve b\)</span> hefur lausn.</p></li>
+</ul>
+</div>
+<section id="synidaemi-nullrum">
+<h4><span class="section-number">4.2.5.1. </span>Sýnidæmi: Núllrúm<a class="headerlink" href="#synidaemi-nullrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Finnið nákvæma lýsingu á núllrúmi fylkisins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{bmatrix}\end{split}\]</div>
+<p>með stikaðri framsetningu.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum, með einföldum línuaðgerðum að:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*} \begin{bmatrix}
+1&amp;2&amp;3&amp;4\\
+5&amp;6&amp;7&amp;8\\
+9&amp;10&amp;11&amp;12\\
+\end{bmatrix}
+&amp;\overset{\substack{R_2 - 5 R_1 \\
+R_3 - 9 R_1}}\sim
+\begin{bmatrix}
+1&amp;2&amp;3&amp;4\\
+0&amp;-4&amp;-8&amp;-12\\
+0&amp;-8&amp;-16&amp;-24\\
+\end{bmatrix}\\
+&amp;\overset{\substack{R_2 + 5 R_1/2\\
+R_3 + 4 R_1}}\sim
+\begin{bmatrix}
+1&amp;2&amp;3&amp;4\\
+0&amp;1&amp;-2&amp;-3\\
+0&amp; 0&amp; 0&amp;0\\
+\end{bmatrix}\\
+&amp;\overset{\substack{R_1 - 2 R_2}}\sim
+\begin{bmatrix}
+1&amp;0&amp;-1&amp;-2\\
+0&amp;1&amp;2&amp;3\\
+0&amp;0&amp;0&amp;0\\
+\end{bmatrix}.\end{align*}\end{split}\]</div>
+<p>Höfum því að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A \sim \begin{bmatrix}
+1&amp;0&amp;-1&amp;-2\\
+0&amp;1&amp;2&amp;3\\
+0&amp;0&amp;0&amp;0\\
+\end{bmatrix}.\end{split}\]</div>
+<p>Vitum að <span class="math notranslate nohighlight">\(\nul{A}\)</span> er lausnamengi <span class="math notranslate nohighlight">\(A\ve x=\ve 0\)</span>. Það er stikað með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1\\x_2\\x_3\\x_4
+\end{bmatrix}=\begin{bmatrix}
+x_3+2x_4\\-2x_3-3x_4\\x_3\\x_4
+\end{bmatrix}=x_3\begin{bmatrix}
+1\\-2\\1\\0
+\end{bmatrix}+
+x_4\begin{bmatrix}
+2\\-3\\0\\1
+\end{bmatrix}.\end{split}\]</div>
+<p>Við fáum því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nul A = \text{Span}\left\{\begin{bmatrix}
+1\\-2\\1\\0
+\end{bmatrix},\begin{bmatrix}
+2\\-3\\0\\1
+\end{bmatrix}\right\}.\end{split}\]</div>
+<p>Til að finna nákvæma lýsingu núllrúms þarf því að leysa línulegt jöfnuhneppi.</p>
+</div>
+</section>
+<section id="synidaemi-dalkrum">
+<h4><span class="section-number">4.2.5.2. </span>Sýnidæmi: Dálkrúm<a class="headerlink" href="#synidaemi-dalkrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Sýnidæmi</p>
+<p>Látum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix} 1 &amp; -10 &amp; -24 &amp; -42 \\
+1 &amp; -8 &amp; -18 &amp; -32 \\
+-2 &amp; 20 &amp; 51 &amp; 87
+\end{bmatrix}.\end{split}\]</div>
+<p>Finnið nákvæma lýsingu á dálkrúmi A.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum með einföldum línuaðgerðum að:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} 1 &amp; -10 &amp; -24 &amp; -42 \\
+1 &amp; -8 &amp; -18 &amp; -32 \\
+-2 &amp; 20 &amp; 51 &amp; 87 \\
+\end{bmatrix}
+\sim \cdots \sim
+\begin{bmatrix} 1 &amp; -10 &amp; -24 &amp; -42 \\
+0 &amp; 2 &amp; 6 &amp; 10 \\
+0 &amp; 0 &amp; 3 &amp; 3 \\
+\end{bmatrix}.\end{split}\]</div>
+<p>Sjáum að fyrstu 3 dálkar fylkisins eru vendidálkar. Þá er
+<span class="math notranslate nohighlight">\(\col{A}\)</span> fyrstu 3 dálkarnir úr upprunalega <span class="math notranslate nohighlight">\(A\)</span> fylkinu,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\col{A}=\left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}
+\begin{bmatrix} -10 \\ -8 \\ 20 \end{bmatrix}
+\begin{bmatrix} -24 \\ -18 \\ 51 \end{bmatrix} \right\}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="skilgreining-kjarni-og-mynd-vorpunar">
+<h3><span class="section-number">4.2.6. </span>Skilgreining: Kjarni og mynd vörpunar<a class="headerlink" href="#skilgreining-kjarni-og-mynd-vorpunar" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(T\colon V\to W\)</span> vera línulega vörpun.</p>
+<p><strong>Kjarni</strong> (e. kernel, null space) vörpunarinnar <span class="math notranslate nohighlight">\(T\)</span> er mengi allra vigra <span class="math notranslate nohighlight">\(\ve u\in V\)</span> þannig að
+<span class="math notranslate nohighlight">\(T(\ve u)=\ve 0\)</span>. Kjarninn er táknaður með <span class="math notranslate nohighlight">\(\ker{T}\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\ker{T}=\{\ve u\in V \ \colon \ T(\ve u)=\ve 0\}.\]</div>
+<p><strong>Mynd</strong> (e. range) vörpunarinnar <span class="math notranslate nohighlight">\(T\)</span> er mengi allra vigra í <span class="math notranslate nohighlight">\(W\)</span> sem rita má á forminu
+<span class="math notranslate nohighlight">\(T(\ve x)\)</span> fyrir eitthvað <span class="math notranslate nohighlight">\(\ve x\in V\)</span>. Myndin er oft táknuð <span class="math notranslate nohighlight">\(\range{T}\)</span> og</p>
+<div class="math notranslate nohighlight">
+\[\range{T}=\{T(\ve x) \ \colon \ \ve x\in V\}.\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ef <span class="math notranslate nohighlight">\(T(\ve x)=A\ve x\)</span> fyrir eitthvað fylki <span class="math notranslate nohighlight">\(A\)</span> þá er <span class="math notranslate nohighlight">\(\ker{T}=\nul{A}\)</span> og
+<span class="math notranslate nohighlight">\(\range{T}=\col{A}\)</span>.</p>
+</div>
+</section>
+<section id="setning-kjarni-og-mynd-eru-hlutrum">
+<h3><span class="section-number">4.2.7. </span>Setning: Kjarni og mynd eru hlutrúm<a class="headerlink" href="#setning-kjarni-og-mynd-eru-hlutrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon V \rightarrow W\)</span> vera línulega vörpun.</p>
+<blockquote>
+<div><p>Kjarni vörpunarinnar <span class="math notranslate nohighlight">\(T\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Mynd vörpunarinnar <span class="math notranslate nohighlight">\(T\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(W\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-eintaekni-og-ataekni-varpana">
+<h3><span class="section-number">4.2.8. </span>Setning: Eintækni og átækni varpana<a class="headerlink" href="#setning-eintaekni-og-ataekni-varpana" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T\colon V\to W\)</span> vera línulega vörpun.</p>
+<blockquote>
+<div><p>Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er eintæk ef og aðeins ef <span class="math notranslate nohighlight">\(\ker{T}=\{\ve{0}\}\)</span>.</p>
+<p>Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er átæk ef og aðeins ef <span class="math notranslate nohighlight">\(\range{T}=W\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki og <span class="math notranslate nohighlight">\(T\colon \R^n\to\R^m\)</span> vera línulega vörpun
+þanning að <span class="math notranslate nohighlight">\(T(\ve x)=A\ve x\)</span> fyrir alla vigra <span class="math notranslate nohighlight">\(x\in\R^n\)</span>. Þá gildir</p>
+<blockquote>
+<div><p>Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er eintæk þá og því aðeins að <span class="math notranslate nohighlight">\(\nul{A}=\{\ve 0\}\)</span>.</p>
+<p>Vörpunin <span class="math notranslate nohighlight">\(T\)</span> er átæk þá og því aðeins að <span class="math notranslate nohighlight">\(\col{A}=\R^m\)</span>.</p>
+</div></blockquote>
+</div>
+<p>Við vitum nú þegar að línuleg vörpun er eintæk ef og aðeins ef hún er átæk. Setningin segir okkur því líka að núllrúmið
+innihaldi aðeins <span class="math notranslate nohighlight">\(\ve 0\)</span> þá og því aðeins að dálkrúmið sé <span class="math notranslate nohighlight">\(\R^m\)</span>.</p>
+</section>
+</section>
+<section id="grunnar-og-hnit">
+<h2><span class="section-number">4.3. </span>Grunnar og hnit<a class="headerlink" href="#grunnar-og-hnit" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-grunnur">
+<h3><span class="section-number">4.3.1. </span>Skilgreining: Grunnur<a class="headerlink" href="#skilgreining-grunnur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(H\)</span> vera hlutrúm í vigurrúmi <span class="math notranslate nohighlight">\(V\)</span>. Upptalning <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_p\}\)</span>
+á vigrum í <span class="math notranslate nohighlight">\(V\)</span> kallast <strong>grunnur</strong> (e. basis) fyrir <span class="math notranslate nohighlight">\(H\)</span> ef eftirfarandi skilyrði eru bæði uppfyllt</p>
+<blockquote>
+<div><p><strong>(i)</strong> Upptalningin <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> er línulega óháð.</p>
+<p><strong>(ii)</strong> <span class="math notranslate nohighlight">\(H=\text{Span}\{\ve b_1, \ve b_2, \ldots, \ve b_p\}\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<ul class="simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(\{\ve b_1, \ve b_2, \ldots, \ve b_p\}\)</span> er grunnur fyrir hlutrúm <span class="math notranslate nohighlight">\(H\)</span> þá liggja allir vigrarnir <span class="math notranslate nohighlight">\(\ve b_1, \ve b_2, \ldots, \ve b_p\)</span> í <span class="math notranslate nohighlight">\(H\)</span>.</p></li>
+<li><p>Öll vigurrúm eru hlutrúm í sjálfu sér. Grunnur fyrir vigurrúm <span class="math notranslate nohighlight">\(V\)</span> er því línulega óháð upptalning <span class="math notranslate nohighlight">\(\{\ve b_1, \ve b_2, \ldots, \ve b_p\}\)</span> á vigrum í <span class="math notranslate nohighlight">\(V\)</span> sem spannar allt <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p>Við munum alltaf gera ráð fyrir að það séu endanlega margir vigrar í grunni. Þegar haldið er áfram með línulega algebru getum við þurft að nota grunna með óendanlega mörgum vigrum. Dæmi um slíkt vigurrúm er vigurrúm allra margliðna af einni breytu, þar er <span class="math notranslate nohighlight">\(\{1,x,x^2,\ldots\}\)</span> grunnur.</p></li>
+</ul>
+</div>
+<section id="synidaemi-venjulegi-grunnurinn">
+<h4><span class="section-number">4.3.1.1. </span>Sýnidæmi: Venjulegi grunnurinn<a class="headerlink" href="#synidaemi-venjulegi-grunnurinn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Rifjum upp að vigrarnir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ve e_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+\quad \ve e_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+\quad, \dots, \quad \ve e_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix},\end{split}\]</div>
+<p>mynda venjulega grunninn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Venjulegi grunninn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span> er <em>grunnur</em> fyrir <span class="math notranslate nohighlight">\(\R^n\)</span> eins og nafnið gefur til kynna.</p>
+</div>
+</section>
+<section id="synidaemi-linulega-ohair-dalkvigrar-mynda-grunn">
+<h4><span class="section-number">4.3.1.2. </span>Sýnidæmi: Línulega óháðir dálkvigrar mynda grunn<a class="headerlink" href="#synidaemi-linulega-ohair-dalkvigrar-mynda-grunn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera andhverfanlegt <span class="math notranslate nohighlight">\(n\times n\)</span> fylki. Þá eru dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> línulega óháðir og þeir spanna allt <span class="math notranslate nohighlight">\(\R^n\)</span>. Dálkvigrarnir mynda því grunn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+</div>
+</section>
+<section id="synidaemi-grunnar">
+<h4><span class="section-number">4.3.1.3. </span>Sýnidæmi: Grunnar<a class="headerlink" href="#synidaemi-grunnar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Eru eftirfarandi grunnar fyrir <span class="math notranslate nohighlight">\(\mathbb{R} ^3\)</span>?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}a)\  \left\{\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix},
+\begin{bmatrix} 4958 \\ 968 \\ 0 \end{bmatrix},
+\begin{bmatrix} -34 \\ 102 \\ -66 \end{bmatrix} \right\},
+\quad b)\  \left\{\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix},
+\begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}\right\}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p><em>a)</em> Sjáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} 3 &amp; 4958 &amp; -34 \\
+0 &amp; 968 &amp; 102 \\
+0 &amp; 0 &amp; -66 \\
+\end{bmatrix}\end{split}\]</div>
+<p>er andhverfanlegt fylki. Svo mengið er grunnur fyrir <span class="math notranslate nohighlight">\(\mathbb{R} ^3\)</span>.</p>
+<p><em>b)</em> Við erum með tvo vigra í <span class="math notranslate nohighlight">\(\mathbb{R} ^3\)</span> svo þeir spanna í mesta lagi sléttu í
+<span class="math notranslate nohighlight">\(\mathbb{R} ^3\)</span> en ekki allt rúmið. Mengið er því ekki grunnur fyrir <span class="math notranslate nohighlight">\(\mathbb{R} ^3\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-um-spann-mengja">
+<h3><span class="section-number">4.3.2. </span>Setning: Um spann mengja<a class="headerlink" href="#setning-um-spann-mengja" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(S=\{\ve v_1, \ve v_2, \ldots, \ve v_p\}\)</span> vera upptalningu (eða mengi) vigra í <span class="math notranslate nohighlight">\(V\)</span> sem spannar hlutrúm <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<blockquote>
+<div><p><strong>a.</strong> Gerum ráð fyrir að einn vigranna í <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(\ve v_k\)</span>, sé línuleg samantekt af hinum vigrunum í <span class="math notranslate nohighlight">\(S\)</span>. Þá spannar
+<span class="math notranslate nohighlight">\(S^\prime=\{\ve v_1, \ve v_2, \ldots,\ve v_{k-1}, \ve v_{k+1}, \ldots, \ve v_p\}\)</span> líka hlutrúmið <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<p><strong>b.</strong> Ef <span class="math notranslate nohighlight">\(H\neq\{\ve 0\}\)</span> þá er eitthvað ekki tómt hlutmengi úr <span class="math notranslate nohighlight">\(S\)</span> grunnur fyrir <span class="math notranslate nohighlight">\(H\)</span>. Ef <span class="math notranslate nohighlight">\(H=\{\ve 0\}\)</span> þá er <span class="math notranslate nohighlight">\(\emptyset\)</span> grunnur fyrir <span class="math notranslate nohighlight">\(H\)</span>, og er í raun eini grunnurinn fyrir <span class="math notranslate nohighlight">\(H\)</span>.</p>
+</div></blockquote>
+</div>
+<section id="synidaemi-grunnur-fyrir-nullrum">
+<h4><span class="section-number">4.3.2.1. </span>Sýnidæmi: Grunnur fyrir núllrúm<a class="headerlink" href="#synidaemi-grunnur-fyrir-nullrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum grunn fyrir núllrúm eftirfarandi fylkis</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+6 &amp; 7 &amp; 8 &amp; 9 &amp; 10\\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Með einföldum línuaðgerðum fáum við</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1  &amp; 2 &amp; 3 &amp; 4 &amp; 5\\
+6 &amp; 7 &amp; 8 &amp; 9 &amp;10\\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15
+\end{bmatrix}\sim\dots\sim
+\begin{bmatrix}
+1  &amp; 0 &amp; -1 &amp; -2 &amp; -3\\
+0 &amp; 1 &amp; 2 &amp; 3 &amp;4\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>sem gefur okkur jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1-x_3-2x_4-3x_5&amp;=&amp;0\\
+x_2+2x_3+3x_4+4x_5&amp;=&amp;0
+\end{eqnarray*}\end{split}\]</div>
+<p>Þetta má umrita sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1&amp;=&amp;x_3+2x_4+3x_5\\
+x_2&amp;=&amp;-2x_3-3x_4-4x_5
+\end{eqnarray*}\end{split}\]</div>
+<p>sem gefur</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
+= \begin{bmatrix} x_3+2x_4+3x_5 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}
+= x_3 \begin{bmatrix} 1 \\ -2 \\ 1 \\ 0 \\ 0 \end{bmatrix}
++ x_4 \begin{bmatrix} 2 \\ -3 \\ 0 \\ 1 \\ 0 \end{bmatrix}
++ x_5 \begin{bmatrix} 3 \\ -4 \\ 0  \\ 0 \\ 1 \end{bmatrix}\end{split}\]</div>
+<p>Ljóst að vigrarnir þrír spanna <span class="math notranslate nohighlight">\(\nul{A}\)</span>. Með því að skoða stuðla þeirra má
+sjá að þeir eru línulega óháðir. Því er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{
+\begin{bmatrix}
+1\\
+-2\\
+1\\
+0\\
+0\\
+\end{bmatrix}
+,\begin{bmatrix}
+2\\
+-3\\
+0\\
+1\\
+0
+\end{bmatrix}
+,\begin{bmatrix}
+3\\
+-4\\
+0\\
+0\\
+1
+\end{bmatrix}\right\}\end{split}\]</div>
+<p>grunnur fyrir <span class="math notranslate nohighlight">\(\nul{A}\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-a-finna-grunn-fyrir-dalkrum">
+<h3><span class="section-number">4.3.3. </span>Setning: Að finna grunn fyrir dálkrúm<a class="headerlink" href="#setning-a-finna-grunn-fyrir-dalkrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera fylki og <span class="math notranslate nohighlight">\(U\)</span> vera efra stallaform þess.
+Dálkar <span class="math notranslate nohighlight">\(A\)</span> sem hafa forystustuðull í <span class="math notranslate nohighlight">\(U\)</span> mynda grunn fyrir dálkrúm <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Mjög mikilvægt er að taka dálkana fyrir grunninn úr <span class="math notranslate nohighlight">\(A\)</span>, ekki úr <span class="math notranslate nohighlight">\(U\)</span>. Við notum <span class="math notranslate nohighlight">\(U\)</span> bara til að ákveða
+hvaða dálka úr <span class="math notranslate nohighlight">\(A\)</span> við tökum. Nóg er að finna efra stallaform. Það er enginn þörf fyrir að rutt efra stallaform.</p>
+</div>
+<section id="synidaemi-grunnur-fyrir-dalkrum">
+<h4><span class="section-number">4.3.3.1. </span>Sýnidæmi: Grunnur fyrir dálkrúm<a class="headerlink" href="#synidaemi-grunnur-fyrir-dalkrum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum grunn fyrir dálkrúm</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+6 &amp; 7 &amp; 8 &amp; 9 &amp; 10\\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Beitum einföldum línuaðgerðum þar til efra stallaform fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1  &amp; 2 &amp; 3 &amp; 4 &amp; 5\\
+6 &amp; 7 &amp; 8 &amp; 9 &amp;10\\
+11 &amp; 12 &amp; 13 &amp; 14 &amp; 15
+\end{bmatrix}\sim\dots\sim
+\begin{bmatrix}
+1  &amp; 0 &amp; -1 &amp; -2 &amp; -3\\
+0 &amp; 1 &amp; 2 &amp; 3 &amp;4\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}.\end{split}\]</div>
+<p>Köllum síðara fylkið <span class="math notranslate nohighlight">\(U= [\bf u_1 \dots u_5]\)</span>. Með því að skoða
+<span class="math notranslate nohighlight">\(U\)</span> má sjá að dálkvigrarnir eru ekki línulega óháðir.
+Sjáum að <span class="math notranslate nohighlight">\(\ve u_3, \ve u_4\)</span> og <span class="math notranslate nohighlight">\(\ve u_5\)</span> eru línuleg samantekt
+af <span class="math notranslate nohighlight">\(\ve u_1\)</span> og <span class="math notranslate nohighlight">\(\ve u_2\)</span>. Því er <span class="math notranslate nohighlight">\(\col{A} = \text{Span}\{\ve a_1, \ve a_2 \}\)</span>.
+Við fáum því að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left\{ \begin{bmatrix} 1 \\ 6\\ 11 \end{bmatrix}, \begin{bmatrix} 2 \\ 7 \\ 1 \end{bmatrix} \right\}\end{split}\]</div>
+<p>er grunnur fyrir <span class="math notranslate nohighlight">\(\col{A}\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-tveir-eiginleikar-grunna">
+<h3><span class="section-number">4.3.4. </span>Setning: Tveir eiginleikar grunna<a class="headerlink" href="#setning-tveir-eiginleikar-grunna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm og <span class="math notranslate nohighlight">\(S\)</span> vera endanlegt mengi sem spannar <span class="math notranslate nohighlight">\(V\)</span>.
+Þá inniheldur <span class="math notranslate nohighlight">\(S\)</span> grunn fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Ef <span class="math notranslate nohighlight">\(R\)</span> er línulega óháð hlutmengi í <span class="math notranslate nohighlight">\(V\)</span> þá er <span class="math notranslate nohighlight">\(R\)</span> innihaldið í einhverjum (ekki endilega þeim sama og <span class="math notranslate nohighlight">\(S\)</span> inniheldur)
+grunni fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>Þetta má orða sem svo: <em>Grunnur er eins lítið spannmengi og eins stórt línulega óháð mengi í vigurrúmi og mögulegt er</em>.</p>
+</div>
+</section>
+<section id="setning-um-tilvist-hnita">
+<h3><span class="section-number">4.3.5. </span>Setning: Um tilvist hnita<a class="headerlink" href="#setning-um-tilvist-hnita" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span> sé grunnur fyrir <span class="math notranslate nohighlight">\(V\)</span>.
+Þá gildir fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve v\in V\)</span> að til eru <em>ótvírætt</em> ákvarðaðar tölur <span class="math notranslate nohighlight">\(c_1, c_2, \ldots, c_n\)</span>
+þannig að</p>
+<div class="math notranslate nohighlight">
+\[\ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n.\]</div>
+<p>Þetta má orða á þann hátt að jafnan <span class="math notranslate nohighlight">\(x_1\ve b_1 + x_2\ve b_2 + \ldots + x_n\ve b_n=\ve v\)</span> hafi nákvæmlega eina lausn, þ.e. fyrir gefinn grunn þá er til nákvæmlega ein leið til að rita gefinn vigur sem línulega samantekt vigranna í grunninum.</p>
+</div>
+</section>
+<section id="skilgreining-mathcal-b-hnit">
+<h3><span class="section-number">4.3.6. </span>Skilgreining: <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnit<a class="headerlink" href="#skilgreining-mathcal-b-hnit" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span> sé grunnur fyrir <span class="math notranslate nohighlight">\(V\)</span>.
+Tölurnar <span class="math notranslate nohighlight">\(c_1, c_2, \ldots, c_n\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[\ve v= c_1\ve b_1 + c_2\ve b_2 + \ldots + c_n\ve b_n,\]</div>
+<p>kallast <strong>hnit vigursins</strong> <span class="math notranslate nohighlight">\(\ve v\)</span> <strong>með tilliti til grunsins</strong> <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> (e. coordinates of <span class="math notranslate nohighlight">\(\ve v\)</span> relative to the basis <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>).
+Við tölum líka um <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnit vigursins <span class="math notranslate nohighlight">\(\ve v\)</span> (e. <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-coordinates of <span class="math notranslate nohighlight">\(\ve v\)</span>).</p>
+</div>
+</section>
+<section id="skilgreining-hnitavigur-ve-x-mathcal-b">
+<h3><span class="section-number">4.3.7. </span>Skilgreining: Hnitavigur <span class="math notranslate nohighlight">\([\ve x]_{\mathcal{B}}\)</span><a class="headerlink" href="#skilgreining-hnitavigur-ve-x-mathcal-b" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef tölurnar <span class="math notranslate nohighlight">\(c_1, c_2, \ldots, c_n\)</span> eru hnit vigursins <span class="math notranslate nohighlight">\(\ve x\)</span> með tilliti til grunsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>
+þá segjum við að vigurinn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[\ve x]_{\mathcal{B}}=\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}\end{split}\]</div>
+<p>sé <strong>hnitavigur</strong> <span class="math notranslate nohighlight">\(\ve x\)</span> <strong>með tilliti til grunnsins</strong> <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>
+(e. coordinate vector of <span class="math notranslate nohighlight">\(x\)</span> relative to <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>, or <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-coordinate vector).</p>
+</div>
+<section id="synidaemi-a-skipta-um-grunn">
+<h4><span class="section-number">4.3.7.1. </span>Sýnidæmi: Að skipta um grunn<a class="headerlink" href="#synidaemi-a-skipta-um-grunn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Gefinn er grunnurinn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{B} = \{\ve b_1, \ve b_2\}= \left\{\begin{bmatrix} -1 \\ 3 \end{bmatrix},
+\begin{bmatrix} 2 \\ 2 \end{bmatrix}\right\}\end{split}\]</div>
+<p>Vigurinn <span class="math notranslate nohighlight">\(\ve x\)</span> með tillit til <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> hefur hnitin  <span class="math notranslate nohighlight">\([\ve x]_{\mathcal{B}}=\begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span>. Finnið hnit <span class="math notranslate nohighlight">\(\ve x\)</span> með tillit til venjulega grunnsins <span class="math notranslate nohighlight">\(\mathcal{E}=\{\ve e_1, \ve e_2 \}\)</span>, þ.e. finnið <span class="math notranslate nohighlight">\([\ve x]_{\mathcal{E}}\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[\ve x]_{\mathcal{E}} = \ve x = 1\begin{bmatrix}
+-1\\3
+\end{bmatrix}+2\begin{bmatrix}
+2\\2
+\end{bmatrix}= \begin{bmatrix}
+-1+4\\3+4
+\end{bmatrix}=
+\begin{bmatrix}
+3\\7
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="skilgreining-hnitavorpun">
+<h3><span class="section-number">4.3.8. </span>Skilgreining: Hnitavörpun<a class="headerlink" href="#skilgreining-hnitavorpun" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span> sé grunnur fyrir vigurrúm <span class="math notranslate nohighlight">\(V\)</span>. Vörpunin</p>
+<div class="math notranslate nohighlight">
+\[V\rightarrow\R^n; \quad \ve x\mapsto [\ve x]_{\mathcal{B}}\]</div>
+<p>kallast <strong>hnitavörpunin með tilliti til</strong> <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> (e. coordiante mapping determined by <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>).</p>
+</div>
+</section>
+<section id="setning-hnitavorpun-er-linuleg">
+<h3><span class="section-number">4.3.9. </span>Setning: hnitavörpun er línuleg<a class="headerlink" href="#setning-hnitavorpun-er-linuleg" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera endanlega vítt vigurrúm með grunn <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}\)</span>. Hnitavörpunin</p>
+<div class="math notranslate nohighlight">
+\[V \rightarrow \R^n, \ \ve x \mapsto [\ve x]_{\mathcal{B}}\]</div>
+<p>er línuleg vörpun. Hnitavörpunin er einnig gagntæk</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<ul class="simple">
+<li><p>Hnitavörpun <span class="math notranslate nohighlight">\(V \rightarrow W\)</span> er mikilvægt dæmi um svokallaða <em>einsmótun</em> (e. isomorphism), þ.e. gagntæk línuleg vörpun, á milli vigurrúma.</p></li>
+<li><p>Um endanlega víð vigurrúm <span class="math notranslate nohighlight">\(V\)</span> með vídd <span class="math notranslate nohighlight">\(n\)</span> gildir að <span class="math notranslate nohighlight">\(V\)</span> er einsmóta <span class="math notranslate nohighlight">\(\R^n\)</span>.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="vidd-og-rankur">
+<h2><span class="section-number">4.4. </span>Vídd og rankur<a class="headerlink" href="#vidd-og-rankur" title="Permalink to this heading"></a></h2>
+<section id="setning-linulegt-haei-mengja-staerri-en-grunns">
+<h3><span class="section-number">4.4.1. </span>Setning: Línulegt hæði mengja stærri en grunns<a class="headerlink" href="#setning-linulegt-haei-mengja-staerri-en-grunns" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span> sé grunnur fyrir <span class="math notranslate nohighlight">\(V\)</span>.
+Mengi (eða upptalning) með fleiri en <span class="math notranslate nohighlight">\(n\)</span> vigrum er línulega háð.</p>
+</div>
+</section>
+<section id="setning-um-staer-grunna">
+<h3><span class="section-number">4.4.2. </span>Setning: Um stærð grunna<a class="headerlink" href="#setning-um-staer-grunna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef vigurrúm <span class="math notranslate nohighlight">\(V\)</span> hefur grunn með nákvæmlega <span class="math notranslate nohighlight">\(n\)</span> vigrum þá hefur sérhver grunnur <span class="math notranslate nohighlight">\(V\)</span> nákvæmlega <span class="math notranslate nohighlight">\(n\)</span> vigra.</p>
+</div>
+</section>
+<section id="skilgreining-vidd">
+<h3><span class="section-number">4.4.3. </span>Skilgreining: Vídd<a class="headerlink" href="#skilgreining-vidd" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Vídd</strong> (e. dimension) vigurrúms <span class="math notranslate nohighlight">\(V\)</span> er skilgreind sem fjöldi vigra í grunni <span class="math notranslate nohighlight">\(V\)</span> og er táknuð með <span class="math notranslate nohighlight">\(\dim{V}\)</span>.
+Ef til er endanlegt mengi vigra sem spannar vigurrúm <span class="math notranslate nohighlight">\(V\)</span> þá segjum við að <span class="math notranslate nohighlight">\(V\)</span> hafi <strong>endanlega vídd</strong> (e. finite-dimensional).
+Ef slíkt mengi er ekki til þá segjum við að <span class="math notranslate nohighlight">\(V\)</span> hafi <strong>óendanlega vídd</strong>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<ul class="simple">
+<li><p>Samkvæmt setningunni hér að ofan er fjöldi vigra í grunni alltaf sá sami svo vídd endanlega víðs vigurrúms er vel skilgreind tala.</p></li>
+<li><p>Ef við þekkjum einn grunn fyrir vigurrúm er vídd þess fjöldi vigra í þeim grunni. Við þurfum því bara að finna einhvern grunn til að segja til um víddina.</p></li>
+</ul>
+</div>
+<section id="synidaemi-vidd">
+<h4><span class="section-number">4.4.3.1. </span>Sýnidæmi: Vídd<a class="headerlink" href="#synidaemi-vidd" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p><strong>1.</strong> Vigurrúmið <span class="math notranslate nohighlight">\(\mathbb{R}^1\)</span> hefur víddina 1.</p>
+<p><strong>2.</strong> Vigurrúmið <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> hefur víddina 3.</p>
+<p><strong>3.</strong> Vigurrúmið <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> hefur víddina <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="setning-vidd-hlutrums">
+<h3><span class="section-number">4.4.4. </span>Setning: Vídd hlutrúms<a class="headerlink" href="#setning-vidd-hlutrums" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(H\)</span> vera hlutrúm í endanlega víðu vigurrúmi <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<blockquote>
+<div><p><strong>a.</strong> Ef við höfum línulega óháð mengi vigra í <span class="math notranslate nohighlight">\(H\)</span> þá má bæta við það vigrum til að smíða grunn fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>b.</strong> <span class="math notranslate nohighlight">\(\dim{H}\leq\dim{V}\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-samsemd-linulegs-ohaeis-og-spanns">
+<h3><span class="section-number">4.4.5. </span>Setning: Samsemd línulegs óhæðis og spanns<a class="headerlink" href="#setning-samsemd-linulegs-ohaeis-og-spanns" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm með vídd <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<blockquote>
+<div><p><strong>a.</strong> Sérhvert mengi af <span class="math notranslate nohighlight">\(n\)</span> línulega óháðum vigrum í <span class="math notranslate nohighlight">\(V\)</span> er grunnur fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>b.</strong> Sérhvert mengi af <span class="math notranslate nohighlight">\(n\)</span> af vigrum í <span class="math notranslate nohighlight">\(V\)</span> sem spanna <span class="math notranslate nohighlight">\(V\)</span> er grunnur fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+</div></blockquote>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Grunnur fyrir vigurrúm þarf að uppfylla tvö skilyrði. Hann þarf að vera línulega óháður og spanna allt vigurrúmið.
+Það nægir að tékka annað skilyrðið því hitt fylgir sjálfkrafa.</p>
+</div>
+</section>
+<section id="setning-forystustular-og-vidd">
+<h3><span class="section-number">4.4.6. </span>Setning: Forystustuðlar og vídd<a class="headerlink" href="#setning-forystustular-og-vidd" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki og <span class="math notranslate nohighlight">\(U\)</span> (einhvert) efra stallaform <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<blockquote>
+<div><p><strong>a.</strong> Vídd <span class="math notranslate nohighlight">\(\nul{A}\)</span> er jöfn fjölda frjálsra breyta, það er að segja víddin er jöfn fjölda dálka í <span class="math notranslate nohighlight">\(U\)</span>
+sem innihalda ekki forystustuðul.</p>
+<p><strong>b.</strong> Vídd <span class="math notranslate nohighlight">\(\col{A}\)</span> er jöfn fjölda dálka í <span class="math notranslate nohighlight">\(U\)</span> sem innihalda forystustuðul, þ.e. víddin er jöfn fjölda forystustuðla.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="skilgreining-linurum">
+<h3><span class="section-number">4.4.7. </span>Skilgreining: Línurúm<a class="headerlink" href="#skilgreining-linurum" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. <strong>Línurúm</strong> (e. row space) fylkisins <span class="math notranslate nohighlight">\(A\)</span> er hlutmengið í <span class="math notranslate nohighlight">\(\R^n\)</span> sem línuvigrar
+<span class="math notranslate nohighlight">\(A\)</span> spanna. Línurúm <span class="math notranslate nohighlight">\(A\)</span> er táknað með <span class="math notranslate nohighlight">\(\row{A}\)</span>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(m\times n\)</span> fylki þá gildir</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\col{A}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^m\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\row{A}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\nul{A}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\R^n\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="setning-linujafngild-fylki-hafa-sama-linurum">
+<h3><span class="section-number">4.4.8. </span>Setning: Línujafngild fylki hafa sama línurúm<a class="headerlink" href="#setning-linujafngild-fylki-hafa-sama-linurum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef tvö fylki <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru línujafngild (það er að fá má annað út frá hinu með einföldum línuaðgerðum)
+þá eru línurúm þeirra jöfn, það er <span class="math notranslate nohighlight">\(\row{A}=\row{B}\)</span>.</p>
+</div>
+</section>
+<section id="setning-grunnur-fyrir-linurum">
+<h3><span class="section-number">4.4.9. </span>Setning: Grunnur fyrir línurúm<a class="headerlink" href="#setning-grunnur-fyrir-linurum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <span class="math notranslate nohighlight">\(U\)</span> er efra stallaform fylkisins <span class="math notranslate nohighlight">\(A\)</span> þá mynda þeir línuvigrar í <span class="math notranslate nohighlight">\(U\)</span> sem eru ekki núll
+grunn fyrir línurúm <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Það eru ekki-núll línuvigrarnir úr <span class="math notranslate nohighlight">\(U\)</span> sem gefa grunninn, ekki línuvigrarnir úr <span class="math notranslate nohighlight">\(A\)</span>. Öfugt við það sem gildir um grunn dálkrúma!</p>
+</div>
+<section id="synidaemi-grunnur-fyrir-linurum">
+<h4><span class="section-number">4.4.9.1. </span>Sýnidæmi: Grunnur fyrir línurúm<a class="headerlink" href="#synidaemi-grunnur-fyrir-linurum" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum grunn fyrir línurúm fylkisins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A= \begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+\end{bmatrix} \sim
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; -4 &amp; -8 &amp; -12 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+\end{bmatrix}\end{split}\]</div>
+<p>Við erum komin með efri stallagerð og því er</p>
+<div class="math notranslate nohighlight">
+\[\{\begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \end{bmatrix}, \begin{bmatrix} 0 &amp; -4 &amp; -8 &amp; -12 \end{bmatrix} \}\]</div>
+<p>grunnur fyrir <span class="math notranslate nohighlight">\(\row{A}\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-rankur">
+<h3><span class="section-number">4.4.10. </span>Skilgreining: Rankur<a class="headerlink" href="#skilgreining-rankur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. <strong>Rankur</strong> (e. rank), eða myndvídd, fylkisins <span class="math notranslate nohighlight">\(A\)</span> er vídd dálkrúms <span class="math notranslate nohighlight">\(A\)</span>.
+Rankur fylkisins <span class="math notranslate nohighlight">\(A\)</span> er táknaður með <span class="math notranslate nohighlight">\(\rnk{A}\)</span>.</p>
+</div>
+</section>
+<section id="setning-ranksetningin">
+<h3><span class="section-number">4.4.11. </span>Setning: Ranksetningin<a class="headerlink" href="#setning-ranksetningin" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki.</p>
+<blockquote>
+<div><p><strong>a.</strong> Rankur fylkisins <span class="math notranslate nohighlight">\(A\)</span> er jafn fjölda forystustuðla í efra stallaformi <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>b.</strong> Vídd dálkrúmsins og vídd línurúmsins eru jafnar. Rankur fylkisins er því einnig jafn vídd línurúmsins.</p>
+<p><strong>c.</strong> Summa víddar dálkrúmsins og víddar núllrúmsins er jöfn fjölda dálka fylkisins, þ.e.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\rnk{A}+\dim{\nul{A}}=n.\]</div>
+</div>
+<section id="synidaemi-rankur-og-vidd">
+<h4><span class="section-number">4.4.11.1. </span>Sýnidæmi: Rankur og vídd<a class="headerlink" href="#synidaemi-rankur-og-vidd" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Reiknum rank og vídd núllrúms fyrir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Komum fylkinu á efri stallagerð</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12 \\
+\end{bmatrix}\sim
+\begin{bmatrix}
+1 &amp; 0 &amp; -1 &amp; -2 \\
+0 &amp; 1 &amp; 2 &amp; 3 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+\end{bmatrix}.\end{split}\]</div>
+<p>Rankur fylkisins er vídd dálkrúms, sem er fjöldi dálka með forystustuðlum, svo <span class="math notranslate nohighlight">\(\rnk{A}=2\)</span>. Vídd núllrúms er fjöldi frjálsra breyta
+svo <span class="math notranslate nohighlight">\(\nul{A}=2\)</span>.</p>
+</div>
+<p>Rifum upp löngu setninguna, <span class="math notranslate nohighlight">\(2.6.4.\)</span> úr kafla 2, með jafngildum skilyrðum þess að fylki sé andhverfanlegt.
+Nú höfum við lært nokkur ný hugtök og getum bætt við
+fleiri skilyrðum í þessa setningu.</p>
+</section>
+</section>
+<section id="setning-vibot-vi-longu-setninguna-um-andhverfur">
+<h3><span class="section-number">4.4.12. </span>Setning: Viðbót við löngu setninguna um andhverfur<a class="headerlink" href="#setning-vibot-vi-longu-setninguna-um-andhverfur" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n\times n\)</span> fylki. Eftirfarandi 7 skilyrði eru öll jafngildi.</p>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(A\)</span> er andhverfanlegt.</p>
+<p><strong>13.</strong> Dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> mynda grunn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>.</p>
+<p><strong>14.</strong> <span class="math notranslate nohighlight">\(\col{A}=\R^n\)</span>.</p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(\dim{(\col{A})}=n\)</span>.</p>
+<p><strong>16.</strong> <span class="math notranslate nohighlight">\(\rnk{A}=n\)</span>.</p>
+<p><strong>17.</strong> <span class="math notranslate nohighlight">\(\nul{A}=\{\ve 0\}\)</span>.</p>
+<p><strong>18.</strong> <span class="math notranslate nohighlight">\(\dim{(\nul{A})}=0\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="hnitaskipti">
+<h2><span class="section-number">4.5. </span>Hnitaskipti<a class="headerlink" href="#hnitaskipti" title="Permalink to this heading"></a></h2>
+<p>Við höfum áður séð hnitaskiptafylkið <span class="math notranslate nohighlight">\(\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}\)</span> í sýnidæmi <span class="math notranslate nohighlight">\(4.3.7.1.\)</span>, þegar <span class="math notranslate nohighlight">\(\mathcal{P}_\mathcal{E \leftarrow B}[\ve x]_\mathcal{B}=\ve x\)</span>. Nú ætlum við að skoða almennari skilgreiningu fyrir hnitaskipti.</p>
+<section id="skilgreining-hnitaskiptafylki">
+<h3><span class="section-number">4.5.1. </span>Skilgreining: Hnitaskiptafylki<a class="headerlink" href="#skilgreining-hnitaskiptafylki" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm af vídd <span class="math notranslate nohighlight">\(n\)</span> og gerum ráð fyrir að <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span>
+og <span class="math notranslate nohighlight">\(\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}\)</span> séu grunnar fyrir <span class="math notranslate nohighlight">\(V\)</span>. Við búum til <span class="math notranslate nohighlight">\(n \times n\)</span> fylki</p>
+<div class="math notranslate nohighlight">
+\[P_{\mathcal{C \leftarrow B}} = [[\ve b_1]_{\mathcal{C}} \ \ [\ve b_2]_{\mathcal{C}}\ \ \dots \ \ [\ve b_n]_{\mathcal{C}}],\]</div>
+<p>með því að finna <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>-hnit sérhvers vigurs <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>. Fylkið <span class="math notranslate nohighlight">\(P_{\mathcal{C \leftarrow B}}\)</span> kallast
+<strong>hnitaskiptafylki</strong> frá <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnitum yfir í <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>-hnit
+(e. change-of-coordinates matrix).</p>
+</div>
+</section>
+<section id="setning-hnitaskiptafylki">
+<h3><span class="section-number">4.5.2. </span>Setning: Hnitaskiptafylki<a class="headerlink" href="#setning-hnitaskiptafylki" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm af vídd <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span>
+og <span class="math notranslate nohighlight">\(\mathcal{C}=\{\ve c_1, \ve c_2, \ldots, \ve c_n\}\)</span> vera grunna fyrir <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p><strong>(i)</strong> Til er línuleg vörpun <span class="math notranslate nohighlight">\(T\colon \R^n\to\R^n\)</span> þannig að <span class="math notranslate nohighlight">\(T([x]_{\mathcal{B}})=[\ve x]_{\mathcal{C}}\)</span> fyrir
+alla vigra <span class="math notranslate nohighlight">\(\ve x\in V\)</span>. Fylki þessrar vörpunar er</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[P_{\mathcal{C}\leftarrow\mathcal{B}}=[[\ve b_1]_{\mathcal{C}}\quad [\ve b_2]_{\mathcal{C}}\quad \ldots \quad [\ve b_n]_{\mathcal{C}}].\]</div>
+</div></blockquote>
+<p><strong>(ii)</strong> Fylkið <span class="math notranslate nohighlight">\(P_{\mathcal{C}\leftarrow\mathcal{B}}\)</span> úr lið <strong>(i)</strong> er andhverfanlegt og andhverfa þess er
+hnitaskiptafylkið úr <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>-hnitum yfir í <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnit. Það er að segja</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[P_{\mathcal{B}\leftarrow\mathcal{C}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1},\]</div>
+</div></blockquote>
+<p>og fyrir sérhvern vigur <span class="math notranslate nohighlight">\(\ve x\in V\)</span> gildir að</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[[\ve x]_{\mathcal{B}}=(P_{\mathcal{C}\leftarrow\mathcal{B}})^{-1}[\ve x]_{\mathcal{C}}.\]</div>
+</div></blockquote>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Ritháttur</p>
+<p>Oft vinnum við með venjulega grunninn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>, það er grunninn <span class="math notranslate nohighlight">\(\mathcal{E}=\{\ve e_1, \ve e_2, \ldots, \ve e_n\}\)</span>
+þar sem <span class="math notranslate nohighlight">\(\ve e_i\)</span> hefur <span class="math notranslate nohighlight">\(i\)</span>-ta hnitið 1 en öll önnur hnit 0. Þegar við skrifum vigur sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ve x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\end{split}\]</div>
+<p>erum við að segja að <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> séu hnit vigursins <span class="math notranslate nohighlight">\(\ve x\)</span> með tilliti til grunsins <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>.</p>
+</div>
+</section>
+<section id="setning-hnitaskiptafylki-yfir-i-venjulega-grunninn">
+<h3><span class="section-number">4.5.3. </span>Setning: Hnitaskiptafylki yfir í venjulega grunninn<a class="headerlink" href="#setning-hnitaskiptafylki-yfir-i-venjulega-grunninn" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \ldots, \ve b_n\}\)</span> vera grunn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span> og látum <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> vera
+venjulega grunninn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Þá er hnitaskiptafylkið frá <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnitum til <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>-hnita
+gefið með</p>
+<div class="math notranslate nohighlight">
+\[P_{\mathcal{E}\leftarrow\mathcal{B}}=[\ve b_1 \quad \ve b_2 \quad \ldots \quad \ve b_n],\]</div>
+<p>og hnitaskiptafylkið frá <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>-hnitum til <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnita gefið með</p>
+<div class="math notranslate nohighlight">
+\[P_{\mathcal{B}\leftarrow\mathcal{E}}=(P_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}.\]</div>
+</div>
+<section id="synidaemi-hnitaskiptafylki-yfir-i-venjulega-grunninn">
+<h4><span class="section-number">4.5.3.1. </span>Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn<a class="headerlink" href="#synidaemi-hnitaskiptafylki-yfir-i-venjulega-grunninn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(\mathcal{B}=\{(1,2),(3,1)\}\)</span> vera grunn fyrir <span class="math notranslate nohighlight">\(\R^2\)</span> og <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> vera venjulega grunninn
+fyrir <span class="math notranslate nohighlight">\(\R^2\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}}
+=\begin{bmatrix} \ve b_1 &amp; \ve b_2 &amp; \cdots &amp; \ve b_n \end{bmatrix}
+=\begin{bmatrix} 1 &amp; 3 \\ 2 &amp; 1 \end{bmatrix},\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{P}_{\mathcal{B}\leftarrow\mathcal{E}}=(\mathcal{P}_{\mathcal{E}\leftarrow\mathcal{B}})^{-1}=\frac{1}{-5}
+\begin{bmatrix} 1 &amp; -3 \\ -2 &amp; 1 \end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="setning-formula-fyrir-hnitaskiptifylki">
+<h3><span class="section-number">4.5.4. </span>Setning: Formúla fyrir hnitaskiptifylki<a class="headerlink" href="#setning-formula-fyrir-hnitaskiptifylki" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> vera grunna fyrir <span class="math notranslate nohighlight">\(\R^n\)</span> og <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> vera venjulega grunninn.
+Þá er</p>
+<div class="math notranslate nohighlight">
+\[P_{\mathcal{C}\leftarrow\mathcal{B}}=P_{\mathcal{C}\leftarrow\mathcal{E}}P_{\mathcal{E}\leftarrow\mathcal{B}}
+=(P_{\mathcal{E}\leftarrow\mathcal{C}})^{-1} P_{\mathcal{E}\leftarrow\mathcal{B}}.\]</div>
+</div>
+</section>
+<section id="reiknirit-fyrir-hnitaskiptafylki">
+<h3><span class="section-number">4.5.5. </span>Reiknirit fyrir hnitaskiptafylki<a class="headerlink" href="#reiknirit-fyrir-hnitaskiptafylki" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Aðferð</p>
+<p>Látum <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \ve b_2, \dots, \ve b_n\}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{C}=\{\ve c_1, \ve c_2, \dots, \ve c_n\}\)</span>
+vera grunna fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Til þess að finna hnitaskiptafylkið frá <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnitum yfir í <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>-hnit,
+<span class="math notranslate nohighlight">\(P_{\mathcal{C}\leftarrow\mathcal{B}}\)</span>, gerum við eftirfarandi</p>
+<blockquote>
+<div><p><strong>1.</strong> Búum til aukna fylkið <span class="math notranslate nohighlight">\([\ve c_1 \ \ve c_2 \ \dots \ \ve c_n \ | \ \ve b_1 \ \ve b_2 \ \dots \ \ve b_n]\)</span>.</p>
+<p><strong>2.</strong> Breytum vinstri hluta aukna fylkisins í einingarfylkið með einföldum línuaðgerðum. Það sem eftir stendur í
+hægri hluta aukna fylkisins er þá hnitaskiptafylkið <span class="math notranslate nohighlight">\(P_{\mathcal{C}\leftarrow\mathcal{B}}\)</span>.</p>
+</div></blockquote>
+<p>Þetta reiknirit er svipað því að finna andhverfu fylkis.</p>
+</div>
+<section id="synidaemi-hnitaskiptafylki">
+<h4><span class="section-number">4.5.5.1. </span>Sýnidæmi: Hnitaskiptafylki<a class="headerlink" href="#synidaemi-hnitaskiptafylki" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p>Viljum finna <span class="math notranslate nohighlight">\(\mathcal{P}_{\mathcal{C}\leftarrow\mathcal{B}}\)</span> ef <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> eru</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\mathcal{B} &amp;= \left\{
+\begin{bmatrix}
+1 \\
+2 \\
+0
+\end{bmatrix},
+\begin{bmatrix}
+-1 \\
+1 \\
+2
+\end{bmatrix},
+\begin{bmatrix}
+0 \\
+1 \\
+3
+\end{bmatrix}
+\right\}, \quad
+\mathcal{C} = \left\{
+\begin{bmatrix}
+1 \\
+0 \\
+1
+\end{bmatrix},
+\begin{bmatrix}
+0 \\
+2 \\
+1
+\end{bmatrix},
+\begin{bmatrix}
+1 \\
+1 \\
+-1
+\end{bmatrix}
+\right\}.
+\end{align*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Við myndum fylkið <span class="math notranslate nohighlight">\([C \ | \ B]\)</span>
+og framkvæmum einfaldar línuaðgerðir til að umbreyta <span class="math notranslate nohighlight">\([C \ | \ B]\)</span> í <span class="math notranslate nohighlight">\([I \ | \ X]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[C \ | \ B] &amp;= \left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 1 &amp; 1 &amp; -1 &amp; 0 \\
+0 &amp; 2 &amp; 1 &amp; 2 &amp; 1 &amp; 1 \\
+1 &amp; 1 &amp; -1 &amp;  0 &amp; 2 &amp; 3
+\end{array}\right] \\&amp;\sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 1 &amp; 1 &amp; -1 &amp; 0 \\
+0 &amp; 1 &amp; \frac{1}{2} &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} \\
+0 &amp; 1 &amp; -2 &amp; -1 &amp; 3 &amp; 3
+\end{array}\right] \\
+&amp;\sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 1 &amp; 1 &amp; -1 &amp; 0 \\
+0 &amp; 1 &amp; \frac{1}{2} &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} \\
+0 &amp; 0 &amp; -\frac{5}{2} &amp; -2 &amp; \frac{5}{2} &amp; \frac{5}{2}
+\end{array}\right]
+\\&amp;\sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 1 &amp; 1 &amp; -1 &amp; 0 \\
+0 &amp; 1 &amp; \frac{1}{2} &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} \\
+0 &amp; 0 &amp; 1 &amp; \frac{4}{5} &amp; -1 &amp; -1
+\end{array}\right]\\&amp;\sim
+\left[\begin{array}{&#64;{}ccc|ccc&#64;{}}
+1 &amp; 0 &amp; 0 &amp; \frac{1}{5} &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; \frac{3}{5} &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; \frac{4}{5} &amp; -1 &amp; -1
+\end{array}\right].\end{split}\]</div>
+<p>Það með er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{P}_{\mathcal{C}\leftarrow\mathcal{B}}=
+\begin{bmatrix}
+\frac{1}{5} &amp; 0 &amp; 1 \\
+\frac{3}{5} &amp; 1 &amp; 1 \\
+\frac{4}{5} &amp; -1 &amp; -1
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="skilgreining-fylki-vorpunar-me-tilliti-til-grunns">
+<h3><span class="section-number">4.5.6. </span>Skilgreining: Fylki vörpunar með tilliti til grunns<a class="headerlink" href="#skilgreining-fylki-vorpunar-me-tilliti-til-grunns" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^n\)</span> vera línulega vörpun og <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}\)</span> vera grunn fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>.
+Um fylkið</p>
+<div class="math notranslate nohighlight">
+\[A_{\mathcal{B}}= [[T(\ve b_1)]_{\mathcal{B}} \ \ [T(\ve b_2)]_{\mathcal{B}} \ \ \dots \ \ [T(\ve b_n)]_{\mathcal{B}} ],\]</div>
+<p>gildir að fyrir sérhvern <span class="math notranslate nohighlight">\(\ve x \in \R^n\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[[T(\ve x)]_{\mathcal{B}}= A_{\mathcal{B}} [\ve x]_{\mathcal{B}},\]</div>
+<p>og <span class="math notranslate nohighlight">\(A_{\mathcal{B}}\)</span> kallast <strong>fylki</strong> <span class="math notranslate nohighlight">\(T\)</span> <strong>með tilliti til grunnsins</strong> <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>.</p>
+</div>
+</section>
+<section id="setning-fylki-fyrir-mismunandi-grunna">
+<h3><span class="section-number">4.5.7. </span>Setning: Fylki fyrir mismunandi grunna<a class="headerlink" href="#setning-fylki-fyrir-mismunandi-grunna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^n\)</span> vera línulega vörpun, <span class="math notranslate nohighlight">\(\mathcal{B}=\{\ve b_1, \dots, \ve b_n \}\)</span>
+og <span class="math notranslate nohighlight">\(\mathcal{C}=\{\ve c_1, \dots, \ve c_n \}\)</span> vera grunna fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Látum <span class="math notranslate nohighlight">\(A_{\mathcal{B}}\)</span> og
+<span class="math notranslate nohighlight">\(A_{\mathcal{C}}\)</span> tákna fylki vörpunarinnar m.t.t. <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>. Þá er</p>
+<div class="math notranslate nohighlight">
+\[A_{\mathcal{C}}= P_{\mathcal{C}\leftarrow\mathcal{B}}A_{\mathcal{B}}P_{\mathcal{B}\leftarrow\mathcal{C}}.\]</div>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \R^2 \rightarrow \R^2\)</span> vera speglun í línunni <span class="math notranslate nohighlight">\(y=x\)</span>. Hvert er fylki <span class="math notranslate nohighlight">\(T\)</span> m.t.t. venjulega grunnsins <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> fyrir <span class="math notranslate nohighlight">\(\R^2\)</span>.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Þar sem <span class="math notranslate nohighlight">\(T\)</span> er speglun í línunni <span class="math notranslate nohighlight">\(y = x\)</span> gildir að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T \left(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad T\left(\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right) = - \begin{bmatrix} -1 \\ 1 \end{bmatrix}.\end{split}\]</div>
+<p>Skoðum grunninn <span class="math notranslate nohighlight">\(\mathcal{B}= \left\{\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix} -1 \\ 1 \end{bmatrix} \right\}\)</span> fyrir <span class="math notranslate nohighlight">\(\R^2\)</span>.
+Athugum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[T(\ve b_1)]_{\mathcal{B}} = \left[ \begin{bmatrix} 1 \\ 1 \end{bmatrix}\right]_{\mathcal{B}} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad [T(\ve b_2)]_{\mathcal{B}} = \left[- \begin{bmatrix} -1 \\ 1 \end{bmatrix}\right]_{\mathcal{B}} = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.\end{split}\]</div>
+<p>Því er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_{\mathcal{B}}= \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}.\end{split}\]</div>
+<p>Vitum einnig að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_{\mathcal{E}\leftarrow \mathcal{B}}= \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix},\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P_{\mathcal{B}\leftarrow \mathcal{E}}= (P_{\mathcal{E}\leftarrow \mathcal{B}})^{-1}= \frac{1}{2} \begin{bmatrix} 1 &amp; 1 \\ -1 &amp; 1 \end{bmatrix}.\end{split}\]</div>
+<p>Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_{\mathcal{E}}=P_{\mathcal{E}\leftarrow \mathcal{B}}A_{\mathcal{B}}P_{\mathcal{B}\leftarrow \mathcal{E}}=
+\begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\left(\frac{1}{2}\begin{bmatrix} 1 &amp; 1 \\ -1 &amp; 1 \end{bmatrix} \right)=
+\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli03/" class="btn btn-neutral float-left" title="3. Ákveður" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli05/" class="btn btn-neutral float-right" title="5. Eigingildi og eiginvigrar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

@@ -1,0 +1,2479 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Línuleg jöfnuhneppi &mdash; Línuleg Algebra </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="2. Fylkjaaðgerðir" href="../kafli02/" />
+    <link rel="prev" title="Formáli" href="../formali/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Línuleg Algebra
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linuleg-jafna">1.1.1. Skilgreining: Línuleg jafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linulegt-jofnuhneppi">1.1.2. Skilgreining: Línulegt jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-fjoldi-lausna">1.1.3. Setning: Fjöldi lausna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-jofnuhneppi-sem-hefur-enga-lausn">1.1.3.1. Sýnidæmi: Jöfnuhneppi sem hefur enga lausn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-jofnuhneppi-sem-hefur-eina-lausn">1.1.3.2. Sýnidæmi: Jöfnuhneppi sem hefur eina lausn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-jofnuhneppi-sem-hefur-oendalega-margar-lausnir">1.1.3.3. Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-lausnamengi">1.1.4. Skilgreining: Lausnamengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-jafngild">1.1.5. Skilgreining: Jafngild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fylki">1.2. Fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-staer-fylkis">1.2.1. Skilgreining: Stærð fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-stulafylki-og-auki-fylki">1.2.2. Skilgreining: Stuðlafylki og aukið fylki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#einfaldar-linuagerir">1.3. Einfaldar línuaðgerðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-einfaldar-linuagerir">1.3.1. Setning: Einfaldar línuaðgerðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-einfaldar-linuagerir">1.3.1.1. Sýnidæmi: Einfaldar línuaðgerðir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linujafngild">1.3.2. Skilgreining: Línujafngild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rudd-efra-stallaform">1.4. (Rudd) efra stallaform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-nulllinur-og-forystustular">1.4.1. Skilgreining: Núlllínur og forystustuðlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-efri-stallager">1.4.2. Skilgreining: Efri stallagerð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-efri-stallager">1.4.2.1. Sýnidæmi: Efri stallagerð</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-rudd-efri-stallager">1.4.3. Skilgreining: Rudd efri stallagerð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-rudd-efri-stallager">1.4.3.1. Sýnidæmi: Rudd efri stallagerð</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-rutt-efra-stallaform-er-otviraett-akvara">1.4.4. Setning: Rutt efra stallaform er ótvírætt ákvarðað</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fjoldi-lausna-og-frjalsar-breytur">1.5. Fjöldi lausna og frjálsar breytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-frjalsar-breytur-og-grunnbreytur">1.5.1. Skilgreining: Frjálsar breytur og grunnbreytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning">1.5.1.1. Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-tilvist-og-fjoldi-lausna">1.5.2. Setning: Tilvist og fjöldi lausna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gauss-eying">1.6. Gauss-eyðing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aftur-a-bak-innsetning">1.6.1. Aftur-á-bak innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gauss-eying-reiknirit">1.6.2. Gauss-eyðing reiknirit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-gauss-eying">1.6.2.1. Sýnidæmi: Gauss-eyðing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vigrar">1.7. Vigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-vigur">1.7.1. Skilgreining: Vigur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-dalkvigrar">1.7.1.1. Sýnidæmi: Dálkvigrar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-samlagning-vigra">1.7.2. Skilgreining: Samlagning vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-margfoldun-vigurs-me-tolu">1.7.3. Skilgreining: Margföldun vigurs með tölu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-samlagning-vigra-og-margfoldun-vigurs-me-tolu">1.7.3.1. Sýnidæmi: Samlagning vigra og margföldun vigurs með tölu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reiknireglur-fyrir-vigra">1.7.4. Reiknireglur fyrir vigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linulegar-samantektir">1.8. Línulegar samantektir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linulegar-samantektir">1.8.1. Skilgreining: Línulegar samantektir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-linulegar-samantektir">1.8.1.1. Sýnidæmi: Línulegar samantektir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">1.8.1.2. Sýnidæmi: Línulegar samantektir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#spann-vigra">1.9. Spann vigra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-spann-vigra">1.9.1. Skilgreining: Spann vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spann-tveggja-vigra-i-mathbb-r-2">1.9.2. Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spann-tveggja-vigra-i-mathbb-r-3">1.9.3. Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#margfeldi-fylkis-og-vigurs">1.10. Margfeldi fylkis og vigurs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-margfeldi-fylkis-og-vigurs">1.10.1. Skilgreining: Margfeldi fylkis og vigurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-margfeldi-fylkis-og-vigurs">1.10.1.1. Sýnidæmi: Margfeldi fylkis og vigurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">1.10.1.2. Sýnidæmi: Margfeldi fylkis og vigurs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#fylkjajafnan">1.11. Fylkjajafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-fylkjajafnan">1.11.1. Setning: Fylkjajafnan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fylkjajafnan">1.11.1.1. Sýnidæmi: Fylkjajafnan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">1.11.1.2. Sýnidæmi: Fylkjajafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-fullyringar-um-fylkjajofnuna">1.11.2. Setning: Fullyrðingar um fylkjajöfnuna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-um-fylki-og-dalkvigur">1.11.3. Setning: Um fylki og dálkvigur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-ohliru-jofnuhneppi">1.11.4. Skilgreining: Óhliðruð jöfnuhneppi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-ohlira-jofnuhneppi">1.11.4.1. Sýnidæmi: Óhliðrað jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#folgin-og-stikaframsetning">1.11.5. Fólgin og stikaframsetning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-stikaframsetning">1.11.5.1. Sýnidæmi: Stikaframsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hliru-jofnuhneppi">1.11.6. Skilgreining: Hliðruð jöfnuhneppi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hlira-jofnuhneppi">1.11.6.1. Sýnidæmi: Hliðrað jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-lausnamengi-fylkjajofnunnar">1.11.7. Setning: Lausnamengi fylkjajöfnunnar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-lausnir-profaar">1.11.7.1. Sýnidæmi: Lausnir prófaðar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linulega-ohaar-upptalningar-vigra">1.12. Línulega óháðar upptalningar vigra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linulega-ohaar-upptalningar-vigra">1.12.1. Skilgreining: Línulega óháðar upptalningar vigra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-linulega-ohair-vigrar">1.12.1.1. Sýnidæmi: Línulega óháðir vigrar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">1.12.1.2. Sýnidæmi: Línulega óháðir vigrar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-dalkvigrar-fylkis-og-linulegt-ohaei">1.12.2. Setning: Dálkvigrar fylkis og línulegt óhæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-of-margir-vigrar-linulega-ha">1.12.3. Setning: Of margir vigrar = línulega háð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-linuleg-samantekt-og-linulegt-haei">1.12.4. Setning: Línuleg samantekt og línulegt hæði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#linulegar-varpanir">1.13. Línulegar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-linulegar-varpanir">1.13.1. Skilgreining: Línulegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-linulegar-varpanir-mathbb-r-n-rightarrow-mathbb-r-m">1.13.2. Setning: Línulegar varpanir <span class="math notranslate nohighlight">\(\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-eiginleikar-linulegra-varpana">1.13.3. Skilgreining: Eiginleikar línulegra varpana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-venjulegi-grunnurinn">1.13.4. Skilgreining: Venjulegi grunnurinn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-linuleg-vorpun-mathbb-r-2-rightarrow-mathbb-r-2">1.13.4.1. Sýnidæmi Línuleg vörpun <span class="math notranslate nohighlight">\(\mathbb{R}^2\rightarrow \mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-venjulegi-grunnurinn">1.13.5. Setning: Venjulegi grunnurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#speglanir">1.13.6. Speglanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#strikkanir">1.13.7. Stríkkanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skekkingar">1.13.8. Skekkingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ofanvorp">1.13.9. Ofanvörp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eintaekar-og-ataekar-varpanir">1.14. Eintækar og átækar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-eintaekar-og-ataekar-varpanir">1.14.1. Skilgreining: Eintækar og átækar varpanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eintaekar-og-ataekar-varpanir">1.14.1.1. Sýnidæmi: Eintækar og átækar varpanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eintaek-linuleg-vorpun">1.14.2. Setning: Eintæk línuleg vörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-ataek-linuleg-vorpun">1.14.3. Setning: Átæk línuleg vörpun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fylkjaaðgerðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Ákveður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Vigurrúm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Eigingildi og eiginvigrar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Innfeldi og hornrétt ofanvörp</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Línuleg jöfnuhneppi</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/stae107g/kafli01.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="linuleg-jofnuhneppi">
+<h1><span class="section-number">1. </span>Línuleg jöfnuhneppi<a class="headerlink" href="#linuleg-jofnuhneppi" title="Permalink to this heading"></a></h1>
+<p>Línuleg Algebra er sú grein innan stærðfræðinnar sem fæst við línuleg jöfnuhneppi,
+vigra, vigurrúm, línulegar varpanir og önnur tengd viðfangsefni. Í þessu námskeiði
+verður farið yfir helstu hugtök í línulegri algebru. Farið verður yfir: línuleg
+jöfnuhneppi, fylki, ákveður, vigra og vigurrúm, eiginvigra og eigingildi og innfeldi.
+Hagnýtingar línulegrar algebru má meðal annars finna innan verkfræðinnar, innan
+eðlisfræðinnar, í tölvugrafík, fjármálum og í tengslum við gervigreind.</p>
+<section id="id1">
+<h2><span class="section-number">1.1. </span>Línuleg jöfnuhneppi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-linuleg-jafna">
+<h3><span class="section-number">1.1.1. </span>Skilgreining: Línuleg jafna<a class="headerlink" href="#skilgreining-linuleg-jafna" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Jafna af taginu</p>
+<div class="math notranslate nohighlight">
+\[a_1x_1+a_2x_2+\dots+a_nx_n=b\]</div>
+<p>kallast <strong>línuleg jafna</strong> (e. linear equation).</p>
+<p><span class="math notranslate nohighlight">\(a_1,a_2,\dots,a_n\)</span> kallast <strong>stuðlar</strong> (e. coefficients) jöfnunnar.
+<span class="math notranslate nohighlight">\(x_1,x_2,\dots,x_n\)</span> eru óþekktar stærðir sem kallast <strong>breytur</strong> (e. variables).</p>
+</div>
+</section>
+<section id="skilgreining-linulegt-jofnuhneppi">
+<h3><span class="section-number">1.1.2. </span>Skilgreining: Línulegt jöfnuhneppi<a class="headerlink" href="#skilgreining-linulegt-jofnuhneppi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Línulegt jöfnuhneppi</strong> (e. system of linear equations)
+er safn af einni eða fleiri línulegum jöfnum og er oft sett fram á forminu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n &amp;= b_2 \\
+&amp;\vdots \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n &amp;= b_m
+\end{align}\end{split}\]</div>
+</div>
+</section>
+<section id="setning-fjoldi-lausna">
+<h3><span class="section-number">1.1.3. </span>Setning: Fjöldi lausna<a class="headerlink" href="#setning-fjoldi-lausna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Línulegt jöfnuhneppi getur haft:</p>
+<blockquote>
+<div><p><strong>a.</strong> Enga lausn.</p>
+<p><strong>b.</strong> Nákvæmlega eina lausn.</p>
+<p><strong>c.</strong> Óendanlega margar lausnir.</p>
+</div></blockquote>
+<p>Jöfnuhneppi er sagt <strong>ósamkvæmt</strong> (e. inconsistent) ef það hefur enga lausn.</p>
+<p>Jöfnuhneppi er sagt <strong>samkvæmt</strong> (e. consistent) ef það hefur að minnsta kosti eina lausn.
+Jöfnuhneppi sem hefur nákvæmlega eina lausn er sagt hafa <strong>ótvírætt ákvarðaða</strong> lausn (e. unique solution).</p>
+</div>
+<section id="synidaemi-jofnuhneppi-sem-hefur-enga-lausn">
+<h4><span class="section-number">1.1.3.1. </span>Sýnidæmi: Jöfnuhneppi sem hefur enga lausn<a class="headerlink" href="#synidaemi-jofnuhneppi-sem-hefur-enga-lausn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x-2y&amp;=5 \\
+-2x+4y&amp;= 6
+\end{align*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Margföldum efri jöfnuna með tveimur. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+2x-4y&amp;=10 \\
+-2x+4y&amp;= 6
+\end{align*}\end{split}\]</div>
+<p>Leggjum saman jöfnurnar og fáum <span class="math notranslate nohighlight">\(0=16\)</span> svo jöfnuhneppið
+hefur enga lausn, þ.e. ósamkvæmt.</p>
+</div>
+</section>
+<section id="synidaemi-jofnuhneppi-sem-hefur-eina-lausn">
+<h4><span class="section-number">1.1.3.2. </span>Sýnidæmi: Jöfnuhneppi sem hefur eina lausn<a class="headerlink" href="#synidaemi-jofnuhneppi-sem-hefur-eina-lausn" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuhneppið</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x + 2y &amp;= -3 \\
+x - y &amp;= 6
+\end{aligned}\end{split}\]</div>
+</div></blockquote>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Drögum neðri jöfnuna frá þeirri efri og fáum <span class="math notranslate nohighlight">\(3y=-9\)</span> sem gefur
+<span class="math notranslate nohighlight">\(y=-3\)</span>. Stingum inn í neðri jöfnuna og gefur <span class="math notranslate nohighlight">\(x=3\)</span>. Þar
+með er <span class="math notranslate nohighlight">\((x,y)=(3,-3)\)</span> lausn jöfnuhneppisins.</p>
+<p>Jöfnuhneppið er samkvæmt og þar að auki hefur jöfnuhneppið aðeins eina lausn, m.ö.o.
+lausnin er ótvírætt ákvörðuð.</p>
+</div>
+</section>
+<section id="synidaemi-jofnuhneppi-sem-hefur-oendalega-margar-lausnir">
+<h4><span class="section-number">1.1.3.3. </span>Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir<a class="headerlink" href="#synidaemi-jofnuhneppi-sem-hefur-oendalega-margar-lausnir" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x+y&amp;=2 \\
+2x+2y&amp;= 4
+\end{align*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Deilum í neðri jöfnuna með tveimur. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x+y&amp;=2 \\
+x+y&amp;=2
+\end{align*}\end{split}\]</div>
+<p>Ef við drögum efri jöfnuna frá þeirri neðri fæst:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x+y&amp;=2 \\
+0 &amp;= 0
+\end{align*}\end{split}\]</div>
+</div></blockquote>
+<p>Athugum þá hvort jafnan
+<span class="math notranslate nohighlight">\(x+y=2\)</span> hafi einhverja lausn. Já, <span class="math notranslate nohighlight">\((x,y)=(1,1)\)</span> og
+<span class="math notranslate nohighlight">\((x,y)=(2,0)\)</span> eru dæmi um lausnir. Jöfnuhneppið er
+samkvæmt en lausnin er ekki ótvírætt ákvörðuð. Ef við veljum
+til dæmis <span class="math notranslate nohighlight">\(y=t\)</span> fæst <span class="math notranslate nohighlight">\(x=2-t\)</span>. Svo allar tvenndir af
+gerð <span class="math notranslate nohighlight">\((x,y)=(2-t,t)\)</span> eru lausnir jöfnuhneppisins.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="skilgreining-lausnamengi">
+<h3><span class="section-number">1.1.4. </span>Skilgreining: Lausnamengi<a class="headerlink" href="#skilgreining-lausnamengi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Mengi allra lausna jöfnuhneppis kallast <strong>lausnamengi</strong> þess (e. solution set).</p>
+</div>
+</section>
+<section id="skilgreining-jafngild">
+<h3><span class="section-number">1.1.5. </span>Skilgreining: Jafngild<a class="headerlink" href="#skilgreining-jafngild" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Línuleg jöfnuhneppi sem hafa sama lausnamengið eru <strong>jafngild</strong> (e. equivalent).</p>
+</div>
+</section>
+</section>
+<section id="fylki">
+<h2><span class="section-number">1.2. </span>Fylki<a class="headerlink" href="#fylki" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-staer-fylkis">
+<h3><span class="section-number">1.2.1. </span>Skilgreining: Stærð fylkis<a class="headerlink" href="#skilgreining-staer-fylkis" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+a_{11}  &amp; \cdots &amp; a_{1n}\\
+a_{21}  &amp; \cdots &amp; a_{2n}\\
+\vdots &amp;  \ddots &amp;\vdots \\
+a_{m1} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}.\end{split}\]</div>
+<p>Fylkið <span class="math notranslate nohighlight">\(A\)</span> hefur <span class="math notranslate nohighlight">\(m\)</span> <strong>línur</strong> (e. rows), sem liggja lárétt, og <span class="math notranslate nohighlight">\(n\)</span> <strong>dálka</strong> (e. columns), sem liggja lóðrétt.
+Við segjum að <strong>stærð fylkis</strong> <span class="math notranslate nohighlight">\(A\)</span> sé <span class="math notranslate nohighlight">\(m\times n\)</span>.</p>
+<p>Fylki sem hefur jafn margar línur og dálka, <span class="math notranslate nohighlight">\(n \times n\)</span>, kallast <strong>ferningsfylki</strong> (e. square matrix).</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Minnisregla fyrir <span class="math notranslate nohighlight">\(m \times n\)</span></p>
+<p>LSD = Lína Sinnum Dálkur.</p>
+</div>
+</section>
+<section id="skilgreining-stulafylki-og-auki-fylki">
+<h3><span class="section-number">1.2.2. </span>Skilgreining: Stuðlafylki og aukið fylki<a class="headerlink" href="#skilgreining-stulafylki-og-auki-fylki" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Rita má sérhvert línulegt jöfnuhneppi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{2}
+a_{11}x_{1}+&amp;\dots+a_{1n}x_n &amp;= b_1\\
+&amp;\hspace{6.143162275pt}\vdots &amp; \\
+a_{m1}x_{1}+&amp;\dots+a_{mn}x_n &amp;= b_m\\
+\end{alignat*}\end{split}\]</div>
+<p>á <strong>fylkjaformi</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix}=
+\begin{bmatrix}
+b_1 \\ b_2 \\ \vdots \\ b_n
+\end{bmatrix}.\end{split}\]</div>
+<p>Fylkin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n}\\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n}\\
+\vdots &amp; \vdots &amp; \ddots &amp;\vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}
+\text{ og }
+\left[\begin{array}{&#64;{}cccc|c&#64;{}}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} &amp; b_1\\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} &amp; b_2\\
+\vdots &amp; \vdots &amp; \ddots &amp;\vdots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
+\end{array}\right]\end{split}\]</div>
+<p>kallast <strong>stuðlafylki</strong> (e. coefficient matrix) og <strong>aukið fylki</strong> (e. augmented matrix).</p>
+</div>
+</section>
+</section>
+<section id="einfaldar-linuagerir">
+<h2><span class="section-number">1.3. </span>Einfaldar línuaðgerðir<a class="headerlink" href="#einfaldar-linuagerir" title="Permalink to this heading"></a></h2>
+<p>Eftirfarandi aðgerðir kallast <strong>einfaldar línuaðgerðir</strong> (e. elementary row operations) og
+þeim má beita á línuleg jöfnuhneppi án þess að lausnamengi jöfnuhneppisins breytist.</p>
+<section id="setning-einfaldar-linuagerir">
+<h3><span class="section-number">1.3.1. </span>Setning: Einfaldar línuaðgerðir<a class="headerlink" href="#setning-einfaldar-linuagerir" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<blockquote>
+<div><p><strong>1.</strong> <strong>Umskipting</strong> (e. replacement): að skipta út línu <span class="math notranslate nohighlight">\(R_i\)</span> fyrir <span class="math notranslate nohighlight">\(R_i+cR_j\)</span> þar sem <span class="math notranslate nohighlight">\(R_j\)</span> er önnur lína og <span class="math notranslate nohighlight">\(c\)</span> er fasti.</p>
+<p><strong>2.</strong> <strong>Víxlun</strong> (e. interchange): að víxla á línum <span class="math notranslate nohighlight">\(R_i\)</span> og <span class="math notranslate nohighlight">\(R_j\)</span>.</p>
+<p><strong>3.</strong> <strong>Skölun</strong> (e. scaling): að margfalda línu <span class="math notranslate nohighlight">\(R_i\)</span> með fasta <span class="math notranslate nohighlight">\(c\neq 0\)</span></p>
+</div></blockquote>
+<p>Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppisins.</p>
+</div>
+<section id="synidaemi-einfaldar-linuagerir">
+<h4><span class="section-number">1.3.1.1. </span>Sýnidæmi: Einfaldar línuaðgerðir<a class="headerlink" href="#synidaemi-einfaldar-linuagerir" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Beitið eftirfarandi línuaðgerðum <span class="math notranslate nohighlight">\(\substack{R_1 \leftrightarrow R_2}, \substack{R_3 + 5R_1}\)</span> og <span class="math notranslate nohighlight">\(\substack{-R_3-\frac{21}{4}R_2}\)</span> á fylkið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+0 &amp; 4 &amp; 1 \\
+-1 &amp; 3 &amp; 2 \\
+5 &amp; 6 &amp; -3
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{2}
+\begin{bmatrix}
+0 &amp; 4 &amp; 1 \\
+-1 &amp; 3 &amp; 2 \\
+5 &amp; 6 &amp; -3
+\end{bmatrix}
+&amp;\overset{\substack{R_1 \leftrightarrow R_2}}{\sim}
+&amp;&amp;\begin{bmatrix}
+-1 &amp; 3 &amp; 2 \\
+0 &amp; 4 &amp; 1 \\
+5 &amp; 6 &amp; -3
+\end{bmatrix} \\
+&amp;\overset{\substack{R_3 + 5R_1}}{\sim}
+&amp;&amp;\begin{bmatrix}
+-1 &amp; 3 &amp; 2 \\
+0 &amp; 4 &amp; 1 \\
+0 &amp; 21 &amp; 7
+\end{bmatrix}\\
+&amp;\overset{\substack{-R_3-\frac{21}{4}R_2}}{\sim}
+&amp;&amp;\begin{bmatrix}
+-1 &amp; 3 &amp; 2 \\
+0 &amp; 4 &amp; 1 \\
+0 &amp; 0 &amp; \frac{7}{4}
+\end{bmatrix}
+\end{alignat*}\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="skilgreining-linujafngild">
+<h3><span class="section-number">1.3.2. </span>Skilgreining: Línujafngild<a class="headerlink" href="#skilgreining-linujafngild" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Tvö jöfnuhneppi eru <strong>línujafngild</strong> (e. row equivalent) ef öðru má breyta í hitt
+með einföldum línuaðgerðum.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Línujafngild jöfnuhneppi eru jafngild, en jafngild jöfnuhneppi eru ekki endilega línujafngild.</p>
+<p>Til dæmis eru eftirfarandi jöfnuhneppi jafngild</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1&amp; 1 &amp; 0\\
+0&amp; 0 &amp; 1
+\end{array}\right]
+\text{ og }
+\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1 &amp;-1&amp;0\\
+0&amp;0 &amp; 1
+\end{array}\right]\end{split}\]</div>
+<p>því þau hafa sömu (engar) lausnir. Hins vegar eru þau ekki línujafngild, því ekki er hægt að breyta öðru þeirra í hitt með einföldum línuaðgerðum.</p>
+</div>
+</section>
+</section>
+<section id="rudd-efra-stallaform">
+<h2><span class="section-number">1.4. </span>(Rudd) efra stallaform<a class="headerlink" href="#rudd-efra-stallaform" title="Permalink to this heading"></a></h2>
+<p>Öllum fylkjum má breyta í fylki af efri stallagerð með einföldum línuaðgerðum.</p>
+<section id="skilgreining-nulllinur-og-forystustular">
+<h3><span class="section-number">1.4.1. </span>Skilgreining: Núlllínur og forystustuðlar<a class="headerlink" href="#skilgreining-nulllinur-og-forystustular" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Núlllína</strong> (e. zero row) er lína þar sem allir stuðlarnir eru núll,</p>
+<div class="math notranslate nohighlight">
+\[\begin{bmatrix}
+0 &amp; 0 &amp; \cdots &amp; 0 \end{bmatrix}.\]</div>
+<p><strong>Forystustuðull</strong> (e. leading coeffcient) er fyrsti stuðull í hverri línu sem er ekki núll,</p>
+<div class="math notranslate nohighlight">
+\[\begin{bmatrix}
+0 &amp; \cdots &amp; 0 &amp; * &amp; \cdots \end{bmatrix}.\]</div>
+<p><span class="math notranslate nohighlight">\((*)\)</span> táknar hvaða tölu sem er</p>
+</div>
+</section>
+<section id="skilgreining-efri-stallager">
+<h3><span class="section-number">1.4.2. </span>Skilgreining: Efri stallagerð<a class="headerlink" href="#skilgreining-efri-stallager" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Fylki er sagt vera af <strong>efri stallagerð</strong>, eða <strong>efra stallaformi</strong>, (e. echelon form) ef það uppfyllir
+eftirfarandi skilyrði.</p>
+<blockquote>
+<div><p><strong>1.</strong> Núlllínur liggja fyrir neðan aðrar línur.</p>
+<p><strong>2.</strong> Forystustuðull hverrar línu er hægra megin við forystustuðul línunnar fyrir ofan.</p>
+<p><strong>3.</strong> Allir stuðlar fyrir neðan forystustuðul eru núll.</p>
+</div></blockquote>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Efri stallagerð fylkis <span class="math notranslate nohighlight">\(A\)</span> er oft táknuð með <span class="math notranslate nohighlight">\(U\)</span>.</p>
+</div>
+<section id="synidaemi-efri-stallager">
+<h4><span class="section-number">1.4.2.1. </span>Sýnidæmi: Efri stallagerð<a class="headerlink" href="#synidaemi-efri-stallager" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Breytum eftirfarandi <span class="math notranslate nohighlight">\({3\times 4}\)</span> fylki</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}A= \begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{bmatrix}\end{split}\]</div>
+</div></blockquote>
+<p>í fylki af efri stallagerð með einföldum línuaðgerðum.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{2}
+A= \begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+5 &amp; 6 &amp; 7 &amp; 8 \\
+9 &amp; 10 &amp; 11 &amp; 12
+\end{bmatrix}
+&amp;\overset{\substack{R_2 - 5R_1 \\
+R_3 - 9R_1}}{\sim}
+&amp;&amp;\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; -4 &amp; -8 &amp; -12 \\
+0 &amp; -8 &amp; -16 &amp; -24
+\end{bmatrix}\\
+&amp;\overset{\substack{R_3 - 2R_2}}{\sim}
+&amp;&amp;\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+0 &amp; -4 &amp; -8 &amp; -12 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}:= U
+\end{alignat*}\end{split}\]</div>
+<p>Athugum nú skilyrðin:</p>
+<p><strong>1.</strong> Núlllínur eru neðst. JÁ.</p>
+<p><strong>2.</strong> Forystustuðull hverrar línu er hægra megin við forystustuðul línunnar fyrir ofan. JÁ.</p>
+<p><strong>3.</strong> Allir stuðlar fyrir neðan forystustuðul eru núll. JÁ.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-rudd-efri-stallager">
+<h3><span class="section-number">1.4.3. </span>Skilgreining: Rudd efri stallagerð<a class="headerlink" href="#skilgreining-rudd-efri-stallager" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Fylki er sagt vera af <strong>ruddri efri stallagerð</strong>  (e. reduced echeolon form) ef það er af efri
+stallagerð og uppfyllir að auki eftirfarandi skilyrði:</p>
+<blockquote>
+<div><p><strong>1.</strong> Forystustuðlar eru allir 1.</p>
+<p><strong>2.</strong> Allir stuðlar fyrir ofan forystustuðul eru núll.</p>
+</div></blockquote>
+<p>Stundum eru forystustuðular í fylki af ruddri efri stallagerð kallaðir <strong>vendistuðular</strong>, og þeir dálkar sem innihalda slíka forystustuðla kallaðir <strong>vendidálkar</strong>.</p>
+</div>
+<section id="synidaemi-rudd-efri-stallager">
+<h4><span class="section-number">1.4.3.1. </span>Sýnidæmi: Rudd efri stallagerð<a class="headerlink" href="#synidaemi-rudd-efri-stallager" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Nokkur dæmi um fylki af ruddri efri stallagerð</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1 \\
+\end{bmatrix}, \quad
+\begin{bmatrix}
+  1 &amp; 4 &amp; 0 \\
+  0 &amp; 0 &amp; 1 \\
+  0 &amp; 0 &amp; 0 \\
+\end{bmatrix}, \quad
+\begin{bmatrix}
+  1 &amp; 0 &amp; * &amp; 0 \\
+  0 &amp; 1 &amp; * &amp; 0 \\
+  0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{bmatrix}, \quad
+\begin{bmatrix}
+  1 &amp; 0 &amp; * &amp; 0 &amp; 1 \\
+  0 &amp; 1 &amp; * &amp; 0 &amp; 2 \\
+  0 &amp; 0 &amp; 0 &amp; 1 &amp; 3 \\
+\end{bmatrix}.\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\((*)\)</span> táknar hvaða tölu sem er.</p>
+</div>
+</section>
+</section>
+<section id="setning-rutt-efra-stallaform-er-otviraett-akvara">
+<h3><span class="section-number">1.4.4. </span>Setning: Rutt efra stallaform er ótvírætt ákvarðað<a class="headerlink" href="#setning-rutt-efra-stallaform-er-otviraett-akvara" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Sérhvert fylki er jafngilt einu og aðeins einu fylki á ruddu efra stallaformi.</p>
+</div>
+</section>
+</section>
+<section id="fjoldi-lausna-og-frjalsar-breytur">
+<h2><span class="section-number">1.5. </span>Fjöldi lausna og frjálsar breytur<a class="headerlink" href="#fjoldi-lausna-og-frjalsar-breytur" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-frjalsar-breytur-og-grunnbreytur">
+<h3><span class="section-number">1.5.1. </span>Skilgreining: Frjálsar breytur og grunnbreytur<a class="headerlink" href="#skilgreining-frjalsar-breytur-og-grunnbreytur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Þær breytur línulegs jöfnuhneppis á efri stallagerð sem ekki eru forystubreytur kallast <strong>frjálsar breytur</strong> (e. free variables). Breytur sem ekki eru frjálsar eru kallaðar <strong>grunnbreytur</strong> (e. leading variables).</p>
+</div>
+<section id="synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning">
+<h4><span class="section-number">1.5.1.1. </span>Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning<a class="headerlink" href="#synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuhneppið og setjið lausnina fram með stikaframsetningu.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x_1+x_2+x_3 + x_4 + 2 x_5 =0\\
+x_2 + x_3 + 3 x_4 + x_5 = 4 \\
+-2 x_4 \qquad \ = 4
+\end{align*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Ritum sem aukið fylki</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccccc|c&#64;{}}
+1 &amp; 1 &amp; 1  &amp; 1 &amp; 2  &amp; 0\\
+0 &amp; 1 &amp; 1 &amp; 3 &amp; 1 &amp; 4 \\
+0 &amp; 0 &amp; 0 &amp; -2 &amp; 0  &amp; 4
+\end{array}\right].\end{split}\]</div>
+<p>Við sjáum að <span class="math notranslate nohighlight">\(x_1, x_2\)</span> og <span class="math notranslate nohighlight">\(x_4\)</span>
+eru grunnbreytur, en <span class="math notranslate nohighlight">\(x_3\)</span> og <span class="math notranslate nohighlight">\(x_5\)</span> eru frjálsar því þar sitja aldrei forystustuðlar.
+Venja er að rita frjálsar breytur með öðrum bókstöfum, t.d. <span class="math notranslate nohighlight">\(s := x_3\)</span> og <span class="math notranslate nohighlight">\(t := x_5\)</span>.</p>
+<p>Neðsta jafnan í aukna fylkinu gefur <span class="math notranslate nohighlight">\(-2 x_4 = 4\)</span>, þ.e. <span class="math notranslate nohighlight">\(x_4 = -2\)</span>. Setjum svo inn í næst neðstu jöfnuna</p>
+<div class="math notranslate nohighlight">
+\[x_2= 4 - x_3 - 3 x_4 - x_5 = 10 - s - t.\]</div>
+<p>Með þessum upplýsingum verður efsta jafnan</p>
+<div class="math notranslate nohighlight">
+\[x_1 = - x_2 - x_3 - x_4 - 2 x_5 = -8 -t.\]</div>
+<p>Lausn jöfnuhneppisins á <strong>stikaframsetningu</strong> er því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_2 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+\begin{bmatrix}
+-8 - t\\
+10-s-t\\
+s\\
+-2\\
+t
+\end{bmatrix}=
+\begin{bmatrix}
+-8 \\ 10 \\ 0 \\ -2 \\ 0 \end{bmatrix} +
+s \begin{bmatrix}
+0 \\ -1 \\ 1 \\ 0 \\ 0
+\end{bmatrix} + t \begin{bmatrix}
+-1 \\ -1 \\ 0 \\ 0 \\ 1 \end{bmatrix}\end{split}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span> eru hvaða tölur sem er. Við sjáum meir um stikaframsetningu síðar.</p>
+</div>
+</section>
+</section>
+<section id="setning-tilvist-og-fjoldi-lausna">
+<h3><span class="section-number">1.5.2. </span>Setning: Tilvist og fjöldi lausna<a class="headerlink" href="#setning-tilvist-og-fjoldi-lausna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Jöfnuhneppi hefur lausn ef og aðeins ef dálkurinn lengst til hægri í efra stallaformi
+inniheldur ekki forystustuðul, þ.e.a.s. ef efra stallaform aukna
+fylkisins inniheldur ekki línu á forminu</p>
+<div class="math notranslate nohighlight">
+\[[0\ \dots \ 0 | \ b]\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(b\neq 0\)</span>.</p>
+<p>Ef jöfnuhneppið hefur lausn þá er annaðhvort</p>
+<blockquote>
+<div><p><strong>1.</strong> Nákvæmlega eina lausn, ef það er engin frjáls breyta.</p>
+<p><strong>2.</strong> Óendanlega margar lausnir, ef það eru ein eða fleiri frjálsar breytur.</p>
+</div></blockquote>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Ef við umbreytum aukna fylki jöfnuhneppis yfir á (rudda) efri stallagerð getur eftirfarandi gerst:</p>
+<p><strong>1.</strong> Engin lausn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1 &amp; * &amp; 0 \\
+0 &amp; 0 &amp; 1 \\
+\end{array}\right].\end{split}\]</div>
+<p><strong>2.</strong> Nákvæmlega ein lausn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1 &amp; 0 &amp; * \\
+0 &amp; 1 &amp; * \\
+\end{array}\right].\end{split}\]</div>
+<p><strong>3.</strong> Óendanlega margar lausnir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; * &amp; * \\
+0 &amp; 1 &amp; * &amp; * \\
+\end{array}\right].\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="gauss-eying">
+<h2><span class="section-number">1.6. </span>Gauss-eyðing<a class="headerlink" href="#gauss-eying" title="Permalink to this heading"></a></h2>
+<p>Línuleg jöfnuhneppi eru yfirleitt leyst með svokallaðri <strong>Gauss-eyðingu</strong> (e. Gauss-reduction), sem felst í því að beita línuaðgerðum á jöfnuhneppið
+þar til fram kemur hneppi af efri stallagerð. Lausnamengi efri stallagerðar er hið sama og upphaflega fylkisins, og auðvelt er að leysa fylki af efri stallagerð með
+<strong>aftur-á-bak innsetningu</strong> (e. back-substitution).
+Einnig er hægt að koma fylkinu yfir á rudd efra stallaform og lesa lausnina beint út, þá er talað um <strong>Gauss-Jordan eyðingu</strong>.</p>
+<p>Gauss-(Jordan) eyðing er undirstöðu atriði í þessu námskeiði og því <strong>mikilvægt að tileinka sér vel</strong>.</p>
+<section id="aftur-a-bak-innsetning">
+<h3><span class="section-number">1.6.1. </span>Aftur-á-bak innsetning<a class="headerlink" href="#aftur-a-bak-innsetning" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Línulegt jöfnuhneppi af efra stallaformi má leysa með aftur-á-bak innsetningu með því að byrja á neðstu jöfnu (sem ekki er núlllína)
+og lesa út formúlu fyrir forystubreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram „aftur á bak“ þar til lausn
+fæst á jöfnuhneppinu.</p>
+</div>
+</section>
+<section id="gauss-eying-reiknirit">
+<h3><span class="section-number">1.6.2. </span>Gauss-eyðing reiknirit<a class="headerlink" href="#gauss-eying-reiknirit" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>Gauss-eyðing</strong>:</p>
+<blockquote>
+<div><p><strong>1.</strong> Finnum dálkinn lengst til vinstri sem inniheldur ekki bara 0, og víxlum á línum þannig að þessi tala verði í efstu línu.</p>
+<p><strong>2.</strong> Eyðum stökunum fyrir neðan forystustuðulinn með því að draga margfeldi efstu línu frá línum fyrir neðan.</p>
+<p><strong>3.</strong> Endurtökum skrefin hér að ofan fyrir línuna næst lengst til vinstri og svo koll af kolli.</p>
+</div></blockquote>
+<p>Nú höfum við umbreytt fylkinu yfir í fylki af efra stallaformi og getum notað aftur-á-bak innsetningu til þess að leysa jöfnuhneppið.</p>
+<p><strong>Gauss-Jordan eyðing</strong> (áframhald)</p>
+<blockquote>
+<div><p><strong>4.</strong> Eyðum stökunum fyrir ofan forystustuðalna þar til fylkinu er komið yfir á efra stallaform.</p>
+</div></blockquote>
+<p>Lausnin lesin beint.</p>
+</div>
+<section id="synidaemi-gauss-eying">
+<h4><span class="section-number">1.6.2.1. </span>Sýnidæmi: Gauss-eyðing<a class="headerlink" href="#synidaemi-gauss-eying" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið jöfnuhneppið með Gauss-eyðingu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+ x_1 -3x_2 + 4x_3 =-4,\\
+ 3x_1-7x_2+7x_3 =-8,\\
+-4x_1+6x_2+2x_3=4.
+\end{aligned}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<blockquote>
+<div><p>Fáum</p>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{2}
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; -3 &amp; 4 &amp; -4\\
+3 &amp; -7 &amp; 7 &amp; -8\\
+-4 &amp; 6 &amp; 2 &amp; 4
+\end{array}\right] \quad
+&amp;\overset{\substack{R_2-3R_1\\R_3+4R_1}}{\sim}
+&amp;\quad&amp;\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; -3 &amp; 4 &amp;-4\\
+0 &amp; 2 &amp; -5 &amp; 4 \\
+0 &amp; -6 &amp; 18 &amp; -12
+\end{array}\right] \\
+&amp;\overset{\substack{-\frac{1}{6}R_3}}{\sim}
+&amp;&amp;\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; -3 &amp; 4 &amp;-4\\
+0 &amp; 2 &amp; -5 &amp; 4 \\
+0 &amp; 1 &amp; -3 &amp; 2
+\end{array}\right]  \\
+&amp;\overset{\substack{
+    R_2\leftrightarrow R_3}}{\sim}
+&amp;&amp;\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; -3 &amp; 4 &amp;-4\\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 2 &amp; -5 &amp; 4
+\end{array}\right] \\
+&amp;\overset{\substack{R_1+3R_2\\ R_3-2R_2
+}}
+{\sim}
+&amp;&amp;\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; -5 &amp; 2\\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right] \\
+&amp;\overset{\substack{
+R_1+5R_3\\ R_2+3R_3}}{\sim}
+&amp;&amp;\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; 0 &amp; 2\\
+0 &amp; 1 &amp; 0 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]
+\end{alignat*}\end{split}\]</div>
+<p>Svo við fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x_1\phantom{+x_2+x_3} &amp;= 2 \\
+\phantom{x_1+} x_2 \phantom{+x_3} &amp;= 2 \\
+\phantom{x_1+x_2+} x_3 &amp;= 0
+\end{align*}\end{split}\]</div>
+<p>og línulega jöfnuhneppið hefur eina lausn: <span class="math notranslate nohighlight">\((x_1,x_2,x_3)=(2,2,0)\)</span>.</p>
+<p>Hér hefði verið hægt að sleppa síðasta skrefinu, <span class="math notranslate nohighlight">\(R_1+5R_3, R_2+3R_3\)</span>, og leysa með aftur-á-bak innsetningu í stað þess að lesa svarið beint með Gauss-Jordan.
+Nú skulum við nota þessa aðferð. Við höfum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; -5 &amp; 2\\
+0 &amp; 1 &amp; -3 &amp; 2 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right]\end{split}\]</div>
+<p>Neðsta lína sem ekki er núll gefur lausn <span class="math notranslate nohighlight">\(x_3 = 0\)</span>. Næst neðsta línan er því
+<span class="math notranslate nohighlight">\(x_2 -3 x_3 = 2\)</span> svo <span class="math notranslate nohighlight">\(x_2 = 2\)</span>. Að lokum er <span class="math notranslate nohighlight">\(x_1 - 5 x_3 = 2\)</span> þ.e. <span class="math notranslate nohighlight">\(x_1 = 2\)</span>. Sama niðurstaða fæst því með Gauss-eyðingu (viðbúið),
+<span class="math notranslate nohighlight">\((x_1,x_2,x_3)=(2,2,0)\)</span>.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="vigrar">
+<h2><span class="section-number">1.7. </span>Vigrar<a class="headerlink" href="#vigrar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-vigur">
+<h3><span class="section-number">1.7.1. </span>Skilgreining: Vigur<a class="headerlink" href="#skilgreining-vigur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Við köllum <span class="math notranslate nohighlight">\(n \times 1\)</span> fylki <strong>vigur</strong> (e.vector).</p>
+</div>
+<section id="synidaemi-dalkvigrar">
+<h4><span class="section-number">1.7.1.1. </span>Sýnidæmi: Dálkvigrar<a class="headerlink" href="#synidaemi-dalkvigrar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}_1 = \begin{bmatrix}
+1 \\
+2 \\
+\end{bmatrix},
+\quad
+\textbf{v}_2 = \begin{bmatrix}
+-1 \\
+0 \\
+\end{bmatrix},
+\quad
+\textbf{v}_3 = \begin{bmatrix}
+4 \\
+-2 \\
+17\\
+\end{bmatrix},
+\quad
+\textbf{v}_4 = \begin{bmatrix}
+9
+\end{bmatrix}.\end{split}\]</div>
+<p>Þetta eru allt dæmi um dálkvigra, vigra sem eru fylki sem eru bara einn dálkur.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Ritháttur</p>
+<blockquote>
+<div><p>Við feitletrum gjarnan breytur sem tákna vigra til að aðgreina þá frá rauntalnabreytum.
+<span class="math notranslate nohighlight">\(\textbf{u}, \textbf{v}, \textbf{v}_1, \textbf{v}_2, \textbf{b},\)</span>. Önnur leið er að nota
+örvar: <span class="math notranslate nohighlight">\(\vec{u}, \vec{v}, \vec{v}_1, \vec{v}_2, \vec{b}\)</span> eða strik:
+<span class="math notranslate nohighlight">\(\bar{u}, \bar{v}, \bar{v}_1, \bar{v}_2, \bar{b}\)</span>.</p>
+<p>Einnig má skrifa dálkvigra svona til að spara pláss:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5
+\end{bmatrix}^T
+\text{ eða }
+(1,2,3,4,5)
+\text{ í stað }
+\begin{bmatrix}
+1 \\ 2 \\ 3 \\ 4 \\ 5
+\end{bmatrix}.\end{split}\]</div>
+</div></blockquote>
+</div>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Tveir vigrar eru jafnir ef þeir hafa sömu vídd og öll hnit þeirra eru þau sömu.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-samlagning-vigra">
+<h3><span class="section-number">1.7.2. </span>Skilgreining: Samlagning vigra<a class="headerlink" href="#skilgreining-samlagning-vigra" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef <strong>u</strong> og <strong>v</strong> eru vigrar þannig að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{u} = \begin{bmatrix}
+u_{1}\\
+\vdots\\
+u_{n}\\
+\end{bmatrix}\quad
+\textbf{v} = \begin{bmatrix}
+v_{1}\\
+\vdots\\
+v_{n}\\
+\end{bmatrix}\end{split}\]</div>
+<p>þá er skilgreinum við vigurinn <span class="math notranslate nohighlight">\(\textbf{u} + \textbf{v}\)</span> sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{u} + \textbf{v} =
+\begin{bmatrix}
+u_{1}+v_{1}\\
+\vdots\\
+u_{n}+v_{n}\\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+<section id="skilgreining-margfoldun-vigurs-me-tolu">
+<h3><span class="section-number">1.7.3. </span>Skilgreining: Margföldun vigurs með tölu<a class="headerlink" href="#skilgreining-margfoldun-vigurs-me-tolu" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ef <span class="math notranslate nohighlight">\(c\)</span> er rauntala og <strong>v</strong> er vigur þannig að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v} = \begin{bmatrix}
+v_{1}\\
+\cdots\\
+v_{n}\\
+\end{bmatrix}\end{split}\]</div>
+<p>þá skilgreinum við vigurinn <span class="math notranslate nohighlight">\(c\textbf{v}\)</span> með</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}c\textbf{v}=
+\begin{bmatrix}
+cv_{1}\\
+\cdots\\
+cv_{n}\\
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<section id="synidaemi-samlagning-vigra-og-margfoldun-vigurs-me-tolu">
+<h4><span class="section-number">1.7.3.1. </span>Sýnidæmi: Samlagning vigra og margföldun vigurs með tölu<a class="headerlink" href="#synidaemi-samlagning-vigra-og-margfoldun-vigurs-me-tolu" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Margföldun vigurs með tölu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2\cdot\begin{bmatrix}
+-1\\3
+\end{bmatrix}
+=
+\begin{bmatrix}
+2\cdot(-1)\\2\cdot 3
+\end{bmatrix}=
+\begin{bmatrix}
+-2\\6
+\end{bmatrix}.\end{split}\]</div>
+<p>Samlagning tveggja vigra:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1 \\ 2
+\end{bmatrix} +
+\begin{bmatrix}
+-1 \\ 3
+\end{bmatrix}
+= \begin{bmatrix}
+0 \\ 5
+\end{bmatrix}.\end{split}\]</div>
+<p>Ef við margföldum vigur með 1, eða leggjum vigurinn saman með núllvigrinum, fáum við alltaf sama vigurinn aftur.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}1\cdot\begin{bmatrix}
+3\\0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\cdot 3\\1\cdot 0
+\end{bmatrix}=
+\begin{bmatrix}
+3\\ 0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+3\\0
+\end{bmatrix}+\begin{bmatrix}
+0\\0
+\end{bmatrix} = \begin{bmatrix}
+3\\0
+\end{bmatrix}.\end{split}\]</div>
+<p>Ef við margföldum vigur með tölunni 0, eða leggjum saman sama vigurinn með öfugu formerki, fáum við núllvigurinn:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}0\cdot\begin{bmatrix}
+2\\-7
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\cdot 2\\0\cdot (-7)
+\end{bmatrix}=
+\begin{bmatrix}
+0\\ 0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+2\\-7
+\end{bmatrix} + \begin{bmatrix}
+-2\\7
+\end{bmatrix}=\begin{bmatrix}
+0\\ 0
+\end{bmatrix}.\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="reiknireglur-fyrir-vigra">
+<h3><span class="section-number">1.7.4. </span>Reiknireglur fyrir vigra<a class="headerlink" href="#reiknireglur-fyrir-vigra" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <strong>u</strong>, <strong>v</strong>, <strong>w</strong> eru vigrar í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> og  <span class="math notranslate nohighlight">\(c\)</span> og <span class="math notranslate nohighlight">\(d\)</span> eru
+rauntölur gildir eftirfarandi:</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(\textbf{u} + \textbf{v}= \textbf{v} + \textbf{u}\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\((\textbf{u} + \textbf{v}) + \textbf{w} = \textbf{u} +  (\textbf{v} + \textbf{w})\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(\textbf{u} + \textbf{0}= \textbf{0} + \textbf{u} = \textbf{u}\)</span></p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(\textbf{u} + (-\textbf{u})= \textbf{0}\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(c(\textbf{u} + \textbf{v})= c\textbf{u} + c\textbf{v}\)</span></p>
+<p><strong>6.</strong> <span class="math notranslate nohighlight">\((c+d)\textbf{u}= c\textbf{u} + d\textbf{u}\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(c(d\textbf{u})= (cd)\textbf{u}\)</span></p>
+<p><strong>8.</strong> <span class="math notranslate nohighlight">\(1\textbf{u}= \textbf{u}\)</span></p>
+</div></blockquote>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Almennt getum við ekki margfaldað saman tvo vigra og fengið nýjan vigur.
+Við getum heldur ekki deilt einum vigri upp í annan. Stærðirnar
+<span class="math notranslate nohighlight">\(\textbf{v}_1\textbf{v}_2\)</span> og <span class="math notranslate nohighlight">\(\frac{\textbf{v}_1}{\textbf{v}_2}\)</span>
+eru því almennt ekki skilgreindar.</p>
+</div>
+</section>
+</section>
+<section id="linulegar-samantektir">
+<h2><span class="section-number">1.8. </span>Línulegar samantektir<a class="headerlink" href="#linulegar-samantektir" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-linulegar-samantektir">
+<h3><span class="section-number">1.8.1. </span>Skilgreining: Línulegar samantektir<a class="headerlink" href="#skilgreining-linulegar-samantektir" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p\)</span> vera vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> og <span class="math notranslate nohighlight">\(c_1, c_2, \dots, c_p\)</span> vera rauntölur.
+Vigurinn</p>
+<div class="math notranslate nohighlight">
+\[\textbf{y}=c_1\textbf{v}_1 +c_2\textbf{v}_2+ \dots+ c_p\textbf{v}_p\]</div>
+<p>kallast <strong>línuleg samantekt</strong> (e. linear combination) vigranna <span class="math notranslate nohighlight">\(\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p\)</span> með <strong>stuðla/vogstuðla</strong> (e. coefficients, weights) <span class="math notranslate nohighlight">\(c_1, c_2, \dots, c_p\)</span>.</p>
+</div>
+<section id="synidaemi-linulegar-samantektir">
+<h4><span class="section-number">1.8.1.1. </span>Sýnidæmi: Línulegar samantektir<a class="headerlink" href="#synidaemi-linulegar-samantektir" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Höfum vigrana</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}_1=
+\begin{bmatrix}
+1\\1\\
+\end{bmatrix}
+\text{ , }
+\textbf{v}_2 =
+\begin{bmatrix}
+0\\-1\\
+\end{bmatrix}
+\text{ og }
+\textbf{y}=\begin{bmatrix}
+3\\2\
+\end{bmatrix}\end{split}\]</div>
+<p>Er vigurinn <span class="math notranslate nohighlight">\(\textbf{y}\)</span> línuleg samantekt af <span class="math notranslate nohighlight">\(\textbf{v}_1\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}_2\)</span>?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Já, við getum skrifað</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{y}=
+3\cdot\begin{bmatrix}
+1\\1\\
+\end{bmatrix}
++1\cdot
+\begin{bmatrix}
+0\\-1\\
+\end{bmatrix}\end{split}\]</div>
+<p>Svo vigurinn <span class="math notranslate nohighlight">\(\ve y\)</span> er línuleg samantekt af <span class="math notranslate nohighlight">\(\textbf{v}_1\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}_2\)</span>
+með vogstuðlana 3 og 1.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>1.</strong>  Vigur <span class="math notranslate nohighlight">\(\ve v\)</span> er línuleg samantekt af sjálfum sér því við getum skrifað <span class="math notranslate nohighlight">\(\textbf{v}=1 \cdot \textbf{v}\)</span>.</p>
+<p><strong>2.</strong>  Núllvigurinn er línuleg samantekt af hvaða vigrum sem er því við getum skrifað</p>
+<div class="math notranslate nohighlight">
+\[\textbf{0}=0 \cdot \textbf{v}_1+0 \cdot \textbf{v}_2+\dots+0 \cdot \textbf{v}_p\]</div>
+<p><strong>3.</strong>  Ef <span class="math notranslate nohighlight">\(\ve m\)</span> er meðaltal vigranna <span class="math notranslate nohighlight">\(\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p\)</span> þá er <span class="math notranslate nohighlight">\(\ve m\)</span> línuleg samantekt af <span class="math notranslate nohighlight">\(\textbf{v}_1, \textbf{v}_2, \dots, \textbf{v}_p\)</span> því</p>
+<div class="math notranslate nohighlight">
+\[\textbf{m}=\frac{1}{p} \textbf{v}_1 +\frac{1}{p} \textbf{v}_2 + \dots + \frac{1}{p} \textbf{v}_p\]</div>
+</div>
+</section>
+<section id="id2">
+<h4><span class="section-number">1.8.1.2. </span>Sýnidæmi: Línulegar samantektir<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Höfum vigrana</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}_1=
+\begin{bmatrix}
+1\\1\\1\\
+\end{bmatrix}
+\text{ , }
+\textbf{v}_2 =
+\begin{bmatrix}
+0\\2\\3\\
+\end{bmatrix}
+\text{ og }
+\textbf{y}=\begin{bmatrix}
+3\\7\\9\\
+\end{bmatrix}.\end{split}\]</div>
+<p>Er vigurinn <span class="math notranslate nohighlight">\(\ve y\)</span> línuleg samantekt af <span class="math notranslate nohighlight">\(\textbf{v}_1\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}_2\)</span>?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Leysum jöfnuna</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_1\begin{bmatrix}
+1\\1\\1\\
+\end{bmatrix}
++x_2
+\begin{bmatrix}
+0\\2\\3\\
+\end{bmatrix}=\begin{bmatrix}
+3\\7\\9\\
+\end{bmatrix},\end{split}\]</div>
+<p>sem jafngildir jöfnuhneppinu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1 &amp;=&amp;3,\\
+x_1 +2x_2&amp;=&amp;7,\\
+x_1+3x_2&amp;=&amp;9.
+\end{eqnarray*}\end{split}\]</div>
+<p>Skrifum út aukna fylkið og leysum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  \left[\begin{array}{&#64;{}cc|c&#64;{}}
+     1 &amp; 0 &amp; 3\\
+     1 &amp; 2 &amp; 7\\
+     1 &amp; 3 &amp; 9\\
+ \end{array}\right]
+ &amp;\overset{\substack{
+ R_2-R_1\\ R_3-R_1}}{\sim}
+ \left[\begin{array}{&#64;{}cc|c&#64;{}}
+     1 &amp; 0 &amp; 3\\
+     0 &amp; 2 &amp; 4\\
+     0 &amp; 3 &amp; 6
+ \end{array}\right]
+ \overset{\substack{
+ R_2/2\\ R_3/3}}{\sim}
+ \left[\begin{array}{&#64;{}cc|c&#64;{}}
+     1 &amp; 0 &amp; 3\\
+     0 &amp; 1 &amp; 2\\
+     0 &amp; 1 &amp; 2
+ \end{array}\right]
+ \overset{\substack{
+ R_2-R_3}}{\sim}
+ \left[\begin{array}{&#64;{}cc|c&#64;{}}
+     1 &amp; 0 &amp; 3\\
+     0 &amp; 1 &amp; 2\\
+     0 &amp; 0 &amp; 0
+\end{array}\right].
+ \end{align*}\end{split}\]</div>
+<p>Fáum <span class="math notranslate nohighlight">\(x_1=3\)</span> og <span class="math notranslate nohighlight">\(x_2=2\)</span>, svo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{y}=
+\begin{bmatrix}
+3\\7\\9\\
+\end{bmatrix} = 3\begin{bmatrix}
+1\\1\\1\\
+\end{bmatrix}
++2
+\begin{bmatrix}
+0\\2\\3\\
+\end{bmatrix}=3\textbf{v}_1+2\textbf{v}_2\end{split}\]</div>
+<p>svo <span class="math notranslate nohighlight">\(\ve y\)</span> er línuleg samantekt af <span class="math notranslate nohighlight">\(\textbf{v}_1\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}_2\)</span>.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="spann-vigra">
+<h2><span class="section-number">1.9. </span>Spann vigra<a class="headerlink" href="#spann-vigra" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-spann-vigra">
+<h3><span class="section-number">1.9.1. </span>Skilgreining: Spann vigra<a class="headerlink" href="#skilgreining-spann-vigra" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látu <span class="math notranslate nohighlight">\(\textbf{v}_1,\dots,\textbf{v}_p\)</span> vera vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Mengi allra línulegra samantekta vigranna
+<span class="math notranslate nohighlight">\(\textbf{v}_1,\dots,\textbf{v}_p\)</span> kallast <strong>spann</strong> (e. span) vigranna, og er táknað</p>
+<div class="math notranslate nohighlight">
+\[\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}\subseteq \R^n.\]</div>
+<p>Rita má <span class="math notranslate nohighlight">\(\text{span}\{\textbf{v}_1,\dots,\textbf{v}_p\}=\{c_1 \ve v_1 + \cdots + c_p \ve v_p \ | \ c_1,\cdots, c_p \in \R \}\)</span>.</p>
+</div>
+</section>
+<section id="spann-tveggja-vigra-i-mathbb-r-2">
+<h3><span class="section-number">1.9.2. </span>Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span><a class="headerlink" href="#spann-tveggja-vigra-i-mathbb-r-2" title="Permalink to this heading"></a></h3>
+<figure class="align-center">
+<img alt="../_images/linuleg_sponn.svg" src="../_images/linuleg_sponn.svg" /></figure>
+<p>Myndin sýnir vigrana <span class="math notranslate nohighlight">\(\textbf{v}\)</span> og <span class="math notranslate nohighlight">\(\textbf{u}\)</span>.
+Bleika planið, allt <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> rúmið, er línuleg spönn þessa vigra.</p>
+<figure class="align-center">
+<img alt="../_images/linuleg_sponn_2.svg" src="../_images/linuleg_sponn_2.svg" /></figure>
+<p>Á mynd má sjá vigurinn <span class="math notranslate nohighlight">\(\ve v\)</span>. Línuleg spönn þessa vigurs eru allir vigrar með endapunkt á línunni,
+sem er framhald vigursins <span class="math notranslate nohighlight">\(\ve v\)</span> í báðar áttir.</p>
+</section>
+<section id="spann-tveggja-vigra-i-mathbb-r-3">
+<h3><span class="section-number">1.9.3. </span>Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span><a class="headerlink" href="#spann-tveggja-vigra-i-mathbb-r-3" title="Permalink to this heading"></a></h3>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{v}_1\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}_2\)</span> vera tvo vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>. Í þessu dæmi myndar
+spönn þeirra sléttu sem fer í gegnum upphafspunkt hnitakerfisins.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/nysponn.png"><img alt="../_images/nysponn.png" src="../_images/nysponn.png" style="width: 453.75000000000006px; height: 356.95000000000005px;" /></a>
+</figure>
+<p>Línuleg spönn í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> getur líka verið: bara núllpunkturinn,
+lína í gegnum núllpunkt eða allt <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> rúmið.</p>
+</section>
+</section>
+<section id="margfeldi-fylkis-og-vigurs">
+<h2><span class="section-number">1.10. </span>Margfeldi fylkis og vigurs<a class="headerlink" href="#margfeldi-fylkis-og-vigurs" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-margfeldi-fylkis-og-vigurs">
+<h3><span class="section-number">1.10.1. </span>Skilgreining: Margfeldi fylkis og vigurs<a class="headerlink" href="#skilgreining-margfeldi-fylkis-og-vigurs" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki þar sem <span class="math notranslate nohighlight">\(\textbf{a}_1, \dots, \textbf{a}_n\)</span> eru dálkar þess.
+Látum <span class="math notranslate nohighlight">\(\ve{x}\)</span> vera dálkvigur í <span class="math notranslate nohighlight">\(\R\)</span>.
+Við skilgreinum margfeldið <span class="math notranslate nohighlight">\(A \textbf{x}\)</span> með eftirfarandi hætti:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\textbf{x} = \begin{bmatrix}\textbf{a}_1 \dots \textbf{a}_n\end{bmatrix}
+\begin{bmatrix}
+x_1\\\dots\\x_n
+\end{bmatrix}
+=x_1\textbf{a}_1 +\dots x_n\textbf{a}_n.\end{split}\]</div>
+<p>Til að margföldunin <span class="math notranslate nohighlight">\(A\textbf{x}\)</span> sé framkvæmanleg þarf fjöldi dálka <span class="math notranslate nohighlight">\(A\)</span> að vera jafn fjöldi lína <span class="math notranslate nohighlight">\(\ve{x}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underbrace{\begin{bmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{bmatrix}}_{n \text{ dálkar}}
+\left.\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}\right\}\small{n\text{ línur}}\end{split}\]</div>
+<p>Margfeldið er þá</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n \\
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n \\
+\vdots    \\
+a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n
+\end{bmatrix}\\\end{split}\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Minnisregla</p>
+<p>Hugsa má margfeldi fylkis <span class="math notranslate nohighlight">\(A\)</span> með vigri <span class="math notranslate nohighlight">\(\ve x\)</span> sem margfeldi sérhverrar línu í <span class="math notranslate nohighlight">\(A\)</span> með dálkvigrinum <span class="math notranslate nohighlight">\(\ve x\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\rightarrow\\
+\vdots\\
+\rightarrow\\
+\end{bmatrix}\begin{bmatrix}
+\vdots\\
+\downarrow\\
+\vdots
+\end{bmatrix}\end{split}\]</div>
+</div>
+<section id="synidaemi-margfeldi-fylkis-og-vigurs">
+<h4><span class="section-number">1.10.1.1. </span>Sýnidæmi: Margfeldi fylkis og vigurs<a class="headerlink" href="#synidaemi-margfeldi-fylkis-og-vigurs" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum margfeldi fylkisins <span class="math notranslate nohighlight">\(A\)</span> og vigursins <span class="math notranslate nohighlight">\(\ve{x}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+2 &amp; 3 &amp; -1 \\
+-1 &amp; 4 &amp; 6
+\end{bmatrix}
+\text{, } \quad
+\textbf{x} = \begin{bmatrix}
+5 \\
+-3 \\
+2
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+A\textbf{x}
+=
+\begin{bmatrix}
+2 &amp; 3 &amp; -1 \\
+-1 &amp; 4 &amp; 6
+\end{bmatrix}
+\begin{bmatrix}
+5 \\
+-3 \\
+2
+\end{bmatrix}&amp;=
+\begin{bmatrix}
+2 \cdot 5 + 3 \cdot (-3) + (-1) \cdot 2 \\
+(-1) \cdot 5 + 4 \cdot (-3) + 6 \cdot 2
+\end{bmatrix}
+\\&amp;=
+\begin{bmatrix}
+10-9-2  \\
+-5-12+12
+\end{bmatrix}
+=
+\begin{bmatrix}
+-1  \\
+-5
+\end{bmatrix}
+\end{align*}\end{split}\]</div>
+</div>
+</section>
+<section id="id3">
+<h4><span class="section-number">1.10.1.2. </span>Sýnidæmi: Margfeldi fylkis og vigurs<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum margfeldi eftirfarandi tveggja fylkja og vigurs:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\text{ , }\quad
+I = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\text{ , }\quad
+\textbf{x} = \begin{bmatrix}
+2 \\
+-7 \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+A\textbf{x}
+=
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+2 \\
+-7 \\
+\end{bmatrix}=
+\begin{bmatrix}
+0\cdot 2 + 0\cdot (-7)\\
+0\cdot 2 + 0\cdot (-7)\\
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{align*}\end{split}\]</div>
+<p>og</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+I\textbf{x}
+=
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+2 \\
+-7 \\
+\end{bmatrix}=
+\begin{bmatrix}
+1\cdot 2 + 0\cdot (-7)\\
+0\cdot 2 + 1\cdot (-7)\\
+\end{bmatrix}=
+\begin{bmatrix}
+2\\
+-7
+\end{bmatrix}
+\end{align*}\end{split}\]</div>
+<p>Fylkið <span class="math notranslate nohighlight">\(I\)</span> kallast <strong>einingarfylkið</strong>. Það hefur þann eiginleika að
+<span class="math notranslate nohighlight">\(I \textbf{x}=\textbf{x}\)</span> gildir fyrir alla vigra <span class="math notranslate nohighlight">\(\ve x\)</span>.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="fylkjajafnan">
+<h2><span class="section-number">1.11. </span>Fylkjajafnan<a class="headerlink" href="#fylkjajafnan" title="Permalink to this heading"></a></h2>
+<section id="setning-fylkjajafnan">
+<h3><span class="section-number">1.11.1. </span>Setning: Fylkjajafnan<a class="headerlink" href="#setning-fylkjajafnan" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki með dálkvigrum <span class="math notranslate nohighlight">\(\textbf{a}_1,\dots,\textbf{a}_n\)</span>, <span class="math notranslate nohighlight">\(\ve{b}\)</span> vera vigur í <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>
+og <span class="math notranslate nohighlight">\(\textbf{x}\)</span> vera vigur í <span class="math notranslate nohighlight">\(\R^n\)</span>.
+Jafnan</p>
+<div class="math notranslate nohighlight">
+\[A\textbf{x} =  \textbf{b}\]</div>
+<p>þ.e.</p>
+<div class="math notranslate nohighlight">
+\[x_1\textbf{a}_1 +\dots + x_n \textbf{a}_n = \textbf{b}.\]</div>
+<p>hefur lausn ef og aðeins ef <span class="math notranslate nohighlight">\(\ve b\)</span> er í spanni dálkvigra <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Það er alltaf hægt að gá hvort víddirnar passi. Látum <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(m\times n\)</span> fylki, <span class="math notranslate nohighlight">\(\ve x\)</span> vera <span class="math notranslate nohighlight">\(n \times 1\)</span> vigur og <span class="math notranslate nohighlight">\(\ve b\)</span> vera <span class="math notranslate nohighlight">\(m \times 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[(m\times n) \cdot (n \times 1) = m \times 1.\]</div>
+</div>
+<section id="synidaemi-fylkjajafnan">
+<h4><span class="section-number">1.11.1.1. </span>Sýnidæmi: Fylkjajafnan<a class="headerlink" href="#synidaemi-fylkjajafnan" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Fyrir hvaða <span class="math notranslate nohighlight">\(b_1\)</span> og <span class="math notranslate nohighlight">\(b_2\)</span> hefur eftirfarandi jöfnuhneppi lausn?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1+x_2 = b_1\\
+x_1-x_2 = b_2
+\end{eqnarray*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Lítum á aukna fylkið og einföldum það með línuaðgerðum. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1 &amp; 1 &amp; b_1\\
+1&amp; -1 &amp; b_2
+\end{array}\right]\sim
+\left[\begin{array}{&#64;{}cc|c&#64;{}}
+1 &amp; 1 &amp; b_1\\
+0&amp; -2 &amp; b_2-b_1
+\end{array}\right]\end{split}\]</div>
+<p>Með því að líta á forystustuðlana, <span class="math notranslate nohighlight">\(\blacksquare\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}cc|c&#64;{}}
+\blacksquare &amp; * &amp; *\\
+0&amp; \blacksquare &amp; *
+\end{array}\right]\end{split}\]</div>
+<p>Hér má sjá að dálkurinn lengst til hægri er ekki vendidálkur svo jöfnuhneppið hefur alltaf lausn.</p>
+</div>
+</section>
+<section id="id4">
+<h4><span class="section-number">1.11.1.2. </span>Sýnidæmi: Fylkjajafnan<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Fyrir hvaða <span class="math notranslate nohighlight">\(b_1,b_2,b_3\)</span> hefur eftirfarandi jöfnuhneppi lausn?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1+2x_2+3x_3 = b_1\\
+4x_1+5x_2+6x_3 = b_2\\
+7x_1+8x_2+9x_3 = b_3
+\end{eqnarray*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Skoðum aukna fylkið og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3 &amp;b_1\\
+4 &amp; 5 &amp; 6 &amp;b_2\\
+7 &amp; 8 &amp; 9 &amp;b_3\\
+\end{array}\right]&amp;\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; b_1\\
+0 &amp; -3 &amp; -6 &amp;b_2 -4b_1\\
+0 &amp; -6 &amp; -12 &amp;b_3-7b_1\\
+\end{array}\right]\\&amp;\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; b_1\\
+0 &amp; -3 &amp; -6 &amp;b_2 -4b_1\\
+0 &amp; 0 &amp; 0 &amp;b_3-7b_1-2(b_2-4b_1)\\
+\end{array}\right]
+\end{align*}\end{split}\]</div>
+<p>Einföldum stakið neðst til hægri og fáum <span class="math notranslate nohighlight">\(b_3-7b_1-2(b_2-4b_1) = b_1-2b_2+b_3\)</span>.
+Við erum því með aukna fylkið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; b_1\\
+0 &amp; -3 &amp; -6 &amp;b_2 -4b_1\\
+0 &amp; 0 &amp; 0 &amp;b_1-2b_2+b_3\\
+\end{array}\right]\end{split}\]</div>
+<p>Aukna fylkið á efri ruddri stallagerð hefur því formin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+\blacksquare &amp; * &amp; *&amp;*\\
+0&amp; \blacksquare &amp; * &amp;*\\
+0&amp; 0&amp; 0&amp; \blacksquare
+\end{array}\right]
+\text{ eða }
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+\blacksquare &amp; * &amp; *&amp;*\\
+0&amp; \blacksquare &amp; * &amp;*\\
+0&amp; 0&amp; 0&amp; 0
+\end{array}\right]\end{split}\]</div>
+<p>allt eftir því hvort stærðin <span class="math notranslate nohighlight">\(b_1-2b_2+b_3\)</span> sé núll eða ekki.
+Jöfnuhneppið okkar hefur lausn þá og því aðeins að dálkurinn lengst til hægri sé ekki vendidálkur.
+Jöfnuhneppið því því lausn þá og því aðeins að <span class="math notranslate nohighlight">\(b_1-2b_2+b_3=0\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-fullyringar-um-fylkjajofnuna">
+<h3><span class="section-number">1.11.2. </span>Setning: Fullyrðingar um fylkjajöfnuna<a class="headerlink" href="#setning-fullyringar-um-fylkjajofnuna" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki. Eftirfarandi fullyrðingar eru jafngildar.</p>
+<blockquote>
+<div><p><strong>1.</strong> Jafnan <span class="math notranslate nohighlight">\(A \textbf{x} = \textbf{b}\)</span> hefur lausn fyrir sérhvert <span class="math notranslate nohighlight">\(\textbf{b} \in \mathbb{R}^m\)</span>.</p>
+<p><strong>2.</strong> Sérhvert <span class="math notranslate nohighlight">\(\textbf{b} \in \mathbb{R}^m\)</span> er línuleg samantekt af dálkum fylkisins <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>3.</strong> Dálkar fylkisins <span class="math notranslate nohighlight">\(A\)</span> spanna <span class="math notranslate nohighlight">\(\mathbb{R}^m\)</span>.</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(A\)</span> hefur vendistak í hverri línu.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-um-fylki-og-dalkvigur">
+<h3><span class="section-number">1.11.3. </span>Setning: Um fylki og dálkvigur<a class="headerlink" href="#setning-um-fylki-og-dalkvigur" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m\times n\)</span> fylki, látum <span class="math notranslate nohighlight">\(\textbf{u}\)</span> og <span class="math notranslate nohighlight">\(\textbf{v}\)</span> vera
+dálkvigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> og látum <span class="math notranslate nohighlight">\(c\)</span> vera rauntölu. Þá gildir:</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(A(\textbf{u} + \textbf{v}) = A\textbf{u} + A\textbf{v}\)</span>.</p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(A(c\textbf{u}) = cA\textbf{u}\)</span></p>
+</div></blockquote>
+</div>
+</section>
+<section id="skilgreining-ohliru-jofnuhneppi">
+<h3><span class="section-number">1.11.4. </span>Skilgreining: Óhliðruð jöfnuhneppi<a class="headerlink" href="#skilgreining-ohliru-jofnuhneppi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Línulegt jöfnuhneppi sem skrifa má á forminu <span class="math notranslate nohighlight">\(A\textbf{x}=\textbf{0}\)</span> er sagt <strong>óhliðrað</strong> (e. homogeneous).
+Slíkt jöfnuhneppi hefur núlllausnina alltaf sem lausn því</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\left.\begin{bmatrix}
+0 \\ 0\\ \vdots \\ 0
+\end{bmatrix}\right\}n =\left. \begin{bmatrix}
+0 \\ \vdots \\ 0
+\end{bmatrix}\right\}m.\end{split}\]</div>
+<p>Þessi lausn er kölluð <strong>fáfengilega lausnin</strong> (e. trivial solution). Ef aðrar lausnir eru til eru
+þær kallaðar <strong>ófáfengilegar</strong> (e. nontrivial solutions). Stundum er fáfengilega lausnin kölluð <strong>augljósa lausnin</strong>.</p>
+</div>
+<section id="synidaemi-ohlira-jofnuhneppi">
+<h4><span class="section-number">1.11.4.1. </span>Sýnidæmi: Óhliðrað jöfnuhneppi<a class="headerlink" href="#synidaemi-ohlira-jofnuhneppi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1+2x_2+3x_3 = 0\\
+4x_1+5x_2+6x_3 =0\\
+7x_1+8x_2+9x_3 =0
+\end{eqnarray*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3 &amp;0\\
+4 &amp; 5 &amp; 6 &amp;0\\
+7 &amp; 8 &amp; 9 &amp;0\\
+\end{array}\right]
+\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; 0\\
+0 &amp; -3 &amp; -6 &amp;0\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]
+\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; 0\\
+0 &amp; 1 &amp; 2 &amp;0\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]\\
+\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; -1&amp; 0\\
+0 &amp; 1 &amp; 2 &amp;0\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]\end{split}\]</div>
+<p>Sem jafngildir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_1 -x_3 =0,\\
+x_2+2x_3=0,
+\end{aligned}\end{split}\]</div>
+<p>þ.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x_1 =x_3,\\
+x_2=-2x_3,
+\end{aligned}\end{split}\]</div>
+<p>sem skrifa má</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} =\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}=\mathop{\begin{bmatrix}
+x_3\\-2x_3\\x_3
+\end{bmatrix}} =
+x_3\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}.\end{split}\]</div>
+<p>Með því að setja <span class="math notranslate nohighlight">\(x_3=t\)</span> má rita allar lausnir á forminu
+<span class="math notranslate nohighlight">\(\textbf{x} = t \textbf{v}\)</span> þar sem
+<span class="math notranslate nohighlight">\(\textbf{v} = \begin{bmatrix} 1\\-2\\1 \end{bmatrix}\text{ og } t\in \mathbb{R}\)</span>.</p>
+<p>T.d. <span class="math notranslate nohighlight">\(t=1\)</span> gefur lausnina <span class="math notranslate nohighlight">\(\textbf{x} = \begin{bmatrix} 1\\-2\\1\end{bmatrix}\)</span>. Jöfnuhneppið hefur ófáfengilega lausn.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>1.</strong> Óhliðraða jöfnuhneppið <span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{0}\)</span> hefur alltaf lausn.</p>
+<p><strong>2.</strong> Óhliðraða jöfnuhneppið <span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{0}\)</span> hefur ófáfengilega lausn þá og því aðeins að það hafi minnst eina frjálsa breytu.</p>
+</div>
+</section>
+</section>
+<section id="folgin-og-stikaframsetning">
+<h3><span class="section-number">1.11.5. </span>Fólgin og stikaframsetning<a class="headerlink" href="#folgin-og-stikaframsetning" title="Permalink to this heading"></a></h3>
+<p>Almenn leið til þess að rita lausnir á stikaframsetningu er að</p>
+<blockquote>
+<div><p><strong>1.</strong> Koma aukna fylkinu á  (rudda) efri stallagerð.</p>
+<p><strong>2.</strong> Rita háðu breyturnar með hinum frjálsum.</p>
+<p><strong>3.</strong> Umrita lausnavigurinn og sýna hann sem samantekt af einhverjum vigrum, með frjálsu breytunum sem stika.</p>
+</div></blockquote>
+<p>Best er að lýsa þessum tveimur framsetningum með dæmum.</p>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<dl>
+<dt><strong>Fólgin framsetning</strong> (e. implicit form)</dt><dd><p><span class="math notranslate nohighlight">\(\qquad\)</span>    Slétta   <span class="math notranslate nohighlight">\(\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1-2x_2-3x_3=0\end{aligned}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\qquad\)</span>    Lína     <span class="math notranslate nohighlight">\(\quad\quad\quad\quad\quad\quad\quad\begin{aligned} x_1+2x_2+3x_3 = 0\\ 4x_1+5x_2+6x_3 =0\\\end{aligned}\)</span></p>
+</dd>
+<dt><strong>Stikaframsetning</strong> (e. parametric form)</dt><dd><p><span class="math notranslate nohighlight">\(\qquad\)</span> Slétta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} = s\begin{bmatrix}
+2\\1\\0
+\end{bmatrix} + t\begin{bmatrix}
+3\\0\\1
+\end{bmatrix}, s,t\in \R.\end{split}\]</div>
+<p><span class="math notranslate nohighlight">\(\qquad\)</span> Lína</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} = t \begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}, t\in \R.\end{split}\]</div>
+</dd>
+</dl>
+</div>
+<section id="synidaemi-stikaframsetning">
+<h4><span class="section-number">1.11.5.1. </span>Sýnidæmi: Stikaframsetning<a class="headerlink" href="#synidaemi-stikaframsetning" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysið eftirfarandi jöfnuhneppi með einni jöfnu</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+x_1-2x_2-3x_3=0\end{align*}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum að <span class="math notranslate nohighlight">\(x_1 = 2x_2 +3x_3\)</span> þar sem <span class="math notranslate nohighlight">\(x_2\)</span> og <span class="math notranslate nohighlight">\(x_3\)</span> eru frjálsar breytur.
+Þannig fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} = \begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}=
+\begin{bmatrix}
+2x_2+3x_3\\x_2\\x_3
+\end{bmatrix}=
+\begin{bmatrix}
+2x_2\\x_2\\0
+\end{bmatrix}+
+\begin{bmatrix}
+3x_3\\0\\x_3
+\end{bmatrix}
+=x_2\begin{bmatrix}
+2\\1\\0
+\end{bmatrix}+
+x_3\begin{bmatrix}
+3\\0\\1
+\end{bmatrix}\end{split}\]</div>
+<p>Getum því skrifað <span class="math notranslate nohighlight">\(\textbf{x} = s\text{u} + t \textbf{v}\)</span> með
+<span class="math notranslate nohighlight">\(\textbf{u} =\begin{bmatrix} 2&amp;1&amp;0 \end{bmatrix}^T\)</span>  og
+<span class="math notranslate nohighlight">\(\textbf{v}= \begin{bmatrix} 3&amp;0&amp;1 \end{bmatrix}^T\)</span> og
+<span class="math notranslate nohighlight">\(s,t \in \mathbb{R}\)</span>.
+Þetta er dæmi um stikaframsetningu á lausn.</p>
+</div>
+</section>
+</section>
+<section id="skilgreining-hliru-jofnuhneppi">
+<h3><span class="section-number">1.11.6. </span>Skilgreining: Hliðruð jöfnuhneppi<a class="headerlink" href="#skilgreining-hliru-jofnuhneppi" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Jöfnuhneppi sem sett er fram á forminnu <span class="math notranslate nohighlight">\(A \textbf{x}=\textbf{b}\)</span>
+þar sem <span class="math notranslate nohighlight">\(\textbf{b} \neq 0\)</span> kallast <strong>hliðrað</strong> (e. non-homogeneus).</p>
+</div>
+<section id="synidaemi-hlira-jofnuhneppi">
+<h4><span class="section-number">1.11.6.1. </span>Sýnidæmi: Hliðrað jöfnuhneppi<a class="headerlink" href="#synidaemi-hlira-jofnuhneppi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Leysum löfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1+2x_2+3x_3 = 0\\
+4x_1+5x_2+6x_3 =1\\
+7x_1+8x_2+9x_3 =2
+\end{eqnarray*}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3 &amp;0\\
+4 &amp; 5 &amp; 6 &amp;1\\
+7 &amp; 8 &amp; 9 &amp;2\\
+\end{array}\right] &amp;\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; 0\\
+0 &amp; -3 &amp; -6 &amp;1\\
+0 &amp; -6 &amp; -12 &amp;2\\
+\end{array}\right]
+\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; 0\\
+0 &amp; -3 &amp; -6 &amp;1\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]
+\\&amp;\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 2 &amp; 3&amp; 0\\
+0 &amp; 1 &amp; 2 &amp;-\frac{1}{3}\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]
+\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1 &amp; 0 &amp; -1&amp; \frac{2}{3}\\
+0 &amp; 1 &amp; 2 &amp;-\frac{1}{3}\\
+0 &amp; 0 &amp; 0 &amp;0\\
+\end{array}\right]
+\end{align*}\end{split}\]</div>
+<p>svo</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} = \begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix}
+= \begin{bmatrix}
+x_3+\frac{2}{3}\\-2x_3-\frac{1}{3}\\x_3
+\end{bmatrix}=
+x_3\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}+
+\begin{bmatrix}
+\frac{2}{3}\\-\frac{1}{3}\\0
+\end{bmatrix}\end{split}\]</div>
+<p>Við sjáum við að lausnarmengið er það sama og fyrir óhliðraða
+jöfnuhneppið nema að við bætist vigur <span class="math notranslate nohighlight">\(\begin{bmatrix}\frac{2}{3}\\-\frac{1}{3}\\0\end{bmatrix}\)</span>.
+Við getum því skrifað allar lausnir á forminu <span class="math notranslate nohighlight">\(\textbf{x} = t\textbf{v} + \textbf{p}\)</span> þar sem er almenn lausn
+á óhliðruðu jöfnunni og  <strong>p</strong> ein lausn á þeirri hliðruðu.</p>
+</div>
+</section>
+</section>
+<section id="setning-lausnamengi-fylkjajofnunnar">
+<h3><span class="section-number">1.11.7. </span>Setning: Lausnamengi fylkjajöfnunnar<a class="headerlink" href="#setning-lausnamengi-fylkjajofnunnar" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Gerum ráð fyrir að fylkjajafnan <span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{b}\)</span>
+hafi lausn fyrir gefið <span class="math notranslate nohighlight">\(\ve{b}\)</span> og látum <span class="math notranslate nohighlight">\(\ve{p}\)</span> vera slíka lausn.
+Þá gildir að öll stök í lausnamengi <span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{b}\)</span>
+má rita á forminu <span class="math notranslate nohighlight">\(\textbf{w} = \textbf{p} + \textbf{v}_h\)</span> þar sem <span class="math notranslate nohighlight">\(\textbf{v}_h\)</span>
+er lausn óhliðruðu jöfnunnar <span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{0}\)</span>.</p>
+</div>
+<section id="synidaemi-lausnir-profaar">
+<h4><span class="section-number">1.11.7.1. </span>Sýnidæmi: Lausnir prófaðar<a class="headerlink" href="#synidaemi-lausnir-profaar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum aftur jöfnuhneppið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray*}
+x_1+2x_2+3x_3 = 0\\
+4x_1+5x_2+6x_3 =1\\
+7x_1+8x_2+9x_3 =2
+\end{eqnarray*}\end{split}\]</div>
+<p>og hugsum það á forminu <span class="math notranslate nohighlight">\(A \textbf{x}=\textbf{b}\)</span>.
+Við fundum að lausnin var á forminu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{x} =
+t\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}+
+\begin{bmatrix}
+\frac{2}{3}\\-\frac{1}{3}\\0
+\end{bmatrix}\end{split}\]</div>
+<p>Prófið lausnina til að staðfesta að hún séu rétt.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Prófum lausnina</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+A\textbf{x} &amp;=
+A\left(t\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}+
+\begin{bmatrix}
+\frac{2}{3}\\-\frac{1}{3}\\0
+\end{bmatrix} \right) \\
+&amp;=
+tA
+\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}
++A
+\begin{bmatrix}
+\frac{2}{3}\\-\frac{1}{3}\\0\end{bmatrix}\\
+&amp;=t
+\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+4 &amp; 5 &amp; 6\\
+7 &amp; 8 &amp; 9\\
+\end{bmatrix}
+\begin{bmatrix}
+1\\-2\\1
+\end{bmatrix}
++
+\begin{bmatrix}
+1 &amp; 2 &amp; 3\\
+4 &amp; 5 &amp; 6\\
+7 &amp; 8 &amp; 9\\
+\end{bmatrix}
+\begin{bmatrix}
+\frac{2}{3}\\-\frac{1}{3}\\0
+\end{bmatrix}\\&amp;=
+t     \begin{bmatrix}
+0\\0\\0
+\end{bmatrix}+
+\begin{bmatrix}
+0\\1\\2
+\end{bmatrix}=t\textbf{0} + \textbf{b}\ = \textbf{b}
+\end{align*}\end{split}\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="linulega-ohaar-upptalningar-vigra">
+<h2><span class="section-number">1.12. </span>Línulega óháðar upptalningar vigra<a class="headerlink" href="#linulega-ohaar-upptalningar-vigra" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-linulega-ohaar-upptalningar-vigra">
+<h3><span class="section-number">1.12.1. </span>Skilgreining: Línulega óháðar upptalningar vigra<a class="headerlink" href="#skilgreining-linulega-ohaar-upptalningar-vigra" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p><strong>(i)</strong> Upptalning af vigrum <span class="math notranslate nohighlight">\(\{\textbf{v}_1, \dots ,\textbf{v}_p\}\)</span> í <span class="math notranslate nohighlight">\(\R^n\)</span> er sögð <strong>línulega óháð</strong> (e. linearly independent) ef jafnan</p>
+<div class="math notranslate nohighlight">
+\[x_1\text{v}_1 +  x_2\text{v}_2+ \dots + x_p\textbf{v}_p = \textbf{0}\]</div>
+<p>hefur einungis fáfengilegu lausnina <span class="math notranslate nohighlight">\(x_1 = x_2 = \dots = x_p =0\)</span>.</p>
+<p><strong>(ii)</strong> Upptalning af vigrum <span class="math notranslate nohighlight">\(\{\textbf{v}_1, \dots ,\textbf{v}_p\}\)</span> í <span class="math notranslate nohighlight">\(\R^n\)</span> er sögð <strong>línulega háð</strong> (e. linearly dependent)
+ef til eru tölur <span class="math notranslate nohighlight">\(c_1,\dots,c_p\)</span>, ekki allar jafnar 0, þannig að</p>
+<div class="math notranslate nohighlight">
+\[c_1\textbf{v}_1 + \dots+ c_p\textbf{v}_p = \textbf{0}.\]</div>
+<p>Við segjum oft að vigrarnir <span class="math notranslate nohighlight">\(\ve v_1, \dots, \ve v_2\)</span> séu línulega óháðir ef upptalningin <span class="math notranslate nohighlight">\(\{\ve v_1, \dots, \ve v_p\}\)</span> er línulega óháð.</p>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>1.</strong> Upptalning þar sem <span class="math notranslate nohighlight">\(\ve 0\)</span>-vigurinn kemur fyrir er alltaf línulega háð.</p>
+<p><strong>2.</strong> Upptalning þar sem sami vigurinn kemur fyrir oftar en einu sinni er línulega háð.</p>
+<p><strong>3.</strong> Upptalning með einum vigri <span class="math notranslate nohighlight">\(\ve v\)</span> er línulega óháð ef og aðeins ef <span class="math notranslate nohighlight">\(\ve v \neq \ve 0\)</span>.</p>
+<p><strong>4.</strong> Upptalning <span class="math notranslate nohighlight">\(\{\ve v_1, \ve v_2 \}\)</span> er línulega háð ef og aðeins ef annar vigurinn er margfeldi af hinum. Slík upptalning er línulega óháð ef hvorugur vigurinn er margfeldi af hinum.</p>
+</div>
+<section id="synidaemi-linulega-ohair-vigrar">
+<h4><span class="section-number">1.12.1.1. </span>Sýnidæmi: Línulega óháðir vigrar<a class="headerlink" href="#synidaemi-linulega-ohair-vigrar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Eru eftirfarandi vigrar línulega óháðir?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}_1 = \begin{bmatrix}
+1\\1
+\end{bmatrix},
+\textbf{v}_2=\begin{bmatrix}
+0\\1
+\end{bmatrix},
+\textbf{v}_3 = \begin{bmatrix}
+2\\1
+\end{bmatrix}.\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Þar sem</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}2\begin{bmatrix}
+1\\1
+\end{bmatrix}
+-\begin{bmatrix}
+0\\1
+\end{bmatrix}
+- \begin{bmatrix}
+2\\1
+\end{bmatrix}=\textbf{0}\end{split}\]</div>
+<p>eru vigrarnir þrír línulega háðir.</p>
+</div>
+</section>
+<section id="id5">
+<h4><span class="section-number">1.12.1.2. </span>Sýnidæmi: Línulega óháðir vigrar<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Eru vigrarnir</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\textbf{v}_1 = \begin{bmatrix}
+1\\0\\0
+\end{bmatrix},
+\textbf{v}_2=\begin{bmatrix}
+0\\1\\1
+\end{bmatrix},
+\textbf{v}_3 = \begin{bmatrix}
+2\\2\\1
+\end{bmatrix},\end{split}\]</div>
+<p>línulega óháðir?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Athugum hvort</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}x_1 \begin{bmatrix}
+1\\0\\0
+\end{bmatrix}+
+x_2\begin{bmatrix}
+0\\1\\1
+\end{bmatrix}+
+x_3 \begin{bmatrix}
+2\\2\\1
+\end{bmatrix} = \begin{bmatrix}
+0\\0\\0
+\end{bmatrix}\end{split}\]</div>
+<p>hefur aðeins fáfengilegu lausnina. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+1&amp;0&amp;2\\
+0&amp;1&amp;2\\
+0&amp;1&amp;1
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\x_2\\x_3
+\end{bmatrix} = \begin{bmatrix}
+0\\0\\0
+\end{bmatrix}\end{split}\]</div>
+<p>Fáum nú</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1&amp;0&amp;2&amp;0\\
+0&amp;1&amp;2&amp;0\\
+0&amp;1&amp;1&amp;0
+\end{array}\right]\sim
+\left[\begin{array}{&#64;{}ccc|c&#64;{}}
+1&amp;0&amp;2&amp;0\\
+0&amp;1&amp;2&amp;0\\
+0&amp;0&amp;-1&amp;0
+\end{array}\right].\end{split}\]</div>
+<p>Síðasta aukna fylkið er af efri stallagerð og hefur vendistak
+í hverjum dálki nema þeim lengst til hægri. Því hefur þetta jöfnuhneppi
+aðeins eina lausn, fáfengilegu lausnina <span class="math notranslate nohighlight">\(x_1=x_2=x_3=0\)</span> og vigrarnir
+sem um ræðir eru línulega óháðir.</p>
+</div>
+</section>
+</section>
+<section id="setning-dalkvigrar-fylkis-og-linulegt-ohaei">
+<h3><span class="section-number">1.12.2. </span>Setning: Dálkvigrar fylkis og línulegt óhæði<a class="headerlink" href="#setning-dalkvigrar-fylkis-og-linulegt-ohaei" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Dálkvigrar fylkis <span class="math notranslate nohighlight">\(A\)</span> eru línulega óháðir ef og aðeins ef jöfnuhneppið
+<span class="math notranslate nohighlight">\(A\textbf{x} = \textbf{0}\)</span> hafur einungis fáfengilegu lausnina, <span class="math notranslate nohighlight">\(\ve x= \ve 0\)</span>.</p>
+</div>
+</section>
+<section id="setning-of-margir-vigrar-linulega-ha">
+<h3><span class="section-number">1.12.3. </span>Setning: Of margir vigrar = línulega háð<a class="headerlink" href="#setning-of-margir-vigrar-linulega-ha" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{v}_1, \dots, \textbf{v}_p\)</span> vera upptalningu vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.
+Ef <span class="math notranslate nohighlight">\(p&gt;n\)</span> þá er upptalningin línulega háð.</p>
+</div>
+<p>Setningin segir að ef við höfum fleiri vigra en eru hnit í hverjum
+vigri þá eru vigrarnir línulega háðir.</p>
+</section>
+<section id="setning-linuleg-samantekt-og-linulegt-haei">
+<h3><span class="section-number">1.12.4. </span>Setning: Línuleg samantekt og línulegt hæði<a class="headerlink" href="#setning-linuleg-samantekt-og-linulegt-haei" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Upptalning <span class="math notranslate nohighlight">\(S=\{ \ve v_1, \dots, \ve v_p\}\)</span> af vigrum í <span class="math notranslate nohighlight">\(\R^n\)</span> með <span class="math notranslate nohighlight">\(\ve v_1  \neq \ve 0\)</span> er línulega háð ef og aðeins ef hægt er að rita einhvern vigranna
+<span class="math notranslate nohighlight">\(\ve v_1, \dots, \ve v_p\)</span> sem línulega samantekt hinna vigranna.</p>
+<p>Hægt er að sýna að ef upptalningin er línulega háð og <span class="math notranslate nohighlight">\(\ve v_1 \neq \ve 0\)</span> þá er til vigur <span class="math notranslate nohighlight">\(\ve v_j\)</span> sem má rita sem línulega samantekt vigranna sem eru á
+undan honum í upptalningunni, þ.e.a.s. til eru tölur <span class="math notranslate nohighlight">\(c_1, \dots, c_{j-1}\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[\ve v_j = c_1 \ve v_1 + \dots + c_{j-1} \ve v_{j-1}.\]</div>
+</div>
+</section>
+</section>
+<section id="linulegar-varpanir">
+<h2><span class="section-number">1.13. </span>Línulegar varpanir<a class="headerlink" href="#linulegar-varpanir" title="Permalink to this heading"></a></h2>
+<p><strong>Vörpun</strong> (e. map, mapping, transformation) frá mengi <span class="math notranslate nohighlight">\(A\)</span> yfir í mengi <span class="math notranslate nohighlight">\(B\)</span> er „regla“
+sem úthlutar sérhverju staki úr <span class="math notranslate nohighlight">\(A\)</span> nákvmlega einu staki úr <span class="math notranslate nohighlight">\(B\)</span>, yfirleitt táknað <span class="math notranslate nohighlight">\(f: A \rightarrow B\)</span>. Mengið <span class="math notranslate nohighlight">\(A\)</span> kallast <strong>skilgreiningarmengi/formengi</strong> (e. domain) og <span class="math notranslate nohighlight">\(B\)</span> <strong>ráðstöfunarmengi/bakmengi</strong> (e. codomain) vörpunarinnar <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki. Skilgreinum vörpun <span class="math notranslate nohighlight">\(T: \mathbb{R}^n \rightarrow \mathbb{R}^m\)</span>
+þannig að fyrir <span class="math notranslate nohighlight">\(\textbf{x} \in \mathbb{R}^n\)</span> þá er</p>
+<div class="math notranslate nohighlight">
+\[T(x)=A\textbf{x}.\]</div>
+<p>Oft er hentugt að segja að vörpunin sé skilgreind sem <span class="math notranslate nohighlight">\(\textbf{x} \mapsto A\textbf{x}\)</span>.
+Ef vigur <strong>x</strong> varpast í <span class="math notranslate nohighlight">\(T(\textbf{x})\)</span> þá segjum við að
+<span class="math notranslate nohighlight">\(T(\textbf{x})\)</span> sé <strong>mynd</strong> vigursins <span class="math notranslate nohighlight">\(x\)</span> með tillit til <span class="math notranslate nohighlight">\(T\)</span>.
+Mengi allra slíkra mynda kallast <strong>myndmengi</strong> <span class="math notranslate nohighlight">\(T\)</span> (e. image).</p>
+<section id="skilgreining-linulegar-varpanir">
+<h3><span class="section-number">1.13.1. </span>Skilgreining: Línulegar varpanir<a class="headerlink" href="#skilgreining-linulegar-varpanir" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Vörpun <span class="math notranslate nohighlight">\(T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m\)</span>
+er <strong>línuleg vörpun</strong> ef um öll <span class="math notranslate nohighlight">\(\textbf{u}, \textbf{v} \in \mathbb{R}^n\)</span> og
+allar rauntölur <span class="math notranslate nohighlight">\(c\)</span> gildir:</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(T(\textbf{u} + \textbf{v})= T(\textbf{u}) + T(\textbf{v})\)</span></p>
+<p><strong>2.</strong> <span class="math notranslate nohighlight">\(T(c\textbf{u}) = cT(\textbf{u})\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-linulegar-varpanir-mathbb-r-n-rightarrow-mathbb-r-m">
+<h3><span class="section-number">1.13.2. </span>Setning: Línulegar varpanir <span class="math notranslate nohighlight">\(\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span><a class="headerlink" href="#setning-linulegar-varpanir-mathbb-r-n-rightarrow-mathbb-r-m" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki. Vörpunin <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^m\)</span> skilgreind með <span class="math notranslate nohighlight">\(T(\ve x)= A \ve x\)</span> er línuleg.</p>
+</div>
+</section>
+<section id="skilgreining-eiginleikar-linulegra-varpana">
+<h3><span class="section-number">1.13.3. </span>Skilgreining: Eiginleikar línulegra varpana<a class="headerlink" href="#skilgreining-eiginleikar-linulegra-varpana" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m\)</span> vera línulega vörpun. Þá gildir</p>
+<blockquote>
+<div><p><strong>1.</strong> <span class="math notranslate nohighlight">\(T(\textbf{0})=\textbf{0}\)</span></p>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(\textbf{u},\textbf{v}\)</span> eru vigrar í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> og <span class="math notranslate nohighlight">\(c, d \in \R\)</span> þá er</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dT(\textbf{v}).\]</div>
+</div></blockquote>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\)</span>
+er rupptalning á vigrum og <span class="math notranslate nohighlight">\(c_1, c_2, \dots, c_p\)</span>
+er upptalning á tölum þá er</p>
+<div class="math notranslate nohighlight">
+\[T(c_1\textbf{u}_1+c_2\textbf{u}_2+\cdots+c_p\textbf{u}_p)=c_1T(\textbf{u}_1)+c_2T(\textbf{u}_2)+\cdots+c_pT(\textbf{u}_p).\]</div>
+</div></blockquote>
+</div>
+</section>
+<section id="skilgreining-venjulegi-grunnurinn">
+<h3><span class="section-number">1.13.4. </span>Skilgreining: Venjulegi grunnurinn<a class="headerlink" href="#skilgreining-venjulegi-grunnurinn" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Upptalningin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\ve e_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+\quad \ve e_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+\quad, \dots, \quad \ve e_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix},\end{split}\]</div>
+<p>mynda svokallaðan <strong>venjulega grunn</strong> (e. standard basis) fyrir <span class="math notranslate nohighlight">\(\R^n\)</span>. Sérhvern vigur í <span class="math notranslate nohighlight">\(\R^n\)</span> má skri fa sem línulega samantekt af vigrum venjulega grunnsins á nákvæmlega einn hátt</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix} =
+x_1 \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix} +
+x_2 \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix} +
+\dots +
+x_n \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}.\end{split}\]</div>
+</div>
+<section id="synidaemi-linuleg-vorpun-mathbb-r-2-rightarrow-mathbb-r-2">
+<h4><span class="section-number">1.13.4.1. </span>Sýnidæmi Línuleg vörpun <span class="math notranslate nohighlight">\(\mathbb{R}^2\rightarrow \mathbb{R}^2\)</span><a class="headerlink" href="#synidaemi-linuleg-vorpun-mathbb-r-2-rightarrow-mathbb-r-2" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Segjum að við höfum línulega vörpun  <span class="math notranslate nohighlight">\(T \colon \mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span>
+þannig að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T(\textbf{e}_1)=T\left(\begin{bmatrix}
+1\\0
+\end{bmatrix}\right) = \begin{bmatrix}
+-2\\-1
+\end{bmatrix} \text { og }
+T(\textbf{e}_2) =T\left(\begin{bmatrix}
+0\\1
+\end{bmatrix}\right) = \begin{bmatrix}
+3\\0
+\end{bmatrix}.\end{split}\]</div>
+<p>Hvað er <span class="math notranslate nohighlight">\(T\left(\begin{bmatrix} 4\\5\end{bmatrix}\right)\)</span>?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Notum að vörpunin <span class="math notranslate nohighlight">\(T\)</span> er línuleg og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+T\left(\begin{bmatrix}
+4\\5
+\end{bmatrix}\right) &amp;= T\left(4\begin{bmatrix}
+1\\0
+\end{bmatrix} +5\begin{bmatrix}
+0\\1
+\end{bmatrix}\right) =4T\left(\begin{bmatrix}
+1\\0
+\end{bmatrix}\right) +5T\left(\begin{bmatrix}
+0\\1
+\end{bmatrix}\right) \\&amp;
+= 4\cdot \begin{bmatrix}
+-2\\-1
+\end{bmatrix}+5\cdot\begin{bmatrix}
+3\\0
+\end{bmatrix}=\begin{bmatrix}
+4(-2)+5\cdot 3\\ 4(-1) + 5\cdot 0
+\end{bmatrix}=\begin{bmatrix}
+7\\ -4
+\end{bmatrix}.
+\end{align*}\end{split}\]</div>
+</div>
+</section>
+</section>
+<section id="setning-venjulegi-grunnurinn">
+<h3><span class="section-number">1.13.5. </span>Setning: Venjulegi grunnurinn<a class="headerlink" href="#setning-venjulegi-grunnurinn" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T \colon \mathbb{R}^n\rightarrow\mathbb{R}^m\)</span> vera línulega vörpun, og
+<span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki með <span class="math notranslate nohighlight">\(A=\begin{bmatrix} T(\textbf{e}_1) &amp;\dots&amp; T(\textbf{e}_n) \end{bmatrix}\)</span>.
+Þá gildir um öll <span class="math notranslate nohighlight">\(\textbf{x} \in \mathbb{R}^n\)</span> að <span class="math notranslate nohighlight">\(T(\textbf{x})=A\textbf{x}\)</span> og <span class="math notranslate nohighlight">\(A\)</span> er eina fylkið með þennan eiginleika.
+Við köllum fylkið <span class="math notranslate nohighlight">\(A\)</span> gjarnan <strong>venjulega fylkið</strong> (e. standard matrix) fyrir <span class="math notranslate nohighlight">\(T\)</span>,
+og segjum að línulega vörpunin <span class="math notranslate nohighlight">\(T\)</span> sé gefin með fylkinu <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<p>Skoðum nú nokkrar varpanir og fylki þeirra myndrænt.</p>
+</section>
+<section id="speglanir">
+<h3><span class="section-number">1.13.6. </span>Speglanir<a class="headerlink" href="#speglanir" title="Permalink to this heading"></a></h3>
+<p>Speglun um x-ás: <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp;-1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/speglunx.svg"><img alt="../_images/speglunx.svg" height="322" src="../_images/speglunx.svg" width="253" /></a>
+</figure>
+<p>Speglun um y-ás: <span class="math notranslate nohighlight">\(\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/spegluny.svg"><img alt="../_images/spegluny.svg" height="235" src="../_images/spegluny.svg" width="290" /></a>
+</figure>
+<p>Speglun um línuna x=y <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/speglun_y=x.svg"><img alt="../_images/speglun_y%3Dx.svg" height="217" src="../_images/speglun_y%3Dx.svg" width="267" /></a>
+</figure>
+<p>Speglun um línuna y=-x <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 &amp; -1 \\ -1 &amp; 0 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/speglun_y=-x.svg"><img alt="../_images/speglun_y%3D-x.svg" height="285" src="../_images/speglun_y%3D-x.svg" width="256" /></a>
+</figure>
+<p>Speglun um núllpunkturinn <span class="math notranslate nohighlight">\(\begin{bmatrix} -1 &amp; 0 \\ 0 &amp;-1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/speglun_0.svg"><img alt="../_images/speglun_0.svg" height="313" src="../_images/speglun_0.svg" width="256" /></a>
+</figure>
+</section>
+<section id="strikkanir">
+<h3><span class="section-number">1.13.7. </span>Stríkkanir<a class="headerlink" href="#strikkanir" title="Permalink to this heading"></a></h3>
+<p>Lárétt stríkkun <span class="math notranslate nohighlight">\(\begin{bmatrix} k &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/larett_strikkun.svg"><img alt="../_images/larett_strikkun.svg" height="313" src="../_images/larett_strikkun.svg" width="256" /></a>
+</figure>
+<p>og</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/larett_strikkun_2.svg"><img alt="../_images/larett_strikkun_2.svg" height="313" src="../_images/larett_strikkun_2.svg" width="256" /></a>
+</figure>
+<p>Lóðrétt stríkkun <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; k \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lodrett_strikkun.svg"><img alt="../_images/lodrett_strikkun.svg" height="360" src="../_images/lodrett_strikkun.svg" width="256" /></a>
+</figure>
+<p>og</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lodrett_strikkun_2.svg"><img alt="../_images/lodrett_strikkun_2.svg" height="360" src="../_images/lodrett_strikkun_2.svg" width="256" /></a>
+</figure>
+</section>
+<section id="skekkingar">
+<h3><span class="section-number">1.13.8. </span>Skekkingar<a class="headerlink" href="#skekkingar" title="Permalink to this heading"></a></h3>
+<p>Lárétt skekking <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; k \\ 0 &amp; 1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/latrett_skekking.svg"><img alt="../_images/latrett_skekking.svg" height="259" src="../_images/latrett_skekking.svg" width="256" /></a>
+</figure>
+<p>Lóðrétt skekking <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; 0 \\ k &amp; 1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/lodrett_skekking.svg"><img alt="../_images/lodrett_skekking.svg" height="259" src="../_images/lodrett_skekking.svg" width="256" /></a>
+</figure>
+</section>
+<section id="ofanvorp">
+<h3><span class="section-number">1.13.9. </span>Ofanvörp<a class="headerlink" href="#ofanvorp" title="Permalink to this heading"></a></h3>
+<p>Ofanvarp á x-ás <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ofanvarp_x.svg"><img alt="../_images/ofanvarp_x.svg" height="259" src="../_images/ofanvarp_x.svg" width="256" /></a>
+</figure>
+<p>Ofanvarp á y-ás <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ovanvarp_y.svg"><img alt="../_images/ovanvarp_y.svg" height="259" src="../_images/ovanvarp_y.svg" width="256" /></a>
+</figure>
+</section>
+</section>
+<section id="eintaekar-og-ataekar-varpanir">
+<h2><span class="section-number">1.14. </span>Eintækar og átækar varpanir<a class="headerlink" href="#eintaekar-og-ataekar-varpanir" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-eintaekar-og-ataekar-varpanir">
+<h3><span class="section-number">1.14.1. </span>Skilgreining: Eintækar og átækar varpanir<a class="headerlink" href="#skilgreining-eintaekar-og-ataekar-varpanir" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Vörpun <span class="math notranslate nohighlight">\(f\colon X \rightarrow Y\)</span> er</p>
+<blockquote>
+<div><p><strong>(i)</strong> <strong>eintæk</strong> (e. injective, one-to-one) ef hún varpar ólíkum stökum í ólík stök. Þ.e. ef <span class="math notranslate nohighlight">\(x_1, x_2 \in X\)</span> og
+<span class="math notranslate nohighlight">\(x_1 \neq x_2\)</span> þá er <span class="math notranslate nohighlight">\(f(x_1) \neq f(x_2)\)</span>.</p>
+<p><strong>(ii)</strong> <strong>átæk</strong> (e. surjective, onto) ef um sérhvert <span class="math notranslate nohighlight">\(y \in Y\)</span> gildir að til er <span class="math notranslate nohighlight">\(x \in X\)</span> þannig að <span class="math notranslate nohighlight">\(y=f(x)\)</span>.</p>
+<p><strong>(iii)</strong> <strong>gagntæk</strong> (e. bijective) ef hún er bæði eintæk og átæk.</p>
+</div></blockquote>
+</div>
+<p>Eintæk vörpun:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/eintaek.svg"><img alt="../_images/eintaek.svg" height="234" src="../_images/eintaek.svg" width="305" /></a>
+</figure>
+<p>Átæk vörpun:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/ataek.svg"><img alt="../_images/ataek.svg" height="234" src="../_images/ataek.svg" width="305" /></a>
+</figure>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Við getum líka skilið eintækni og átækni út frá fjölda lausna. Vörpun <span class="math notranslate nohighlight">\(f \colon X \rightarrow Y\)</span> er</p>
+<blockquote>
+<div><p><strong>(i)</strong> eintæk ef of aðeins ef jafnan <span class="math notranslate nohighlight">\(y = f(x)\)</span> hefur í <em>mesta lagi eina lausn</em> <span class="math notranslate nohighlight">\(x \in X\)</span> fyrir sérhvert <span class="math notranslate nohighlight">\(y \in Y\)</span>.</p>
+<p><strong>(ii)</strong> átæk ef og aðeins ef <span class="math notranslate nohighlight">\(y = f(x)\)</span> hefur að <em>minnsta kosti eina lausn</em>  <span class="math notranslate nohighlight">\(x \in X\)</span> fyrir sérhvert <span class="math notranslate nohighlight">\(y \in Y\)</span>.</p>
+<p><strong>(iii)</strong> gagntæk ef og aðeins ef <span class="math notranslate nohighlight">\(y = f(x)\)</span> hefur <em>nákvæmlega eina lausn</em> <span class="math notranslate nohighlight">\(x \in X\)</span> fyrir sérhvert <span class="math notranslate nohighlight">\(y \in Y\)</span>.</p>
+</div></blockquote>
+</div>
+<section id="synidaemi-eintaekar-og-ataekar-varpanir">
+<h4><span class="section-number">1.14.1.1. </span>Sýnidæmi: Eintækar og átækar varpanir<a class="headerlink" href="#synidaemi-eintaekar-og-ataekar-varpanir" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<blockquote>
+<div><p><strong>1.</strong> Dæmi um eintæka vörpun: <span class="math notranslate nohighlight">\(f \colon \R \rightarrow \R\)</span>, <span class="math notranslate nohighlight">\(x \mapsto e^x\)</span>.</p>
+<p><strong>2.</strong> Dæmi um átæka vörpun: <span class="math notranslate nohighlight">\(f \colon \R \rightarrow\R\)</span>, <span class="math notranslate nohighlight">\(x \mapsto x (x^2 -3)\)</span>.</p>
+<p><strong>3.</strong> Dæmi um gagntæka vörpun: <span class="math notranslate nohighlight">\(f \colon \R \rightarrow \R\)</span>, <span class="math notranslate nohighlight">\(x \mapsto 2x +1\)</span>.</p>
+<p><strong>4.</strong> Dæmi um vörpun sem er hvorki eintæk, átæk né gagntæk: <span class="math notranslate nohighlight">\(f \colon \R \rightarrow \R\)</span>, <span class="math notranslate nohighlight">\(x \mapsto x^2\)</span>. Hins vegar ef við breytum skilgreiningar- og bakmenginu í <span class="math notranslate nohighlight">\([0,\infty)\)</span> þá væri fallið gagntækt.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="setning-eintaek-linuleg-vorpun">
+<h3><span class="section-number">1.14.2. </span>Setning: Eintæk línuleg vörpun<a class="headerlink" href="#setning-eintaek-linuleg-vorpun" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(U\)</span> efra stallaform <span class="math notranslate nohighlight">\(A\)</span>. Eftirfarandi skilyrði eru jafngild</p>
+<blockquote>
+<div><p><strong>1.</strong> Það er forystustuðull í sérhverjum dálki <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p><strong>2.</strong> Jafnan <span class="math notranslate nohighlight">\(A \ve x = \ve 0\)</span> hefur einungis fáfengilegu lausnina, <span class="math notranslate nohighlight">\(\ve x = \ve 0\)</span>.</p>
+<p><strong>3.</strong> Dálkvigrar fylkisins <span class="math notranslate nohighlight">\(A\)</span> eru línulega óháðir.</p>
+<p><strong>4.</strong> Vörpunin <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^n\)</span>, <span class="math notranslate nohighlight">\(\ve x \mapsto A \ve x\)</span> er eintæk.</p>
+</div></blockquote>
+</div>
+</section>
+<section id="setning-ataek-linuleg-vorpun">
+<h3><span class="section-number">1.14.3. </span>Setning: Átæk línuleg vörpun<a class="headerlink" href="#setning-ataek-linuleg-vorpun" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(m \times n\)</span> fylki og <span class="math notranslate nohighlight">\(U\)</span> efra stallaform <span class="math notranslate nohighlight">\(A\)</span>. Eftirfarandi skilyrði eru jafngild</p>
+<blockquote>
+<div><p><strong>1.</strong> Það er forystustuðull í sérhverri línu <span class="math notranslate nohighlight">\(U\)</span>.</p>
+<p><strong>2.</strong> Fyrir sérhvert <span class="math notranslate nohighlight">\(\ve b \in \R^m\)</span> þá hefur jafnan <span class="math notranslate nohighlight">\(A \ve x = \ve b\)</span> lausn.</p>
+<p><strong>3.</strong> Dálkvigrar fylkisins <span class="math notranslate nohighlight">\(A\)</span> spanna allt <span class="math notranslate nohighlight">\(\R^m\)</span>.</p>
+<p><strong>4.</strong> Vörpunin <span class="math notranslate nohighlight">\(T \colon \R^n \rightarrow \R^n\)</span>, <span class="math notranslate nohighlight">\(\ve x \mapsto A \ve x\)</span> er átæk.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../formali/" class="btn btn-neutral float-left" title="Formáli" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli02/" class="btn btn-neutral float-right" title="2. Fylkjaaðgerðir" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

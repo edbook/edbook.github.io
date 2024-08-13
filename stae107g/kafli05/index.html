@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Eigingildi og eiginvigrar &mdash; Línuleg Algebra </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="6. Innfeldi og hornrétt ofanvörp" href="../kafli06/" />
+    <link rel="prev" title="4. Vigurrúm" href="../kafli04/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Línuleg Algebra
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../formali/">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Línuleg jöfnuhneppi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Fylkjaaðgerðir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Ákveður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Vigurrúm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Eigingildi og eiginvigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#eigingildi-og-eiginvigur">5.1. Eigingildi og eiginvigur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-eigingildi-og-eiginvigur">5.1.1. Skilgreining: Eigingildi og eiginvigur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eigingildi">5.1.1.1. Sýnidæmi: Eigingildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eigingildi">5.1.2. Setning: Eigingildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eigingild-og-eiginvigrar">5.1.2.1. Sýnidæmi: Eigingild og eiginvigrar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eiginrum">5.2. Eiginrúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eiginrum">5.2.1. Setning: Eiginrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eiginrum-fylkis">5.2.1.1. Sýnidæmi: Eiginrúm fylkis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eigingildi-rihyrningsfylkja">5.2.2. Setning: Eigingildi þríhyrningsfylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-eiginvigrar-linulega-ohair">5.2.3. Setning: Eiginvigrar línulega óháðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-0-sem-eigingildi">5.2.4. Setning: 0 sem eigingildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#kennijafnan">5.3. Kennijafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setning-kennijafnan">5.3.1. Setning: Kennijafnan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-kennijafnan">5.3.1.1. Sýnidæmi: Kennijafnan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-margfeldni-eigingildis">5.3.1.2. Sýnidæmi: Margfeldni eigingildis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#amota-fylki">5.4. Ámóta fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-amota">5.4.1. Skilgreining: Ámóta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-kennijafna-amota-fylkja">5.4.2. Setning: Kennijafna ámóta fylkja</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hornalinugjorningar">5.5. Hornalínugjörningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornalinufylki">5.5.1. Skilgreining: Hornalínufylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-hornalinugeranlegt">5.5.2. Skilgreining: Hornalínugeranlegt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hornalinugjorningar">5.5.2.1. Sýnidæmi: Hornalínugjörningar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-hornalinugeranleg-fylki">5.5.3. Setning: Hornalínugeranleg fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-er-fylki-hornalinugeranlegt">5.5.3.1. Sýnidæmi: Er fylkið hornalínugeranlegt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-vidd-eiginrums">5.5.4. Setning: Vídd eiginrúms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#eiginvigrar-linulegra-varpana">5.6. Eiginvigrar línulegra varpana</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana">5.6.1. Skilgreining: Eigingildi og eiginvigrar línulegra varpana</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-eiginvigrar-linulegra-varpana">5.6.1.1. Sýnidæmi: Eiginvigrar línulegra varpana</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#setning-fylki-linulegra-varpana-i-v">5.6.2. Setning: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-fylki-linulegra-varpana-i-v">5.6.2.1. Sýnidæmi: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-hornalinugjorningur">5.6.2.2. Sýnidæmi: Hornalínugjörningur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Innfeldi og hornrétt ofanvörp</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordaskra/">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Eigingildi og eiginvigrar</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/stae107g/kafli05.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="eigingildi-og-eiginvigrar">
+<h1><span class="section-number">5. </span>Eigingildi og eiginvigrar<a class="headerlink" href="#eigingildi-og-eiginvigrar" title="Permalink to this heading"></a></h1>
+<section id="eigingildi-og-eiginvigur">
+<h2><span class="section-number">5.1. </span>Eigingildi og eiginvigur<a class="headerlink" href="#eigingildi-og-eiginvigur" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-eigingildi-og-eiginvigur">
+<h3><span class="section-number">5.1.1. </span>Skilgreining: Eigingildi og eiginvigur<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigur" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Ef til er vigur
+<span class="math notranslate nohighlight">\(\textbf{x} \neq \textbf{0}\)</span> og tala <span class="math notranslate nohighlight">\(\lambda\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[A\textbf{x}=\lambda\textbf{x}\]</div>
+<p>Þá segjum við að <span class="math notranslate nohighlight">\(\lambda\)</span> sé <strong>eigingildi</strong> (e. eigenvalue) <span class="math notranslate nohighlight">\(A\)</span>
+og <span class="math notranslate nohighlight">\(x\)</span> <strong>eiginvigur</strong> (e. eigenvector). Ef að <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(\lambda\)</span> uppfylla
+jöfnuna að ofan þá segjum við að <span class="math notranslate nohighlight">\(x\)</span> sé eiginvigur við eigingildi <span class="math notranslate nohighlight">\(\lambda\)</span>.
+Við þessar aðstæður segjum við að eigingildið <span class="math notranslate nohighlight">\(\lambda\)</span> og eiginvigurinn <span class="math notranslate nohighlight">\(x\)</span>
+tilheyri hvort öðru.</p>
+</div>
+<section id="synidaemi-eigingildi">
+<h4><span class="section-number">5.1.1.1. </span>Sýnidæmi: Eigingildi<a class="headerlink" href="#synidaemi-eigingildi" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(A=\begin{bmatrix} 2&amp;0\\0&amp;1 \end{bmatrix}\)</span> og
+<span class="math notranslate nohighlight">\(\textbf{x} = \begin{bmatrix}1\\0\end{bmatrix}\)</span> finnum eigingildi.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A\textbf{x} = \begin{bmatrix}
+2\\0\end{bmatrix} = 2 \begin{bmatrix}
+1\\0\end{bmatrix} = 2 \textbf{x}\end{split}\]</div>
+<p>svo 2 er eigingildi <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(\textbf{x}\)</span> er tilsvarandi eiginvigur.</p>
+</div>
+</section>
+</section>
+<section id="setning-eigingildi">
+<h3><span class="section-number">5.1.2. </span>Setning: Eigingildi<a class="headerlink" href="#setning-eigingildi" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Tala <span class="math notranslate nohighlight">\(\lambda\)</span> er
+eigingildi fylkis <span class="math notranslate nohighlight">\(A\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span>.</p>
+</div>
+<section id="synidaemi-eigingild-og-eiginvigrar">
+<h4><span class="section-number">5.1.2.1. </span>Sýnidæmi: Eigingild og eiginvigrar<a class="headerlink" href="#synidaemi-eigingild-og-eiginvigrar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið eigingildi og eiginvigra</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}2 &amp; 1\\ 9 &amp; 2\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Byrjum að finna eigingildin, til þess þarf</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-\lambda I = \begin{bmatrix}2-\lambda &amp; 1 \\ 9 &amp; 2-\lambda\end{bmatrix} (*)\end{split}\]</div>
+<p>að vera óandhverfanlegt og hafa þannig ákveðuna 0. Höfum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\begin{vmatrix}
+2-\lambda &amp; 1 \\ 9 &amp; 2-\lambda
+\end{vmatrix}
+&amp;= (2-\lambda)^2-9\\&amp;= \lambda^2-4\lambda+4-9\\&amp;=\lambda^2-4\lambda-5\\&amp; =
+(\lambda-5)(\lambda+1)
+\end{align*}\end{split}\]</div>
+<p>svo ef <span class="math notranslate nohighlight">\(A-\lambda I\)</span> er óandhverfanlegt þá er <span class="math notranslate nohighlight">\((\lambda-5)(\lambda+1)=0\)</span>
+sem gefur að <span class="math notranslate nohighlight">\(\lambda = 5\)</span> eða <span class="math notranslate nohighlight">\(\lambda =-1\)</span>.</p>
+<p>Tökum <span class="math notranslate nohighlight">\(\lambda=5\)</span> og þá fæst að við erum að reyna að leysa jöfnuhneppið (*) sem er þá</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+-3 &amp; 1\\
+9 &amp; -3
+\end{bmatrix} \sim \begin{bmatrix}
+1 &amp; -1/3\\
+0 &amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>svo <span class="math notranslate nohighlight">\(\textbf{x} = t\begin{bmatrix}1/3\\1\end{bmatrix}\)</span>.</p>
+<p>Nú má auðveldlega sannreyna að <span class="math notranslate nohighlight">\(\begin{bmatrix} 1/3\\1\end{bmatrix}\)</span>
+er eiginvigur sem svarar til eigingildisins 5.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="eiginrum">
+<h2><span class="section-number">5.2. </span>Eiginrúm<a class="headerlink" href="#eiginrum" title="Permalink to this heading"></a></h2>
+<section id="setning-eiginrum">
+<h3><span class="section-number">5.2.1. </span>Setning: Eiginrúm<a class="headerlink" href="#setning-eiginrum" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n\times n\)</span> fylki og <span class="math notranslate nohighlight">\(\lambda\)</span>
+eigingildi þess. Mengi allra eiginvigra tilheyrandi eigingildinu <span class="math notranslate nohighlight">\(\lambda\)</span>
+að viðbættum núllvigrinum <span class="math notranslate nohighlight">\(\textbf{0}\)</span> er hlutrúm í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.
+Þetta hlutrúm er kallað <strong>eiginrúm</strong> (e. eigenspace) tilheyrandi eigingildinu <span class="math notranslate nohighlight">\(\lambda\)</span>
+og táknað með <span class="math notranslate nohighlight">\(E(\lambda)\)</span>. Eiginrúmið er núllrúm fylkisins <span class="math notranslate nohighlight">\(A-\lambda I\)</span>.</p>
+</div>
+<section id="synidaemi-eiginrum-fylkis">
+<h4><span class="section-number">5.2.1.1. </span>Sýnidæmi: Eiginrúm fylkis<a class="headerlink" href="#synidaemi-eiginrum-fylkis" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Gefið er að 3 og 4 eru eigingildi fylkisins <span class="math notranslate nohighlight">\(A\)</span>. Finnið
+eiginrúm <span class="math notranslate nohighlight">\(A\)</span> með tilliti til eigingildanna.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix} 1 &amp; 3 \\ -2 &amp; 6 \end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Við byrjum á að finna eiginrúmið sem tilheyrir eigingildinu <span class="math notranslate nohighlight">\(\lambda=3\)</span>.
+Til þess leysum við jöfnuna <span class="math notranslate nohighlight">\((A-3I)\textbf{x}=0\)</span>. Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-3I=
+\begin{bmatrix}
+-2 &amp; 3\\
+-2 &amp; 3
+\end{bmatrix}
+\sim \begin{bmatrix}
+-2 &amp; 3\\
+0 &amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>svo að <span class="math notranslate nohighlight">\(\ve{x}=\begin{bmatrix}x_1\\x_2\end{bmatrix}=x_2\begin{bmatrix}3\\2\end{bmatrix}\)</span> er lausn á jöfnunni.
+Við getum því séð að <span class="math notranslate nohighlight">\(\begin{bmatrix}3\\2\end{bmatrix}\)</span> er eiginvigur með eigingildi <span class="math notranslate nohighlight">\(\lambda=3\)</span> og því er
+<span class="math notranslate nohighlight">\(E(3)=\spn{\begin{bmatrix}3\\2\end{bmatrix}}\)</span>.</p>
+<p>Gerum nú það sama fyrir eigingildið <span class="math notranslate nohighlight">\(\lambda=4\)</span>. Þá þurfum við að leysa <span class="math notranslate nohighlight">\((A-4I)\textbf{x}=0\)</span>.
+Fáum að</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-4I=
+\begin{bmatrix}
+-3 &amp; 3\\
+-2 &amp; 2
+\end{bmatrix}
+\sim \begin{bmatrix}
+1 &amp; -1\\
+-2 &amp; 2 \\
+\end{bmatrix}
+\sim \begin{bmatrix}
+1 &amp; -1\\
+0 &amp; 0 \\
+\end{bmatrix}\end{split}\]</div>
+<p>svo að með sömu rökum er <span class="math notranslate nohighlight">\(\begin{bmatrix}1\\1\end{bmatrix}\)</span> eiginvigur með eigingildi <span class="math notranslate nohighlight">\(\lambda=4\)</span>
+og því er <span class="math notranslate nohighlight">\(E(4)=\spn{\begin{bmatrix}1\\1\end{bmatrix}}\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-eigingildi-rihyrningsfylkja">
+<h3><span class="section-number">5.2.2. </span>Setning: Eigingildi þríhyrningsfylkja<a class="headerlink" href="#setning-eigingildi-rihyrningsfylkja" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(n \times n\)</span> þríhyrningsfylki þá eru eigingildi <span class="math notranslate nohighlight">\(A\)</span>
+stökin á hornalínunni.</p>
+</div>
+</section>
+<section id="setning-eiginvigrar-linulega-ohair">
+<h3><span class="section-number">5.2.3. </span>Setning: Eiginvigrar línulega óháðir<a class="headerlink" href="#setning-eiginvigrar-linulega-ohair" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(\textbf{v}_1, \dots \textbf{v}_r\)</span> vera eiginvigra sem svara til ólíkra eigingilda
+<span class="math notranslate nohighlight">\(\lambda_1,\dots, \lambda_r\)</span> fylkisins <span class="math notranslate nohighlight">\(A\)</span>. Þá er mengið
+<span class="math notranslate nohighlight">\(\{\textbf{v}_1, \dots, \textbf{v}_r\}\)</span> línulega óháð.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Einfaldar línuaðgerðir varðveita ekki eigingildi.</p>
+</div>
+</section>
+<section id="setning-0-sem-eigingildi">
+<h3><span class="section-number">5.2.4. </span>Setning: 0 sem eigingildi<a class="headerlink" href="#setning-0-sem-eigingildi" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Talan 0 er eigingildi fylkisins <span class="math notranslate nohighlight">\(A\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(A\)</span> er óandhverfanlegt.</p>
+</div>
+</section>
+</section>
+<section id="kennijafnan">
+<h2><span class="section-number">5.3. </span>Kennijafnan<a class="headerlink" href="#kennijafnan" title="Permalink to this heading"></a></h2>
+<section id="setning-kennijafnan">
+<h3><span class="section-number">5.3.1. </span>Setning: Kennijafnan<a class="headerlink" href="#setning-kennijafnan" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Jafnan <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span> kallast <strong>kennijafna</strong> (e. characteristic equation) fylkisins A.</p>
+</div>
+<section id="synidaemi-kennijafnan">
+<h4><span class="section-number">5.3.1.1. </span>Sýnidæmi: Kennijafnan<a class="headerlink" href="#synidaemi-kennijafnan" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnum eigingildi og eignvigra fylkisins</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+10 &amp; 2 \\
+9 &amp; 3
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Launs</p>
+<p>Til að finna eiginvigra þarf að finna ekki-augljósa lausn á jöfnunni <span class="math notranslate nohighlight">\((A-\lambda I)\textbf{x} = \textbf{0}\)</span>. Til þess þarf að gilda
+<span class="math notranslate nohighlight">\(\det(A - \lambda I) = 0\)</span>.</p>
+<p>Reiknum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\begin{vmatrix}
+10-\lambda &amp; 2 \\
+9 &amp; 3-\lambda
+\end{vmatrix}
+&amp;= (10-\lambda)(3-\lambda) - (2 \cdot 9) = \lambda^2 - 13\lambda + 12 = \\&amp;= (\lambda-12)(\lambda -1).
+\end{align*}\end{split}\]</div>
+<p>Þessi ákveða er jöfn <span class="math notranslate nohighlight">\(0\)</span> þegar <span class="math notranslate nohighlight">\((\lambda-12)(\lambda -1)=0\)</span> við fáum því tvö eigingildi, <span class="math notranslate nohighlight">\(\lambda = 1\)</span> og <span class="math notranslate nohighlight">\(\lambda=12\)</span>.
+Skoðum fyrst eigingildið <span class="math notranslate nohighlight">\(\lambda = 1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(A - \lambda I)\textbf{x}= \begin{bmatrix}
+10-1 &amp; 2 \\
+9 &amp; 3-1
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix} = \begin{bmatrix}
+9 &amp; 2 \\
+9 &amp; 2
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix}\end{split}\]</div>
+<p>sem gefur lausnina</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1\\x_2
+\end{bmatrix}=\begin{bmatrix}
+(-2/9)x_2\\x_2
+\end{bmatrix}=x_2\begin{bmatrix}
+(-2/9)\\1
+\end{bmatrix}\end{split}\]</div>
+<p>Eiginvigrar m.t.t. 1 eru því öll margfeldi <span class="math notranslate nohighlight">\([-2/9 \ 1]^T\)</span> þannig að við getum
+líka skrifað að alla eiginvigra sem svara til <span class="math notranslate nohighlight">\(\lambda=1\)</span> megi skrifa á forminu</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}t\begin{bmatrix}
+-2\\ 9
+\end{bmatrix}.\end{split}\]</div>
+<p>Skoðum næst  <span class="math notranslate nohighlight">\(\lambda = 12\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(A - \lambda I)\textbf{x} = \begin{bmatrix}
+10-12 &amp; 2 \\
+9&amp; 3-12
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix} = \begin{bmatrix}
+-2 &amp; 2 \\
+9 &amp; -9
+\end{bmatrix} \begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix}\end{split}\]</div>
+<p>Auðvelt að sjá að allar tölur <span class="math notranslate nohighlight">\(x_1,x_2\)</span>
+sem uppfylla <span class="math notranslate nohighlight">\(x_1=x_2\)</span>
+eru lausnir svo eiginvigrar m.t.t. 12 eru allir á forminu:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1\\x_2
+\end{bmatrix}=\begin{bmatrix}
+x_2\\x_2
+\end{bmatrix}=x_2\begin{bmatrix}
+1\\1
+\end{bmatrix}=t\begin{bmatrix}
+1\\1
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Kennijafnan getur í mesta lagi haft <span class="math notranslate nohighlight">\(n\)</span> ólíkar núllstöðvar.
+Ef að margliðan þéttast þannig að einhver núllstöð <span class="math notranslate nohighlight">\(r\)</span> kemur fyrir í <span class="math notranslate nohighlight">\(s\)</span>-ta veldi
+þáttun hennar þá segjum við að eigingildið <span class="math notranslate nohighlight">\(r\)</span> hafi algebrulega margfeldni <span class="math notranslate nohighlight">\(s\)</span>
+(e. algrebraic multiplicity).</p>
+</div>
+</section>
+<section id="synidaemi-margfeldni-eigingildis">
+<h4><span class="section-number">5.3.1.2. </span>Sýnidæmi: Margfeldni eigingildis<a class="headerlink" href="#synidaemi-margfeldni-eigingildis" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Finnið eigingildin</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+1 &amp; 3 &amp; 0\\
+0  &amp;-2 &amp;1\\
+0&amp; 0&amp; 1\\
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{vmatrix}
+1-\lambda &amp; 3 &amp; 0\\
+0  &amp;-2 -\lambda&amp;1\\
+0&amp; 0&amp; 1 -\lambda \\
+\end{vmatrix}
+=
+(1-\lambda)^2(-2-\lambda)\end{split}\]</div>
+<p>Þar með hefur eigingildið 1 margfeldnina 2 en eigingildið -2 hefur margfeldnina 1.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="amota-fylki">
+<h2><span class="section-number">5.4. </span>Ámóta fylki<a class="headerlink" href="#amota-fylki" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-amota">
+<h3><span class="section-number">5.4.1. </span>Skilgreining: Ámóta<a class="headerlink" href="#skilgreining-amota" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Tvö <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru sögð <strong>ámóta</strong>
+(e. similar) ef til er andhverfanlegt fylki <span class="math notranslate nohighlight">\(P\)</span> þannig að</p>
+<div class="math notranslate nohighlight">
+\[B=P^{-1}AP\]</div>
+</div>
+<div class="athugasemd admonition">
+<p class="admonition-title">Athugasemd</p>
+<p><strong>1.</strong> Ferningsfylki <span class="math notranslate nohighlight">\(A\)</span> er ámóta sjálfu sér.</p>
+<p><strong>2.</strong> Ef <span class="math notranslate nohighlight">\(B=P^{-1}AP\)</span> þá er <span class="math notranslate nohighlight">\(A=P^{-1}BP\)</span></p>
+<p><strong>3.</strong> Gerum ráð fyrir að fylki <span class="math notranslate nohighlight">\(A\)</span> sé ámóta fylkinu <span class="math notranslate nohighlight">\(B\)</span>
+og fylkið <span class="math notranslate nohighlight">\(B\)</span> sé ámóta fylkinu <span class="math notranslate nohighlight">\(C\)</span>. Þá er <span class="math notranslate nohighlight">\(A\)</span> ámóta <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p>Þessi þrjú atriði segja að það að vera ámóta er dæmi um það sem er kallað <em>jafngildisvensl</em>.</p>
+</div>
+</section>
+<section id="setning-kennijafna-amota-fylkja">
+<h3><span class="section-number">5.4.2. </span>Setning: Kennijafna ámóta fylkja<a class="headerlink" href="#setning-kennijafna-amota-fylkja" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Ef <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru ámóta fylki þá hafa þau sömu kennijöfnur
+og þar með sömu eigingildi (með sama margfeldni hvert).</p>
+</div>
+<div class="setning dropdown admonition">
+<p class="admonition-title">Sönnun</p>
+<p>Skrifum <span class="math notranslate nohighlight">\(B=P^{-1}AP\)</span> fyrst <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru ámóta. Þá er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+P(A-\lambda I )P^{-1}
+&amp;=(PA - P\lambda I)P^{-1}=
+(PA- \lambda PI)P^{-1} \\
+&amp;=(PA- \lambda P)P^{-1}=
+PAP^{-1}- \lambda PP^{-1}=
+B-\lambda I
+\end{align*}\end{split}\]</div>
+<p>Þar með er líka</p>
+<div class="math notranslate nohighlight">
+\[\det(P(A-\lambda I )P^{-1})=\det(B-\lambda I)\]</div>
+<p>sem gefur</p>
+<div class="math notranslate nohighlight">
+\[\det(P)\det(A-\lambda I )\det(P)^{-1}=\det(B-\lambda I)\]</div>
+<p>svo <span class="math notranslate nohighlight">\(\det(A-\lambda I)=\det(B-\lambda I)\)</span> og <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> hafa sömu kennijöfnu.</p>
+</div>
+<div class="advorun admonition">
+<p class="admonition-title">Aðvörun</p>
+<p>Mögulegt er að tvö fylki hafi nákvæmlega sömu eigingildi
+með sömu margfeldni en séu samt ekki ámóta.</p>
+</div>
+</section>
+</section>
+<section id="hornalinugjorningar">
+<h2><span class="section-number">5.5. </span>Hornalínugjörningar<a class="headerlink" href="#hornalinugjorningar" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-hornalinufylki">
+<h3><span class="section-number">5.5.1. </span>Skilgreining: Hornalínufylki<a class="headerlink" href="#skilgreining-hornalinufylki" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Við segjum að <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(D\)</span> sé <strong>hornalínufylki</strong>
+(e. diagonal matrix) ef öll stök utan hornalínunnar eru 0.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D = \begin{bmatrix}
+d_1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; d_2 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; d_n
+\end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+<section id="skilgreining-hornalinugeranlegt">
+<h3><span class="section-number">5.5.2. </span>Skilgreining: Hornalínugeranlegt<a class="headerlink" href="#skilgreining-hornalinugeranlegt" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Ferningsfylki <span class="math notranslate nohighlight">\(A\)</span> sem er ámóta hornalínufylki er sagt <strong>hornalínugeranlegt</strong> (e. diagonalizable).
+Það er að segja, fylki <span class="math notranslate nohighlight">\(A\)</span> er hornalínugeranlegt ef til er andhverfanlegt
+fylki <span class="math notranslate nohighlight">\(P\)</span> þannig að <span class="math notranslate nohighlight">\(A=PDP^{-1}\)</span> þar sem <span class="math notranslate nohighlight">\(D\)</span> er hornlínufylki.</p>
+</div>
+<p>Að hornalínugera fylki</p>
+<blockquote>
+<div><p><strong>1.</strong> Finnum eigingildi <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>2.</strong> Finnum <span class="math notranslate nohighlight">\(n\)</span> línulega óháða eiginvigra <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>3.</strong> Smíðum fylkið <span class="math notranslate nohighlight">\(P\)</span> úr eiginvigrnum í skrefi 2.</p>
+<p><strong>4.</strong> Smiðum fylkið <span class="math notranslate nohighlight">\(D\)</span> úr eigingildum í skrefi 1.</p>
+</div></blockquote>
+<section id="synidaemi-hornalinugjorningar">
+<h4><span class="section-number">5.5.2.1. </span>Sýnidæmi: Hornalínugjörningar<a class="headerlink" href="#synidaemi-hornalinugjorningar" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Hornulínugerið fylkið <span class="math notranslate nohighlight">\(A\)</span> ef hægt er</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{bmatrix}
+3 &amp; 2 &amp; 1\\
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Launs</p>
+<p>Þar sem <span class="math notranslate nohighlight">\(A\)</span> er hornalínufylki eru eigingildi þess stökin
+á hornalínunni, sem sagt <span class="math notranslate nohighlight">\(\lambda = 3\)</span> og <span class="math notranslate nohighlight">\(\lambda = 1\)</span>.
+Fyrir <span class="math notranslate nohighlight">\(\lambda = 3\)</span> fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+0 &amp; 2 &amp; 1\\
+0 &amp; -2 &amp; 0\\
+0 &amp; 0 &amp; -2\\
+\end{bmatrix}
+\sim \dots \sim
+\begin{bmatrix}
+0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 1\\
+0&amp; 0&amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>sem svara til jöfnuhneppisins <span class="math notranslate nohighlight">\(x_2=0, x_3=0\)</span> sem hefur lausn</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}=\begin{bmatrix}
+x_1\\
+0\\
+0\\
+\end{bmatrix}=x_1\begin{bmatrix}
+1\\
+0\\
+0
+\end{bmatrix}\end{split}\]</div>
+<p>Fyrir <span class="math notranslate nohighlight">\(\lambda = 1\)</span> fæst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+2&amp; 2 &amp; 1\\
+0 &amp; 0 &amp; 0\\
+0&amp; 0&amp; 0
+\end{bmatrix}\sim
+\begin{bmatrix}
+1 &amp; 1 &amp; \frac{1}{2}\\
+0 &amp; 0 &amp; 0\\
+0&amp; 0&amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>sem svarar til jöfnuhneppisins <span class="math notranslate nohighlight">\(x_1+x_2+1/2x_3=0\)</span> sem hefur lausnirnar</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}=\begin{bmatrix}
+-x_2-\frac{1}{2}x_3\\
+x_2\\
+x_3\\
+\end{bmatrix}=x_2\begin{bmatrix}
+-1\\
+1\\
+0
+\end{bmatrix}+x_3\begin{bmatrix}
+-\frac{1}{2}\\
+0\\
+1
+\end{bmatrix}\end{split}\]</div>
+<p>Fylkið hefur því þrjá línulega óháða eiginvigra sem mynda fylkið
+<span class="math notranslate nohighlight">\(P\)</span>. Auk þess fáum við <span class="math notranslate nohighlight">\(D\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P= \begin{bmatrix}
+1&amp;   -1&amp; -\frac{1}{2}\\
+0 &amp;  1&amp; 0\\
+0 &amp;  0&amp; 1
+\end{bmatrix}, \quad
+D=\begin{bmatrix}
+3&amp;   0 &amp; 0\\
+0 &amp;  1&amp; 0\\
+0 &amp;  0&amp; 1
+\end{bmatrix}\end{split}\]</div>
+<p>og <span class="math notranslate nohighlight">\(A\)</span> er hornalínugeranlegt með <span class="math notranslate nohighlight">\(A=PDP^{-1}\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-hornalinugeranleg-fylki">
+<h3><span class="section-number">5.5.3. </span>Setning: Hornalínugeranleg fylki<a class="headerlink" href="#setning-hornalinugeranleg-fylki" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Ef fylkið <span class="math notranslate nohighlight">\(A\)</span> hefur <span class="math notranslate nohighlight">\(n\)</span>
+ólík eigingildi þá er fylkið <span class="math notranslate nohighlight">\(A\)</span> hornalínugeranlegt.</p>
+</div>
+<section id="synidaemi-er-fylki-hornalinugeranlegt">
+<h4><span class="section-number">5.5.3.1. </span>Sýnidæmi: Er fylkið hornalínugeranlegt<a class="headerlink" href="#synidaemi-er-fylki-hornalinugeranlegt" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Er fylkið <span class="math notranslate nohighlight">\(A=\begin{bmatrix} 1 &amp; 2 &amp; 3\\ 0 &amp; 4 &amp; 5 \\ 0 &amp; 0 &amp; 6\end{bmatrix}\)</span> hornalínugeranlegt?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Kennimargliða <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(p(\lambda)=(1-\lambda)(4-\lambda)(6-\lambda)\)</span>.
+Eigingildin eru <span class="math notranslate nohighlight">\(\lambda_1=1, \lambda_2=4\)</span> og <span class="math notranslate nohighlight">\(\lambda_3=6\)</span>. Höfum hér <span class="math notranslate nohighlight">\(3 \times 3\)</span>
+fylki með 3 ólík eigingildi. Fylkið er því hornalínugeranlegt.</p>
+</div>
+</section>
+</section>
+<section id="setning-vidd-eiginrums">
+<h3><span class="section-number">5.5.4. </span>Setning: Vídd eiginrúms<a class="headerlink" href="#setning-vidd-eiginrums" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki sem hefur ólíku eigingildin <span class="math notranslate nohighlight">\(\lambda_1, \dots, \lambda_p\)</span> (með <span class="math notranslate nohighlight">\(p\leq n\)</span>). Þá gildir eftirfarandi.</p>
+<blockquote>
+<div><p><strong>1.</strong> Vídd eiginrúmsins m.t.t. <span class="math notranslate nohighlight">\(\lambda_k\)</span> er minni eða jöfn margfeldni eigingildisins <span class="math notranslate nohighlight">\(\lambda_k\)</span>, fyrir <span class="math notranslate nohighlight">\(1\leq k\leq p\)</span>.</p>
+<p><strong>2.</strong> Fylkið <span class="math notranslate nohighlight">\(A\)</span> er hornalínugeranlegt þá og því aðeins að summa vídda eiginrúma m.t.t. allra eigingildanna <span class="math notranslate nohighlight">\(\lambda_k\)</span> er jöfn <span class="math notranslate nohighlight">\(n\)</span>.
+Til þess þarf kennijafnan að þáttast að fullu í línulega þætti og vídd eiginrúms m.t.t. til hvers eigingildis að vera jöfn margfeldni þess.</p>
+<p><strong>3.</strong> Ef <span class="math notranslate nohighlight">\(A\)</span> er hornalínugeranlegt og <span class="math notranslate nohighlight">\(\mathcal{B}_k\)</span> er grunnur fyrir eiginrúm m.t.t <span class="math notranslate nohighlight">\(\lambda_k\)</span> fyrir fyrir <span class="math notranslate nohighlight">\(1\leq k\leq p\)</span> þá myndar sammengið</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{B}_1\cup \dots \cup \mathcal{B}_k\]</div>
+<p>grunn fyrir <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>.</p>
+</div></blockquote>
+</div>
+</section>
+</section>
+<section id="eiginvigrar-linulegra-varpana">
+<h2><span class="section-number">5.6. </span>Eiginvigrar línulegra varpana<a class="headerlink" href="#eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana">
+<h3><span class="section-number">5.6.1. </span>Skilgreining: Eigingildi og eiginvigrar línulegra varpana<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h3>
+<div class="skilgreining admonition">
+<p class="admonition-title">Skilgreining</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm og <span class="math notranslate nohighlight">\(T\text{:}V \rightarrow V\)</span> vera
+línulega vörpun. Ef til er vigur <span class="math notranslate nohighlight">\(\textbf{x} \neq \textbf{0}\)</span>
+í <span class="math notranslate nohighlight">\(V\)</span> og tala <span class="math notranslate nohighlight">\(\lambda\)</span> þannig að <span class="math notranslate nohighlight">\(T(x)=\lambda\textbf{x}\)</span>
+þá kallast <span class="math notranslate nohighlight">\(\lambda\)</span> eigingildi <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(\textbf{x}\)</span> kallast
+eiginvigur <span class="math notranslate nohighlight">\(T\)</span> sem svara til <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+</div>
+<section id="synidaemi-eiginvigrar-linulegra-varpana">
+<h4><span class="section-number">5.6.1.1. </span>Sýnidæmi: Eiginvigrar línulegra varpana<a class="headerlink" href="#synidaemi-eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Skoðum vörpunina <span class="math notranslate nohighlight">\(T\text{:}\mathbb{P}_1 \rightarrow \mathbb{P}_1\)</span>,
+<span class="math notranslate nohighlight">\(T(a_1x+a_0)=2a_1x+2a_0\)</span> þar sem við skoðum margliðuna <span class="math notranslate nohighlight">\(p(x)=x\)</span>
+og fáum</p>
+<div class="math notranslate nohighlight">
+\[T(p(x))=T(x)=2x=2p(x)\]</div>
+<p>svo margliðan <span class="math notranslate nohighlight">\(p(x)=x\)</span> er eiginvigur <span class="math notranslate nohighlight">\(T\)</span> og <span class="math notranslate nohighlight">\(\lambda=2\)</span> er eigingildi <span class="math notranslate nohighlight">\(T\)</span>.
+Einnig ef við tökum <span class="math notranslate nohighlight">\(p(x)=1\)</span> fæst</p>
+<div class="math notranslate nohighlight">
+\[T(p(x))=T(1)=2=2\cdot 1=2p(x)\]</div>
+<p>svo <span class="math notranslate nohighlight">\(p(x)=1\)</span> er líka eiginvigur <span class="math notranslate nohighlight">\(T\)</span> og hefur einnig eigingildið <span class="math notranslate nohighlight">\(\lambda=2\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="setning-fylki-linulegra-varpana-i-v">
+<h3><span class="section-number">5.6.2. </span>Setning: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#setning-fylki-linulegra-varpana-i-v" title="Permalink to this heading"></a></h3>
+<div class="setning admonition">
+<p class="admonition-title">Setning</p>
+<p>Látum <span class="math notranslate nohighlight">\(T:\mathbb{R}^n\rightarrow\mathbb{R}^n\)</span> vera línulega vörpun með fylkið <span class="math notranslate nohighlight">\(A\)</span>. Gerum ráð fyrir að
+<span class="math notranslate nohighlight">\(A\)</span> sé hornalínugeranlegt. Látum <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> vera grunn sem myndaður er að eiginvigrum
+<span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(P\)</span> vera fylkið sem hefur eiginvigra <span class="math notranslate nohighlight">\(A\)</span> sem dálka. Hornalínufylkið
+<span class="math notranslate nohighlight">\(D=P^{-1}AP\)</span> er þá fylki vörpunarinnar m.t.t. grunnsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>.</p>
+</div>
+<section id="synidaemi-fylki-linulegra-varpana-i-v">
+<h4><span class="section-number">5.6.2.1. </span>Sýnidæmi: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#synidaemi-fylki-linulegra-varpana-i-v" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera n-vítt vigurrúm og <span class="math notranslate nohighlight">\(T\text{:}V \rightarrow V\)</span> vera línulega
+vörpun. Hvernig finnum við fylki sem táknar <span class="math notranslate nohighlight">\(T\)</span>?</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Lausn</p>
+<p>Við færum okkur yfir í <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Látum <span class="math notranslate nohighlight">\(\mathcal{B}=\{\textbf{b}_1, \dots, \textbf{b}_n\}\)</span> vera einhvern grunn
+fyrir <span class="math notranslate nohighlight">\(V\)</span>. Tökum <span class="math notranslate nohighlight">\(\textbf{x} \in V\)</span>. Þá má skrifa</p>
+<div class="math notranslate nohighlight">
+\[\textbf{x}=r_1\textbf{b}_1+\dots+r_n\textbf{b}_n\]</div>
+<p>og við skrifum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}[\textbf{x}]_\mathcal{B} = \begin{bmatrix}
+r_1\\\vdots\\r_n
+\end{bmatrix}\end{split}\]</div>
+<p>Þá gildir líka</p>
+<div class="math notranslate nohighlight">
+\[T(\textbf{x})=T(r_1\textbf{b}_1+\dots+r_n\textbf{b}_n)=r_1T(\textbf{b}_1)+\dots+r_nT(\textbf{b}_n)\]</div>
+<p>Beitum hnitavörpunninni <span class="math notranslate nohighlight">\(V\rightarrow\mathbb{R}^n, \textbf{x}\mapsto[\textbf{x}]_\mathcal{B}\)</span> á báðar hliðar og fáum</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+[T(\textbf{x})]_\mathcal{B}
+&amp;=r_1[T(\textbf{b}_1)]_\mathcal{B} + \dots +r_n[T(\textbf{b}_n)]_\mathcal{B}
+\\&amp;= \begin{bmatrix}
+[T(\textbf{b}_1)]&amp; \dots &amp;[T(\textbf{b}_n)]_\mathcal{B}
+\end{bmatrix}
+\underbrace{\begin{bmatrix}
+r_1 \\ \vdots \\ r_n
+\end{bmatrix}}_{[\textbf{x}]_\mathcal{B}}
+\end{align*}\end{split}\]</div>
+<p>Skilgreinum nú fylkið</p>
+<div class="math notranslate nohighlight">
+\[T_\mathcal{B}=\begin{bmatrix}
+[T(\textbf{b}_1)]&amp; \dots &amp;[T(\textbf{b}_n)]_\mathcal{B}
+\end{bmatrix}\]</div>
+<p>og þá fæst</p>
+<div class="math notranslate nohighlight">
+\[[T(\textbf{x})]_\mathcal{B}=T_\mathcal{B}[\textbf{x}]_{\mathcal{B}}.\]</div>
+</div>
+</section>
+<section id="synidaemi-hornalinugjorningur">
+<h4><span class="section-number">5.6.2.2. </span>Sýnidæmi: Hornalínugjörningur<a class="headerlink" href="#synidaemi-hornalinugjorningur" title="Permalink to this heading"></a></h4>
+<div class="daemi admonition">
+<p class="admonition-title">Dæmi</p>
+<p>Látum <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 &amp; 1\\ 5 &amp; 6 \end{bmatrix}\)</span> vera venjulega fylkið
+fyrir línulega vörpun <span class="math notranslate nohighlight">\(\mathbb{R}^2 \rightarrow \mathbb{R}^2\)</span>.
+finnið grunn <span class="math notranslate nohighlight">\(\mathcal{B}\)</span> fyrir <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> þannig að
+<span class="math notranslate nohighlight">\(\mathcal{B}\)</span> -fylki <span class="math notranslate nohighlight">\(T\)</span> sé hornalínufylki.</p>
+</div>
+<div class="daemi dropdown admonition">
+<p class="admonition-title">Launs</p>
+<p>Fyrst finnum við eigingildin og eiginvigrana:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\det(A-\lambda I)=\begin{vmatrix}
+-\lambda &amp; 1 \\
+7 &amp; 6 - \lambda
+\end{vmatrix} = \lambda^2 - 6\lambda - 7 = 0\end{split}\]</div>
+<p>Þetta gefur <span class="math notranslate nohighlight">\((\lambda-7)(\lambda+1)=0\)</span>
+og við fáum eigingildin: <span class="math notranslate nohighlight">\(\lambda_1=7\)</span> og <span class="math notranslate nohighlight">\(\lambda_2=-1\)</span>.
+Finnum eiginvigra fyrir <span class="math notranslate nohighlight">\(\lambda_1=7\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-7I=\begin{bmatrix}
+-7 &amp; 1 \\
+7 &amp; -1
+\end{bmatrix}
+\sim \begin{bmatrix}
+7 &amp; -1 \\
+0 &amp; 0
+\end{bmatrix}\end{split}\]</div>
+<p>Eiginvigur: <span class="math notranslate nohighlight">\(\textbf{v}_1=\begin{bmatrix} 1 \\ 7 \end{bmatrix}\)</span>.
+Finnum eiginvigra fyrir <span class="math notranslate nohighlight">\(\lambda_2=-1\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A-(-1)I=\begin{bmatrix}
+1 &amp; 1 \\
+7 &amp; 7
+\end{bmatrix}\sim\begin{bmatrix}
+1 &amp; 1 \\
+0 &amp; 0
+\end{bmatrix}\Rightarrow x + y = 0\end{split}\]</div>
+<p>Eiginvigur: <span class="math notranslate nohighlight">\(\textbf{v}_2=\begin{bmatrix} -1 \\ 1 \end{bmatrix}\)</span>
+Getum því skrifað</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P=\begin{bmatrix}
+1 &amp; -1 \\
+7 &amp; 1
+\end{bmatrix} \text{ og } D=\begin{bmatrix}
+7 &amp; 0 \\
+0 &amp; -1
+\end{bmatrix}\end{split}\]</div>
+<p>Þá gildir að <span class="math notranslate nohighlight">\(A=PDP^{-1}\)</span> og <span class="math notranslate nohighlight">\(\mathcal{B} = \left\{\begin{bmatrix} 1 \\ 7 \end{bmatrix},\begin{bmatrix} -1 \\ 1 \end{bmatrix}\right\}\)</span>.</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli04/" class="btn btn-neutral float-left" title="4. Vigurrúm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli06/" class="btn btn-neutral float-right" title="6. Innfeldi og hornrétt ofanvörp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

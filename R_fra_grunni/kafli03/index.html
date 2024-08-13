@@ -272,71 +272,71 @@ fyrir neðan.</p>
 <h4><span class="section-number">3.1.1.1. </span>Punktarit<a class="headerlink" href="#punktarit" title="Permalink to this heading"></a></h4>
 <p>Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">geom_point()</span></code>. Eftirfarandi skipun gefur
-okkur punktarit sem lýsir sambandi hæðar og þyngdar í gagnatöflunni
-<code class="docutils literal notranslate"><span class="pre">puls</span></code>. Skýribreytan <code class="docutils literal notranslate"><span class="pre">haed</span></code> er á x-ás og svarbreytan <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> á
-y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
+í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">possum</span></code>. Skýribreytan <code class="docutils literal notranslate"><span class="pre">total_l</span></code> er á x-ás og
+svarbreytan <code class="docutils literal notranslate"><span class="pre">head_l</span></code> á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-88-1.svg" src="../_images/unnamed-chunk-88-1.svg" /></figure>
+<img alt="../_images/pokaPunkt.svg" src="../_images/pokaPunkt.svg" /></figure>
 </section>
 <section id="stoplarit">
 <h4><span class="section-number">3.1.1.2. </span>Stöplarit<a class="headerlink" href="#stoplarit" title="Permalink to this heading"></a></h4>
 <p>Stöplarit eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_bar</span></code>. Þar sem stöplarit
 eru einungis notuð til að lýsa einni breytu er aðeins sú breyta
 tilgreind inní <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-89-1.svg" src="../_images/unnamed-chunk-89-1.svg" /></figure>
+<img alt="../_images/isBar.svg" src="../_images/isBar.svg" /></figure>
 </section>
 <section id="stularit">
 <h4><span class="section-number">3.1.1.3. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Permalink to this heading"></a></h4>
 <p>Viðbótin <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> teiknar stuðlarit. Viljum við teikna
-stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> gerum við það með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
+stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> gerum við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-90-1.svg" src="../_images/unnamed-chunk-90-1.svg" /></figure>
+<img alt="../_images/ferdatimiHist.svg" src="../_images/ferdatimiHist.svg" /></figure>
 <p>Stilla má breidd súlnanna með <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> stillingunni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-91-1.svg" src="../_images/unnamed-chunk-91-1.svg" /></figure>
+<img alt="../_images/ferdatimiHist10.svg" src="../_images/ferdatimiHist10.svg" /></figure>
 </section>
 <section id="kassarit">
 <h4><span class="section-number">3.1.1.4. </span>Kassarit<a class="headerlink" href="#kassarit" title="Permalink to this heading"></a></h4>
 <p>Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
 eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_boxplot()</span></code>. Viljum við teikna
-kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">kyn</span></code> gerum
+kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">systkini_fjoldi</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code> gerum
 við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">kyn</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">systkini_fjoldi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-92-1.svg" src="../_images/unnamed-chunk-92-1.svg" /></figure>
+<img alt="../_images/systkiniIs.svg" src="../_images/systkiniIs.svg" /></figure>
 <p>Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja <code class="docutils literal notranslate"><span class="pre">factor(0)</span></code> inn sem eins konar gervibreytu. Neðangreind skipun
-teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> án lagskiptingar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">factor</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
+teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> án lagskiptingar:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">factor</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-93-1.svg" src="../_images/unnamed-chunk-93-1.svg" /></figure>
+<img alt="../_images/gerviIs.svg" src="../_images/gerviIs.svg" /></figure>
 </section>
 <section id="normaldreifingarrit">
 <h4><span class="section-number">3.1.1.5. </span>Normaldreifingarrit<a class="headerlink" href="#normaldreifingarrit" title="Permalink to this heading"></a></h4>
 <p>Normaldreifingarrit eru gerð með viðbótinni <code class="docutils literal notranslate"><span class="pre">stat_qq()</span></code>.
-Normaldreifingarrit fyrir breytuna <code class="docutils literal notranslate"><span class="pre">haed</span></code> fæst með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">sample</span><span class="o">=</span><span class="n">haed</span><span class="p">))</span> <span class="o">+</span> <span class="n">stat_qq</span><span class="p">()</span>
+Normaldreifingarrit fyrir breytuna <code class="docutils literal notranslate"><span class="pre">head_l</span></code> fæst með:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">sample</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">stat_qq</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-94-1.svg" src="../_images/unnamed-chunk-94-1.svg" /></figure>
+<img alt="../_images/normalPossum.svg" src="../_images/normalPossum.svg" /></figure>
 <p>Takið eftir að nú stendur <code class="docutils literal notranslate"><span class="pre">sample=</span></code> í stað <code class="docutils literal notranslate"><span class="pre">x=</span></code> í <code class="docutils literal notranslate"><span class="pre">aes()</span></code>
 stillingunni.</p>
 </section>
@@ -345,14 +345,13 @@ stillingunni.</p>
 <h3><span class="section-number">3.1.2. </span>Ásar<a class="headerlink" href="#asar" title="Permalink to this heading"></a></h3>
 <section id="nofn-asa">
 <h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Permalink to this heading"></a></h4>
-<p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">xlab()</span></code>
-tilgreinir merkingu á x-ás á meðan viðbótin <code class="docutils literal notranslate"><span class="pre">ylab()</span></code> tilgreinir
-merkingu á y-ás.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Kyn&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span>
+<p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
+tilgreinir merkingu ása.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-95-1.svg" src="../_images/unnamed-chunk-95-1.svg" /></figure>
+<img alt="../_images/isBarAsar.svg" src="../_images/isBarAsar.svg" /></figure>
 <p>Við getum enn fremur merkt og stillt kvarðana á hvorum ás fyrir sig að
 vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
 <code class="docutils literal notranslate"><span class="pre">scale_x_continuous()</span></code> en sé hún strjál notum við
@@ -364,24 +363,21 @@ ef við viljum merkja og stilla kvarðana á y-ás.</p>
 <p>Til að breyta heitum á kvörðum mötum við stillinguna <code class="docutils literal notranslate"><span class="pre">labels</span></code> með þeim
 heitum sem við viljum nota. Þannig merkjum við sem dæmi flokkana á
 stöplaritinu hér að ofan með viðbótinni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Kyn&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span> <span class="o">+</span>
-<span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Konur&quot;</span><span class="p">,</span><span class="s2">&quot;Karlar&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-96-1.svg" src="../_images/unnamed-chunk-96-1.svg" /></figure>
+<img alt="../_images/isBarAsarOgHok.svg" src="../_images/isBarAsarOgHok.svg" /></figure>
 <p>Takið eftir einu til viðbótar. Hér skiptum við skipuninni upp í tvær
 línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
 plúsinn við enda línunnar. Ef plúsinn kemur í upphafi næstu línu er sú
 lína hunsuð og við fáum jafnvel villu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Kyn&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<figure class="align-default">
-<img alt="../_images/unnamed-chunk-97-1.svg" src="../_images/unnamed-chunk-97-1.svg" /></figure>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Konur&quot;</span><span class="p">,</span><span class="s2">&quot;Karlar&quot;</span><span class="p">))</span>
-<span class="c1">## Error in +scale_x_discrete(labels = c(&quot;Konur&quot;, &quot;Karlar&quot;)): invalid argument to</span>
-<span class="c1">## unary operator</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Uppáhalds ís&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span><span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
+<span class="c1">## Error in `+.gg`:</span>
+<span class="c1">## ! Cannot use `+` with a single argument.</span>
+<span class="c1">## ℹ Did you accidentally put `+` on a new line?</span>
 </pre></div>
 </div>
 </section>
@@ -389,26 +385,25 @@ lína hunsuð og við fáum jafnvel villu:</p>
 <h4><span class="section-number">3.1.2.3. </span>Hök kvarða<a class="headerlink" href="#hok-kvara" title="Permalink to this heading"></a></h4>
 <p>Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
 með stillingunni <code class="docutils literal notranslate"><span class="pre">breaks()</span></code>. Viljum við sem dæmi láta merkingarnar á
-y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 kílóum í stað 20
+y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
 gerum við það með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span><span class="o">+</span>
-<span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-98-1.svg" src="../_images/unnamed-chunk-98-1.svg" /></figure>
+<img alt="../_images/possumPunktHok.svg" src="../_images/possumPunktHok.svg" /></figure>
 </section>
 <section id="mork-kvara">
 <h4><span class="section-number">3.1.2.4. </span>Mörk kvarða<a class="headerlink" href="#mork-kvara" title="Permalink to this heading"></a></h4>
 <p>Mörk kvarða eru stillt með viðbótunum <code class="docutils literal notranslate"><span class="pre">xlim()</span></code> og <code class="docutils literal notranslate"><span class="pre">ylim()</span></code>. Þær eru
 mataðar með endamörkum kvarðanna.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">130</span><span class="p">)</span> <span class="o">+</span> <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="n">ylim</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span><span class="o">+</span><span class="n">xlim</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-99-1.svg" src="../_images/unnamed-chunk-99-1.svg" /></figure>
+<img alt="../_images/possumPunkstrech.svg" src="../_images/possumPunkstrech.svg" /></figure>
 </section>
 </section>
 <section id="litir-og-takn">
@@ -419,76 +414,61 @@ línurnar á grafinu sjálfu en þá er notuð stillingin <code class="docutils 
 vegar má fylla upp í fleti á grafinu með stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>.
 Stillingarnar eru tilgreindar inní útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
 <p>Við getum lagskipt punktaritinu yfir hæð og þyngd nemenda eftir kynjum
-nemendanna með því að lita punktana ólíkt eftir því hvoru kyninu nemandi
+pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
 tilheyrir. Það er því gert með stillingunni <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">sex</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-100-1.svg" src="../_images/unnamed-chunk-100-1.svg" /></figure>
-<p>Viljum við hins vegar lagskipta stöplaritinu yfir fjölda nemenda af
-hvoru kyni eftir því hvort þeir reykja eða ekki gerum við það með
+<img alt="../_images/possumPunktKyn.svg" src="../_images/possumPunktKyn.svg" /></figure>
+<p>Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
+eftir því hvort þeir nota iOS eða Android gerum við það með
 stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>, því þá viljum við lita fleti grafsins ólíkt.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">reykir</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Kyn&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-101-1.svg" src="../_images/unnamed-chunk-101-1.svg" /></figure>
+<img alt="../_images/isBarStyrikerfi.svg" src="../_images/isBarStyrikerfi.svg" /></figure>
 <p>Ef við bætum stillingunni <code class="docutils literal notranslate"><span class="pre">position=’dodge’</span></code> inní viðbótina
 <code class="docutils literal notranslate"><span class="pre">geom_bar()</span></code> koma stöplar grafsins hvor við hliðina á öðrum:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">reykir</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s1">&#39;dodge&#39;</span><span class="p">)</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Kyn&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;dodge&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-102-1.svg" src="../_images/unnamed-chunk-102-1.svg" /></figure>
-<p>Gráu fletirnir eru þeir nemendur sem ekki gáfu upp hvort þeir reyktu eða
-ekki, þ.e. mælingar sem vantar.</p>
+<img alt="../_images/isBarStyrikerfiDodge.svg" src="../_images/isBarStyrikerfiDodge.svg" /></figure>
 <p>Oft eru tákn heppilegri en litir til að lagskipta gröfum. Til dæmis geta
 litmyndir verið dýrar í tímaritum og svart-hvítar lausnir því heppilegri
 kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn með
 því að nota <code class="docutils literal notranslate"><span class="pre">shape</span></code> á sama hátt og <code class="docutils literal notranslate"><span class="pre">color</span></code> var notað hér að ofan:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span><span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="n">sex</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-103-1.svg" src="../_images/unnamed-chunk-103-1.svg" /></figure>
+<img alt="../_images/possumPunktKynShape.svg" src="../_images/possumPunktKynShape.svg" /></figure>
 </section>
 <section id="grofum-skipt-upp-i-reiti">
 <h3><span class="section-number">3.1.4. </span>Gröfum skipt upp í reiti<a class="headerlink" href="#grofum-skipt-upp-i-reiti" title="Permalink to this heading"></a></h3>
 <p>Önnur góð leið til að lagskipta gröfum er með því að skipta þeim upp í
 reiti. Það er gert með skipuninni <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code>. Hægt er að skipta
 gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.</p>
-<p>Viljum við skipta punktaritinu yfir hæð og þyngd nemenda upp eftir því
-hvaða námskeiði þeir tilheyra gerum við það með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">namskeid</span><span class="p">)</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<p>Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra
+upp eftir því hvaðan þær eru gerum við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">pop</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-104-1.svg" src="../_images/unnamed-chunk-104-1.svg" /></figure>
-<p>Viljum við skipta grafinu í reiti eftir því bæði hvaða námskeiði þeir
-tilheyra og hvaða ár þeir sátu námskeiðið gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">facet_grid</span><span class="p">(</span><span class="n">ar</span><span class="o">~</span><span class="n">namskeid</span><span class="p">)</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<img alt="../_images/possumPunkSvaedi.svg" src="../_images/possumPunkSvaedi.svg" /></figure>
+<p>Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
+og hvaðan þær eru gerum við það með:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">facet_grid</span><span class="p">(</span><span class="n">sex</span><span class="o">~</span><span class="n">pop</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-105-1.svg" src="../_images/unnamed-chunk-105-1.svg" /></figure>
-<p>Það má hæglega lagskipta með bæði reitaskiptingu og táknum í sama
-grafinu. Þannig er hægt að tákna punktana í grafinu að ofan eftir því
-hvoru kyni nemendurnir tilheyra:</p>
-<p>Viljum við skipta grafinu í reiti eftir því bæði hvaða námskeiði þeir
-tilheyra og hvaða ár þeir sátu námskeiðið gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">facet_grid</span><span class="p">(</span><span class="n">ar</span><span class="o">~</span><span class="n">namskeid</span><span class="p">)</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<figure class="align-default">
-<img alt="../_images/unnamed-chunk-106-1.svg" src="../_images/unnamed-chunk-106-1.svg" /></figure>
+<img alt="../_images/possumPunktSvaediKyn.svg" src="../_images/possumPunktSvaediKyn.svg" /></figure>
+<p>Svo mætti hæglega halda áfram og lagskipta með bæði reitaskiptingu og táknum í sama
+grafinu.</p>
 </section>
 <section id="skipt-um-bakgrunn">
 <h3><span class="section-number">3.1.5. </span>Skipt um bakgrunn<a class="headerlink" href="#skipt-um-bakgrunn" title="Permalink to this heading"></a></h3>
@@ -496,19 +476,18 @@ tilheyra og hvaða ár þeir sátu námskeiðið gerum við það með:</p>
 óviðeigandi og vilja margir hafa hvítan bakgrunn þess í stað. Til eru
 tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
 <code class="docutils literal notranslate"><span class="pre">theme_bw()</span></code> og gefur þessa niðurstöðu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">theme_bw</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-107-1.svg" src="../_images/unnamed-chunk-107-1.svg" /></figure>
+<img alt="../_images/possumPunktBW.svg" src="../_images/possumPunktBW.svg" /></figure>
 <p>sú seinni er <code class="docutils literal notranslate"><span class="pre">theme_classic()</span></code> og gefur þessa niðurstöðu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">haed</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">thyngd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">theme_classic</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Hæð&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Þyngd&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">total_l</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">head_l</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">theme_classic</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-108-1.svg" src="../_images/unnamed-chunk-108-1.svg" /></figure>
+<img alt="../_images/possumPunktClassic.svg" src="../_images/possumPunktClassic.svg" /></figure>
 </section>
 <section id="myndir-vistaar">
 <h3><span class="section-number">3.1.6. </span>Myndir vistaðar<a class="headerlink" href="#myndir-vistaar" title="Permalink to this heading"></a></h3>

@@ -244,7 +244,7 @@
 mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
-magn mælinga og því fer almenn tölfræði- og gagnavinnsla að mestu fram
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -264,8 +264,8 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
-samvinnu við notendur. Í dag er R bæði forritunarmál og -umhverfi fyrir
-alla almenna tölfræði- og gagnavinnslu. Stór þáttur í vinsældum R umfram
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
 pakka, sem bæta og auka möguleika forritsins. R hefur því orðið á
 seinustu árum eitt helsta verkfæri tölfræðinga og nú orðið eru flestar
@@ -800,9 +800,10 @@ skipunina</p>
 </section>
 <section id="gogn">
 <h2><span class="section-number">1.8. </span>Gögn<a class="headerlink" href="#gogn" title="Permalink to this heading"></a></h2>
-<p>Í þessari bók munum við aðallega notast við eitt gagnasafn en það má
-finna í skránni <code class="docutils literal notranslate"><span class="pre">pulsAll.csv</span></code> sem hlaða má niður hér:</p>
-<p><a class="reference external" href="http://edbook.hi.is/gogn/pulsAll.csv">http://edbook.hi.is/gogn/pulsAll.csv</a>.</p>
+<p>Í þessari bók munum við notast við nokkur gagnasett.
+Gagnasettið sem við köllum dat má finna í skránni <code class="docutils literal notranslate"><span class="pre">skra</span></code> sem hlaða
+niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
 <p>Skráin inniheldur eftirfarandi breytur:</p>
 <table class="docutils align-default">
 <thead>
@@ -811,54 +812,51 @@ finna í skránni <code class="docutils literal notranslate"><span class="pre">p
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>namskeid</p></td>
-<td><p>LAN203, STAE209</p></td>
+<tr class="row-even"><td><p>is</p></td>
+<td><p>Vannilla, Jarðaberja, Súkkulaði</p></td>
 </tr>
-<tr class="row-odd"><td><p>kronukast</p></td>
-<td><p>thorskur, landvaettir</p></td>
+<tr class="row-odd"><td><p>ferdatimi_skoli</p></td>
+<td><p>tími í mínútum</p></td>
 </tr>
-<tr class="row-even"><td><p>haed</p></td>
-<td><p>hæð í sentimetrum</p></td>
+<tr class="row-even"><td><p>styrikerfi_simi</p></td>
+<td><p>Android eða iOS</p></td>
 </tr>
-<tr class="row-odd"><td><p>thyngd</p></td>
-<td><p>þyngd í kílógrömmum</p></td>
+<tr class="row-odd"><td><p>ferdatmati_skoli</p></td>
+<td><p>Með einkabíl, Gangandi/skokkandi,
+Með strætó, Hjólandi/rafhlaupahjól,
+Á annan hátt</p></td>
 </tr>
-<tr class="row-even"><td><p>aldur</p></td>
-<td><p>aldur í árum</p></td>
+<tr class="row-even"><td><p>systkini_fjoldi</p></td>
+<td><p>fjöldi systkina</p></td>
 </tr>
-<tr class="row-odd"><td><p>kyn</p></td>
-<td><p>1 = kona, 2 = karl</p></td>
+<tr class="row-odd"><td><p>dyr</p></td>
+<td><p>Ertu meira fyrir hunda eða ketti?</p></td>
 </tr>
-<tr class="row-even"><td><p>reykir</p></td>
-<td><p>ja, nei</p></td>
+<tr class="row-even"><td><p>feministi</p></td>
+<td><p>Ég er feministi: Rétt eða Rangt</p></td>
 </tr>
-<tr class="row-odd"><td><p>drekkur</p></td>
-<td><p>ja, nei</p></td>
+<tr class="row-odd"><td><p>staerdfraedi_gaman</p></td>
+<td><p>Einkunn: 1-10</p></td>
 </tr>
-<tr class="row-even"><td><p>likamsraekt</p></td>
-<td><p>líkamsrækt í klst/viku</p></td>
+<tr class="row-even"><td><p>smjor_kostar</p></td>
+<td><p>Hvað smjör kostar í bónus?  kr.</p></td>
 </tr>
-<tr class="row-odd"><td><p>fyrriPuls</p></td>
-<td><p>fyrri púlsmæling slög/mín</p></td>
+<tr class="row-odd"><td><p>napoleon_faeddur</p></td>
+<td><p>Hvenær var Napóleon fæddur? ár</p></td>
 </tr>
-<tr class="row-even"><td><p>seinniPuls</p></td>
-<td><p>seinni púlsmæling slög/mín</p></td>
+<tr class="row-even"><td><p>stefnumot</p></td>
+<td><p>Á kaffihús, Á ísrúnt, Í fjallgöngu, í bíó</p></td>
 </tr>
-<tr class="row-odd"><td><p>inngrip</p></td>
-<td><p>hljop, sat_kyrr</p></td>
+<tr class="row-odd"><td><p>messi_staerd</p></td>
+<td><p>Hvað er Messi stór?</p></td>
 </tr>
-<tr class="row-even"><td><p>dagsetning</p></td>
-<td><p>hvaða dag tilraunin fór fram dagur.manudur.ar</p></td>
+<tr class="row-even"><td><p>kosid</p></td>
+<td><p>Ég hef kosið: Rétt eða Rangt</p></td>
 </tr>
 </tbody>
 </table>
-<p>Þessum gögnum var safnað saman í tveimur námskeiðum við Háskóla Íslands
-á árunum 2013 - 2015. Nemendur voru beðnir um að skrá niður ýmsar
-bakgrunnsupplýsingar (hæð, aldur, kyn, …) og mæla svo púlsinn sinn.
-Því næst voru nemendurnir beðnir um að kasta krónu og þeir sem fengu upp
-þorsk voru beðnir um að hlaupa um stofuna í tvær mínútur en hinir beðnir
-um að sitja í sætunum sínum á meðan. Að þessu loknu mældu nemendur
-púlsinn sinn á ný.</p>
+<p>Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.</p>
 <p>Vistið skrána í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
 viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.</p>
@@ -866,6 +864,10 @@ viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.</
 Við munum þá gera ráð fyrir að einstaklingarnir í gagnaskránni séu
 slembiúrtak úr stóru þýði nemenda og því getum við notað gögnin til að
 draga hinar ýmsu ályktanir um þýði nemenda.</p>
+<p>Í þessari bók er einnig unnið mikið með gagnasettið <code class="docutils literal notranslate"><span class="pre">kaupskra</span></code> sem inniheldur
+upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.</p>
+<p>Kaupskrá má nálgast á: <a class="reference external" href="https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/">https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/</a>
+Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
 <h2><span class="section-number">1.9. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>

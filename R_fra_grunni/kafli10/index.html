@@ -235,7 +235,7 @@ samfelld skýribreyta og er þá talað um einfalt línulegt aðhvarf. Því
 tilviki helgum við meginhluta kaflans en útfærslur með strjálli
 skýribreytu sem og fleiri en einni skýribreytu eru ræddar undir lok
 hans.</p>
-<p>Í kafla <a class="reference internal" href="#s-likanmetid"><span class="std std-numref">10.1</span></a> kynntum við skipunina <code class="docutils literal notranslate"><span class="pre">lm()</span></code> sem metur
+<p>Í kafla <a class="reference internal" href="#s-likanmetid"><span class="std std-numref">10.1</span></a> kynnum við skipunina <code class="docutils literal notranslate"><span class="pre">lm()</span></code> sem metur
 einfalt línulegt aðhvarf og skoðum úttak hennar með <code class="docutils literal notranslate"><span class="pre">summary()</span></code>. Þar
 næst, í kafla <a class="reference internal" href="#s-lmoryggis"><span class="std std-numref">10.2</span></a>, skoðum við hvernig skipunin
 <code class="docutils literal notranslate"><span class="pre">confint()</span></code> gefur okkur öryggisbil fyrir stuðla líkansins. Í kafla
@@ -253,6 +253,7 @@ hvernig framkvæma má tilgátupróf fyrir fylgnistuðul með <code class="docut
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> formúlan sem við viljum meta, gögnin sem við byggjum á</p>
 <p><strong>Úttak:</strong> metnir stuðlar, p-gildi, skýringarhlutfall ofl.</p>
+<p><strong>Forkröfur prófs:</strong> Leifar normaldreifðar og handahófskenndar</p>
 </div>
 <hr class="docutils" />
 <p>Einfalt línulegt aðhvarfsgreiningarlíkan er líkan á forminu:</p>
@@ -267,11 +268,12 @@ megin koma skýribreyturnar.</p></li>
 <li><p>Gagnatöflunni sem geymir gögnin.</p></li>
 </ul>
 <p>Þegar aðhvarfsgreining er framkvæmd margborgar sig að búa til hlut sem
-inniheldur allt það sem hún skilar. Metum nú stuðla í líkani sem lýsir
-því hvaða áhrif hæð hefur á þyngd nemenda og vistum líkanið undir
-nafninu <code class="docutils literal notranslate"><span class="pre">lm1</span></code>. Þar sem við metum áhrif hæðar á þyngd er svarbreytan
-<code class="docutils literal notranslate"><span class="pre">thyngd</span></code> vinstra megin í formúlunni.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm1</span><span class="o">&lt;-</span><span class="n">lm</span><span class="p">(</span><span class="n">thyngd</span><span class="o">~</span><span class="n">haed</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">puls</span><span class="p">)</span>
+inniheldur allt það sem hún skilar. Metum nú stuðla í líknai sem lýsir
+því hvaða áhrif lengd á skotti hefur á heildarlengd pokarottu og vistum
+líknaið undir nafninu <code class="docutils literal notranslate"><span class="pre">lm1</span></code>. Þar sem við metum áhrif lengd á skotti á
+heildarlengd pokarottu. Hér er svarbreytan <code class="docutils literal notranslate"><span class="pre">tail_l</span></code> og <code class="docutils literal notranslate"><span class="pre">total_l</span></code>
+skýribreytan.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm1</span><span class="o">&lt;-</span><span class="n">lm</span><span class="p">(</span><span class="n">tail_l</span><span class="o">~</span><span class="n">total_l</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">)</span>
 <span class="n">names</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
 <span class="c1">##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;</span>
 <span class="c1">##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;</span>
@@ -285,33 +287,32 @@ aðhvarfsgreiningarhlutnum <code class="docutils literal notranslate"><span clas
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">## Call:</span>
-<span class="c1">## lm(formula = thyngd ~ haed, data = puls)</span>
+<span class="c1">## lm(formula = tail_l ~ total_l, data = possum)</span>
 <span class="c1">##</span>
 <span class="c1">## Residuals:</span>
 <span class="c1">##     Min      1Q  Median      3Q     Max</span>
-<span class="c1">## -27.781  -7.473  -1.984   5.306  37.215</span>
+<span class="c1">## -3.4441  -1.2476  0.1131   1.0238  4.8560</span>
 <span class="c1">##</span>
 <span class="c1">## Coefficients:</span>
 <span class="c1">##               Estimate Std. Error t value Pr(&gt;|t|)</span>
-<span class="c1">## (Intercept) -108.75402    9.18021  -11.85   &lt;2e-16 ***</span>
-<span class="c1">## haed           1.03987    0.05288   19.66   &lt;2e-16 ***</span>
+<span class="c1">## (Intercept)    14.61613    3.23648  4.516   1.7e-05 ***</span>
+<span class="c1">## haed           0.25713    0.03712   6.927   3.94e-10 ***</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
 <span class="c1">##</span>
-<span class="c1">## Residual standard error: 11.17 on 458 degrees of freedom</span>
-<span class="c1">##   (11 observations deleted due to missingness)</span>
-<span class="c1">## Multiple R-squared:  0.4577, Adjusted R-squared:  0.4566</span>
-<span class="c1">## F-statistic: 386.6 on 1 and 458 DF,  p-value: &lt; 2.2e-16</span>
+<span class="c1">## Residual standard error: 1.624 on 102 degrees of freedom</span>
+<span class="c1">## Multiple R-squared:  0.32, Adjusted R-squared:  0.3133</span>
+<span class="c1">## F-statistic: 47.99 on 1 and 102 DF,  p-value:  3.935e-10</span>
 </pre></div>
 </div>
 <p>Ýmislegt má lesa út úr úttakinu. Þar ber helst að:</p>
 <ul class="simple">
-<li><p>Matið á skurðpunktinum (<span class="math notranslate nohighlight">\(b_0\)</span>) er -108.75402.</p></li>
-<li><p>Matið á hallatölunni (<span class="math notranslate nohighlight">\(b_1\)</span>) er 1.03987.</p></li>
-<li><p>Prófstærðin t = -11.85 kannar tilgátuprófið hvort <span class="math notranslate nohighlight">\(\beta_0 = 0\)</span>.</p></li>
-<li><p>Prófstærðin t = 19.66 kannar tilgátuprófið hvort <span class="math notranslate nohighlight">\(\beta_1 = 0\)</span>.</p></li>
-<li><p>Skýringarhlutfallið er <span class="math notranslate nohighlight">\(R^2\)</span> = 0.458.</p></li>
-<li><p>Matið á <span class="math notranslate nohighlight">\(\sigma\)</span> er <span class="math notranslate nohighlight">\(s_e =\)</span> 11.17.</p></li>
+<li><p>Matið á skurðpunktinum (<span class="math notranslate nohighlight">\(b_0\)</span>) er 14.61613</p></li>
+<li><p>Matið á hallatölunni (<span class="math notranslate nohighlight">\(b_1\)</span>) er 0.25713.</p></li>
+<li><p>Prófstærðin t = 4.516 kannar tilgátuprófið hvort <span class="math notranslate nohighlight">\(\beta_0 = 0\)</span>.</p></li>
+<li><p>Prófstærðin t = 6.927 kannar tilgátuprófið hvort <span class="math notranslate nohighlight">\(\beta_1 = 0\)</span>.</p></li>
+<li><p>Skýringarhlutfallið er <span class="math notranslate nohighlight">\(R^2\)</span> = 0.3133.</p></li>
+<li><p>Matið á <span class="math notranslate nohighlight">\(\sigma\)</span> er <span class="math notranslate nohighlight">\(s_e =\)</span> 1.624.</p></li>
 </ul>
 </section>
 </section>
@@ -335,15 +336,15 @@ við bjuggum til en skilar öryggisbili fyrir hvorn stuðul fyrir sig. Með
 stillingunni <code class="docutils literal notranslate"><span class="pre">level</span></code> má tilgreina hvert öryggi bilsins er. Sjálfgefið
 er að það sé 95%.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">confint</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
-<span class="c1">##                    2.5 %     97.5 %</span>
-<span class="c1">## (Intercept) -126.7945689 -90.713462</span>
-<span class="c1">## haed           0.9359419   1.143796</span>
+<span class="c1">##                    2.5 %      97.5 %</span>
+<span class="c1">## (Intercept)       8.1965963   21.0356650</span>
+<span class="c1">## total_l           0.1835114   0.3307585</span>
 </pre></div>
 </div>
 <p>Hér sést að:</p>
 <ul class="simple">
-<li><p>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> er <span class="math notranslate nohighlight">\([-126.7945689, -90.7134618]\)</span>.</p></li>
-<li><p>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> er <span class="math notranslate nohighlight">\([0.9359419, 1.1437964]\)</span>.</p></li>
+<li><p>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> er <span class="math notranslate nohighlight">\([8.1965963, 21.0356650]\)</span>.</p></li>
+<li><p>Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> er <span class="math notranslate nohighlight">\([0.1835114, 0.3307585]\)</span>.</p></li>
 </ul>
 </section>
 </section>
@@ -353,11 +354,12 @@ er að það sé 95%.</p>
 <p>Forsenda aðhvarfsgreiningar er að leifar hennar séu óháðar og
 normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>lm1$resid
-##            1            2            4            5            6
-##   1.33508486  31.37822565  -5.18321388  -3.74465341 -14.22308301
-##            7            8            9           10           11
-##  -6.34269041   4.13901085  -6.26295215   7.73704785  -6.78125088
-##           12           13           14           15           16
+##             1             2             4              5
+##  -1.501138677  -1.643975982  -0.172515669   -0.272543443
+##             6             7             8              9
+##  -2.386841060  -1.629706138  -1.015408521   -1.143975982
+##            10            11            12             13
+##  -0.129706138   1.370293862  -2.772543443   -1.629706138
 ....
 </pre></div>
 </div>
@@ -368,7 +370,7 @@ hér mötum við skipunina <code class="docutils literal notranslate"><span clas
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/unnamed-chunk-235-1.svg" src="../_images/unnamed-chunk-235-1.svg" /></figure>
+<img alt="../_images/mynd10_1.svg" src="../_images/mynd10_1.svg" /></figure>
 </section>
 <section id="spagildi-og-spabil">
 <span id="s-lmspa"></span><h2><span class="section-number">10.4. </span>Spágildi og spábil<a class="headerlink" href="#spagildi-og-spabil" title="Permalink to this heading"></a></h2>
@@ -388,17 +390,17 @@ spá fyrir með</p>
 skýribreytunni með aðferðinni <code class="docutils literal notranslate"><span class="pre">predict()</span></code>. Mata þarf aðferðina með
 nafninu á aðhvarfsgreiningarhlutnum, nafninu á skýribreytunni og
 gagnatöflu sem inniheldur þau gildi á skýribreytunni sem við viljum fá
-spá fyrir. Hér fyrir neðan reiknum við spá fyrir þyngd einstaklings serm
-er 180 cm á hæð:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">haed</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
+spá fyrir. Hér fyrir neðan reiknum við spá fyrir leng skotts á 90 cm
+langri pokarottu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">total_l</span><span class="o">=</span><span class="mi">90</span><span class="p">))</span>
 <span class="c1">##        1</span>
-<span class="c1">## 78.42243</span>
+<span class="c1">## 37.75827</span>
 </pre></div>
 </div>
 <p>Aðferðina má einnig nota til að fá spábil:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;prediction&quot;</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">haed</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span>
-<span class="c1">##        fit      lwr      upr</span>
-<span class="c1">## 1 78.42243 56.43465 100.4102</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;prediction&quot;</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">total_l</span><span class="o">=</span><span class="mi">90</span><span class="p">))</span>
+<span class="c1">##        fit      lwr         upr</span>
+<span class="c1">## 1 37.75827  34.5149   41.00164</span>
 </pre></div>
 </div>
 </section>
@@ -409,22 +411,22 @@ er 180 cm á hæð:</p>
 <p>Tilgátupróf fyrir <span class="math notranslate nohighlight">\(\rho\)</span> má framkvæma með <code class="docutils literal notranslate"><span class="pre">cor.test()</span></code>
 aðferðinni. Við þurfum að mata aðferðina með heitunum á breytunum sem
 við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
-breytanna <code class="docutils literal notranslate"><span class="pre">thyngd</span></code> og <code class="docutils literal notranslate"><span class="pre">haed</span></code> notum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor.test(puls$thyngd,puls$haed)
+breytanna <code class="docutils literal notranslate"><span class="pre">tail_l</span></code> og <code class="docutils literal notranslate"><span class="pre">total_l</span></code> notum við skipunina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor.test(possum$tail_l,possum$total_l)
 ##
 ##  Pearson&#39;s product-moment correlation
 ##
-## data:  puls$thyngd and puls$haed
-## t = 19.663, df = 458, p-value &lt; 2.2e-16
+## data:  possum$tail_l and possum$total_l
+## t = 6.9275, df = 102, p-value = 3.935e-10
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
-##  0.6237265 0.7232602
+##   0.4186653 0.6837485
 ## sample estimates:
 ##       cor
-## 0.6765718
+## 0.5656455
 </pre></div>
 </div>
-<p>Takið eftir að prófstærðin er t = 19.663 sem er nákvæmlega það sama og
+<p>Takið eftir að prófstærðin er t = 6.9275 sem er nákvæmlega það sama og
 þegar við prófuðum núlltilgátuna <span class="math notranslate nohighlight">\(H_0: \beta_1=0\)</span>.</p>
 </section>
 <section id="strjal-skyribreyta">
@@ -450,46 +452,45 @@ gildinu <span class="math notranslate nohighlight">\(\mu + \tau_i\)</span> sem h
 og <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðirnar til að fá fervikagreiningartöfluna. Í stað
 <code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðarinnar má nota <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina líkt og við gerðum
 hér að ofan fyrir línulegu aðhvarfsgreininguna. Skoðum aftur samband
-<code class="docutils literal notranslate"><span class="pre">fyrriPuls</span></code> og <code class="docutils literal notranslate"><span class="pre">likamsraektf</span></code> en notum nú <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm</span><span class="o">.</span><span class="n">puls</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">fyrriPuls</span> <span class="o">~</span> <span class="n">likamsraektf</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">puls</span><span class="p">)</span>
+<code class="docutils literal notranslate"><span class="pre">total_l</span></code> og <code class="docutils literal notranslate"><span class="pre">sex</span></code> en notum nú <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm</span><span class="o">.</span><span class="n">possum</span> <span class="o">&lt;-</span> <span class="n">lm</span><span class="p">(</span><span class="n">total_l</span> <span class="o">~</span> <span class="n">sex</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">possum</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Við getum fengið fervikasummutöfluna á sama hátt og áður með <code class="docutils literal notranslate"><span class="pre">anova()</span></code>
 aðferðinni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">puls</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">possum</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
-<span class="c1">## Response: fyrriPuls</span>
-<span class="c1">##               Df Sum Sq Mean Sq F value    Pr(&gt;F)</span>
-<span class="c1">## likamsraektf   2   2580  1289.9  9.5055 9.065e-05 ***</span>
-<span class="c1">## Residuals    446  60521   135.7</span>
+<span class="c1">## Response: total_l</span>
+<span class="c1">##               Df  Sum Sq  Mean Sq   F value   Pr(&gt;F)</span>
+<span class="c1">## sex            1  49.12   49.116    2.6867    0.1043</span>
+<span class="c1">## Residuals    102 1864.71  18.281</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
 </pre></div>
 </div>
 <p>en við getum einnig fengið möt á stikum líkansins með <code class="docutils literal notranslate"><span class="pre">summary()</span></code>
 aðferðinni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">puls</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">possum</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">## Call:</span>
-<span class="c1">## lm(formula = fyrriPuls ~ likamsraektf, data = puls)</span>
+<span class="c1">## lm(formula = total_l ~ sex, data = possum)</span>
 <span class="c1">##</span>
 <span class="c1">## Residuals:</span>
 <span class="c1">##     Min      1Q  Median      3Q     Max</span>
-<span class="c1">## -31.217  -8.217  -0.148   6.783  46.783</span>
+<span class="c1">## -12.907  -2.511   0.093   2.989   9.489</span>
 <span class="c1">##</span>
 <span class="c1">## Coefficients:</span>
-<span class="c1">##                      Estimate Std. Error t value Pr(&gt;|t|)</span>
-<span class="c1">## (Intercept)            75.148      1.294  58.060  &lt; 2e-16 ***</span>
-<span class="c1">## likamsraektfMiðlungs   -1.931      1.553  -1.243 0.214522</span>
-<span class="c1">## likamsraektfMikil      -6.012      1.553  -3.871 0.000125 ***</span>
+<span class="c1">##                      Estimate Std. Error   t value   Pr(&gt;|t|)</span>
+<span class="c1">## (Intercept)            87.9070     0.6520  134.819  &lt;2e-16 ***</span>
+<span class="c1">## sexm                   -1.3955     0.8514  -1.639    0.104</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
 <span class="c1">##</span>
-<span class="c1">## Residual standard error: 11.65 on 446 degrees of freedom</span>
+<span class="c1">## Residual standard error: 4.276 on 102 degrees of freedom</span>
 <span class="c1">##   (22 observations deleted due to missingness)</span>
-<span class="c1">## Multiple R-squared:  0.04088,    Adjusted R-squared:  0.03658</span>
-<span class="c1">## F-statistic: 9.505 on 2 and 446 DF,  p-value: 9.065e-05</span>
+<span class="c1">## Multiple R-squared:  0.02566,    Adjusted R-squared:  0.01611</span>
+<span class="c1">## F-statistic: 2.687 on 1 and 102 DF,  p-value: 0.1043</span>
 </pre></div>
 </div>
 <p>Hægt er að stilla hvaða <em>samanburðarstuðla</em> (e. contrasts) eru notaðir en
@@ -500,11 +501,8 @@ fervikagreiningu má lesa matið fyrir viðmiðunarflokkinn úr
 leggja gildið á viðkomandi stika við matið fyrir viðmiðunarflokkinn.</p>
 <p>Í dæminu hér að ofan má því lesa eftirfarandi:</p>
 <ul class="simple">
-<li><p>Matið á fyrri púls í flokknum sem stundar litla líkamsrækt er 75.148.</p></li>
-<li><p>Matið á fyrri púls í flokknum sem stundar miðlungs líkamsrækt er
-75.148 + (-1.931) = 73.217.</p></li>
-<li><p>Matið á fyrri púls í flokknum sem stundar mikla líkamsrækt er 75.148
-+ (-6.012) = 69.136.</p></li>
+<li><p>Matið á lengd kvenkyns pokarottu er 87.9070.</p></li>
+<li><p>Matið á lengd karlkyns pokarottu er 87.9070 + (-1.3955) = 86.5115.</p></li>
 </ul>
 </section>
 <section id="fleiri-skyribreytur-ast">

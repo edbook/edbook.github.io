@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Kafli - Stál &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="11. Kafli - Gler" href="../kafli11/" />
+    <link rel="prev" title="9. Kafli - Hitastigsháðar breytingar og bruni" href="../kafli09/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Kafli - Stál</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#framleisla-stals">10.1. Framleiðsla stáls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fasalinurit">10.2. Fasalínurit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kolefnisinnihalds-stals-og-fasalinurit">10.3. Kolefnisinnihalds stáls og fasalínurit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fasar-og-eiginleikar-samantekt-byggt-a-callister">10.3.1. Fasar og eiginleikar – samantekt (byggt á Callister, ..)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hersla-me-teygju">10.4. Hersla með teygju</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hitamehondlun">10.5. Hitameðhöndlun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#suuhaeft-stal">10.6. Suðuhæft stál</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stalgerir-og-einkenni-bendistal">10.7. Stálgerðir og einkenni - Bendistál</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Kafli - Lím</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../heimildir/">14. Kafli - Heimildir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10. </span>Kafli - Stál</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli10.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-stal">
+<h1><span class="section-number">10. </span>Kafli - Stál<a class="headerlink" href="#kafli-stal" title="Permalink to this heading"></a></h1>
+<p>Stál er nafnið á efni þar sem frumefnið járn (Fe) er uppistaðan. Stál er unnið með
+bræðslu járnríkra bergefna, og kolinnihald stáls er almennt lægra en 1,8 % þyngdar
+(samkvæmt skilgreiningu aldrei hærra en 2%) en alltaf hærra heldur en 0,008 %.
+Hugtakið járn á við um frumefnið Fe, en einnig efni þar sem frumefnið er uppistaðan;
+yfirleitt sambönd með háu kolefnisinnihaldi, venjulega 2-4 % þyngdar, t.d. pottjárn.
+Orðið járn verður hér notað um sambönd þar sem frumefnið Fe er uppistaðan, nema
+þegar hugtakið stál á sérstaklega við.
+Stál er langmikilvægasti málmurinn í byggingariðnaði og við flytjum inn stál frá
+nokkrum mismunandi löndum.</p>
+<section id="framleisla-stals">
+<h2><span class="section-number">10.1. </span>Framleiðsla stáls<a class="headerlink" href="#framleisla-stals" title="Permalink to this heading"></a></h2>
+<p>Járn er um 4,5% jarðskorpunnar, en finnst aðeins í mjög litlum mæli sem hreint efni
+(einungis í loftseinum sem náð hafa til jarðar). Efnasambönd sem innihalda málm eru
+margvísleg, en t.d. í Svíþjóð er stál nú eingöngu unnið úr samböndunum Fe2O3 og Fe3O4.
+Málmgrýtið er malað og sett í háofna (s: masugn), um 30 m á hæð, ásamt slaggmyndandi
+efni, oftast kalksteini, og koksi (kol sem hafa verið hituð þannig að rokgjörn efni eru
+fjarlægð og eftir stendur létt efni með mjög hátt brunagildi, umbreyting kola í koks, og
+annarra hliðstæðra ferla, er á ensku nefnd pyrolysis). Ofninn er mataður ofanfrá en heitu
+lofti blásið inn í hann neðanfrá undir miklum þrýstingi, súrefni binst kalki og rýkur upp
+sem gas, slaggið sem myndast er nauðsynlegt sem efnahvati og flýtur ofan á járnbráðinni
+og ver hana. Slaggi er tappað reglulega af ofninum, efnið er notað í sementsframleiðslu
+(slaggsement) og spunnið í þræði fyrir einangrun. Járni er einnig tappað af reglulega, en
+vinnslan í heild er í stöðugum gangi.</p>
+<p>Teikningin sýnir háofn, hæð
+um 30 metrar og hitastig á
+mismunandi stöðum í
+ofninum.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/haofn.png"><img alt="../_images/haofn.png" src="../_images/haofn.png" style="width: 70%;" /></a>
+</figure>
+<p>Ofnarnir eru fóðraðir og fóðringin bindur eitthvað af óæskilegum efnum, en járnbráðin
+sem kemur úr ofninum er mjög rík á kolefni, mangan og kísil og hentar því ekki í
+byggingarvörur (t.d. framleiðslu á bitum eða plötum).
+Blandan er því hreinsuð (megnið af kolefninu, mangan og kísilsamböndunum ásamt
+fosfór og brennisteinssamböndum er fjarlægt, brennt burtu) í sérstökum ofnum þar sem
+lofti (í Kaldo-aðferðinni súrefni) er blásið í gegnum bráðina. Ofnarnir geta tekið 5 – 25
+tonn í hvern blástur, sem stendur yfir í um 30 mínútur. Ofnarnir eru fóðraðir, áður
+einungis með súrri fóðringu (kvarts) og nefndist aðferðin þá Bessemer. Með súrri
+fóðringu næst að binda kolefni, kísil og mangan. Síðar var þróuð basísk fóðring, þar næst
+að binda fleiri gerðir af óæskilegum efnum, þessi aðferð er nefnd eftir Thomas.
+Venjulegt byggingarstál inniheldur auk járns, kolefni, kísil, mangan, fosfór og
+brennistein.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/blastursofn.png"><img alt="../_images/blastursofn.png" src="../_images/blastursofn.png" style="width: 100%;" /></a>
+</figure>
+<p>Kolefni er langmikilvægasta hlutefnið.
+Kolefni í járni er á þrennu formi; laust,
+cementit (<span class="math notranslate nohighlight">\(Fe_3C\)</span>) eða sem grafít, megnið af
+kolefni í stáli er bundið sem sementit.
+Járn hefur nokkra mismunandi fasa og
+leysni kols er mismunandi eftir þeim,
+eiginleikar eru jafnframt mjög breytilegir
+eftir kolefnisinnihaldi og því hvaða fasi er
+ráðandi – sjá línurit.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/eiginleikarkolefnisinnihald.png"><img alt="../_images/eiginleikarkolefnisinnihald.png" src="../_images/eiginleikarkolefnisinnihald.png" style="width: 70%;" /></a>
+</figure>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/7E__zqy6xcw" style="border: 0; height: 345px; width: 560px">
+</iframe></div><div class="tip admonition">
+<p class="admonition-title">Hugtök í myndbandi</p>
+<blockquote>
+<div><p><strong>iron</strong> : járn</p>
+<p><strong>cast iron</strong> : pottjárn</p>
+<p><strong>iron ore</strong> : járngrýti</p>
+<p><strong>blast furnace</strong> : háofn</p>
+</div></blockquote>
+</div>
+</section>
+<section id="fasalinurit">
+<h2><span class="section-number">10.2. </span>Fasalínurit<a class="headerlink" href="#fasalinurit" title="Permalink to this heading"></a></h2>
+<p>Fasalínurit eru notuð til að sýna mögulegar samsetningar tveggja eða fleiri fasa, þau eru
+undirstaða margskonar umræðu um m.a. stál.
+Hér verður fyrst tekið dæmi af vatni og hafssalti (NaCl), sjá línurit (línuritin tvö og
+dæmið tekið úr Burström, 2001)
+Ath: “saltlake” = saltpækill þ.e. vatn + salt í upplausn
+Línuritið sýnir fjóra fasa;</p>
+<ol class="arabic simple">
+<li><p>saltpækill</p></li>
+<li><p>saltpækill með ískristöllum</p></li>
+<li><p>saltpækill með saltkristöllum</p></li>
+<li><p>salt og ískristallar</p></li>
+</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/saltpaekill.png"><img alt="../_images/saltpaekill.png" src="../_images/saltpaekill.png" style="width: 100%;" /></a>
+</figure>
+<p>Dæmi:</p>
+<p>Blanda sem samanstendur af (þyngdarhlutföll); 10 % <span class="math notranslate nohighlight">\(NaCl\)</span> og 90 % vatn.</p>
+<ol class="loweralpha simple">
+<li><p>Hvaða fasar eru til staðar við <span class="math notranslate nohighlight">\(-10^{\circ}C\)</span></p></li>
+<li><p>Hve stórt er hlutfall ískristalla við <span class="math notranslate nohighlight">\(-10^{\circ}C\)</span></p></li>
+</ol>
+<p>Svar:</p>
+<ol class="loweralpha">
+<li><p>lárétt lína dregin við <span class="math notranslate nohighlight">\(-10^{\circ}C\)</span> og lóðrétt við 10 % <span class="math notranslate nohighlight">\(NaCl\)</span>—skurðpunktur í fasa “saltlake + iskristaller” (saltpækill með ískristöllum).</p></li>
+<li><p>Notum jafnvægisregluna; <span class="math notranslate nohighlight">\(n_1\)</span> = hlutfall ískristalla, <span class="math notranslate nohighlight">\(n_2\)</span> hlutfall saltpækils; almennt gildir þá fyrir hlutföll eftir láréttu línunni;</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[n_1 \cdot l_1 = n_2 \cdot l_2  \qquad \textrm{ásamt} \qquad n_1 + n_2 = 1\]</div>
+<div class="math notranslate nohighlight">
+\[\Rightarrow n_1 \cdot (10-0) = n_2 \cdot (14-10) = (1- n_1) \cdot (14-10)\]</div>
+<div class="math notranslate nohighlight">
+\[n_1 = 4/14=0,286 \qquad \textrm{eða} \qquad n_1 = 28,6\%\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>Almennt dæmi um samsetningu með tveim hlutefnum; A og B – sjá línurit fyrir þriggja
+fasa ástand</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fasalinurit.png"><img alt="../_images/fasalinurit.png" src="../_images/fasalinurit.png" style="width: 100%;" /></a>
+</figure>
+</section>
+<section id="kolefnisinnihalds-stals-og-fasalinurit">
+<h2><span class="section-number">10.3. </span>Kolefnisinnihalds stáls og fasalínurit<a class="headerlink" href="#kolefnisinnihalds-stals-og-fasalinurit" title="Permalink to this heading"></a></h2>
+<p>Í byggingarstáli er kolefnisinnihaldið almennt lægra en 0,30% (verkfærastál hefur hærra
+kolefnisinnihald), iðulega er öðrum málmum blandað í stálið; nickel, króm (e:
+chromium), molybdenum og mangan en til samans er þessi íblöndun almennt undir 8%.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fasalinuritstals.png"><img alt="../_images/fasalinuritstals.png" src="../_images/fasalinuritstals.png" style="width: 100%;" /></a>
+</figure>
+<p>Fasalínurit fyrir <span class="math notranslate nohighlight">\(Fe-Fe_3C\)</span> – sjá einnig næstu mynd</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/fasalinuritstalslitidC.png"><img alt="../_images/fasalinuritstalslitidC.png" src="../_images/fasalinuritstalslitidC.png" style="width: 100%;" /></a>
+</figure>
+<section id="fasar-og-eiginleikar-samantekt-byggt-a-callister">
+<h3><span class="section-number">10.3.1. </span>Fasar og eiginleikar – samantekt (byggt á Callister, ..)<a class="headerlink" href="#fasar-og-eiginleikar-samantekt-byggt-a-callister" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Ferrite (<span class="math notranslate nohighlight">\(\alpha\)</span> iron) BCC</p></td>
+<td><p>General: May be made magnetic at <span class="math notranslate nohighlight">\(\vartheta\)</span> &lt; 786 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span>, <span class="math notranslate nohighlight">\(\rho\)</span> = 7.88 <span class="math notranslate nohighlight">\(\textrm{g/cm}^3\)</span></p>
+<p>Mech. Properties: Soft and ductile.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Austenite (<span class="math notranslate nohighlight">\(\gamma\)</span> iron) FCC</p></td>
+<td><p>General: Non-magnetic, not stable at <span class="math notranslate nohighlight">\(\vartheta\)</span> &lt; 727 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Cementite (<span class="math notranslate nohighlight">\(Fe_3C\)</span>)</p></td>
+<td><p>General: Metastable at temperatures 600 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span> &lt; <span class="math notranslate nohighlight">\(\vartheta\)</span> &lt; 700 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span></p>
+<p>Mech. Properties: Hard and brittle.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Pearlite</p></td>
+<td><p>General: The microstructure of steel that is slowly cooled through the eutectoid temperature.</p>
+<p>Mech. Properties: (naturally) between ferrite and cementite.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Hypoeutectoid alloy</p></td>
+<td><p>Composition to the left of the eutectoid point (0.022 &lt;wt% C &lt; 0.76)</p></td>
+</tr>
+<tr class="row-even"><td><p>Hypereutectoid alloys</p></td>
+<td><p>Composition to the near right of the eutectoid point (0.76 &lt;wt% C &lt; 2.14)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Eutectoid ferrite</p></td>
+<td><p>The ferrite present in pearlite</p></td>
+</tr>
+<tr class="row-even"><td><p>Proeutectoid ferrite</p></td>
+<td><p>The ferrit formed at temperature above the eutectoid temperature (only for carbon content in the range 0.022 wt% &lt;C&lt;0.76 wt%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Proeutectoid cementide</p></td>
+<td><p>Cementite formed in Hypereutectoid alloy before the eutectoid reaction (in the <span class="math notranslate nohighlight">\(\gamma + Fe_3C\)</span> phase)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="hersla-me-teygju">
+<h2><span class="section-number">10.4. </span>Hersla með teygju<a class="headerlink" href="#hersla-me-teygju" title="Permalink to this heading"></a></h2>
+<p>Sbr. almennan kafla um styrk og stífleika…</p>
+</section>
+<section id="hitamehondlun">
+<h2><span class="section-number">10.5. </span>Hitameðhöndlun<a class="headerlink" href="#hitamehondlun" title="Permalink to this heading"></a></h2>
+<p>Efnabreytingin sem á sér stað við eutectoid hitastigið þegar austenít (<span class="math notranslate nohighlight">\(\gamma\)</span>) umbreytist í ferrit
+(<span class="math notranslate nohighlight">\(\alpha\)</span>) og sementít (<span class="math notranslate nohighlight">\(Fe_3C\)</span>) er hæg og hitastigið getur verið komið niður fyrir eutectoid
+hitastigið áður en öll breytingin er um garð gengin. Þegar þetta gerist þá er efnið ekki
+stöðugt (ekki í jafnvægi, e: equilibrium). Slíku ferli er almennt lýst með svo kölluðu
+TTT línuriti (time- temperature-transformation diagram), línuritið sýnir hvaða tíma
+efnabreytingin krefst við stöðugt hitastig undir eutectoid hitanum…. og jafnframt hvaða
+innri uppbyggingu stálið fær (pearlite, bainite, martinsite), háð hitastigi.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hitamedhondlun.png"><img alt="../_images/hitamedhondlun.png" src="../_images/hitamedhondlun.png" style="width: 80%;" /></a>
+</figure>
+<p>Uppbyggingin..</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Bainite</p></td>
+<td><p>aðeins í stálblöndum (e: alloy steels)</p></td>
+</tr>
+<tr class="row-even"><td><p>Pearlite</p></td>
+<td><p>sjá línurit</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spheroidite</p></td>
+<td><p>myndað með hitun á bainite eða pearlite upp í hita strax undir
+eutectoid hitanum (og hitastiginu haldið stöðugu í nokkurn
+tíma)</p></td>
+</tr>
+<tr class="row-even"><td><p>Martinsite</p></td>
+<td><p>fengið með hraðri kælingu á austenite niður í fremur lágan hita</p></td>
+</tr>
+</tbody>
+</table>
+<p>… og eiginleikarnir</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Pearlite</p></td>
+<td><p>með vaxandi hluta af cementide fæst harðara og stökkara efni.</p>
+<p>Grófgert perlite er seigara heldur en fíngert perlite</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Bainite</p></td>
+<td><p>sterkara og harðara heldur en pearlite, eftirsóknarverð blanda
+af styrk og seigju</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spheroidite</p></td>
+<td><p>minni harka heldur en í pearlite, mikil brotorka</p></td>
+</tr>
+<tr class="row-even"><td><p>Martinsite</p></td>
+<td><p>harðasta og sterkasta stálið, en jafnframt það stökkasta (það er
+hægt að breyta þessu með hitun)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í reynd er eiginleikum stálsins stýrt með því hvernig efnið er kælt niður (ekki með því að
+halda hitastigi þess stöðugu sbr. TTT línuritið) – sjá línurit hér að neðan.
+(Í reynd eru línuritin nátengd eins og sést á strikuðu línunum hér að neðan og samanburði
+við TTT línuritið).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hitunarhradi.png"><img alt="../_images/hitunarhradi.png" src="../_images/hitunarhradi.png" style="width: 80%;" /></a>
+</figure>
+<p>Y-ásinn nær niður í 0 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span>, það vantar tölurnar 100 og 200 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span> !</p>
+<p>Enska orðið “quenching” táknar að heitu stálinu er dýft í vökva; hraðasta kælingin fæst ef
+vökvinn er vatn (e: water quenching) en oftar er þó notuð olía.</p>
+<p>Áhrif mismunandi hitaherslu á stál eru sýnd á línuriti (Burström, 2001). Sænska hugtakið
+“anlöpt vid 400 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span>” táknar að stálið var hitað upp í 400 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span> áður en það var kælt.
+Hitastig í upphituninni skiptir miklu máli fyrir endanlega eiginleika, lágt hitastig hefur
+lítil áhrif.. Hert stál er hægt að gera seigara með því að hita það upp í 400 <span class="math notranslate nohighlight">\(^{\circ}\textrm{C}\)</span> og svo
+kælt niður á ný, þá er talað um seigherslu og er þetta nú algeng framleiðsluaðferð á
+bendistáli.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/hersla.png"><img alt="../_images/hersla.png" src="../_images/hersla.png" style="width: 70%;" /></a>
+</figure>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/6jQ4y0LK1kY" style="border: 0; height: 345px; width: 560px">
+</iframe></div></section>
+<section id="suuhaeft-stal">
+<h2><span class="section-number">10.6. </span>Suðuhæft stál<a class="headerlink" href="#suuhaeft-stal" title="Permalink to this heading"></a></h2>
+<p>Rafsuða er algeng samsetning á t.d. bendistáli, og óhjákvæmilega hitnar stálið, amk.
+staðbundið við suðuna. Hitunin getur augljóslega haft neikvæð áhrif á efniseiginleikana,
+og með hugtakinu “suðuhæft stál” er því átt við stál sem má sjóða án þess að gripið sé til
+sérstakra ráðstafana.</p>
+</section>
+<section id="stalgerir-og-einkenni-bendistal">
+<h2><span class="section-number">10.7. </span>Stálgerðir og einkenni - Bendistál<a class="headerlink" href="#stalgerir-og-einkenni-bendistal" title="Permalink to this heading"></a></h2>
+<p>Þegar stál er steypt inn í steypu þá eru í upphafi aðallega um efnafræðilega bindinga að
+ræða, en þessir bindingar eru sjaldnast sterkir. Til að bæta tengingu stáls og steypu eru
+stangirnar því “prófíleraðar”, t.d. valsaðir kambar í járnið. Því sterkara sem stálið er, því
+þéttara er á milli kambanna.</p>
+<p>Í Evrópu er nú samkomulag um eftirfarandi merkingar;</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Tafla 10.1 </span><span class="caption-text">Upphafsstafir í heiti</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>bendistál skv. ENV 10 080</p></td>
+</tr>
+<tr class="row-even"><td><p>S</p></td>
+<td><p>slétt stöng</p></td>
+</tr>
+<tr class="row-odd"><td><p>K</p></td>
+<td><p>kambstál</p></td>
+</tr>
+<tr class="row-even"><td><p>P</p></td>
+<td><p>prófíleruð stöng</p></td>
+</tr>
+<tr class="row-odd"><td><p>Np</p></td>
+<td><p>soðið bendinet úr prófíleruðum stöngum</p></td>
+</tr>
+</tbody>
+</table>
+<p>Síðan kemur oft lítið s, sem táknar flotmörk (eða 0,2 % mörkin) og þá kröfugildi fyrir
+flotmörkin í MPa.
+Stórt S á eftir flotspennugildinu táknar að stálið er suðuhæft (nánast allt bendistál sem er
+heitvalsað er suðuhæft).
+Kröfur til bendistáls er að finna í staðlinum ÍST 16, sem aftur vísar í Norska staðla (sem
+byggja á FS ENV 10080:1995). Stál er flokkað í þrjá flokka eftir (mest)
+seigjueiginleikum; A, B og C (staðallinn fjallar bara um B500 seríuna; B500A, B500B,
+B500C), A hefur minnsta seigju og C mesta. Hérlendis er almennt miðað við að nota
+alltaf stál í flokki C (sama verð, og óheppilegt að blanda saman mismunandi flokkum á
+sama byggingarstað).</p>
+<p>Stórt T aftarlega í heitinu táknar að stálið er seighert (sjá að framan).</p>
+<p>Dæmi um stálflokka (Burström, 2001)</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/bendistal.png"><img alt="../_images/bendistal.png" src="../_images/bendistal.png" style="width: 70%;" /></a>
+</figure>
+<div class="caution admonition">
+<p class="admonition-title">Aðgát</p>
+<blockquote>
+<div><p>stálið heitir ekki Ps500/700, Burström notar sömu mynd fyrir tvo gæðaflokka, þ.e. Ps500 og Ps700.</p>
+</div></blockquote>
+</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Taflabendistal.png"><img alt="../_images/Taflabendistal.png" src="../_images/Taflabendistal.png" style="width: 100%;" /></a>
+</figure>
+<p>Áður (og heyrist enn!) var slétt stál alltaf kallað St 37 (stál 37, flotspennan í kg/mm2
+) í
+kerfinu hér að ofan heitir slíkt stál þá væntanlega Ss370S.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/vinnulinur1.png"><img alt="../_images/vinnulinur1.png" src="../_images/vinnulinur1.png" style="width: 70%;" /></a>
+</figure>
+<p>Áhugaverðar heimasíður um stál:
+<a class="reference external" href="http://www.worldsteel.org/">http://www.worldsteel.org/</a>
+<a class="reference external" href="http://www.steeluniversity.org/content/html/eng/default.asp?catid=1&amp;pageid=1016899460">http://www.steeluniversity.org/content/html/eng/default.asp?catid=1&amp;pageid=1016899460</a>
+(þessa heimasíðu er hægt að komast á í gegnum fyrri síðuna!)</p>
+<p>Heimildir og ítarefni:</p>
+<p>P. G. Burström (2001) Byggnadsmaterial – uppbyggnad, tillverkning och egenskaper,
+Studentlitteratur, Lund, Sverige</p>
+<p>Pétur Sigurðsson, 1993, Smíðamálmar, Pétur Sigurðsson, Reykjavík</p>
+<p>FS ENV 120080:1995 Steel for reinforcement of concrete weldable ribbed reinforcing steel B 500
+– technical delivery conditions for bars, coils and welded fabric.</p>
+<p>W.D. Callister,Jr (2003) Materials Science and Engineering – an introduction, Wiley
+International edition, John Wiley &amp; Sons, Inc</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli09/" class="btn btn-neutral float-left" title="9. Kafli - Hitastigsháðar breytingar og bruni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli11/" class="btn btn-neutral float-right" title="11. Kafli - Gler" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

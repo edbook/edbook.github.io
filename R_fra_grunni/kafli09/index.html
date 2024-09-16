@@ -193,6 +193,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Endurvalsaðferðir</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
@@ -271,6 +272,7 @@ að breyta henni).</p>
 <p><strong>Inntak:</strong> nafn á fervikagreiningarhlut</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil og fleira</p>
 <p><strong>Forkröfur prófs:</strong> Dreifni sú sama</p>
+<p><strong>Forkröfur prófs:</strong> Dreifni sú sama</p>
 </div>
 <hr class="docutils" />
 <p>Til að fá fervikagreiningartöflu mötum við <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðina með
@@ -278,30 +280,31 @@ fervikagreiningarhlut:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Snúum okkut nú að gagnasafninu possum. Sem inniheldur allskyns mælingar á pokarottum.
+<p>Snúum okkut nú að gagnasafninu <code class="docutils literal notranslate"><span class="pre">pokarotta</span></code>. Sem inniheldur allskyns mælingar á pokarottum.
 Í gagnasettinu eru meðal annars breyturnar: aldur, kyn, lengd dýrs og hvaðan dýrið kemur.
 Könnum hvort munur sé á stærð pokarotta eftir kyni. Við reiknum meðallengd pokadýra
 eftir kyni eins og gert í kafla <a class="reference internal" href="../kafli04/#s-adrargagnlegar"><span class="std std-numref">4.3</span></a>. Nú getum við kannað með
 fervikagreiningu hvort munur sé á meðallend pokarotta eftir kyni. Byrjum á því að skoða
 kassarit af lengdarmælingum eftir kyni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gogn</span> <span class="o">&lt;-</span> <span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">possum</span><span class="p">)</span> <span class="c1"># sleppum NA gildum</span>
-<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gogn</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span> <span class="n">total_l</span><span class="p">))</span><span class="o">+</span><span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gogn</span> <span class="o">&lt;-</span> <span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">pokarotta</span><span class="p">)</span> <span class="c1"># sleppum NA gildum</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gogn</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">heildarlengd</span><span class="p">))</span><span class="o">+</span><span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
 <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;kyn&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Lengd pokarotta (cm)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default">
+<figure class="align-center">
 <img alt="../_images/mynd9_1.svg" src="../_images/mynd9_1.svg" /></figure>
 <p>Eins og sjá má myndinni virðist dreifni í hópunum vera nokkuð jöfn.
 Því næst framkvæmum við Bartlett prófið fyrir dreifnina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bartlett</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">total_l</span> <span class="o">~</span> <span class="n">sex</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">possum</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bartlett</span><span class="o">.</span><span class="n">test</span><span class="p">(</span><span class="n">heildarlengd</span> <span class="o">~</span> <span class="n">kyn</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pokarotta</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">##  Bartlett test of homogeneity of variances</span>
 <span class="c1">##</span>
-<span class="c1">## data:  total_l by sex</span>
+<span class="c1">## data:  total_l by kyn</span>
 <span class="c1">## Bartlett&#39;s K-squared = 0.06666, df = 1, p-value = 0.7963</span>
 </pre></div>
 </div>
 <p>Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
+Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 núlltilgátunni um að dreifnin sé sú sama. Við verðum þó að gæta okkur á
 að hátt p-gildi þýðir ekki að við höfum sýnt fram á að dreifnin sé sú
 sama til þess þyrfti að kanna styrk prófsins (við samþykkjum jú ekki
@@ -309,7 +312,7 @@ núlltilgátur). Í þessu tilviki er fjöldi mælinga hár og styrkur prófsins
 því væntanlega sæmilegur. Við getum því litið á þetta háa p-gildi sem
 vísbendingu um það að dreifnin í hópunum sé ekki misjöfn.</p>
 <p>Við framkvæmum fervikagreiningu með eftirfarandi skipunum:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span> <span class="o">&lt;-</span> <span class="n">aov</span><span class="p">(</span><span class="n">total_l</span> <span class="o">~</span> <span class="n">sex</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">possum</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span> <span class="o">&lt;-</span> <span class="n">aov</span><span class="p">(</span><span class="n">heildarlengd</span> <span class="o">~</span> <span class="n">kyn</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pokarotta</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Takið eftir að við tilgreinum fyrst nöfnin á breytunum og svo nafnið á
@@ -318,7 +321,7 @@ aðferðina.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
-<span class="c1">## Response: total_l</span>
+<span class="c1">## Response: heildarlengd</span>
 <span class="c1">##               Df  Sum Sq   Mean Sq  F value    Pr(&gt;F)</span>
 <span class="c1">## likamsraektf   1  49.12    49.116    2.6867     0.1043 ***</span>
 <span class="c1">## Residuals    102  1864.71  18.281</span>
@@ -327,10 +330,15 @@ aðferðina.</p>
 </pre></div>
 </div>
 <p>Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
+og 102).
+Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
 og 102).</p>
 <p>Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
 finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
+Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
+finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
+(<span class="math notranslate nohighlight">\(0.1043\)</span>). Eins og sjá má er ýmislegt annað að finna
 (<span class="math notranslate nohighlight">\(0.1043\)</span>). Eins og sjá má er ýmislegt annað að finna
 í <code class="docutils literal notranslate"><span class="pre">aov()</span></code> úttakinu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
@@ -370,8 +378,11 @@ hana með fervikagreiningarhlut.</p>
 <span class="c1">##   Tukey multiple comparisons of means</span>
 <span class="c1">##     95% family-wise confidence level</span>
 <span class="c1">##</span>
-<span class="c1">## Fit: aov(formula = total_l ~ sex, data = possum)</span>
+<span class="c1">## Fit: aov(formula = heildarlengd ~ kyn, data = pokarotta)</span>
 <span class="c1">##</span>
+<span class="c1">## $sex</span>
+<span class="c1">##                     diff         lwr        upr     p adj</span>
+<span class="c1">## m-f            -1.395501   -3.084208   0.2932054   0.104272</span>
 <span class="c1">## $sex</span>
 <span class="c1">##                     diff         lwr        upr     p adj</span>
 <span class="c1">## m-f            -1.395501   -3.084208   0.2932054   0.104272</span>
@@ -382,8 +393,7 @@ hana með fervikagreiningarhlut.</p>
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/nymyplot..png" src="../_images/nymyplot..png" />
-</figure>
+<img alt="../_images/mynd9_2.svg" src="../_images/mynd9_2.svg" /></figure>
 </section>
 </section>
 </section>
@@ -418,8 +428,15 @@ munum ekki taka á því hér, aðeins sýna hvaða tæki og tól eru til staða
 væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
 verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu
 tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja
+þátta fervikagreiningu til að kanna tengslin.
+Skoðum aftur dæmið hér að ofan þar sem kannað var hvort lengd pokarotta
+væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
+verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu
+tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja
 þátta fervikagreiningu til að kanna tengslin.</p>
 <p>Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna
+þurfum við að kanna hvort <em>víxlhrif</em> (e. interactions) séu til staðar á
+Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna
 þurfum við að kanna hvort <em>víxlhrif</em> (e. interactions) séu til staðar á
 milli breytanna tveggja. Gott er að byrja á því að skoða gögnin myndrænt
 til að kanna hvort víxlhrif séu til staðar. Við gerum það í R með
@@ -427,14 +444,18 @@ til að kanna hvort víxlhrif séu til staðar. Við gerum það í R með
 aðferðinni úr <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code>. Hún er viðkvæm fyrir vöntun mælinga á
 flokkabreytum og búum við því til gagnasafn þar sem ekki vantar neinar
 mælingar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="o">&lt;-</span><span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">possum</span><span class="p">)</span>
-<span class="n">ggplot</span><span class="p">(</span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span><span class="n">total_l</span><span class="p">,</span><span class="n">lty</span><span class="o">=</span><span class="n">pop</span><span class="p">))</span> <span class="o">+</span>
-<span class="n">stat_summary</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">pop</span><span class="p">),</span><span class="n">fun</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geom</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="o">&lt;-</span><span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">pokarotta</span><span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">heildarlengd</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="n">tegund</span><span class="p">))</span><span class="o">+</span>
+<span class="n">stat_summary</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">tegund</span><span class="p">),</span><span class="n">fun</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geo</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<figure class="align-default">
-<img alt="../_images/mynd9_3.svg" src="../_images/mynd9_3.svg" /></figure>
+<figure class="align-center">
+<img alt="../_images/popmynd.svg" src="../_images/popmynd.svg" /></figure>
 <p>Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns
+pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.).
+Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur,
+óháð því hvaðan dýrin koma.
+Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns
 pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.).
 Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur,
 óháð því hvaðan dýrin koma.</p>
@@ -442,16 +463,16 @@ Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur,
 prófum við ekki hina þættina í líkaninu. Ef engin víxlhrif eru til
 staðar þá fjarlægjum við víxlhrifin úr líkaninu, metum það upp á nýtt og
 prófum hina þættina tvo.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.2</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">total_l</span><span class="o">~</span><span class="n">sex</span> <span class="o">+</span> <span class="n">pop</span> <span class="o">+</span> <span class="n">sex</span><span class="p">:</span><span class="n">pop</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.2</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">heildarlengd</span><span class="o">~</span><span class="n">kyn</span> <span class="o">+</span> <span class="n">tegund</span> <span class="o">+</span> <span class="n">kyn</span><span class="p">:</span><span class="n">tegund</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">)</span>
 <span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.2</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
 <span class="c1">## Response: total_l</span>
-<span class="c1">##           Df Sum Sq  Mean Sq  F value  Pr(&gt;F)</span>
-<span class="c1">## sex       1   49.12  49.116   2.6480   0.1068 ***</span>
-<span class="c1">## pop       1   4.45   4.452    0.2400   0.62535 *</span>
-<span class="c1">## sex:pop   1   5.43   5.426    0.2925   0.5898</span>
-<span class="c1">## Residuals    100   1854.4  18.648</span>
+<span class="c1">##             Df    Sum Sq  Mean Sq  F value  Pr(&gt;F)</span>
+<span class="c1">## kyn          1    49.12   49.116   2.6480   0.1068 ***</span>
+<span class="c1">## tegund       1    4.45    4.452    0.2400   0.62535 *</span>
+<span class="c1">## kyn:tegund   1    5.43    5.426    0.2925   0.5898</span>
+<span class="c1">## Residuals    100  1854.4  18.648</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
 </pre></div>
@@ -460,15 +481,17 @@ prófum hina þættina tvo.</p>
 og prófstærð.</p>
 <p>Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
 því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
+Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
+því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.3</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">total_l</span><span class="o">~</span><span class="n">sex</span> <span class="o">+</span> <span class="n">pop</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">possum</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.3</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">heildarlengd</span><span class="o">~</span><span class="n">kyn</span> <span class="o">+</span> <span class="n">tegund</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">)</span>
 <span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.3</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
-<span class="c1">## Response: total_l</span>
+<span class="c1">## Response: heildarlengd</span>
 <span class="c1">##               Df  Sum Sq   Mean Sq  F value    Pr(&gt;F)</span>
-<span class="c1">## sex            1  49.12    49.116   2.6667     0.1056</span>
-<span class="c1">## pop            1  4.45     4.452    0.2417     0.6240</span>
+<span class="c1">## kyn            1  49.12    49.116   2.6667     0.1056</span>
+<span class="c1">## tegund         1  4.45     4.452    0.2417     0.6240</span>
 <span class="c1">## Residuals    101  1860.26  18.418</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
@@ -483,16 +506,19 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
 <span class="c1">## Single term deletions</span>
 <span class="c1">##</span>
 <span class="c1">## Model:</span>
-<span class="c1">## total_l ~ sex + pop</span>
-<span class="c1">##              Df  Sum of Sq    RSS     AIC   F value    Pr(&gt;F)</span>
-<span class="c1">## &lt;none&gt;                     1860.3  305.94</span>
-<span class="c1">## likamsraektf  1  41.725    1902.0  306.25   2.2654   0.1354</span>
-<span class="c1">## kyn           1  4.452     1864.7  304.19   0.2417   0.6340</span>
+<span class="c1">## heildarlengd ~ kyn + tegund</span>
+<span class="c1">##              Df  Sum of Sq   RSS     AIC      F value  Pr(&gt;F)</span>
+<span class="c1">## &lt;none&gt;                       1860.3  305.94</span>
+<span class="c1">## kyn          1   41.725      1902.0  306.25   2.2654   0.1354</span>
+<span class="c1">## tegund       1   4.452       1864.7  304.19   0.2417   0.6340</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
 </pre></div>
 </div>
 <p>Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki
+sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið
+er að leiðrétta fyrir breytunni <code class="docutils literal notranslate"><span class="pre">pop</span></code>.
+Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki
 sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið
 er að leiðrétta fyrir breytunni <code class="docutils literal notranslate"><span class="pre">pop</span></code>.</p>
 <p>Eins og sagt var frá í upphafi þessa hluta er margt sem þarf að hafa í

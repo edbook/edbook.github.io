@@ -207,6 +207,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Endurvalsaðferðir</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
@@ -245,6 +246,7 @@ mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
 gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
 þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
 magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
 með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
 og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
 varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
@@ -264,6 +266,8 @@ tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
 Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
 Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
 þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
 alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
 önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
@@ -801,7 +805,7 @@ skipunina</p>
 <section id="gogn">
 <h2><span class="section-number">1.8. </span>Gögn<a class="headerlink" href="#gogn" title="Permalink to this heading"></a></h2>
 <p>Í þessari bók munum við notast við nokkur gagnasett.
-Gagnasettið sem við köllum dat má finna í skránni <code class="docutils literal notranslate"><span class="pre">skra</span></code> sem hlaða
+Gagnasettið sem við köllum <em>konnun</em> má finna í skránni <code class="docutils literal notranslate"><span class="pre">skra</span></code> sem hlaða
 niður hér:</p>
 <p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
 <p>Skráin inniheldur eftirfarandi breytur:</p>
@@ -816,18 +820,18 @@ niður hér:</p>
 <td><p>Vannilla, Jarðaberja, Súkkulaði</p></td>
 </tr>
 <tr class="row-odd"><td><p>ferdatimi_skoli</p></td>
-<td><p>tími í mínútum</p></td>
+<td><p>Tími í mínútum</p></td>
 </tr>
 <tr class="row-even"><td><p>styrikerfi_simi</p></td>
 <td><p>Android eða iOS</p></td>
 </tr>
-<tr class="row-odd"><td><p>ferdatmati_skoli</p></td>
+<tr class="row-odd"><td><p>ferdamati_skoli</p></td>
 <td><p>Með einkabíl, Gangandi/skokkandi,
 Með strætó, Hjólandi/rafhlaupahjól,
 Á annan hátt</p></td>
 </tr>
 <tr class="row-even"><td><p>systkini_fjoldi</p></td>
-<td><p>fjöldi systkina</p></td>
+<td><p>Fjöldi systkina</p></td>
 </tr>
 <tr class="row-odd"><td><p>dyr</p></td>
 <td><p>Ertu meira fyrir hunda eða ketti?</p></td>
@@ -857,7 +861,69 @@ Með strætó, Hjólandi/rafhlaupahjól,
 </table>
 <p>Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
 Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.</p>
-<p>Vistið skrána í vinnumöppunni á vélinni ykkar en forðist að opna hana í
+<p>Í þessari bók verður einnig notað gagnasett sem heitir puls, puls
+gaganasettið má hlaða niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
+<p>Skráin inniheldur eftirfarandi breytur:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Útskýring/gildi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>likamsraekt</p></td>
+<td><p>Fjöldi klst. í líkamsræktar á viku</p></td>
+</tr>
+<tr class="row-odd"><td><p>fyrriPuls</p></td>
+<td><p>Fyrri púls, slög á mínútu</p></td>
+</tr>
+<tr class="row-even"><td><p>inngrip</p></td>
+<td><p>sat_kyrr eða hljop</p></td>
+</tr>
+<tr class="row-odd"><td><p>seinniPuls</p></td>
+<td><p>Seinni púls, slög á mínútu</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í þessari bók verður einnig notað gagnasett sem heitir pokarotta, pokarotta
+gaganasettið má hlaða niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
+<p>Skráin inniheldur eftirfarandi breytur:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Útskýring/gildi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>stadsetning</p></td>
+<td><p>1 eða 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>tegund</p></td>
+<td><p>Vic eða other</p></td>
+</tr>
+<tr class="row-even"><td><p>kyn</p></td>
+<td><p>m eða f</p></td>
+</tr>
+<tr class="row-odd"><td><p>aldur</p></td>
+<td><p>ár</p></td>
+</tr>
+<tr class="row-even"><td><p>hofud_lengd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>hofud_breidd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-even"><td><p>heildarlengd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>lengd_skott</p></td>
+<td><p>í mm</p></td>
+</tr>
+</tbody>
+</table>
+<p>Vistið skránar í vinnumöppunni á vélinni ykkar en forðist að opna hana í
 töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
 viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.</p>
 <p>Við munum nota þessi sömu gögn í umfjöllun okkar um ályktunartölfræði.
@@ -866,7 +932,7 @@ slembiúrtak úr stóru þýði nemenda og því getum við notað gögnin til a
 draga hinar ýmsu ályktanir um þýði nemenda.</p>
 <p>Í þessari bók er einnig unnið mikið með gagnasettið <code class="docutils literal notranslate"><span class="pre">kaupskra</span></code> sem inniheldur
 upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.</p>
-<p>Kaupskrá má nálgast á: <a class="reference external" href="https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/">https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/</a>
+<p>Kaupskrá má nálgast á: <a class="reference external" href="https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/">https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/</a>.
 Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">

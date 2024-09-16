@@ -210,6 +210,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Endurvalsaðferðir</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
@@ -281,7 +282,7 @@ hluta.</p>
 </div>
 <p>en viljum við finna hæsta gildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 75
 </pre></div>
 </div>
@@ -303,7 +304,7 @@ af 3, 4, 7 og 8 gerum við það með</p>
 </div>
 <p>en viljum við finna lægsta gildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 0
 </pre></div>
 </div>
@@ -328,7 +329,7 @@ talnanna 3, 4, 7 og 8 gerum við það með:</p>
 </div>
 <p>Viljum við reikna meðaltal ákveðinnar breytu gerum við það með að mata
 aðferðina með nafni breytunnar.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mean(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mean(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 19.42786
 </pre></div>
 </div>
@@ -350,7 +351,7 @@ talnanna 3, 4, 7 og 8 gerum við það með</p>
 </div>
 <p>en viljum við reikna miðgildi ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>median(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>median(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 16
 </pre></div>
 </div>
@@ -374,7 +375,7 @@ mata aðferðina með nafni breytunnar:</p>
 </div>
 <p>en viljum við reikna dreifni ákveðinnar breytu gerum við það með að mata
 aðferðina með nafni breytunnar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 198.786
 </pre></div>
 </div>
@@ -396,7 +397,7 @@ talnanna 3, 4, 7 og 8 gerum við það með</p>
 </div>
 <p>en viljum við reikna staðalfrávik ákveðinnar breytu gerum við það með að
 mata aðferðina með nafni breytunnar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sd(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sd(konnun$ferdatimi_skoli, na.rm=T)
 ## [1] 14.09915
 </pre></div>
 </div>
@@ -413,7 +414,7 @@ mata aðferðina með nafni breytunnar:</p>
 <p>Aðferðin <code class="docutils literal notranslate"><span class="pre">quantile</span></code> reiknar út hlutfallsmörk. Sjálfgefna stilling
 aðferðarinnar skilar okkur fjórðungamörkunum. Við mötum aðferðina með
 nafninu á breytunni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>quantile(dat$ferdatimi_skoli, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>quantile(konnun$ferdatimi_skoli, na.rm=T)
 ## 0%  25%  50%  75% 100%
 ## 0   8   16   25   75
 </pre></div>
@@ -437,8 +438,11 @@ sem er.</p>
 þurfum að mata aðferðina með heitunum á breytunum sem við ætlum að
 reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
 höfuðlengdar pokarotta, semsagt breytanna <code class="docutils literal notranslate"><span class="pre">total_l</span></code> og <code class="docutils literal notranslate"><span class="pre">head_l</span></code>,
+notum við skipunina:
+reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
+höfuðlengdar pokarotta, semsagt breytanna <code class="docutils literal notranslate"><span class="pre">total_l</span></code> og <code class="docutils literal notranslate"><span class="pre">head_l</span></code>,
 notum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor(possum$total_l, possum$head_l)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor(pokarotta$heildarlengd, pokarotta$hofud_lengd)
 ## [1] 0.6910937
 </pre></div>
 </div>
@@ -466,8 +470,11 @@ skoðum svo lýsistærðir sem lýsa sambandi tveggja flokkabreyta.</p>
 <p><code class="docutils literal notranslate"><span class="pre">table()</span></code> skipunin telur hversu oft hver og ein útkoma flokkabreytu
 kemur fyrir. Viljum við sjá hversu margir nemendur voru í LAN203 og
 STÆ209 í gagnasafninu okkar gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(dat$is)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(konnun$is)
 ##
+## Jarðaberja  Súkkulaði    Vanilla
+##         39        91         71
+
 ## Jarðaberja  Súkkulaði    Vanilla
 ##         39        91         71
 </pre></div>
@@ -476,8 +483,12 @@ STÆ209 í gagnasafninu okkar gerum við það með:</p>
 hún hversu oft hversu mörg viðfangsefni hljóta hverja og eina af
 mögulegum samsetningum útkoma beggja breytanna eins og er sýnt hér að
 neðan.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(dat$is, dat$dyr)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(konnun$is, konnun$dyr)
 ##
+##               Hunda Ketti
+## Jarðaberja    23    16
+## Súkkulaði     61    30
+## Vanilla       43    28
 ##               Hunda Ketti
 ## Jarðaberja    23    16
 ## Súkkulaði     61    30
@@ -497,16 +508,22 @@ neðan.</p>
 <p><code class="docutils literal notranslate"><span class="pre">table()</span></code> skipunin skilar okkur fjölda/tíðni en viljum við frekar
 hlutföll getum við notað <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> aðferðina. Við mötum hana með
 því sem <code class="docutils literal notranslate"><span class="pre">table()</span></code> aðferðin skilar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(dat$is))
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is))
 ##
+## Jarðaberja  Súkkulaði    Vanilla
+##  0.1940299  0.4527363  0.3532338
 ## Jarðaberja  Súkkulaði    Vanilla
 ##  0.1940299  0.4527363  0.3532338
 </pre></div>
 </div>
 <p>Séum við að vinna með tvær breytur má mata <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> aðferðina á
 þrennan hátt. Viljum við fá heildarhlutföllin gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(dat$is, dat$dyr))
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is, konnun$dyr))
 ##
+##                  Hunda      Ketti
+##  Jarðaberja 0.11442786 0.07960199
+##  Súkkulaði  0.30348259 0.14925373
+##  Vanilla    0.21393035 0.13930348
 ##                  Hunda      Ketti
 ##  Jarðaberja 0.11442786 0.07960199
 ##  Súkkulaði  0.30348259 0.14925373
@@ -515,9 +532,16 @@ hlutföll getum við notað <code class="docutils literal notranslate"><span cla
 </div>
 <p>Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við
 hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti
+skoða hlutföllin eftir línum í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við
+hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti
 skoða hlutföllin eftir línum í töflunni gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(dat$is, dat$dyr), margin=1)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is, konnun$dyr), margin=1)
 ##
+##                 Hunda     Ketti
+##  Jarðaberja 0.5897436 0.4102564
+##  Súkkulaði  0.6703297 0.3296703
+##  Vanilla    0.6056338 0.3943662
 ##                 Hunda     Ketti
 ##  Jarðaberja 0.5897436 0.4102564
 ##  Súkkulaði  0.6703297 0.3296703
@@ -526,16 +550,24 @@ skoða hlutföllin eftir línum í töflunni gerum við það með:</p>
 </div>
 <p>Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur
 eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir
+dálkum í töflunni gerum við það með:
+Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur
+eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir
 dálkum í töflunni gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(dat$is, dat$dyr), margin=2)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is, konnun$dyr), margin=2)
 ##
+##                 Hunda     Ketti
+##  Jarðaberja 0.1811024 0.2162162
+##  Súkkulaði  0.4803150 0.4054054
+##  Vanilla    0.3385827 0.3783784
 ##                 Hunda     Ketti
 ##  Jarðaberja 0.1811024 0.2162162
 ##  Súkkulaði  0.4803150 0.4054054
 ##  Vanilla    0.3385827 0.3783784
 </pre></div>
 </div>
-<p>Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.</p>
+<p>Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
+Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.</p>
 <p>Takið eftir að nota má <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).</p>
 </section>
@@ -559,8 +591,12 @@ næmi (e. sensitivity) og sértæki (e. specificity).</p>
 Við mötum aðferðina með því sem reikna á og fjölda aukastafa sem á að
 skila. Skoðum t.d. töfluna hér að ofan. Viljum við aðeins að þremur
 aukastöfum sé skilað gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>round(prop.table(table(dat$is, dat$dyr),2),3)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>round(prop.table(table(konnun$is, konnun$dyr),2),3)
 ##
+##             Hunda Ketti
+##  Jarðaberja 0.181 0.216
+##  Súkkulaði  0.480 0.405
+##  Vanilla    0.339 0.378
 ##             Hunda Ketti
 ##  Jarðaberja 0.181 0.216
 ##  Súkkulaði  0.480 0.405
@@ -586,7 +622,7 @@ samantekt og meðaltal. Það er bæði hægt að mata aðferðina með tölum</
 </pre></div>
 </div>
 <p>og með nafni breytu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>summary(dat$ferdatimi_skoli)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>summary(konnun$ferdatimi_skoli)
 ##   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
 ##   0.00    8.00   16.00   19.43   25.00   75.00
 </pre></div>
@@ -596,7 +632,7 @@ aðferðin okkur nafnið á flokkunum og fjölda viðfangsefna í hverjum
 flokki.</p>
 <p>Það er líka hægt að mata <code class="docutils literal notranslate"><span class="pre">summary()</span></code> aðferðina með nafninu á
 gagnatöflu og fáum við þá upplýsingar um allar breyturnar í töflunni.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">dat</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">konnun</span><span class="p">)</span>
 <span class="c1">##       X            is            ferdatimi_skoli styrikerfi_simi</span>
 <span class="c1">## Min.   :  1   Length:201         Min.   : 0.00   Length:201</span>
 <span class="c1">## 1st Qu.: 51   Class :character   1st Qu.: 8.00   Class :character</span>
@@ -645,7 +681,7 @@ nafninu á talnabreytunni, nafninu á flokkabreytunni og nafninu á
 aðferðinni sem við viljum beita. Ef það vantar einhver gildi þurfum við
 að nota <code class="docutils literal notranslate"><span class="pre">na.rm=TRUE</span></code> líkt og áður. Viljum við t.d. reikna út meðaltal
 ferðatíma í skóla eftir ferðamáta gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(dat$ferdatimi_skoli, dat$ferdamati_skoli, mean, na.rm=T)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(konnunat$ferdatimi_skoli, konnun$ferdamati_skoli, mean, na.rm=T)
 ##            Á annan hátt Á hjóli / rafhlaupahjóli     Gangandi / skokkandi
 ##                2.500000                11.666667                 7.588235
 ##            Með einkabíl               Með strætó
@@ -663,102 +699,91 @@ yfir í aðra. Með því að nota pípurihátt verða skipanirnar einfaldari
 og auðskiljanlegar. Skoðum nokkur dæmi um pípurithátt:</p>
 <p>Ef við viljum t.d. finna meðaltalið á tölunum 1-101, taka svo kvaðratrótina
 af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert svona:</p>
-<dl class="simple">
-<dt>::</dt><dd><p>round(sqrt(mean(1:101)),2)
-## 7.14</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">101</span><span class="p">)),</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">## 7.14</span>
+</pre></div>
+</div>
 <p>Með pípun:</p>
-<dl>
-<dt>::</dt><dd><dl class="simple">
-<dt>1:101 %&gt;%</dt><dd><p>mean() %&gt;%
-sqrt() %&gt;%
-round(2)</p>
-</dd>
-</dl>
-<p>## 7.14</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="p">:</span><span class="mi">101</span> <span class="o">%&gt;%</span>
+   <span class="n">mean</span><span class="p">()</span> <span class="o">%&gt;%</span>
+   <span class="n">sqrt</span><span class="p">()</span> <span class="o">%&gt;%</span>
+   <span class="nb">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">## 7.14</span>
+</pre></div>
+</div>
 <p>Þessa skipun er auðveldara að lesa.</p>
 <p>Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með strætó
 eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.</p>
-<dl class="simple">
-<dt>::</dt><dd><p>dat1 &lt;- dat
-dat1 &lt;- filter(dat1, ferdamati_skoli==“Með strætó“)
-dat1 &lt;- select(dat1, ferdatimi_skoli, is)
-dat1 &lt;- group_by(dat1, is)
-dat1 &lt;- summarize(dat1, Meðalferðatími=mean(ferdatimi_skoli))
-dat1
-## is             Meðalferðatími
-## Jarðaberja     48.60000
-## SúkkulaðI      25.07692
-## Vanilla        36.91667</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">konnun</span>
+<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Með strætó&quot;</span><span class="p">)</span>
+<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span>
+<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">group_by</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span>
+<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">summarize</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">Meðalferðatími</span><span class="o">=</span><span class="n">mean</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span>
+<span class="n">konnun1</span>
+<span class="c1">## is             Meðalferðatími</span>
+<span class="c1">## Jarðaberja     48.60000</span>
+<span class="c1">## SúkkulaðI      25.07692</span>
+<span class="c1">## Vanilla        36.91667</span>
+</pre></div>
+</div>
 <p>Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfaldara
 er að gera þetta með pípurithætti.</p>
-<dl>
-<dt>::</dt><dd><dl class="simple">
-<dt>dat %&gt;%</dt><dd><p>filter(ferdamati_skoli==“Með strætó“) %&gt;%
-select(ferdatimi_skoli, is) %&gt;%
-group_by(is) %&gt;%
-summarise(mean(ferdatimi_skoli))</p>
-</dd>
-</dl>
-<p>## is             Meðalferðatími
-## Jarðaberja     48.60000
-## SúkkulaðI      25.07692
-## Vanilla        36.91667</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">%&gt;%</span>
+   <span class="nb">filter</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Með strætó&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   <span class="n">select</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   <span class="n">group_by</span><span class="p">(</span><span class="ow">is</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   <span class="n">summarise</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span>
+
+<span class="c1">## is             Meðalferðatími</span>
+<span class="c1">## Jarðaberja     48.60000</span>
+<span class="c1">## SúkkulaðI      25.07692</span>
+<span class="c1">## Vanilla        36.91667</span>
+</pre></div>
+</div>
 <p>Það má líka nota pípurithátt við að teikna myndir.</p>
-<dl class="simple">
-<dt>::</dt><dd><p>dat %&gt;% ggplot(aes(x=is, y=ferdatimi_skoli))+
-geom_boxplot()</p>
-</dd>
-</dl>
-<figure class="align-default">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span><span class="o">+</span>
+<span class="n">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
 <img alt="../_images/mynd_pipu_4.svg" src="../_images/mynd_pipu_4.svg" /></figure>
 <p>Skoðum fleiri dæmi:</p>
-<dl class="simple">
-<dt>::</dt><dd><p>dat %&gt;% select(ferdatimi_skoli) %&gt;% summary()
-## ferdamati_skoli
-## Min.     :0.00
-## 1at Qu.  :8.00
-## Median   :16.00
-## Mean     :19.43
-## 3rd Qu   :25.00
-## Max.     :75.00</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">select</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">summary</span><span class="p">()</span>
+<span class="c1">## ferdamati_skoli</span>
+<span class="c1">## Min.     :0.00</span>
+<span class="c1">## 1at Qu.  :8.00</span>
+<span class="c1">## Median   :16.00</span>
+<span class="c1">## Mean     :19.43</span>
+<span class="c1">## 3rd Qu   :25.00</span>
+<span class="c1">## Max.     :75.00</span>
+</pre></div>
+</div>
 <p>Einnig má nota <code class="docutils literal notranslate"><span class="pre">kable()</span></code> skipunina sem útbýr fína töflu.</p>
-<dl class="simple">
-<dt>::</dt><dd><p>table(dat$stefnumot) %&gt;% kable()
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(konnun$stefnumot) %&gt;% kable()
 ## Var1           Freq
 ## Á ísrúnt       93
 ## Á kaffihús     74
 ## Í bíó          12
-## Í fjallgöngu   22</p>
-</dd>
-</dl>
+## Í fjallgöngu   22
+</pre></div>
+</div>
 <p>Reiknum allskyns lýsistærðir fyrir breytuna <code class="docutils literal notranslate"><span class="pre">smjor_kostar</span></code>
 eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code>.</p>
-<dl>
-<dt>::</dt><dd><dl class="simple">
-<dt>dat %&gt;%</dt><dd><p>filter(!is.na(smjor_kostar)) %&gt;%
-group_by(stefnumot) %&gt;%
-summarise(„Miðgildi“=median(smjor_kostar),
-„Meðaltal“ = mean(smjor_kostar),
-„Staðalfrávik“ = sd(smjor_kostar)) %&gt;% kable()</p>
-</dd>
-</dl>
-<p>## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>konnun %&gt;%
+   filter(!is.na(smjor_kostar)) %&gt;%
+   group_by(stefnumot) %&gt;%
+   summarise(&quot;Miðgildi&quot;=median(smjor_kostar),
+   &quot;Meðaltal&quot; = mean(smjor_kostar),
+   &quot;Staðalfrávik&quot; = sd(smjor_kostar)) %&gt;% kable()
+
+## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
 ## Á kaffihús           500.0              577.5676     209.5798
 ## Á ísrúnt        618.0           621.6667     229.0420
 ## Í bíó              589.5        576.0000     184.0198
-## Í fjallgöngu      513.5         540.5909     153.5586</p>
-</dd>
-</dl>
+## Í fjallgöngu      513.5         540.5909     153.5586
+</pre></div>
+</div>
 </section>
 </section>
 </section>

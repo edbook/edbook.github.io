@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>13. Endurvalsaðferðir &mdash; R frá grunni </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="Orðalistar" href="../ordalistar/" />
+    <link rel="prev" title="12. Knitr" href="../kafli12/" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            R frá grunni
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Inngangur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Frá tilraun til gagna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Myndræn framsetning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lýsandi tölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Líkindafræðileg undirstaða</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Ályktunartölfræði</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Ályktanir um flokkabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Ályktanir um talnabreytur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Einþátta fervikagreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Endurvalsaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#endurvalsafer-e-bootstrap-method">13.1. Endurvalsaðferð (e. Bootstrap method)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#oryggisbil-reiknu-me-endurvalsafer">13.1.1. Öryggisbil reiknuð með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi">13.1.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#umraanaprof-e-permutation-test">13.2. Umraðanapróf (e. Permutation test)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer">13.2.1. Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">13.2.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_hofunda/">Um höfunda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../um_R_leiksvaedi/">Um R leiksvæði</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">R frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">13. </span>Endurvalsaðferðir</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/R_fra_grunni/kafli13.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="endurvalsaferir">
+<span id="c-endurvalsadferdir"></span><h1><span class="section-number">13. </span>Endurvalsaðferðir<a class="headerlink" href="#endurvalsaferir" title="Permalink to this heading"></a></h1>
+<p>Eins og var minnst á í fyrri köflum þá er hægt
+að nota aðrar aðferðir til að reikna prófstærðir og öryggisbil
+þegar forkröfur tilgátuprófa eru ekki uppfyllt. Hingað til hafið
+þið séð hvernig má reikna öryggisbil fyrir ýmsar lýsistærðir.
+Allar þær aðferðir gera ráð fyrir ákveðnum forsendum um líkindadreifingu
+slembistærðarinnar sem lýsistærðin er reiknuð út frá. Í þessum kafla lærið þið
+öfluga og gífurlega mikið notaða aðferð sem hægt er að nota þegar þessar
+forsendur eru ekki til staðar.</p>
+<section id="endurvalsafer-e-bootstrap-method">
+<h2><span class="section-number">13.1. </span>Endurvalsaðferð (e. Bootstrap method)<a class="headerlink" href="#endurvalsafer-e-bootstrap-method" title="Permalink to this heading"></a></h2>
+<p>Endurvalsaðferð er stikalaus aðferð til að meta úrtaksdreifingu lýsistærðar.
+Það að hún sé stikalaus þýðir að hún gerir engar forsendur um
+líkindadreifingu breytunnar sjálfrar. Endurvalsaðferðin var fyrst lögð til af
+Bradley Efron árið 1970. Hún byggist á að velja ný endurvalsúrtök úr úrtakinu
+sem við höfum í höndunum.</p>
+<section id="oryggisbil-reiknu-me-endurvalsafer">
+<h3><span class="section-number">13.1.1. </span>Öryggisbil reiknuð með endurvalsaðferð:<a class="headerlink" href="#oryggisbil-reiknu-me-endurvalsafer" title="Permalink to this heading"></a></h3>
+<p><strong>1.</strong>  Hermið endurvalsúrtök af breytunni ykkar, af sömu stærð og fjöldi
+mælinganna sem þið hafið en með <em>ísetningu</em> það er það má
+velja sama gildið endurtekið.</p>
+<p><strong>2.</strong>  Reiknið mat á lýsistærðinni fyrir nýja úrtakið.</p>
+<p><strong>3.</strong>  Endurtakið lið 1 og 2 mjög oft t.d. 100.000 sinnum.</p>
+<p><strong>4.</strong>  Skoðið á hvaða bili 95% mælinganna lentu. Þetta bil er öryggisbilið ykkar!</p>
+<p>Eftirfarandi R kóði er dæmi um hvernig þið getið notað endurvalsaðferðina til að
+reikna 95% öryggisbil.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tmp &lt;- replicate(100000, lýsistærð(sample(gogn$breyta==&#39;gildi&#39;, replace=T), na.rm=T))
+quantile(tmp, c(0.025, 0.0975))
+</pre></div>
+</div>
+<section id="synidaemi">
+<h4><span class="section-number">13.1.1.1. </span>Sýnidæmi<a class="headerlink" href="#synidaemi" title="Permalink to this heading"></a></h4>
+<p>Skoðum hvernig við getum fundið öryggisbil fyrir meðaltal reiknað með endurvalsaðferð.
+Veljum breytunna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> úr <code class="docutils literal notranslate"><span class="pre">konnun</span></code> gagnasafninu.
+Byrjum að teikna viðeigandi mynd af breytunni.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span><span class="o">+</span><span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="../_images/endurvals1.svg" src="../_images/endurvals1.svg" /></figure>
+<p>Næst skulum við herma endurvalsúrtök af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> fyrir meðaltalið 100.000 sinnum.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>urtok &lt;- replicate(100000, mean(sample(konnun$ferdatimi_skoli, replace=T), na.rm=T))
+</pre></div>
+</div>
+<p>Teiknum mynd af urtokunum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qplot</span><span class="p">(</span><span class="n">urtok</span><span class="p">)</span><span class="o">+</span><span class="n">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="../_images/endurvals2.svg" src="../_images/endurvals2.svg" /></figure>
+<p>Sjáum að dreifingin lýkist normaldreifingu…. Lögmál mikils fjölda …</p>
+<p>Reiknum svo loks öryggisbilið</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">urtok</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">))</span>
+<span class="c1">##</span>
+<span class="c1">## 2.5%        97.5%</span>
+<span class="c1">## 17.52239    21.40796</span>
+</pre></div>
+</div>
+<p>Svo öryggisbilið okkar er <span class="math notranslate nohighlight">\([17.52239, 21.40796]\)</span>.</p>
+<p>Endurvalsaðferð er einstaklega öflug aðferð til að reikna öryggisbil.
+Aðferðin er sérlega notadrjúg þegar forsendur fyrir klassískum
+aðferðum eru fjarri því að vera uppfylltar. Hinsvegar ef
+forsendurnar standast, þá eru öryggisbil reiknuð með
+endurvalsaðferð víðari en öryggisbil reiknað með klassískum
+tilgátuprófum. Í þeim tilfellum þar sem forkröfur tilgátuprófa
+eru uppfylltar skal frekar nota tilgátupróf til að reikna öryggisbil
+heldur en endurvalsaðferð.</p>
+</section>
+</section>
+</section>
+<section id="umraanaprof-e-permutation-test">
+<h2><span class="section-number">13.2. </span>Umraðanapróf (e. Permutation test)<a class="headerlink" href="#umraanaprof-e-permutation-test" title="Permalink to this heading"></a></h2>
+<p>Umraðanapróf eru eins og endurvalsaðferð, stikalaus aðferð til að framkvæma tilgátupróf.
+Umraðanapróf eru notuð til að draga ályktanir um úrtaksdreifingu
+lýsistærðar. Þau byggja á eins og nafnið gefur til kynna að umraða
+slembið mælingunum sem við höfum og rjúfa þannig samband breytanna sem við erum að skoða.
+Lýsistærðin sem við höfum áhuga á að skoða er reiknuð í þessu tilviki
+þegar samband breytanna er ekkert. Þetta er endurtekið oft til að fá mat á því
+hver úrtaksdreifingin væri ef núlltilgátan <span class="math notranslate nohighlight">\(H_0\)</span> væri sönn. Þ.e. við höfnum
+ekki núltilgátunni og afsönnum gagntilgátuna.</p>
+<p>Umraðanapróf má nota í nánast hvaða tilvikum sem er til að smíða tilgátupróf án þess að gera
+forsendur um líkindadreifingu undirliggjandi breytu. Það má aðlaga þau til að koma í stað
+þeirra klassísku tilgátuprófa sem við höfum séð hingað til. Ef forsendur tilgátuprófa
+standast skal þó frekar nota þau því þá hafa umraðanapróf minna afl en klassísku tilgátuprófin.</p>
+<p>Núlltilgátan (<span class="math notranslate nohighlight">\(H_0\)</span>) okkar er sú að það sé enginn munur á lýsistærðinni milli hópanna.
+Gagntilgátan (<span class="math notranslate nohighlight">\(H_1\)</span>) er sú að lýsistærðin sé frábrugðin milli hópa.</p>
+<p>Í þessu námskeiði skoðum við einungis umraðanapróf þegar við erum með eina lýsistærð
+sem við ætlum að bera saman í tveimur hópum.</p>
+<section id="tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer">
+<h3><span class="section-number">13.2.1. </span>Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:<a class="headerlink" href="#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer" title="Permalink to this heading"></a></h3>
+<p><em>Höfum talnabreytu A og flokkbreytu B (sem hefur aðeins tvo flokka) sem segir til um
+hvorum hópi hver mæling tilheyrir.</em></p>
+<p><strong>1.</strong>  Reiknið mismun lýsistærðanna í hópunm tveimur.
+Þessi mismunurinn er prófstærðin ykkar!</p>
+<p><strong>2.</strong>  Búið til nýja breytu B*, sem er handahófskennd umröðun á gildunum
+í breytu B. Passið að umraða ekki breytu A í leiðinni! Með því að umraða gildunum rjúfum við
+sambandið milli breytanna tveggja, þ.e. líkjum eftir þegar tilvikinu þegar núlltilgátan er sönn.</p>
+<p><strong>3.</strong>  Reiknið mismuninn á lýsistærðinni miðað við hópaskiptinguna í breyu B*.
+(Þannig reiknum við eina útkomu á prófstærðinni í því tilviki þegar núlltilgátan er sönn)</p>
+<p><strong>4.</strong>  Endurtakið lið 1 og 2 mjög oft, t.d. 100.000 sinnum.</p>
+<p><strong>5.</strong>  Skoðið á hvaða bili 95% mælinganna á mismuninum lentu. Það sem er utan þess bils er höfnunarsvæðið ykkar!</p>
+<p><strong>6.</strong>  Ef að mismunurinn á lýsistærðinni fyrir raunverulegu hópaskiptinguna fellur á það bil,
+þá er það gildi sennilegt og við höfnum ekki núlltilgátunni.</p>
+<p><strong>7.</strong>  Ef að mismunurinn á lýsistærðinni fyrir raunverulegu hópaskiptinguna fellur ekki á það bil,
+þá er það gildi ósennilegt og við höfnum núlltilgátunni.</p>
+<p>Eftirfarandi kóði er dæmi um hvernig þið getið framkvæmt umraðanapróf.
+Þar sem breytunar A og B eru samkvæmt lýsingunni hér að ofan og lýsistærðin sem við ætlum
+að bera saman má vera hvaða lýsistærð sem er t.d. minnsta gildi, meðaltal, miðgildi o.s.frv.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(gogn$A, gogn$B, lýsistærð)
+diff(tapply(gogn$A, gogn$B, lýsistærð))
+tmp&lt;-replicate(100000, diff(tapply(gogn$A, sample(gogn$B), lýsistærð)))
+hist(tmp)
+quantile(tmp, c(0.025, 0.975))
+</pre></div>
+</div>
+<section id="id1">
+<h4><span class="section-number">13.2.1.1. </span>Sýnidæmi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Höldum áfram að nota talnabreytuna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> og veljum flokkabreytuna
+<code class="docutils literal notranslate"><span class="pre">ferdamati_skoli_okutaeki</span></code> sem við bjuggum til í kafla 2.6 sem segir til um hvort
+nemedur ferðist í skóla með ökutæki eða ekki. Byrjum að teikna graf:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">geom_histogram</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">ferdamati_skoli_okutaeki</span><span class="p">)</span><span class="o">+</span>
+ <span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Ferðatími í skóla&quot;</span><span class="p">)</span><span class="o">+</span>
+ <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="../_images/endurvals3.svg" src="../_images/endurvals3.svg" /></figure>
+<p>Ætlum að skoða muninn á meðaltölum eftir því hvort nemendur
+ferðist með ökutæki í skóla eða ekki. Reiknum fyrst meðaltölin í hópunum.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(konnun$ferdatimi_skoli, konnun$ferdamati_skoli_okutaeki, mean, na.rm=T)
+##
+## Ekki með ökutæki     Með ökutæki
+## 7.390244             22.512500
+</pre></div>
+</div>
+<p>Reiknum mismuninn á meðaltölunum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>diff(tapply(konnun$ferdatimi_skoli, konnun$ferdamati_skoli_okutaeki, mean, na.rm=T))
+##
+## Með ökutæki
+## 15.12226
+</pre></div>
+</div>
+<p>Þessi tala er prófstærðin okkar. SKOÐA BETUR</p>
+<p>Framkvæmum loks umraðanapróf:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tmp &lt;- replicate(100000, diff(tapply(konnun$ferdatimi_skoli,
+sample(konnun$ferdamati_skoli_okutaeki, replace=T), mean, na.rm=T)))
+</pre></div>
+</div>
+<p>Teiknum</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qplot</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="o">+</span><span class="n">geom_histogram</span><span class="p">()</span><span class="o">+</span><span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;Munur á meðaltölum&quot;</span><span class="p">)</span><span class="o">+</span><span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Tíðni&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="../_images/endurvals4.svg" src="../_images/endurvals4.svg" /></figure>
+<p>Loks reyknum við öryggisbil</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">))</span>
+<span class="c1">##</span>
+<span class="c1">## 2.5%        97.5%</span>
+<span class="c1">## -5.026940   4.717172</span>
+</pre></div>
+</div>
+<p>SSKOÐA BETUR MEÐ PRÓFSTÆRÐ OG FLEIRA</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli12/" class="btn btn-neutral float-left" title="12. Knitr" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ordalistar/" class="btn btn-neutral float-right" title="Orðalistar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

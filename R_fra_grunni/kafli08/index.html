@@ -200,6 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Endurvalsaðferðir</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
@@ -264,6 +265,7 @@ flokkabreytu</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil og fleira</p>
 <p><strong>Helstu stillingar:</strong> alternative, conf.level</p>
 <p><strong>Forkröfur prófs:</strong> Normaldreifing</p>
+<p><strong>Forkröfur prófs:</strong> Normaldreifing</p>
 </div>
 <hr class="docutils" />
 <p>Við mötum <code class="docutils literal notranslate"><span class="pre">var.test()</span></code> aðferðina á mismunandi hátt eftir því hvort
@@ -310,17 +312,22 @@ stillingunni <code class="docutils literal notranslate"><span class="pre">altern
 </tbody>
 </table>
 <p>Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
+og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):
+Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
 og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var.test(dat$ferdatimi_skoli~dat$ferdamati_skoli==&quot;Gangandi / skokkandi&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&quot;Gangandi / skokkandi&quot;)
 ##
 ##  F test to compare two variances
 ##
-## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
 ## F = 5.4739, num df = 166, denom df = 33, p-value = 2.875e-07
 ## alternative hypothesis: true ratio of variances is not equal to 1
 ## 95 percent confidence interval:
 ##  3.053460 8.912866
+##  3.053460 8.912866
 ## sample estimates:
+## ratio of variances
+##           5.473898
 ## ratio of variances
 ##           5.473898
 </pre></div>
@@ -328,11 +335,20 @@ og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):<
 <p>Úr úttakinu má lesa m.a. eftirfarandi:</p>
 <ul class="simple">
 <li><p>Gildið á prófstærðinni: <span class="math notranslate nohighlight">\(f\)</span> = 5.4739</p></li>
+<li><p>Gildið á prófstærðinni: <span class="math notranslate nohighlight">\(f\)</span> = 5.4739</p></li>
+<li><p>p-gildið: 2.875e-07</p></li>
 <li><p>p-gildið: 2.875e-07</p></li>
 <li><p>Öryggisbilið: 95 percent confidence interval:
+<span class="math notranslate nohighlight">\([3.053460, 8.912866]\)</span>
 <span class="math notranslate nohighlight">\([3.053460, 8.912866]\)</span></p></li>
 </ul>
 <p>Við sjáum að p-gildið er minna en 0.05 svo við höfnum núlltilgátunni
+og drögum þá ályktun að munur sé á dreifni ferðatíma eftir því hvort farið sé gangandi eða ekki.
+Við sjáum líka að 95% öryggisbil fyrir hlutfallið á dreifninni er
+<span class="math notranslate nohighlight">\([3.053460, 8.912866]\)</span>. Hlutlausa ástandið er að hlutfallið sé 1
+(því þá er dreifnin jöfn í báðum hópum). Takið eftir að öryggisbilið
+inniheldur ekki töluna 1 í samræmi við að við höfnum núlltilgátunni.
+Við sjáum að p-gildið er minna en 0.05 svo við höfnum núlltilgátunni
 og drögum þá ályktun að munur sé á dreifni ferðatíma eftir því hvort farið sé gangandi eða ekki.
 Við sjáum líka að 95% öryggisbil fyrir hlutfallið á dreifninni er
 <span class="math notranslate nohighlight">\([3.053460, 8.912866]\)</span>. Hlutlausa ástandið er að hlutfallið sé 1
@@ -349,6 +365,7 @@ inniheldur ekki töluna 1 í samræmi við að við höfnum núlltilgátunni.</p
 <p><strong>Inntak:</strong> nöfn á talnabreytu og flokkabreytu</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil og fleira</p>
 <p><strong>Forkröfur prófs:</strong> Normaldreifing</p>
+<p><strong>Forkröfur prófs:</strong> Normaldreifing</p>
 </div>
 <hr class="docutils" />
 <p>Þegar þýðin/hóparnir eru fleiri en tveir má nota <code class="docutils literal notranslate"><span class="pre">bartlett.test()</span></code>
@@ -360,16 +377,21 @@ munur sé á dreifni hópanna. Við mötum aðferðina með</p>
 </pre></div>
 </div>
 <p>Viljum við kanna hvort dreifni ferðatíma sé ólík á milli
+einhverra tveggja ferðamáta gerum við það með:
+Viljum við kanna hvort dreifni ferðatíma sé ólík á milli
 einhverra tveggja ferðamáta gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>bartlett.test(dat$ferdatimi_skoli~dat$ferdamati_skoli)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>bartlett.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli)
 ##
 ##  Bartlett test of homogeneity of variances
 ##
-## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli
 ## Bartlett&#39;s K-squared = 31.33, df = 4, p-value = 2.622e-06
 </pre></div>
 </div>
 <p>Við sjáum að gildið á prófstærðinni er <span class="math notranslate nohighlight">\(31.33\)</span> og p-gildið er
+<span class="math notranslate nohighlight">\(2.622e-06\)</span>. P-gildið er minna en 0.05 og því höfnum við núlltilgátunni
+og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.
+Við sjáum að gildið á prófstærðinni er <span class="math notranslate nohighlight">\(31.33\)</span> og p-gildið er
 <span class="math notranslate nohighlight">\(2.622e-06\)</span>. P-gildið er minna en 0.05 og því höfnum við núlltilgátunni
 og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.</p>
 </section>
@@ -387,6 +409,7 @@ og ályktum að dreifnin sé misjöfn í einhverjum tveimur hóp.</p>
 og flokkabreytu</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil og fleira</p>
 <p><strong>Helstu stillingar:</strong> paired, mu, alternative, conf.level</p>
+<p><strong>Forkröfur prófs:</strong> Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn</p>
 <p><strong>Forkröfur prófs:</strong> Meðaltöl normaldreifð, þ.e. mörg úrtök eða normaldreifð gögn</p>
 </div>
 <hr class="docutils" />
@@ -417,17 +440,23 @@ Sjálfgefið er að hafa öryggið <span class="math notranslate nohighlight">\(
 <p>Sjálfgefið er að kanna núlltilgátuna: <span class="math notranslate nohighlight">\(H_0: \mu=0\)</span>. Slíkur
 samanburður er óáhugaverður ef við viljum t.d. kanna ferðatíma nemenda í skólann
 því líklega búa mjög fáir nemendur í háskólabíó. Könnum frekar hvort ferðatíminn
+sé frábrugðinn 20 og tilgreinum það með stillingunni <code class="docutils literal notranslate"><span class="pre">mu</span></code>.
+samanburður er óáhugaverður ef við viljum t.d. kanna ferðatíma nemenda í skólann
+því líklega búa mjög fáir nemendur í háskólabíó. Könnum frekar hvort ferðatíminn
 sé frábrugðinn 20 og tilgreinum það með stillingunni <code class="docutils literal notranslate"><span class="pre">mu</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(dat$ferdatimi_skoli, mu=20)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(konnun$ferdatimi_skoli, mu=20)
 ##
 ##  One Sample t-test
 ##
-## data:  dat$ferdatimi_skoli
+## data:  konnun$ferdatimi_skoli
 ## t = -0.57532, df = 200, p-value = 0.5657
 ## alternative hypothesis: true mean is not equal to 20
 ## 95 percent confidence interval:
 ##  17.46685 21.38887
+##  17.46685 21.38887
 ## sample estimates:
+## mean of x
+##  19.42786
 ## mean of x
 ##  19.42786
 </pre></div>
@@ -435,10 +464,15 @@ sé frábrugðinn 20 og tilgreinum það með stillingunni <code class="docutils
 <p>Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:</p>
 <ul class="simple">
 <li><p>Prófstærðina: t = -0.57532</p></li>
+<li><p>Prófstærðina: t = -0.57532</p></li>
+<li><p>Fjölda frígráða: 200</p></li>
 <li><p>Fjölda frígráða: 200</p></li>
 <li><p>p-gildið: <span class="math notranslate nohighlight">\(0.5657\)</span></p></li>
+<li><p>p-gildið: <span class="math notranslate nohighlight">\(0.5657\)</span></p></li>
 <li><p>Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
+interval: <span class="math notranslate nohighlight">\([17.46685, 21.38887]\)</span>
 interval: <span class="math notranslate nohighlight">\([17.46685, 21.38887]\)</span></p></li>
+<li><p>Úrtaksmeðaltalið: mean of x 19.42786</p></li>
 <li><p>Úrtaksmeðaltalið: mean of x 19.42786</p></li>
 </ul>
 </section>
@@ -450,6 +484,7 @@ mælingar geta gögnin okkar verið á mismunandi formi. Annars vegar geta
 gögnin verið á löngu sniði, þar sem að ein breyta inniheldur mælingarnar
 á talnabreytunni og önnur breyta tilgreinir hvaða hópi hver og ein
 mæling tilheyrir. Algengast er að gögn séu geymd á slíku sniði og eru
+gögnin um ferðatíma og máta dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
 gögnin um ferðatíma og máta dæmi. Hins vegar geta gögnin verið á víðu sniði þar sem búið
 er að skipta talnabreytunni upp í tvær breytur, eina fyrir hvorn hóp.</p>
 <p>Við mötum <code class="docutils literal notranslate"><span class="pre">t.test()</span></code> aðferðina á mismunandi vegu eftir því á hvaða
@@ -467,15 +502,19 @@ gagntilgátan er <span class="math notranslate nohighlight">\(\mu_1 - \mu_2 &lt;
 tvíhliða gagntilgátu.</p></li>
 </ul>
 <p>Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
+Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:
 Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(dat$ferdatimi_skoli~dat$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
 ##
-## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
 ## t = 9.5068, df = 118.32, p-value = 2.889e-16
 ## alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
 ## 95 percent confidence interval:
 ##  11.28187 17.21830
+##  11.28187 17.21830
 ## sample estimates:
+## mean in group FALSE  mean in group TRUE
+##           21.838323            7.588235
 ## mean in group FALSE  mean in group TRUE
 ##           21.838323            7.588235
 </pre></div>
@@ -483,17 +522,24 @@ tvíhliða gagntilgátu.</p></li>
 <p>Í úttakinu eru fólgnar gífurlegar upplýsingar. Við fáum:</p>
 <ul class="simple">
 <li><p>Prófstærðina: t = 9.5068</p></li>
+<li><p>Prófstærðina: t = 9.5068</p></li>
+<li><p>Fjölda frígráða: 118.32</p></li>
 <li><p>Fjölda frígráða: 118.32</p></li>
 <li><p>p-gildið: 2.889e-16</p></li>
+<li><p>p-gildið: 2.889e-16</p></li>
 <li><p>Öryggisbilið, með örygginu tilgreindu: 95 percent confidence
+interval: <span class="math notranslate nohighlight">\([11.28187,17.21830]\)</span>
 interval: <span class="math notranslate nohighlight">\([11.28187,17.21830]\)</span></p></li>
+<li><p>Úrtaksmeðaltölin: 21.838323, 7.588235</p></li>
 <li><p>Úrtaksmeðaltölin: 21.838323, 7.588235</p></li>
 </ul>
 <p>Séu gögnin á víðu sniði er <code class="docutils literal notranslate"><span class="pre">t.test()</span></code> mötuð með breytunum tveimur sem
 bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
 aðstoð skipunarinnar <code class="docutils literal notranslate"><span class="pre">pivot_wider</span></code>, sem kynnt var í kassa
+bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
+aðstoð skipunarinnar <code class="docutils literal notranslate"><span class="pre">pivot_wider</span></code>, sem kynnt var í kassa
 <a class="reference internal" href="../kafli02/#rf-spread"><span class="std std-numref">2.7.1.5</span></a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ferdirvitt</span> <span class="o">&lt;-</span> <span class="n">dat</span> <span class="o">%&gt;%</span> <span class="n">mutate</span><span class="p">(</span><span class="n">fotgangandi</span><span class="o">=</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Gangandi / skokkandi&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ferdirvitt</span> <span class="o">&lt;-</span> <span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">mutate</span><span class="p">(</span><span class="n">fotgangandi</span><span class="o">=</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Gangandi / skokkandi&quot;</span><span class="p">))</span>
                   <span class="o">%&gt;%</span> <span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="o">=</span><span class="n">fotgangandi</span><span class="p">,</span>
                   <span class="n">values_from</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="n">names_prefix</span><span class="o">=</span><span class="s2">&quot;Gangandi_&quot;</span><span class="p">)</span>
 </pre></div>
@@ -501,17 +547,26 @@ aðstoð skipunarinnar <code class="docutils literal notranslate"><span class="p
 <p>Athugið að ef við hefðum ekki notað stillinguna <code class="docutils literal notranslate"><span class="pre">names_prefix</span></code> hefðum við fengið dálkanöfnin
 <code class="docutils literal notranslate"><span class="pre">TRUE</span></code> og <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> en það eru frátekin lykilorð í R. Við hefðum þó geta nálgast dálkana
 með því að nota gæsalappir eða úrfellingarmerki, t.d. <code class="docutils literal notranslate"><span class="pre">&quot;TRUE&quot;</span></code>.
+Athugið að ef við hefðum ekki notað stillinguna <code class="docutils literal notranslate"><span class="pre">names_prefix</span></code> hefðum við fengið dálkanöfnin
+<code class="docutils literal notranslate"><span class="pre">TRUE</span></code> og <code class="docutils literal notranslate"><span class="pre">FALSE</span></code> en það eru frátekin lykilorð í R. Við hefðum þó geta nálgast dálkana
+með því að nota gæsalappir eða úrfellingarmerki, t.d. <code class="docutils literal notranslate"><span class="pre">&quot;TRUE&quot;</span></code>.
 Hérna framkvæmum við sama t-prófið með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(ferdirvitt$Gangandi_FALSE, ferdirvitt$Gangandi_TRUE)
+t.test(ferdirvitt$Gangandi_FALSE, ferdirvitt$Gangandi_TRUE)
 ##
 ##  Welch Two Sample t-test
 ##
 ## data:  ferdirvitt$Gangandi_FALSE and ferdirvitt$Gangandi_TRUE
 ## t = 9.5068, df = 118.32, p-value = 2.889e-16
+## data:  ferdirvitt$Gangandi_FALSE and ferdirvitt$Gangandi_TRUE
+## t = 9.5068, df = 118.32, p-value = 2.889e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
 ##  11.28187 17.21830
+##  11.28187 17.21830
 ## sample estimates:
+## mean of x mean of y
+## 21.838323  7.588235
 ## mean of x mean of y
 ## 21.838323  7.588235
 </pre></div>
@@ -640,6 +695,7 @@ og flokkabreytu</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi</p>
 <p><strong>Helstu stillingar:</strong> paired, mu, alternative</p>
 <p><strong>Forkröfur prófs:</strong> Munur á dreifingu er hliðrun um fasta</p>
+<p><strong>Forkröfur prófs:</strong> Munur á dreifingu er hliðrun um fasta</p>
 </div>
 <hr class="docutils" />
 <p>Prófið má framkvæma til að kanna eitt miðgildi eða bera saman tvö
@@ -654,16 +710,16 @@ munurinn á dreifingu breytanna tveggja sé hliðrun um fasta tölu og því á
 ##
 ##  Wilcoxon signed rank test with continuity correction
 ##
-## data:  dat$ferdatimi_skoli
+## data:  konnun$ferdatimi_skoli
 ## V = 6159, p-value = 0.1073
 ## alternative hypothesis: true location is not equal to 20
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wilcox.test(dat$ferdatimi_skoli~dat$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wilcox.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
 ##
 ##  Wilcoxon rank sum test with continuity correction
 ##
-## data:  dat$ferdatimi_skoli by dat$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
 ## W = 4847.5, p-value = 6.877e-11
 ## alternative hypothesis: true location shift is not equal to 0
 </pre></div>

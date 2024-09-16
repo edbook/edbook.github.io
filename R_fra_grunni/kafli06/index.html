@@ -185,6 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Línuleg aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Tvíkosta aðhvarfsgreining</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Knitr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Endurvalsaðferðir</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ordalistar/">Orðalistar</a></li>
@@ -305,8 +306,10 @@ dæmis má gefa skipanirnar</p>
 <p>til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.</p>
 <p>Við getum að sjálfsögðu matað sample með nafni á breytu sem tilheyrir
 gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
+Hvenær fæddist Napóleon? Gerum við það með:
+gagnafölu. Viljum við t.d. velja handahófskennt 10 svör við spurningunni:
 Hvenær fæddist Napóleon? Gerum við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sample(dat$napoleon_faeddur,10)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sample(konnun$napoleon_faeddur,10)
 ##  [1] 1769 1770 1750 1874 1700 1498 1769 1560 1690 1800
 </pre></div>
 </div>
@@ -333,20 +336,24 @@ meðaltalið byggir á nægjanlega mörgum mælingum, óháð því hver upphafl
 dreifing slembistærðarinnar var. Gott dæmi um hana má sjá með því að
 skoða breytuna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> sem lýsir því hve lengi nemendur eru á
 leið í skóla. Byrjum á því að skoða stuðlarit af
+skoða breytuna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> sem lýsir því hve lengi nemendur eru á
+leið í skóla. Byrjum á því að skoða stuðlarit af
 breytunni.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default">
+<figure class="align-center">
 <img alt="../_images/mynd6_1.svg" src="../_images/mynd6_1.svg" /></figure>
 <p>Á stuðlaritinu sést að líkindadreifing breytunnar <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> er
+Á stuðlaritinu sést að líkindadreifing breytunnar <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
+útlaga til hægri að auki. Hins vegar er <em>meðaltal</em> ferdatimi_skoli
 útlaga til hægri að auki. Hins vegar er <em>meðaltal</em> ferdatimi_skoli
 normaldreift, sé tekið meðaltal af nægjanlega mörgum mælingum. Með
 skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> getum við framkvæmt 1000 „gervitilraunir“
 þar sem við veljum slembiúrtak af stærð 100 úr þýði upprunalegu
 mælinganna okkar:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>endurvalsurtak &lt;- replicate(1000, sample(dat$ferdatimi_skoli, 100,replace=T))
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>endurvalsurtak &lt;- replicate(1000, sample(konnun$ferdatimi_skoli, 100,replace=T))
 </pre></div>
 </div>
 <p>Útkoman er fylki með 1000 dálka, einn fyrir hverja gervitilraun og 100
@@ -365,14 +372,14 @@ vera normaldreifð:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">medaltol</span><span class="p">),</span> <span class="n">aes</span><span class="p">(</span><span class="n">medaltol</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
 </pre></div>
 </div>
-<figure class="align-default">
+<figure class="align-center">
 <img alt="../_images/mynd6_2.svg" src="../_images/mynd6_2.svg" /></figure>
 <p>Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
 í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
 hvert skipti er útkoman langt frá því að vera normaldreifð, eins og sjá
 má hér fyrir neðan. Þar er stuðlaritið hægri skekkt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>litid.endurvalsurtak &lt;-
-replicate(1000, sample(dat$ferdatimi_skoli, 3,replace=T))
+replicate(1000, sample(konnun$ferdatimi_skoli, 3,replace=T))
 
 ny.medaltol &lt;-
 apply(litid.endurvalsurtak,2,mean, na.rm=T)
@@ -381,7 +388,7 @@ ggplot(data = data.frame(ny.medaltol), aes(ny.medaltol)) +
 geom_histogram()
 </pre></div>
 </div>
-<figure class="align-default">
+<figure class="align-center">
 <img alt="../_images/mynd6_3.svg" src="../_images/mynd6_3.svg" /></figure>
 </section>
 </section>
@@ -389,6 +396,7 @@ geom_histogram()
 <section id="oryggisbil-reikna-me-endurvalsafer">
 <span id="s-oryggisbil"></span><h2><span class="section-number">6.3. </span>Öryggisbil reiknað með endurvalsaðferð<a class="headerlink" href="#oryggisbil-reikna-me-endurvalsafer" title="Permalink to this heading"></a></h2>
 <p>Gerviúrtökin sem fengust með skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> má einnig nota
+til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
 tilraunin er endurtekin nægjanlega oft. Við getum notað metnu meðaltölin
@@ -398,9 +406,11 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">medaltol</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">))</span>
 <span class="c1">##     2.5%    97.5%</span>
 <span class="c1">##    16.81950 22.01025</span>
+<span class="c1">##    16.81950 22.01025</span>
 </pre></div>
 </div>
-<p>95% öryggisbilið er því <span class="math notranslate nohighlight">\([16.81950, 22.01025 ]\)</span>.</p>
+<p>95% öryggisbilið er því <span class="math notranslate nohighlight">\([16.81950, 22.01025 ]\)</span>.
+95% öryggisbilið er því <span class="math notranslate nohighlight">\([16.81950, 22.01025 ]\)</span>.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
 <h2><span class="section-number">6.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>

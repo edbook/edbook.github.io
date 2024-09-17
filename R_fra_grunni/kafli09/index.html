@@ -272,7 +272,6 @@ að breyta henni).</p>
 <p><strong>Inntak:</strong> nafn á fervikagreiningarhlut</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil og fleira</p>
 <p><strong>Forkröfur prófs:</strong> Dreifni sú sama</p>
-<p><strong>Forkröfur prófs:</strong> Dreifni sú sama</p>
 </div>
 <hr class="docutils" />
 <p>Til að fá fervikagreiningartöflu mötum við <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðina með
@@ -299,12 +298,11 @@ kassarit af lengdarmælingum eftir kyni:</p>
 <span class="c1">##</span>
 <span class="c1">##  Bartlett test of homogeneity of variances</span>
 <span class="c1">##</span>
-<span class="c1">## data:  total_l by kyn</span>
+<span class="c1">## data:  heildarlengd by kyn</span>
 <span class="c1">## Bartlett&#39;s K-squared = 0.06666, df = 1, p-value = 0.7963</span>
 </pre></div>
 </div>
 <p>Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
-Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
 núlltilgátunni um að dreifnin sé sú sama. Við verðum þó að gæta okkur á
 að hátt p-gildi þýðir ekki að við höfum sýnt fram á að dreifnin sé sú
 sama til þess þyrfti að kanna styrk prófsins (við samþykkjum jú ekki
@@ -330,15 +328,10 @@ aðferðina.</p>
 </pre></div>
 </div>
 <p>Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
-og 102).
-Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
 og 102).</p>
 <p>Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
 finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
-Það er einnig búið að reikna meðalfervikasummurnar (49.116 og 18.281) og
-finna hlutfall þeirra, sem er einmitt F-prófstærðin (2.68671). p-gildi
 fyrir tilgátuprófið er svo lengst til hægri
-(<span class="math notranslate nohighlight">\(0.1043\)</span>). Eins og sjá má er ýmislegt annað að finna
 (<span class="math notranslate nohighlight">\(0.1043\)</span>). Eins og sjá má er ýmislegt annað að finna
 í <code class="docutils literal notranslate"><span class="pre">aov()</span></code> úttakinu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
@@ -380,10 +373,7 @@ hana með fervikagreiningarhlut.</p>
 <span class="c1">##</span>
 <span class="c1">## Fit: aov(formula = heildarlengd ~ kyn, data = pokarotta)</span>
 <span class="c1">##</span>
-<span class="c1">## $sex</span>
-<span class="c1">##                     diff         lwr        upr     p adj</span>
-<span class="c1">## m-f            -1.395501   -3.084208   0.2932054   0.104272</span>
-<span class="c1">## $sex</span>
+<span class="c1">## $kyn</span>
 <span class="c1">##                     diff         lwr        upr     p adj</span>
 <span class="c1">## m-f            -1.395501   -3.084208   0.2932054   0.104272</span>
 </pre></div>
@@ -428,15 +418,8 @@ munum ekki taka á því hér, aðeins sýna hvaða tæki og tól eru til staða
 væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
 verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu
 tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja
-þátta fervikagreiningu til að kanna tengslin.
-Skoðum aftur dæmið hér að ofan þar sem kannað var hvort lengd pokarotta
-væri mismunandi eftir kyni. Hugsum okkur svo að þessi tilraun hafi einnig
-verið framkvæmd til að kanna hvort munur væri á uppruna dýra í þessu
-tilliti. Við höfum nú tvo þætti, kyn og uppruna og notum því tveggja
 þátta fervikagreiningu til að kanna tengslin.</p>
 <p>Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna
-þurfum við að kanna hvort <em>víxlhrif</em> (e. interactions) séu til staðar á
-Til að kanna hvort kyn hafi misjöfn áhrif á stærð dýra eftir uppruna
 þurfum við að kanna hvort <em>víxlhrif</em> (e. interactions) séu til staðar á
 milli breytanna tveggja. Gott er að byrja á því að skoða gögnin myndrænt
 til að kanna hvort víxlhrif séu til staðar. Við gerum það í R með
@@ -454,10 +437,6 @@ mælingar.</p>
 <p>Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns
 pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.).
 Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur,
-óháð því hvaðan dýrin koma.
-Á myndinni sjáum við meðallengd pokarotta eftir uppruna dýra (kvenkyns
-pokarottur frá Victoria, karlkyns pokarottur frá Victoria, o.s.frv.).
-Við sjáum að kvenkyns pokarottur eru almennt stærri en karlkyns pokarottur,
 óháð því hvaðan dýrin koma.</p>
 <p>Við metum svo líkanið með <code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðinni. Séu víxlhrif til staðar
 prófum við ekki hina þættina í líkaninu. Ef engin víxlhrif eru til
@@ -467,7 +446,7 @@ prófum hina þættina tvo.</p>
 <span class="n">anova</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.2</span><span class="p">)</span>
 <span class="c1">## Analysis of Variance Table</span>
 <span class="c1">##</span>
-<span class="c1">## Response: total_l</span>
+<span class="c1">## Response: heildarlengd</span>
 <span class="c1">##             Df    Sum Sq  Mean Sq  F value  Pr(&gt;F)</span>
 <span class="c1">## kyn          1    49.12   49.116   2.6480   0.1068 ***</span>
 <span class="c1">## tegund       1    4.45    4.452    0.2400   0.62535 *</span>
@@ -480,8 +459,6 @@ prófum hina þættina tvo.</p>
 <p>Við notum svo <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðina til að fá fervikasummurnar, p-gildi
 og prófstærð.</p>
 <p>Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
-því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
-Úr úttakinu má lesa að p-gildið fyrir víxlhrifin er 0.5898 og höfum við
 því ekki sýnt fram á að munur sé á áhrif stærð pokarottna eftir uppruna. Við
 fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fervik</span><span class="mf">.3</span><span class="o">&lt;-</span><span class="n">aov</span><span class="p">(</span><span class="n">heildarlengd</span><span class="o">~</span><span class="n">kyn</span> <span class="o">+</span> <span class="n">tegund</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">)</span>
@@ -516,9 +493,6 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
 </pre></div>
 </div>
 <p>Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki
-sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið
-er að leiðrétta fyrir breytunni <code class="docutils literal notranslate"><span class="pre">pop</span></code>.
-Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki
 sýnt fram á að marktækur munur sé á meðalstærð dýra eftir kyni eftir að búið
 er að leiðrétta fyrir breytunni <code class="docutils literal notranslate"><span class="pre">pop</span></code>.</p>
 <p>Eins og sagt var frá í upphafi þessa hluta er margt sem þarf að hafa í

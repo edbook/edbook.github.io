@@ -437,10 +437,7 @@ sem er.</p>
 <p>Reikna má fylgni milli tveggja breyta í R með <code class="docutils literal notranslate"><span class="pre">cor()</span></code> aðferðinni. Við
 þurfum að mata aðferðina með heitunum á breytunum sem við ætlum að
 reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
-höfuðlengdar pokarotta, semsagt breytanna <code class="docutils literal notranslate"><span class="pre">total_l</span></code> og <code class="docutils literal notranslate"><span class="pre">head_l</span></code>,
-notum við skipunina:
-reikna fylgnina á milli. Viljum við reikna fylgnina á heildarlengdar og
-höfuðlengdar pokarotta, semsagt breytanna <code class="docutils literal notranslate"><span class="pre">total_l</span></code> og <code class="docutils literal notranslate"><span class="pre">head_l</span></code>,
+höfuðlengdar pokarotta, semsagt breytanna <code class="docutils literal notranslate"><span class="pre">heildarlengd</span></code> og <code class="docutils literal notranslate"><span class="pre">hofud_lengd</span></code>,
 notum við skipunina:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor(pokarotta$heildarlengd, pokarotta$hofud_lengd)
 ## [1] 0.6910937
@@ -474,9 +471,6 @@ STÆ209 í gagnasafninu okkar gerum við það með:</p>
 ##
 ## Jarðaberja  Súkkulaði    Vanilla
 ##         39        91         71
-
-## Jarðaberja  Súkkulaði    Vanilla
-##         39        91         71
 </pre></div>
 </div>
 <p>Við getum líka matað <code class="docutils literal notranslate"><span class="pre">table()</span></code> með tveimur flokkabreytum og þá telur
@@ -485,10 +479,6 @@ mögulegum samsetningum útkoma beggja breytanna eins og er sýnt hér að
 neðan.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>table(konnun$is, konnun$dyr)
 ##
-##               Hunda Ketti
-## Jarðaberja    23    16
-## Súkkulaði     61    30
-## Vanilla       43    28
 ##               Hunda Ketti
 ## Jarðaberja    23    16
 ## Súkkulaði     61    30
@@ -512,8 +502,6 @@ hlutföll getum við notað <code class="docutils literal notranslate"><span cla
 ##
 ## Jarðaberja  Súkkulaði    Vanilla
 ##  0.1940299  0.4527363  0.3532338
-## Jarðaberja  Súkkulaði    Vanilla
-##  0.1940299  0.4527363  0.3532338
 </pre></div>
 </div>
 <p>Séum við að vinna með tvær breytur má mata <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> aðferðina á
@@ -524,16 +512,9 @@ hlutföll getum við notað <code class="docutils literal notranslate"><span cla
 ##  Jarðaberja 0.11442786 0.07960199
 ##  Súkkulaði  0.30348259 0.14925373
 ##  Vanilla    0.21393035 0.13930348
-##                  Hunda      Ketti
-##  Jarðaberja 0.11442786 0.07960199
-##  Súkkulaði  0.30348259 0.14925373
-##  Vanilla    0.21393035 0.13930348
 </pre></div>
 </div>
 <p>Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við
-hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti
-skoða hlutföllin eftir línum í töflunni gerum við það með:
-Í töflunni má t.d. sjá að um 30% nemenda í gagnasafninu kunna betur við
 hunda en ketti og finnst súkkulaðiís bestur. Viljum við aftur á móti
 skoða hlutföllin eftir línum í töflunni gerum við það með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is, konnun$dyr), margin=1)
@@ -542,16 +523,9 @@ skoða hlutföllin eftir línum í töflunni gerum við það með:</p>
 ##  Jarðaberja 0.5897436 0.4102564
 ##  Súkkulaði  0.6703297 0.3296703
 ##  Vanilla    0.6056338 0.3943662
-##                 Hunda     Ketti
-##  Jarðaberja 0.5897436 0.4102564
-##  Súkkulaði  0.6703297 0.3296703
-##  Vanilla    0.6056338 0.3943662
 </pre></div>
 </div>
 <p>Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur
-eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir
-dálkum í töflunni gerum við það með:
-Í töflunni má t.d. sjá að um 67% nemenda sem finnst súkkulaðiís bestur
 eru hrifnir af hundum. Viljum við hins vegar skoða hlutföllin eftir
 dálkum í töflunni gerum við það með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$is, konnun$dyr), margin=2)
@@ -560,14 +534,9 @@ dálkum í töflunni gerum við það með:</p>
 ##  Jarðaberja 0.1811024 0.2162162
 ##  Súkkulaði  0.4803150 0.4054054
 ##  Vanilla    0.3385827 0.3783784
-##                 Hunda     Ketti
-##  Jarðaberja 0.1811024 0.2162162
-##  Súkkulaði  0.4803150 0.4054054
-##  Vanilla    0.3385827 0.3783784
 </pre></div>
 </div>
-<p>Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.
-Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.</p>
+<p>Í töflunni má t.d. sjá að um 21.6% þeirra sem eru hrifinn af köttum elska jarðaberjaís.</p>
 <p>Takið eftir að nota má <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> til að reikna lýsistærðirnar
 næmi (e. sensitivity) og sértæki (e. specificity).</p>
 </section>
@@ -593,10 +562,6 @@ skila. Skoðum t.d. töfluna hér að ofan. Viljum við aðeins að þremur
 aukastöfum sé skilað gerum við það með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>round(prop.table(table(konnun$is, konnun$dyr),2),3)
 ##
-##             Hunda Ketti
-##  Jarðaberja 0.181 0.216
-##  Súkkulaði  0.480 0.405
-##  Vanilla    0.339 0.378
 ##             Hunda Ketti
 ##  Jarðaberja 0.181 0.216
 ##  Súkkulaði  0.480 0.405

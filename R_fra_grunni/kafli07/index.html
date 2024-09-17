@@ -254,16 +254,12 @@ sé jafnt í nemendahópnum sem konnun gögnin byggja á.</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil ofl.</p>
 <p><strong>Helstu stillingar:</strong> conf.level, p</p>
 <p><strong>Forkröfur prófs:</strong> Engar</p>
-<p><strong>Forkröfur prófs:</strong> Engar</p>
 </div>
 <hr class="docutils" />
 <p>Byrjum á því að nota <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> skipunina, (kassa
-<a class="reference internal" href="../kafli04/#rf-prop-table"><span class="std std-numref">4.2.1.2</span></a>) til að sjá hvert uppáhalds dýr fólks er:
 <a class="reference internal" href="../kafli04/#rf-prop-table"><span class="std std-numref">4.2.1.2</span></a>) til að sjá hvert uppáhalds dýr fólks er:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$dyr))
 ##
-##     Hunda     Ketti
-## 0.6318408 0.3681592
 ##     Hunda     Ketti
 ## 0.6318408 0.3681592
 </pre></div>
@@ -279,11 +275,7 @@ einu með einni skipun:</p>
 ## alternative hypothesis: true probability of success is not equal to 0.5
 ## 95 percent confidence interval:
 ##  0.5611205 0.6986092
-##  0.5611205 0.6986092
 ## sample estimates:
-## probability of success
-##              0.6318408
-
 ## probability of success
 ##              0.6318408
 </pre></div>
@@ -291,14 +283,8 @@ einu með einni skipun:</p>
 <p>Lesa má geysimiklar upplýsingar úr úttakinu. Fyrst sjáum við að fjöldi
 heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
 heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
-<span class="math notranslate nohighlight">\(0.0002267\)</span>.
-heppnaðra tilrauna (sem í þessu tilviki er fjöldi þeirra sem er hrifinn af hundum) er 127,
-heildarfjöldi nemenda er 201 og p-gildi tilgátuprófsins er
 <span class="math notranslate nohighlight">\(0.0002267\)</span>.</p>
 <p>Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
-öryggisbil fyrir hlutfallið, sem reynist
-<span class="math notranslate nohighlight">\([0.5611205, 0.6986092]\)</span>. Að lokum sjáum við sjálft matið á
-hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, <span class="math notranslate nohighlight">\(\hat{p} = 0.6318408\)</span>.
 öryggisbil fyrir hlutfallið, sem reynist
 <span class="math notranslate nohighlight">\([0.5611205, 0.6986092]\)</span>. Að lokum sjáum við sjálft matið á
 hlutfalli þeirra sem eru hrifinn af hundum í námskeiðinu, <span class="math notranslate nohighlight">\(\hat{p} = 0.6318408\)</span>.</p>
@@ -322,19 +308,13 @@ flestum kennslubókum.</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil ofl.</p>
 <p><strong>Helstu stillingar:</strong> conf.level, p</p>
 <p><strong>Forkröfur prófs:</strong> Normalnálgun</p>
-<p><strong>Forkröfur prófs:</strong> Normalnálgun</p>
 </div>
 <hr class="docutils" />
 <p>Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
 Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
-Skoðum nú hvort hlutfall þeirra sem er hrifið af hundum og þeirra sem er hrifið af köttum sé það sama hjá iOS og
-Android notendum. Byrjum sem fyrr á því að skoða hvert hlutfallið innan stýrikerfa er með
 <code class="docutils literal notranslate"><span class="pre">prop.table()</span></code> (kassi <a class="reference internal" href="../kafli04/#rf-prop-table"><span class="std std-numref">4.2.1.2</span></a>).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.table(table(konnun$dyr, konnun$styrikerfi_simi), margin=2)
 ##
-##          Android       iOS
-##  Hunda 0.5957447 0.6428571
-##  Ketti 0.4042553 0.3571429
 ##          Android       iOS
 ##  Hunda 0.5957447 0.6428571
 ##  Ketti 0.4042553 0.3571429
@@ -352,25 +332,17 @@ einu með einni skipun:</p>
 ## alternative hypothesis: two.sided
 ## 95 percent confidence interval:
 ##  -0.2204061  0.1261812
-##  -0.2204061  0.1261812
 ## sample estimates:
-##    prop 1    prop 2
-## 0.5957447 0.6428571
 ##    prop 1    prop 2
 ## 0.5957447 0.6428571
 </pre></div>
 </div>
 <p>Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
-með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.
-Fyrst sjáum við að prófstærðin er 0.17091, sem fylgir kí-kvaðrat prófi
 með 1 frígráðu og p-gildi tilgátuprófsins er 0.6793.</p>
 <p>Næst sjáum við hver gagntilgáta tilgátuprófsins er og þar á eftir 95%
 öryggisbil fyrir mismun hlutfallanna, sem reyndist
-<span class="math notranslate nohighlight">\([-0.2204061, 0.1261812]\)</span>.
 <span class="math notranslate nohighlight">\([-0.2204061, 0.1261812]\)</span>.</p>
 <p>Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
-0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.
-Að lokum sjáum við sjálf mötin á hlutfalli þeirra sem eru hrifinn af hundum eftir stýrikerfi,
 0.5957447 hjá Android notendum og 0.6428571 hjá iOS notendum.</p>
 <p>Einnig er hægt að nota skipunina <code class="docutils literal notranslate"><span class="pre">prop.test()</span></code> til að bera saman
 hlutföll fleiri en tveggja hópa. Þá þarf að gæta þess að tengslataflan
@@ -386,8 +358,6 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 ## X-squared = 1.0863, df = 2, p-value = 0.5809
 ## alternative hypothesis: two.sided
 ## sample estimates:
-##    prop 1    prop 2    prop 3
-## 0.5897436 0.6703297 0.6056338
 ##    prop 1    prop 2    prop 3
 ## 0.5897436 0.6703297 0.6056338
 </pre></div>
@@ -416,11 +386,9 @@ ekki öryggisbil eins og <code class="docutils literal notranslate"><span class=
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, ofl.</p>
 <p><strong>Helstu stillingar:</strong> conf.level, simulate.p.value</p>
 <p><strong>Forkröfur prófs:</strong> Normalnálgun, allar töflur í væntitöflu &gt;5</p>
-<p><strong>Forkröfur prófs:</strong> Normalnálgun, allar töflur í væntitöflu &gt;5</p>
 </div>
 <hr class="docutils" />
 <p>Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
-Könnum nú hvort samband sé á milli hvaða ís nemendur velja og hvort þau hafi kosið.
 Við byrjum á að búa til töflu mældrar tíðni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(konnun$is,konnun$kosid))
 ##
@@ -431,8 +399,6 @@ Við byrjum á að búa til töflu mældrar tíðni:</p>
 </pre></div>
 </div>
 <p>Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
-frígráðum og p-gildi tilgátuprófsins er 0.8113.
-Hér sést að prófstærðin er 0.41817, sem fylgir kí-kvaðrat prófi með 2
 frígráðum og p-gildi tilgátuprófsins er 0.8113.</p>
 <p>Munið að til þess að geta notað kí-kvaðrat prófið þurfa allar tölurnar í
 væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnitöflu
@@ -441,10 +407,6 @@ væntitíðnitöflunni að vera stærri en 5. Við getum fengið væntitíðnit�
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kikv1&lt;-chisq.test(table(puls$namskeid,puls$likamsraektf))
 kikv1$expected
 ##
-##                 Rangt     Rétt
-##   Jarðaberja 11.05970 27.94030
-##   Súkkulaði  25.80597 65.19403
-##   Vanilla    20.13433 50.86567
 ##                 Rangt     Rétt
 ##   Jarðaberja 11.05970 27.94030
 ##   Súkkulaði  25.80597 65.19403
@@ -496,7 +458,6 @@ með skipuninni <code class="docutils literal notranslate"><span class="pre">fis
 <p><strong>Inntak:</strong> tafla - úttak úr table</p>
 <p><strong>Úttak:</strong> gildi á prófstærð, p-gildi, öryggisbil ofl.</p>
 <p><strong>Helstu stillingar:</strong> conf.level, p</p>
-<p><strong>Forkröfur prófs:</strong> Engar</p>
 <p><strong>Forkröfur prófs:</strong> Engar</p>
 </div>
 </section>

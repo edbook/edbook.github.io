@@ -252,10 +252,6 @@ vera breyta sem tekur gildin 0 og 1, eða þá TRUE og FALSE. Í þessu dæmi
 er inntakið yrðingin <code class="docutils literal notranslate"><span class="pre">ferdamati_skoli=='Gangandi</span> <span class="pre">/</span> <span class="pre">skokkandi'</span></code> sem skilar TRUE ef
 einstaklingurinn kemur gangandi í skólann en FALSE annars. Þar af leiðandi mun líkanið
 meta gagnlíkindin á því að koma gangandi. Á hægri hönd formúlunnar er
-skýribreytan, sem í þessu tilviki er <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>.
-er inntakið yrðingin <code class="docutils literal notranslate"><span class="pre">ferdamati_skoli=='Gangandi</span> <span class="pre">/</span> <span class="pre">skokkandi'</span></code> sem skilar TRUE ef
-einstaklingurinn kemur gangandi í skólann en FALSE annars. Þar af leiðandi mun líkanið
-meta gagnlíkindin á því að koma gangandi. Á hægri hönd formúlunnar er
 skýribreytan, sem í þessu tilviki er <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>.</p>
 <p>Næstu tvö inntök skipunarinnar er nafnið á gagnatöflunni sem geymir
 gögnin (<code class="docutils literal notranslate"><span class="pre">konnun</span></code>) og af hvaða gerð aðhvarfsgreiningarlíkanið er. Með
@@ -273,21 +269,10 @@ aðhvarfsgreiningarinnar:</p>
 <span class="c1">##                 Estimate Std. Error z value Pr(&gt;|z|)</span>
 <span class="c1">## (Intercept)      0.68296    0.39389   1.734   0.0829 .</span>
 <span class="c1">## ferdatimi_skoli -0.18181    0.03693  -4.923 8.54e-07 ***</span>
-<span class="c1">##                 Estimate Std. Error z value Pr(&gt;|z|)</span>
-<span class="c1">## (Intercept)      0.68296    0.39389   1.734   0.0829 .</span>
-<span class="c1">## ferdatimi_skoli -0.18181    0.03693  -4.923 8.54e-07 ***</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
 <span class="c1">##</span>
-<span class="c1">## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="c1">##</span>
 <span class="c1">## (Dispersion parameter for binomial family taken to be 1)</span>
-<span class="c1">##</span>
-<span class="c1">##     Null deviance: 182.73  on 200  degrees of freedom</span>
-<span class="c1">## Residual deviance: 133.79  on 199  degrees of freedom</span>
-<span class="c1">## AIC: 137.79</span>
-<span class="c1">##</span>
-<span class="c1">## Number of Fisher Scoring iterations: 7</span>
 <span class="c1">##</span>
 <span class="c1">##     Null deviance: 182.73  on 200  degrees of freedom</span>
 <span class="c1">## Residual deviance: 133.79  on 199  degrees of freedom</span>
@@ -300,42 +285,28 @@ aðhvarfsgreiningarinnar:</p>
 töflunni <code class="docutils literal notranslate"><span class="pre">Coefficients:</span></code></p>
 <ul class="simple">
 <li><p>Í fyrsta dálki hennar má sjá metnu stuðlana,
-<span class="math notranslate nohighlight">\(\hat \beta_0 = 0.68296\)</span> og <span class="math notranslate nohighlight">\(\hat \beta_1 = -0.18181\)</span>.
 <span class="math notranslate nohighlight">\(\hat \beta_0 = 0.68296\)</span> og <span class="math notranslate nohighlight">\(\hat \beta_1 = -0.18181\)</span>.</p></li>
 <li><p>Staðalskekkju fyrir mat á stuðlunum má sjá í öðrum dálki.</p></li>
 <li><p>Í þriðja dálki má sjá prófstærðir fyrir tilgátupróf sem prófa
 núlltilgátuna hvort stuðlarnir séu núll. Þannig prófar prófstærðin
-<span class="math notranslate nohighlight">\(1.734\)</span> núlltilgátuna <span class="math notranslate nohighlight">\(\beta_0 = 0\)</span> og prófstærðin
-<span class="math notranslate nohighlight">\(-4.923\)</span> prófar núlltilgátuna <span class="math notranslate nohighlight">\(\beta_1=0\)</span>.
 <span class="math notranslate nohighlight">\(1.734\)</span> núlltilgátuna <span class="math notranslate nohighlight">\(\beta_0 = 0\)</span> og prófstærðin
 <span class="math notranslate nohighlight">\(-4.923\)</span> prófar núlltilgátuna <span class="math notranslate nohighlight">\(\beta_1=0\)</span>.</p></li>
 <li><p>P-gildin sem svara til þessara prófstærða má svo finna í fjórða
 dálkinum. P-gildið fyrir núlltilgátuna <span class="math notranslate nohighlight">\(\beta_1=0\)</span> er
 <span class="math notranslate nohighlight">\(8.54e-07\)</span>, sem er minna en 0.05 og þar sem stuðullin er
 neikvæður getum við fullyrt að nemendur sem eru lengi á leiðinni í skólann
-séu ólíklegri til að fara gangandi heldur en þeir eru fljótir í skólann.
-<span class="math notranslate nohighlight">\(8.54e-07\)</span>, sem er minna en 0.05 og þar sem stuðullin er
-neikvæður getum við fullyrt að nemendur sem eru lengi á leiðinni í skólann
 séu ólíklegri til að fara gangandi heldur en þeir eru fljótir í skólann.</p></li>
 </ul>
 <p>Með því að setja metnu stuðlana í veldið á e fæst gagnlíkindahlutfall
 fyrir því að fara gangandi við hverja aukna mínútu sem að nemandi
-eyðir í að komast í skólann. Þau finnum við með skipuninni:
-fyrir því að fara gangandi við hverja aukna mínútu sem að nemandi
 eyðir í að komast í skólann. Þau finnum við með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="n">coef</span><span class="p">(</span><span class="n">glm1</span><span class="p">))</span>
-<span class="c1">##     (Intercept) ferdatimi_skoli</span>
-<span class="c1">##       1.9797338       0.8337605</span>
 <span class="c1">##     (Intercept) ferdatimi_skoli</span>
 <span class="c1">##       1.9797338       0.8337605</span>
 </pre></div>
 </div>
 <p>Í flestum tilvikum höfum við lítin áhuga á gagnlíkindahlutfallinu sem
 svarar til <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>. Hins vegar höfum við mikinn áhuga á
-gagnlíkindahlutfallinu sem stendur við <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>.
-Hér sjáum við að gagnlíkindahlutfallið fyrir því að fara gangandi við
-hverja auka mínútu sem að nemandi eyðir í að komast í skólann
-er <span class="math notranslate nohighlight">\(0.8337605\)</span>.
 gagnlíkindahlutfallinu sem stendur við <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>.
 Hér sjáum við að gagnlíkindahlutfallið fyrir því að fara gangandi við
 hverja auka mínútu sem að nemandi eyðir í að komast í skólann
@@ -346,14 +317,9 @@ aðhvarfsgreiningunni má finna með skipuninni:</p>
 <span class="c1">##                     2.5 %    97.5 %</span>
 <span class="c1">## (Intercept)     0.9289593 4.3876029</span>
 <span class="c1">## ferdatimi_skoli 0.7694803 0.8901376</span>
-<span class="c1">##                     2.5 %    97.5 %</span>
-<span class="c1">## (Intercept)     0.9289593 4.3876029</span>
-<span class="c1">## ferdatimi_skoli 0.7694803 0.8901376</span>
 </pre></div>
 </div>
 <p>Sem fyrr höfum við ekki áhuga á öryggisbilinu sem svarar til
-<code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>. Öryggisbilið fyrir <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> er það sem við
-viljum skoða, það er <span class="math notranslate nohighlight">\([0.7694803, 0.8901376]\)</span>. Öryggisbilið
 <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>. Öryggisbilið fyrir <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> er það sem við
 viljum skoða, það er <span class="math notranslate nohighlight">\([0.7694803, 0.8901376]\)</span>. Öryggisbilið
 inniheldur ekki 1 í samræmi við það að við höfnuðum núlltilgátunni.</p>
@@ -363,16 +329,11 @@ inniheldur ekki 1 í samræmi við það að við höfnuðum núlltilgátunni.</
 <p>Tvíkosta aðhvarfsgreiningu má einnig beita á strjála skýribreytu. Til
 dæmis til að meta hvort nemendur sem eru femínistar séu líklegri til að
 vera kattamanneskjur heldur en þeir sem eru ekki femínistar. Líkanið metum við með
-dæmis til að meta hvort nemendur sem eru femínistar séu líklegri til að
-vera kattamanneskjur heldur en þeir sem eru ekki femínistar. Líkanið metum við með
 neðangreindri skipun:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glm2</span><span class="o">&lt;-</span><span class="n">glm</span><span class="p">(</span><span class="n">feministi</span><span class="o">==</span><span class="s1">&#39;Rétt&#39;</span><span class="o">~</span><span class="n">dyr</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;binomial&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Skipunin lítur á nákvæmlega sama hátt út og í kafla
-<a class="reference internal" href="#s-tvikostasamfelld"><span class="std std-numref">11.1.1</span></a> nema að nú hefur <code class="docutils literal notranslate"><span class="pre">feministi=='Rétt'</span></code> komið í stað
-<code class="docutils literal notranslate"><span class="pre">ferdamati_skoli=='Gangandi</span> <span class="pre">/</span> <span class="pre">skokkandi'</span></code> og breytan <code class="docutils literal notranslate"><span class="pre">dyr</span></code> tekið
-stað breytunnar <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>. Skoðum nú <code class="docutils literal notranslate"><span class="pre">summary()</span></code> af útkomu
 <a class="reference internal" href="#s-tvikostasamfelld"><span class="std std-numref">11.1.1</span></a> nema að nú hefur <code class="docutils literal notranslate"><span class="pre">feministi=='Rétt'</span></code> komið í stað
 <code class="docutils literal notranslate"><span class="pre">ferdamati_skoli=='Gangandi</span> <span class="pre">/</span> <span class="pre">skokkandi'</span></code> og breytan <code class="docutils literal notranslate"><span class="pre">dyr</span></code> tekið
 stað breytunnar <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>. Skoðum nú <code class="docutils literal notranslate"><span class="pre">summary()</span></code> af útkomu
@@ -387,20 +348,10 @@ aðhvarfsgreiningarinnar:</p>
 <span class="c1">##             Estimate Std. Error z value Pr(&gt;|z|)</span>
 <span class="c1">## (Intercept)   1.1304     0.2066   5.472 4.45e-08 ***</span>
 <span class="c1">## dyrKetti      2.4532     0.7460   3.288  0.00101 **</span>
-<span class="c1">##             Estimate Std. Error z value Pr(&gt;|z|)</span>
-<span class="c1">## (Intercept)   1.1304     0.2066   5.472 4.45e-08 ***</span>
-<span class="c1">## dyrKetti      2.4532     0.7460   3.288  0.00101 **</span>
 <span class="c1">## ---</span>
 <span class="c1">## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
 <span class="c1">##</span>
-<span class="c1">## Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="c1">##</span>
 <span class="c1">## (Dispersion parameter for binomial family taken to be 1)</span>
-<span class="c1">##</span>
-<span class="c1">##     Null deviance: 179.51  on 200  degrees of freedom</span>
-<span class="c1">## Residual deviance: 159.55  on 199  degrees of freedom</span>
-<span class="c1">## AIC: 163.55</span>
-<span class="c1">##</span>
 <span class="c1">##</span>
 <span class="c1">##     Null deviance: 179.51  on 200  degrees of freedom</span>
 <span class="c1">## Residual deviance: 159.55  on 199  degrees of freedom</span>
@@ -414,16 +365,10 @@ aðhvarfsgreiningarinnar:</p>
 nú birtist sér lína fyrir hvern flokk skýribreytunnar, annan en
 viðmiðunarflokkinn. Þannig gefur heitið í línunni <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code> að um
 sé að ræða stuðla fyrir flokkinn <code class="docutils literal notranslate"><span class="pre">Ketti</span></code> í skýribreytunni <code class="docutils literal notranslate"><span class="pre">feministi</span></code> og
-viðmiðunarflokkurinn er því <code class="docutils literal notranslate"><span class="pre">Hunda</span></code>.
-viðmiðunarflokkinn. Þannig gefur heitið í línunni <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code> að um
-sé að ræða stuðla fyrir flokkinn <code class="docutils literal notranslate"><span class="pre">Ketti</span></code> í skýribreytunni <code class="docutils literal notranslate"><span class="pre">feministi</span></code> og
 viðmiðunarflokkurinn er því <code class="docutils literal notranslate"><span class="pre">Hunda</span></code>.</p>
 <ul class="simple">
 <li><p>Í fyrsta dálki töflunnar má sjá metnu stuðlana,
-<span class="math notranslate nohighlight">\(\hat \beta = 1.1304\)</span> og <span class="math notranslate nohighlight">\(\hat \beta_a = 2.4532\)</span>.
 <span class="math notranslate nohighlight">\(\hat \beta = 1.1304\)</span> og <span class="math notranslate nohighlight">\(\hat \beta_a = 2.4532\)</span>.</p></li>
-<li><p>Í þriðja dálki má sjá að prófstærðin <span class="math notranslate nohighlight">\(5.472\)</span> prófa
-núlltilgátuna <span class="math notranslate nohighlight">\(\beta = 0\)</span> og prófstærðin <span class="math notranslate nohighlight">\(3.288\)</span> prófar</p></li>
 <li><p>Í þriðja dálki má sjá að prófstærðin <span class="math notranslate nohighlight">\(5.472\)</span> prófa
 núlltilgátuna <span class="math notranslate nohighlight">\(\beta = 0\)</span> og prófstærðin <span class="math notranslate nohighlight">\(3.288\)</span> prófar
 núlltilgátuna <span class="math notranslate nohighlight">\(\beta_a=0\)</span>.</p></li>
@@ -431,25 +376,16 @@ núlltilgátuna <span class="math notranslate nohighlight">\(\beta_a=0\)</span>.
 er minna en 0.05 og þar sem stuðullin er jákvæður getum við fullyrt
 að nemendur sem eru hrifnir af köttum séu líklegri til vera femínistar heldur
 en þeir sem eru hrifnir af hundum.</p></li>
-<li><p>P-gildið fyrir núlltilgátuna <span class="math notranslate nohighlight">\(\beta_a=0\)</span> er <span class="math notranslate nohighlight">\(0.00101\)</span>, sem
-er minna en 0.05 og þar sem stuðullin er jákvæður getum við fullyrt
-að nemendur sem eru hrifnir af köttum séu líklegri til vera femínistar heldur
-en þeir sem eru hrifnir af hundum.</p></li>
 </ul>
 <p>Með því að setja metnu stuðlana í veldið á e fæst gagnlíkindahlutfall
-fyrir því að vera femínisti á móti því að vera hrifinn af köttum. Þau finnum við með
 fyrir því að vera femínisti á móti því að vera hrifinn af köttum. Þau finnum við með
 skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="n">coef</span><span class="p">(</span><span class="n">glm2</span><span class="p">))</span>
 <span class="c1">## (Intercept)    dyrKetti</span>
 <span class="c1">##    3.096774   11.625000</span>
-<span class="c1">## (Intercept)    dyrKetti</span>
-<span class="c1">##    3.096774   11.625000</span>
 </pre></div>
 </div>
 <p>Við höfum ekki áhuga á gagnlíkindahlutfallinu sem svarar til <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>,
-en það sem stendur við <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code> sýnir okkur gagnlíkindahlutfallið
-fyrir því að vera femínisti því að vera hrifinn af köttum er <span class="math notranslate nohighlight">\(11.625000\)</span>.
 en það sem stendur við <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code> sýnir okkur gagnlíkindahlutfallið
 fyrir því að vera femínisti því að vera hrifinn af köttum er <span class="math notranslate nohighlight">\(11.625000\)</span>.</p>
 <p>95% öryggisbil fyrir gagnlíkindahlutföllin sem fengust í tvíkosta
@@ -458,14 +394,9 @@ aðhvarfsgreiningunni má finna með skipuninni:</p>
 <span class="c1">##                2.5 %    97.5 %</span>
 <span class="c1">## (Intercept) 2.091788  4.715258</span>
 <span class="c1">## dyrKetti    3.366706 73.263708</span>
-<span class="c1">##                2.5 %    97.5 %</span>
-<span class="c1">## (Intercept) 2.091788  4.715258</span>
-<span class="c1">## dyrKetti    3.366706 73.263708</span>
 </pre></div>
 </div>
 <p>Sem fyrr höfum við ekki áhuga á öryggisbilinu sem svarar til
-<code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>, heldur það sem stendur við <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code>, það er
-<span class="math notranslate nohighlight">\([3.366706, 73.263708]\)</span>. Öryggisbilið inniheldur ekki 1 í samræmi
 <code class="docutils literal notranslate"><span class="pre">(Intercept)</span></code>, heldur það sem stendur við <code class="docutils literal notranslate"><span class="pre">dyrKetti</span></code>, það er
 <span class="math notranslate nohighlight">\([3.366706, 73.263708]\)</span>. Öryggisbilið inniheldur ekki 1 í samræmi
 við það að við höfnuðum núlltilgátunni.</p>

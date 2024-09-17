@@ -274,8 +274,8 @@ fyrir neðan.</p>
 <p>Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">geom_point()</span></code>. Eftirfarandi skipun gefur
 okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
-í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">pokarotta</span></code>. Skýribreytan <code class="docutils literal notranslate"><span class="pre">total_l</span></code> er á x-ás og
-svarbreytan <code class="docutils literal notranslate"><span class="pre">head_l</span></code> á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
+í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">pokarotta</span></code>. Skýribreytan <code class="docutils literal notranslate"><span class="pre">heildarlengd</span></code> er á x-ás og
+svarbreytan <code class="docutils literal notranslate"><span class="pre">hofud_lengd</span></code> á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -296,7 +296,6 @@ tilgreind inní <code class="docutils literal notranslate"><span class="pre">aes
 <section id="stularit">
 <h4><span class="section-number">3.1.1.3. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Permalink to this heading"></a></h4>
 <p>Viðbótin <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> teiknar stuðlarit. Viljum við teikna
-stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> gerum við það með skipuninni:
 stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> gerum við það með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
 </pre></div>
@@ -315,7 +314,6 @@ stuðlarit af breytunni <code class="docutils literal notranslate"><span class="
 <p>Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
 eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_boxplot()</span></code>. Viljum við teikna
 kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">systkini_fjoldi</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code> gerum
-kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">systkini_fjoldi</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code> gerum
 við það með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">systkini_fjoldi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
 </pre></div>
@@ -324,7 +322,6 @@ við það með:</p>
 <img alt="../_images/systkiniIs.svg" src="../_images/systkiniIs.svg" /></figure>
 <p>Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja <code class="docutils literal notranslate"><span class="pre">factor(0)</span></code> inn sem eins konar gervibreytu. Neðangreind skipun
-teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> án lagskiptingar:
 teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> án lagskiptingar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">factor</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
 </pre></div>
@@ -350,8 +347,6 @@ stillingunni.</p>
 <section id="nofn-asa">
 <h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Permalink to this heading"></a></h4>
 <p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
-tilgreinir merkingu ása.
-Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
 tilgreinir merkingu ása.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
 </pre></div>
@@ -392,7 +387,6 @@ lína hunsuð og við fáum jafnvel villu:</p>
 <p>Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
 með stillingunni <code class="docutils literal notranslate"><span class="pre">breaks()</span></code>. Viljum við sem dæmi láta merkingarnar á
 y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
-y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
 gerum við það með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span>
 <span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -422,7 +416,6 @@ vegar má fylla upp í fleti á grafinu með stillingunni <code class="docutils 
 Stillingarnar eru tilgreindar inní útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
 <p>Við getum lagskipt punktaritinu yfir hæð og þyngd nemenda eftir kynjum
 pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
-pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
 tilheyrir. Það er því gert með stillingunni <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 </pre></div>
@@ -430,8 +423,6 @@ tilheyrir. Það er því gert með stillingunni <code class="docutils literal n
 <figure class="align-center">
 <img alt="../_images/kynlitur.svg" src="../_images/kynlitur.svg" /></figure>
 <p>Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
-eftir því hvort þeir nota iOS eða Android gerum við það með
-Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
 eftir því hvort þeir nota iOS eða Android gerum við það með
 stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>, því þá viljum við lita fleti grafsins ólíkt.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
@@ -462,8 +453,6 @@ kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn me
 reiti. Það er gert með skipuninni <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code>. Hægt er að skipta
 gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.</p>
 <p>Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra
-upp eftir því hvaðan þær eru gerum við það með skipuninni:
-Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra
 upp eftir því hvaðan þær eru gerum við það með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
 <span class="n">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">tegund</span><span class="p">)</span>

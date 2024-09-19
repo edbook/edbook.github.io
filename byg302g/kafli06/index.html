@@ -184,10 +184,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#spennulosun-relaksation">6.3.1. Spennulosun (relaksation)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#reyta-udmattelse">6.4. Þreyta (udmattelse)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reyta-e-fatigue-d-udmattelse">6.4. Þreyta (e. fatigue, d. udmattelse)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vinam-og-slitstyrkur">6.5. Viðnám og slitstyrkur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#efnisprofanir-styrkprofanir">6.6. Efnisprófanir (styrkprófanir)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#atrii-sem-hafa-ahrif-a-mat-a-profunarniurstoum">6.6.1. Atriði sem hafa áhrif á mat á prófunarniðurstöðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heimildir">6.6.2. Heimildir</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +276,7 @@
 </table>
 <p>Poisson’s hlutfall</p>
 <div class="math notranslate nohighlight">
-\[\nu = \frac{\varepsilon_{þvert}}{\varepsilon_{langs}}\]</div>
+\[\nu = -\frac{\varepsilon_{þvert}}{\varepsilon_{langs}}\]</div>
 <section id="vinnulina-og-brotorka">
 <h3><span class="section-number">6.1.1. </span>Vinnulína og brotorka<a class="headerlink" href="#vinnulina-og-brotorka" title="Permalink to this heading"></a></h3>
 <p>Vinnulína er samband áraunar og formbreytingar</p>
@@ -286,7 +287,7 @@
 </div></blockquote>
 </div>
 <p>Breyting í orku vegna formbreytingar er t.d. skilgreind sem (tákn eins og á meðfylgjandi
-línuriti – Fig. 6.5 6.6);</p>
+línuriti – Fig. 6.5 og Fig. 6.6);</p>
 <div class="math notranslate nohighlight">
 \[dW = F \cdot d(\Delta l)\]</div>
 <p>þar sem</p>
@@ -311,7 +312,7 @@ línuriti – Fig. 6.5 6.6);</p>
 </tr>
 </tbody>
 </table>
-<p>Þetta má umskrifa (og þá miðað við t.d. upphafs sniðflatarmál <span class="math notranslate nohighlight">\(A_0\)</span> !) :</p>
+<p>Þetta má umskrifa (og þá miðað við t.d. upphafs sniðflatarmál <span class="math notranslate nohighlight">\(A_0\)</span>):</p>
 <div class="math notranslate nohighlight">
 \[dW = F \cdot d(\Delta l)=(A_0 \cdot \sigma) \cdot d \varepsilon \cdot l_0 = V_0 \cdot \sigma \cdot d \varepsilon\]</div>
 <p>og með tegrun má fá út heildar vinnu (orku) vegna formbreytingar, þetta samsvarar því
@@ -321,7 +322,7 @@ að taka flatarmál undir <span class="math notranslate nohighlight">\(F-\Delta 
 <a class="reference internal image-reference" href="../_images/vinnulinur.png"><img alt="../_images/vinnulinur.png" src="../_images/vinnulinur.png" style="width: 70%;" /></a>
 </figure>
 <p>Venjuleg áraun gefur upplýsingar um styrk undir álagi, en síður hversu vel efni standast
-mikið álag í mjög stuttan tíma (jarðskjálftar..)</p>
+mikið álag í mjög stuttan tíma (t.d. jarðskjálftar).</p>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" src="https://www.youtube.com/embed/BHZALtqAjeM" style="border: 0; height: 345px; width: 560px">
 </iframe></div><div class="tip admonition">
@@ -339,7 +340,7 @@ mikið álag í mjög stuttan tíma (jarðskjálftar..)</p>
 <section id="formbreytingar-og-formbreytingarferlar">
 <h3><span class="section-number">6.1.2. </span>Formbreytingar og formbreytingarferlar<a class="headerlink" href="#formbreytingar-og-formbreytingarferlar" title="Permalink to this heading"></a></h3>
 <p>Ferillinn skiptist í (línulega) fjaðrandi og flot svið (fæst efni hafa í reynd alveg línulega
-fjaðrandi svið!);</p>
+fjaðrandi svið.);</p>
 <div class="tip admonition">
 <p class="admonition-title">Hugtök</p>
 <blockquote>
@@ -351,8 +352,7 @@ fjaðrandi svið!);</p>
 </div></blockquote>
 </div>
 <p>Spennu-formbreytingarferillinn er almennt reiknaður miðað við upphafsþversnið sýnis
-(<span class="math notranslate nohighlight">\(A_0\)</span>), þess vegna virðist spennan falla í lokin (í reynd hækkar hún upp í brotástand- sbr.
-umfjöllun í kennslubókinni!)</p>
+(<span class="math notranslate nohighlight">\(A_0\)</span>), þess vegna virðist spennan falla í lokin (í reynd hækkar hún upp í brotástand þar sem þversniðið minnkar í raun).</p>
 <p>Spennu-formbreytingaferlar;
 Styrkur, stífleiki og hámarks formbreyting er mjög háð efnum og ákvörðun fjaðurstuðuls, sem má ákvarða með tveim aðferðum (sem eru þó tengdar);</p>
 <ul class="simple">
@@ -369,7 +369,10 @@ Styrkur, stífleiki og hámarks formbreyting er mjög háð efnum og ákvörðun
 <section id="skeraraun">
 <h3><span class="section-number">6.1.3. </span>Skeráraun<a class="headerlink" href="#skeraraun" title="Permalink to this heading"></a></h3>
 <p>Á sama hátt og tog- og þrýstispennur eru háðar breytingu í lengd þá er skerspenna háð
-formbreytingu (skælingu);</p>
+formbreytingu (skælingu), sjá mynd.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/sker.png"><img alt="../_images/sker.png" src="../_images/sker.png" style="width: 70%;" /></a>
+</figure>
 <p>Formbreyting undir skúfáraun; <span class="math notranslate nohighlight">\(\gamma = \frac{\Delta h}{h}\)</span></p>
 <div class="math notranslate nohighlight">
 \[\tau = \frac{T}{A} = G \cdot \gamma\]</div>
@@ -411,21 +414,24 @@ formbreytingu (skælingu);</p>
 <section id="hofuspennur">
 <h3><span class="section-number">6.1.4. </span>Höfuðspennur<a class="headerlink" href="#hofuspennur" title="Permalink to this heading"></a></h3>
 <p>Spennur sem eru hornrétt hver á aðra og lýsa spennuástandi í sniði á fullnægjandi hátt
-nefnast höfuðspennur (sbr. mynd í bókinni);</p>
+nefnast höfuðspennur.</p>
 <p>Í ein-ása áraun koma upp normalspennur (þvert á brotflöt) og skúfspennur samsíða
 fletinum- auðvelt er að sýna að hámarks skúfáraun verður í plani sem hallar 45 ° frá
-lengdarstefnu…</p>
+lengdarstefnu.</p>
 <p>Almennt er efnisbrot skýrt þannig (á sérstaklega við málma) að fyrst myndist örsprunga
-undir árauninni, þeim fjölgi og loks bresti þversniðið.. og skýra hversvegna brotsár í togi
-er eins og það er!</p>
+undir árauninni, þeim fjölgi og loks bresti þversniðið. Það skýrir hvers vegna brotsár í togi
+er eins og það er.</p>
 </section>
 <section id="seigja-stokk-ea-seig-efni">
 <h3><span class="section-number">6.1.5. </span>Seigja; stökk eða seig efni<a class="headerlink" href="#seigja-stokk-ea-seig-efni" title="Permalink to this heading"></a></h3>
-<p>Skilin milli þess að efni sé seigt eða stökkt eru ekki skýr..</p>
+<p>Skilin milli þess að efni sé seigt (e.ductile) eða stökkt (e. brittle) eru ekki skýr.</p>
 <ul class="simple">
-<li><p>brotlenging stáls í togprófun er til marks um mismunandi seigju mismunandi stálgerða..</p></li>
-<li><p>brotöryggi; stökk og seig efni..</p></li>
+<li><p>brotlenging stáls í togprófun er til marks um mismunandi seigju mismunandi stálgerða.</p></li>
+<li><p>brotöryggi; stökk og seig efni.</p></li>
 </ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/stokktseigt.png"><img alt="../_images/stokktseigt.png" src="../_images/stokktseigt.png" style="width: 60%;" /></a>
+</figure>
 </section>
 <section id="hersla-malma">
 <h3><span class="section-number">6.1.6. </span>Hersla málma<a class="headerlink" href="#hersla-malma" title="Permalink to this heading"></a></h3>
@@ -443,19 +449,19 @@ umfangsmeira en hámarksspennur breytist
 ekki. Í reynd má með réttum aðferðum
 breyta kristallagrindinni og eiginleikar
 breytast í samræmi við það, sjá mynd úr
-Callister að ofan.</p>
+Callister að ofan <span id="id1">[<a class="reference internal" href="../kafli07/#id11" title="Jr. William D. Callister and David G. Rethwisch. Callister's Materials Science and Engineering. Wiley, 2020.">WDCR20</a>]</span>.</p>
 </section>
 <section id="einsatta-isotrop-og-misatta-anisotrop-efni">
 <h3><span class="section-number">6.1.7. </span>Einsátta (isotrop) og misátta (anisotrop) efni<a class="headerlink" href="#einsatta-isotrop-og-misatta-anisotrop-efni" title="Permalink to this heading"></a></h3>
 <p>Mörg efni, t.d. málmar almennt og steypa, eru með eins eiginleika í ólíkar stefnur
-höfuðása (þrýstiþol t.d. óháð stefnu), slík efni nefnast einsátta (isotrop). Önnur efni, s.s.
+höfuðása (þrýstiþol t.d. óháð stefnu), slík efni nefnast einsátta (e. isotropic). Önnur efni, s.s.
 timbur, er með mjög ólíka eiginleika eftir mismunandi höfuðstefnum og er því misátta
-(anisotrop).</p>
+(e. anisotropic).</p>
 <p>Óháð því hvort efni eru eins- eða misátta þá eru gildi á mismunandi eiginleikum iðulega
 mjög mismunandi, t.d. togþol ólíkt þrýstiþoli; þetta gildir fyrir steypu og timbur svo
 dæmi séu tekin. Í öðrum tilvikum er munurinn óverulegur, t.d. í málmum.</p>
 <p>Vegna þess hve auðvelt er að framkvæma einása prófun þá er þetta langalgengasta
-prófunaraðferðin sem tog-, þrýsti- eða skerprófun..</p>
+prófunaraðferðin sem tog-, þrýsti- eða skerprófun.</p>
 </section>
 </section>
 <section id="tviasa-spennuastand">
@@ -465,15 +471,15 @@ prófunaraðferðin sem tog-, þrýsti- eða skerprófun..</p>
 </figure>
 <p>Tvíása áraun hefur áhrif á höfuðspennur; og háð
 innbyrðis stefnu þá getur skúfspenna ýmist hækkað
-eða lækkað miðað við einása spennu ástand fyrir kraftastefnur samkv.
-Mynd sem jákvæðar fæst;</p>
+eða lækkað miðað við einása spennuástand. Fyrir kraftastefnur samkv.
+mynd 6.19 sem jákvæðar fæst;</p>
 <div class="math notranslate nohighlight">
 \[T = F_1 \cdot \sin{(\alpha)} + F_2 \cdot \cos{(\alpha)}\]</div>
 <p>von Mises og Tresca ferlar fyrir tvíása
 spennur og leyfilegar samsetningar af
-spennum… Spennusamsetningar innan
+spennum. Spennusamsetningar innan
 markanna eru “öruggar” aðrar
-samsetningar ekki !</p>
+samsetningar ekki.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/vonMises.png"><img alt="../_images/vonMises.png" src="../_images/vonMises.png" style="width: 70%;" /></a>
 </figure>
@@ -486,14 +492,14 @@ einkennum;</p>
 <li><p>Skyndibreyting (d: momentan…)</p></li>
 <li><p>Tímaháð breyting</p></li>
 </ul>
-<p>Í hvoru tilviki um sig er formbreytingin almennt samsett úr annarsvegar fjaðrandi- og
-hinsvegar fljótandi formbreytingu..</p>
+<p>Í hvoru tilviki um sig er formbreytingin almennt samsett úr annars vegar fjaðrandi- og
+hins vegar fljótandi formbreytingu.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/rheology.png"><img alt="../_images/rheology.png" src="../_images/rheology.png" style="width: 70%;" /></a>
 </figure>
-<p>Langtímaformbreyting undir stöðugu álagi er nefnd skrið (krybning).
-Formbreytingin (undir álagi) er samsett úr tveim þáttum; upphafsformbreytingu, 0, og
-tímaháðri formbreytingu, c(t) og þegar innfært er hlutfall stærðanna og gert ráð fyrir
+<p>Langtímaformbreyting undir stöðugu álagi er nefnd skrið (e. creep, d. krybning).
+Formbreytingin (undir álagi) er samsett úr tveim þáttum; upphafsformbreytingu, <span class="math notranslate nohighlight">\(\varepsilon_0\)</span>, og
+tímaháðri formbreytingu, <span class="math notranslate nohighlight">\(\varepsilon_c(t)\)</span> og þegar innfært er hlutfall stærðanna og gert ráð fyrir
 stöðugri spennu (þverskurðarflatarmálið óbreytt undir árauninni) þá fæst:</p>
 <div class="math notranslate nohighlight">
 \[\varepsilon(t) = \varepsilon_0 + \varepsilon_c(t) = \varepsilon_0(1 + \phi(t)) = \frac{\sigma}{E}(1+\phi(t))\]</div>
@@ -531,7 +537,7 @@ spennunni, en það gildir einungis fyrir línulega seig-fjaðrandi (linear visk
 </table>
 <p>Gildið <span class="math notranslate nohighlight">\(b\)</span> er einingarlaust en <span class="math notranslate nohighlight">\(\tau\)</span> hefur sömu einingu og <span class="math notranslate nohighlight">\(t\)</span>, oft sólarhringar. Stærðin <span class="math notranslate nohighlight">\(\tau\)</span>
 nefnd spennulosunartíminn (relaksationstiden) – sjá aftar.</p>
-<p>Langtímaformbreytingar geta verið háð fleiri þáttum en álaginu; fyrir timbur skiptir t.d.
+<p>Langtímaformbreytingar geta verið háðar fleiri þáttum en álaginu; fyrir timbur skiptir t.d.
 efnisrakinn mjög miklu máli (meira skrið við hærri efnisraka) þetta gildir einnig fyrir
 steypu, en í minna mæli þó.</p>
 <p>Langtímaformbreytingar eru langt í frá línulegar með tíma, og þetta hefur orðið
@@ -543,14 +549,14 @@ uppspretta að allskyns líkanagerð vegna útreikninga (sjá mynd úr Markestad
 <div class="important admonition">
 <p class="admonition-title">Samlagningarregla Boltzmanns (Boltzmanns superpositionsprincip)</p>
 <blockquote>
-<div><p>Formbreytingar (eða spennur) frá mismunandi áhrifum má leggja saman (vel þekkt úr þolhönnun)..</p>
+<div><p>Formbreytingar (eða spennur) frá mismunandi áhrifum má leggja saman (vel þekkt úr burðarþolshönnun).</p>
 </div></blockquote>
 </div>
 <section id="spennulosun-relaksation">
 <h3><span class="section-number">6.3.1. </span>Spennulosun (relaksation)<a class="headerlink" href="#spennulosun-relaksation" title="Permalink to this heading"></a></h3>
 <p>Þegar formbreytingu (t.d. lengingu) efnis er haldið stöðugri yfir lengri tíma þá á sér stað
-spennulosun, þ.e. upphafsspennan lækkar.. (þetta er vel þekkt úr for- og eftirspenntum
-burðarvirkjum).</p>
+spennulosun, þ.e. upphafsspennan lækkar. Þetta er vel þekkt úr for- og eftirspenntum
+burðarvirkjum.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/spennulosun.png"><img alt="../_images/spennulosun.png" src="../_images/spennulosun.png" style="width: 70%;" /></a>
 </figure>
@@ -558,7 +564,7 @@ burðarvirkjum).</p>
 <div class="math notranslate nohighlight">
 \[\sigma(t) = \varepsilon \cdot r(t)\]</div>
 <p>Spennulosun og skrið stafa af hliðstæðri (sömu) breytingu í efninu, en þessi áhrif eru lítt
-kunn enn sem komið er..það verða því tengsl milli skriðfallsins, <span class="math notranslate nohighlight">\(c(t)\)</span>, og
+kunn enn sem komið er. Það verða því tengsl milli skriðfallsins, <span class="math notranslate nohighlight">\(c(t)\)</span>, og
 spennulosunarfallsins, <span class="math notranslate nohighlight">\(r(t)\)</span> og í þeim tilfellum sem skrifa má skriðbreytistærðina <span class="math notranslate nohighlight">\(\phi(t)\)</span> sem
 veldisfall, þá gildir fyrir <span class="math notranslate nohighlight">\(b&lt;0,3\)</span> ;</p>
 <div class="math notranslate nohighlight">
@@ -585,23 +591,23 @@ innbyrðis óháð?!);</p>
 <a class="reference internal image-reference" href="../_images/betongrheology.png"><img alt="../_images/betongrheology.png" src="../_images/betongrheology.png" style="width: 70%;" /></a>
 </figure>
 <p>“Isokrone” spennu-formbreytingar línuritið sýnir sambandið milli augnabliks brotstyrks,
-skriðs og spennulosunar fyrir steypu.
-Skýringar;</p>
+skriðs og spennulosunar fyrir steypu.</p>
+<p>Skýringar;</p>
 <p>1- fjórðungur “Dynamisk” línan sýnir niðurstöður fyrir prófun sem er keyrð mjög hratt
-(ekkert skrið !)
-“20 min” línan sýnir niðurstöður fyrir dæmigerða skammtímaprófun
+(ekkert skrið)
+“20 min” línan sýnir niðurstöður fyrir dæmigerða skammtímaprófun.
 Aðrar línur fyrir prófun í tiltekinn dagafjölda og loks skriðmörkin við
 óendanlegan tíma (efri mörk skriðs)</p>
 <p>2- fjórðungur sýnir tímaháða spennulosun við gefna (sömu) formbreytingu í efni</p>
 <p>4- fjórðungur sýnir tímaháð skrið fyrir gefna (sömu) spennu í efni</p>
 </section>
 </section>
-<section id="reyta-udmattelse">
-<h2><span class="section-number">6.4. </span>Þreyta (udmattelse)<a class="headerlink" href="#reyta-udmattelse" title="Permalink to this heading"></a></h2>
+<section id="reyta-e-fatigue-d-udmattelse">
+<h2><span class="section-number">6.4. </span>Þreyta (e. fatigue, d. udmattelse)<a class="headerlink" href="#reyta-e-fatigue-d-udmattelse" title="Permalink to this heading"></a></h2>
 <p>Þegar efni verður fyrir síendurteknu álagi (álagshrinum) þá getur slíkt framkallað
-þreytubrot (þetta er almennt skýrt þannig að örsprungur (e:microcracks) séu til staðar í
+þreytubrot (þetta er almennt skýrt þannig að örsprungur (e. microcracks) séu til staðar í
 efni, eða myndist, og þær vaxi með hverri álagshrinu þar til brotstyrkur efnis er minni en brotáraunin). Þreytubrot getur þannig orðið við lægri spennur heldur en sem samsvarar
-uppgefnum kennistyrk efnis..
+uppgefnum kennistyrk efnis.
 Brotspenna í þreytu reynist vera háð</p>
 <div class="math notranslate nohighlight">
 \[\textrm{Fjölda álagshrina    } N\]</div>
@@ -609,9 +615,9 @@ Brotspenna í þreytu reynist vera háð</p>
 \[\textrm{Meðalspennu    } \sigma_m = \frac{\sigma_{max} + \sigma_{min}}{2}\]</div>
 <div class="math notranslate nohighlight">
 \[\textrm{Sveifluútslagi (amplitud)    }\sigma_a = \frac{\sigma_{max} - \sigma_{min}}{2}\]</div>
-<p>(Ath..fyrir stál eru spennurnar iðulega látnar sveiflast um 0, og þá miðað allan mun á
-hæstu og lægstu spennu, reiknað með formerki)..
-Prófun á þreytuþoli efnis er gerð með mismunandi áraun stöðuga sveiflutíðni,
+<p>(Ath. fyrir stál eru spennurnar iðulega látnar sveiflast um 0, og þá miðað allan mun á
+hæstu og lægstu spennu, reiknað með formerki).
+Prófun á þreytuþoli efnis er gerð með mismunandi áraun og stöðuga sveiflutíðni,
 niðurstaðan er sýnd sem Wöhler kúrfur eða Smith graf (í báðum tilvikum sjást áhrif
 sveifluútslags og meðalspennu, sem fall af sveiflufjölda);</p>
 <figure class="align-center">
@@ -628,13 +634,13 @@ gerða álagshrina, n1, n2, n3 með hámarkssveiflufjöldann hver um sig N1, N2,
 </section>
 <section id="vinam-og-slitstyrkur">
 <h2><span class="section-number">6.5. </span>Viðnám og slitstyrkur<a class="headerlink" href="#vinam-og-slitstyrkur" title="Permalink to this heading"></a></h2>
-<p>Skilgreindur viðnámsstuðull, :math:mu (mismunandi fyrir kyrrstætt ástand eða ástand á
-hreyfingu..)</p>
+<p>Skilgreindur viðnámsstuðull, <span class="math notranslate nohighlight">\(\mu\)</span> (mismunandi fyrir kyrrstætt ástand eða ástand á
+hreyfingu.)</p>
 <div class="math notranslate nohighlight">
 \[\mu = \textrm{þverkraftur/normalkraftur}\]</div>
-<p>(þverkraftur ákvarðast af álaginu sem þarf til að hreyfa normalkraftinn; þ.e. hlutinn)
-Skriðöryggi… (á íþróttagólfum er það snúningur sem er ákvarðandi..!)
-Slitstyrkur; hvað þolir efni mikinn núning..</p>
+<p>(þverkraftur ákvarðast af álaginu sem þarf til að hreyfa normalkraftinn; þ.e. hlutinn).
+Skriðöryggi: á íþróttagólfum er það snúningur sem er ákvarðandi..!
+Slitstyrkur; hvað þolir efni mikinn núning.</p>
 </section>
 <section id="efnisprofanir-styrkprofanir">
 <h2><span class="section-number">6.6. </span>Efnisprófanir (styrkprófanir)<a class="headerlink" href="#efnisprofanir-styrkprofanir" title="Permalink to this heading"></a></h2>
@@ -646,17 +652,17 @@ Mælt í togbekk; kraftur og lenging, oft einnig brotlenging</p></li>
 Mælt í álagspressu; kraftur og samþjöppun, oft einnig stærðarbreyting þvert á
 álagsstefnu</p></li>
 <li><p>Beygjutogþol - og fjaðurstuðull
-Mælt í álagspressu; ýmist sem eitt miðjuálag eða tvö..; kraftur og niðurbeygja</p></li>
+Mælt í álagspressu; ýmist sem eitt miðjuálag eða tvö; kraftur og niðurbeygja</p></li>
 <li><p>Kleyfni
 Mælt í álagspressu; hámarkskraftur</p></li>
-<li><p>Harka..
-Hlut þrýst í efnið og -</p>
-<p>“þvermál” fars mælt;</p>
+<li><p>Harka.
+Hlut þrýst í efnið og:</p>
+<p>“þvermál” farsins mælt;</p>
 <ul class="simple">
 <li><p>Brinell</p></li>
 <li><p>Vicker</p></li>
 </ul>
-<p>Dýpt fars mæld</p>
+<p>dýpt farsins mæld;</p>
 <ul class="simple">
 <li><p>Rockwell (málmar)</p></li>
 <li><p>Shore (fjölliður)</p></li>
@@ -668,7 +674,7 @@ Hlut þrýst í efnið og -</p>
 Þetta er í reynd mæling á brotorku efnis og nýtist því til að meta getu efnis til að
 taka við höggum, og er iðulega notað sem prófun í tengslum við þróun og eftirlit:</p></li>
 <li><p>Slitþol (e: abrasion test)
-Mælt með núningi… ýmsar útfærslur (hjól, sléttur flötur,.. )</p>
+Mælt með núningi. Ýmsar útfærslur (hjól, sléttur flötur,.. )</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../_images/slagharka.png"><img alt="../_images/slagharka.png" src="../_images/slagharka.png" style="width: 50%;" /></a>
 </figure>
@@ -679,7 +685,7 @@ Mælt með núningi… ýmsar útfærslur (hjól, sléttur flötur,.. )</p>
 <ul>
 <li><p>Dreifing í niðurstöðum (Björn et al. 1992)</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/dreifing.png"><img alt="../_images/dreifing.png" src="../_images/dreifing.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/dreifing.png"><img alt="../_images/dreifing.png" src="../_images/dreifing.png" style="width: 70%;" /></a>
 </figure>
 </li>
 <li><p>Lögun sýnis .. þetta skiptir verulegu máli og er því almennt skilgreint í viðeigandi prófunarstaðli!</p></li>
@@ -688,7 +694,7 @@ Mældur brotstyrkur er verulega háður álagshraðanum; stuttur tími -&gt; hlu
 hátt gildi (lítill hraði og áhrif skriðs koma inn í mæliniðurstöðuna!)</p></li>
 <li><p>Stærð sýnis (stærðaráhrif) (Björn et al. 1992)</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/staerdarahrif.png"><img alt="../_images/staerdarahrif.png" src="../_images/staerdarahrif.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/staerdarahrif.png"><img alt="../_images/staerdarahrif.png" src="../_images/staerdarahrif.png" style="width: 70%;" /></a>
 </figure>
 </li>
 <li><p>Hitastig og raki
@@ -696,6 +702,48 @@ Hitastig skiptir oftast litlu máli, undantekning er helst nema fyrir plastefni
 Raki skiptir alltaf verulegu máli þegar rakadræg efni eiga í hlut; efnisstyrkur og
 stífleiki t.d. timburs er mjög háður efnisraka (sbr. umfjöllun um timbur síðar!).</p></li>
 </ul>
+</section>
+<section id="heimildir">
+<h3><span class="section-number">6.6.2. </span>Heimildir<a class="headerlink" href="#heimildir" title="Permalink to this heading"></a></h3>
+<div class="docutils container" id="id2">
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bre11<span class="fn-bracket">]</span></span>
+<p>Kenneth Breiðfjörð. Byggingarefni á íslandi. uppruni, flutningar til landsins ásamt kolefnisspori timburs. Master's thesis, Háskóli Íslands, 2011.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>dSdSRB23<span class="fn-bracket">]</span></span>
+<p>Rodrigo Mero Sarmento da Silva and Aline da Silva Ramos Barboza. Concrete modeling using micromechanical multiphase models and multiscale analysis. <em>Rev. IBRACON Estrut. Mater.</em>, 2023.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Gre19<span class="fn-bracket">]</span></span>
+<p>GreenChemUofT. Green marketing in the plastic era: honesty or hype? Sep 2019. URL: <a class="reference external" href="https://greenchemuoft.wordpress.com/2019/09/13/green-marketing-in-the-plastic-era-honesty-or-hype/">https://greenchemuoft.wordpress.com/2019/09/13/green-marketing-in-the-plastic-era-honesty-or-hype/</a>.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oAN00<span class="fn-bracket">]</span></span>
+<p>F.R. Gottfredsen og Anders Nielsen. <em>Bygningsmaterialer grundlæggende egenskaber</em>. Polyteknisk Forlag, 2000.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oJS78<span class="fn-bracket">]</span></span>
+<p>Guðmundur Halldórsson og Jón Sigurjónsson. <em>Einangrun húsa</em>. Rannsóknastofnun byggingariðnaðarins, 2 edition, 1978.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oPV02<span class="fn-bracket">]</span></span>
+<p>Björn Marteinsson og Páll Valdimarsson. Efnis- og orkunotkun vegna bygginga á íslandi. <em>Árbók VFÍ/TFÍ</em>, 14(1):223–228, 2002.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sig16<span class="fn-bracket">]</span></span>
+<p>Jón Sigurjónsson. <em>Rb-blað: Tré - trjátegundir og efniseiginleikar viðarins</em>. Nýsköpunarmiðstöð Íslands, 2016.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TF21<span class="fn-bracket">]</span></span>
+<p>Emil Engelund Thybring and Maria Fredriksson. Wood modification as a tool to understand moisture in wood. <em>Forests</em>, 12(3):372, mar 2021.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">WDCR20</a><span class="fn-bracket">]</span></span>
+<p>Jr. William D. Callister and David G. Rethwisch. <em>Callister's Materials Science and Engineering</em>. Wiley, 2020.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>

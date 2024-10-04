@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14. Kafli - Fylliefni &mdash; Efnisfræði </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/js/eqt.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="15. Kafli - Heimildir" href="../heimildir/" />
+    <link rel="prev" title="13. Kafli - Lím" href="../kafli13/" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Efnisfræði
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli – Kynning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Kafli - Gerð og uppbygging efna</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3. Kafli - Holrýmd og efnisþéttleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Kafli - Varmi og einangrun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. Kafli - Raki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. Kafli - Styrkur og stífleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. Kafli - Rúmmálsstöðugleiki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8. Kafli - Niðurbrot efna og ending</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9. Kafli - Hitastigsháðar breytingar og bruni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10. Kafli - Stál</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11. Kafli - Gler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12. Kafli - Fjölliður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13. Kafli - Lím</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">14. Kafli - Fylliefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#steinefni">14.1. Steinefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kornastaerardreifing">14.2. Kornastærðardreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lifraen-ohreinindi">14.3. Lífræn óhreinindi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#berggreining">14.4. Berggreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saltmaeling">14.5. Saltmæling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#alkaliprof">14.6. Alkalípróf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raki">14.7. Raki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mettivatn">14.8. Mettivatn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kornarumyngd">14.9. Kornarúmþyngd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frostol">14.10. Frostþol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../heimildir/">15. Kafli - Heimildir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">14. </span>Kafli - Fylliefni</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg302g/kafli14.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-fylliefni">
+<h1><span class="section-number">14. </span>Kafli - Fylliefni<a class="headerlink" href="#kafli-fylliefni" title="Permalink to this heading"></a></h1>
+<p>Samsetning steypu</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/samsetning.png"><img alt="../_images/samsetning.png" src="../_images/samsetning.png" style="width: 80%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Bindiefni (Sement / eða önnur bindiefni)</p></li>
+<li><p>Vatn</p></li>
+<li><dl class="simple">
+<dt>Fylliefni (Steinefni)</dt><dd><ul>
+<li><p>Sandur 0-8 mm</p></li>
+<li><p>Möl 8-50 mm</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Önnur efni</dt><dd><ul>
+<li><dl class="simple">
+<dt>Íblendiefni</dt><dd><ul>
+<li><p>Loftblendi, þjálni- og flotefni o.fl.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Íaukar</dt><dd><ul>
+<li><p>Kísilryk, slagg, flugaska, malað líparít, malað kalk, litarefni o.fl.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Trefjar í steypu</dt><dd><ul>
+<li><p>Plast-, stál-, gler-, kol-, og basalt o.fl.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="steinefni">
+<h2><span class="section-number">14.1. </span>Steinefni<a class="headerlink" href="#steinefni" title="Permalink to this heading"></a></h2>
+<p>Steinefni eru óvirk (hvarfast t.d. ekki við sement í steypu), kornótt, ólífræn efni oftast möl og sandur. Steinefni eru notuð í m.a. vegagerð og steypu.
+Sterk hefð er fyrir því að nota orðið fylliefni um steinefni sem ætlað til að nota í steinsteypu (e. aggregate).
+Steinefni/fylliefni eru um 70-80% rúmmáls steinsteypu og stýra styrk steinsteypunnar. Ef steypan væri eingöngu sementsefja
+væri mun hærra rúmmetraverð, mun meiri rýrnun og einnig hærra kolefnisspor.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/youngsmodulus_concreteandcement.png"><img alt="../_images/youngsmodulus_concreteandcement.png" src="../_images/youngsmodulus_concreteandcement.png" style="width: 80%;" /></a>
+</figure>
+<p>Sementsefjan er veikari fasinn, fylliefnin eru sterkari fasinn og „þriðji fasinn“ er fasaskil sementsefju og fylliefna.</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../_images/fasaskil.png"><img alt="../_images/fasaskil.png" src="../_images/fasaskil.png" style="width: 100%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../_images/fasaskil1.png"><img alt="../_images/fasaskil1.png" src="../_images/fasaskil1.png" style="width: 100%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Áður var komið inn á skrið steinsteypu en á myndum að neðan má sjá hvernig mismunandi gerð steinefna/fylliefna geta haft áhrif á skrið steinsteypu.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../_images/skrid.png"><img alt="../_images/skrid.png" src="../_images/skrid.png" style="width: 100%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../_images/skrid2.png"><img alt="../_images/skrid2.png" src="../_images/skrid2.png" style="width: 100%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Algengasta tegund steinefna á Íslandi er basalt.</strong>
+Mismunandi er þó hvaðan steinefnin koma. Á Íslandi eru til námur sem moka efni hugsað fyrir steinsteypu, námur eins og
+Björgun, Harðikambur og Vatnsskarð.</p>
+<p>Steinefni á Íslandi þurfa að standast miklar kröfur og því eru
+ýmis próf og tilraunir framkvæmdar á steinefunum til að ákvarða hvort hægt sé að nota þau í steypu.
+Próf á steinefnum á að koma í veg fyrir að fram komi skemmdir á mannvirkinu.
+Helstu prófanirnar eru:</p>
+<ul class="simple">
+<li><p>Kornastærðardreifing</p></li>
+<li><p>Húmus og slamm</p></li>
+<li><p>Berggreining</p></li>
+<li><p>Saltmæling</p></li>
+<li><p>AlkalípróF</p></li>
+<li><p>Raki</p></li>
+<li><p>Mettivatn</p></li>
+<li><p>Kornarúmþyngd</p></li>
+<li><p>Frostþolspróf</p></li>
+</ul>
+<p>En fjallað verður um hvert próf fyrir sig í þessum kafla.</p>
+<p>Prófunarferlið sem steinefnin fara í gegnum má sjá hér að neðan:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/berggreining.png"><img alt="../_images/berggreining.png" src="../_images/berggreining.png" style="width: 70%;" /></a>
+</figure>
+</section>
+<section id="kornastaerardreifing">
+<h2><span class="section-number">14.2. </span>Kornastærðardreifing<a class="headerlink" href="#kornastaerardreifing" title="Permalink to this heading"></a></h2>
+<p>Mæling á dreifingu kornastærða í sýni byggist á því að sigta sýnið á sigtarseríu þar sem grófasta sigtið er efst og það fínasta er neðst.
+Efni sem situr á hverju sigti er vigtað. Út úr þessu fæst kornakúrfa.Kornakúrfan sýnir hversu stórt hlutfall efnisins fór í gegnum hvert sigti.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/kornastaerd.png"><img alt="../_images/kornastaerd.png" src="../_images/kornastaerd.png" style="width: 70%;" /></a>
+</figure>
+<p>Ef sýnið er mjög gróft (mikið af kornum &gt; 16 mm) er það fyrst grófsigtað (á 90, 64, 32, 22.4 og 16 mm sigtum).
+Efnið sem fór í gegnum 16 mm sigtið er svo skipt niður í minna sýni, sem er notað til að klára prófunina:</p>
+<p>Ferlið er svona…</p>
+<ul class="simple">
+<li><p>Sýnið er vigtað</p></li>
+<li><p>Þurrkað</p></li>
+<li><p>Vigtað</p></li>
+<li><p>Votsigtað á 0.063 mm sigti</p></li>
+<li><p>Þurrkað</p></li>
+<li><p>Vigtað</p></li>
+<li><p>Sigtað á sigtaseríu (11.2, 8, 4, 2, 1, 0.5, 0.25, 0.125 og 0.063 mm, ef sýnið var ekki grófsigtað er 16 mm sigti sett ofan á 11.2 mm sigtið)</p></li>
+<li><p>Efni sem situr á hverju sigti vigtað</p></li>
+<li><p>Kornastærðardreifing sett fram.</p></li>
+</ul>
+<p>Hér að neðan má sjá dæmi um kornastærðardreifingar. Þ.e. eina einsleita, eina samfellda og eina þar sem vantar korn af ákveðinni stærð.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../_images/einsleit.png"><img alt="../_images/einsleit.png" src="../_images/einsleit.png" style="width: 100%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../_images/korn.png"><img alt="../_images/korn.png" src="../_images/korn.png" style="width: 100%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lifraen-ohreinindi">
+<h2><span class="section-number">14.3. </span>Lífræn óhreinindi<a class="headerlink" href="#lifraen-ohreinindi" title="Permalink to this heading"></a></h2>
+<p>Lífræn óhreinindi (rotnaðar jurtaleifar) í fylliefnum geta haft áhrif á styrkleika steypunnar með því að hamla eðlilegum efnahvörfum sementsins.</p>
+<p><strong>Húmus</strong></p>
+<p>Steinefni sem nota á í steinsteypu skal vera laust við lífræn óhreinindi. Yfirleitt er sjónmat á niðurstöðum látið nægja.</p>
+<p>Húmuspróf:</p>
+<ul class="simple">
+<li><p>130 ml af sandi hellt í mæliglas. NaOH (vítissódi) lausn bætt út í mæliglasið þar til NaOH + sandur = 200 ml.</p></li>
+<li><p>Mæliglasið hrist vel.</p></li>
+<li><p>Látið standa í sólarhring.</p></li>
+<li><p>Ef lífræn óhreinindi eru í sandinum lita þau lausnina.</p></li>
+<li><p>Litur lausnarinnar borinn saman við litaskala (eða staðallausnir með þekktum húmusstyrk), húmusstigið lesið af skalanum.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/humus.png"><img alt="../_images/humus.png" src="../_images/humus.png" style="width: 70%;" /></a>
+</figure>
+<p><strong>Slam og slammpróf</strong></p>
+<p>Mikið af örfínum efniskornum er ekki æskilegt í fylliefnum í steinsteypu.
+Þau auka vatnsþörf steypunnar og geta veikt bindingu milli korna og sementsefju því þau loða gjarnan við stærri fylliefnakorn.</p>
+<p>Slammpróf:</p>
+<ul class="simple">
+<li><p>125 ml af vatni hellt í mæliglas. Sandinum bætt út í mæliglasið þar til vatn+sandur = 200ml</p></li>
+<li><p>Mæliglasið hrist vel</p></li>
+<li><p>Látið standa í sólarhring</p></li>
+<li><p>Lesið á mæliglasið; hvað er sandurinn margir ml og hvað er slammið margir ml. Út frá því fæst rúmmálsprósenta slammsins af sandinum</p></li>
+</ul>
+</section>
+<section id="berggreining">
+<h2><span class="section-number">14.4. </span>Berggreining<a class="headerlink" href="#berggreining" title="Permalink to this heading"></a></h2>
+<p>Berggreining veitir upplýsingar um samsetningu efnis. Hún er framkvæmd af jarðfræðingi og flokkar hann bergið
+í þrjá gæðaflokka eftir bergtegund, ummyndun, þéttleika o.fl.</p>
+<p>Berggreining:</p>
+<ul class="simple">
+<li><p>Eftir þvott og sigtun sýnis er kornastærð valin til greiningar (oftast 8-11.2 mm)</p></li>
+<li><p>Sýninu skipt niður í ca 200 korn</p></li>
+<li><p>Kornin brotin með hamri (viljum skoða fersk brotsár, ekki veðrunarkápuna)</p></li>
+<li><p>Kornin skoðuð í víðsjá og flokkuð skv. berggreiningarkerfi Rb</p></li>
+<li><p>Vandamál: byggist að hluta til á mati þess sem berggreinir</p></li>
+</ul>
+<p>Dæmi úr niðurstöðu berggreiningar:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../_images/berg1.png"><img alt="../_images/berg1.png" src="../_images/berg1.png" style="width: 100%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../_images/berg2.png"><img alt="../_images/berg2.png" src="../_images/berg2.png" style="width: 100%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="saltmaeling">
+<h2><span class="section-number">14.5. </span>Saltmæling<a class="headerlink" href="#saltmaeling" title="Permalink to this heading"></a></h2>
+<p>Saltmæling er framkvæmd til að mæla magn salts í steinefnasýni sem hefur verið í beinni snertingu við saltvatn (t.d. sjávarmöl).
+Samkvæmt byggingarreglugerð er saltmæling gerð til þess að meta hættu á alkalívirkni og tæringu bendistáls eða
+annara málma. Samkvæmt reglugerð skal steinefni til notkunar í járnbenta steinsteypu hafa minna saltinnihald í hverju
+kg af þurrum sandi (kornastærð &lt; 4 mm ) en 0,036% af klóríði og minna en 0,012% af klóríði í hverju kg af þurrum sandi
+til notkunar í steypu með spenntu bendistáli. Samsetning fylliefna skal vera þannig að hámark 10% lendi í flokki 3
+þegar flokkað er eftir berggreiningarkerfi skv. ÍST EN 932-3 og Rb blaði um  berggreiningu í samræmi við þann staðal,
+nema prófanir sýni fram á að veðrunarþol sé í lagi.</p>
+<p>Framkvæmd á saltmælingu:</p>
+<ul class="simple">
+<li><p>Klóríðjónir losaðar frá steinefninu með silfurnítrati</p></li>
+<li><p>Lausnin títruð með thiocynate. Ammonium járn (III) súlfat lausn er notuð sem vísir (e. indicator)</p></li>
+<li><p>Klóríðinnihald gefið upp sem þyngdarhluti af steinefni</p></li>
+</ul>
+</section>
+<section id="alkaliprof">
+<h2><span class="section-number">14.6. </span>Alkalípróf<a class="headerlink" href="#alkaliprof" title="Permalink to this heading"></a></h2>
+<p>Prófið er gert til þess að athuga hvort fylliefni séu alkalívirk.
+Fylliefni er sagt alkalívirkt ef það inniheldur ókristallaða eða lítið kristallaða kísilsýru sem veldur því að steinefnið verður fyrir efnaáhrifum frá alkalísamböndum í sementinu
+Alkalískemmdir: við efnaskipti milli steinefnis og sementsefju myndast alkalí-kísilhlaup sem þenst út ef það kemst í snertingu við vatn -&gt; sprungur geta myndast í steypunni.</p>
+<p><strong>Alkalí-kísil efnahvörf</strong>
+Til að efnahvörfin geti átt sér stað þá þarf:</p>
+<ul class="simple">
+<li><p>Nægilegt magn alkalía (Na2O natrínoxíð (e. sodium oxide) og K2O kalínoxíð (e.potassium oxide)) í sementinu</p></li>
+<li><p>Lausbundin, hvarfagjörn kísilsýra (SiO2) í fylliefninu</p></li>
+<li><p>Vatn í steypunni</p></li>
+</ul>
+<p>Ef þetta er til staðar getur myndast gel sem þenst út og rúmmálsaukningin getur valdið sprungum í steypunni</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/alkaliefnahvorf.png"><img alt="../_images/alkaliefnahvorf.png" src="../_images/alkaliefnahvorf.png" style="width: 70%;" /></a>
+</figure>
+<p>Dæmi um alkalískemmdir</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><a class="reference internal image-reference" href="../_images/forsendur.png"><img alt="../_images/forsendur.png" src="../_images/forsendur.png" style="width: 100%;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../_images/hvítárbrú.png"><img alt="../_images/hv%C3%ADt%C3%A1rbr%C3%BA.png" src="../_images/hv%C3%ADt%C3%A1rbr%C3%BA.png" style="width: 100%;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Í Rb blaði frá 1983 stendur eftirfarandi um alkalívirkni:</p>
+<p>Í byrjun 7. áratugsins leiddu rannsóknir við Rb (Rannsóknastofnun byggingariðnaðarins) í ljós, að sum fylliefni, sem notuð eru til steypugerðar á Íslandi, eru alkalívirk þ.e.a.s. geta myndað skaðleg efnasambönd í steypunni. Mikið af alkalíoxíðum (Na₂O, K₂O) í íslensku sementi, sem byrjað var að framleiða 1958, eykur hættu á þessum skaðlegu efnasamböndum.</p>
+<p>Staðfesting á stórkostlegum skemmdum af völdum alkalí-kísil efnahvarfa lá ekki fyrir fyrr en 1978, en þá hafði verið gerð rannsókn á fjölda húsa á Stór-Reykjavíkursvæðinu og voru niðurstöður birtar 1979. Í kjölfar þessarar vitneskju voru sett ströng ákvæði um notkun virkra fylliefna í byggingasamþykkt fyrir allt landið 1979. Rannsóknir á ýmsum áhrifafáttum voru einnig auknar</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/tidni.png"><img alt="../_images/tidni.png" src="../_images/tidni.png" style="width: 70%;" /></a>
+</figure>
+<p>Blöndunarhlutfall alkalívirkra steinefni skiptir miklu máli. Á myndinni að neðan má sjá hvaða blöndunarhlutföll skapa mestu
+hættuna á alkalí-kísil efnahvörfum.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/blanda.png"><img alt="../_images/blanda.png" src="../_images/blanda.png" style="width: 70%;" /></a>
+</figure>
+<p><strong>Alkalíprófin</strong> sjálf byggjast á því að mæla þenslu strendinga yfir ákveðinn tíma. Á Íslandi er þessar tvær aðferðir mest notaðar: múrstrendingaaðferð og hraðprófun með múrstrendingum.</p>
+<p><strong>Múrstrendingaraðferðin</strong> er framkvæmd á eftirfarandi hátt:</p>
+<ul class="simple">
+<li><p>Múrstrendingar steyptir úr viðkomandi fylliefni</p></li>
+<li><p>Lengd þeirra mæld</p></li>
+<li><p>Strendingarnir geymdir við 98% raka og 38 ℃</p></li>
+<li><p>Lengd strendinganna mæld eftir 1, 3, 6 og 12 mánuði</p></li>
+<li><p>Lengdaraukning eftir 6 og 12 mánuði er mælikvarði á alkalívirkni</p></li>
+</ul>
+<p><strong>Hraðprófun með múrstrendingum</strong> byggist á því sama en geymsluaðferðirnar eru frábrugðnar.</p>
+<ul class="simple">
+<li><p>Strendingarnir eru geymdir í sterkri NaOH lausn við 80 ℃. Þessar aðstæður kalla fram mun hraðari þenslu.</p></li>
+<li><p>Þensla eftir 14 daga er notuð sem mælikvarði á alkalívirkni</p></li>
+</ul>
+</section>
+<section id="raki">
+<h2><span class="section-number">14.7. </span>Raki<a class="headerlink" href="#raki" title="Permalink to this heading"></a></h2>
+<p>Framkvæmd:</p>
+<ul class="simple">
+<li><p>Sýnið vigtað rakt</p></li>
+<li><p>Þurrkað í ofni yfir nótt (ofninn er ca. 105 ℃; allur raki fer úr sýninu)</p></li>
+<li><p>Vigtað þurrt</p></li>
+<li><p>Raki reiknaður út sem þyngdarprósenta</p></li>
+<li><p>Raki = (rakt – þurrt)/þurrt</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/raki.png"><img alt="../_images/raki.png" src="../_images/raki.png" style="width: 70%;" /></a>
+</figure>
+</section>
+<section id="mettivatn">
+<h2><span class="section-number">14.8. </span>Mettivatn<a class="headerlink" href="#mettivatn" title="Permalink to this heading"></a></h2>
+<p>Mettivatn og kornarúmþyngd eru yfirleitt mæld samtímis. Mettivatn er það þegar kornin eru mettuð af vatni (öll holrými inni í kornunum er full af vatni) en yfirborð kornanna er þurrt.</p>
+<p>Framkvæmd:</p>
+<ul class="simple">
+<li><p>Sýnið er látið ná vatnsmettun (látið liggja í vatnsbaði í sólarhring)</p></li>
+<li><p>Sýnið er yfirborðsþurrkað</p></li>
+<li><p>Sýnið er vigtað yfirborðsþurrt</p></li>
+<li><p>Þurrkað</p></li>
+<li><p>Vigtað þurrt</p></li>
+<li><p>Mettivatn reiknað eins og raki</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/mettivatn.png"><img alt="../_images/mettivatn.png" src="../_images/mettivatn.png" style="width: 70%;" /></a>
+</figure>
+<p>Skýringar:</p>
+<ol class="arabic simple">
+<li><p>Sýni vatnsmettað</p></li>
+<li><p>Tekið úr vatnsbaði og yfirborðsþerrað.</p></li>
+<li><p>Vigtað yfirborðsþurrt og vatnsmettað og þyngd skráð.</p></li>
+<li><p>Sett í mæliflösku, fyllt að marki með vatni, vigtað og þyngd skráð.</p></li>
+<li><p>Pyknometer með vatni, en án sýnis vigtaður og þyngd skráð.</p></li>
+<li><p>Þurrkað við 110°C í 24 klst eða þar til þyngdarbreyting er hverfandi.</p></li>
+<li><p>Vigtað og þyngd skráð með einum aukastaf.</p></li>
+</ol>
+</section>
+<section id="kornarumyngd">
+<h2><span class="section-number">14.9. </span>Kornarúmþyngd<a class="headerlink" href="#kornarumyngd" title="Permalink to this heading"></a></h2>
+<p>Kornarúmþyngd segir til um hversu mörg grömm eru í einum rúm-sentimetra.</p>
+<p>Mælingar á kornarúmþyngd eru mismunandi og miðast við tegund jarðvegs sem er fyrir hendi.</p>
+<p>Fyrir <strong>Sand</strong> er Pyknometer-aðferð notuð:</p>
+<ul class="simple">
+<li><p>Pyknometer (= flaska með þekktu rúmmáli) settur á vigtina og vigtin núllstillt.</p></li>
+<li><p>Yfirborðsþurru efni hellt í pyknometerinn og vigtað (vigtin sýnir þá bara þyngd efnisins því búið er að núllstilla með pyknometernum á)</p></li>
+<li><p>Pyknometerinn er svo fylltur af vatni, allt loft hrist úr honum og settur aftur á vigtina (vigtin sýnir þá þyngd efnisins í þekktu rúmmáli af vatni)</p></li>
+</ul>
+<p>Fyrir <strong>Möl</strong> er Vírkörfuaðferð notuð:</p>
+<ul class="simple">
+<li><p>Efni vigtað í vatni (mölinni hellt í vírkörfu sem er hengd neðan í vigt; vatnsbali hafður undir vigtinni)</p></li>
+<li><p>Mölin er yfirborðsþurrkuð og svo vigtuð yfirborðsþurr</p></li>
+<li><p>Mölin er þurrkuð í ofni og svo vigtuð ofnþurr</p></li>
+</ul>
+</section>
+<section id="frostol">
+<h2><span class="section-number">14.10. </span>Frostþol<a class="headerlink" href="#frostol" title="Permalink to this heading"></a></h2>
+<p>Í byggingarreglugerð stendur:
+Steypuframleiðandi skal auk þess sem greinir í 1. mgr. sýna fram á að steypan uppfylli kröfur um frostþol samkvæmt 7. gr. í staðlinum SS 13 72 44. Meðalflögnun sýna skal vera minni en 1,00 kg/m² eftir 56 frostþýðusveiflur (m₅₆) jafnframt því sem hlutfallið m₅₆/m₂₈ skal vera minna en 2.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/frostþol.png"><img alt="../_images/frost%C3%BEol.png" src="../_images/frost%C3%BEol.png" style="width: 70%;" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli13/" class="btn btn-neutral float-left" title="13. Kafli - Lím" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../heimildir/" class="btn btn-neutral float-right" title="15. Kafli - Heimildir" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3  Umhverfi fyrir Python: Jupyter og Colab</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#notkun-google-colab">3.1  Notkun Google Colab</a></li>
@@ -194,6 +194,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -233,7 +234,7 @@ vinnubækur. Vinnubækurnar eru geymdar á Google Drive svæði notanda, og forr
 í þeim eru keyrð á sérstakri gervitölvu (<em>virtual machine</em>) sem Google leggur
 til. Skrár sem sem forritin þurfa eða búa til eru geymdar á tímabundnu disksvæði
 á þesari gervitölvu. Python-þýðandinn er nýlegur (nánar
-tiltekið útgáfa 3.8.16 í janúar 2023), helstu pakkar eru þegar uppsettir (m.a. þeir
+tiltekið útgáfa 3.10.12 í janúar 2024), helstu pakkar eru þegar uppsettir (m.a. þeir
 sem nefndir eru í kafla <a class="reference internal" href="../kafli01/#pakkar"><span class="std std-numref">1.2</span></a>), og auðvelt er að bæta við pökkum
 eftir þörf.</p>
 <p>Til að byrja á vinnubók á Colab þarf fyrst að stofna reikning hjá Google. Síðan má heimsækja <a class="reference external" href="https://colab.research.google.com">colab.research.google.com</a> og velja <em>File–New notebook</em>. Í reitinn sem birtist má slá inn Python-forrit, og svo má keyra forritið með því að smella á þríhyrningstáknið á vinstri brún reitsins eða með því að slá á ctrl/enter. Hægt er að bæta við textareitum og forritsreitum, vista vinnubókina, prenta hana o.s.frv. og eru helstu slíkar skipanir sýndar hér að neðan í kafla <a class="reference internal" href="#jupyter-skipanir"><span class="std std-numref">3.4</span></a>.</p>
@@ -296,24 +297,16 @@ Aðrir hnappar sem nefndir eru í æfingunni að framan eru sýndir með rauðum
 <span id="anaconda-uppsetning"></span><h2><span class="section-number">3.2  </span>Uppsetning JupyterLab á eigin tölvu<a class="headerlink" href="#uppsetning-jupyterlab-a-eigin-tolvu" title="Permalink to this heading"></a></h2>
 <p><strong>Anaconda.</strong> Auðveldasta leiðin til að setja upp bæði Python og Jupyter á eigin tölvu er að
 nota hugbúnaðarpakka sem nefnist Anaconda (sem er stærsta kyrkislanga í heimi, sbr. að Python
-er líka svoleiðis slanga). Til að flýta fyrir uppsetningu er hægt að nota minni útgáfu
-af Anaconda sem kallast Miniconda og leiðbeiningarnar hér miðast við hana. Anaconda með öllu
-inniheldur u.þ.b. 1500 pakka og það tekur tíma að ná í þá alla og setja upp.</p>
+er líka svoleiðis slanga). Til að flýta fyrir uppsetningu væri hægt að nota minni útgáfu
+af Anaconda sem kallast Miniconda en leiðbeiningarnar hér miðast við Anaconda. Með því fylgja sjálfkrafa fjölmargir pakkar fyrir vísindalega forritun, þar á meðal flestallir sem fjallað er um í þessum fyrirlestrarnótum (NumPy, Matplotlib, SciPy, Pandas).</p>
 <figure class="align-center" id="id2" style="width: 10cm">
 <img alt="../_images/anaconda.jpg" src="../_images/anaconda.jpg" />
 <figcaption>
 <p><span class="caption-number">Mynd 3.2: </span><span class="caption-text">Græn anaconda slanga</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
-<p><strong>Uppsetning Miniconda með nýjasta Python</strong> Heimsækið <a class="reference external" href="http://docs.conda.io/en/latest/miniconda">docs.conda.io/en/latest/miniconda</a>, hlaðið niður uppsetningarforriti fyrir
-ykkar stýrikerfi úr efstu töflunni (<em>Latest Miniconda Installer Links</em>) og keyrið það.
-Á Windows-tölvum er næst farið í <em>Start Menu</em> (neðst til vinstri) og valið <em>Anaconda
-Powershell Prompt</em>, en á Mökkum og Linux-tölvum skal opna <em>Terminal</em>. Þar er gefin
-skipunin:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>conda install scipy matplotlib pandas jupyterlab
-</pre></div>
-</div>
-<p>(hún tekur nokkra stund að klárast)</p>
+<p><strong>Uppsetning Anaconda með nýjasta Python</strong> Heimsækið <a class="reference external" href="http://www.anaconda.com/download">anaconda.com/download</a>, og hlaðið niður uppsetningarforriti fyrir
+ykkar stýrikerfi og keyrið það.</p>
 <p><strong>Keyrsla JupyterLab.</strong> Eftir uppsetningu Miniconda/Anaconda má keyra JupyterLab
 með því að opna <em>terminal</em>-glugga og gefa þar einhverja eftirfarandi skipana:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span>
@@ -325,7 +318,7 @@ með því að opna <em>terminal</em>-glugga og gefa þar einhverja eftirfarandi
 sjálfgefna. Síðasttalda skipunin opnar sjálfkrafa eldri vinnubók <code class="code docutils literal notranslate"><span class="pre">skrá.ipynb</span></code>.
 JupyterLab-glugginn lítur nokkurnveginn svona út:</p>
 <figure class="align-center" id="id3">
-<img alt="_images/jupyterlab.jpeg" src="_images/jupyterlab.jpeg" />
+<img alt="../_images/jupyterlab.jpeg" src="../_images/jupyterlab.jpeg" />
 <figcaption>
 <p><span class="caption-number">Mynd 3.3: </span><span class="caption-text">Upphafsgluggi JupyterLab</span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
@@ -339,7 +332,7 @@ heitir sjálfkrafa <em>Untitled2</em> en með því að hægri-smella á nafnið
 Eldri bók er opnuð annaðhvort með því að smella á hana í skráalistanum vinstra
 megin eða tilgreina hana á skipanalínunni eins og sýnt er að ofan.</p>
 <figure class="align-center" id="id4">
-<img alt="_images/jupyterlab-s2.jpg" src="_images/jupyterlab-s2.jpg" />
+<img alt="../_images/jupyterlab-s2.jpg" src="../_images/jupyterlab-s2.jpg" />
 <figcaption>
 <p><span class="caption-number">Mynd 3.4: </span><span class="caption-text">JupyterLab með opinni vinnubók og aflúsunarhnappi (í rauðum hring)</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>

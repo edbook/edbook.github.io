@@ -376,7 +376,7 @@ margfaldaðir saman til að fá út tölu.</p>
 <p>Hér er dæmi um reglu sem sýnir hvernig nýta má innfeldi.</p>
 <div class="regla admonition">
 <p class="admonition-title">Regla: Innfeldi og horn milli rúmvigra</p>
-<p>Ef <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru 2 eða 3-víðir rúmvigrar þá gildir:</p>
+<p>Ef <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru 2 eða 3-víðir rúmvigrar, hvorugur núll, þá gildir:</p>
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\begin{split}&amp;x \cdot y = 0 \text{ þá og því aðeins að } x \text{ sé hornréttur á } y\\
@@ -599,7 +599,9 @@ er <span class="math notranslate nohighlight">\(\Bbb{R}^m\)</span>.</p>
 er ákveðin tegund af vörpun sem varðveitir samlagningu og margföldun með tölu,
 og við munum komast að því að slíkar varpanir eru nátengdar fylkjum og margföldun með þeim.</p>
 <p>Til að einfalda málið einskorðum við okkur til að byrja með við línuleg föll,
-sem varpa vigrum í tölur. Þessari skorðu verður svo aflétt í grein um <em>línulegar varpanir</em> síðar í þessum kafla.</p>
+sem varpa vigrum í tölur. Þessari skorðu verður svo aflétt í grein um
+<a class="reference internal" href="#linulegar-varpanir-og-fylkjamargfoldun"><span class="std std-ref">línulegar varpanir</span></a> síðar í þessum
+kafla.</p>
 <div class="regla admonition">
 <p class="admonition-title">Skilgreining: Línulegt fall</p>
 <p>Fall <span class="math notranslate nohighlight">\(f: \Bbb{R}^n \to \Bbb{R}\)</span> nefnist <strong>línulegt</strong> ef það uppfyllir:</p>
@@ -720,7 +722,7 @@ tonn. Hve mikið sígur brúin í miðjunni?</p></li>
 </section>
 <section id="taylor-nalgun">
 <span id="id4"></span><h2><span class="section-number">2.5  </span>Taylor-nálgun<a class="headerlink" href="#taylor-nalgun" title="Permalink to this heading"></a></h2>
-<p>Rifjum upp úr grein <a class="reference internal" href="../kafli01/#margvi-foll"><span class="std std-numref">1.9</span></a> að stigull af <span class="math notranslate nohighlight">\(n\)</span>-víðu falli
+<p>Rifjum upp úr grein <a class="reference internal" href="../kafli01/#margvi-foll"><span class="std std-numref">1.10</span></a> að stigull af <span class="math notranslate nohighlight">\(n\)</span>-víðu falli
 <span class="math notranslate nohighlight">\(f\)</span> er skilgreindur með:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\nabla f(x) =
@@ -832,10 +834,10 @@ táknar graf fallsins í <span class="math notranslate nohighlight">\((a,f(a))\)
 &amp;=
 \begin{pmatrix} 1 - \exp(2-1)\\ \exp(2-1) \end{pmatrix}\\
 &amp;= (1 - \exp(1), \exp(1)) \\
-&amp;= (-1.718, 2,718)\end{split}\]</div>
+&amp;= (-1.718, 2.718)\end{split}\]</div>
 <p>Ef þetta er sett inn í margvíðu Taylor-setninguna fæst:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\hat{f}(x) &amp;= f(a) + \nabla f(a) \cdot (x - 1. \\
+\[\begin{split}\hat{f}(x) &amp;= f(a) + \nabla f(a) \cdot (x - a) \\
            &amp;= 3.718 + (-1.718, 2.718) \cdot (x_1 - 1, x_2 - 2) \\
            &amp;= 3.718 - 1.718(x_1 - 1) + 2.718(x_2 - 2) \\
            &amp;= -1.718x_1 + 2.718x_2\end{split}\]</div>
@@ -974,7 +976,7 @@ frá <span class="math notranslate nohighlight">\(a\)</span> til <span class="ma
 <figure class="align-center" style="width: 5cm">
 <img alt="../_images/fjarl%C3%A6g%C3%B0.png" src="../_images/fjarl%C3%A6g%C3%B0.png" />
 </figure>
-<p>og þessvegna er fjarlægðin milli <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> gefin með
+<p>og þess vegna er fjarlægðin milli <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span> gefin með
 <span class="math notranslate nohighlight">\(\|b-a\|\)</span>, eða <span class="math notranslate nohighlight">\(\|a-b\|\)</span> sem er jafngilt. Því liggur beint við
 að skilgreina fjarlægð milli almennra vigra á sama hátt.</p>
 <div class="regla admonition">
@@ -988,8 +990,8 @@ að skilgreina fjarlægð milli almennra vigra á sama hátt.</p>
 </div>
 <p>Ekki er erfitt að sjá að ef lítill munur er á tilsvarandi stökum tveggja vigra
 þá verður fjarlægðin á milli þeirra lítil tala.</p>
-<div class="regla admonition">
-<p class="admonition-title">Skilgreining: Fjarlægð milli vigra</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Fjarlægð milli vigra</p>
 <p>Fjarlægðin á milli vigranna <span class="math notranslate nohighlight">\(x = (2,3,5,5)\)</span> og <span class="math notranslate nohighlight">\(y = (1,1,1,-5)\)</span> er</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\|x-y\| &amp;= \|(1,2,4,10)\| \\
@@ -1055,8 +1057,8 @@ skjölin eru mislöng þá er sennilega betra að reikna orðtíðnina hlutfalls
 eins og í aftasta dálkinum í töflunni að ofan. Tvö skjöl sem fjalla um sama eða
 svipuð efni eru líklegri til að hafa stutt á milli orðtíðnivigra sinna heldur en
 skjöl um ólík efni.</p>
-<div class="regla admonition">
-<p class="admonition-title">Skilgreining: Fjarlægðir milli Wikipedíugreina</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Fjarlægðir milli Wikipedíugreina</p>
 <p>Búnir voru til orðtíðnivigrar fyrir þrjár greinar á Wikipediu, um
 Óskarsverðlaunin, Golden-globe-verðlaunin, og ofurskálina, og fjarlægðirnar
 á milli þeirra reiknaðar. Niðurstaðan var:</p>
@@ -1115,9 +1117,9 @@ rúmvigra í kafla <a class="reference internal" href="#ymis-vigur-og-fylkjahugt
 að skilgreina hvenær almennir n-vigrar teljast hornréttir hvor á annan svo:</p>
 <div class="regla admonition">
 <p class="admonition-title">Skilgreining: Hornréttir vigrar</p>
-<p>Vigrarnir <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru sagðir <strong>hornréttir</strong> (<em>perpendicular</em>)
-hvor á annan, ritað <span class="math notranslate nohighlight">\(x \perp y\)</span>, ef hornið á milli þeirra er 90°,
-þ.e.a.s. ef <span class="math notranslate nohighlight">\(x \cdot y\)</span> = 0.</p>
+<p>Vigrarnir <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span>, hvorugur núllvigur, eru sagðir
+<strong>hornréttir</strong> (<em>perpendicular</em>) hvor á annan, ritað <span class="math notranslate nohighlight">\(x \perp y\)</span>, ef
+hornið á milli þeirra er 90°, þ.e.a.s. ef <span class="math notranslate nohighlight">\(x \cdot y\)</span> = 0.</p>
 </div>
 <p class="rubric"><strong>Horn og líkindi með vigrum</strong>.</p>
 <p>Í staðinn fyrir að mæla fjarlægð milli orðtíðnivigra er hægt að nota hornið á
@@ -1162,7 +1164,7 @@ hlutfallslega orðtíðni því sömu horn fást með því að nota orðtíðni
 <li><p>Reiknið hornið á milli vigranna <span class="math notranslate nohighlight">\((4,3)\)</span> og <span class="math notranslate nohighlight">\((1,0)\)</span>.</p></li>
 <li><p>Notið regluna um kósínus af mismun,</p>
 <div class="math notranslate nohighlight">
-\[\cos(a - 2. = \cos a\cos b + \sin a \sin b\]</div>
+\[\cos(a - b) = \cos a\cos b + \sin a \sin b\]</div>
 <p>til að sýna að skilgreiningin á horni milli <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> að framan
 gefur rúmfræðilega hornið þegar vigrarnir eru tvívíðir.</p>
 <blockquote>
@@ -1264,6 +1266,8 @@ greindarvísitala sem skv. skilgreiningu hefur meðaltal 100 og staðalfrávik 1
 <li><p>Ákvarðið í framhaldi staðlaða útgáfu af <span class="math notranslate nohighlight">\(x\)</span></p></li>
 <li><p>Notið lið 1 og reglur um staðalfrávik til að reikna staðalfrávik vigranna
 <span class="math notranslate nohighlight">\(y = (2,4,5,6,8)\)</span> og <span class="math notranslate nohighlight">\(z = -3x\)</span></p></li>
+<li><p>Skoðið ensku Wikipedíugreinina <a class="reference external" href="https://en.wikipedia.org/wiki/Intelligence_quotient">um greindarvísitölur</a>, sér í lagi
+línurit og töflur í henni.</p></li>
 </ol>
 </div>
 <p>Fylgnistuðull eða fylgni (<em>correlation (coefficient)</em>) er líka tölfræðilegt
@@ -1287,7 +1291,7 @@ Fylgni mælir samband tveggja vigra, hann er á bilinu <span class="math notrans
 <div class="admonition note">
 <p class="admonition-title">Python</p>
 <p>Til að reikna fylgni í Python má nota tölfræðipakkann í Scipy, t.d.:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">st</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="n">r</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
@@ -1302,10 +1306,10 @@ slembivigrar úr óháðum normaldreifingum.</p>
 <p class="admonition-title">Æfing</p>
 <p>Eftirfarandi forritsbútur skilgreinir fall til að búa til tvo vigra sem hafa fylgni
 u.þ.b. r. Afritið forritsbútinn yfir í Júpíter og keyrið hann.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span><span class="o">,</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rnd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">rnd</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">tvinormal</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">tvinormal</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;skilar tveimur n-vigrum með meðaltal 0, dreifni 1,</span>
 <span class="sd">       og fylgni r (um það bil)&quot;&quot;&quot;</span>
     <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
@@ -1366,8 +1370,8 @@ háðir</strong> ef hægt er að rita einhvern þeirra sem línulega samantekt a
 háðir, því <span class="math notranslate nohighlight">\(3u + 2v\)</span> er línuleg samantekt af <span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(v\)</span>. Það
 er ekki mjög erfitt að sjá að þrír vigrar í þrívíðu rúmi sem allir liggja í sama
 plani hljóta að vera línulega háðir. Um tvo samsíða vigra (sem liggja þar með á
-sömu línu), hvort sem er í tvívíðu eða þrívíðu rúmi, gildir að þeir eru línulega
-háðir.</p>
+sömu línu), hvort sem er í tvívíðu eða þrívíðu rúmi, gildir líka að þeir eru
+línulega háðir.</p>
 <p>Ef <span class="math notranslate nohighlight">\(A\)</span> er mengi af vigrum er talað um að það sé línulega háð ef vigrarnir
 í því eru línulega háðir. Stundum er skilyrðið í skilgreiningunni orðað
 öðruvísi, sbr. eftirfarandi setningu.</p>
@@ -1425,7 +1429,8 @@ línulega háðum vigrum).</p>
 <p class="admonition-title">Æfing: Línuleg samantekt og vigrapör</p>
 <ol class="arabic">
 <li><p>Skrifið vigurinn <span class="math notranslate nohighlight">\((8,3)\)</span> sem línulega samantekt af <span class="math notranslate nohighlight">\((4,1)\)</span> og
-<span class="math notranslate nohighlight">\((0,1)\)</span>.</p></li>
+<span class="math notranslate nohighlight">\((0,1)\)</span> (<em>Leiðbeining: Notið skilgreiningu á línulegri samantekt og
+leysið jöfnurnar sem hún gefur</em>).</p></li>
 <li><p>Eru eftirfarandi pör vigra línulega óháð?</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}&amp;(1,2,3) \text{ og } (2,4,6) \\
@@ -1496,7 +1501,7 @@ Byrjað er á að teikna <span class="math notranslate nohighlight">\(x\)</span>
 eru þeir framlengdir þar til þeir skerast. Það gildir greinilega að <span class="math notranslate nohighlight">\(ax =
 y + bz\)</span> svo <span class="math notranslate nohighlight">\(y = ax - bz\)</span>. Ef einhverjir tveir vigranna væru samsíða þá
 væru þeir, og þar með allir þrír, línulega háðir.</p>
-<p>Snúum okkur á aftur að grunnum, og einni aðalsetningunni um þá, sem segir að
+<p>Snúum okkur þá aftur að grunnum, og einni aðalsetningunni um þá, sem segir að
 hægt sé að skrifa hvern vektor á einkvæman hátt sem línulega
 samantekt af grunnvigrum. Sönnunin er auðveld og við látum hana fylgja.</p>
 <div class="regla admonition">
@@ -1524,8 +1529,8 @@ grein <a class="reference internal" href="#linulega-hair-og-ohair-vigrar"><span 
 <p>Þegar vigur <span class="math notranslate nohighlight">\(b\)</span> er skrifaður sem línuleg samantekt af grunnvigrum,</p>
 <div class="math notranslate nohighlight">
 \[b = c_1 a_1 + \ldots + c_n a_n\]</div>
-<p>er talað um <strong>liðun</strong> <span class="math notranslate nohighlight">\(b\)</span> eða að <span class="math notranslate nohighlight">\(b\)</span> hafi verið <strong>liðaður</strong>
-með grunnvigrunum.</p>
+<p>er talað um <strong>liðun</strong> (<em>expansion</em>) <span class="math notranslate nohighlight">\(b\)</span> eða að <span class="math notranslate nohighlight">\(b\)</span> hafi verið
+<strong>liðaður</strong> (<em>expanded</em>) með grunnvigrunum.</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Sönnun á að vigramengi sé grunnur</p>
 <p><span class="math notranslate nohighlight">\(G = \{(1,1), (1,0)\}\)</span> er línulega óháð og hefur tvö stök og er þar með
@@ -1733,7 +1738,7 @@ stök vigursins. Hér er talnadæmi, en reglan gildir greinilega almennt:</p>
 \begin{pmatrix} 18 \\ 0 \end{pmatrix} +
 \begin{pmatrix} 28 \\ 14 \end{pmatrix} =
 \begin{pmatrix} 56 \\ 19 \end{pmatrix}\end{split}\]</div>
-<p>Af þessu leiðir er það að leysa jöfnuhneppið <span class="math notranslate nohighlight">\(Ax = b\)</span> jafngildir því að
+<p>Af þessu leiðir að það að leysa jöfnuhneppið <span class="math notranslate nohighlight">\(Ax = b\)</span> jafngildir því að
 finna stuðla þar sem <span class="math notranslate nohighlight">\(b\)</span> er skrifað sem línuleg samantekt af dálkum
 <span class="math notranslate nohighlight">\(A\)</span>. Við höfum séð að þetta er hægt á nákvæmlega einn veg ef dálkar
 fylkisins eru línulega óháðir og mynda grunn fyrir <span class="math notranslate nohighlight">\(\Bbb{R}^n\)</span>. Ef
@@ -1928,7 +1933,7 @@ við þar:</p>
 <p class="admonition-title">Æfing: Fylkjareikningur í Python</p>
 <p>Búið til þrjú <span class="math notranslate nohighlight">\(2 \times 2\)</span> handahófsfylki í NumPy
 með eftirfarandi skipunum:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npr</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -1991,6 +1996,13 @@ línulega algebru og tengd fræði munu rekast á notkun þeirra aftur og aftur.
 <p class="admonition-title">Æfing: Andhverfur og bylting</p>
 <p>Sannreynið þessar reglur með NumPy (bylt fylki <code class="code docutils literal notranslate"><span class="pre">A</span></code> fæst
 með <code class="code docutils literal notranslate"><span class="pre">A.T</span></code>).</p>
+</div>
+<p>Í kafla <a class="reference internal" href="../kafli01/#annars-stigs-hlutafleiur-hesse-fylki-og-tviviar-akveur"><span class="std std-numref">1.8</span></a> var
+rætt um ákveður (<em>determinants</em>) fylkja og hér er að lokum setning sem tengir
+þær við andhverfanleika.</p>
+<div class="regla admonition">
+<p class="admonition-title">Setning: Sérstæð fylki og ákveður</p>
+<p>Fylki er sérstættt þá og því aðeins að ákveða þess sé núll.</p>
 </div>
 </section>
 <section id="linulegar-varpanir-og-fylkjamargfoldun">

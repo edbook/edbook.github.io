@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -189,7 +189,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#vigrar-i-numpy">10.2  Vigrar í NumPy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#vigur-gefi-gildi">10.2.1  Vigur gefið gildi</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#einstok-stok-og-hlutvigrar">10.2.2  Einstök stök og hlutvigrar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#utprentun-vigra">10.2.3  Útprentun vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einfold-utprentun-vigra">10.2.3  Einföld útprentun vigra</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#foll-af-vigrum">10.2.4  Föll af vigrum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#aferir-i-sta-falla">10.2.5  Aðferðir í stað falla</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#foll-til-a-bua-til-vigra">10.2.6  Föll til að búa til vigra</a></li>
@@ -213,17 +213,25 @@
 <li class="toctree-l3"><a class="reference internal" href="#nullfylki">10.5.3  Núllfylki</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bylting">10.5.4  Bylting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#afpokkun">10.5.5  Afpökkun</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#foll-til-a-bua-til-fylki">10.5.6  Föll til að búa til fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foll-af-fylkjum">10.5.6  Föll af fylkjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#foll-til-a-bua-til-fylki">10.5.7  Föll til að búa til fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breytt-um-logun">10.5.8  Breytt um lögun</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#innlestur-og-utskrift">10.6  Innlestur og útskrift</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#talnalestur">10.6.1  Talnalestur</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#utskrift-talna">10.6.2  Útskrift talna</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#innlestur-skraa-me-textadalkum">10.6.3  Innlestur skráa með textadálkum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#csv-skar-ur-excel">10.6.4  CSV-skár úr Excel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utskrift-vigra-og-fylkja">10.6  Útskrift vigra og fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utprentun-a-skja">10.6.1  Útprentun á skjá</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stjorn-utprentunar">10.6.2  Stjórn útprentunar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utprentun-me-savetxt">10.6.3  Útprentun með <em>savetxt</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utskrift-i-skra">10.6.4  Útskrift í skrá</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#listi-yfir-skrar-a-cs-hi-is-python">10.7  Listi yfir skrár á cs.hi.is/python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#innlestur-ur-skram">10.7  Innlestur úr skrám</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#talnalestur">10.7.1  Talnalestur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#innlestur-skraa-me-textadalkum">10.7.2  Innlestur skráa með textadálkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csv-skar-ur-excel">10.7.3  CSV-skár úr Excel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#listi-yfir-skrar-a-cs-hi-is-python">10.8  Listi yfir skrár á cs.hi.is/python</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
@@ -231,6 +239,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -303,8 +312,8 @@ ráða af samhenginu við hvað er átt.</p>
 <section id="import-skipanir-fyrir-numpy">
 <span id="fylkjareikn"></span><h3><span class="section-number">10.1.3  </span>Import-skipanir fyrir NumPy<a class="headerlink" href="#import-skipanir-fyrir-numpy" title="Permalink to this heading"></a></h3>
 <p>Í NumPy er undirpakki sem heitir <code class="docutils literal notranslate"><span class="pre">numpy.linalg</span></code> sem er talsvert notaður. Hann geymir meðal annars föll til að reikna norm vigurs og til að leysa jöfnuhneppi. Alsiða er að skammstafa numpy með np og numpy.linalg með la, sem sé að flytja inn með:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">la</span>
 </pre></div>
 </div>
 <p>Síðan er sett <code class="docutils literal notranslate"><span class="pre">np.</span></code> eða <code class="docutils literal notranslate"><span class="pre">la.</span></code> á undan NumPy-skipunum og -föllum sem notuð eru.</p>
@@ -313,10 +322,10 @@ ráða af samhenginu við hvað er átt.</p>
 <section id="vigrar-i-numpy">
 <h2><span class="section-number">10.2  </span>Vigrar í NumPy<a class="headerlink" href="#vigrar-i-numpy" title="Permalink to this heading"></a></h2>
 <p>Vigur í NumPy er að mörgu leyti líkur venjulegum Python lista. Aðalmunurinn er
-sá að í vigrum eru öll stök tölur, oftast kommutölur (<em>float</em>) en það er líka
-hægt að geyma heiltölur eða strengi. En öll stök vigursins verða að vera af sama
-gagnatagi, og með því sparast minnispláss og auk þess fæst mun hraðvirkari
-vinnsla þegar unnið er með mörg stök.</p>
+sá að í vigrum verða öll stök að vera af sama gagnatagi, og með því sparast
+minnispláss og auk þess fæst mun hraðvirkari vinnsla þegar unnið er með mörg
+stök. Eins og við munum gildir slík skorða ekki um lista, þeir geta innihaldið
+blöndu gagnataga.</p>
 <section id="vigur-gefi-gildi">
 <span id="id2"></span><h3><span class="section-number">10.2.1  </span>Vigur gefið gildi<a class="headerlink" href="#vigur-gefi-gildi" title="Permalink to this heading"></a></h3>
 <p>NumPy er viðbót við Python, og öfugt við grunntögin sem öll gefa kost á að búa
@@ -352,18 +361,18 @@ stakið er líka númer 0. Ef x er <span class="math notranslate nohighlight">\(
 þessum kafla</p>
 </div>
 </section>
-<section id="utprentun-vigra">
-<h3><span class="section-number">10.2.3  </span>Útprentun vigra<a class="headerlink" href="#utprentun-vigra" title="Permalink to this heading"></a></h3>
+<section id="einfold-utprentun-vigra">
+<h3><span class="section-number">10.2.3  </span>Einföld útprentun vigra<a class="headerlink" href="#einfold-utprentun-vigra" title="Permalink to this heading"></a></h3>
 <p>Til að prenta út vigur x er hægt að skrifa einfaldlega</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">print(x)</span></code> eða <code class="docutils literal notranslate"><span class="pre">print(&quot;x</span> <span class="pre">=&quot;,</span> <span class="pre">x)</span></code></p>
 </div></blockquote>
-<p>Það er hægt að stjórna fjölda aukastafa sem <code class="docutils literal notranslate"><span class="pre">print</span></code> birtir en við látum það
-bíða aðeins (sjá kafla <a class="reference internal" href="../kafli13/#innskot"><span class="std std-numref">13.2</span></a>). Svo er hægt að prenta einstök stök í
+<p>Það er hægt að stjórna fjölda aukastafa sem <code class="docutils literal notranslate"><span class="pre">print</span></code>, sbr. kafla
+<a class="reference internal" href="#utskrift-vigra-og-fylkja"><span class="std std-numref">10.6</span></a>. Svo er hægt að prenta einstök stök í
 for-lykkju, og þá er hægt að nota f-strengi, sbr. eftirfarandi dæmi</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.55</span><span class="p">,</span><span class="mf">7.77</span><span class="p">])</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">ai</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">ai</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">ai</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>sem mundi prenta</p>
@@ -480,7 +489,7 @@ hlaupandi stökum:</p>
 <section id="utreikningur-me-vigrum">
 <h2><span class="section-number">10.3  </span>Útreikningur með vigrum<a class="headerlink" href="#utreikningur-me-vigrum" title="Permalink to this heading"></a></h2>
 <section id="reikna-me-vigrum-i-staerfraei">
-<span id="reikna-me-vigrum"></span><h3><span class="section-number">10.3.1  </span>Reiknað með vigrum í stærðfræði<a class="headerlink" href="#reikna-me-vigrum-i-staerfraei" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.3.1  </span>Reiknað með vigrum í stærðfræði<a class="headerlink" href="#reikna-me-vigrum-i-staerfraei" title="Permalink to this heading"></a></h3>
 <p>Í stærðfræði, nánar tiltekið undirgrein hennar sem kallast línuleg algebra, er fjallað um ýmsa útreikninga með vigrum. Það er hægt að leggja saman vigra, draga þá hvern frá öðrum og margfalda þá með tölum. Það er líka hægt að reikna <strong>innfeldi</strong> (<em>scalar product</em>) tveggja vigra og fá út tölu, og svo má reikna norm vigurs með fyrrnefndu norm-falli</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Vigurreikningar</p>
@@ -500,7 +509,7 @@ x \cdot y &amp;= 2\cdot 1 + 3\cdot 1 + 6\cdot 2 = 2 + 3 + 12 = 17\end{split}\]</
 <p>þar sem bæði <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru <span class="math notranslate nohighlight">\(n\)</span>-staka vigrar.</p>
 </section>
 <section id="plus-minus-margfoldun-og-deiling-i-numpy">
-<span id="plus-minus-margfoldun"></span><h3><span class="section-number">10.3.2  </span>Plús, mínus, margföldun og deiling í NumPy<a class="headerlink" href="#plus-minus-margfoldun-og-deiling-i-numpy" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.3.2  </span>Plús, mínus, margföldun og deiling í NumPy<a class="headerlink" href="#plus-minus-margfoldun-og-deiling-i-numpy" title="Permalink to this heading"></a></h3>
 <p>Rifjum upp þegar aðgerðunum plús og sinnum (<code class="docutils literal notranslate"><span class="pre">+</span></code> og <code class="docutils literal notranslate"><span class="pre">*</span></code>) er beitt á lista þá
 skeyta þær saman listum eða fjölfalda þá. Hér skilur leiðir með listum og
 vigrum: Þegar þessar aðgerðir eru notaðar á vigra þá leggjast þeir saman eða
@@ -582,11 +591,12 @@ samanburðarvirkjana, &lt; &gt; &lt;= &gt;= == og !=.</p>
 <span class="math notranslate nohighlight">\(i\)</span>-ta sæti satt (<code class="docutils literal notranslate"><span class="pre">True</span></code>) ef <span class="math notranslate nohighlight">\(x_i &lt; y_i\)</span>. Slíkan vigur má líka
 reikna með yfirgripi (<em>comprehension</em>) sbr. kafla <a class="reference internal" href="../kafli06/#yfirgrip"><span class="std std-numref">6.7</span></a> þannig að:</p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">np.array([x[i]</span> <span class="pre">&lt;</span> <span class="pre">y[i]</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(len(x))])</span></code></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code> er vigurinn <code class="docutils literal notranslate"><span class="pre">np.array(xi</span> <span class="pre">&lt;</span> <span class="pre">yi</span> <span class="pre">for</span> <span class="pre">(xi,yi)</span> <span class="pre">in</span> <span class="pre">zip(x,y))</span></code>.</p>
 </div></blockquote>
-<p>Svo mætti líka nota zip og fá sömu niðurstöðu með <code class="docutils literal notranslate"><span class="pre">np.array([xi</span> <span class="pre">&lt;</span> <span class="pre">yi</span> <span class="pre">for</span>
-<span class="pre">(xi,yi)</span> <span class="pre">in</span> <span class="pre">zip(x,y)])</span></code>. Í framhaldi má svo nota innbyggðu föllin <span class="math notranslate nohighlight">\(any\)</span> og
-<span class="math notranslate nohighlight">\(all\)</span> til að athuga hvort eitthvert eða öll stök rökvigranna séu sönn.</p>
+<p>Svo mætti líka nota <code class="docutils literal notranslate"><span class="pre">range</span></code> og <code class="docutils literal notranslate"><span class="pre">len</span></code> til að fá sömu niðurstöðu með
+<code class="docutils literal notranslate"><span class="pre">np.array([x[i]</span> <span class="pre">&lt;</span> <span class="pre">y[i]</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(len(x))])</span></code>. Í framhaldi má svo nota
+innbyggðu föllin <span class="math notranslate nohighlight">\(any\)</span> og <span class="math notranslate nohighlight">\(all\)</span> til að athuga hvort eitthvert eða
+öll stök rökvigranna séu sönn.</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Jákvæð stök og samanburður vigra</p>
 <p>Lát <span class="math notranslate nohighlight">\(x = (-1,3,-2,5)\)</span> og <span class="math notranslate nohighlight">\(y = (-2,2,3,4)\)</span>. Þá má gefa x og y
@@ -734,7 +744,7 @@ D = \begin{pmatrix}5 &amp; 0\\0 &amp; 5\end{pmatrix}\end{split}\]</div>
 <span class="math notranslate nohighlight">\(C\)</span>-ið.</p>
 </li>
 <li><p>Búið til <span class="math notranslate nohighlight">\(10 \times 10\)</span> fylki <span class="math notranslate nohighlight">\(M\)</span> með margföldunartöflu með
-því að byrja með heiltölu-núllfylki og reikna svo:</p>
+því að byrja með heiltölu-núllfylki og reikna svo (í tvöfaldri for-lykkju):</p>
 <div class="math notranslate nohighlight">
 \[m_{ij} = (i+1)(j+1)\quad (i=0,\ldots,9, j=0,\ldots, 9)\]</div>
 </li>
@@ -746,7 +756,7 @@ D = \begin{pmatrix}5 &amp; 0\\0 &amp; 5\end{pmatrix}\end{split}\]</div>
 <p>Bylting (<em>transpose</em>) fylkis fæst með því að skipta á línum og dálkum.
 Stærðfræðilegi rithátturinn fyrir byltingu fylkis <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(A^T\)</span>,
 lesið „A bylt“. Í NumPy má rita <code class="docutils literal notranslate"><span class="pre">A.T</span></code> til að bylta fylki <code class="docutils literal notranslate"><span class="pre">A</span></code>, til dæmis:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
     <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
@@ -782,29 +792,42 @@ ef A breytist. Til að fá nýtt fylki mætti nota <code class="docutils literal
 <p>Náið svo í dálka þess inn í tvo vigra með því að bylta því fyrst og afpakka svo.</p>
 </div>
 </section>
+<section id="foll-af-fylkjum">
+<h3><span class="section-number">10.5.6  </span>Föll af fylkjum<a class="headerlink" href="#foll-af-fylkjum" title="Permalink to this heading"></a></h3>
+<p>Numpy er með ýmis föll sem hafa fylki sem viðfang. Fyrst má nefna NumPy-útgáfur
+af venjulegum stærðfræðiföllum, sem beita má stakvís á fylki jafnt sem vigra,
+sbr. grein <a class="reference internal" href="#venjulegum-staerfraeifollum-beitt-a-vigra"><span class="std std-numref">10.3.3</span></a>. Í grein
+<a class="reference internal" href="../kafli11/#andhverfur-og-akveur"><span class="std std-numref">11.5</span></a> eru föllin <code class="docutils literal notranslate"><span class="pre">np.det</span></code> og <code class="docutils literal notranslate"><span class="pre">np.inv</span></code>, sem reikna
+ákveður og andhverfur, kynnt til sögunnar, og loks skulu nefnd föllin <code class="docutils literal notranslate"><span class="pre">np.sum</span></code>
+sem finnur summu allra staka í fylki og <code class="docutils literal notranslate"><span class="pre">np.shape</span></code> sem skilar tvennd með
+fjölda lína og dálka. Hér hafa aðeins verið talin örfá af þeim fjölda
+fylkjafalla sem NumPy hefur.</p>
+</section>
 <section id="foll-til-a-bua-til-fylki">
-<h3><span class="section-number">10.5.6  </span>Föll til að búa til fylki<a class="headerlink" href="#foll-til-a-bua-til-fylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.5.7  </span>Föll til að búa til fylki<a class="headerlink" href="#foll-til-a-bua-til-fylki" title="Permalink to this heading"></a></h3>
 <p>Við höfum þegar séð hvernig hægt er að búa til fylki með því að telja upp stökin
-í því og líka hvernig búa má til núllfylki með fallinu <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code>. Hér er
-tafla yfir fleiri föll til að búa til fylki, m.a. nokkur sem verður nánar lýst í
-seinni köflum.</p>
+í því og nota <code class="docutils literal notranslate"><span class="pre">np.array</span></code>, og líka hvernig búa má til núllfylki með fallinu
+<code class="docutils literal notranslate"><span class="pre">np.zeros</span></code>. Hér er tafla yfir þessi og fleiri föll til að búa til fylki, m.a.
+nokkur sem verður nánar lýst í seinni köflum.</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">zeros((n,m))</span></code></p></td>
-<td><p>Skilar <span class="math notranslate nohighlight">\(n \times m\)</span> núllfylki</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.array([L1,L2...])</span></code></p></td>
+<td><p>Býr til nýtt fylki úr L1, L2,… sem hver um sig er listi af stökum til
+að setja í línur fylkisins (allir jafn langir)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">eye(n)</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.zeros((m,n))</span></code></p></td>
+<td><p>Skilar <span class="math notranslate nohighlight">\(m \times n\)</span> núllfylki</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.eye(n)</span></code></p></td>
 <td><p><span class="math notranslate nohighlight">\(n \times n\)</span> einingafylki, sjá kafla <a class="reference internal" href="../kafli11/#nullfylki-og-einingafylki"><span class="std std-numref">11.2</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">diag(v)</span></code></p></td>
-<td><p>(fyrir <span class="math notranslate nohighlight">\(n\)</span>-vigur <code class="docutils literal notranslate"><span class="pre">v</span></code>) skilar <span class="math notranslate nohighlight">\(n \times n\)</span> hornalínufylki með stökum
-<code class="docutils literal notranslate"><span class="pre">v</span></code> á <br> hornalínunni (sjá <a class="reference external" href="https://cs.hi.is/strei/kafli02/#ymis-vigur-og-fylkjahugtok">Fyrirlestrarnótur um stærðfræði og reiknifræði</a>)</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.diag(v)</span></code></p></td>
+<td><p>(fyrir <span class="math notranslate nohighlight">\(n\)</span>-vigur <code class="docutils literal notranslate"><span class="pre">v</span></code>) skilar <span class="math notranslate nohighlight">\(n \times n\)</span> hornalínufylki
+með stökum <code class="docutils literal notranslate"><span class="pre">v</span></code> á <br> hornalínunni (sjá <a class="reference external" href="https://cs.hi.is/strei/kafli02/#ymis-vigur-og-fylkjahugtok">Valin efni í
+stærðfræði og reiknifræði</a>)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">inv(A)</span></code></p></td>
-<td><p>andhverfa <code class="docutils literal notranslate"><span class="pre">A</span></code> (sjá kafla <a class="reference internal" href="../kafli11/#andhverfur-og-akveur"><span class="std std-numref">11.5</span></a>)</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rng.random((n,m))</span></code></p></td>
-<td><p><span class="math notranslate nohighlight">\(n \times m\)</span> slembifylki (sjá kafla <a class="reference internal" href="../kafli13/#slembitolur-me-numpy"><span class="std std-numref">13.3</span></a>)</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rng.random((m,n))</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(m \times n\)</span> slembifylki (sjá kafla <a class="reference internal" href="../kafli13/#slembitolur-me-numpy"><span class="std std-numref">13.2</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.c_[x,y]</span></code></p></td>
 <td><p>(fyrir <span class="math notranslate nohighlight">\(n\)</span>-vigra <code class="docutils literal notranslate"><span class="pre">x</span></code> og <code class="docutils literal notranslate"><span class="pre">y</span></code>) skilar <span class="math notranslate nohighlight">\(n \times 2\)</span> fylki með
@@ -816,16 +839,135 @@ dálka <code class="docutils literal notranslate"><span class="pre">x</span></co
 </tr>
 </tbody>
 </table>
-<p>Í kaflanum um slembitölur (<a class="reference internal" href="../kafli13/#slembitolur-me-numpy"><span class="std std-numref">13.3</span></a>) er lýst fleiri
+<p>Í kaflanum um slembitölur (<a class="reference internal" href="../kafli13/#slembitolur-me-numpy"><span class="std std-numref">13.2</span></a>) er lýst fleiri
 föllum til að búa til slembifylki. Varðandi neðstu tvö föllin þá eru líka til
 <code class="docutils literal notranslate"><span class="pre">np.r_</span></code> og <code class="docutils literal notranslate"><span class="pre">np.hstack</span></code> til að skeyta saman lóðrétt og lárétt en notkun
 þeirra er óþægilegri en þessara tveggja.</p>
 </section>
+<section id="breytt-um-logun">
+<h3><span class="section-number">10.5.8  </span>Breytt um lögun<a class="headerlink" href="#breytt-um-logun" title="Permalink to this heading"></a></h3>
+<p>Hægt er að breyta um lögun fylkja ef fjöldi staka helst óbreyttur, og sömuleiðis
+má breyta vigrum í fylki eða öfugt. Til dæmis má breyta <span class="math notranslate nohighlight">\(3 \times 4\)</span> fylki
+í <span class="math notranslate nohighlight">\(6 \times 2\)</span> fylki. Hér er tafla sem sýnir ýmsa möguleika. Í töflunni
+tákna <code class="docutils literal notranslate"><span class="pre">A</span></code> og <code class="docutils literal notranslate"><span class="pre">B</span></code> fylki og <code class="docutils literal notranslate"><span class="pre">x</span></code> vigur.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">np.reshape(x,</span> <span class="pre">(m,n))</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">x.reshape(m,n)</span></code></p></td>
+<td><p>breytir <code class="docutils literal notranslate"><span class="pre">x</span></code> í <span class="math notranslate nohighlight">\(m \times n\)</span> fylki; í efstu röð <code class="docutils literal notranslate"><span class="pre">A</span></code> koma
+<code class="docutils literal notranslate"><span class="pre">x[0]</span></code>, <code class="docutils literal notranslate"><span class="pre">x[1]</span></code><span class="math notranslate nohighlight">\(\ldots\)</span> <br> í þá næstu <code class="docutils literal notranslate"><span class="pre">x[n]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">x[n+1]</span></code><span class="math notranslate nohighlight">\(\ldots\)</span> o.s.frv.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">np.reshape(A,</span> <span class="pre">(m,n))</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A.reshape(m,n)</span></code></p></td>
+<td><p>tekur stök <code class="docutils literal notranslate"><span class="pre">A</span></code> röð fyrir röð og setur þau inn í nýtt <span class="math notranslate nohighlight">\(m \times n\)</span>
+fylki <code class="docutils literal notranslate"><span class="pre">B</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">np.reshape(A,</span> <span class="pre">n)</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">A.reshape(n)</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">A.reshape(-1)</span></code> <br>
+<code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">A.flatten()</span></code></p></td>
+<td><p>Allar þessar skipanir taka stök <code class="docutils literal notranslate"><span class="pre">A</span></code> röð fyrir röð <br> og setja þau inn í
+nýjan n-vigur <code class="docutils literal notranslate"><span class="pre">x</span></code> (n er stakafjöldi A).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">x[:,</span> <span class="pre">None]</span></code></p></td>
+<td><p>Býr til <span class="math notranslate nohighlight">\(n \times 1\)</span> fylki úr <span class="math notranslate nohighlight">\(n\text{-vigrinum}\)</span> x
+(dálkfylki, <em>column matrix</em>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">x[None,</span> <span class="pre">:]</span></code></p></td>
+<td><p>Býr til <span class="math notranslate nohighlight">\(1 \times n\)</span> fylki úr <span class="math notranslate nohighlight">\(n\text{-vigrinum}\)</span> x
+(línufylki, <em>row matrix</em>)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í öllum tilvikum má ekkert stak ganga af, t.d. þarf fjöldi staka í <code class="docutils literal notranslate"><span class="pre">x</span></code> að vera
+<span class="math notranslate nohighlight">\(mn\)</span> efst í töflunni. Nota má <code class="docutils literal notranslate"><span class="pre">-1</span></code> fyrir víddir sem hægt er að reikna
+út, t.d eru <code class="docutils literal notranslate"><span class="pre">x.reshape(4,3)</span></code> og <code class="docutils literal notranslate"><span class="pre">x.reshape(-1,3)</span></code> jafngildar ef <code class="docutils literal notranslate"><span class="pre">x</span></code> hefur
+12 stök.</p>
+<p>Til að fara í gegn um stökin dálk fyrir dálk má nota byltingu, t.d. <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">A.T.flatten()</span></code> eða <code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A.T.reshape(m,n).T</span></code>.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Bankayfirlit</p>
+<p>Fyrir liggja upplýsingar um heildarfærslur tveggja bankareikninga í fjórum
+dálkum sbr. eftirfarandi mynd. Til að sýna sömu upplýsingar með nýju
+skipulagi í tveimur dálkum má nota skipun:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">nýtt</span> <span class="pre">=</span> <span class="pre">gamalt.reshape(4,2)</span></code></p>
+</div></blockquote>
+<figure class="align-center" style="width: 16cm">
+<img alt="../_images/bankareikningar.jpg" src="../_images/bankareikningar.jpg" />
+</figure>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Bylting og ný lögun</p>
+<p>Hægt er að nota byltingu og <em>reshape</em> saman til að gera frekari breytingar
+á skipulagi upplýsinga í töflum:</p>
+<ol class="loweralpha simple">
+<li><p>Hvernig töflu mundi gamalt.T.reshape(2,4) skila?</p></li>
+<li><p>Búið til skipanir til að fá tvo dálka, einn fyrir hvort ár, og fjórar línur, fyrri
+tvær með innborgunum á A og B og seinni tvær með útborgunum.</p></li>
+</ol>
+</div>
 </section>
-<section id="innlestur-og-utskrift">
-<span id="inn-og-ut"></span><h2><span class="section-number">10.6  </span>Innlestur og útskrift<a class="headerlink" href="#innlestur-og-utskrift" title="Permalink to this heading"></a></h2>
+</section>
+<section id="utskrift-vigra-og-fylkja">
+<h2><span class="section-number">10.6  </span>Útskrift vigra og fylkja<a class="headerlink" href="#utskrift-vigra-og-fylkja" title="Permalink to this heading"></a></h2>
+<section id="utprentun-a-skja">
+<h3><span class="section-number">10.6.1  </span>Útprentun á skjá<a class="headerlink" href="#utprentun-a-skja" title="Permalink to this heading"></a></h3>
+<p>Eins og sýnt hefur verið framar í þessum kafla má nota print-fallið til að
+prenta bæði vigra og fylki á skjá. Slík útprentun inniheldur hins vegar mismarga
+aukastafi, eftir því hve marga þarf til að sýna tölurnar með 8 stafa nákvæmni,
+og auk þess er bætt við hornklofum fremst og aftast. Úr þessum göllum má bæta
+með tvennu móti, með því að nota <code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code> eða <code class="docutils literal notranslate"><span class="pre">np.savetxt</span></code>.
+Næstu greinar útskýra þessa kosti.</p>
+</section>
+<section id="stjorn-utprentunar">
+<h3><span class="section-number">10.6.2  </span>Stjórn útprentunar<a class="headerlink" href="#stjorn-utprentunar" title="Permalink to this heading"></a></h3>
+<p>Með fallinu <code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code> má stjórna sniði útprentunar. Þetta fall
+hefur ýmsa stika en hér látum við duga að segja frá þremur: <code class="docutils literal notranslate"><span class="pre">precision</span> <span class="pre">=</span> <span class="pre">n</span></code> og
+<code class="docutils literal notranslate"><span class="pre">floatmode</span> <span class="pre">=</span> <span class="pre">&quot;fixed&quot;</span></code> gefur alltaf <em>n</em> aukastafi (án floatmode koma ≤ n
+stafir), og <code class="docutils literal notranslate"><span class="pre">suppress</span> <span class="pre">=</span> <span class="pre">True</span></code> þýðir að engar tölur eru prentaðar með
+tugveldistáknun (t.d. -6.33e08 eða 5.22e-12). Til að prenta öll stök vigurs eða
+fylkis án tugveldisvísis og með nákvæmlega þremur aukastöfum má nota:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">np.set_printoptions(suppress=True,</span> <span class="pre">floatmode=&quot;fixed&quot;,</span> <span class="pre">precision=3)</span></code></p>
+</div></blockquote>
+<p>Án <code class="docutils literal notranslate"><span class="pre">suppress=True</span></code> hefur eitt lítið stak í vigri áhrif á prentun allra
+stakanna, og án <code class="docutils literal notranslate"><span class="pre">floatmode=&quot;fixed&quot;</span></code> getur vantað 0 aftast í aukastöfunum. Hér
+er dæmi til skýringar:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Lát x = np.array([0.000002, 1.25, 12.345]). Þá prentar print(x) út:
+- með suppress=False:   [2.000e-06 1.250e+00 1.235e+01]
+- með suppress=True:    [ 0.000  1.250 12.345]
+- án floadmode=&quot;fixed&quot;: [ 0.     1.25  12.345]
+</pre></div>
+</div>
+</section>
+<section id="utprentun-me-savetxt">
+<h3><span class="section-number">10.6.3  </span>Útprentun með <em>savetxt</em><a class="headerlink" href="#utprentun-me-savetxt" title="Permalink to this heading"></a></h3>
+<p>Annar möguleiki til að fá snyrtilega útprentun er að nota <code class="docutils literal notranslate"><span class="pre">savetxt</span></code>-fallið með sniði:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">stdout</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;%w.df&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>þar sem w er breidd hvers sviðs (hverrar tölu) og d er fjöldi aukastafa (t.d.
+<code class="docutils literal notranslate"><span class="pre">fmt=&quot;%6.2f&quot;)</span></code>. Þá sleppur maður við hornklofana í útprentuninni, en hinsvegar
+verður að vita fyrirfram hver mesta breidd dálks þarf að vera.</p>
+</section>
+<section id="utskrift-i-skra">
+<h3><span class="section-number">10.6.4  </span>Útskrift í skrá<a class="headerlink" href="#utskrift-i-skra" title="Permalink to this heading"></a></h3>
+<p>Til að skrifa fylki í skrá má nota annaðhvort <code class="docutils literal notranslate"><span class="pre">print</span></code> eða <code class="docutils literal notranslate"><span class="pre">savetxt</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>      <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;skrá.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+          <span class="nb">print</span><span class="p">(</span><span class="n">fylki</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+<span class="n">eða</span><span class="p">:</span>
+      <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;skrá.txt&quot;</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%5.2f</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Svo væri líka hægt að nota lykkju og f-strengi, sbr. kafla <a class="reference internal" href="../kafli08/#skrar-skrifaar-ut"><span class="std std-numref">8.4</span></a> og <a class="reference internal" href="#einfold-utprentun-vigra"><span class="std std-numref">10.2.3</span></a>.</p>
+</section>
+</section>
+<section id="innlestur-ur-skram">
+<h2><span class="section-number">10.7  </span>Innlestur úr skrám<a class="headerlink" href="#innlestur-ur-skram" title="Permalink to this heading"></a></h2>
 <section id="talnalestur">
-<h3><span class="section-number">10.6.1  </span>Talnalestur<a class="headerlink" href="#talnalestur" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.7.1  </span>Talnalestur<a class="headerlink" href="#talnalestur" title="Permalink to this heading"></a></h3>
 <p>Það er fremur auðvelt að lesa fylki úr textaskrá með fallinu <code class="code docutils literal notranslate"><span class="pre">loadtxt</span></code>.
 Skráin verður að hafa jafnmörg svið (jafnmargar tölur) í hverri línu og sjálfgefið er að sviðin séu afmörkuð með bilum (sbr. kafla <a class="reference internal" href="../kafli08/#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a>). Fyrir utan
 textaskrár sem geymdar eru í núverandi möppu getur <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code> lesið skrár sem
@@ -857,15 +999,8 @@ teiknið punktarit. Það þarf að sleppa bæði fyrstu línunni og fyrsta dál
 </ol>
 </div>
 </section>
-<section id="utskrift-talna">
-<h3><span class="section-number">10.6.2  </span>Útskrift talna<a class="headerlink" href="#utskrift-talna" title="Permalink to this heading"></a></h3>
-<p>Til að skrifa fylki í skrá má nota <code class="docutils literal notranslate"><span class="pre">savetxt</span></code> fallið:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">np.savetxt('skrá.txt',</span> <span class="pre">x,</span> <span class="pre">fmt='«snið»')</span></code> (t.d. með f.«snið» = <code class="docutils literal notranslate"><span class="pre">%5.2f</span></code>)</p>
-</div></blockquote>
-</section>
 <section id="innlestur-skraa-me-textadalkum">
-<span id="numpy-skrar-me-textadalkum"></span><h3><span class="section-number">10.6.3  </span>Innlestur skráa með textadálkum<a class="headerlink" href="#innlestur-skraa-me-textadalkum" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.7.2  </span>Innlestur skráa með textadálkum<a class="headerlink" href="#innlestur-skraa-me-textadalkum" title="Permalink to this heading"></a></h3>
 <p>Í Numpy er hægt að lesa textafylki með því nota <code class="docutils literal notranslate"><span class="pre">loadtxt(...,</span> <span class="pre">dtype=str)</span></code>.
 Síðan er hægt að nota aðferðirnar <code class="docutils literal notranslate"><span class="pre">astype</span></code> til að ná í talnadálka og
 <code class="docutils literal notranslate"><span class="pre">tolist</span></code> til að breyta textadálkum í lista af strengjum. Þetta er útskýrt með
@@ -896,7 +1031,7 @@ málmanöfnin með <code class="docutils literal notranslate"><span class="pre">
 </div>
 </section>
 <section id="csv-skar-ur-excel">
-<span id="skrar-ur-excel"></span><h3><span class="section-number">10.6.4  </span>CSV-skár úr Excel<a class="headerlink" href="#csv-skar-ur-excel" title="Permalink to this heading"></a></h3>
+<span id="skrar-ur-excel"></span><h3><span class="section-number">10.7.3  </span>CSV-skár úr Excel<a class="headerlink" href="#csv-skar-ur-excel" title="Permalink to this heading"></a></h3>
 <p>Til að lesa Excel-skrár eru tvær leiðir bestar:</p>
 <ol class="arabic simple">
 <li><p>Að byrja að vista þær sem csv-skrár og lesa inn með NumPy</p></li>
@@ -945,7 +1080,7 @@ til punktarit af sætistölu og eðlisþyngd.</p></li>
 </section>
 </section>
 <section id="listi-yfir-skrar-a-cs-hi-is-python">
-<h2><span class="section-number">10.7  </span>Listi yfir skrár á cs.hi.is/python<a class="headerlink" href="#listi-yfir-skrar-a-cs-hi-is-python" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">10.8  </span>Listi yfir skrár á cs.hi.is/python<a class="headerlink" href="#listi-yfir-skrar-a-cs-hi-is-python" title="Permalink to this heading"></a></h2>
 <p>Eftirfarandi skrár sem koma við sögu ýmist í sýnidæmum, æfingum eða verkefnum í
 þessum fyrirlestrarnótum eru á <code class="docutils literal notranslate"><span class="pre">https://cs.hi.is/python</span></code>. Þær má nota til að
 prófa ýmsar aðferðir til að lesa skrár og vinna með gögn í NumPy (eða Pandas).</p>
@@ -963,6 +1098,7 @@ prófa ýmsar aðferðir til að lesa skrár og vinna með gögn í NumPy (eða 
 <li><p><a class="reference external" href="https://cs.hi.is/python/flokkslitir.txt">flokkslitir.txt</a></p></li>
 <li><p><a class="reference external" href="https://cs.hi.is/python/malmar.txt">malmar.txt</a></p></li>
 <li><p><a class="reference external" href="https://cs.hi.is/python/allir-malmar.txt">allir-malmar.txt</a></p></li>
+<li><p><a class="reference external" href="https://cs.hi.is/python/aldursdreifing.txt">aldursdreifing.txt</a></p></li>
 <li><p><a class="reference external" href="https://cs.hi.is/python/blom.txt">blom.txt</a></p></li>
 <li><p><a class="reference external" href="https://cs.hi.is/python/evropulond.txt">evropulond.txt</a></p></li>
 <li><p><a class="reference external" href="https://cs.hi.is/python/hofudborgir.txt">hofudborgir.txt</a></p></li>

@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -184,8 +184,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">12  Dæmi um hagnýtingu fylkjareikninga</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#fylkjamargfoldun-og-tolvugrafik">12.1  Fylkjamargföldun og tölvugrafík</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fylki-og-net">12.2  Fylki og net</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#flaeinet">12.2.1  Flæðinet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lindir-og-osar">12.2.2  Lindir og ósar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grannafylki">12.2.1  Grannafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vegir-i-netum">12.2.2  Vegir í netum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#legufylki">12.2.3  Legufylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flaeinet">12.2.4  Flæðinet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lindir-og-osar">12.2.5  Lindir og ósar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hamarksflaei">12.2.6  Hámarksflæði</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#linuleg-hreyfikerfi">12.3  Línuleg hreyfikerfi</a><ul>
@@ -200,6 +204,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -245,7 +250,7 @@ sem mengi af punktum í plani, og punktarnir jafngilda svo auðvitað tvívíðu
 <li><p><strong>skekking</strong> (<em>shear deformation</em>) um tiltekið horn</p></li>
 <li><p><strong>speglun</strong> (<em>reflection</em>) um x-ás eða y-ás</p></li>
 </ul>
-<p>Sem dæmis er fylkið:</p>
+<p>Sem dæmi er fylkið:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}K = \begin{pmatrix} 1 &amp; \sin 30° \\ 0 &amp; 1 \end{pmatrix}\end{split}\]</div>
 <p>skekkingarfylki sem hallar lóðréttum línum um 30° til hægri. Aftar í þessum
@@ -356,6 +361,8 @@ verði jafnar.</p>
 </figure>
 <p>Margar fleiri myndir af netum má skoða með því að gúgla <em>graph mathematics</em> og
 smella á <em>images</em>.</p>
+<section id="grannafylki">
+<h3><span class="section-number">12.2.1  </span>Grannafylki<a class="headerlink" href="#grannafylki" title="Permalink to this heading"></a></h3>
 <div class="regla admonition">
 <p class="admonition-title">Skilgreining: Grannafylki</p>
 <p><strong>Grannafylki</strong> (<em>adjacency matrix</em>) stefnds nets er fylki <span class="math notranslate nohighlight">\(A\)</span> með</p>
@@ -390,7 +397,9 @@ smella á <em>images</em>.</p>
 \end{pmatrix}
 \;\text{ (hin tvö)}\;\end{split}\]</div>
 </div>
-<p class="rubric">Vegir í netum</p>
+</section>
+<section id="vegir-i-netum">
+<h3><span class="section-number">12.2.2  </span>Vegir í netum<a class="headerlink" href="#vegir-i-netum" title="Permalink to this heading"></a></h3>
 <p><strong>Vegur</strong> (<em>path</em>) með lengd <span class="math notranslate nohighlight">\(L\)</span> í neti er runa af <span class="math notranslate nohighlight">\(L + 1\)</span> hnút þannig
 að leggur tengi hnút 1 við hnút 2, hnút 2 við hnút 3, o.s.frv. Sagt er að
 vegurinn tengi fyrsta hnútinn við þann síðasta. Veg með lengd 3 frá <span class="math notranslate nohighlight">\(v_1\)</span>
@@ -446,6 +455,9 @@ taka annað dæmi þá eru tveir vegir frá hnút 4 til hnúts 3, nefnilega
 Finnið vegina fjóra frá hnút 1 til hnúts 4.</p></li>
 </ol>
 </div>
+</section>
+<section id="legufylki">
+<h3><span class="section-number">12.2.3  </span>Legufylki<a class="headerlink" href="#legufylki" title="Permalink to this heading"></a></h3>
 <div class="regla admonition">
 <p class="admonition-title">Skilgreining: Legufylki</p>
 <p>Ef bæði hnútar og leggir nets eru tölusettir þá er hægt að skilgreina
@@ -490,27 +502,28 @@ v_2\)</span>—<span class="math notranslate nohighlight">\(v_2\)</span> og <spa
 v_2\)</span>, <span class="math notranslate nohighlight">\(v_2 \to v_2\)</span> og <span class="math notranslate nohighlight">\(v_2 \to v_3\)</span></p></li>
 </ol>
 </div>
+</section>
 <section id="flaeinet">
-<h3><span class="section-number">12.2.1  </span>Flæðinet<a class="headerlink" href="#flaeinet" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">12.2.4  </span>Flæðinet<a class="headerlink" href="#flaeinet" title="Permalink to this heading"></a></h3>
 <p>Net sem lýsir kerfi þar sem eitthvað flæðir eftir hverjum legg, rafmagn, vatn,
 umferð, vörur o.s.frv. er kallað <strong>flæðinet</strong> (<em>network</em>). Hnútpunktarnir eru þá
 t.d. tengibox/tengivirki, tengipunktar, gatnamót eða dreifistöðvar. Í
 slíkum netum eru tölur tengdar hverjum legg, stundum fleiri en ein. Fyrir legg
-<span class="math notranslate nohighlight">\(e_j\)</span> gæti t.d. gilt:</p>
+<span class="math notranslate nohighlight">\(e_k\)</span> gæti t.d. gilt:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}&amp;\text{flæði } = x_j \\
-&amp;\text{hámarksflæði eða burðargeta } = b_j \\
-&amp;\text{kostnaður á flutta einingu } = c_j\end{split}\]</div>
+\[\begin{split}&amp;\text{flæði } = x_k \\
+&amp;\text{hámarksflæði eða burðargeta } = b_k \\
+&amp;\text{kostnaður á flutta einingu } = c_k\end{split}\]</div>
 <p>Aðrir möguleikar á upplýsingum um leggi gætu t.d. verið lengdir þeirra eða
 viðnám í þeim. Þessar upplýsingar mætti setja fram með fylki sem hefur ekki-núll
 í sömu sætum og í grannafylki netsins (því þar er jú ás í sæti
 <span class="math notranslate nohighlight">\((i,j)\)</span> ef leggur tengir hnúta <span class="math notranslate nohighlight">\(i\)</span> og <span class="math notranslate nohighlight">\(j\)</span>). Flæðinet
 eru oft stefnd, en þá táknar stefna örvanna/leggjanna ekki stefnu
 flæðisins, heldur einungis í hvaða stefnu flæðið telst jákvætt. Ef flæði er á
-móti ör verður <span class="math notranslate nohighlight">\(x_j &lt; 0\)</span>.</p>
+móti ör verður <span class="math notranslate nohighlight">\(x_{ij} &lt; 0\)</span>.</p>
 </section>
 <section id="lindir-og-osar">
-<h3><span class="section-number">12.2.2  </span>Lindir og ósar<a class="headerlink" href="#lindir-og-osar" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">12.2.5  </span>Lindir og ósar<a class="headerlink" href="#lindir-og-osar" title="Permalink to this heading"></a></h3>
 <p>Legufylki eru oft gagnleg fyrir verkefni sem tengjast flæðinetum. Það
 er ekki erfitt að sjá að ef <span class="math notranslate nohighlight">\(x\)</span> er flæðivigur með <span class="math notranslate nohighlight">\(x_j\)</span> =
 flæði eftir ör <span class="math notranslate nohighlight">\(j\)</span> í stefndu neti með legufylki <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(y =
@@ -549,6 +562,56 @@ passar sú stefna, þar eru lindir sem skila flæði inn í netið, en þar sem
 <p>Gerið ráð fyrir að flæðivigur á myndinni hér á undan sé <span class="math notranslate nohighlight">\(x = (1, 3, 2, 4, -1)\)</span>.
 Ákvarðið legufylkið <span class="math notranslate nohighlight">\(A\)</span> og í framhaldi nettóinnflæðið <span class="math notranslate nohighlight">\(s\)</span>.
 Flokkið svo hnútana í lindir, ósa og aðra hnúta.</p>
+</div>
+</section>
+<section id="hamarksflaei">
+<h3><span class="section-number">12.2.6  </span>Hámarksflæði<a class="headerlink" href="#hamarksflaei" title="Permalink to this heading"></a></h3>
+<p>Til að ákvarða hámarksflæði í gegn um net frá lind til óss má nota svonefnt
+<a class="reference external" href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm">Ford-Fulkerson reiknirit</a>, sem lýsa má svo:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Lát flæði x[i,j] = 0 fyrir alla leggi i→j
+Meðan til er vegur (lind=v0, v1,..., vn=ós) þannig
+         að hægt er að auka flæðið í öllum leggjum vi→vj:
+   c = hámarkið sem hægt er að auka flæðið um
+   x[i,j] += c fyrir alla leggi í veginum
+</pre></div>
+</div>
+<p>Svo eru til ýmsar útgáfur af þessu reikniriti eftir því hvernig vegurinn er
+fundinn, m.a. <a class="reference external" href="https://en.wikipedia.org/wiki/Edmonds%E2%80%93Karp_algorithm">Edmonds-Karp
+reikniritið</a>
+reikniritið og <a class="reference external" href="https://en.wikipedia.org/wiki/Dinic%27s_algorithm">reiknirit
+Dinic</a>. Það fyrrnefnda er til í
+SciPy, í falli sem heitir <code class="docutils literal notranslate"><span class="pre">maximum_flow</span></code>, sbr. eftirfarandi sýnidæmi.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Hámarksflæði með Edmonds-Karp</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">scipy.sparse</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ssp</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">ssp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">flow</span> <span class="o">=</span> <span class="n">ssp</span><span class="o">.</span><span class="n">csgraph</span><span class="o">.</span><span class="n">maximum_flow</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sink</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">flow</span><span class="o">.</span><span class="n">residual</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">res</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hámarksflæði = </span><span class="si">{</span><span class="n">flow</span><span class="o">.</span><span class="n">flow_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tilsvarandi flæðinet:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Við sjáum að fallið <code class="docutils literal notranslate"><span class="pre">maximum_flow</span></code> tekur burðargetuna inn í fylki sem svarar til
+grannafylkis. Skipunina <code class="docutils literal notranslate"><span class="pre">np.where</span></code> sem ekki hefur komið við sögu áður má nota til að velja stök
+fylkis sem uppfylla tiltekið skilyrði. Forritið prentar út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Hámarksflæði = 5
+Tilsvarandi flæðinet:
+[[0 3 2 0]
+ [0 0 0 3]
+ [0 0 0 2]
+ [0 0 0 0]]
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Tilraunir með hámarksflæði</p>
+<ol class="loweralpha simple">
+<li><p>Teiknið netið sem unnið er með í sýnidæminu að framan. Merkið inn númer hnúta og burðargetu.</p></li>
+<li><p>Afritið forritið í vinnubók og keyrið. Prófið að breyta einhverri burðargetu.</p></li>
+<li><p>Prentið líka út flow.residual og res</p></li>
+</ol>
 </div>
 </section>
 </section>

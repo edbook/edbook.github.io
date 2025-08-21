@@ -178,8 +178,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#arir-rithaettir-fyrir-hlutafleiu">1.5  Aðrir rithættir fyrir hlutafleiðu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#stigull">1.6  Stigull</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#stefnuafleia">1.7  Stefnuafleiða</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utgildi-tvivira-falla">1.8  Útgildi tvívíðra falla</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#margvi-foll">1.9  Margvíð föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#annars-stigs-hlutafleiur-hesse-fylki-og-tviviar-akveur">1.8  Annars stigs hlutafleiður Hesse-fylki og tvívíðar ákveður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utgildi-tvivira-falla">1.9  Útgildi tvívíðra falla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#margvi-foll">1.10  Margvíð föll</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Línuleg algebra</a></li>
@@ -454,7 +455,7 @@ teikna hæðarlínur fallsins</p>
 <figure class="align-right" id="contour-daemi" style="width: 8cm">
 <img alt="../_images/contour-d%C3%A6mi.jpg" src="../_images/contour-d%C3%A6mi.jpg" />
 </figure>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
   <span class="n">f1</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
   <span class="n">f2</span> <span class="o">=</span> <span class="mi">4</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">f1</span> <span class="o">-</span> <span class="n">f2</span>
@@ -609,12 +610,13 @@ afleiðunni <span class="math notranslate nohighlight">\(f'(\theta)\)</span>. Þ
 </section>
 <section id="stigull">
 <h2><span class="section-number">1.6  </span>Stigull<a class="headerlink" href="#stigull" title="Permalink to this heading"></a></h2>
-<p>Lát <span class="math notranslate nohighlight">\(f\)</span> vera tvívítt fall, diffranlegt í punkti <span class="math notranslate nohighlight">\((a,b)\)</span>, og látum
-<span class="math notranslate nohighlight">\(v\)</span> vera vigur sem stefnir í þá átt sem <span class="math notranslate nohighlight">\(f\)</span> vex hraðast. Venjuleg
-afleiða af einvíðu falli í punkti <span class="math notranslate nohighlight">\(a\)</span> er hallatala (<em>slope</em>) snertils
-(<em>tangent</em>) í punktinum, og á sama hátt mælir <strong>stigull</strong> (<em>gradient</em>) tvívíðs falls
-í <span class="math notranslate nohighlight">\((a,b)\)</span> hallatölu snertils í <span class="math notranslate nohighlight">\((a,b)\)</span>. En stigullinn er hinsvegar
-vigur en ekki tala eins og afleiða einvíða fallsins.</p>
+<p>Venjuleg afleiða af einvíðu falli í tilteknum punkti er hallatala (<em>slope</em>)
+snertils (<em>tangent</em>) í punktinum. Til að útvíkka þessa skilgreiningu fyrir tvítt
+fall þarf að taka tillit til þess að í hverjum punkti eru margir snertlar. Til
+að höggva á hnútinn er valinn sá snertill sem hefur mestan bratta. Þannig er
+afleiða tvíðvíða fallsins eða <em>stigull</em> (<em>gradient</em>) þess látinn vera vigur en ekki tala eins
+og afleiða einvíða fallsins, stefna hans sýnir í hvaða átt bratinn er mestur og
+lengd hans gefur brattann.</p>
 <div class="regla admonition">
 <p class="admonition-title">Skilgreining: Stigull</p>
 <p><strong>Stigull</strong> falls <span class="math notranslate nohighlight">\(f\)</span> í punkti <span class="math notranslate nohighlight">\((a,b)\)</span> er vigur sem stefnir í þá
@@ -710,8 +712,11 @@ sanna átti.</p>
 </div>
 <p class="rubric">Stigull og hæðarlínur</p>
 <p>Eins og útskýrt var að framan er stigull vigur sem stefnir upp bröttustu
-brekkuna, og hann er því lengri sem brattinn er meiri. Ein afleiðing þessa er
-að stigullinn verður hornréttur á hæðarlínur fallsins.</p>
+brekkuna, og hann er því lengri sem brattinn er meiri. Ein afleiðing þessa er eftirfarandi regla.</p>
+<div class="regla admonition">
+<p class="admonition-title">Regla: Stiglar eru hornréttir á hæðarlínur</p>
+<p>Stigull falls í gefnum punkti er hornréttur á hæðarlínu fallsins í gegn um punktinn</p>
+</div>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Stigull fundinn</p>
 <p>Finnum stigul fallsins</p>
@@ -765,20 +770,80 @@ nánar tiltiltekið afleiða fallsins <span class="math notranslate nohighlight"
 <p class="admonition-title">Regla: Tengsl stefnuafleiðu við stigul</p>
 <p><span class="math notranslate nohighlight">\(f'(p;u) = \nabla f(p) \cdot u\)</span></p>
 </div>
-<p>Stefnuafleiðan er sem sé innfeldi Ein afleiðing af þessari setningu er að hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> eru stefnuafleiður í stefnu einingavigranna, <span class="math notranslate nohighlight">\((1,0)\)</span> og <span class="math notranslate nohighlight">\((0,1)\)</span>, en um einingavigra verður fjallað nánar í kaflanum um línulega algebru.</p>
+<p>Stefnuafleiðan er sem sé innfeldi. Ein afleiðing af þessari setningu er að hlutafleiður <span class="math notranslate nohighlight">\(f\)</span> eru stefnuafleiður í stefnu einingavigranna, <span class="math notranslate nohighlight">\((1,0)\)</span> og <span class="math notranslate nohighlight">\((0,1)\)</span>, en um einingavigra verður fjallað nánar í kaflanum um línulega algebru.</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Stefnuafleiða falls</p>
 <p>Finnum stefnuafleiðu fallsins</p>
 <div class="math notranslate nohighlight">
 \[f(x,y) = x^2 + xy + y^2 - 3x\]</div>
-<p>út eftir <span class="math notranslate nohighlight">\(u = (1, 3)\)</span> í punktinum <span class="math notranslate nohighlight">\((2,1)\)</span>. Skv. síðasta sýnidæmi
-er <span class="math notranslate nohighlight">\(\nabla f(2,1) = (2,4)\)</span> og stefnuafleiðan er þessvegna</p>
+<p>út eftir <span class="math notranslate nohighlight">\(u = (1, 3)\)</span> í punktinum <span class="math notranslate nohighlight">\(p = (2,1)\)</span>. Skv. síðasta sýnidæmi
+er <span class="math notranslate nohighlight">\(\nabla f(2,1) = (2,4)\)</span> og stefnuafleiðan er þess vegna</p>
 <div class="math notranslate nohighlight">
-\[(2,4) \cdot (1,3) = 2\cdot 1 + 4\cdot 3 = 2 + 12 = 14\]</div>
+\[f'(p; u) = (2,4) \cdot (1,3) = 2\cdot 1 + 4\cdot 3 = 2 + 12 = 14\]</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Stefnuafleiða</p>
+<p>Lát <span class="math notranslate nohighlight">\(f(x, y) = x^2 + 2xy\)</span>, <span class="math notranslate nohighlight">\(p=(1,2)\)</span> og <span class="math notranslate nohighlight">\(u=(1,1)\)</span>. Reiknið
+<span class="math notranslate nohighlight">\(f'(p; u)\)</span>.</p>
+</div>
+</section>
+<section id="annars-stigs-hlutafleiur-hesse-fylki-og-tviviar-akveur">
+<h2><span class="section-number">1.8  </span>Annars stigs hlutafleiður Hesse-fylki og tvívíðar ákveður<a class="headerlink" href="#annars-stigs-hlutafleiur-hesse-fylki-og-tviviar-akveur" title="Permalink to this heading"></a></h2>
+<p>Eftirfarandi skilgreining er fengin að láni úr <a class="reference external" href="https://edbook.hi.is/stae205g/kafli02/#index-10">fyrirlestrarnótum um Stærðfræðigreiningu II</a>:</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining:</p>
+<p>Ritum <span class="math notranslate nohighlight">\(z=f(x,y)\)</span>. Annars stigs hlutafleiður f eru skilgreindar með formúlunum</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\displaystyle
+\frac{\partial^2 z}{\partial x^2}=
+\frac{\partial}{\partial x} \frac{\partial z}{\partial x}
+=f_{11}(x,y)=f_{xx}(x,y),\\\displaystyle
+\frac{\partial^2 z}{\partial y^2}=
+\frac{\partial}{\partial y} \frac{\partial z}{\partial y}
+=f_{22}(x,y)=f_{yy}(x,y),\\\displaystyle
+\frac{\partial^2 z}{\partial x\partial y}=
+\frac{\partial}{\partial x} \frac{\partial z}{\partial y}
+=f_{21}(x,y)=f_{yx}(x,y),\\\displaystyle
+\frac{\partial^2 z}{\partial y\partial x}=
+\frac{\partial}{\partial y} \frac{\partial z}{\partial x}
+=f_{12}(x,y)=f_{xy}(x,y).\end{aligned}\end{align} \]</div>
+</div>
+<p>Þar er líka sannað að <span class="math notranslate nohighlight">\(f_{xy}(x,y) = f_{yx}(x,y)\)</span> ef <span class="math notranslate nohighlight">\(f\)</span> uppfyllir
+tiltekin samfelldniskilyrði, sem flest föll sem við fáumst við gera.</p>
+<p>Annars stigs hlutafleiður eru oft settar fram í fylki sem stundum er táknað með <span class="math notranslate nohighlight">\(\nabla^2 f\)</span>:</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Hesse-fylki</p>
+<p><strong>Hesse-fylki</strong> (<em>Hessian matrix</em>) tvívíðs falls <span class="math notranslate nohighlight">\(f\)</span> í punkti
+<span class="math notranslate nohighlight">\(p = (x,y)\)</span> er fylkið</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(p)=\nabla^2 f(p) = \begin{bmatrix}
+f_{xx}(x,y)&amp;f_{xy}(x,y) \\
+f_{yx}(x,y)&amp;f_{yy}(x,y)
+\end{bmatrix}\end{split}\]</div>
+</div>
+<p>Skv. framansögðu er Hesse-fylkið (yfirleitt) samhverft.</p>
+<p><strong>Ákveða</strong> (<em>determinant</em>) er hugtak sem oft er notað í línulegri algebru.
+Ákveður verða notaðar í næsta undirkafla til að flokka útgildi og í kafla
+<a class="reference internal" href="../kafli02/#fylkjaalgebra"><span class="std std-numref">2.13</span></a> er setning sem tengir ákveður og andhverfanleg fylki.
+Fyrir <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylki er skilgreining ákveðunnar einföld:</p>
+<div class="regla admonition">
+<p class="admonition-title">Skilgreining: Tvívíð ákveða</p>
+<p>Ákveða <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkis <span class="math notranslate nohighlight">\(A = \begin{pmatrix}a &amp; b\\c &amp;
+d\end{pmatrix}\)</span> er</p>
+<div class="math notranslate nohighlight">
+\[\det(A) = ad - bc\]</div>
+</div>
+<p>Ákveður má skilgreina fyrir almenn ferningslaga fylki, en skilgreiningin er
+dálítið flókin og við látum duga að vísa í <a class="reference external" href="https://en.wikipedia.org/wiki/Determinant">Wikipedíugreinina um ákveður</a>.</p>
+<div class="python admonition">
+<p class="admonition-title">Python: Ákveða</p>
+<p>Fallið <code class="docutils literal notranslate"><span class="pre">la.det</span></code> má nota til að reikna ákveðu ferningslaga fylkis. Til að
+virkja það þarf að flytja NumPy pakka fyrir línulega inn með <code class="docutils literal notranslate"><span class="pre">import</span>
+<span class="pre">numpy.linalg</span> <span class="pre">as</span> <span class="pre">la</span></code>.</p>
 </div>
 </section>
 <section id="utgildi-tvivira-falla">
-<h2><span class="section-number">1.8  </span>Útgildi tvívíðra falla<a class="headerlink" href="#utgildi-tvivira-falla" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.9  </span>Útgildi tvívíðra falla<a class="headerlink" href="#utgildi-tvivira-falla" title="Permalink to this heading"></a></h2>
 <p class="rubric">Hágildi og lággildi</p>
 <p>Tvívítt fall <span class="math notranslate nohighlight">\(f\colon A\to \Bbb R\)</span> er sagt hafa <strong>víðvært hágildi</strong> (<em>global
 maximum</em>) í punkti <span class="math notranslate nohighlight">\(p = (x_0, y_0)\)</span> ef gildi fallsins þar er stærra en eða
@@ -805,8 +870,10 @@ jöfnunnar</p>
 \[\nabla f(x,y) = (0,0)\]</div>
 <p>gefa þá útgildin en auk þess söðulpunkta (<em>saddle points</em>) sem sum föll hafa.
 Það eru punktar þar sem stigullinn er núll, og þannig að til er leið frá þeim
-með vaxandi <span class="math notranslate nohighlight">\(f\)</span>-gildum og önnur með minnkandi <span class="math notranslate nohighlight">\(f\)</span>-gildum. Dæmi er
-fallið <span class="math notranslate nohighlight">\(f(x,y) = 10 + x^2 - y^2\)</span> sem sýnt er á eftirfarandi mynd:</p>
+með vaxandi <span class="math notranslate nohighlight">\(f\)</span>-gildum og önnur með minnkandi <span class="math notranslate nohighlight">\(f\)</span>-gildum.
+<strong>Sérstöðupunktur</strong> er samheiti yfir hágildis-, lággildis- og söðulpunkta.</p>
+<p>Dæmi um fall með söðulpunkt er <span class="math notranslate nohighlight">\(f(x,y) = 10 + x^2 - y^2\)</span> sem sýnt er á
+eftirfarandi mynd:</p>
 <figure class="align-center" id="soulpunktur" style="width: 100%">
 <img alt="../_images/s%C3%B6%C3%B0ulpunktur.jpg" src="../_images/s%C3%B6%C3%B0ulpunktur.jpg" />
 <figcaption>
@@ -822,23 +889,61 @@ f_y(x,y) &amp;= 0\end{split}\]</div>
 en ekki þarf að beita tölulegum aðferðum. Eftir að lausnirnar eru fundnar
 þarf svo að flokka þær í hágildi, lággildi og söðulpunkta.</p>
 <div class="synidaemi admonition">
-<p class="admonition-title">Sýnidæmi: Útgildispunktar</p>
-<p>Ákvörðum útgildispunkta fallsins</p>
+<p class="admonition-title">Sýnidæmi: Sérstöðupunktar</p>
+<p>Ákvörðum sérstöðupunkta fallsins</p>
 <div class="math notranslate nohighlight">
 \[f(x,y) = x^2 + xy + y^2 - 3x\]</div>
-<p>Stigullinn er <span class="math notranslate nohighlight">\(\nabla f = (2x + y - 3, x + 2y)\)</span> svo við þurfum að leysa jöfnurnar:</p>
+<p>Stigullinn er <span class="math notranslate nohighlight">\(\nabla f = (2x + y - 3, x + 2y)\)</span> svo við þurfum að leysa
+jöfnurnar:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}2x + y = 3\\ x + 2y = 0\end{split}\]</div>
 <p>Smá útreikningar gefa nú <span class="math notranslate nohighlight">\(x = 2\)</span> og <span class="math notranslate nohighlight">\(y = -1\)</span>. En er þetta
 lággildi, hágildi eða söðulpunktur? Svarið er lággildi, og það er m.a. hægt
 að sjá útfrá því að þetta er eina lausnin, og að fallið vex upp úr
-öllu valdi ef x og y eru látin stefna á óendanlegt.</p>
+öllu valdi ef <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> eru látin stefna á óendanlegt.</p>
 <figure class="align-center" id="id7" style="width: 11cm">
 <img alt="../_images/synidaemi.jpg" src="../_images/synidaemi.jpg" />
 <figcaption>
 <p><span class="caption-number">Mynd 1.10: </span><span class="caption-text">Graf fallsins f og lággildispunkturinn p</span><a class="headerlink" href="#id7" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
+</div>
+<p class="rubric">Flokkun útgilda</p>
+<p>Hér að framan skoðuðum við hvað gerist fyrir stór <span class="math notranslate nohighlight">\(x\)</span> og <span class="math notranslate nohighlight">\(y\)</span> til að
+sjá að um lággildi væri að ræða, en önnur aðferð til að sjá hvort hvort núllstöð
+stiguls tvíðs falls sé hágildis-, lággildis- eða söðulpunktur er að reikna
+Hesse-fylki fallsins í núllstöðinni, í framhaldi ákveðu þess, og nota svo
+eftirfarandi reglu:</p>
+<div class="regla admonition">
+<p class="admonition-title">Regla: Hesse-fylki og útgildi</p>
+<p>Gerum ráð fyrir að <span class="math notranslate nohighlight">\(\nabla f(x,y) = 0\)</span>, <span class="math notranslate nohighlight">\(H = \nabla ^2 f(x,y)\)</span> og
+<span class="math notranslate nohighlight">\(a = h_{11} = f_{xx}(x,y)\)</span>. Þá gildir:</p>
+<ol class="arabic simple">
+<li><p>Ef <span class="math notranslate nohighlight">\(\det(H) &gt; 0\)</span> og <span class="math notranslate nohighlight">\(a &gt; 0\)</span> þá hefur <span class="math notranslate nohighlight">\(f\)</span> staðbundið lággildi
+í <span class="math notranslate nohighlight">\((x,y)\)</span></p></li>
+<li><p>Ef <span class="math notranslate nohighlight">\(\det(H) &gt; 0\)</span> og <span class="math notranslate nohighlight">\(a &lt; 0\)</span> þá hefur <span class="math notranslate nohighlight">\(f\)</span> staðbundið hágildi
+í <span class="math notranslate nohighlight">\((x,y)\)</span></p></li>
+<li><p>Ef <span class="math notranslate nohighlight">\(\det(H) &lt; 0\)</span> þá hefur <span class="math notranslate nohighlight">\(f\)</span> söðulpunkt í <span class="math notranslate nohighlight">\((x,y)\)</span></p></li>
+<li><p>Ef <span class="math notranslate nohighlight">\(\det(H) = 0\)</span> þá er ekkert hægt að segja.</p></li>
+</ol>
+</div>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Útgildispunktar, framhald</p>
+<p>Hesse-fylki fallsins <span class="math notranslate nohighlight">\(f\)</span> fæst með því að diffra aftur:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla^2 f(x,y) = \begin{pmatrix}
+2 &amp; 1 \\
+1 &amp; 2
+\end{pmatrix}\end{split}\]</div>
+<p>(t.d. fæst stakið efst til vinstri með því að diffra <span class="math notranslate nohighlight">\(f_x(x,y) = 2x + y - 3\)</span>
+með tilliti til <span class="math notranslate nohighlight">\(x\)</span>). Fylkið er sem sé fasti og því:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H = \nabla^2 f(2,-1) = \begin{pmatrix}
+2 &amp; 1 \\
+1 &amp; 2
+\end{pmatrix}\end{split}\]</div>
+<p>Svo fæst <span class="math notranslate nohighlight">\(\det(H) = 2 \cdot 2 - 1 \cdot 1 = 3\)</span> og <span class="math notranslate nohighlight">\(a =
+h_{11} = 2\)</span>. Skv. síðustu reglu er því punkturinn <span class="math notranslate nohighlight">\((2,-1)\)</span> lággildispunktur.</p>
 </div>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing: Loklaus kassi</p>
@@ -889,7 +994,7 @@ Fyrirlestrarnótum um Python.</p>
 </div>
 </section>
 <section id="margvi-foll">
-<h2><span class="section-number">1.9  </span>Margvíð föll<a class="headerlink" href="#margvi-foll" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.10  </span>Margvíð föll<a class="headerlink" href="#margvi-foll" title="Permalink to this heading"></a></h2>
 <p class="rubric">Skilgreining og dæmi</p>
 <p>Rifjum upp að tvívítt fall er fall <span class="math notranslate nohighlight">\(f\colon A \to \Bbb{R}\)</span> þar sem <span class="math notranslate nohighlight">\(A \subseteq \mathbb{R}^2\)</span>. Á sama hátt er <span class="math notranslate nohighlight">\(n\)</span>-vítt fall fall:</p>
 <div class="math notranslate nohighlight">
@@ -926,7 +1031,6 @@ Fyrirlestrarnótum um Python.</p>
 \dfrac{\partial f(x)}{\partial x_n}
 \end{pmatrix}\end{split}\]</div>
 <p>Eins og fyrir tvívíð föll segir stigullinn okkur í hvaða átt fallið vex hraðast. Við getum hugsað okkur fugl á flugi sem er kalt, hann gæti e.t.v. haft vit á að fljúga í stefnu stiguls þrívíða fallsins <span class="math notranslate nohighlight">\(H\)</span> sem talað var um í greinininn hér á undan. Margvíðir stiglar verða aftur á dagskrá þegar fjallað verður um Taylor-nálgun í kaflanum um línulega algebru.</p>
-<p>[Efni í vinnslu]</p>
 </section>
 </section>
 

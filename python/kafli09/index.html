@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -182,7 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#inngangur">9.1  Inngangur</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#einfaldar-myndir">9.2  Einfaldar myndir</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#undirbuningur-teikningar">9.2.1  Undirbúningur teikningar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#punktarit-scatter-plot-og-linurit">9.2.2  Punktarit (<em>scatter-plot</em>) og línurit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#punktarit-og-linurit">9.2.2  Punktarit og línurit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#sulurit">9.2.3  Súlurit</a></li>
 </ul>
 </li>
@@ -213,6 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -243,29 +244,33 @@
            <div itemprop="articleBody">
              
   <section id="teikning-me-matplotlib">
-<span id="id1"></span><h1><span class="section-number">9  </span>Teikning með Matplotlib<a class="headerlink" href="#teikning-me-matplotlib" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">9  </span>Teikning með Matplotlib<a class="headerlink" href="#teikning-me-matplotlib" title="Permalink to this heading"></a></h1>
 <section id="inngangur">
 <h2><span class="section-number">9.1  </span>Inngangur<a class="headerlink" href="#inngangur" title="Permalink to this heading"></a></h2>
 <p>Matplotlib er teiknipakki fyrir Python sem er byggður á tölvugrafík í
 Matlab-kerfinu. Með Matplotlib er hægt að teikna (eða birta, sýna) myndir
-(<em>images</em>), hæðarlínur (<em>countours</em>), <em>skatterplott</em>, línurit og gröf (<em>line
-plots</em>) og þrívíðar <em>upplýstar</em> myndir. Pakkinn er þannig að framendinn
-(<em>frontend</em>) eða skilgreining teikningarinnar er aðskilinn frá bakendanum
-(<em>backend</em>) sem birtir hana. Þannig er hægt að skrifa forrit sem býr til
-teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem sjálfstæðan
-glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara o.s.frv. án þess
-að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls kyns viðbætur við
-Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu, og samskipti við Excel,
-svo fáeinar séu nefndar. Eftirfarandi mynd sýnir dæmi um myndir teiknaðar
-með Matplotlib.</p>
-<figure class="align-center" id="id12" style="width: 15cm">
+(<em>images</em>), hæðarlínur (<em>countours</em>), punktarit (<em>scatter plot</em>), línurit og
+gröf (<em>line plots</em>) og þrívíðar <em>upplýstar</em> myndir. Pakkinn er þannig að
+framendinn (<em>frontend</em>) eða skilgreining teikningarinnar er aðskilinn frá
+bakendanum (<em>backend</em>) sem birtir hana. Þannig er hægt að skrifa forrit sem býr
+til teikningu, og svo er hægt að sýna teikninguna inni í Jupyter-bók, sem
+sjálfstæðan glugga á skjá, á vef, í pdf-skjali, í Latex-skjali, á prentara
+o.s.frv. án þess að breyta teikniforritinu sjálfu. Auk þess er hægt að fá alls
+kyns viðbætur við Matlplotlib, t.d. fyrir kortagerð, þrívíða teikningu,
+samskipti við Pandas og samskipti við Excel, svo fáeinar séu nefndar. Af þessum
+viðbótum er er líklega helstan að telja pakkann <a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a>, sem tengist Pandas nánum böndum. Markmið
+höfunda Seaborn er að teikna sem „nútímalegust“ tölfræðileg gröf á sem
+sjálfvirkastan máta.</p>
+<p>Eftirfarandi mynd sýnir dæmi um
+myndir teiknaðar með Matplotlib.</p>
+<figure class="align-center" id="id1" style="width: 15cm">
 <img alt="../_images/matplotlib-d%C3%A6mi.jpeg" src="../_images/matplotlib-d%C3%A6mi.jpeg" />
 <figcaption>
-<p><span class="caption-number">Mynd 9.1: </span><span class="caption-text">Matplotlib myndir</span><a class="headerlink" href="#id12" title="Varanlegur hlekkur á þessa mynd"></a></p>
+<p><span class="caption-number">Mynd 9.1: </span><span class="caption-text">Matplotlib myndir</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
 </figure>
-<div class="admonition attention">
-<p class="admonition-title">Athugið</p>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Skipun eða fall</p>
 <p>Hér verður talað um teikniskipanir þegar strangt tiltekið ætti kannski frekar
 að tala um teikniföll: scatter-fallið, plot-fallið o.s.frv. Einn kostur við
 að segja frekar <em>skipun</em> er að það veldur síður ruglingi þegar verið er að
@@ -273,11 +278,10 @@ teikna föll.</p>
 </div>
 </section>
 <section id="einfaldar-myndir">
-<span id="id2"></span><h2><span class="section-number">9.2  </span>Einfaldar myndir<a class="headerlink" href="#einfaldar-myndir" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.2  </span>Einfaldar myndir<a class="headerlink" href="#einfaldar-myndir" title="Permalink to this heading"></a></h2>
 <section id="undirbuningur-teikningar">
 <h3><span class="section-number">9.2.1  </span>Undirbúningur teikningar<a class="headerlink" href="#undirbuningur-teikningar" title="Permalink to this heading"></a></h3>
-<blockquote>
-<div><p>Venjulegasta notkun Matplotlib er að nota undirpakkann <em>pyplot</em> og í
+<p>Venjulegasta notkun Matplotlib er að nota undirpakkann <em>pyplot</em> og í
 Matplotlib notendahandbókinni er mælt með að flytja hann inn sem <em>plt</em>, svo
 það er fyrir vikið alsiða. Teiknaðar myndir birtast sjálfkrafa inni í
 bókinni, neðan við forritsreitinn. Hér er kafli sem hægt er að setja fremst í
@@ -285,18 +289,16 @@ vinnubók sem teiknar, þar sem bætt hefur verið við skipunum sem láta rúð
 teiknast undir öðrum teiknuðum hlutum, breyta sjálfgefinni stærð myndar, og
 laga galla á <em>savefig</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Frumstilling teikningar</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># (6,4) er sjálfgefið</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;savefig&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>  <span class="c1"># laga galla á savefig</span>
 </pre></div>
 </div>
-</div></blockquote>
 </section>
-<section id="punktarit-scatter-plot-og-linurit">
-<span id="skatter-plott-og-linurit"></span><h3><span class="section-number">9.2.2  </span>Punktarit (<em>scatter-plot</em>) og línurit<a class="headerlink" href="#punktarit-scatter-plot-og-linurit" title="Permalink to this heading"></a></h3>
-<blockquote>
-<div><p>Ein mikilvægasta notkunin á Matplotlib er teikna myndir af talnalistum, sem
+<section id="punktarit-og-linurit">
+<h3><span class="section-number">9.2.2  </span>Punktarit og línurit<a class="headerlink" href="#punktarit-og-linurit" title="Permalink to this heading"></a></h3>
+<p>Ein mikilvægasta notkunin á Matplotlib er að teikna myndir af talnalistum, sem
 geta hvort sem er verið venjulegir Python listar eða NumPy vigrar eins og við
 kynnumst í <a class="reference internal" href="../kafli10/#numpy"><span class="std std-numref">10</span></a>. kafla.</p>
 <p>Hér er forrit sem teiknar punktana <span class="math notranslate nohighlight">\((x,y)\)</span> þar sem <span class="math notranslate nohighlight">\(y = \sqrt x\)</span>
@@ -306,8 +308,9 @@ scatter-skipunin teiknar punktana sjálfa með flatarmál u.þ.b. 40 ferpunkta
 (punktur ≈ 1/3 mm) og plot-skipunin teiknar strikin á milli þeirra. Að lokum
 teiknar grid rúðunet. Í <code class="docutils literal notranslate"><span class="pre">skipuninni</span></code> er hægt að tilgreina lit punkta, sbr.
 fyrra sýnidæmið í kafla <a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a> og þeir geta
-líka verið hver með sínum lit sbr. dæmið um besta plan í kafla <a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+líka verið hver með sínum lit sbr. dæmið um besta plan í kafla
+<a class="reference internal" href="../kafli13/#gervigogn-og-ahvarf"><span class="std std-numref">13.5</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqrt</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
@@ -319,11 +322,11 @@ líka verið hver með sínum lit sbr. dæmið um besta plan í kafla <a class="
 <figure class="align-center" style="width: 11cm">
 <img alt="../_images/matplotlib-kynning.png" src="../_images/matplotlib-kynning.png" />
 </figure>
-<div class="admonition attention">
-<p class="admonition-title">Athugið</p>
-<p>Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er sköluð
-niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er (a.m.k.
-nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.</p>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Einingar í <em>figsize</em></p>
+<p>Stærð myndarinnar er gefin í tommum og (6,4) er sjálfgefið. Myndin er
+sköluð niður í ca. 2/3 þegar hún birtist á venjulegum fartölvuskjá, en er
+(a.m.k. nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.</p>
 </div>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing:</p>
@@ -335,17 +338,17 @@ nokkurnvegin) ósköluð ef bókin er prentuð sem pdf.</p>
 <li><p>sleppa rúðunetinu</p></li>
 </ul>
 </div>
-</div></blockquote>
 </section>
 <section id="sulurit">
-<span id="id3"></span><h3><span class="section-number">9.2.3  </span>Súlurit<a class="headerlink" href="#sulurit" title="Permalink to this heading"></a></h3>
-<blockquote>
-<div><p>Hér er búið til súlurit (<em>histogram</em>) af normaldreifðum slembigögnum. Stikinn
-<code class="docutils literal notranslate"><span class="pre">bins</span></code> gefur fjölda súlna og <code class="docutils literal notranslate"><span class="pre">range</span></code> gefur svæðið á x-ás sem súluritið
-nær yfir. Kallið <code class="docutils literal notranslate"><span class="pre">gauss(mu,sigma)</span></code> skilar slemitölu úr normaldreifingu með
-meðaltal mu og staðalfrávik sigma (Gauss-dreifing er annað nafn á normaldreifingu)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">gauss</span>
+<h3><span class="section-number">9.2.3  </span>Súlurit<a class="headerlink" href="#sulurit" title="Permalink to this heading"></a></h3>
+<p>Hér er búið til súlurit (<em>histogram</em>) af normaldreifðum slembigögnum. Stikinn
+<code class="docutils literal notranslate"><span class="pre">bins</span></code> gefur fjölda súlna og <code class="docutils literal notranslate"><span class="pre">range</span></code> gefur svæðið á x-ás sem súluritið nær
+yfir. Góð regla er að láta súlurnar mætast í rúnnuðum (<em>round</em>) tölum t.d.
+heilum eða hálfum (hér mætast þær í hálfum tölum). Kallið <code class="docutils literal notranslate"><span class="pre">gauss(mu,sigma)</span></code>
+skilar slemitölu úr normaldreifingu með meðaltal mu og staðalfrávik sigma
+(Gauss-dreifing er annað nafn á normaldreifingu)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">gauss</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">)]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
@@ -356,28 +359,35 @@ meðaltal mu og staðalfrávik sigma (Gauss-dreifing er annað nafn á normaldre
 <figure class="align-center" style="width: 11cm">
 <img alt="../_images/sulurit.png" src="../_images/sulurit.png" />
 </figure>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">hist</span></code> reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
+hæð súlnanna koma úr lista eða vigri með því að nota skipunina <code class="docutils literal notranslate"><span class="pre">bar</span></code>. Um það
+er sýnt dæmi í næsta kafla.</p>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing:</p>
 <p>Prófið skipanirnar að ofan. Prófið að fækka og fjölga punktum. Prófið líka að
 nota 6 súlur (það þarf að breyta bæði bins og range).</p>
 </div>
-<div class="admonition attention">
-<p class="admonition-title">Athugið</p>
-<p>Skipunin <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> er valkvæð þegar teiknað er beint í úttaksglugga í
-vinnubók, en það er hægt að opna sérstakan glugga með myndinni og þá þarf
-þessa skipun. Notkun hennar hefur þann viðbótarkost að losna við aukaupplýsingar
-sem sumar teikniskipanir skrifa ef þær eru aftast í vinnubók.</p>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Kyrrstæðar og lifandi myndir</p>
+<p>Myndirnar í þessum <a class="reference internal" href="#teikning-me-matplotlib"><span class="std std-numref">9</span></a>. kafla eru kyrrstæðar
+(<em>static</em>) en Matplotlib getur líka búið til bæði hreyfimyndir (<em>animated</em>)
+og lifandi (<em>interactive</em>) myndir með stýrihlutum (<a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_widget">widgets</a>), t.d. hnöppum og sleðum,
+hvort sem er í úttaksglugga í vinnubók eða í sérstökum sjálfstæðum
+myndaglugga (amk. með JupyterLab). Þá má láta myndina hreyfast eins og í
+teiknimynd eða breytast með músastýringu. Lítið dæmi um lifandi mynd með
+stýrisleða er í kafla <a class="reference internal" href="../kafli16/#lifandi-matplotlib-mynd"><span class="std std-numref">16.2.4</span></a> og dæmi um
+hreyfimynd er í kafla <a class="reference internal" href="../kafli16/#retthyrningur-sem-snyst"><span class="std std-numref">16.3.2</span></a>.</p>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> er valkvæð þegar teiknað er beint í vinnubók, en hana
+þarf ef sérstakur gluggi er opnaður. Notkun hennar hefur þann viðbótarkost að
+losna við aukaupplýsingar sem sumar teikniskipanir skrifa ef þær eru aftast í
+vinnubók.</p>
 </div>
-<p>Skipunin <code class="docutils literal notranslate"><span class="pre">hist</span></code> reiknar sjálf hæð hverrar súlu en það er líka hægt að láta
-hæð súlnanna koma úr lista eða vigri með því að nota skipunina <code class="docutils literal notranslate"><span class="pre">bar</span></code>. Um það
-er sýnt dæmi í næsta kafla.</p>
-</div></blockquote>
 </section>
 </section>
 <section id="teikningar-af-gognum-i-skram">
-<span id="id4"></span><h2><span class="section-number">9.3  </span>Teikningar af gögnum í skrám<a class="headerlink" href="#teikningar-af-gognum-i-skram" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.3  </span>Teikningar af gögnum í skrám<a class="headerlink" href="#teikningar-af-gognum-i-skram" title="Permalink to this heading"></a></h2>
 <section id="innlestur-talnagagna-i-dalkum">
-<span id="innlestur-talnagagna"></span><h3><span class="section-number">9.3.1  </span>Innlestur talnagagna í dálkum<a class="headerlink" href="#innlestur-talnagagna-i-dalkum" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.3.1  </span>Innlestur talnagagna í dálkum<a class="headerlink" href="#innlestur-talnagagna-i-dalkum" title="Permalink to this heading"></a></h3>
 <p>Algengt er að maður vilji teikna upplýsingar sem eru geymdar í skrám, og oft eru
 það dálkar í skránni sem þarf að teikna. Í sýnidæminu í kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a> var sýnt hvernig hægt er að lesa dálka í slíkri skrá inn í lista af strengjum. Ef dálkarnir geyma tölur þarf beita <code class="docutils literal notranslate"><span class="pre">float</span></code>-fallinu á innihaldið. Til að lesa inn skrá <code class="docutils literal notranslate"><span class="pre">xy.txt</span></code> með tveimur talnadálkum má nota:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
@@ -393,14 +403,14 @@ er sýnt dæmi í næsta kafla.</p>
 <p>Ef skráin er á vefnum þarf í fyrsta lagi að nota <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> í stað <code class="docutils literal notranslate"><span class="pre">open</span></code> og svo þarf líka að nota <code class="docutils literal notranslate"><span class="pre">decode()</span></code> á línuna, eins og gert var í kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a>. Annar möguleiki er svo að nota NumPy sem er á dagskrá í <a class="reference internal" href="../kafli10/#numpy-pakkinn"><span class="std std-numref">10. kafla</span></a>.</p>
 </section>
 <section id="daemi-um-teikningu-talnagagna">
-<span id="id5"></span><h3><span class="section-number">9.3.2  </span>Dæmi um teikningu talnagagna<a class="headerlink" href="#daemi-um-teikningu-talnagagna" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.3.2  </span>Dæmi um teikningu talnagagna<a class="headerlink" href="#daemi-um-teikningu-talnagagna" title="Permalink to this heading"></a></h3>
 <p>Hér eru tvö sýnidæmi um teikningu gagna sem eru fengin úr gagnaskrám. Það fyrra teiknar punktarit (<em>scatter plot</em>) og það síðara súlurit.</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Eðlisþyngd og bræðslumark</p>
 <p>Í kafla <a class="reference internal" href="../kafli08/#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a> var skoðuð skrá með bræðslumarki og
 eðlisþyngd fjögurra málma (sbr. líka <a class="reference internal" href="../verkefni/#dalkar-i-csv-skra-leyst-me-colab"><span class="std std-numref">verkefni 17</span></a>. Hér er forrit sem teiknar punktarit af <a class="reference external" href="https://cs.hi.is/python/malmar.txt">skránni</a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/malmar.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
   <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># sleppa fyrirsögnum</span>
        <span class="n">nafn</span> <span class="o">=</span> <span class="p">[]</span>
@@ -476,14 +486,14 @@ eru töflurnar fyrst og fremst hugsaður til uppflettingar og ekki til að læra
 utanað.</p>
 <p>Fyrst er tafla yfir aðal teikniskipanirnar og svo sérstök tafla bara um hvernig
 hægt er að setja texta inn á myndir með <em>text</em>-skipuninni.</p>
-<table class="docutils align-center" id="id13">
-<caption><span class="caption-number">Tafla 9.1: </span><span class="caption-text">Helstu teikniskipanir</span><a class="headerlink" href="#id13" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-number">Tafla 9.1: </span><span class="caption-text">Helstu teikniskipanir</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">figure</span></code></p></td>
-<td><p>Býr til mynd (kafli <a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a> og <a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a>)</p></td>
+<td><p>Býr til mynd (kafli <a class="reference internal" href="#punktarit-og-linurit"><span class="std std-numref">9.2.2</span></a> og <a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">scatter</span></code></p></td>
-<td><p>Teiknar punkta í tilgreindum x- og y-hnitum (<a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a>)</p>
+<td><p>Teiknar punkta í tilgreindum x- og y-hnitum (<a class="reference internal" href="#punktarit-og-linurit"><span class="std std-numref">9.2.2</span></a>)</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plot</span></code></p></td>
@@ -502,7 +512,7 @@ hægt er að setja texta inn á myndir með <em>text</em>-skipuninni.</p>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text</span></code></p></td>
 <td><p>Skrifar texta inn á mynd (sjá töflu ref:<cite>%s&lt;text-fallið&gt;</cite>)
-(<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+(<a class="reference internal" href="#innlestur-talnagagna-i-dalkum"><span class="std std-numref">9.3.1</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">show</span></code></p></td>
 <td><p>Birtir mynd (þarf ekki ef teiknað er í glugga í vinnubók (<a class="reference internal" href="#sulurit"><span class="std std-numref">9.2.3</span></a>)</p></td>
@@ -516,10 +526,10 @@ hægt er að setja texta inn á myndir með <em>text</em>-skipuninni.</p>
 <td><p>skrifar texta aftan við punkt (x,y)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,</span> <span class="pre">fontsize=n)</span></code></p></td>
-<td><p>– með n punkta letri (<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+<td><p>– með n punkta letri (<a class="reference internal" href="#innlestur-talnagagna-i-dalkum"><span class="std std-numref">9.3.1</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,va=&quot;top&quot;)</span></code></p></td>
-<td><p>– neðan við punkt (<em>vertical alignment</em>) (<a class="reference internal" href="#innlestur-talnagagna"><span class="std std-numref">9.3.1</span></a>)</p></td>
+<td><p>– neðan við punkt (<em>vertical alignment</em>) (<a class="reference internal" href="#innlestur-talnagagna-i-dalkum"><span class="std std-numref">9.3.1</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">text(...,va=&quot;bottom&quot;)</span></code></p></td>
 <td><p>– ofan við punkt (eða center/baseline)</p></td>
@@ -603,7 +613,7 @@ gefur svipaða niðurstöðu og <code class="docutils literal notranslate"><span
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">c</span></code></p></td>
 <td><p>vigur af litum (hver punktur í sínum lit). Má vera vigur af
 tölum og þá litast <br> punktarnir með <strong>litaskala</strong> (<em>color map</em>;
-sjá athugasemd hér fyrir neðan) (<a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>)</p></td>
+sjá athugasemd hér fyrir neðan) (<a class="reference internal" href="../kafli13/#gervigogn-og-ahvarf"><span class="std std-numref">13.5</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></td>
 <td><p>gagnsæi, sjá töfluna að ofan</p></td>
@@ -621,23 +631,20 @@ er ekki stutt að skrifa <code class="code docutils literal notranslate"><span c
 </div>
 <div class="athugid admonition">
 <p class="admonition-title">Athugasemd: Um litaskala</p>
-<p>Þessar fyrirlestrarnótur skauta framhjá umfjöllun um <strong>litaskala</strong>, en um þá
-er fjallað allítarlega í <a class="reference external" href="https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar">Viðauka A4</a> í <em>Fyrirlestrarnótum
-í stærðfræði og reiknifræði</em>. Um litaskala er líka fjallað í 4. kafla í
-<a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook">Python Data Science Handbook</a>.</p>
+<p>Þessar fyrirlestrarnótur skauta framhjá umfjöllun um <strong>litaskala</strong>, en um þá er fjallað allítarlega í <a class="reference external" href="https://cs.hi.is/strei/vi%C3%B0auki-A/#a4-litaskalar">Viðauka A4</a> í <em>Valin efni í stærðfræði og reiknifræði</em>. Um litaskala er líka fjallað í 4. kafla í <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook">Python Data Science Handbook</a>.</p>
 </div>
 <table class="docutils align-center" id="plothjalparskip">
 <caption><span class="caption-number">Tafla 9.5: </span><span class="caption-text">Helstu hjálparskipanir fyrir teikningar</span><a class="headerlink" href="#plothjalparskip" title="Varanlegur hlekkur á þessa töflu"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.xlim(min,max)</span></code></p></td>
-<td><p>stillir neðri og efri mörk x-áss (kafli <a class="reference internal" href="#rju-daemi"><span class="std std-numref">9.5</span></a>)</p></td>
+<td><p>stillir neðri og efri mörk x-áss (kafli <a class="reference internal" href="#rju-daemi-um-teikningar"><span class="std std-numref">9.5</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.ylim(min,max)</span></code></p></td>
-<td><p>Stillir neðri og efri mörk y-áss (<a class="reference internal" href="#rju-daemi"><span class="std std-numref">9.5</span></a>)</p></td>
+<td><p>Stillir neðri og efri mörk y-áss (<a class="reference internal" href="#rju-daemi-um-teikningar"><span class="std std-numref">9.5</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.clim(cmin,</span> <span class="pre">cmax)</span></code></p></td>
 <td><p>Stillir neðri og efri mörk &quot;litaáss&quot; innan <strong>litaskala</strong> sem er <br>
-í notkun – sjá athugasemd hér næst á undan (<a class="reference internal" href="../kafli13/#gervigogn"><span class="std std-numref">13.6</span></a>)</p></td>
+í notkun – sjá athugasemd hér næst á undan (<a class="reference internal" href="../kafli13/#gervigogn-og-ahvarf"><span class="std std-numref">13.5</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.title(strengur)</span></code></p></td>
 <td><p>setur fyrirsögn á teikningu (<a class="reference internal" href="#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>)</p></td>
@@ -672,7 +679,7 @@ og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numr
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.grid(True)</span></code></p></td>
 <td><p>teiknar rúðunet (nota má <code class="docutils literal notranslate"><span class="pre">grid(True,</span> <span class="pre">axis='y')</span></code> fyrir <br>
-bara láréttar línur) (<a class="reference internal" href="#skatter-plott-og-linurit"><span class="std std-numref">9.2.2</span></a>,
+bara láréttar línur) (<a class="reference internal" href="#punktarit-og-linurit"><span class="std std-numref">9.2.2</span></a>,
 <a class="reference internal" href="#daemi-um-legend"><span class="std std-numref">9.5.2</span></a> og <a class="reference internal" href="#daemi-um-hist"><span class="std std-numref">9.5.3</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.box(False)</span></code></p></td>
@@ -680,11 +687,11 @@ bara láréttar línur) (<a class="reference internal" href="#skatter-plott-og-l
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axvline(x)</span></code></p></td>
 <td><p>bætir við lóðréttri línu (sjálfgefið er x = 0) (<a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a> og
-<a class="reference internal" href="#graf-visisfallsins"><span class="std std-numref">9.6.4</span></a>)</p></td>
+<a class="reference internal" href="#graf-visisfallsins-exp-x"><span class="std std-numref">9.6.4</span></a>)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plt.axhline(y)</span></code></p></td>
 <td><p>bætir við láréttri línu (sjálfgefið er y = 0) (<a class="reference internal" href="#finna-graf"><span class="std std-numref">9.6.2</span></a> og
-<a class="reference internal" href="#graf-visisfallsins"><span class="std std-numref">9.6.4</span></a>)</p></td>
+<a class="reference internal" href="#graf-visisfallsins-exp-x"><span class="std std-numref">9.6.4</span></a>)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code></p></td>
 <td><p>bætir við kassa með skýringum á línum/skatter-punktum <br>
@@ -696,12 +703,12 @@ bara láréttar línur) (<a class="reference internal" href="#skatter-plott-og-l
 <p>Loks er hér <a class="reference external" href="https://matplotlib.org/api/pyplot_summary.html">hlekkur</a>  á yfirlit yfir allar Matplotlib-skipanir.</p>
 </section>
 <section id="rju-daemi-um-teikningar">
-<span id="rju-daemi"></span><h2><span class="section-number">9.5  </span>Þrjú dæmi um teikningar<a class="headerlink" href="#rju-daemi-um-teikningar" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.5  </span>Þrjú dæmi um teikningar<a class="headerlink" href="#rju-daemi-um-teikningar" title="Permalink to this heading"></a></h2>
 <p>Til frekari glöggvunar eru hér þrjú viðbótardæmi og nokkrar æfingar.</p>
 <section id="daemi-um-plot">
-<span id="id6"></span><h3><span class="section-number">9.5.1  </span>Dæmi um plot<a class="headerlink" href="#daemi-um-plot" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.5.1  </span>Dæmi um plot<a class="headerlink" href="#daemi-um-plot" title="Permalink to this heading"></a></h3>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sqrt</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span> <span class="c1"># dpi=72 sjálfgefið</span>
@@ -728,10 +735,10 @@ bara láréttar línur) (<a class="reference internal" href="#skatter-plott-og-l
 </div></blockquote>
 </section>
 <section id="daemi-um-legend">
-<span id="id7"></span><h3><span class="section-number">9.5.2  </span>Dæmi um legend<a class="headerlink" href="#daemi-um-legend" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.5.2  </span>Dæmi um legend<a class="headerlink" href="#daemi-um-legend" title="Permalink to this heading"></a></h3>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span>
 <span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">20</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">)]</span>
 <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">21</span><span class="p">)]</span>
@@ -754,9 +761,9 @@ stærri tölur).</p>
 </div></blockquote>
 </section>
 <section id="daemi-um-hist">
-<span id="id8"></span><h3><span class="section-number">9.5.3  </span>Dæmi um hist<a class="headerlink" href="#daemi-um-hist" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.5.3  </span>Dæmi um hist<a class="headerlink" href="#daemi-um-hist" title="Permalink to this heading"></a></h3>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">gauss</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">gauss</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">)]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
@@ -777,14 +784,14 @@ stærri tölur).</p>
 </section>
 </section>
 <section id="teikning-af-grofum-falla">
-<span id="groffalla"></span><h2><span class="section-number">9.6  </span>Teikning af gröfum falla<a class="headerlink" href="#teikning-af-grofum-falla" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">9.6  </span>Teikning af gröfum falla<a class="headerlink" href="#teikning-af-grofum-falla" title="Permalink to this heading"></a></h2>
 <p>Við byrjum þennan kafla á æfingu, sem snýst bæði um efni undanfarandi kafla og
 þessa. Lesendur eru hvattir til að spreyta sig á henni áður en þeir lesa áfram
 því hér á eftir koma svör við ýmsum atriðum í henni.</p>
 <p>Til að teikna graf er byrjað á að núllstilla með því að keyra:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">axisbelow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
    <span class="k">return</span> <span class="p">[</span><span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">i</span><span class="o">/</span><span class="mi">200</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">201</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -793,11 +800,11 @@ stærri tölur).</p>
 f(x)\)</span> í öllum þessum <span class="math notranslate nohighlight">\(x\)</span>-um og nálgum graf fallsins með því að teikna
 línustrik sem tengja alla punktana.</p>
 <section id="einfalt-graf">
-<span id="id9"></span><h3><span class="section-number">9.6.1  </span>Einfalt graf<a class="headerlink" href="#einfalt-graf" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.6.1  </span>Einfalt graf<a class="headerlink" href="#einfalt-graf" title="Permalink to this heading"></a></h3>
 <p>Við getum teiknað graf sínus-fallsins á bilinu <span class="math notranslate nohighlight">\([0, 4\pi]\)</span> með:</p>
 <blockquote>
 <div><dl>
-<dt>Forrit:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span>
+<dt>Forrit:</dt><dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">exp</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">pi</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">xi</span><span class="p">)</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
@@ -812,7 +819,7 @@ línustrik sem tengja alla punktana.</p>
 </div></blockquote>
 </section>
 <section id="finna-graf">
-<span id="id10"></span><h3><span class="section-number">9.6.2  </span>Fínna graf<a class="headerlink" href="#finna-graf" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.6.2  </span>Fínna graf<a class="headerlink" href="#finna-graf" title="Permalink to this heading"></a></h3>
 <p>Hægt er að bæta ýmsu við forritsbúinn í kafla <a class="reference internal" href="#einfalt-graf"><span class="std std-numref">9.6.1</span></a>. Byrjum á að afrita hann og endurbætum hann svo:</p>
 <blockquote>
 <div><ul class="simple">
@@ -844,7 +851,7 @@ línustrik sem tengja alla punktana.</p>
 </div></blockquote>
 </section>
 <section id="kosinus-baett-vi">
-<span id="id11"></span><h3><span class="section-number">9.6.3  </span>Kósínus bætt við<a class="headerlink" href="#kosinus-baett-vi" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.6.3  </span>Kósínus bætt við<a class="headerlink" href="#kosinus-baett-vi" title="Permalink to this heading"></a></h3>
 <p>Teiknum í framhaldi <span class="math notranslate nohighlight">\(y = \cos x\)</span> inn á sömu mynd.</p>
 <blockquote>
 <div><dl>
@@ -861,7 +868,7 @@ línustrik sem tengja alla punktana.</p>
 </div></blockquote>
 </section>
 <section id="graf-visisfallsins-exp-x">
-<span id="graf-visisfallsins"></span><h3><span class="section-number">9.6.4  </span>Graf vísisfallsins exp(x)<a class="headerlink" href="#graf-visisfallsins-exp-x" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">9.6.4  </span>Graf vísisfallsins exp(x)<a class="headerlink" href="#graf-visisfallsins-exp-x" title="Permalink to this heading"></a></h3>
 <p>Teiknum nú nýja mynd með <span class="math notranslate nohighlight">\(y = e^x\)</span> á bilinu <span class="math notranslate nohighlight">\([-5, 2]\)</span>.</p>
 <blockquote>
 <div><dl>

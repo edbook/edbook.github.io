@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -192,6 +192,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -225,12 +226,15 @@
 <h1><span class="section-number">11  </span>Reiknað með fylkjum<a class="headerlink" href="#reikna-me-fylkjum" title="Permalink to this heading"></a></h1>
 <p><strong>Línuleg algebra</strong> (<em>linear algebra</em>) er undirgrein stærðfræði sem fjallar meðal annars um vigra og fylki, vigurrúm (<em>vector spaces</em>), línuleg jöfnuhneppi (<em>systems of linear equations</em>) og línuleg föll. Hægt er að beita línulegri algebru bæði fræðilega og tölulega, og þegar það er gert tölulega koma fylkjareikningar oftar en ekki við sögu, og þá er NumPy ómissandi. Oft tengjast reikningarnir því að vigrar og fylki eru notuð til að vinna með talnagögn (<em>data</em>).</p>
 <p>Í nýlegri kennslubók um línulega algebru eru talin upp fjölbreytt
-notkunarsvið hennar, svo sem leikjafræði, skógrækt, tölvugrafík, sneiðmyndatöku,
+notkunarsvið hennar, svo sem leikjafræði, skógrækt, tölvugrafík, sneiðmyndataka,
 dulmálsfræði, erfðafræði, stofnstærðarspár, líkön af heyrn, netleit og andlitskennsl.</p>
 <p>Í <a class="reference internal" href="../kafli12/#daemi-um-hagnytingu-fylkjareikninga"><span class="std std-numref">12. kafla</span></a> verður fjallað um nokkur notkunarsvið fylkjareikninga, en í þessum kafla höldum við okkur að mestu við útskýringar á NumPy vigur- og fylkjaaðgerðum, og hvernig hægt er að leysa jöfnuhneppi með NumPy.</p>
 <section id="grunnreikniagerir">
 <span id="samlagning-fylkja"></span><h2><span class="section-number">11.1  </span>Grunnreikniaðgerðir<a class="headerlink" href="#grunnreikniagerir" title="Permalink to this heading"></a></h2>
-<p>Í grein <a class="reference internal" href="../kafli10/#reikna-me-vigrum"><span class="std std-numref">10.3.1</span></a> var rætt hverning hægt er að leggja saman tvo vigra, draga annan frá hinum og margfalda vigur með tölu. Þessum aðgerðum má líka beita á fylki, og þá verka þær á tilsvarandi stök, eins og fyrir vigrana. Þannig gildir:</p>
+<p>Í grein <a class="reference internal" href="../kafli10/#reikna-me-vigrum-i-staerfraei"><span class="std std-numref">10.3.1</span></a> var rætt hverning hægt er að
+leggja saman tvo vigra, draga annan frá hinum og margfalda vigur með tölu.
+Þessum aðgerðum má líka beita á fylki, og þá verka þær á tilsvarandi stök, eins
+og fyrir vigrana. Þannig gildir:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{pmatrix}1 &amp; 2\\3 &amp; 4\end{pmatrix} +
 \begin{pmatrix}2 &amp; 2\\5 &amp; 5\end{pmatrix} =
@@ -371,7 +375,7 @@ er <span class="math notranslate nohighlight">\(A \cdot A = AA\)</span>, <span c
 <p class="admonition-title">Python: Fylkjamargföldun og -veldi</p>
 <p>Í NumPy má margfalda saman fylki með virkjanum <strong>&#64;</strong> og fallið
 <code class="code docutils literal notranslate"><span class="pre">la.matrix_power</span></code> má nota til að hefja fylki í veldi, t.d.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">A</span> <span class="o">@</span> <span class="n">B</span>
@@ -390,10 +394,10 @@ er <span class="math notranslate nohighlight">\(A \cdot A = AA\)</span>, <span c
 virkjann == því hann verkar stakvíst og gefur auk þess villu ef vigrarnir eða
 fylkin eru misstór. NumPy er með séstakt fall sem er ætlað í svona samanburð,
 <code class="docutils literal notranslate"><span class="pre">np.array_equal</span></code>. Ef</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A = [[2 2]     og   B = [[4 4]
-     [2 2]]              [4 4]]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">2</span> <span class="mi">2</span><span class="p">]</span>     <span class="n">og</span>   <span class="n">B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span> <span class="mi">4</span><span class="p">]</span>
+     <span class="p">[</span><span class="mi">2</span> <span class="mi">2</span><span class="p">]]</span>              <span class="p">[</span><span class="mi">4</span> <span class="mi">4</span><span class="p">]]</span>
 
-þá skilar :code:`np.array_equal(A + A, B)` gildinu ``True``.
+<span class="n">þá</span> <span class="n">skilar</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span> <span class="n">gildinu</span> <span class="kc">True</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -425,7 +429,7 @@ og <span class="math notranslate nohighlight">\(n \times n\)</span> einingafylki
 </div>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing: Hlutleysur</p>
-<p>Búið til fylkið: <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1.2 &amp; 3.4 \\ 5.6 &amp; 7.8
+<p>Notið NumPy til að búa til fylkið: <span class="math notranslate nohighlight">\(A = \begin{pmatrix}1.2 &amp; 3.4 \\ 5.6 &amp; 7.8
 \end{pmatrix}\)</span> <br>
 og auk þess <span class="math notranslate nohighlight">\(2 \times 2\)</span> núllfylki og einingarfylki. Notið fallið
 <code class="docutils literal notranslate"><span class="pre">np.array_equal</span></code> til að sannreyna það sem sagt er um hlutleysur að ofan.</p>
@@ -470,7 +474,7 @@ jöfnur svari til <span class="math notranslate nohighlight">\(Av = b\)</span> �
 <p>Fylkjaframsetning á jöfnuhneppi einfaldar kannski ekki mikið lausn með blaði
 og blýanti en með því að nota fallið <strong>la.solve</strong> verður lausnin beint af
 augum:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">la</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -564,7 +568,7 @@ tökum eftir að fyrir <span class="math notranslate nohighlight">\(i&lt;n-1\)</
 i\text{-ta}&amp;\text{ sæti}\end{split}\]</div>
 <p>og neðsta línan er svo full af ásum. Hægri hlið hneppisins er núll, nema í
 neðsta sætinu, þar stendur <span class="math notranslate nohighlight">\(3n\)</span>. Við fáum því fallið:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">leysa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">leysa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
@@ -599,7 +603,7 @@ tilfellinu <span class="math notranslate nohighlight">\(n = 5\)</span> hér:</p>
 <li><p>Búið til fall <code class="docutils literal notranslate"><span class="pre">lausn(a,n)</span></code> sem leysir jöfnurnar</p>
 <div class="math notranslate nohighlight">
 \[- a\sum_{j=1}^{i-1}x_j + x_i = 1\quad(i=1,...,n)\]</div>
-<p>Prófið með <code class="docutils literal notranslate"><span class="pre">leysa(2,4)</span></code> sem ætti að gefa <span class="math notranslate nohighlight">\((1,3,9,27)\)</span>.</p>
+<p>Prófið með <code class="docutils literal notranslate"><span class="pre">lausn(2,4)</span></code> sem ætti að gefa <span class="math notranslate nohighlight">\((1,3,9,27)\)</span>.</p>
 </li>
 </ol>
 </div>
@@ -632,7 +636,7 @@ notuð í þessum fyrirlestrarnótum.</p>
 <p class="admonition-title">Python:</p>
 <p>Það er fremur flókið að reikna andhverfur og ákveður með blaði og blýanti, en
 talsvert einfaldara með NumPy:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">la</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy.linalg</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">la</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>

@@ -134,7 +134,7 @@
     <link rel="index" title="Atriðaskrá" href="../genindex/" />
     <link rel="search" title="Leit" href="../search/" />
     <link rel="next" title="3 Umhverfi fyrir Python: Jupyter og Colab" href="../kafli03/" />
-    <link rel="prev" title="1 Inngangur: Um Python" href="../kafli01/" />
+    <link rel="prev" title="1 Inngangur: Um Python." href="../kafli01/" />
 
 
 
@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2  Dæmi um Python forrit</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#tafla-yfir-veldi">2.1  Tafla yfir veldi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#collatz-runur">2.2  Collatz-runur</a></li>
@@ -191,6 +191,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -260,16 +261,16 @@ og svo er næsta tala reiknuð aftur og aftur skv.</p>
 <div class="literal-block-wrapper docutils container" id="collatz">
 <div class="code-block-caption"><span class="caption-number">Forrit 2.2 </span><span class="caption-text">Collatz</span><a class="headerlink" href="#collatz" title="Varanlegur hlekkur á þennan kóða"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLLATZ ÆFING</span>
-<span class="k">def</span> <span class="nf">næsta</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;skilar næstu tölu á eftir x í Collatz-runu&#39;&#39;&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">næsta</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># skilar næstu tölu á eftir x í Collatz-runu</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">//</span><span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">f</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">f</span>
 
-<span class="k">def</span> <span class="nf">collatz_runa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;finnur og skrifar út Collatz-runu sem byrjar á n&#39;&#39;&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">collatz_runa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># finnur og skrifar út Collatz-runu sem byrjar á n</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;runa: &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
@@ -290,10 +291,10 @@ og svo er næsta tala reiknuð aftur og aftur skv.</p>
 <li><p>Ný föll má skilgreina með því að byrja á <strong>def</strong> og nöfn þeirra mega hafa
 íslenska stafi (og líka gríska). Á eftir <em>def</em>-línunni er hefð fyrir að setja
 annaðhvort <strong>athugasemd</strong> (<em>comment</em>) sem byrjar á <code class="code docutils literal notranslate"><span class="pre">#</span></code> eða
-<strong>skjölunarstreng</strong> (<em>doc-string</em>) innan þrefaldra gæsalappa,
-sem lýsir því hvað fallið gerir. Nánar tiltekið er ritað:</p>
+<strong>skjölunarstreng</strong> (<em>doc-string</em>) innan þrefaldra gæsalappa, sem lýsir því
+hvað fallið gerir. Nánar tiltekið er ritað:</p>
 <blockquote>
-<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>    <span class="n">eða</span><span class="p">:</span>  <span class="k">def</span> <span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>    <span class="n">eða</span><span class="p">:</span>  <span class="k">def</span><span class="w"> </span><span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>
    <span class="c1"># lýsing-á-hvað-fallið-gerir           &#39;&#39;&#39;lýsing-á-hvað-fallið-gerir&#39;&#39;&#39;</span>
    <span class="n">skilgreining</span><span class="o">-</span><span class="n">falls</span>                     <span class="n">skilgreining</span><span class="o">-</span><span class="n">falls</span>
 </pre></div>
@@ -353,7 +354,7 @@ nota tvöfaldar, t.d. <code class="code docutils literal notranslate"><span clas
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../kafli01/" class="btn btn-neutral float-left" title="1 Inngangur: Um Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../kafli01/" class="btn btn-neutral float-left" title="1 Inngangur: Um Python." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../kafli03/" class="btn btn-neutral float-right" title="3 Umhverfi fyrir Python: Jupyter og Colab" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -578,9 +578,9 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} &amp; b_m
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <blockquote>
-<div><p><strong>1.</strong> <strong>Umskipting</strong> (e. replacement): að skipta út línu <span class="math notranslate nohighlight">\(R_i\)</span> fyrir <span class="math notranslate nohighlight">\(R_i+cR_j\)</span> þar sem <span class="math notranslate nohighlight">\(R_j\)</span> er önnur lína og <span class="math notranslate nohighlight">\(c\)</span> er fasti.</p>
-<p><strong>2.</strong> <strong>Víxlun</strong> (e. interchange): að víxla á línum <span class="math notranslate nohighlight">\(R_i\)</span> og <span class="math notranslate nohighlight">\(R_j\)</span>.</p>
-<p><strong>3.</strong> <strong>Skölun</strong> (e. scaling): að margfalda línu <span class="math notranslate nohighlight">\(R_i\)</span> með fasta <span class="math notranslate nohighlight">\(c\neq 0\)</span></p>
+<div><p><strong>1.</strong> <strong>Víxlun</strong> (e. interchange): að víxla á línum <span class="math notranslate nohighlight">\(R_i\)</span> og <span class="math notranslate nohighlight">\(R_j\)</span>.</p>
+<p><strong>2.</strong> <strong>Skölun</strong> (e. scaling): að margfalda línu <span class="math notranslate nohighlight">\(R_i\)</span> með fasta <span class="math notranslate nohighlight">\(c\neq 0\)</span></p>
+<p><strong>3.</strong> <strong>Umskipting</strong> (e. replacement): að skipta út línu <span class="math notranslate nohighlight">\(R_i\)</span> fyrir <span class="math notranslate nohighlight">\(R_i+cR_j\)</span> þar sem <span class="math notranslate nohighlight">\(R_j\)</span> er önnur lína og <span class="math notranslate nohighlight">\(c\)</span> er fasti.</p>
 </div></blockquote>
 <p>Þessar aðgerðir eru andhverfanlegar og breyta ekki lausnamengi jöfnuhneppisins.</p>
 </div>
@@ -788,7 +788,7 @@ stallagerð og uppfyllir að auki eftirfarandi skilyrði:</p>
 <h3><span class="section-number">1.5.1. </span>Skilgreining: Frjálsar breytur og grunnbreytur<a class="headerlink" href="#skilgreining-frjalsar-breytur-og-grunnbreytur" title="Permalink to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
-<p>Þær breytur línulegs jöfnuhneppis á efri stallagerð sem ekki eru forystubreytur kallast <strong>frjálsar breytur</strong> (e. free variables). Breytur sem ekki eru frjálsar eru kallaðar <strong>grunnbreytur</strong> (e. leading variables).</p>
+<p>Þær breytur línulegs jöfnuhneppis á efri stallagerð sem svara til dálka með forystustuðla kallast <strong>grunnbreytur</strong> (e. leading variables). Breytur sem eru ekki grunnbreytur kallast <strong>frjálsar breytur</strong> (e. free variables).</p>
 </div>
 <section id="synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning">
 <h4><span class="section-number">1.5.1.1. </span>Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning<a class="headerlink" href="#synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning" title="Permalink to this heading"></a></h4>
@@ -812,18 +812,43 @@ x_2 + x_3 + 3 x_4 + x_5 = 4 \\
 0 &amp; 0 &amp; 0 &amp; -2 &amp; 0  &amp; 4
 \end{array}\right].\end{split}\]</div>
 <p>Við sjáum að <span class="math notranslate nohighlight">\(x_1, x_2\)</span> og <span class="math notranslate nohighlight">\(x_4\)</span>
-eru grunnbreytur, en <span class="math notranslate nohighlight">\(x_3\)</span> og <span class="math notranslate nohighlight">\(x_5\)</span> eru frjálsar því þar sitja aldrei forystustuðlar.
+eru grunnbreytur, því þar sitja forystustuðlar. Breyturnar <span class="math notranslate nohighlight">\(x_3\)</span> og <span class="math notranslate nohighlight">\(x_5\)</span> eru frjálsar því þar sitja ekki forystustuðlar.
 Venja er að rita frjálsar breytur með öðrum bókstöfum, t.d. <span class="math notranslate nohighlight">\(s := x_3\)</span> og <span class="math notranslate nohighlight">\(t := x_5\)</span>.</p>
-<p>Neðsta jafnan í aukna fylkinu gefur <span class="math notranslate nohighlight">\(-2 x_4 = 4\)</span>, þ.e. <span class="math notranslate nohighlight">\(x_4 = -2\)</span>. Setjum svo inn í næst neðstu jöfnuna</p>
+<p>Lesum svo út úr jöfnunum neðan frá og upp. Neðsta jafnan í aukna fylkinu gefur <span class="math notranslate nohighlight">\(-2 x_4 = 4\)</span> svo <span class="math notranslate nohighlight">\(x_4 = -2\)</span>.</p>
+<p>Setjum svo inn fyrir <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(x_4\)</span> og <span class="math notranslate nohighlight">\(x_5\)</span> í næst neðstu jöfnuna:</p>
 <div class="math notranslate nohighlight">
-\[x_2= 4 - x_3 - 3 x_4 - x_5 = 10 - s - t.\]</div>
-<p>Með þessum upplýsingum verður efsta jafnan</p>
-<div class="math notranslate nohighlight">
-\[x_1 = - x_2 - x_3 - x_4 - 2 x_5 = -8 -t.\]</div>
-<p>Lausn jöfnuhneppisins á <strong>stikaframsetningu</strong> er því</p>
+\[\begin{split}\begin{align*}
+    x_2 &amp;= 4 - x_3 - 3 x_4 - x_5 \\
+        &amp;= 4 - s - 3(-2) - t \\
+        &amp; 10 - s - t
+\end{align*}\end{split}\]</div>
+</div>
+<p>Setjum að lokum inn fyrir <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(x_4\)</span> og <span class="math notranslate nohighlight">\(x_5\)</span> í efstu jöfnuna:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+      x_1 &amp;= - x_2 - x_3 - x_4 - 2 x_5 \\
+      &amp;= - (10 - s - t) - s - (-2) - 2t \\
+      &amp;= (-10 + s + t) - s + 2 - 2t \\
+      &amp;= -8 - t
+\end{align*}\end{split}\]</div>
+</div></blockquote>
+<p>Við fáum því</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{bmatrix}
-x_2 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
+\begin{bmatrix}
+-8 - t\\
+10-s-t\\
+s\\
+-2\\
+t
+\end{bmatrix}\end{split}\]</div>
+<p>Þetta má skrifa á  <strong>stikaframsetningu</strong> sem</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix}=
 \begin{bmatrix}
 -8 - t\\
 10-s-t\\
@@ -838,7 +863,7 @@ s \begin{bmatrix}
 \end{bmatrix} + t \begin{bmatrix}
 -1 \\ -1 \\ 0 \\ 0 \\ 1 \end{bmatrix}\end{split}\]</div>
 <p>þar sem <span class="math notranslate nohighlight">\(s\)</span> og <span class="math notranslate nohighlight">\(t\)</span> eru hvaða tölur sem er. Við sjáum meir um stikaframsetningu síðar.</p>
-</div>
+</div></blockquote>
 </section>
 </section>
 <section id="setning-tilvist-og-fjoldi-lausna">
@@ -893,7 +918,7 @@ Einnig er hægt að koma fylkinu yfir á rudd efra stallaform og lesa lausnina b
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Línulegt jöfnuhneppi af efra stallaformi má leysa með aftur-á-bak innsetningu með því að byrja á neðstu jöfnu (sem ekki er núlllína)
-og lesa út formúlu fyrir forystubreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram „aftur á bak“ þar til lausn
+og lesa út formúlu fyrir grunnbreytu hennar út frá frjálsu breytunum. Síðan er næsta lína fyrir ofan skoðuð og formúlan fyrir neðstu breytunni notuð. Þannig er haldið áfram „aftur á bak“ þar til lausn
 fæst á jöfnuhneppinu.</p>
 </div>
 </section>

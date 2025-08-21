@@ -379,7 +379,7 @@ miðpunktur fyrir hóp nr. <span class="math notranslate nohighlight">\(i\)</spa
 Markfallið er kallað <em>distortion</em>. Eins og sést hér á eftir skilar fallið
 <cite>kmeans</cite> bara miðpunktum fyrir flokkunargögn og svo þarf að kalla á <cite>vq</cite> til
 að finna hópnúmer hvers og eins. Hér er dæmigerð notkun þessara falla:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.cluster.vq</span> <span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.cluster.vq</span><span class="w"> </span><span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span>
 <span class="n">X</span> <span class="o">=</span> <span class="o">...</span>                  <span class="c1"># búa til gögn / lesa úr skrá</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mi">5</span>                    <span class="c1"># Fjöldi hópa</span>
 <span class="p">(</span><span class="n">cb</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>    <span class="c1"># Skilar cb = codebook (5 línu fylki með miðpunktum)</span>
@@ -404,8 +404,8 @@ fækkum litum í litmynd úr milljónum í 256 eða 16, eða þegar við látum
 hópa, og prentar út og teiknar niðurstöðuna. Miðpunktar eru teiknaðir með
 stjörnum.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># UNDIRBÚNINGUR</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span><span class="o">,</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">npr</span><span class="o">,</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">scipy.cluster.vq</span> <span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">npr</span><span class="o">,</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.cluster.vq</span><span class="w"> </span><span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s1">&#39;fixed&#39;</span><span class="p">,</span> <span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">npr</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">npr</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -505,7 +505,7 @@ með því að deila með staðalfrávikum hvors um sig áður en flokkað er.</
 hvert einkenni (hnit) með því að deila með staðalfráviki þess, svo
 öll einkennin hafi staðalfrávik 1. Þannig mætti byrja forritsbútinn í síðustu
 grein á:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.cluster.vq</span> <span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span><span class="p">,</span> <span class="n">whiten</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.cluster.vq</span><span class="w"> </span><span class="kn">import</span> <span class="n">kmeans</span><span class="p">,</span> <span class="n">vq</span><span class="p">,</span> <span class="n">whiten</span>
 <span class="n">X</span> <span class="o">=</span> <span class="o">...</span>                  <span class="c1"># búa til gögn / lesa úr skrá</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">whiten</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>            <span class="c1"># staðla gögn</span>
 <span class="o">...</span>

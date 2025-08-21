@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -214,6 +214,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -300,7 +301,7 @@ undirnafnið sé falið. Tegund skrárinnar er þá sýnd með öðrum hætti, o
 teikni (<em>icon</em>) og textalýsingu, sbr. <a class="reference internal" href="#finder"><span class="std std-numref">mynd 8.3</span></a>, þar sem tölvan
 hefur reyndar verið stillt á að fela undirnafnið ekki.</p>
 <figure class="align-center" id="id6" style="width: 18cm">
-<span id="finder"></span><img alt="_images/finder.jpg" src="_images/finder.jpg" />
+<span id="finder"></span><img alt="../_images/finder.jpg" src="../_images/finder.jpg" />
 <figcaption>
 <p><span class="caption-number">Mynd 8.3: </span><span class="caption-text">„Finder“ á Makka. Tegundir skráa sýndar með teikni, undirnafni, og textalýsingu</span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa mynd"></a></p>
 </figcaption>
@@ -476,7 +477,7 @@ er hún lesin inn í tvo lista sem svo eru prentaðir út. Listarnir byrja tómi
 og svo lengjast þeir í hverri umferð for-lykkjunnar. Við notum tækifærið og
 sýnum samspil <em>enumerate</em> og <em>zip</em>, sbr. æfingu afast í <a class="reference internal" href="../kafli05/#itrarar"><span class="std std-numref">kafla
 5.6</span></a>.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
 <span class="n">nöfn</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">hæðir</span> <span class="o">=</span> <span class="p">[]</span>
@@ -511,7 +512,7 @@ Notast er við sömu skrá og síðast.</p>
 <p>Nöfnin verða lyklar í uppflettitöflunni sem búin er til og hæðirnar gildi. Að
 loknum innlestri er taflan prentuð. Takið eftir hvernig <code class="docutils literal notranslate"><span class="pre">items</span></code> er notað
 til að renna samhliða í gegn um pör nafna og hæða.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
 <span class="n">tafla</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
@@ -621,7 +622,7 @@ lesa, sbr. eftirfarandi dæmi.</p>
 <p class="admonition-title">Sýnidæmi: CSV-skrá lesin</p>
 <p>Gerum ráð fyrir að skráin í kafla <a class="reference internal" href="#daemi-um-csv-skra"><span class="std std-numref">8.3.1</span></a> sé geymd í
 <code class="docutils literal notranslate"><span class="pre">simaskra.txt</span></code>. Eftirfarandi forrit mundi lesa hana inn og prenta á skjá:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simaskra.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
    <span class="k">for</span> <span class="n">röð</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
@@ -674,8 +675,8 @@ Til að lesa þessa skrá beint af netinu með csv-lesara þarf að fara krókal
 lesa fyrst líkt og gert er í fyrra sýnidæminu í kafla <a class="reference internal" href="#hefbundinn-innlestur-textaskrar-af-diski"><span class="std std-numref">8.2.3</span></a> áður en lesaranum er beitt á strengjalistann
 sem kemur út úr því. Hér er forritsbútur sem útfærir þetta:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://cs.hi.is/python/simaskra.txt&quot;</span>
-<span class="kn">import</span> <span class="nn">csv</span>
-<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()]</span>
 <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -701,7 +702,7 @@ Gull      19.30        1064
 </pre></div>
 </div>
 <p>Eftirfarandi forritsbútur mundi lesa skrána:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;malmar.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span>
    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
    <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>     <span class="c1"># titillína lesin (og henni hent)</span>
@@ -967,7 +968,7 @@ reyndar þannig að það skiptir engu máli hvaða slóð var notuð til að b�
 þá mundi eftirfarandi forritsbútur ítra sig yfir innihald hennar og skrifa út
 <code class="docutils literal notranslate"><span class="pre">Format,</span> <span class="pre">Stats,</span> <span class="pre">Old</span></code>. Að því loknu skrifast <code class="docutils literal notranslate"><span class="pre">True,</span> <span class="pre">Notes</span></code> (aðalnafn
 <em>Notes.txt</em>):</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">mappa</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mappa</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
    <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>

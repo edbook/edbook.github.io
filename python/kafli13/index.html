@@ -170,7 +170,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -184,15 +184,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">13  Slembitölur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#random-einingin">13.1  Random-einingin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#innskot-fjoldi-aukastafa-i-numpy-prentun">13.2  Innskot: Fjöldi aukastafa í NumPy prentun</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#slembitolur-me-numpy">13.3  Slembitölur með NumPy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#upphafsstilling-slembitalna">13.4  Upphafsstilling slembitalna</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#slembiro-og-slembiurtak">13.5  Slembiröð og slembiúrtak</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gervigogn">13.6  Gervigögn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slembitolur-me-numpy">13.2  Slembitölur með NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upphafsstilling-slembitalna">13.3  Upphafsstilling slembitalna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slembiro-og-slembiurtak">13.4  Slembiröð og slembiúrtak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gervigogn-og-ahvarf">13.5  Gervigögn og aðhvarf</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -228,7 +228,7 @@
 <section id="random-einingin">
 <h2><span class="section-number">13.1  </span>Random-einingin<a class="headerlink" href="#random-einingin" title="Permalink to this heading"></a></h2>
 <p>Einfaldasta leiðin til að búa til slembitölur er að nota föll úr einingunni <em>random</em>. Með henni er hægt að búa til bæði jafnt dreifðar og normaldreifðar slembitölur (kommutölur), og einnig slembiheiltölur. Til þess má nota föllin <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">gauss</span></code> og <code class="docutils literal notranslate"><span class="pre">randint</span></code>, svona:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">randint</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">random</span><span class="p">,</span> <span class="n">gauss</span><span class="p">,</span> <span class="n">randint</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="p">()</span>                         <span class="c1"># skilar slembitölu, 0 ≤ x &lt; 1</span>
 <span class="n">k</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>                     <span class="c1"># skilar slembiheiltölu,1 ≤ k ≤ 8</span>
 <span class="n">K</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)]</span> <span class="c1"># skilar 10 slembiheiltölum í {5,6,7}</span>
@@ -243,7 +243,7 @@ stærðfræðingnum merka <a class="reference external" href="https://en.wikiped
 <p>Eftirfarandi forrit hermir eftir því að dregið sé spil úr spilastokk. Fyrst
 er sortin ákvörðuð með því að draga tölu í <span class="math notranslate nohighlight">\(\{0,1,2,3\}\)</span> og svo er
 dregin tala úr <span class="math notranslate nohighlight">\(\{0,1,2,...,12\}\)</span>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 <span class="n">sort</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hjarta&#39;</span><span class="p">,</span> <span class="s1">&#39;spaða&#39;</span><span class="p">,</span> <span class="s1">&#39;tígul&#39;</span><span class="p">,</span> <span class="s1">&#39;laufa&#39;</span><span class="p">]</span>
 <span class="n">nafn</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ás&#39;</span><span class="p">,</span> <span class="s1">&#39;tvistur&#39;</span><span class="p">,</span> <span class="s1">&#39;þristur&#39;</span><span class="p">,</span> <span class="s1">&#39;fjarki&#39;</span><span class="p">,</span> <span class="s1">&#39;fimma&#39;</span><span class="p">,</span> <span class="s1">&#39;sexa&#39;</span><span class="p">,</span>
         <span class="s1">&#39;sjöa&#39;</span><span class="p">,</span> <span class="s1">&#39;átta&#39;</span><span class="p">,</span> <span class="s1">&#39;nía&#39;</span><span class="p">,</span> <span class="s1">&#39;tía&#39;</span><span class="p">,</span> <span class="s1">&#39;gosi&#39;</span><span class="p">,</span> <span class="s1">&#39;drottning&#39;</span><span class="p">,</span> <span class="s1">&#39;kóngur&#39;</span><span class="p">]</span>
@@ -264,7 +264,7 @@ svo forritinu í fall, <code class="docutils literal notranslate"><span class="p
 <ol class="arabic simple">
 <li><p>Búið í framhaldi til forrit sem dregur fimm spil, sem er einmitt fjöldi
 spila í pókerhönd. Athugið að hér er smá svindl í gangi því það verður
-möguleiki á að draga sama spil tvisvar. Í kafla <a class="reference internal" href="#slembiro"><span class="std std-numref">13.5</span></a> verður ráðin bót á
+möguleiki á að draga sama spil tvisvar. Í kafla <a class="reference internal" href="#slembiro"><span class="std std-numref">13.4</span></a> verður ráðin bót á
 því.</p></li>
 <li><p>[Vinnist í samstarfi við kennara.] Búið til fall sem kannar hvort pókerhönd
 hafi tvær tvennur. Skrifið í famhaldi forrit sem finnur líkurnar á
@@ -273,28 +273,8 @@ stórt hlutfall þeirra er hönd með tveim tvennum).</p></li>
 </ol>
 </div>
 </section>
-<section id="innskot-fjoldi-aukastafa-i-numpy-prentun">
-<span id="innskot"></span><h2><span class="section-number">13.2  </span>Innskot: Fjöldi aukastafa í NumPy prentun<a class="headerlink" href="#innskot-fjoldi-aukastafa-i-numpy-prentun" title="Permalink to this heading"></a></h2>
-<p>Til að prenta slembivigra og -fylki er hentugt að geta takmarkað fjölda
-aukastafa. Það er hægt með fallinu <code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code>. Þetta fall hefur
-ýmsa stika en hér látum við duga að segja frá þremur: <code class="docutils literal notranslate"><span class="pre">precision</span> <span class="pre">=</span> <span class="pre">n</span></code> og
-<code class="docutils literal notranslate"><span class="pre">floatmode</span> <span class="pre">=</span> <span class="pre">&quot;fixed&quot;</span></code> gefur alltaf <em>n</em> aukastafi (án floatmode koma ≤ n
-stafir), og <code class="docutils literal notranslate"><span class="pre">suppress</span> <span class="pre">=</span> <span class="pre">True</span></code> þýðir að engar tölur eru prentaðar með
-tugveldistáknun (t.d. -6.33e08 eða 5.22e-12). Til að vigurinn sem kemur við sögu
-í <a class="reference internal" href="../verkefni/#toluleg-diffrun"><span class="std std-numref">verkefni 10</span></a> prentist líkt og þar er sýnt má nota:</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">np.set_printoptions(suppress=True,</span> <span class="pre">floatmode=&quot;fixed&quot;,</span> <span class="pre">precision=3)</span></code></p>
-</div></blockquote>
-<p>Sama snið er alltaf notað fyrir öll stök í vigri eða fylki, og ef vigur er með eitt
-lítið stak hefur það sem sé áhrif á prentun allra stakanna. Hér er dæmi til skýringar:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Lát x = np.array([0.000002, 1.25, 12.345]). Þá prentar print(x) út:
-- með suppress=False: [2.000e-06 1.250e+00 1.235e+01]
-- með suppress=True:  [ 0.000  1.250 12.345]
-</pre></div>
-</div>
-</section>
 <section id="slembitolur-me-numpy">
-<h2><span class="section-number">13.3  </span>Slembitölur með NumPy<a class="headerlink" href="#slembitolur-me-numpy" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.2  </span>Slembitölur með NumPy<a class="headerlink" href="#slembitolur-me-numpy" title="Permalink to this heading"></a></h2>
 <p>Með NumPy er hægt að búa til slembivigra og slembifylki. Nýjustu útgáfur mæla með
 að byrjað sé á að skilgreina:</p>
 <blockquote>
@@ -304,10 +284,9 @@ að byrjað sé á að skilgreina:</p>
 má svo nota föllin <code class="docutils literal notranslate"><span class="pre">rng.random</span></code>, <code class="docutils literal notranslate"><span class="pre">rng.normal</span></code> og <code class="docutils literal notranslate"><span class="pre">rng.integers</span></code> til að búa
 til slembivigra og -fylki, og reyndar er gott að þekkja líka fallið
 <code class="docutils literal notranslate"><span class="pre">rng.uniform</span></code> sem býr til jafnt dreifðar slembitölur á almennu bili <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
-<p>Hér er svo dæmi sem sýnir hvernig þessi NumPy slembiföll eru notuð. Takið eftir
-hvernig þeirri reglu er fylgt að rita <code class="docutils literal notranslate"><span class="pre">size=</span></code> fyrir framan stærðarviðföng en
-ekki önnur.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<p>Til að skoða slembivigra og -fylki er hentugt að takmarka fjölda aukastafa með
+<code class="docutils literal notranslate"><span class="pre">np.set_printoptions</span></code> sbr. kafla <a class="reference internal" href="../kafli10/#stjorn-utprentunar"><span class="std std-numref">10.6.2</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 <span class="n">np</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">suppress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">precision</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">floatmode</span><span class="o">=</span><span class="s2">&quot;fixed&quot;</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>     <span class="c1"># 8 normaldreifðar tölur úr N(5,2)</span>
@@ -328,7 +307,9 @@ ekki önnur.</p>
 [5.230 6.008 6.918 6.901 6.270 5.640 5.465 5.651 6.614 6.931]
 </pre></div>
 </div>
-<p>Normaldreifðu tölurnar hafa meðaltal 5 og staðalfrávik 2. Svo sjáum við að stiki númer 2 í <code class="docutils literal notranslate"><span class="pre">rng.integers</span></code> er einum stærri en stærsta heiltala sem fæst (öfugt við <code class="docutils literal notranslate"><span class="pre">randint</span></code> í kafla <a class="reference internal" href="#random-einingin"><span class="std std-numref">13.1</span></a>).</p>
+<p>Normaldreifðu tölurnar hafa meðaltal 5 og staðalfrávik 2. Svo sjáum við að stiki
+númer 2 í <code class="docutils literal notranslate"><span class="pre">rng.integers</span></code> er einum stærri en stærsta heiltala sem fæst (öfugt
+við <code class="docutils literal notranslate"><span class="pre">randint</span></code> í kafla <a class="reference internal" href="#random-einingin"><span class="std std-numref">13.1</span></a>).</p>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing:</p>
 <p>Afritið sýnidæmið að framan inn í vinnubók og breytið því svo og dragið:</p>
@@ -344,11 +325,11 @@ margfölduð með 2, og í lið 3 er fyrst búið til fylki með tölum í
 </div>
 </section>
 <section id="upphafsstilling-slembitalna">
-<h2><span class="section-number">13.4  </span>Upphafsstilling slembitalna<a class="headerlink" href="#upphafsstilling-slembitalna" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.3  </span>Upphafsstilling slembitalna<a class="headerlink" href="#upphafsstilling-slembitalna" title="Permalink to this heading"></a></h2>
 <p>Það getur komið sér vel að geta stillt slembitölugjafa þannig að það fáist
 alltaf sama runa af slembitölum þegar forrit er keyrt aftur og aftur. Í
 <strong>random</strong>-einingunni er það gert með fallinu <em>seed</em>, t.d. svona:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
 <span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -368,7 +349,7 @@ sleppa frumstillingunni</p>
 </div>
 </section>
 <section id="slembiro-og-slembiurtak">
-<span id="slembiro"></span><h2><span class="section-number">13.5  </span>Slembiröð og slembiúrtak<a class="headerlink" href="#slembiro-og-slembiurtak" title="Permalink to this heading"></a></h2>
+<span id="slembiro"></span><h2><span class="section-number">13.4  </span>Slembiröð og slembiúrtak<a class="headerlink" href="#slembiro-og-slembiurtak" title="Permalink to this heading"></a></h2>
 <p>Í æfingunni „Pókerhendur“ í kafla <a class="reference internal" href="#random-einingin"><span class="std std-numref">13.1</span></a> og framhaldi hennar
 í <a class="reference internal" href="../verkefni/#poker"><span class="std std-numref">verkefni 35</span></a> sáum við gagnsemi þess að geta valið af handahófi
 úr einhverju safni nokkur stök samtímis. Það er hægt með fallinu <code class="docutils literal notranslate"><span class="pre">sample</span></code> í
@@ -379,8 +360,8 @@ stokkuð (<em>shuffled</em>). Þriðja aðgerðin sem stundum þarf er að skila
 <span class="math notranslate nohighlight">\(0\)</span> til <span class="math notranslate nohighlight">\(n-1\)</span> í handahófsröð. Í NumPy er sérstakt fall til þess,
 <code class="docutils literal notranslate"><span class="pre">permutation</span></code>, en með random þarf að nota <code class="docutils literal notranslate"><span class="pre">sample</span></code>. Hér er yfirlit yfir
 þessi föll miðað við að L sé listi og x sé vigur:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">NumPy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sample</span><span class="p">,</span> <span class="n">shuffle</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">sample</span><span class="p">,</span> <span class="n">shuffle</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
 
 <span class="n">H</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>       <span class="c1"># H verður listi með n stökum völdum af handahófi úr L</span>
@@ -410,21 +391,22 @@ töflunni) og yfirgrip til að raða spurningunum í handahófsröð og svörunu
 </ol>
 </div>
 </section>
-<section id="gervigogn">
-<h2><span class="section-number">13.6  </span>Gervigögn<a class="headerlink" href="#gervigogn" title="Permalink to this heading"></a></h2>
-<p>Eins og sagt var fremst í þessum <a class="reference internal" href="#slembitolur"><span class="std std-numref">13</span></a>. kafla er ein af
+<section id="gervigogn-og-ahvarf">
+<h2><span class="section-number">13.5  </span>Gervigögn og aðhvarf<a class="headerlink" href="#gervigogn-og-ahvarf" title="Permalink to this heading"></a></h2>
+<p>Eins og sagt var fremst í þessum <a class="reference internal" href="#slembitolur"><span class="std std-numref">13. kafla</span></a> er ein af
 hagnýtingum slembitalna sú að búa til gervigögn. Við sáum dæmi um það þegar búin
-voru til súlurit af normaldreifðum gögnum í <a class="reference internal" href="../kafli09/#teikning-me-matplotlib"><span class="std std-numref">9</span></a>.
-kafla. Hér verður skoðað hvernig hægt er að búa til gervigögn til að útskýra
+voru til súlurit af normaldreifðum gögnum í <a class="reference internal" href="../kafli09/#teikning-me-matplotlib"><span class="std std-numref">9. kafla</span></a>.
+Hér verður skoðað hvernig hægt er að búa til gervigögn til að útskýra
 jöfnur bestu línu og bestu parabólu, sem unnið er með í <a class="reference internal" href="../verkefni/#jafna-bestu-linu"><span class="std std-numref">verkefni
 25</span></a>, og auk þess jöfnu besta plans. Lesendur ættu að byrja á
 að skoða <a class="reference internal" href="../verkefni/#jafna-bestu-linu"><span class="std std-numref">verkefni 25</span></a></p>
 <p class="rubric">Besta parabóla</p>
-<p>Eftirfarandi forritsbútur býr til 100 punkta gervigögn sem mætti lýsa með parabólu sem
-hefur hágildi nálægt x = 10. Þau eru búin til með því að byrja með nákvæm gildi
-parabólunnar <span class="math notranslate nohighlight">\(y = 100 - (x - 10)^2\)</span> í x-gildum sem valin eru af handahófi á bilinu
-<span class="math notranslate nohighlight">\([2,18]\)</span>, en svo er bætt við þau normaldreifðri slembiviðbót með meðaltal
-0 og staðalfrávik 10, <span class="math notranslate nohighlight">\(\Delta \sim N(0,10)\)</span>.</p>
+<p>Eftirfarandi forritsbútur býr til 100 punkta gervigögn sem mætti lýsa með
+parabólu sem hefur hágildi nálægt x = 10. Þau eru búin til með því að byrja með
+nákvæm gildi parabólunnar <span class="math notranslate nohighlight">\(y = 100 - (x - 10)^2\)</span> í x-gildum sem valin eru
+af handahófi á bilinu <span class="math notranslate nohighlight">\([2,18]\)</span>, en svo er bætt við þau normaldreifðri
+slembiviðbót <span class="math notranslate nohighlight">\(\Delta\)</span> með meðaltal 0 og staðalfrávik 10 (sem rita má
+<span class="math notranslate nohighlight">\(\Delta \sim N(0,10)\)</span>).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
 <span class="n">yp</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -435,10 +417,10 @@ parabólunnar <span class="math notranslate nohighlight">\(y = 100 - (x - 10)^2\
 <p>Hér er svo forrit til að ákvarða bestu parabólu og teikna hana ásamt punktunum.
 Import- og teiknistillingarskipunum hefur verið sleppt. Myndin sem teiknast
 fylgir í kjölfarið. Dæmið sýnir hvernig hægt er að fá tvær hlutmyndir hlið við
-hlið, en á það var lauslega minnst í <a class="reference internal" href="../verkefni/#korfuboltamenn"><span class="std std-numref">verkefni 27</span></a>.
+hlið, en á það er líka minnst í <a class="reference internal" href="../verkefni/#korfuboltamenn"><span class="std std-numref">verkefni 27</span></a>.
 Hágildispunkturinn sem prentaður er út fæst auðveldlega með því að diffra jöfnu
 parabólunnar og setja sama sem núll.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plottapunkta</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plottapunkta</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">)</span>
   <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">18</span><span class="p">)</span>
@@ -502,7 +484,9 @@ bilinu <span class="math notranslate nohighlight">\([0,4]\)</span>, finnið 3. s
 er hæð yfir sjó. Hér er forritsbútur til að smíða og teikna svona gögn. Aftur
 sleppum við ýmsum stillingar- og merkingarskipunum, en höfum samt með <code class="docutils literal notranslate"><span class="pre">clim</span></code>
 sem ekki hefur sést áður og stillir efri og neðri mörk á litaskalanum:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aldur</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">aldur</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">hys</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">eps</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">hæð</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">aldur</span> <span class="o">-</span> <span class="mf">0.01</span><span class="o">*</span><span class="n">hys</span> <span class="o">+</span> <span class="n">eps</span>
@@ -521,7 +505,7 @@ sem ekki hefur sést áður og stillir efri og neðri mörk á litaskalanum:</p>
 \[h = a + bx + cy.\]</div>
 <p>Til að finna besta plan af þessu tagi í skilningi minnstu kvaðrata dugar ekki
 polyfit heldur þarf annan pakka sem nefnist <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code>, eins og hér er sýnt:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">aldur</span><span class="p">,</span> <span class="n">hys</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">hæð</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>  <span class="c1"># OLS = ordinary least squares</span>
@@ -529,15 +513,23 @@ polyfit heldur þarf annan pakka sem nefnist <code class="docutils literal notra
 <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">params</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a=</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, b=</span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, c=</span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="c1"># prentar út: a=0.579, b=0.986, c=-0.0096</span>
+<span class="c1"># prentar út: a=0.232, b=0.1.020, c=-0.0101</span>
 </pre></div>
+</div>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd</p>
+<p>Ég fékk villumeldingu á <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">statsmodels.api</span></code> og þurfti að fara á
+skipanalínu og skrifa þar <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">statsmodels</span></code> (sbr. kafla
+<a class="reference internal" href="../kafli03/#uppsetning-jupyterlab-a-eigin-tolvu"><span class="std std-numref">3.2</span></a> – reyndar bætti ég statsmodels
+við upptalninguna í <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> þar þegar ég lenti í þessu).</p>
 </div>
 <div class="aefing admonition">
 <p class="admonition-title">Æfing: Hæð körfuboltamanna</p>
 <p>Búið til línulegt líkan (besta plan) sem lýsir hæð körfuboltamanna í skránni
-<a class="reference external" href="https://cs.hi.is/python/karfa.txt">https://cs.hi.is/python/karfa.txt</a> sem fall af aldri og þyngd (skráin er með þrjá
-talnadálka með aldri, hæð og þyngd, og án hauslínu, og hana má lesa með
-<code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code>). Prentið niðurstöðu með eftirfarandi sniði:</p>
+<a class="reference external" href="https://cs.hi.is/python/karfa.txt">https://cs.hi.is/python/karfa.txt</a> sem
+fall af aldri og þyngd (skráin er með þrjá talnadálka með aldri, hæð og
+þyngd, og án hauslínu, og hana má lesa með <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code>). Prentið
+niðurstöðu með eftirfarandi sniði:</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">Módelið</span> <span class="pre">er:</span> <span class="pre">hæð</span> <span class="pre">=</span> <span class="pre">160.x</span> <span class="pre">–</span> <span class="pre">x.xx*aldur</span> <span class="pre">+</span> <span class="pre">x.xx*þyngd</span></code></p>
 </div></blockquote>

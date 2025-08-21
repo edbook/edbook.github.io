@@ -132,7 +132,7 @@
 
     <link rel="index" title="Atriðaskrá" href="../genindex/" />
     <link rel="search" title="Leit" href="../search/" />
-    <link rel="next" title="V E R K E F N I" href="../verkefnafyrirsogn/" />
+    <link rel="next" title="16 Hlutbundin forritun" href="../kafli16/" />
     <link rel="prev" title="14 Millikafli: Um reiknifræði og gagnavísindi" href="../kafli14/" />
 
 
@@ -169,7 +169,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -193,6 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#punktrithattur">15.7  Punktritháttur</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
@@ -257,7 +258,7 @@ listabókstafur). Smellið gjarna á þessa skrá og skoðið hana í Excel.</p>
 <p>Hér er svo forritsbútur sem les skrána, og birtir hana, reiknar heildarfjölda
 atkvæða, bætir við dálki með hlutfalli atkvæðanna sem hver flokkur fékk, og
 birtir loks þessa auknu töflu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/python/kosningar.xlsx&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Atkvæði&quot;</span><span class="p">])</span>
@@ -474,7 +475,7 @@ verið <code class="docutils literal notranslate"><span class="pre">&quot;{:.2%}
 <td><p>Skila töflu yfir meðaltöl, staðalfrávik o.fl.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">=</span> <span class="pre">df1.join(df2)</span></code></p></td>
-<td><p>Sameina <code class="docutils literal notranslate"><span class="pre">df1</span></code> og <code class="docutils literal notranslate"><span class="pre">df1</span></code> með
+<td><p>Sameina <code class="docutils literal notranslate"><span class="pre">df1</span></code> og <code class="docutils literal notranslate"><span class="pre">df2</span></code> með
 <a class="reference external" href="https://en.wikipedia.org/wiki/Relational_algebra#Joins_and_join-like_operators">join</a>-virkja
 útfrá <br> línuauðkennum (<em>indexum</em>)</p></td>
 </tr>
@@ -587,7 +588,7 @@ val og getur líka notað punkt. Eftirfarandi er löglegt Javascript forrit:</p>
 <p>Það sama á svo við um Pandas: Það er hægt að nota punkt til að vísa í dálka í
 Pandas gagnatöflum. Þetta er nefnt <em>punktritháttur</em> (<em>dot notation</em>). Þannig
 mætti hafa sýnidæmið í kafla <a class="reference internal" href="#pandas-gogn"><span class="std std-numref">15.1</span></a> svona:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/python/kosningar.xlsx&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="p">)</span>
@@ -619,7 +620,7 @@ miðað við hornklofana og er auðveldari að lesa. Hér er ágæt <a class="re
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../kafli14/" class="btn btn-neutral float-left" title="14 Millikafli: Um reiknifræði og gagnavísindi" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../verkefnafyrirsogn/" class="btn btn-neutral float-right" title="V E R K E F N I" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../kafli16/" class="btn btn-neutral float-right" title="16 Hlutbundin forritun" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

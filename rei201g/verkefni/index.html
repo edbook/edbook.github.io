@@ -239,6 +239,9 @@
 <p>Fallið hefur einn útgildispunkt sem ákvarða skal (með blaði og blýanti). Er
 hann lággildi eða hágildi? (rökstyðjið)</p>
 </li>
+<li><p>Fallið <span class="math notranslate nohighlight">\(f(x,y) = 6x^2 - 2x^3 + 3y^2 + 6xy\)</span> hefur tvo punkta þar sem
+stigullinn er núll. Ákvarðið þessa punkta og beitið í framhaldi reglunni um
+Hesse-fylki og útgildi til að flokka þá.</p></li>
 </ol>
 </section>
 <section id="vv3-fall-rosenbrocks">
@@ -353,10 +356,6 @@ sem finnur hann og notið það til að reikna <span class="math notranslate noh
 stefnuafleiðu <span class="math notranslate nohighlight">\(f\)</span> í stefnu <span class="math notranslate nohighlight">\(u\)</span> í punktinum <span class="math notranslate nohighlight">\(p\)</span>. Búið líka
 til einhvern punkt og vigur úr afmælisdegi ykkar og reiknið tilsvarandi
 stefnuafleiðu.</p></li>
-<li><p>Lát <span class="math notranslate nohighlight">\(u = (-1,-1)\)</span>. Notið Python-fallið úr a-lið líka til að reikna
-stefnuafleiðu <span class="math notranslate nohighlight">\(f\)</span> í stefnu <span class="math notranslate nohighlight">\(u\)</span> í punktinum <span class="math notranslate nohighlight">\(p\)</span>. Búið líka
-til einhvern punkt og vigur úr afmælisdegi ykkar og reiknið tilsvarandi
-stefnuafleiðu.</p></li>
 <li><p>Teiknið að lokum hæðarlínur <span class="math notranslate nohighlight">\(f\)</span> á svæðinu <span class="math notranslate nohighlight">\([0,3] \times [0,2]\)</span>.</p></li>
 </ol>
 <p class="rubric">B. Er punktur í plani?</p>
@@ -400,14 +399,6 @@ endilega öll.</p></li>
 <li><p>Lát <span class="math notranslate nohighlight">\(f\colon\Bbb R^2\to\Bbb R\)</span>. Gerið grein fyrir muninum á almennu
 hlutafleiðunni <span class="math notranslate nohighlight">\(\dfrac{\partial f}{\partial x}\)</span> og hlutafleiðunni í
 tilteknum punkti, <span class="math notranslate nohighlight">\(\dfrac{\partial f(a,b)}{\partial x}\)</span></p></li>
-<li><p>Hver eftirfarandi falla <span class="math notranslate nohighlight">\(f\colon\Bbb R^4\to\Bbb R\)</span> eru línuleg? (Það
-þarf ekki að rökstyðja svörin, bara svara rétt).</p>
-<p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\(f(x) = x\cdot x\)</span> <br>
-<span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\(f(x) = (3,4,5)\cdot x\)</span> <br>
-<span class="math notranslate nohighlight">\(c)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{staðalfrávik }x\)</span> <br>
-<span class="math notranslate nohighlight">\(d)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{minnsta stak }x\)</span> <br>
-<span class="math notranslate nohighlight">\(e)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{aftasta stak }x\)</span> <br> <br></p>
-</li>
 <li><p>Greindar hafa verið 3 Íslendingasögur með orðtíðni. Hornin á milli þeirra eru
 sýnd í eftirfarandi töflu:</p>
 <table class="docutils align-default">
@@ -439,6 +430,14 @@ sýnd í eftirfarandi töflu:</p>
 <p>Talið er að Snorri Sturluson hafi skrifað tvær af sögunum. Hvaða sögur er
 líklegast að það hafi verið miðað við þessar upplýsingar? Rökstyðjið örstutt.</p>
 </li>
+<li><p>Hver eftirfarandi falla <span class="math notranslate nohighlight">\(f\colon\Bbb R^4\to\Bbb R\)</span> eru línuleg? (Það
+þarf ekki að rökstyðja svörin, bara svara rétt).</p>
+<p><span class="math notranslate nohighlight">\(a)\)</span> <span class="math notranslate nohighlight">\(f(x) = x\cdot x\)</span> <br>
+<span class="math notranslate nohighlight">\(b)\)</span> <span class="math notranslate nohighlight">\(f(x) = (3,4,5)\cdot x\)</span> <br>
+<span class="math notranslate nohighlight">\(c)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{staðalfrávik }x\)</span> <br>
+<span class="math notranslate nohighlight">\(d)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{minnsta stak }x\)</span> <br>
+<span class="math notranslate nohighlight">\(e)\)</span> <span class="math notranslate nohighlight">\(f(x) = \text{aftasta stak }x\)</span> <br> <br></p>
+</li>
 <li><p>Sýnið dæmi um tvo vigra í <span class="math notranslate nohighlight">\(\Bbb R^3\)</span> sem mynda grunn og annað dæmi um
 tvo vigra sem mynda ekki grunn.</p></li>
 <li><p>Lýsið (eða nefnið) tvær aðferðir sem nota má til að finna útgildi falls, aðra
@@ -451,12 +450,12 @@ mætti nota til að kanna þetta skilyrði?</p></li>
 <section id="vv7-lagmorkun-rosenbrock-fallsins">
 <h2>VV7. Lágmörkun Rosenbrock-fallsins<a class="headerlink" href="#vv7-lagmorkun-rosenbrock-fallsins" title="Permalink to this heading"></a></h2>
 <p>Fall Rosenbrocks var kynnt í æfingu í kafla <a class="reference internal" href="../vidauki-A/#teikning-stigla"><span class="std std-ref">A3</span></a> og verkefni VV3. Algengt er að nota þetta fall til að prófa aðferðir í tölulegri bestun. Hér er forrit með hluta af lausn á VV3, sem skilgreinir fallið og teiknar hæðarlínur þess:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rosen</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rosen</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
   <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
   <span class="k">return</span> <span class="n">res</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">400</span><span class="p">)</span>
@@ -550,7 +549,7 @@ meðhöndlun. Ef <code class="docutils literal notranslate"><span class="pre">df
 eru í skránni þá dugar eftirfarandi skipanir til að búa til Pandas runu með
 degi og broti úr degi frá miðnætti 24. febrúar fyrir hverja tímasetningu:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tími</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tími</span><span class="p">)</span>
-<span class="n">dagur1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;24.02.2021&#39;</span><span class="p">)</span>
+<span class="n">dagur1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;24.02.2021&#39;</span><span class="p">,</span> <span class="n">dayfirst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">dagur</span> <span class="o">=</span> <span class="p">(</span><span class="n">tími</span> <span class="o">-</span> <span class="n">dagur1</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">24</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -567,10 +566,10 @@ til greina að breyta staðsetningunum fyrst í (x,y) hnit sbr. lið 3 áður en
 línurit af staðsetningum eru gerð.</p>
 <p>Það er hægt að teikna rununa <code class="docutils literal notranslate"><span class="pre">dagur</span></code> á x-ás en svo er líka hægt að teikna
 <code class="docutils literal notranslate"><span class="pre">tími</span></code> beint með eftirfarandi falli sem merkir inn réttar dagsetningar:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">daga_xás</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">daga_xás</span><span class="p">():</span>
   <span class="c1"># Undirbýr teikningu tímasetninga á x-ás. Hentar fyrir tímabil frá</span>
   <span class="c1"># nokkrum dögum og upp í nokkrar vikur.</span>
-  <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+  <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
   <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">HourLocator</span><span class="p">(</span><span class="n">byhour</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
   <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">dates</span><span class="o">.</span><span class="n">HourLocator</span><span class="p">(</span><span class="n">byhour</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">]))</span>
@@ -596,7 +595,7 @@ með skipuninni:</p>
 <p>Eftir það er hægt að keyra eftirfarandi skipanir sem búa til fall <cite>hnatt2xy</cite>
 sem nota má með <cite>(x,y) = hnatt2xy(breidd,lengd)</cite> til að breyta úr lengd og
 breidd yfir í landshnit. Viðföngin og skilabreyturnar mega vera NumPy-vigrar.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyproj</span> <span class="kn">import</span> <span class="n">Transformer</span> <span class="k">as</span> <span class="n">Trans</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyproj</span><span class="w"> </span><span class="kn">import</span> <span class="n">Transformer</span> <span class="k">as</span> <span class="n">Trans</span>
 <span class="n">hnatt2xy</span> <span class="o">=</span> <span class="n">Trans</span><span class="o">.</span><span class="n">from_crs</span><span class="p">(</span><span class="s1">&#39;latlon&#39;</span><span class="p">,</span><span class="mi">3057</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span>
 </pre></div>
 </div>
@@ -632,30 +631,33 @@ jafnvel lit. Enn ein hugmynd er að sýna stærstu skjálftana með stjörnu.</p
 <p>Skrifið að lokum nokkur orð um það sem kortið segir ykkur, t.d. með vísun
 til örnefna (þið gætuð jafnvel skoðað önnur kort með fleiri örnefnum)</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1">#KORTFÖLL</span>
-<span class="k">def</span> <span class="nf">lesa_qgis_kort</span><span class="p">(</span><span class="n">skrá</span><span class="p">):</span>
-  <span class="c1"># Les kort úr skrá.png og skrá.pgw og skilar pari (kort,mörk) með þrívíðu</span>
-  <span class="c1"># NumPy-fylki með kortinu ásamt fjögurra staka vigur með hnitum í kílómetrum</span>
-  <span class="c1"># á vestur-, austur-, suður- og norðurbrúnum kortsins, mörk = [xv,xa,ys,yn].</span>
-  <span class="n">kort</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">skrá</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span><span class="p">))</span> <span class="c1"># svo kortið sé ekki á hvolfi</span>
-  <span class="n">world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span> <span class="o">+</span> <span class="s2">&quot;.pgw&quot;</span><span class="p">)</span>
-  <span class="p">(</span><span class="n">hæð</span><span class="p">,</span><span class="n">breidd</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">kort</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-  <span class="n">skali</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># metrar á díl (pixel) í png-skránni</span>
-  <span class="n">xv</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-  <span class="n">xa</span> <span class="o">=</span> <span class="n">xv</span> <span class="o">+</span> <span class="n">skali</span><span class="o">*</span><span class="n">breidd</span>
-  <span class="n">yn</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-  <span class="n">ys</span> <span class="o">=</span> <span class="n">yn</span> <span class="o">-</span> <span class="n">skali</span><span class="o">*</span><span class="n">hæð</span>
-  <span class="n">mörk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xv</span><span class="p">,</span><span class="n">xa</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">yn</span><span class="p">])</span><span class="o">/</span><span class="mi">1000</span>  <span class="c1"># breytt í km</span>
-  <span class="k">return</span> <span class="p">(</span><span class="n">kort</span><span class="p">,</span><span class="n">mörk</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lesa_qgis_kort</span><span class="p">(</span><span class="n">skrá</span><span class="p">):</span>
+    <span class="c1"># Les kort úr skrá.png og skrá.pgw og skilar pari (kort,mörk) með þrívíðu</span>
+    <span class="c1"># NumPy-fylki með kortinu ásamt fjögurra staka vigur með hnitum í kílómetrum</span>
+    <span class="c1"># á vestur-, austur-, suður- og norðurbrúnum kortsins, mörk = [xv,xa,ys,yn].</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
+    <span class="n">kort</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="n">skrá</span> <span class="o">+</span> <span class="s2">&quot;.png&quot;</span><span class="p">))</span>
+    <span class="n">kort</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">kort</span><span class="p">)</span>  <span class="c1"># svo kort sé ekki á hvolfi</span>
+    <span class="n">world</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span> <span class="o">+</span> <span class="s2">&quot;.pgw&quot;</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">hæð</span><span class="p">,</span><span class="n">breidd</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">kort</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">skali</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># metrar á díl (pixel) í png-skránni</span>
+    <span class="n">xv</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">xa</span> <span class="o">=</span> <span class="n">xv</span> <span class="o">+</span> <span class="n">skali</span><span class="o">*</span><span class="n">breidd</span>
+    <span class="n">yn</span> <span class="o">=</span> <span class="n">world</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+    <span class="n">ys</span> <span class="o">=</span> <span class="n">yn</span> <span class="o">-</span> <span class="n">skali</span><span class="o">*</span><span class="n">hæð</span>
+    <span class="n">mörk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xv</span><span class="p">,</span><span class="n">xa</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">yn</span><span class="p">])</span><span class="o">/</span><span class="mi">1000</span>  <span class="c1"># breytt í km</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">kort</span><span class="p">,</span><span class="n">mörk</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">sýna_kort</span><span class="p">(</span><span class="n">kort</span><span class="p">,</span> <span class="n">mörk</span><span class="p">,</span> <span class="n">gluggabreidd</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
-  <span class="c1"># Birtir kort í Matplotlib glugga og setur mörk ása til samræmis við mörk</span>
-  <span class="c1"># kortsins; gluggabreidd og dpi eru notuð til að búa gluggann til með</span>
-  <span class="c1"># plt.figure kalli, sem gefur glugganum tilgreinda breidd (í tommum) og hæð</span>
-  <span class="c1"># sem ákvarðast hlutfallslega eftir lögun kortsins</span>
-  <span class="p">(</span><span class="n">hæð</span><span class="p">,</span> <span class="n">breidd</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">kort</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">gluggabreidd</span><span class="p">,</span> <span class="n">gluggabreidd</span><span class="o">*</span><span class="n">hæð</span><span class="o">/</span><span class="n">breidd</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">mörk</span><span class="p">)</span>
-  <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">kort</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">())</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">sýna_kort</span><span class="p">(</span><span class="n">kort</span><span class="p">,</span> <span class="n">mörk</span><span class="p">,</span> <span class="n">gluggabreidd</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># Birtir kort í Matplotlib glugga og setur mörk ása til samræmis við mörk</span>
+    <span class="c1"># kortsins; gluggabreidd og dpi eru notuð til að búa gluggann til með</span>
+    <span class="c1"># plt.figure kalli, sem gefur glugganum tilgreinda breidd (í tommum) og hæð</span>
+    <span class="c1"># sem ákvarðast hlutfallslega eftir lögun kortsins</span>
+    <span class="p">(</span><span class="n">hæð</span><span class="p">,</span> <span class="n">breidd</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">kort</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="n">gluggabreidd</span><span class="p">,</span> <span class="n">gluggabreidd</span><span class="o">*</span><span class="n">hæð</span><span class="o">/</span><span class="n">breidd</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="n">mörk</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">kort</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">())</span>
 </pre></div>
 </div>
 </li>

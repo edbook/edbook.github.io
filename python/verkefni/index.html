@@ -169,7 +169,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
@@ -184,6 +184,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli16/">16  Hlutbundin forritun</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a><ul class="current">
@@ -217,7 +218,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#kinverskt-jofnuhneppi">28  Kínverskt jöfnuhneppi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#fjarlaeg-milli-borga">29  Fjarlægð milli borga</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aefing-i-tolvugrafik">30  Æfing í tölvugrafík</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#grannafylki-og-legufylki">31  Grannafylki og legufylki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flaeinet">31  Flæðinet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leslie-fylki-fyrir-fjogur-ar">32  Leslie-fylki fyrir fjögur ár</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#leslie-fylki-og-grof">33  Leslie-fylki og gröf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mannfjoldaspa-fyrir-island">34  Mannfjöldaspá fyrir Ísland</a></li>
@@ -227,6 +228,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#daemi-af-profi-i-tolvunarfraei-1a-2020">38  Dæmi af prófi í Tölvunarfræði 1a 2020</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nalgun-vi-pi">39  Nálgun við pí</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pandas-aefing">40  Pandas æfing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dyraklasi">41  Dýraklasi</a></li>
 </ul>
 </li>
 </ul>
@@ -494,7 +496,7 @@ niðurstöðu þessarar prófunar.</p></li>
 <div class="math notranslate nohighlight">
 \[\begin{split}m &amp;= \frac{1}{n}\sum_{i=0}^{n-1}{x[i]}\\
 s &amp;= \sqrt{\frac{1}{n-1}\sum_{i=0}^{n-1}(x[i] - m)^2}\end{split}\]</div>
-<p>Prófið með <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[3,7,7,1]</span></code> (á að skila <code class="docutils literal notranslate"><span class="pre">[4.5,</span> <span class="pre">3.0]</span></code>) og líka með lista <code class="docutils literal notranslate"><span class="pre">[d,m,á]</span></code> búnum til úr fæðingardegi..</p>
+<p>Prófið með <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[3,7,7,1]</span></code> (á að skila <code class="docutils literal notranslate"><span class="pre">[4.5,</span> <span class="pre">3.0]</span></code>) og líka með lista <code class="docutils literal notranslate"><span class="pre">[d,m,á]</span></code> búnum til úr fæðingardegi.</p>
 </section>
 <section id="boluroun">
 <h1><span class="section-number">7  </span>Bóluröðun<a class="headerlink" href="#boluroun" title="Permalink to this heading"></a></h1>
@@ -601,6 +603,9 @@ að ef <code class="docutils literal notranslate"><span class="pre">g</span></co
 <p>og prófið <code class="docutils literal notranslate"><span class="pre">snúavið2</span></code>.</p>
 </li>
 </ol>
+<figure class="align-right" style="width: 10cm">
+<img alt="../_images/shell-sort.jpg" src="../_images/shell-sort.jpg" />
+</figure>
 </section>
 <section id="shell-roun">
 <h1><span class="section-number">12  </span>Shell-röðun<a class="headerlink" href="#shell-roun" title="Permalink to this heading"></a></h1>
@@ -653,7 +658,7 @@ tíu þúsundasta hvert orð og öll orð sem eru lengri en 30 stafir.</p>
 <div class="athugid admonition">
 <p class="admonition-title">Athugasemd</p>
 <p>Í stað þess að nota <em>urllib</em> mætti lesa skrána inn með NumPy eins og fjallað
-er um í kafla <a class="reference internal" href="../kafli10/#innlestur-skraa-me-textadalkum"><span class="std std-numref">10.6.3</span></a>. Þá er notað
+er um í kafla <a class="reference internal" href="../kafli10/#innlestur-skraa-me-textadalkum"><span class="std std-numref">10.7.2</span></a>. Þá er notað
 <code class="docutils literal notranslate"><span class="pre">dtype=str</span></code> í sjálfum innlestrinum, og síðan má nota <em>tolist</em>-aðferðina til
 að breyta innlesnum vigri í venjulegan lista af strengjum.</p>
 </div>
@@ -695,7 +700,10 @@ uppflettingu á <em>i</em>-ta sæti.</p>
 <section id="fjoldi-stafa-i-skrafli">
 <h1><span class="section-number">14  </span>Fjöldi stafa í skrafli<a class="headerlink" href="#fjoldi-stafa-i-skrafli" title="Permalink to this heading"></a></h1>
 <ol class="arabic">
-<li><p>Í þessu verkefni á að búa til töflu yfir hlutfallslega tíðni hvers stafs í
+<li><figure class="align-right">
+<a class="reference internal image-reference" href="../_images/skrafl.jpg"><img alt="../_images/skrafl.jpg" src="../_images/skrafl.jpg" style="width: 10cm;" /></a>
+</figure>
+<p>Í þessu verkefni á að búa til töflu yfir hlutfallslega tíðni hvers stafs í
 skránni <code class="docutils literal notranslate"><span class="pre">ord.txt</span></code> úr <a class="reference internal" href="#skra-me-islenskum-orum"><span class="std std-numref">verkefni 13</span></a>, og
 jafnframt hvað sú tíðni samsvarar mörgum heilum stöfum af 98, sem er
 heildarfjöldi stafa í pokanum sem notaður er í borðspilinu skrafli
@@ -789,7 +797,7 @@ með hér til að losna við línuskiptatákn). Notið þetta trix til að lesa
 nafnaskrána inn í uppflettitöflu <code class="docutils literal notranslate"><span class="pre">nafn_tafla</span></code> sem nota má til að fletta upp
 á nafni útfrá prófnúmeri. Prófið með sama hætti og fyrr.</p>
 </li>
-<li><p><strong>Úskrift lista.</strong> Skrifið forrit sem rennir í gegn um prófnúmerin í
+<li><p><strong>Útskrift lista.</strong> Skrifið forrit sem rennir í gegn um prófnúmerin í
 <code class="docutils literal notranslate"><span class="pre">eink_tafla</span></code>, flettir upp nafni hvers nemanda í <code class="docutils literal notranslate"><span class="pre">nafn_tafla</span></code>, og skrifar
 allt þrennt: prófnúmer, einkunn, og nafn í snyrtilegri töflu með fyrirsögnum
 og dálkum sem standast á.</p></li>
@@ -804,7 +812,7 @@ var hæst með 10.0</cite>).</p></li>
 <p class="admonition-title">Athugasemd: Lausn með NumPy</p>
 <p>Forritin í liðum 1 og 2 má líka útfæra með NumPy; liður 1 er einfaldur:
 dálkar skrárinnar eru lesnir inn með <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code> (sbr. kafla
-<a class="reference internal" href="../kafli10/#innlestur-og-utskrift"><span class="std std-numref">10.6</span></a>) og svo er uppflettitaflan búin til með
+<a class="reference internal" href="../kafli10/#innlestur-ur-skram"><span class="std std-numref">10.7</span></a>) og svo er uppflettitaflan búin til með
 <code class="docutils literal notranslate"><span class="pre">dict(zip(...))</span></code>, eins og í seinna sýnidæminu í <a class="reference internal" href="../kafli08/#uppflettitafla-lesin-ur-skra"><span class="std std-numref">8.2.5</span></a>. Aftur er nafnaskráin erfiðari. Einn möguleiki er að lesa
 hana inn með <code class="docutils literal notranslate"><span class="pre">L</span> <span class="pre">=</span> <span class="pre">np.loadtxt(...,</span> <span class="pre">dtype=str,</span> <span class="pre">delimiter=',')</span></code>. Af því að
 það eru engar kommur í skránni skilar þetta lista með línum skrárinnar.
@@ -918,7 +926,8 @@ Colab-skýinu, breyta henni með ritli á eigin tölvu og hlaða henni aftur upp
 <section id="hiti-og-urkoma">
 <h1><span class="section-number">19  </span>Hiti og úrkoma<a class="headerlink" href="#hiti-og-urkoma" title="Permalink to this heading"></a></h1>
 <p>Í þessu verkefni ráðið þið hvort þið lesið gögnin með aðstoð <code class="docutils literal notranslate"><span class="pre">urlopen</span></code> (sjá
-kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a> og <a class="reference internal" href="../kafli09/#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>), csv-lesara (sjá <a class="reference internal" href="../kafli08/#na-i-dalk-i-csv-skra"><span class="std std-numref">8.3.6</span></a>) eða NumPy (sjá <a class="reference internal" href="../kafli10/#innlestur-og-utskrift"><span class="std std-numref">10.6</span></a>).</p>
+kafla <a class="reference internal" href="../kafli08/#innlestur-textaskrar-af-vefnum"><span class="std std-numref">8.2.4</span></a> og <a class="reference internal" href="../kafli09/#daemi-um-teikningu-talnagagna"><span class="std std-numref">9.3.2</span></a>), csv-lesara (sjá <a class="reference internal" href="../kafli08/#na-i-dalk-i-csv-skra"><span class="std std-numref">8.3.6</span></a>) eða NumPy (sjá
+<a class="reference internal" href="../kafli10/#innlestur-ur-skram"><span class="std std-numref">10.7</span></a>).</p>
 <ol class="arabic">
 <li><p><strong>Veðurskrá lesin.</strong> Í skránni <a class="reference external" href="https://cs.hi.is/python/hiti-urkoma.txt">cs.hi.is/python/hiti-urkoma.txt</a> eru gögn um meðalárshita og úrkomu í
 Stykkishólmi 1949–2018. Lesið gögnin í skrána inn í þrjá lista og prentið út
@@ -941,7 +950,7 @@ finna:</p>
 </figure>
 <p>Hér er fall til að reikna svoleiðis hlaupandi meðaltal (ef d er sleppt í
 kallinu fær það sjálfgefið gildi 5, sem gefur 11 ár).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hlaupmeðal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">hlaupmeðal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;skilar lista með hlaupandi (2d+1)-sæta þríhyrn ingsmeðaltali&quot;&quot;&quot;</span>
   <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
   <span class="n">hm</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span>
@@ -986,13 +995,10 @@ staðalfrávik einhverra valdra stærða, fylgni milli hita og úrkomu).</p></li
 <li><p><span class="math notranslate nohighlight">\(\|x\|^2 - \|y\|^2\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\|x + y\|\cdot\|x - y\|\)</span></p></li>
 </ol>
-<figure class="align-right" style="width: 10cm">
-<img alt="../_images/shell-sort.jpg" src="../_images/shell-sort.jpg" />
-</figure>
 </section>
 <section id="raa-i-islenska-stafrofsro">
 <h1><span class="section-number">21  </span>Raðað í íslenska stafrófsröð<a class="headerlink" href="#raa-i-islenska-stafrofsro" title="Permalink to this heading"></a></h1>
-<p>Bæði <code class="docutils literal notranslate"><span class="pre">sort</span></code>-fallið og <code class="docutils literal notranslate"><span class="pre">sorted</span></code>-aðferðin sem útskýrð eru köflum
+<p>Bæði <code class="docutils literal notranslate"><span class="pre">sorted</span></code>-fallið og <code class="docutils literal notranslate"><span class="pre">sort</span></code>-aðferðin sem útskýrð eru köflum
 <a class="reference internal" href="../kafli06/#bua-til-sofn"><span class="std std-numref">6.1</span></a> og <a class="reference internal" href="../kafli06/#bara-listar"><span class="std std-numref">6.5</span></a> geta raðað lista af strengjum í
 enskri stafrófsröð, en því miður lenda séríslenskir stafir ekki á réttum stað í
 röðinni. Séríslensku stafirnir eru aftast og ekki í réttri röð. Til að laga
@@ -1006,11 +1012,10 @@ lágstafi eða hástafi. Hér er slíkt fall fyrir íslenska stafrófsröð (sem
 að böggla saman í allmörgum tilraunum). Áhugasamir geta ef þeir vilja stúderað
 það og e.t.v. lært eitthvað af því (notkunin <code class="docutils literal notranslate"><span class="pre">íslenska.a</span></code> er kölluð „function
 attribute“)</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">íslenska</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">íslenska</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;notað sem &#39;key&#39; í sort eða sorted til að raða í íslenska stafrófsröð,</span>
 <span class="sd">    t.d. print(sorted([&#39;ár&#39;,&#39;bára&#39;,&#39;bali&#39;,&#39;akur&#39;], key=íslenska))&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">íslenska</span><span class="o">.</span><span class="n">k</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
-    <span class="k">return</span> <span class="n">t</span>
 <span class="n">íslenska</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;0123456789aábcdðeéfghiíjklmnoópqrstuúvwxyýzþæö&#39;</span><span class="p">)</span>
 <span class="n">íslenska</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">íslenska</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">íslenska</span><span class="o">.</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
 </pre></div>
@@ -1031,15 +1036,15 @@ hægt að nota uppflettitöflur. Ef L1 og L2 eru jafnlangir listar þá gefur:</
 <p>töflu frá L1 til L2 (sbr. sýnidæmi aftast í kafla <a class="reference internal" href="../kafli08/#innlestur-skraa"><span class="std std-numref">8.2</span></a>).
 Búið til slíka uppflettitöflu frá nöfnum yfir í prófnúmer og aðra yfir í
 kennitölur og skrifið út nýja töflu með þessum upplýsingum, með fyrirsögnum
-og snyrtilega upp setta.</p>
+og snyrtilega upp setta (nöfnin enn í stafrófsröð).</p>
 </li>
 </ol>
 </section>
 <section id="sinussveiflur">
 <h1><span class="section-number">22  </span>Sínussveiflur<a class="headerlink" href="#sinussveiflur" title="Permalink to this heading"></a></h1>
-<p>Teiknið mynd af fallinu <span class="math notranslate nohighlight">\(f(x) = \sin x + \sin 2x - 2 \sin 3x\)</span> á bilinu
-<span class="math notranslate nohighlight">\([-\pi, 3\pi]\)</span>, sbr. dæmi V17. Hér er dæmi um slíka mynd með ýmsum
-fídusum, en ekki er farið fram á að þeir séu allir notaðir.</p>
+<p>Teiknið góða mynd af fallinu <span class="math notranslate nohighlight">\(f(x) = \sin x + \sin 2x - 2 \sin 3x\)</span> á bilinu
+<span class="math notranslate nohighlight">\([-\pi, 3\pi]\)</span>, sbr. <a class="reference internal" href="#fallateikning"><span class="std std-numref">verkefni 18</span></a>. Hér er dæmi um slíka mynd með ýmsum
+fídusum.</p>
 <figure class="align-center" style="width: 16cm">
 <img alt="../_images/sinsveiflur.jpg" src="../_images/sinsveiflur.jpg" />
 </figure>
@@ -1107,7 +1112,7 @@ fallinu úr lið 1. Til að finna flokkinn er gott að nota if–elif–else.</p
 </figure>
 </li>
 <li><p><strong>Íslensk og ensk málmanöfn.</strong> Með NumPy skipununum í kafla
-<a class="reference internal" href="../kafli10/#skrar-ur-excel"><span class="std std-numref">10.6.4</span></a> má lesa skrána
+<a class="reference internal" href="../kafli10/#skrar-ur-excel"><span class="std std-numref">10.7.3</span></a> má lesa skrána
 <a class="reference external" href="https://cs.hi.is/python/allir-malmar.txt">https://cs.hi.is/python/allir-malmar.txt</a> inn í vigra <em>efnatákn</em>, <em>nafn</em>,
 <em>sætistala</em>, <em>eðlisþyngd</em>, <em>bræðslumark</em> og <em>enskt_nafn</em>. Gerið það og búið í
 framhaldi til uppflettitöflu milli nafnanna með aðstoð <code class="docutils literal notranslate"><span class="pre">dict</span></code> og <code class="docutils literal notranslate"><span class="pre">zip</span></code>
@@ -1118,9 +1123,9 @@ orðalista með íslenskum málmanöfnum í stafrófsröð ásamt enskum þýði
 <li><p><strong>Eðlisþyngd eftir sæti.</strong> Teiknið punktarit af sætistölu og eðlisþyngd sem
 er litað með lotu í lotukerfinu (sbr. <a class="reference internal" href="#hiti-og-urkoma"><span class="std std-numref">verkefni 19</span></a> –
 ath. að Matplotlib getur teiknað hvort sem er lista af tölum eða NumPy
-vigra). Munið að bæta <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> við myndirnar.</p></li>
-<li><p><strong>Fleiri myndir??</strong> Ef tími vinnst til má t.d. teikna samskonar mynd af sætistölu
-og bræðslumarki.</p></li>
+vigra). Veljið hæfilega punktastærð, bætið <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> við myndirnar,
+stillið ásamerkingar eftir smekk, setjið texta við ása og bætið við rúðuneti (grid).</p></li>
+<li><p><strong>Fleiri myndir</strong> Teiknið samskonar myndir af sætistölu og bræðslumarki.</p></li>
 </ol>
 </section>
 <section id="kosningaurslit-i-lit">
@@ -1146,7 +1151,7 @@ til fínna súlurit þar sem:</p>
 <li><p><strong>Úrslit kosninganna</strong> eru í skránni <a class="reference external" href="https://cs.hi.is/python/kosningar-2021.txt">https://cs.hi.is/python/kosningar-2021.txt</a>. Það eru þrír dálkar, með
 listabókstaf, atkvæðatölu og þingsætafjölda fyrir hvert framboð. Skrána er
 hægt að lesa með <code class="docutils literal notranslate"><span class="pre">numpy.loadtxt</span></code> eins og lýst er í kafla
-<a class="reference internal" href="../kafli10/#numpy-skrar-me-textadalkum"><span class="std std-numref">10.6.3</span></a>. Skrifið fall <code class="docutils literal notranslate"><span class="pre">lesaúrslit()</span></code> sem les
+<a class="reference internal" href="../kafli10/#innlestur-skraa-me-textadalkum"><span class="std std-numref">10.7.2</span></a>. Skrifið fall <code class="docutils literal notranslate"><span class="pre">lesaúrslit()</span></code> sem les
 þessa skrá og skilar þremur listum, <code class="docutils literal notranslate"><span class="pre">listi</span></code>, <code class="docutils literal notranslate"><span class="pre">atkvæði</span></code> og <code class="docutils literal notranslate"><span class="pre">þingsæti</span></code> með
 innihaldinu. Prófið.</p></li>
 <li><p><strong>Flokkslitina</strong> má finna á <a class="reference external" href="https://is.wikipedia.org/wiki/Sni%C3%B0:Flokkslitur">Wikipedíu</a> sem HEX-strengi, en
@@ -1154,7 +1159,7 @@ innihaldinu. Prófið.</p></li>
 lítilsháttar og settir ásamt flokksnöfnum í skrána
 <a class="reference external" href="https://cs.hi.is/python/flokkslitir.txt">https://cs.hi.is/python/flokkslitir.txt</a>. Þar sem flokksnöfnin innihalda bil
 eru dálkarnir afmarkaðir með kommum. Skráin er sem sé CSV-skrá og hana má
-lesa eins og útskýrt er í kafla <a class="reference internal" href="../kafli10/#skrar-ur-excel"><span class="std std-numref">10.6.4</span></a>.</p>
+lesa eins og útskýrt er í kafla <a class="reference internal" href="../kafli10/#skrar-ur-excel"><span class="std std-numref">10.7.3</span></a>.</p>
 <p>Skrifa skal fall <code class="docutils literal notranslate"><span class="pre">lesalitinöfn</span></code> sem les skrána og skilar þremur
 strengjalistum, <code class="docutils literal notranslate"><span class="pre">stafur</span></code>, <code class="docutils literal notranslate"><span class="pre">litur</span></code> og <code class="docutils literal notranslate"><span class="pre">nafn</span></code> með innihaldinu. Það er
 eitt smá-vesen: Litirnir byrja á <code class="docutils literal notranslate"><span class="pre">#</span></code> sem NumPy tekur sem <em>comment</em>. Til að
@@ -1203,9 +1208,9 @@ Atkvæðahlutfallið er auðvelt að reikna í NumPy með því að deila summu 
 upp í atkvæðavigurinn: <code class="docutils literal notranslate"><span class="pre">hlutfall</span> <span class="pre">=</span> <span class="pre">atkvæði/sum(atkvæði)</span></code> og nota svo
 hlutfall í staðinn fyrir atkvæði í plt.bar-skipuninni. Til að fá það sem
 prósentur má kalla á eftirfarandi (töfra)fall.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prósentuformat</span><span class="p">(</span><span class="n">ás</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">prósentuformat</span><span class="p">(</span><span class="n">ás</span><span class="p">):</span>
 <span class="w">   </span><span class="sd">&quot;&quot;&quot;merkir ás (&quot;x&quot; eða &quot;y&quot;) með prósentum&quot;&quot;&quot;</span>
-   <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">FuncFormatter</span>
+   <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">FuncFormatter</span>
    <span class="n">ásar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span> <span class="c1"># get current axes</span>
    <span class="n">xy</span> <span class="o">=</span> <span class="n">ásar</span><span class="o">.</span><span class="n">xaxis</span> <span class="k">if</span> <span class="n">ás</span><span class="o">==</span><span class="s2">&quot;x&quot;</span> <span class="k">else</span> <span class="n">ásar</span><span class="o">.</span><span class="n">yaxis</span>
    <span class="n">xy</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FuncFormatter</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0:.0%}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">))</span>
@@ -1250,7 +1255,7 @@ Wikipedíugrein.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}y &amp;= a x + b \\
 y &amp;= A x^2 + B x + C\end{split}\]</div>
-<p>Til að teikna línuna eða parabóluna er hægt að nota aðferðir kafla <a class="reference internal" href="../kafli09/#groffalla"><span class="std std-numref">9.6</span></a>, en reyndar er hægt að einfalda málið með því að notfæra sér numpy reikninga. Til teikna línuna á bilinu <span class="math notranslate nohighlight">\([x_\text{min}, x_\text{max}]\)</span> má t.d. nota:</p>
+<p>Til að teikna línuna eða parabóluna er hægt að nota aðferðir kafla <a class="reference internal" href="../kafli09/#teikning-af-grofum-falla"><span class="std std-numref">9.6</span></a>, en reyndar er hægt að einfalda málið með því að notfæra sér numpy reikninga. Til teikna línuna á bilinu <span class="math notranslate nohighlight">\([x_\text{min}, x_\text{max}]\)</span> má t.d. nota:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">xmin</span><span class="p">,</span> <span class="n">xmax</span><span class="p">)</span>
 <span class="n">yp</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">xp</span> <span class="o">+</span> <span class="n">b</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xp</span><span class="p">,</span><span class="n">yp</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
@@ -1284,7 +1289,7 @@ línu og bestu parabólu. Setjið inn hæfilegar merkingar, m.a. ramma með
 \[\begin{split}A = \begin{pmatrix}2&amp;4&amp;7\\3&amp;4&amp;8\\4&amp;6&amp;9\end{pmatrix}
 \quad\text{og}\quad
 B = \begin{pmatrix}5&amp;5&amp;5\\6&amp;6&amp;6\\7&amp;8&amp;9\end{pmatrix}\end{split}\]</div>
-<ol class="arabic simple">
+<ol class="loweralpha simple">
 <li><p>Finnið <span class="math notranslate nohighlight">\(a\cdot b - \dfrac{c\cdot(Bb)}{3\|c\|}\)</span></p></li>
 <li><p>Finnið <span class="math notranslate nohighlight">\(2(A^\text{T} + B^2)(a - 2b)\)</span></p></li>
 <li><p>Ákvarðið <span class="math notranslate nohighlight">\(\det(A)\)</span> og <span class="math notranslate nohighlight">\(A^{-1}\)</span></p></li>
@@ -1303,17 +1308,20 @@ Prófið með n = 4 (ætti að gefa <span class="math notranslate nohighlight">\
 </section>
 <section id="korfuboltamenn">
 <h1><span class="section-number">27  </span>Körfuboltamenn<a class="headerlink" href="#korfuboltamenn" title="Permalink to this heading"></a></h1>
-<p>Skráin <a class="reference external" href="https://cs.hi.is/python/karfa.txt">cs.hi.is/python/karfa.txt</a> inniheldur þrjá
-dálka með aldri hæð og þyngd 1064 bandarískra körfuboltamanna. Notið
-<code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code> til að lesa skrána inn í þrjá vigra t.d. <cite>aldur</cite>, <cite>hæð</cite> og
+<p>Skráin <a class="reference external" href="https://cs.hi.is/python/karfa.txt">cs.hi.is/python/karfa.txt</a>
+inniheldur þrjá dálka með aldri hæð og þyngd 1064 bandarískra körfuboltamanna.
+Notið <code class="docutils literal notranslate"><span class="pre">np.loadtxt</span></code> til að lesa skrána inn í þrjá vigra t.d. <cite>aldur</cite>, <cite>hæð</cite> og
 <cite>þyngd</cite> eða <cite>a</cite>, <cite>h</cite> og <cite>þ</cite>. Eftirfarandi teikningar þarf að gera sæmilega
 snyrtilega, m.a. merkja ása og setja inn titla og passa að þær séu mátulega
-stórar. Þeir sem vilja mega setja einhverjar teikningar hlið við hlið með því að
-nota <code class="docutils literal notranslate"><span class="pre">plt.subplot</span></code>, sbr. einfalda lýsingu <a class="reference external" href="https://www.w3schools.com/python/matplotlib_subplots.asp">hér</a>.</p>
+stórar. Mörk súlna í súluritunum þurfa að vera rúnnaðar tölur (t.d. heilar eða
+hálfar tölur) og súlurnar eiga að hafa bil á milli sín. Þeir sem vilja mega
+setja einhverjar teikningar hlið við hlið með því að nota <code class="docutils literal notranslate"><span class="pre">plt.subplot</span></code>, sbr.
+kafla <a class="reference internal" href="../kafli13/#gervigogn-og-ahvarf"><span class="std std-numref">13.5</span></a> og einfalda lýsingu hjá <a class="reference external" href="https://www.w3schools.com/python/matplotlib_subplots.asp">w3schools</a>.</p>
 <ol class="arabic simple">
-<li><p>Teiknið þrjú (einföld) súlurit af aldri, hæð og þyngd.</p></li>
+<li><p>Teiknið þrjú súlurit af aldri, hæð og þyngd.</p></li>
 <li><p>Teiknið punktarit með hæð á x-ás og þyngd á y-ás. Finnið svo og teiknið jöfnu
 bestu línu inn á myndina (sbr. <a class="reference internal" href="#jafna-bestu-linu"><span class="std std-numref">verkefni 25</span></a>)</p></li>
+<li><p>Teiknið aðra mynd með bestu parabólu.</p></li>
 <li><p>Miðtölu (<em>median</em>) vigurs <cite>x</cite> má finna með <cite>np.median(x)</cite> (helmingur staka
 <cite>x</cite> er minni en miðtalan og helmingur stærri). Hver er miðtala aldurs
 körfuboltamannanna. Notið miðtöluna til að skipta gögnunum í tvennt (með
@@ -1364,11 +1372,11 @@ Reiknið fjarlægðina milli Reykjavíkur og London (Siri segir 1890 km)</p>
 <p>Til að teikna flatarmynd sem lýst er með <span class="math notranslate nohighlight">\(2\times n\)</span> fylki (sbr. kafla
 <a class="reference internal" href="../kafli12/#fylkjamargfoldun-og-tolvugrafik"><span class="std std-numref">12.1</span></a>) og til að hliðra slíkri mynd má nota
 eftirfarandi föll:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">teikna_fylki</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">teikna_fylki</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
    <span class="c1"># Teiknar 2 x n flatarmyndarfylki</span>
    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">hliðra</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hliðra</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
    <span class="c1"># Leggur h við alla dálka A</span>
    <span class="k">return</span> <span class="n">A</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">h</span><span class="p">,(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
@@ -1415,8 +1423,8 @@ framgangsmáta má nota í lið 6, en í lið 5 þarf myndafylkið að vera stik
 <code class="docutils literal notranslate"><span class="pre">hiðra_snúa_hliðra(mynd,</span> <span class="pre">horn,</span> <span class="pre">punktur)</span></code> því ekki er hægt að skeyta saman
 hliðrun og margföldun saman í eina fylkjaaðgerð.</p>
 </section>
-<section id="grannafylki-og-legufylki">
-<h1><span class="section-number">31  </span>Grannafylki og legufylki<a class="headerlink" href="#grannafylki-og-legufylki" title="Permalink to this heading"></a></h1>
+<section id="flaeinet">
+<h1><span class="section-number">31  </span>Flæðinet<a class="headerlink" href="#flaeinet" title="Permalink to this heading"></a></h1>
 <p>Stefnt net hefur 5 hnúta og eftirfarandi 7 leggi:</p>
 <blockquote>
 <div><p><cite>•</cite> frá hnút 1 til 2 og 3 <br>
@@ -1424,21 +1432,61 @@ hliðrun og margföldun saman í eina fylkjaaðgerð.</p>
 <cite>•</cite> frá 3 til 4 og 5 <br>
 <cite>•</cite> frá 4 til 5</p>
 </div></blockquote>
-<p>Í leggjunum er flæði 2 l/s nema í þeim síðassttalda, þar flæða 4 l/s.</p>
-<ol class="arabic simple">
-<li><ol class="arabic simple">
+<ol class="arabic">
+<li><p>(til að leysa með blaði og blýanti)</p>
+<ol class="loweralpha">
 <li><p>Teiknið netið</p></li>
 <li><p>Finnið grannafylkið <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>Finnið legufylki netsins, <span class="math notranslate nohighlight">\(L\)</span>, miðað við að leggirnir séu tölusettir
+í sömu röð og þeir eru taldir upp að ofan.</p></li>
+<li><p>Lát burðargetu leggjanna vera sem hér segir:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>leggur</p></th>
+<th class="head"><p>burðargeta</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1–2</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1–3</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>2–3</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>2–4</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>3–4</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>3–5</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>4–5</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Reiknið hámarksflæði með Ford-Fulkerson aðferðinni og blaði og blýanti.
+Byrjið með veginn 1–2–4–5, svo 1–3–5 og loks 1–3–4–5 og sýnið flæðið eftir
+hvert skref. Hvert er flæðifylkið eftir lokaskrefið (þ.e. fylki með
+<span class="math notranslate nohighlight">\((i,j)\)</span>-stak jafnt flæðinu í legg <span class="math notranslate nohighlight">\(i \to j\)</span>)?</p>
+</li>
+</ol>
+</li>
+<li><p>(til að leysa með Python)</p>
+<ol class="loweralpha simple">
 <li><p>Reiknið <span class="math notranslate nohighlight">\(A^2\)</span> og <span class="math notranslate nohighlight">\(A^3\)</span> og ákvarðið í framhaldi heildarfjölda
 mismunandi vega með lengd 3 í netinu</p></li>
 <li><p>Notið fylkjaveldi og samlagningu til að finna heildarfjölda vega frá 1 til 5</p></li>
-</ol>
-</li>
-<li><ol class="arabic simple">
-<li><p>Finnið legufylki netsins, <span class="math notranslate nohighlight">\(L\)</span>, miðað við að leggirnir séu tölusettir
-í sömu röð og þeir eru taldir upp að ofan.</p></li>
-<li><p>Notið flæðisvarðveislujöfnuna til að ákvarða hvaða hnútar eru lindir og
-ósar og hve mikið streymir inn og út þar.</p></li>
+<li><p>Notið maximium_flow fallið í SciPy til að finna hámarksflæði og
+tilsvarandi fylki, sbr. lið 1d.</p></li>
+<li><p>Gerum nú ráð fyrir að það flæði 2 l/s í öllum leggjum nema 4–5, þar flæði
+4 l/s. Notið flæðisvarðveislujöfnuna til að ákvarða hvaða hnútar eru
+lindir og ósar og hve mikið streymir inn og út þar.</p></li>
 </ol>
 </li>
 </ol>
@@ -1454,7 +1502,7 @@ og 40% tveggja ára lifa til næsta árs (en sem sé enginn þeirra sem eru þri
 500 þriggja ára.</p>
 <ol class="arabic simple">
 <li><p>Finnið Leslie fylkið.</p></li>
-<li><ol class="arabic simple">
+<li><ol class="loweralpha simple">
 <li><p>Hver er stofnstærðin eftir eitt ár?</p></li>
 <li><p>Hver er stofnstærðin eftir 10 ár?</p></li>
 <li><p>Fjölgar í það óendanlega eða deyr stofninn að lokum út?</p></li>
@@ -1515,11 +1563,14 @@ og 40% tveggja ára lifa til næsta árs (en sem sé enginn þeirra sem eru þri
 </section>
 <section id="mannfjoldaspa-fyrir-island">
 <h1><span class="section-number">34  </span>Mannfjöldaspá fyrir Ísland<a class="headerlink" href="#mannfjoldaspa-fyrir-island" title="Permalink to this heading"></a></h1>
+<figure class="align-center" style="width: 15cm">
+<img alt="../_images/mannfjoldi.jpg" src="../_images/mannfjoldi.jpg" />
+</figure>
 <p>Í skránni <a class="reference external" href="https://cs.hi.is/python/aldursdreifing.txt">https://cs.hi.is/python/aldursdreifing.txt</a> eru gögn um mannfjölda á Íslandi
 árið 2020, fæðingartíðni og dánartíðni, og fjölda aðfluttra umfram brottflutta
 eftir aldri.</p>
 <ol class="arabic simple">
-<li><p>Notið Leslie-fylki til að spá mannfjölda á Íslandi 2020–2050 ef ekki er tekið
+<li><p>Notið Leslie-fylki til að spá mannfjölda á Íslandi 2020–2075 ef ekki er tekið
 tillit til innflytjenda. Skrifið töflu yfir heildarfjöldann á 5 ára fresti.</p></li>
 <li><p>Bætið við áhrifum innflytjenda ef gert er ráð fyrir að árlegur fjöldi
 aðfluttra umfram brottflutta á hverjum aldri haldist óbreyttur.</p></li>
@@ -1531,9 +1582,9 @@ brottflutta á hverjum aldri sem hlutfall af heildarmannfjöldanum haldist
 óbreyttur. Teiknið þrjú línurit af af heildarmannfjöldanum skv. liðum 1, 2 og
 4 inn á sömu mynd.</p></li>
 <li><p>Búið til textareit og skrifið nokkrar (t.d. 10) línur um niðurstöðurnar frá
-eigin brjósti. Hafið einhverjar tölulegar upplýsingar fengnar með Python með.
-Þið megið líka alveg bæta einhverju við sem þið finnið með netleit Það eru
-viljandi ekki gefin frekari fyrirmæli heldur er ætlast til að þið notið
+eigin brjósti. Hafið einhverjar tölulegar upplýsingar fengnar með Python með
+og sömuleiðis eitthvað sem þið finnið með leit á netinu. Það eru viljandi
+ekki gefin frekari fyrirmæli heldur er ætlast til að þið notið
 hugmyndaflugið.</p></li>
 </ol>
 <div class="athugid admonition">
@@ -1550,13 +1601,13 @@ hinar tölurnar eru 5 ára meðaltal.</p>
 tvennur í póker. Fallið <code class="docutils literal notranslate"><span class="pre">pókerhönd</span></code> er endurbætt miðað við æfinguna til að
 tryggja að sama spil geti ekki komið fyrir tvisvar. Fræðilegar líkur á tveimur
 tvennum er 4.75% og ef keyrt er með háu gildi á <code class="docutils literal notranslate"><span class="pre">n</span></code> fæst hlutfall nálægt því.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sample</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">sample</span>
 
-<span class="k">def</span> <span class="nf">pókerhönd</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pókerhönd</span><span class="p">():</span>
   <span class="n">stokkur</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">14</span><span class="p">)]</span>
   <span class="k">return</span> <span class="n">sample</span><span class="p">(</span><span class="n">stokkur</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">með_tvær_tvennur</span><span class="p">(</span><span class="n">hönd</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">með_tvær_tvennur</span><span class="p">(</span><span class="n">hönd</span><span class="p">):</span>
   <span class="c1"># Skilar sönnu ef hönd geymir tvær tvennur</span>
   <span class="n">gildi</span> <span class="o">=</span> <span class="p">[</span><span class="n">spil</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">spil</span> <span class="ow">in</span> <span class="n">hönd</span><span class="p">]</span>
   <span class="n">M</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">gildi</span><span class="p">)</span>                 <span class="c1"># búa til mengi</span>
@@ -1567,7 +1618,7 @@ tvennum er 4.75% og ef keyrt er með háu gildi á <code class="docutils literal
     <span class="k">if</span> <span class="n">talning</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span> <span class="k">return</span> <span class="kc">False</span> <span class="c1"># og ekkert spil má koma 3svar</span>
   <span class="k">return</span> <span class="kc">True</span>                    <span class="c1"># það eru tvær tvennur!</span>
 
-<span class="k">def</span> <span class="nf">hlutfall_með_2x2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hlutfall_með_2x2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
   <span class="n">talning</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">hönd</span> <span class="o">=</span> <span class="n">pókerhönd</span><span class="p">()</span>
@@ -1638,7 +1689,7 @@ jarðskjálftamiðstöðvum:</p>
 </tbody>
 </table>
 <p>Skrifið forrit sem býr til uppflettitöflu <code class="docutils literal notranslate"><span class="pre">stærð</span></code> með orku
-jarðskjálftanna skv. miðstövunum þremur (þannig t.d. að <code class="docutils literal notranslate"><span class="pre">stærð[&quot;USGS&quot;]</span></code> sé
+jarðskjálftanna skv. miðstöðvunum þremur (þannig t.d. að <code class="docutils literal notranslate"><span class="pre">stærð[&quot;USGS&quot;]</span></code> sé
 <code class="docutils literal notranslate"><span class="pre">3.20e17</span></code>), og skrifar í framhaldi út töflu yfir niðurstöðuna sem byrjar
 svona:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Miðstöð   Stærð
@@ -1655,10 +1706,11 @@ USGS      5.60
 <p>Föll geta haft <strong>valkvæða stika</strong> sem taka sjálfgefin gildi ef þeim er sleppt.
 Þannig hefur print-fallið tvo valkvæða stika, <code class="docutils literal notranslate"><span class="pre">sep</span></code> og <code class="docutils literal notranslate"><span class="pre">end</span></code>, sbr. kafla
 <a class="reference internal" href="../kafli04/#utprentun"><span class="std std-numref">4.4</span></a>. Eftirfarandi dæmi, sem reiknar n-tu rót, sýnir hvernig hægt
-er að skilgreina fall með valkvæðan stika. Fallið reiknar kvaðratrót ef
-seinna viðfanginu er sleppt og prentar því út <code class="docutils literal notranslate"><span class="pre">rætur:</span> <span class="pre">4</span> <span class="pre">og</span> <span class="pre">2</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="k">def</span> <span class="nf">rót</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># skilar n-tu rót (n=2 er sjálfgefið)</span>
+er að skilgreina fall með valkvæðan stika. Fallið reiknar kvaðratrót ef seinna
+viðfanginu er sleppt og prentar því út <code class="docutils literal notranslate"><span class="pre">rætur:</span> <span class="pre">4</span> <span class="pre">og</span> <span class="pre">2</span></code>. Annað dæmi er í
+verkefni <a class="reference internal" href="#hiti-og-urkoma"><span class="std std-numref">19.3</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">rót</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>  <span class="c1"># skilar n-tu rót (n=2 er sjálfgefið)</span>
    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">rót</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
@@ -1696,7 +1748,7 @@ samstæðu og hvað felst í að listar eru breytanlegir en samstæður ekki.
 Útskýrið hvernig nota má par (samstæða tveggja gilda) til að láta fall skila
 tveimur niðurstöðum (t.d. með dæmi). Nefnið tvær aðgerðir sem beita má á
 lista en ekki samstæður.</p></li>
-<li><p>Útskýrið, t.d. með dæmum, muninn á aðgerðunum + og * þegar þeim er beitt á
+<li><p>Útskýrið, t.d. með dæmum, muninn á aðgerðunum <code class="docutils literal notranslate"><span class="pre">+</span></code> og <code class="docutils literal notranslate"><span class="pre">*</span></code> þegar þeim er beitt á
 1. Lista
 2. NumPy vigra</p></li>
 <li><p>[<strong>ATH: Þetta dæmi er úr námsefni sem er ekki (enn) í fyrirlestrarnótunum</strong>].
@@ -1767,7 +1819,7 @@ Anton Ingi Þórsson             4854
 <p><strong>Leiðbeining:</strong> Notið uppflettitöfluna úr lið 1. Hér á eftir er svo fall sem
 nota má fyrir röðunina (með því að nota <cite>key=íslenska</cite> sem viðfang í
 <cite>sort</cite> eða <cite>sorted</cite>, sjá <a class="reference internal" href="#raa-i-islenska-stafrofsro"><span class="std std-numref">verkefni 21</span></a>).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">íslenska</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">íslenska</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
    <span class="c1"># notað sem &#39;key&#39; í sort eða sorted til að raða í íslenska stafrófsröð,</span>
    <span class="c1"># t.d. print(sorted([&#39;ár&#39;,&#39;bára&#39;,&#39;bali&#39;,&#39;akur&#39;], key=íslenska))&quot;&quot;&quot;</span>
    <span class="k">return</span> <span class="p">[</span><span class="n">íslenska</span><span class="o">.</span><span class="n">k</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
@@ -1867,6 +1919,54 @@ eftir kommunum í skránni).</p>
 kosningaúrslitin með flokksnöfnum.</p></li>
 <li><p>Bætið við dálki með hlutfalli atkvæða sem hver flokkur fékk og birtið svo nýja
 töflu yfir þá flokka sem fengu meira en 5% (og komu þar með manni á þing).</p></li>
+</ol>
+</section>
+<section id="dyraklasi">
+<h1><span class="section-number">41  </span>Dýraklasi<a class="headerlink" href="#dyraklasi" title="Permalink to this heading"></a></h1>
+<ol class="loweralpha">
+<li><p>Búið til afstrakt klasa <code class="docutils literal notranslate"><span class="pre">Dýr</span></code>. Klasinn á að hafa klasabreytur <code class="docutils literal notranslate"><span class="pre">tegund</span></code>
+(strengur), <code class="docutils literal notranslate"><span class="pre">fótafjöldi</span></code> (heiltala), og <code class="docutils literal notranslate"><span class="pre">segir</span></code> (strengur, t.d.
+<code class="docutils literal notranslate"><span class="pre">&quot;voff&quot;</span></code>), og klasaaðferð <code class="docutils literal notranslate"><span class="pre">segja</span></code> sem á að skrifa tvisvar á skjáinn hvað
+dýrið segir (t.d. <code class="docutils literal notranslate"><span class="pre">&quot;voff</span> <span class="pre">voff&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;me</span> <span class="pre">me&quot;</span></code>). Klasabreytur fá gildið
+<code class="docutils literal notranslate"><span class="pre">None</span></code>. Klasinn á líka að hafa eiginleika <code class="docutils literal notranslate"><span class="pre">nafn</span></code> (strengur) og <code class="docutils literal notranslate"><span class="pre">litur</span></code>
+(strengur). Ennfremur á klasinn að hafa <em>smið</em> og <em>útskriftaraðferð</em>
+<code class="docutils literal notranslate"><span class="pre">__str__</span></code>. Útskriftaraðferðin gæti t.d. skrifað út „Snúlla er bröndótt
+kisa“ (eftir að búið er að búa til kisuklasa sem erfir frá <em>Dýr</em>).</p></li>
+<li><p>Búið til (konkret) klasa <code class="docutils literal notranslate"><span class="pre">Hundur</span></code> sem erfir frá klasanum <code class="docutils literal notranslate"><span class="pre">Dýr</span></code>. Hann
+hefur smið sem kallar á smið yfirklasans og aðferð <code class="docutils literal notranslate"><span class="pre">gelta</span></code> sem kallar á
+<code class="docutils literal notranslate"><span class="pre">segja</span></code> í yfirklasanum. Það þarf líka að gefa klasabreytunum þremur
+viðeigandi gildi. Búið svo til tilvik af hundi sem heitir Snati og er
+svartur. Prentið hann út ásamt fótafjöldanum og látið hann gelta. Búið líka
+til klasa <code class="docutils literal notranslate"><span class="pre">Önd</span></code> með aðferð <code class="docutils literal notranslate"><span class="pre">kvaka</span></code> og prófið með sama hætti. Forritið
+ætti að skrifa út eitthvað á þessa leið:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Snati er svartur hundur
+Hann hefur 4 fætur
+voff voff
+
+Andrés er brún önd
+Hún hefur 2 fætur
+bra bra
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Ef forritað er eins og hér hefur verið lýst er ekkert sem kemur í veg fyrir að
+búin sé til hlutur af taginu <em>Dýr</em>, í andstöðu við tilganginn með afstrakt
+klösum. Byrjið á að skoða <a class="reference external" href="https://en.wikipedia.org/wiki/Abstract_type">Wikipedíugreinina um þá</a> og sömuleiðis eitthvað um Python
+pakkann <em>abc</em> (<em>abstract base classes</em>); mér sýnist <a class="reference external" href="https://dev.to/dollardhingra/understanding-the-abstract-base-class-in-python-k7h">þessi síða</a>
+einföld og skilmerkileg. Leysið svo eftirfarandi:</p>
+<ol class="loweralpha simple" start="3">
+<li><p>Sannreynið að það er ekkert mál að búa til dýr af engri sérstakri tegund. Til
+að fá villu ef reynt er að búa til tilvik af afstrakt klasa þarf hann að vera
+með a.m.k. eina afstract aðferð. Bætið afstrakt aðferð <code class="docutils literal notranslate"><span class="pre">hreyfast</span></code> við
+klasann Dýr sem er bara með eina línu, <code class="docutils literal notranslate"><span class="pre">pass</span></code>. Látið klasann erfa frá
+yfirklasanum ABC (eftir <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">abc</span> <span class="pre">import</span> <span class="pre">ABC</span></code>) og látið nýju aðferðina
+vera afstrakt (með því að setja <code class="docutils literal notranslate"><span class="pre">&#64;abstractmethod</span></code> framan við hana).
+Prófið nú að búa til dýr.</p></li>
+<li><p>Eftir þessar „úrbætur“ er orðið skylda að undirklasarnir útfæri (<em>implement</em>,
+endurskilgreini) aðferðina <code class="docutils literal notranslate"><span class="pre">hreyfast</span></code>. Prófið fyrst að búa til hund án
+slíkrar útfærslu og svo með (hún gæti t.d. skrifað út „Ég get gengið og
+hlaupið“). Endurtakið fyrir öndina (hún getur gengið, flogið og synt).</p></li>
 </ol>
 </section>
 

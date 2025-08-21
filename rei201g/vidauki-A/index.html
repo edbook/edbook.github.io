@@ -286,7 +286,7 @@ rétthyrningnum <span class="math notranslate nohighlight">\([-3,3] \times [-2,2
 <blockquote>
 <div><div class="literal-block-wrapper docutils container" id="haearlinuforrit">
 <div class="code-block-caption"><span class="caption-number">Forrit 1 </span><span class="caption-text">Hæðarlínur</span><a class="headerlink" href="#haearlinuforrit" title="Varanlegur hlekkur á þennan kóða"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -360,7 +360,7 @@ vigrum reiknist í einu lagi.</p>
 <blockquote>
 <div><div class="literal-block-wrapper docutils container" id="netmyndaforrit">
 <div class="code-block-caption"><span class="caption-number">Forrit 2 </span><span class="caption-text">Netmynd</span><a class="headerlink" href="#netmyndaforrit" title="Varanlegur hlekkur á þennan kóða"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">r</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
 
@@ -434,13 +434,13 @@ verði réttar. Hér fæst fyrir vikið stigull sem er hornréttur á
 hæðarlínurnar, eins og vera ber.</p></li>
 </ul>
 </aside>
-<div class="highlight-python3 notranslate" id="stiglaforrit"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-python3 notranslate" id="stiglaforrit"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="k">def</span> <span class="nf">fx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
 
-<span class="k">def</span> <span class="nf">fy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">8</span><span class="o">*</span><span class="n">y</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
@@ -473,8 +473,8 @@ hæðarlínurnar, eins og vera ber.</p></li>
 <p>Til að skoða lista yfir alla eiginleika (<em>properties</em>) sem hægt
 er að stilla með <code class="docutils literal notranslate"><span class="pre">ax.set</span></code> má gefa skipunina <code class="docutils literal notranslate"><span class="pre">plt.getp(ax)</span></code></p>
 </div>
-<div class="admonition hint">
-<p class="admonition-title">Æfing</p>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Rosenbrock-stigull</p>
 <ol class="arabic">
 <li><p>Reiknið (á blaði) stigul falls Rosenbrocks</p>
 <div class="math notranslate nohighlight">
@@ -576,10 +576,10 @@ liti (með því að dekkja gula litinn í honum smávegis), og tab20 er þokkal
 fjöldi hópa sem teikna skal sé nákvæmlega jafn fjöldanum í skölunum. Til að bæta
 úr því má búa til litaskala með tilteknum litafjölda, allt að 20, með
 eftirfarandi falli:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">qcmap</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">qcmap</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
    <span class="c1"># Fjölgun scatter-lita upp í allt að 20</span>
    <span class="c1"># Bætið viðfangi &#39;cmap=qcmap(n)&#39; við plt.scatter kall</span>
-   <span class="kn">import</span> <span class="nn">matplotlib.colors</span> <span class="k">as</span> <span class="nn">clrs</span>
+   <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">clrs</span>
    <span class="n">use_cmap</span> <span class="o">=</span> <span class="s1">&#39;Set1&#39;</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">9</span> <span class="k">else</span> <span class="s1">&#39;tab20&#39;</span>
    <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="n">use_cmap</span><span class="p">)(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">cmap</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>  <span class="c1"># dekkja gula litinn</span>
@@ -663,7 +663,7 @@ hæðarsvæða er líka bara búinn til þar. Gildi F eru einnig merkt inn á
 tilheyrandi litastikur.</p>
 <div class="synidaemi admonition" id="imshow-mynd">
 <p class="admonition-title">Sýnidæmi: Samfelld litamynd með <strong>imshow</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>

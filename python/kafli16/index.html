@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16 Hlutbundin forritun &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/python.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="../genindex/" />
+    <link rel="search" title="Leit" href="../search/" />
+    <link rel="next" title="V E R K E F N I" href="../verkefnafyrirsogn/" />
+    <link rel="prev" title="15 Pandas" href="../kafli15/" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+              <img src="../_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2021
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../kafli01/">1  Inngangur: Um Python.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli02/">2  Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli03/">3  Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4  Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli05/">5  Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli06/">6  Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli07/">7  Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli08/">8  Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli09/">9  Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli10/">10  NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli11/">11  Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli12/">12  Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli13/">13  Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli14/">14  Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli15/">15  Pandas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">16  Hlutbundin forritun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#um-hlutbundna-forritun">16.1  Um hlutbundna forritun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hlutbundin-forritun-i-python">16.2  Hlutbundin forritun í Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#skilgreining-klasa">16.2.1  Skilgreining klasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notkun-klasa">16.2.2  Notkun klasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-um-hlutbundna-forritun-dimmer">16.2.3  Dæmi um hlutbundna forritun: Dimmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lifandi-matplotlib-mynd">16.2.4  Lifandi Matplotlib mynd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#erfir-i-python">16.3  Erfðir í Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utfaersla-flatarmyndaklasa">16.3.1  Útfærsla flatarmyndaklasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retthyrningur-sem-snyst">16.3.2  Rétthyrningur sem snýst</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../verkefnafyrirsogn/">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">16  </span>Hlutbundin forritun</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/kafli16.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hlutbundin-forritun">
+<h1><span class="section-number">16  </span>Hlutbundin forritun<a class="headerlink" href="#hlutbundin-forritun" title="Permalink to this heading"></a></h1>
+<section id="um-hlutbundna-forritun">
+<h2><span class="section-number">16.1  </span>Um hlutbundna forritun<a class="headerlink" href="#um-hlutbundna-forritun" title="Permalink to this heading"></a></h2>
+<p>Mikilvægt hugtak í ýmsum nútímaforritunarmálum er hlutbundin forritun (<em>object
+oriented programming</em>, <em>OOP</em>). Hlutbundin forritun var fyrst möguleg í Simula 67
+(útgáfa af Simula búin til 1967), en mikilvægustu hlutbundnu forritunarmálin nú
+eru C++, Python, Java og C#. Í hlutbundinni forritun koma m.a. við sögu hugtökin
+<em>klasi</em>, <em>hlutur</em>, <em>tilvik</em>, <em>eiginleiki</em>, <em>aðferð</em>, <em>smiður</em> og <em>erfðir</em>.</p>
+<p class="rubric">Byggingareiningar í hlutbundinni forritun</p>
+<p><strong>Klasi</strong> (<em>class</em>) er í raun gagnatag, og <strong>hlutir</strong> (<em>objects</em>) eru breytur af
+viðkomandi tagi, eða <strong>tilvik</strong> (<em>instance</em>) af klasanum. Yfirleitt innihalda
+klasar bæði <strong>eiginleika</strong> (<em>properties</em>, <em>attributes</em>), sem eru einskonar
+breytur sem lýsa hlutnum, og <strong>aðferðir</strong> (<em>methods</em>), sem eru í raun föll eða
+undirforrit (dæmi væri aðferð til að breyta eiginleika). Munurinn á eiginleikum
+og aðferðum annarsvegar og breytum, föllum og undirforritum hinsvegar er að þau
+fyrrnefndu eru ekki aðgengileg nema í gegnum hlutinn sem þau tilheyra.
+<strong>Klasaaðferðir</strong> (<em>class methods</em>) tilheyra klasanum sjálfum en ekki einstökum
+tilvikum, og sama gildir um <strong>klasabreytur</strong> (<em>class variables</em>). Ef gildi
+þeirra breytast sjá allir hlutir breytinguna.</p>
+<p>Sérstök tegund af aðferð er <strong>smiður</strong> (<em>constructor</em>), sem hefur það hlutverk
+að búa til nýtt tilvik af klasanum. Hægt er að búa til klasa sem <strong>erfir</strong>
+(<em>inherits</em>) eiginleika og aðferðir annars klasa og bætir við sínum eigin
+(klasinn sem erfir er <strong>undirklasi</strong> (<em>subclass</em>) og hann erfir frá
+<strong>yfirklasa</strong> (<em>superclass</em>)). Stundum setur undirklasi <strong>skorður</strong>
+(<em>constraints</em>) á eiginleikana sem erfast.</p>
+<p>Loks má geta hugtakanna <strong>einka-</strong> (<em>private</em>), <strong>verndaður</strong> (<em>protected</em>) og
+<strong>opinber</strong> (<em>public</em>). Einkaaðferðir eru hjálparföll til að útfæra klasa og
+aðeins aðgengilegar í (öðrum) aðferðum hans, verndaðar aðferðir eru einnig
+aðgengilegar í undirklösum, og opinberar aðferðir eru aðgengilegar öllum sem
+nota klasann. Hliðstætt gildir um einka-, verndaða, og opinbera eiginleika.</p>
+<p class="rubric">Dæmi með erfðum</p>
+<p>Tökum flatarmyndir og teikningar af þeim á skjá sem dæmi. Gerum ráð fyrir að
+allar flatarmyndir hafi eiginleikana staðsetningu (t.d. hnit miðju), flatarmál
+og lit og aðferðirnar stroka_út og breyta_stærð. Flatarmynd er grunnklasi, og
+frá honum erfast klasarnir (sértilvikin) hringur og rétthyrningur. Hringur bætir
+við eiginleikanum geisla og rétthyrningur bætir við eiginleikum breidd, hæð og
+stefnu og auk þess aðferð, snúa (það hefur lítinn tilgang að snúa hring). Báðir
+þessir erfðu klasar gætu endurskilgreint aðferðina breyta_stærð. Síðan mætti
+láta ferning erfa frá rétthyrningi með skorðunni að breidd sé sama og hæð.
+Erfðavenslin má túlka sem „er ein gerð af“. Ferningur er ein gerð af
+rétthyrningi, hringur er ein gerð af flatarmynd og sömuleiðis rétthyrningur.
+Myndin hér að neðan sýnir svonefnt klasarit af þessum erfðavenslum, ásamt
+eiginleikum og aðferðum klasanna.</p>
+<figure class="align-center" id="klasarit" style="width: 12cm">
+<img alt="../_images/klasarit.jpg" src="../_images/klasarit.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 16.1: </span><span class="caption-text">Klasarit fyrir flatarmyndir</span><a class="headerlink" href="#klasarit" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">Kostir og gallar</p>
+<p>Kostur við hlutbundna forritun er hægt er að vinna staðbundið. Þegar klasi er
+útfærður (þ.e. þegar eiginleikar hans eru skilgreindir og aðferðir hans búnar
+til) þá þarf ekki að hafa allt forritið (eða forritakerfið) undir, heldur nægir
+að horfa á næsta umhverfi: eiginleika og aðferðir klasans sem unnið er með og
+(ef við á) klasans sem erft er frá. Annað mikilvægt atriði er svonefnd
+upplýsingahuld (<em>information hiding</em>), sem felst í því að notandi hefur aðeins
+(vitneskju um og) aðgang að tilteknum eiginleikum og aðferðum klasa, en hvorki
+að nánari útfærslu þeirra né að öðrum eiginleikum og aðferðum klasans.</p>
+<p>Að lokum má nefna að hlutir geta komið í stað uppflettitaflna undir vissum
+kringumstæðum og táknmálið til að vísa í eiginleika er í mörgum forritunarmálum,
+t.d. Python, styttra og einfaldara en uppfletting í töflu (<code class="code docutils literal notranslate"><span class="pre">hlutur.lykill</span></code>
+í stað <code class="code docutils literal notranslate"><span class="pre">hlutur[&quot;lykill&quot;]</span></code>)</p>
+<p>En öll þessi gæði koma ekki alveg ókeypis. Hlutbundin forritakerfi geta oft
+orðið stærri og flóknari en samsvarandi kerfi forrituð án klasa. Á <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming#Criticism">Wikipediu</a> má lesa
+meira um hvernig ýmsir fræðimenn hafa fjallað um slíka ókosti. Til dæmis skrifar
+einn: <em>Þig vantar banana en færð í kaupbæti górillu sem heldur á honum og allan
+frumskóginn með</em>.</p>
+<p>Segja má að mikilvægast við góða hugbúnaðargerð sé að brjóta
+forritin niður í litlar einingar, og  hvort það sé gert með hlutbundinni forritun
+eða með öðrum hætti sé ekki aðalatriði.</p>
+<p class="rubric">Það er nauðsynlegt að skilja klasa</p>
+<p>Að lokum má nefna að mörg tölvukerfi, eru þannig að þau samanstanda af
+fjölsrúðugu klasasafni, og notendur þeirra þurfa svo ýmist að búa til tilvik af
+klösunum eða búa til nýja klasa sem erfa frá þeim innbyggðu með einföldum
+viðbótum. Þetta á við um marga Python-pakka sem fjallað hefur verið um
+í þessum nótum, m.a. NumPy, Matplotlib og Pandas. Því er gagnlegt að hafa
+nokkurn skilning á hlutbundinni forritun þótt menn ætli sér ekki að smíða stór
+og mikil hlutbundin forritakerfi frá grunni.</p>
+</section>
+<section id="hlutbundin-forritun-i-python">
+<h2><span class="section-number">16.2  </span>Hlutbundin forritun í Python<a class="headerlink" href="#hlutbundin-forritun-i-python" title="Permalink to this heading"></a></h2>
+<section id="skilgreining-klasa">
+<h3><span class="section-number">16.2.1  </span>Skilgreining klasa<a class="headerlink" href="#skilgreining-klasa" title="Permalink to this heading"></a></h3>
+<p>Klasaskilgreiningar í Python eiga ýmislegt sameiginlegt með skilgreiningu falla.
+Þær má setja hvar sem framan við fyrsta stað þar sem klasinn er notaður.
+Hefðbundið er að byrja nafn klasa á stórum staf. Hér er <strong>sniðmát</strong> sem algengt er
+að nota fyrir klasa sem ekki á sér yfirklasa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Klasi</span><span class="p">:</span>
+
+    <span class="n">klasabreyta</span> <span class="o">=</span> <span class="mi">42</span>   <span class="c1"># skilgreiningar klasabreyta</span>
+    <span class="o">...</span>                <span class="c1">#</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stiki</span><span class="p">,</span><span class="o">...</span><span class="p">):</span>        <span class="c1"># smiður</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eiginleiki1</span> <span class="o">=</span> <span class="n">stiki</span>          <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eiginleiki2</span> <span class="o">=</span> <span class="n">gildi</span>          <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verndaðureiginleiki</span> <span class="o">=</span> <span class="n">gildi</span> <span class="c1">#</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__einkaeiginleiki</span> <span class="o">=</span> <span class="n">gildi</span>    <span class="c1">#</span>
+        <span class="o">...</span>                               <span class="c1">#</span>
+        <span class="c1"># engin return skipun             #</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">aðferð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stiki</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># opinber aðferð</span>
+        <span class="n">skipanir</span>                <span class="c1"># nota má self.eiginleiki til að vísa í eiginleika</span>
+        <span class="k">return</span>                  <span class="c1"># má sleppa ef aðferð skilar engu</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_vernduðaðferð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stiki</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># vernduð aðferð, aðeins ætluð til</span>
+        <span class="o">...</span>                             <span class="c1"># notkunar í öðrum aðferðum klasans</span>
+        <span class="o">...</span>                             <span class="c1"># og undirklasa hans</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__einkaaðferð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stiki</span><span class="o">...</span><span class="p">)</span>   <span class="c1"># einkaaðferð, aðeins ætluð til</span>
+        <span class="o">...</span>                             <span class="c1"># notkunar í klasanum sjálfum</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="c1"># útskriftaraðferð</span>
+        <span class="n">skipanir</span>       <span class="c1"># ... sem búa til streng str úr self</span>
+        <span class="k">return</span> <span class="nb">str</span>     <span class="c1"># print(hlutur) kallar sjálfkrafa á þessa aðferð</span>
+
+    <span class="nd">@classmethod</span>                    <span class="c1"># skilgreiningar klasaaðferða</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">klasaaðferð</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">stiki</span><span class="o">...</span><span class="p">)</span>  <span class="c1"># (má sleppa)</span>
+        <span class="n">skipanir</span>                    <span class="c1">#</span>
+</pre></div>
+</div>
+<p><strong>Klasabreytur</strong> eru sameiginlegar með öllum hlutum af klasataginu, gagnstætt
+eiginleikum sem eru sérstakir fyrir hvern hlut (ef aðferð breytir klasabreytu þá
+verður breytingin strax sýnileg í öðrum hlutum). Vísað er í klasabreytu með
+punktrithætti og nafni klasans <code class="docutils literal notranslate"><span class="pre">Klasi.klasabreyta</span></code>.</p>
+<p>Eins og sést er <strong>smiður</strong> skilgreindur með því að nota sérstakt nafn,
+<code class="docutils literal notranslate"><span class="pre">__init__</span></code>. Fyrsti stikinn í smiðnum, <code class="docutils literal notranslate"><span class="pre">self</span></code>, er hluturinn sem á að smíða.
+Hann er eiginleikalaus í byrjun, en í lokin á hann að vera fullsmíðaður hlutur
+sem smiðurinn skilar. Smiðurinn ætti að gefa öllum <strong>eiginleikum</strong> gildi,
+annaðhvort einhver föst sjálfgefin eða útfrá stikunum sem hann fær inn.</p>
+<p>Venjulegar <strong>aðferðir</strong> hafa líka <em>self</em>-stika fremst. Hann fær gildi sem er
+hluturinn sem viðkomandi aðferð tilheyrir. Í skilgreiningu aðferðarinnar er
+vísað í eiginleika viðkomandi hlutar með forskeyti <code class="docutils literal notranslate"><span class="pre">self.</span></code>, t.d.
+<code class="docutils literal notranslate"><span class="pre">self.eiginleiki</span></code>.</p>
+<p><strong>einkaeiginleikar</strong> og <strong>-aðferðir</strong> eru eins og segir að framan aðeins
+aðgengilegir innan klasans. <strong>Verndaðar aðferðir</strong> og <strong>verndaðir eiginleikar</strong>,
+með nöfn sem byrja á einu undirstriki, eru auk þess aðgengileg í undirklösum. Í
+flestum öðrum forritunarmálum eru slíkir hlutir ósýnilegir annarsstaðar. Það
+gildir líka um einkahlutina í Python en hinsvegar ekki þá vernduðu; fyrir þá er
+er treyst á að notandi virði bannið</p>
+<p>Annað sérstakt nafn er <code class="docutils literal notranslate"><span class="pre">__str__</span></code> sem skilgreinir
+<strong>útskriftaraðferð</strong>. Ef henni er sleppt koma bara upplýsingar um að um sé að
+ræða hlut af taginu Klasi þegar hlutur er prentaður, en ekkert um innihald hans.</p>
+<p><strong>Klasaaðferðir</strong> hafa fyrsta stika <code class="docutils literal notranslate"><span class="pre">cls</span></code>, og hann fær sjálfkrafa gildi sem er
+klasatagið sjálft. Í skilgreiningu klasaaðferðar eru eiginleikar ekki
+aðgengilegir eðli máls samkvæmt, en vísa má í klasabreytur með forskeyti
+<code class="docutils literal notranslate"><span class="pre">cls.</span></code> t.d. <code class="docutils literal notranslate"><span class="pre">cls.klasabreyta</span></code>. Klasaaðferðir má t.d. nota til að gefa
+klasabreytum gildi, eins og gert er í dimmer-dæminu í næsta kafla. Annað
+notkunarsvið er að láta þær skila nýjum sérstökum hlutum af klasataginu með
+tiltekna eiginleika. Um það má fræðast nánar <a class="reference external" href="https://miguendes.me/design-patterns-that-make-sense-in-python-simple-factory">hér</a>
+og <a class="reference external" href="https://iscinumpy.gitlab.io/post/factory-classmethods-in-python/">þar</a> og
+<a class="reference external" href="https://csvelocity.wordpress.com/2021/04/05/class-methods-in-python/">víðar</a>
+á netinu (fengið með leit að <em>python</em> <em>classmethod</em> <em>factory</em>).</p>
+</section>
+<section id="notkun-klasa">
+<h3><span class="section-number">16.2.2  </span>Notkun klasa<a class="headerlink" href="#notkun-klasa" title="Permalink to this heading"></a></h3>
+<p>Hlutir eru búnir til með því að kalla á smiðinn, en það er gert með því
+að nota nafn klasans:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hlutur1</span> <span class="o">=</span> <span class="n">Klasi</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">3.</span><span class="o">..</span><span class="p">)</span>
+<span class="n">hlutur2</span> <span class="o">=</span> <span class="n">Klasi</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">5.</span><span class="o">..</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Þótt hann hafi enga <em>return</em>-skipun virkar hann þannig að hann skilar nýjum hlut
+af klasataginu þar sem eiginleikum hafa verið gefin gildi.</p>
+<p>Náð er í klasabreytur og eiginleika hlutar með punkt-rithætti og sama gildir um
+köll á aðferðir og klasaaðferðir:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">e1</span> <span class="o">=</span> <span class="n">hlutur1</span><span class="o">.</span><span class="n">eiginleiki1</span> <span class="c1"># e1 fær gildið 2</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">Klasi</span><span class="o">.</span><span class="n">klasabreyta</span>    <span class="c1"># K fær gildið 42</span>
+<span class="n">hlutur2</span><span class="o">.</span><span class="n">aðferð</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>     <span class="c1"># í aðferð er self = hlutur2</span>
+<span class="n">Klasi</span><span class="o">.</span><span class="n">klasaaðferð</span><span class="p">(</span><span class="mf">6.</span><span class="o">..</span><span class="p">)</span>  <span class="c1"># í klasaaðferð er cls = Klasi</span>
+</pre></div>
+</div>
+<p>Fyrsti stikinn í (klasa)aðferðum er sem sé giltur með því sem er fyrir framan
+punktinn í kallinu og það eru einum færri viðföng en stikar.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Klasi fyrir starfsmann</p>
+<p>Hér er einfalt dæmi um klasa sem sýnir notkun smiðs og útskriftaraðferðar
+og aðferðar til að breyta eiginleika.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Starfsmaður</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nafn</span><span class="p">,</span> <span class="n">laun</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nafn</span> <span class="o">=</span> <span class="n">nafn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">laun</span> <span class="o">=</span> <span class="n">laun</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nafn</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+               <span class="sa">f</span><span class="s2">&quot;   laun </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">laun</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> kr.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">hækka_laun</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prósentuhækkun</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">laun</span> <span class="o">*=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">prósentuhækkun</span><span class="o">/</span><span class="mi">100</span>
+
+<span class="n">stm</span> <span class="o">=</span> <span class="n">Starfsmaður</span><span class="p">(</span><span class="s2">&quot;Jón Jónsson&quot;</span><span class="p">,</span> <span class="mi">500000</span><span class="p">)</span>
+<span class="n">stm</span><span class="o">.</span><span class="n">hækka_laun</span><span class="p">(</span><span class="n">prósentuhækkun</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stm</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Forritið prentar út:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Jón Jónsson
+   laun 525000 kr.
+</pre></div>
+</div>
+</div>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Launatengd gjöld</p>
+<ol class="loweralpha">
+<li><p>Prófið klasann í sýnidæminu og búið til nýja starfsmenn. Bætið svo við
+aðferð sem reiknar og skilar launatengdum gjöldum sem eru 25.9% af launum.
+Prófið hana.</p></li>
+<li><p>Bætið nú við eiginleikum símanúmeri og heimilisfangi og látið
+útskriftaraðferðina skrifa út svona:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Jón Jónsson
+   heimili  Litlugötu 42, Litlabæ
+   sími     8884444
+   laun     525000 kr.
+</pre></div>
+</div>
+</li>
+<li><p>Skrifið fall sem tekur inn lista af starfsmönnum og skilar samanlögðum
+launum þeirra og launatengdum gjöldum. Prófið.</p></li>
+</ol>
+</div>
+</section>
+<section id="daemi-um-hlutbundna-forritun-dimmer">
+<h3><span class="section-number">16.2.3  </span>Dæmi um hlutbundna forritun: Dimmer<a class="headerlink" href="#daemi-um-hlutbundna-forritun-dimmer" title="Permalink to this heading"></a></h3>
+<p>Í þessu dæmi verður líkt eftir þráðlausum fjarstýrðum ljósaperum eins og hægt er
+að kaupa t.d. í IKEA. Ljósaperur eru táknaðar með lituðum hringskífum á svörtum
+bakgrunni, og hægt er að skipta um lit og auka eða deyfa birtuna.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">colorsys</span><span class="w"> </span><span class="kn">import</span> <span class="n">rgb_to_hls</span><span class="p">,</span> <span class="n">hls_to_rgb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">to_rgb</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Pera</span><span class="p">:</span>
+
+    <span class="n">ásar</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">perustærð</span> <span class="o">=</span> <span class="mi">40</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">litur</span><span class="p">):</span>  <span class="c1"># x og y eru á bilinu [0, 5]</span>
+                                      <span class="c1"># litur er litanafn eða (r,g,b)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">RGB</span> <span class="o">=</span> <span class="n">to_rgb</span><span class="p">(</span><span class="n">litur</span><span class="p">)</span>    <span class="c1"># (r,g,b)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">birta</span> <span class="o">=</span> <span class="mi">50</span>             <span class="c1"># 50%</span>
+       <span class="n">h</span> <span class="o">=</span> <span class="n">Pera</span><span class="o">.</span><span class="n">ásar</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">litur</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="n">Pera</span><span class="o">.</span><span class="n">perustærð</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">_mynd</span> <span class="o">=</span> <span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># litaður hringur sem táknar peruna</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">stilla_birtu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">birta</span><span class="p">):</span>  <span class="c1"># birta í prósentum</span>
+       <span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">RGB</span>
+       <span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">saturation</span><span class="p">)</span> <span class="o">=</span> <span class="n">rgb_to_hls</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">birta</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">birta</span><span class="o">/</span><span class="mi">100</span><span class="p">))</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">_mynd</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">hls_to_rgb</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">birta</span><span class="p">,</span> <span class="n">saturation</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">breyta_lit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">litur</span><span class="p">):</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">RGB</span> <span class="o">=</span> <span class="n">to_rgb</span><span class="p">(</span><span class="n">litur</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">stilla_birtu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">birta</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">skila_birtu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>     <span class="c1"># í prósentum</span>
+       <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">birta</span><span class="o">*</span><span class="mi">100</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">undirbúa</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+        <span class="n">ásar</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># hnitakerfi fyllir upp í mynd</span>
+        <span class="n">ásar</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>               <span class="c1"># 5x5 hnitakerfi</span>
+        <span class="n">ásar</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">ásar</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">length</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">ásar</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">ásar</span> <span class="o">=</span> <span class="n">ásar</span>               <span class="c1"># gefa klasabreytunni ásar gildi</span>
+
+<span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">Pera</span><span class="o">.</span><span class="n">undirbúa</span><span class="p">(</span><span class="n">figure</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Pera</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Pera</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">Pera</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;violet&#39;</span><span class="p">)</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="n">Pera</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">stilla_birtu</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">p3</span><span class="o">.</span><span class="n">stilla_birtu</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">breyta_lit</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Byrjað er á að nota Matplotlib til að búa til ferningslaga mynd, kallað er á
+klasaaðferðina <code class="docutils literal notranslate"><span class="pre">undirbúa</span></code> sem fyllir upp í myndina með hnitakerfi með svörtum
+bakgrunni og hnitum frá 0 til 5 bæði í x- og y-stefnu, og loks er klasabreytan
+<code class="docutils literal notranslate"><span class="pre">ásar</span></code> frumstillt með því. Hnitakerfið er síðan notað í smiðnum til að teikna í
+það nýjar perur. Alls eru smíðaðar fjórar perur hver í sínum lit, og síðan er
+rauða peran deyfð og birtan í þeirri fjólubláu aukin, og loks er lit þeirrar
+rauðu breytt í bláan. Eftirfarandi mynd birtist:</p>
+<figure class="align-center" id="id1" style="width: 7.5cm">
+<img alt="../_images/perumynd.jpg" src="../_images/perumynd.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 16.2: </span><span class="caption-text">Nokkrar „perur“, gul, græn, deyfð blá, og björt fjólublá.</span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<div class="athugid admonition">
+<p class="admonition-title">Athugasemd: Frekari skýringar</p>
+<p>Það eru tveir verndaðir eiginleikar, <code class="docutils literal notranslate"><span class="pre">_mynd</span></code> sem er Matplotlib-bendill á
+viðkomandi hringskífu, og <code class="docutils literal notranslate"><span class="pre">_RGB</span></code> sem er <a class="reference external" href="https://en.wikipedia.org/wiki/RGB_color_model#Numeric_representations">RGB-þrennd</a>
+(þar sem rauður, grænn og blár litaþáttur fá hver um sig gildi á bilinu 0–1)
+og svo er opinber eiginleiki <code class="docutils literal notranslate"><span class="pre">birta</span></code> sem er tala á bilinu 0 (slökkt) til
+100 (hámarksbirta). Smiðurinn teiknar viðeigandi hringskífu og gefur
+eiginleikunum gildi: <code class="docutils literal notranslate"><span class="pre">_mynd</span></code> kemur úr plt.plot, <code class="docutils literal notranslate"><span class="pre">_RGB</span></code> úr stikanum
+<code class="docutils literal notranslate"><span class="pre">litur</span></code>, og <code class="docutils literal notranslate"><span class="pre">birta</span></code> er sett 50%. Loks eru þrjár aðferðir, til að stilla
+og skila birtu (gefinni í prósentum), og til að breyta lit.</p>
+<p>Nokkur hjálparföll koma við sögu, <code class="docutils literal notranslate"><span class="pre">to_rgb</span></code> sem breytir litanafni í
+RGB-þrennd, <code class="docutils literal notranslate"><span class="pre">rgb_to_hls</span></code> sem breytir yfir í <a class="reference external" href="https://en.wikipedia.org/wiki/HSL_and_HSV">HLS-þrennd</a> (<em>hue</em>, <em>lightness</em>,
+<em>saturation</em>) og <code class="docutils literal notranslate"><span class="pre">hls_to_rgb</span></code> sem breytir til baka. Birtu peru er stýrt með
+<em>lightness</em> tilsvarandi HLS-þenndar. Einnig sést hvernig aðferð getur kallað
+á aðra aðferð: <code class="docutils literal notranslate"><span class="pre">breyta_lit</span></code> kallar á <code class="docutils literal notranslate"><span class="pre">stilla_birtu</span></code>.</p>
+</div>
+</section>
+<section id="lifandi-matplotlib-mynd">
+<h3><span class="section-number">16.2.4  </span>Lifandi Matplotlib mynd<a class="headerlink" href="#lifandi-matplotlib-mynd" title="Permalink to this heading"></a></h3>
+<p>Hér er svo skemmtilegt tvist á notkun dimmer-klasans þar sem bætt er við sleða
+(<em>slider</em>) og þar með líkt enn betur eftir raunverulegum dimmer. Til að fá
+forritið til að virka í JupyterLab og verða lifandi þarf að nota annan bakenda á
+Matplotlib teikningar en þann venjulega. Hér er miðað við svonefndan <em>widget</em>
+bakenda sem opnar lifandi (<em>interactive</em>) mynd inni í vinnubókinni, en aðrir
+bakendar eru m.a. <em>tk</em> og <em>qt</em> sem báðir teikna í sérstakan glugga á skjánum.
+KJ hefur ekki tekist að fá þetta dæmi til að keyra í Google Colab.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">widget</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">búa_til_sleða</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slider</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">nota_dimmer</span><span class="p">(</span><span class="n">gildi</span><span class="p">):</span>
+        <span class="n">p</span><span class="o">.</span><span class="n">stilla_birtu</span><span class="p">(</span><span class="n">gildi</span><span class="p">)</span>
+    <span class="n">sleðaásar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">],</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">sleði</span> <span class="o">=</span> <span class="n">Slider</span><span class="p">(</span><span class="n">sleðaásar</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">valmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">valmax</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">valinit</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">sleði</span><span class="o">.</span><span class="n">on_changed</span><span class="p">(</span><span class="n">nota_dimmer</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sleði</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">Pera</span><span class="o">.</span><span class="n">undirbúa</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pera</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">sleði</span> <span class="o">=</span> <span class="n">búa_til_sleða</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id2" style="width: 7.5cm">
+<img alt="../_images/pera-me%C3%B0-sle%C3%B0a.jpg" src="../_images/pera-me%C3%B0-sle%C3%B0a.jpg" />
+<figcaption>
+<p><span class="caption-number">Mynd 16.3: </span><span class="caption-text">Pera með sleða.</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa mynd"></a></p>
+</figcaption>
+</figure>
+<div class="aefing admonition">
+<p class="admonition-title">Æfing: Líkt eftir dimmer</p>
+<ol class="loweralpha simple">
+<li><p>Keyrið forritin í þessum kafla</p></li>
+<li><p>Prófið aðra liti, sbr. <a class="reference external" href="https://en.wikipedia.org/wiki/Web_colors#Extended_colors">litatöflu á
+Wikipedíu</a></p></li>
+<li><p>Prófið bakendana <cite>qt</cite> og <cite>tk</cite> (það þarf að núllstilla JupyterLab með <em>Restart
+Kernel</em> ef skipt er um bakenda)</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="erfir-i-python">
+<h2><span class="section-number">16.3  </span>Erfðir í Python<a class="headerlink" href="#erfir-i-python" title="Permalink to this heading"></a></h2>
+<p>Sniðmát fyrir Python klasa sem erfist frá öðrum klasa er svona:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">undirklasi</span><span class="p">(</span><span class="n">yfirklasi</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">...</span><span class="p">):</span>  <span class="c1"># smiður</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>       <span class="c1"># kall á smið yfirklasa</span>
+        <span class="n">nýr_eiginleiki</span> <span class="o">=</span> <span class="n">y</span>        <span class="c1">#</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">endurskilgreind_aðferð</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">ný_aðferð</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>Grunnreglan er sú að allir eiginleikar og aðferðir klasa erfast til undirklasa,
+en undirklasinn getur svo bæði endurskilgreint aðferðir og bætt við nýjum.</p>
+<p>Hugtak nátengt erfðum er <strong>afstrakt klasi</strong> eða <strong>hugrænn</strong> (<em>abstract class</em>).
+Það er klasi sem ekki er hægt að smíða tilvik af en aðrir klasar geta erft.
+Slíkur klasi inniheldur þá eiginleika sem eru sameiginlegir með öllum erfingjum.
+Aðferðir hans geta svo ýmist verið <strong>afstrakt</strong> (þær verður að endurskilgreina)
+eða <strong>konkret</strong>. Hugmyndin á bak við afstrakt klasa er að búa til sniðmát fyrir
+undirklasana. Afstrakt aðferðir geta t.d. haft <code class="docutils literal notranslate"><span class="pre">pass</span></code> sem sína einu skipun, og
+afstrakt eiginleikum má gefa gildið <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<section id="utfaersla-flatarmyndaklasa">
+<h3><span class="section-number">16.3.1  </span>Útfærsla flatarmyndaklasa<a class="headerlink" href="#utfaersla-flatarmyndaklasa" title="Permalink to this heading"></a></h3>
+<p>Sýnidæmin sem hér fylgja eru Python útfærslur á flatarmyndaklösunum sem kynntir
+voru í kafla <a class="reference internal" href="#um-hlutbundna-forritun"><span class="std std-numref">16.1</span></a>. Byrjað er á að skilgreina
+afstrakt klasann <code class="docutils literal notranslate"><span class="pre">Flatarmynd</span></code> sem allar flatarmyndir erfa frá.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Flatarmynd</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">radians</span><span class="p">,</span> <span class="n">pi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="o">,</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Flatarmynd</span><span class="p">:</span>
+
+    <span class="n">ásar</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">staðsetning</span> <span class="o">=</span> <span class="n">staðsetning</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">litur</span> <span class="o">=</span> <span class="n">litur</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_polygon</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_teikna</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">breyta_stærð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margf</span><span class="p">):</span>
+        <span class="c1"># Margfalda allar stærðir með margf</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">flatarmál</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">stroka_út</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Aðeins stroka út í konkret klösum</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_polygon</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_polygon</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_teikna</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stroka_út</span><span class="p">()</span>
+        <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_útlínur</span><span class="p">()</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ásar</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">litur</span><span class="p">)</span>  <span class="c1"># teikna</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_polygon</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># af tagi Matplotlib Polygon</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_útlínur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">undirbúa</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">figure</span><span class="p">):</span>
+        <span class="n">ásar</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">ásar</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">ásar</span> <span class="o">=</span> <span class="n">ásar</span>  <span class="c1"># klasabreyta fær gildi</span>
+</pre></div>
+</div>
+<p>Klasinn hefur eiginleikana sem sýndir eru í klasaritinu á mynd
+<a class="reference internal" href="#klasarit"><span class="std std-numref">16.1</span></a>, <code class="docutils literal notranslate"><span class="pre">staðsetning</span></code>, <code class="docutils literal notranslate"><span class="pre">flatarmál</span></code> og <code class="docutils literal notranslate"><span class="pre">litur</span></code>, og auk
+þess verndaða eiginleikann <code class="docutils literal notranslate"><span class="pre">_polygon</span></code> sem er Matplotlib bendill á útlínur
+myndarinnar. Verndaða aðferðin <code class="docutils literal notranslate"><span class="pre">_teikna</span></code> býr til sjálfa teikninguna, og í
+seinni sýnidæmunum kemur í ljós að hana þarf ekki að endurskilgreina í
+undirklösunum, heldur er hægt að nýta hana óbreytta. Það sama gildir um
+<code class="docutils literal notranslate"><span class="pre">stroka_út</span></code>. Hins vegar þurfa undirklasarnir að útfæra báðar afstrakt
+aðferðirnar <code class="docutils literal notranslate"><span class="pre">breyta_stærð</span></code> og <code class="docutils literal notranslate"><span class="pre">_útlínur</span></code> (sú seinni er vernduð).
+Flatarmálið sýnir hvernig hægt er að skilgreina leseiginleika, sem er ekki
+hægt að breyta beint, og það þarf auðvitað líka að útfæra í öllum
+undirklösunum (<a class="reference external" href="https://www.pythontutorial.net/python-oop/python-readonly-property/">vefsíða sem útskýrir leseiginleika nánar</a>).
+Klasaskilgreiningin endar svo á klasaaðferðinni undirbúa sem er lík
+samsvarandi aðferð í kafla <a class="reference internal" href="#daemi-um-hlutbundna-forritun-dimmer"><span class="std std-numref">16.2.3</span></a>.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Hringur</span></code> er undirklasi af <code class="docutils literal notranslate"><span class="pre">Flatarmynd</span></code> sem bætir við eiginleikanum
+<code class="docutils literal notranslate"><span class="pre">geisli</span></code> og skilgreinir auk þess konkret útfærslur á <code class="docutils literal notranslate"><span class="pre">breyta_stærð</span></code>,
+<code class="docutils literal notranslate"><span class="pre">flatarmál</span></code> og <code class="docutils literal notranslate"><span class="pre">_útlínur</span></code>.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Hringur</p>
+<p>Takið eftir að smiðurinn endar á að kalla á yfirsmiðinn öfugt við sniðmátið
+fremst í kafla <a class="reference internal" href="#erfir-i-python"><span class="std std-numref">16.3</span></a>. Þess þarf því að yfirsmiðurinn kallar á
+<code class="docutils literal notranslate"><span class="pre">_teikna</span></code> sem kallar á <code class="docutils literal notranslate"><span class="pre">_útlínur</span></code> sem gerir ráð fyrir að eiginleikinn
+<code class="docutils literal notranslate"><span class="pre">geisli</span></code> sé kominn.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Hringur</span><span class="p">(</span><span class="n">Flatarmynd</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">,</span> <span class="n">geisli</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geisli</span> <span class="o">=</span> <span class="n">geisli</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">breyta_stærð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margfaldari</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geisli</span> <span class="o">*=</span> <span class="n">margfaldari</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_teikna</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">flatarmál</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geisli</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_útlínur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">360</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geisli</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">staðsetning</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Rétthyrningur</span></code> er líka undirklasi flatarmyndar. Hann bætir við <code class="docutils literal notranslate"><span class="pre">breidd</span></code> og <code class="docutils literal notranslate"><span class="pre">hæð</span></code>
+og útfærir sömu konkret aðferðirnar og <code class="docutils literal notranslate"><span class="pre">Hringur</span></code>.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Rétthyrningur</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Rétthyrningur</span><span class="p">(</span><span class="n">Flatarmynd</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">,</span> <span class="n">breidd</span><span class="p">,</span> <span class="n">hæð</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breidd</span> <span class="o">=</span> <span class="n">breidd</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hæð</span> <span class="o">=</span> <span class="n">hæð</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stefna</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">flatarmál</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">breidd</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hæð</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">breyta_stærð</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">margfaldari</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breidd</span> <span class="o">*=</span> <span class="n">margfaldari</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hæð</span> <span class="o">*=</span> <span class="n">margfaldari</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_teikna</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">snúa</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gráður</span><span class="p">):</span>
+        <span class="c1"># Rangsælis</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stefna</span> <span class="o">+=</span> <span class="n">gráður</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_teikna</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_útlínur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">staðsetning</span>
+        <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">breidd</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hæð</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stefna</span><span class="p">)</span>
+        <span class="n">snúningsfylki</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">cos</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="o">-</span><span class="n">sin</span><span class="p">(</span><span class="n">s</span><span class="p">)],</span> <span class="p">[</span><span class="n">sin</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">cos</span><span class="p">(</span><span class="n">s</span><span class="p">)]])</span>
+        <span class="n">XY</span> <span class="o">=</span> <span class="n">snúningsfylki</span> <span class="o">@</span> <span class="p">[[</span><span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="o">-</span><span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">]]</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">XY</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span> <span class="o">+</span> <span class="n">XY</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<p>Svo má skilgreina ferning sem undirklasa rétthyrnings. Hann sýnir enn betur
+hvernig eiginleikar og aðferðir erfast frá yfirklösum. Hér er nánast
+allt endurnýtt og aðeins þarf að búa til nýjan smið, sem auk þess nýtir sér smið
+yfirklasans til að búa til hlut.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Ferningur</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Ferningur</span><span class="p">(</span><span class="n">Rétthyrningur</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">,</span> <span class="n">breidd</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">staðsetning</span><span class="p">,</span> <span class="n">litur</span><span class="p">,</span> <span class="n">breidd</span><span class="p">,</span> <span class="n">breidd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Að lokum er hér sýnidæmi um einfalda notkun á þessum klösum. Þess er
+gætt að myndin sem búin er til sé ferningslaga svo flatarmyndirnar verði ekki
+bjagaðar.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Teikning flatarmynda</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">figure</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">Flatarmynd</span><span class="o">.</span><span class="n">undirbúa</span><span class="p">(</span><span class="n">figure</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Rétthyrningur</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">breidd</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">hæð</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">Hringur</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">geisli</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">Ferningur</span><span class="p">((</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">breidd</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">R</span><span class="o">.</span><span class="n">breyta_stærð</span><span class="p">(</span><span class="mf">1.3</span><span class="p">)</span>
+<span class="n">R</span><span class="o">.</span><span class="n">snúa</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Flatarmál hrings = </span><span class="si">{</span><span class="n">H</span><span class="o">.</span><span class="n">flatarmál</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Forritsbúturinn prentar út:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">Flatarmál</span> <span class="pre">hrings</span> <span class="pre">=</span> <span class="pre">12.566</span></code></p>
+</div></blockquote>
+<p>og birtir eftirfarandi mynd:</p>
+<figure class="align-center" style="width: 8cm">
+<img alt="../_images/flatarmyndir.jpg" src="../_images/flatarmyndir.jpg" />
+</figure>
+</div>
+</section>
+<section id="retthyrningur-sem-snyst">
+<h3><span class="section-number">16.3.2  </span>Rétthyrningur sem snýst<a class="headerlink" href="#retthyrningur-sem-snyst" title="Permalink to this heading"></a></h3>
+<p>Til gamans sýnum við hér að lokum notkun flatarmyndaklasans til að búa til
+hreyfimynd. Eins og með myndina í kafla <a class="reference internal" href="#lifandi-matplotlib-mynd"><span class="std std-numref">16.2.4</span></a> hefur
+KJ ekki tekist að fá þessa til að birtast í Google Colab, aðeins í JupyterLab,
+og þá annaðhvort með bakendanum <em>tk</em> eða með <em>qt</em> (<em>widget</em>, sem notað var í
+kafla <a class="reference internal" href="#lifandi-matplotlib-mynd"><span class="std std-numref">16.2.4</span></a> virkar ekki). Auk þess þarf e.t.v.
+að gefa skipun <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">ipympl</span></code> áður en keyrt er.</p>
+<div class="synidaemi admonition">
+<p class="admonition-title">Sýnidæmi: Snúningur</p>
+<p>Best er að setja eftirfarandi tvær skipanir í sér glugga sem aðeins þarf að
+keyra einu sinni.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">tk</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Hér er svo forrit sem býr til rétthyrning og lætur hann snúast í heilan
+hring. Það má keyra aftur og aftur.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Flatarmynd</span><span class="o">.</span><span class="n">undirbúa</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">Rétthyrningur</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">breidd</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">hæð</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">180</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">R</span><span class="o">.</span><span class="n">snúa</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../kafli15/" class="btn btn-neutral float-left" title="15 Pandas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../verkefnafyrirsogn/" class="btn btn-neutral float-right" title="V E R K E F N I" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

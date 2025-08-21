@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. 3. Raki, rakaflutningur og rakaþétting &mdash; Húsagerð </title>
+  <title>3. Raki, rakaflutningur og rakaþétting &mdash; Húsagerð </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
@@ -26,6 +26,7 @@
         <script src="../_static/js/eqt.js"></script>
         <script src="../_static/translations.js"></script>
         <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="../_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -125,7 +126,7 @@
 
     <link rel="index" title="Atriðaskrá" href="../genindex/" />
     <link rel="search" title="Leit" href="../search/" />
-    <link rel="next" title="4. 4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti" href="../kafli04/" />
+    <link rel="next" title="4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti" href="../kafli04/" />
     <link rel="prev" title="2. Varmaflutningur, kólnunartölur og hitastig í sniði" href="../kafli02/" />
 
 
@@ -162,15 +163,31 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../kafli01/">1. Kafli - Inngangur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli02/">2. Varmaflutningur, kólnunartölur og hitastig í sniði</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 3. Raki, rakaflutningur og rakaþétting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#almennt">3.1. 3.1 Almennt</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#raki-i-byggingarefnum-og-byggingum">3.2. 3.2 Raki í byggingarefnum og byggingum</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rakaflutningur">3.3. 3.3 Rakaflutningur</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#utreikningur-a-rakaflutningi">3.4. 3.4 Útreikningur á rakaflutningi</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#heimildir-og-itarefni">3.5. Heimildir og ítarefni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Raki, rakaflutningur og rakaþétting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#almennt">3.1. Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#raki-i-byggingarefnum-og-byggingum">3.2. Raki í byggingarefnum og byggingum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#byggingarraki">3.2.1. Byggingarraki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loftraki">3.2.2. Loftraki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#urkoma-og-slagregn">3.2.3. Úrkoma og slagregn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jarraki">3.2.4. Jarðraki</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. 4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rakaflutningur">3.3. Rakaflutningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rakaflaei">3.3.1. Rakaflæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rakastreymi-i-lofti">3.3.2. Rakastreymi í lofti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#harpipuflutningur">3.3.3. Hárpípuflutningur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utsveim-og-varmasveim">3.3.4. Útsveim og varmasveim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#utreikningur-a-rakaflutningi">3.4. Útreikningur á rakaflutningi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rakaflutningur-rakaastand-og-rakaetting">3.4.1. Rakaflutningur, rakaástand og rakaþétting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#reiknaur-rakaflutningur-i-byggingarhluta-og-metin-haetta-a-rakaettingu">3.5. Reiknaður rakaflutningur í byggingarhluta og metin hætta á rakaþéttingu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#heimildir-og-itarefni">3.6. Heimildir og ítarefni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kafli04/">4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli05/">5. 5 Veðurfar og inniaðstæður</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli06/">6. 6 Byggingar - Lögun og fyrirkomulag</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../kafli07/">7. 7. Byggingarhlutar og húsagerð</a></li>
@@ -198,7 +215,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3. </span>3. Raki, rakaflutningur og rakaþétting</li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Raki, rakaflutningur og rakaþétting</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/edbook/haskoli-islands/blob/master/projects/byg601g/kafli03.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -213,9 +230,9 @@
 <p>Björn Marteinsson</p>
 </div>
 <section id="raki-rakaflutningur-og-rakaetting">
-<h1><span class="section-number">3. </span>3. Raki, rakaflutningur og rakaþétting<a class="headerlink" href="#raki-rakaflutningur-og-rakaetting" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3. </span>Raki, rakaflutningur og rakaþétting<a class="headerlink" href="#raki-rakaflutningur-og-rakaetting" title="Permalink to this heading"></a></h1>
 <section id="almennt">
-<h2><span class="section-number">3.1. </span>3.1 Almennt<a class="headerlink" href="#almennt" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1. </span>Almennt<a class="headerlink" href="#almennt" title="Permalink to this heading"></a></h2>
 <p>Raki í byggingum og byggingarhlutum orsakast af fjórum megin ástæðum;</p>
 <ul class="simple">
 <li><p>Byggingarraki</p></li>
@@ -229,20 +246,15 @@ einnig valdið óhollustu, t.d. vegna rakaþéttingar. Það er því mikilvægt
 að hafa þekkingu til að geta metið rakaálag á byggingarhluta og
 byggingar, og geta kannað hvort rakaástand verði efnum og mannvirki
 óhagstætt.</p>
-<p>Almennar líkingar og gildi;</p>
-<p>Almenni gasfastinn; R=8314,3 J/(kmol∙K)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Yfirborðsspenna vatns; 78∙(1-0,0032∙)∙10<sup>-3</sup> N/m</p>
-<p>Gufuhleypni í lofti (DIN 52615); <a href="#id1"><span class="problematic" id="id2">|image1|</span></a> kg/(mPas)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p><strong>Almennar líkingar og gildi;</strong></p>
+<p>Almenni gasfastinn;        R=8314,3 J/(kmol∙K)</p>
+<p>Yfirborðsspenna vatns;     <span class="math notranslate nohighlight">\(\sigma \cong 78 \cdot (1-0,0032\cdot\theta) \cdot 10^{-3}  N/m\)</span></p>
+<p>Gufuhleypni í lofti (DIN 52615); <span class="math notranslate nohighlight">\(\delta_0(T)=2.0 \cdot 10^{-7} \frac{T^{0.81}}{P_a} kg/(m \cdot Pa \cdot s)\)</span></p>
 </section>
 <section id="raki-i-byggingarefnum-og-byggingum">
-<h2><span class="section-number">3.2. </span>3.2 Raki í byggingarefnum og byggingum<a class="headerlink" href="#raki-i-byggingarefnum-og-byggingum" title="Permalink to this heading"></a></h2>
-<p>Byggingarraki</p>
+<h2><span class="section-number">3.2. </span>Raki í byggingarefnum og byggingum<a class="headerlink" href="#raki-i-byggingarefnum-og-byggingum" title="Permalink to this heading"></a></h2>
+<section id="byggingarraki">
+<h3><span class="section-number">3.2.1. </span>Byggingarraki<a class="headerlink" href="#byggingarraki" title="Permalink to this heading"></a></h3>
 <p>Af náttúrulegum ástæðum, eða tengt framleiðsluferli sumra efna, þá
 innihalda efnin rakamagn sem getur verið hærra heldur en sem nemur
 jafnvægisraka (fjallað er um hugtakið jafnvægisraki í námsefni um
@@ -257,163 +269,191 @@ nokkrum tugum lítra á hvern rúmmetra steypu.</p>
 byggingartíma, og síðan gert ráð fyrir að byggingarefnin nái að losi sig
 við byggingarraka á notkunartíma þar til einhverju jafnvægi er náð, sem
 stjórnast af umhverfisáraun hverju sinni.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Loftraki</p>
+</section>
+<section id="loftraki">
+<h3><span class="section-number">3.2.2. </span>Loftraki<a class="headerlink" href="#loftraki" title="Permalink to this heading"></a></h3>
 <p>Mettunarraki lofts er ýmist gefinn upp sem gufuinnihald, kg/kg (eða
 kg/m<sup>3</sup>), eða rakaþrýstingur, Pa. Upplýsingar um mettunarraka
 má finna t.d. í Mollier-línuriti eða í töflum (sjá aftast í kaflanum).
 Mettunarrakaþrýsting lofts má einnig nálga samkvæmt jöfnu 3.1 sem er
-gefin upp í DIN 4108 TEIL 5 og sögð gilda á hitasviðinu –20 til 30 C.</p>
-<div class="line-block">
-<div class="line"><br /></div>
+gefin upp í DIN 4108 TEIL 5 og sögð gilda á hitasviðinu –20 til 30 °C.</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.1</p>
+<div class="math notranslate nohighlight">
+\[p_{v,sat}(\theta) = a \cdot (b+ \frac{\theta}{100})^n , (Pa)\]</div>
 </div>
-<p><a href="#id3"><span class="problematic" id="id4">|image2|</span></a> , (Pa) (3.1)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>þar sem  a b n</p>
-<p>0    30; 288,68 1,098 8,02</p>
-<p>-20   0; 4,689 1,486 12,3</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Hlutfallsraki innilofts (% HR) er háður rakamagni lofts (t.d.
-g/m<sup>3</sup>), eða hlutfallsþrýstingi vatnsgufu, og lofthita.
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\theta\)</span></p></td>
+<td><p>a</p></td>
+<td><p>b</p></td>
+<td><p>n</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0 \leq \theta \leq 30\)</span></p></td>
+<td><p>288,68</p></td>
+<td><p>1,098</p></td>
+<td><p>8,02</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-20 \leq \theta \leq 0\)</span></p></td>
+<td><p>4,689</p></td>
+<td><p>1,486</p></td>
+<td><p>12,3</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hlutfallsraki innilofts (% HR) er háður rakamagni lofts (t.d. <span class="math notranslate nohighlight">\(g/m^3\)</span> ), eða hlutfallsþrýstingi vatnsgufu, og lofthita.
 Loftrakinn reiknast ætíð sem hlutfallstala af mettunarraka loftsins (sem
 er háður lofthita). Milli mettunarþrýstings (Pa) og mettunarraka
-(kg/m<sup>3</sup>) er beint samband eins og augljóst er af almenna
+(<span class="math notranslate nohighlight">\(kg/m^3\)</span> ) er beint samband eins og augljóst er af almenna
 gaslögmálinu, jafna 3.2</p>
-<p><a href="#id5"><span class="problematic" id="id6">|image3|</span></a> (3.2)</p>
-<p>þar sem w<sub>sat</sub> mettunarraki, kg/m<sup>3</sup></p>
-<p>p<sub>sat</sub> mettunarþrýstingur, Pa</p>
-<p>M<sub>H2O</sub> mólmassi vatns, kg/kmol</p>
-<p>R almenni gasfastinn, J/(kmol·K)</p>
-<p>T hitastig, K</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.2</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[w_{sat} = p_{sat} \cdot \frac{M_{H_{2}O}}{R \cdot T}\]</div>
+</div></blockquote>
 </div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(w_{sat}\)</span></p></td>
+<td><p>Mettunarraki</p></td>
+<td><p><span class="math notranslate nohighlight">\({kg/m^3}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_{sat}\)</span></p></td>
+<td><p>Mettunarþrýstingur</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M_{H_{2}O}\)</span></p></td>
+<td><p>mólmassi vatns</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{kg}{kmol}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>almenni gasfastinn</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{J}{kmol \cdot K}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>hitastig</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
 <p>Hlutfallsraki lofts er skilgreindur eins og sýnt er í jöfnu 3.3 (nákvæm
 hliðstæða gildir ef í stað rakaþrýstings er notað samsvarandi rakamagn).</p>
-<p><a href="#id7"><span class="problematic" id="id8">|image4|</span></a> (3.3)</p>
-<p>þar sem  hlutfallsraki (hlutfallstala eða %)</p>
-<p>p<sub>v</sub> rakaþrýstingur lofts, Pa</p>
-<p>p<sub>v,sat</sub> mettunarþrýstingur vatnsgufu í lofti, Pa</p>
-<p>T aflfræðilegt hitastig, K</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<blockquote>
+<div><div class="jafna admonition">
+<p class="admonition-title">Jafna 3.3</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\phi = \frac{p_v}{p_{v,sat}(T)}\]</div>
+</div></blockquote>
 </div>
+</div></blockquote>
+<p>þar sem</p>
 <table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <tbody>
-<tr class="row-odd"><td><p>Tafla 3.1 Rakaframleiðsla í íbúðarhúsnæði</p></td>
-<td></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phi\)</span></p></td>
+<td><p>Hlutfallsraki</p></td>
+<td><p>Hlutfallstala eða %</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_v\)</span></p></td>
+<td><p>Rakaþrýstingur lofts</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(P_{w,sat}\)</span></p></td>
+<td><p>Mettunarþrýstingur vatnsgufu í lofti</p></td>
+<td><p>Pa</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>Aflfræðilegt hitastig</p></td>
+<td><p>K</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Tafla 3.1 </span><span class="caption-text"><em>Tafla 3.1 Rakaframleiðsla í íbúðarhúsnæði</em></span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Lýsing</strong></p></th>
+<th class="head"><p><strong>Rakamagn</strong></p></th>
+<th class="head"><p><strong>Heimild</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td><p><em>kg / sólarhr.</em></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Lýsing</p></td>
-<td><p>Rakamagn</p>
-<p>kg /sólarhr.</p>
-</td>
-<td><p>Heimild</p></td>
-</tr>
-<tr class="row-odd"><td><p>Íbúð (danskar tölur) :</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p><strong>Íbúð (danskar tölur):</strong></p></td>
+<td></td>
 <td><p>/1/</p></td>
 </tr>
 <tr class="row-even"><td><p>Matargerð, þvottar og frá íbúum</p></td>
 <td><p>15</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-</tr>
-<tr class="row-even"><td><p>Fjögurra manna fjölskylda (amerískar tölur) :</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p><strong>Fjögurra manna fjölskylda (amerískar tölur):</strong></p></td>
+<td></td>
 <td><p>/2/</p></td>
 </tr>
-<tr class="row-odd"><td><p>Eldun (3 máltíðir á dag)</p></td>
+<tr class="row-even"><td><p>Eldun (3 máltíðir á dag)</p></td>
 <td><p>0,9</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Uppþvottur (3 x dag ??)</p></td>
+<tr class="row-odd"><td><p>Uppþvottur (3 x dag ??)</p></td>
 <td><p>0,45</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>Bað - sturta</p></td>
+<tr class="row-even"><td><p>Sturta</p></td>
 <td><p>0,2</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><ul class="simple">
-<li><p>kar</p></li>
-</ul>
-</td>
+<tr class="row-odd"><td><p>Bað</p></td>
 <td><p>0,05</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>Þvottur (1 x viku)</p></td>
+<tr class="row-even"><td><p>Þvottur (1 x viku)</p></td>
 <td><p>1,8</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Þurrka þvott inni eða barkalaus þurrkari</p></td>
+<tr class="row-odd"><td><p>Þurrka þvott inni eða barkalaus þurrkari</p></td>
 <td><p>11,7</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>Þvo gólf (pr. 10 m2)</p></td>
+<tr class="row-even"><td><p>Þvo gólf (pr. 10 m²)</p></td>
 <td><p>1,3</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Íbúar</p></td>
+<tr class="row-odd"><td><p>Íbúar</p></td>
 <td><p>5,4</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <p>/1/ SBI Anvisning 76</p>
-<p>/2/ Laaly, H.O. (1992) The Science and Technology of Traditional and
-Modern Roofing Systems, Laaly Scientific Publishing, Los Angeles, CA</p>
+<p>/2/ Laaly, H.O. (1992) The Science and Technology of Traditional and Modern Roofing Systems,
+Laaly Scientific Publishing, Los Angeles, CA</p>
 <p>Raki í innilofti er alltaf háður útiloftraka og rakagjöf til innilofts,
 en getur einnig tímabundið verið háður öðrum orsökum s.s. byggingarraka,
 leka vegna úrkomu eða frá lögnum og loks vegna jarðvegsraka. Útfrá
@@ -423,30 +463,21 @@ inniheldur það rakamagn sem loftið hafði sem útiloft, auk þess raka sem
 loftið tekur í sig þann tíma sem það er inni. Rakaviðbótin (fyrir hvern
 m<sup>3</sup> innilofts) er því háð tveim atriðum þ.e. loftskiptum í
 húsinu (loftræsingu) og rakagjöf innanhúss, sjá töflu 3.1.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Rakamagn í innilofti má almennt reikna eins og jafna 3.4 sýnir, þar sem
 miðað er við að rakagjöf hefjist á tíma t=0;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.4</p>
+<div class="math notranslate nohighlight">
+\[w_{i} = w_e + \frac{G}{n \cdot V} \cdot (1 - e^{-nt})\]</div>
 </div>
-<p><a href="#id9"><span class="problematic" id="id10">|image5|</span></a> (3.4)</p>
-<p>þar sem w<sub>i</sub> rakamagn í innilofti, kg/m<sup>3</sup></p>
-<p>w<sub>e</sub> rakamagn í útilofti, kg/m<sup>3</sup></p>
-<p>G rakabæting, kg/klst</p>
-<p>n fjöldi loftskipta, 1/klst</p>
-<p>V loftræst rými, m<sup>3</sup></p>
-<p>t tími, h</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>þar sem</p>
 <p>Af jöfnu 3.4 má sjá að með vaxandi tíma þá nálgast lausnin að verða
-stöðug; jafna 3.5</p>
-<div class="line-block">
-<div class="line"><br /></div>
+stöðug; Jafna 3.5</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.5</p>
+<div class="math notranslate nohighlight">
+\[w_i = w_e + \frac{G}{n \cdot V}\]</div>
 </div>
-<p><a href="#id11"><span class="problematic" id="id12">|image6|</span></a> (3.5)</p>
 <p>Til þess að taka samtímis tillit til áhrifa rakagjafar og loftskipta á
 inniloftraka þá er rakagjöfin iðulega gefin upp sem rakamagn á hvern
 rúmmetra í loftskiptum á tímaeiningu, g/(m<sup>3</sup>·klst). Rakamagn
@@ -458,15 +489,9 @@ fyrir 1 loftskipti á klukkustund um 2 g/m<sup>3</sup> fyrir
 300m<sup>3</sup> íbúð. Rakagjöf til innilofts, reiknað á loftskiptamagn,
 er hugsanlega minni hér á Reykjavíkur-svæðinu vegna ódýrrar hitunarorku
 og því hugsanlega mikillar loftræstingar.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Í staðlinum ÍST EN ISO 13788:2012 er sett fram tillaga að reiknislegri
 rakabætingu í húsum, reiknað á hvern rúmmetra í loftskiptum og háð
 útihita, sjá línurit 3.1.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Útfrá upplýsingum um lofthita og raka í útilofti, gefinn innihita og
 rakagjöf þá má reikna hvernig loftraki innilofts breytist eftir
 árstíðum, línurit 3.2. Í íbúðarhúsnæði er rakagjöf mismunandi eftir
@@ -474,37 +499,14 @@ herbergjum og loftræsting getur einnig verið mismunandi. Þannig má t.d.
 búast við að tímabundið geti loftraki orðið mjög hár í baðherbergjum og
 loftraki í svefnherbergjum getur einnig orðið allhár að næturlagi ef
 lítið er loftræst.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/kafli03_html_9dfa1c42a695b480.png" id="picture-8"><img alt="../_images/kafli03_html_9dfa1c42a695b480.png" id="picture-8" src="../_images/kafli03_html_9dfa1c42a695b480.png" style="width: 362px; height: 226px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Línurit 3.1: Reiknisleg rakabæting í inniloft; (0-8 g/m<sup>3</sup>á
-rúmmetra í loftskiptum) (Heimild: ÍST EN ISO 13788:2012)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/kafli03_html_3cb60cec810cc415.png" id="picture-9"><img alt="../_images/kafli03_html_3cb60cec810cc415.png" id="picture-9" src="../_images/kafli03_html_3cb60cec810cc415.png" style="width: 363px; height: 260px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Línurit 3.2: Hlutfallsraki lofts innanhúss í Reykjavík fyrir mismunandi
-rakabætingu (0-8 g/m<sup>3</sup>) og innihita 20°C. Útiaðstæður meðaltal
-áranna 1996-2004.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<a class="reference internal image-reference" href="myndir/kafli03/linurit1.png" id="picture-8"><img alt="myndir/kafli03/linurit1.png" id="picture-8" src="myndir/kafli03/linurit1.png" style="width: 362px; height: 226px;" /></a>
+<p><em>Línurit 3.1: Reiknisleg rakabæting í inniloft</em>; (<span class="math notranslate nohighlight">\(0-8 g/m^3\)</span> <em>á
+rúmmetra í loftskiptum)</em>
+<em>(Heimild: ÍST EN ISO 13788:2012)</em></p>
+<a class="reference internal image-reference" href="myndir/kafli03/linurit2.png" id="picture-9"><img alt="myndir/kafli03/linurit2.png" id="picture-9" src="myndir/kafli03/linurit2.png" style="width: 363px; height: 260px;" /></a>
+<p><em>Línurit 3.2: Hlutfallsraki lofts innanhúss í Reykjavík fyrir mismunandi
+rakabætingu (0-8 g/m:sup:`3`) og innihita 20°C. Útiaðstæður meðaltal
+áranna 1996-2004.</em></p>
 <p>Almennt má þó miða við (og stutt af mælingum í húsum) að algengur
 loftraki í íbúðarhúsum hérlendis sé á bilinu 25-40 %HR að vetrarlagi,
 eða rakagjöf 2-4 g/loftræstan m<sup>3</sup>. Til viðmiðunar má nefna að
@@ -512,65 +514,29 @@ ef rakinn fer yfir 40-45 % þegar kalt er úti þá verður rakaþétting innan
 á tvöföldu einangrunargleri. Að sumarlagi fer loftrakinn talsvert hærra
 að skaðlausu, eða upp í 50-60 %HR; þ.e. samsvarar rakabætingu í inniloft
 svo nemur allt að tæpum 4 g/m<sup>3</sup>.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Úrkoma og slagregn:</p>
+</section>
+<section id="urkoma-og-slagregn">
+<h3><span class="section-number">3.2.3. </span>Úrkoma og slagregn<a class="headerlink" href="#urkoma-og-slagregn" title="Permalink to this heading"></a></h3>
 <p>Úrkoma og slagregn eru oft beinn áhrifavaldur á efnisraka, jafnvel í
 veggjum, þar sem vatnsfilma á vatnsdrægu yfirborði mun ætið hafa áhrif á
 rakaástand efnisins.</p>
 <p>Ótruflað slagregn á vegg er reiknað samkvæmt jöfnu 3.6.</p>
-<p><a href="#id13"><span class="problematic" id="id14">|Shape1|</span></a></p>
-<p>Mynd 3.1 Slagregn</p>
-<p>u<sub>r</sub></p>
-<p>u<sub>v</sub></p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.6</p>
+<div class="math notranslate nohighlight">
+\[S = N \cdot u_v / u_r\]</div>
 </div>
-<p>S=N*u<sub>v</sub>/u<sub>r</sub> (3.6)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>þar sem S slagregnsmagn á lóðréttan flöt, kg/m<sup>2</sup></p>
-<p>N mæld úrkoma á láréttan flöt, kg/m<sup>2</sup></p>
-<p>u<sub>v</sub> vindhraði, m/s</p>
-<p>u<sub>r</sub> fallhraði regndropa, m/s</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Slagregn.png"><img alt="../_images/Slagregn.png" src="../_images/Slagregn.png" style="width: 50%;" /></a>
+</figure>
+<p class="centered">
+<strong>Mynd 3.1 Slagregn</strong></p><p>þar sem</p>
 <p>Vitaskuld þarf að taka tillit til stefnu normals á veggyfirborð og
 vindáttar við ákvörðun slagregnmagns, þó svo þessi atriði komi ekki fram
 í jöfnu 3.6.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Fallhraði regndropa er háður stærð þeirra og er fyrir stærstu dropana
 gjarnan á bilinu 7-10 m/s. Í útreikningi á slagregnsmagni er oft miðað
-við u<sub>r</sub>=7 m/s.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+við <span class="math notranslate nohighlight">\(u_r = 7 m/s\)</span>.</p>
 <p>Þegar vindur nálgast byggingu þá sveigir hann framhjá fyrirstöðunni (sjá
 umfjöllun um lofhreyfingar við byggingar) og regndroparnir fylgja
 loftinu í þessari hreyfingu að einhverju leyti, en hluti þeirra
@@ -586,9 +552,13 @@ staðaluppkastinu er tekið tillit til stefnuhorns, umhverfis o.f.l.).
 Þegar mynd 3.2 er skoðuð þá er áberandi að slagregn er iðulega meira
 efst á veggjum og síðan niður með úthornum, þessa mun gæta í
 rakainnihaldi veggjarins og viðhaldsþörf.</p>
-<a class="reference internal image-reference" href="../_images/kafli03_html_bb28a8561cdd2560.png" id="picture-10"><img alt="../_images/kafli03_html_bb28a8561cdd2560.png" id="picture-10" src="../_images/kafli03_html_bb28a8561cdd2560.png" style="width: 578px; height: 829px;" /></a>
-<p>Mynd 3.2 Slagregnsdreifing á veggi (heimild: prEN 13013-3:1997)</p>
-<p>Jarðraki</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Slagregn_dreifing.png"><img alt="../_images/Slagregn_dreifing.png" src="../_images/Slagregn_dreifing.png" style="width: 90%;" /></a>
+</figure>
+<p class="centered">
+<strong>Mynd 3.2 Slagregnsdreifing á veggi (heimild: prEN 13013-3:1997)</strong></p></section>
+<section id="jarraki">
+<h3><span class="section-number">3.2.4. </span>Jarðraki<a class="headerlink" href="#jarraki" title="Permalink to this heading"></a></h3>
 <p>Raki frá jarðvegi getur verið tilkominn vegna yfirborðsvatns (úrkomu)
 sem leitar að byggingu og hinsvegar raka frá grunnvatni. Háð tegund
 jarðvegs og frágangi byggingarhluta neðan jarðvegsyfirborðs getur rakinn
@@ -596,30 +566,19 @@ verið í formi vatns sem; (i) liggur að yfirborði og veldur þá
 vatnsþrýstingi á yfirborði, (ii) rennur niður yfirborð, eða í formi raks
 jarðvegs sem liggur að yfirborði. Byggingarhlutar sem standa dýpra
 heldur en grunnvatnsyfirborð munu ávallt verða fyrir vatnsþrýstingi.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Jarðraki gerir að verkum að hlutfallsraki lofts í jarðvegi getur
 auðveldlega verið 100 %.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Til að draga úr jarðraka þarf að leiða frárennsli frá þaki, og almennt
 vatnsfráhrindandi yfirborðum, í fráveitu, halla jarðvegsyfirborði frá
 húsi og loks draga eftir mætti úr vatnsdrægni yfirborða í jörðu og ásamt
 því að tryggja dren frá byggingarhlutum í jörðu.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+</section>
 </section>
 <section id="rakaflutningur">
-<h2><span class="section-number">3.3. </span>3.3 Rakaflutningur<a class="headerlink" href="#rakaflutningur" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.3. </span>Rakaflutningur<a class="headerlink" href="#rakaflutningur" title="Permalink to this heading"></a></h2>
 <p>Drifkraftur sem knýr rakaflutning getur verið margskonar s.s.
 rakainnihald, rakaþrýstingur, hiti, póruþrýstingur, vindþrýstingur,
 þyngdarkraftur ofl.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Meginleiðir rakaflutningur eru eftirfarandi;</p>
 <ul class="simple">
 <li><p>Rakaflæði</p></li>
@@ -627,27 +586,43 @@ rakainnihald, rakaþrýstingur, hiti, póruþrýstingur, vindþrýstingur,
 <li><p>Hárpípuflutningur</p></li>
 <li><p>Útsveim og varmasveim</p></li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>og verður hér fjallað lauslega um hverja þessara leiða.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Rakaflæði</p>
+<section id="rakaflaei">
+<h3><span class="section-number">3.3.1. </span>Rakaflæði<a class="headerlink" href="#rakaflaei" title="Permalink to this heading"></a></h3>
 <p>Rakaflæði á sér stað ef stigull í rakaþrýstingi eða rakainnihaldi er til
 staðar, jafna 3.7.</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.7</p>
+<div class="math notranslate nohighlight">
+\[g = - D \cdot \nabla \Psi\]</div>
 </div>
-<p><a href="#id15"><span class="problematic" id="id16">|image7|</span></a> (3.7)</p>
-<p>þar sem g þéttleiki rakaflutnings kg/m<sup>2</sup>s</p>
-<p>D rakaflutningsstuðull</p>
-<p>grad stigull drifkrafts rakaflutnings</p>
+<p>Þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 57%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>g</p></td>
+<td><p>Þéttleiki rakaflutnings</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg / (m^2 \cdot s)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>D</p></td>
+<td><p>Rakaflutningsstuðull</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\nabla \Psi\)</span></p></td>
+<td><p>Stigull drifkrafts rakaflutnings</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>Rakaflutningur í einni vídd er þá;</p>
-<p><a href="#id17"><span class="problematic" id="id18">|image8|</span></a> (3.8)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.8</p>
+<div class="math notranslate nohighlight">
+\[g = - D \frac{\partial \Psi}{\partial x}\]</div>
 </div>
 <p>Augljós líkindi eru með jöfnu 3.7 og jöfnu Fourier’s fyrir varmaflutning
 (jafna 2. 1), rakaflutningur vegna flæðis er enda reiknaður á hliðstæðan
@@ -656,16 +631,12 @@ máta og varmaflæði.</p>
 gilt fyrir rakaflutning í lofthluta efnis-loftblöndu (pórótt efni) en þá
 þarf að leiðrétta fyrir breyttu flutningsþversniði (og breyttri lengd
 flutningsleiðar). Slík leiðrétting er gerð með því að innfæra sérstakan
-efnisstuðul, , sjá síðar (jafna 3.16).</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+efnisstuðul, <span class="math notranslate nohighlight">\(\mu\)</span>, sjá síðar (jafna 3.16).</p>
 <p>Drifkraftur fyrir rakaflæði er í eldri bókum gjarnan rakainnihald en í
 nýrri ritum, og uppkasti að staðli, er notaður rakaþrýstingur.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Rakastreymi í lofti</p>
+</section>
+<section id="rakastreymi-i-lofti">
+<h3><span class="section-number">3.3.2. </span>Rakastreymi í lofti<a class="headerlink" href="#rakastreymi-i-lofti" title="Permalink to this heading"></a></h3>
 <p>Þegar þrýstimunar gætir í lofti þá á sér stað lofstreymi, streymið getur
 átt upptök sín í þvinguðu streymi eða óþvinguðu sbr. umfjöllun um
 varmaflutning. Loftstreymi mun ávallt flytja með sér vatnsgufu ef hún er
@@ -674,49 +645,53 @@ til staðar í loftinu. Þrýstimunur yfir byggingarhluta getur þannig þrýst
 hitnar upp eða kólnar á leið sinni í gegn þá geta áhrifin verið til
 útþornunar byggingarhlutans eða rakasöfnunar í byggingarhluta vegna
 rakaþéttingar. Nánar verður fjallað um þennan lið í kafla 4.</p>
-<p><a href="#id19"><span class="problematic" id="id20">|Shape2|</span></a></p>
-<p></p>
-<p></p>
-<a class="reference internal image-reference" href="../_images/kafli03_html_f626be96731ea090.png" id="picture-13"><img alt="../_images/kafli03_html_f626be96731ea090.png" id="picture-13" src="../_images/kafli03_html_f626be96731ea090.png" style="width: 237px; height: 189px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Mynd 3.3 Hárpípa</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Hárpípuflutningur</p>
+</section>
+<section id="harpipuflutningur">
+<h3><span class="section-number">3.3.3. </span>Hárpípuflutningur<a class="headerlink" href="#harpipuflutningur" title="Permalink to this heading"></a></h3>
 <p>Kraftajafnvægi fyrir hárpípu (mynd 3.3), sem er í snertingu við
 vatnsyfirborð, gefur jöfnu 3.9;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="math notranslate nohighlight">
+\[\pi \cdot r^2 \cdot \rho \cdot H = 2 \cdot \pi \cdot r \cdot \sigma \cdot cos(\phi)\]</div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.9</p>
+<div class="math notranslate nohighlight">
+\[H = \frac{2 \cdot \sigma}{r \cdot \rho \cdot g} cos(\phi)\]</div>
 </div>
-<p>·r<sup>2</sup>··g·H=2··r··cos</p>
-<p><a href="#id21"><span class="problematic" id="id22">|image9|</span></a> (3.9)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>þar sem r radíus hárpípu, m</p>
-<ul class="simple">
-<li><p>eðlisþéttleiki vökvans, kg/m<sup>3</sup></p></li>
-</ul>
-<p>H vökvahæð í pípunni, m</p>
-<ul class="simple">
-<li><p>yfirborðspenna vökva, N/m</p></li>
-</ul>
-<p> snertihorn vökva við pípu</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<a class="reference internal image-reference" href="../_images/Hárpípa.png" id="picture-13"><img alt="../_images/H%C3%A1rp%C3%ADpa.png" class="align-center" id="picture-13" src="../_images/H%C3%A1rp%C3%ADpa.png" style="width: 237px; height: 189px;" /></a>
+<p class="centered">
+<strong>Mynd 3.3 Hárpípa</strong></p><p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 57%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>r</p></td>
+<td><p>Radíus hárpípu</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>Eðlisþéttleiki vökvans</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>H</p></td>
+<td><p>Vökvahæð í pípunni</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>Yfirborðsspenna vökva</p></td>
+<td><p>N/m</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phi\)</span></p></td>
+<td><p>Snertihorn vökva við pípu</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>Fyrir vatn og venjuleg byggingarefni er snertihornið almennt sett jafnt
 0, en með vatnsverjandi efnum má auka snertihornið verulega og þannig
 lágmarka hárpípukrafta.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Í reynd eru hárpípur í efni af mismunandi vídd en ekki með eitt ákveðið
 þversnið hver um sig, því er einungis í undantekningartilvikum hægt að
 nota jöfnu 3.9 til að ákvarða ísogshæð vökva. Jafnframt er áhugvert að
@@ -724,111 +699,116 @@ geta lagt mat á hraða ísogsins og magn vökva sem efnið tekur upp. Það er
 því almennt nauðsynlegt að mæla efniseiginleikana og notaðar eru jöfnur
 sem skilgreina má fyrir slík tilvik. Jafna 3.10 gefur vatnsísog frá fríu
 vatnsyfirborði;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.10</p>
+<div class="math notranslate nohighlight">
+\[G = A \cdot \sqrt{t}\]</div>
 </div>
-<p><a href="#id23"><span class="problematic" id="id24">|image10|</span></a> (3.10)</p>
-<p>þar sem G vatnsmagn, kg/m<sup>2</sup></p>
-<p>A ísogsstuðull vatnsmagns, kg/(m<sup>2</sup>·s)</p>
-<p>t tími, s</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 57%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>G</p></td>
+<td><p>Vatnsmagn</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>Ísogsstuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/(m^2 \cdot \sqrt{t})\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Tími</p></td>
+<td><p>s</p></td>
+</tr>
+</tbody>
+</table>
 <p>Jafna 3.11 gefur vatnsdýpi í efninu;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.11</p>
+<div class="math notranslate nohighlight">
+\[x = B \cdot \sqrt{t}\]</div>
 </div>
-<p><a href="#id25"><span class="problematic" id="id26">|image11|</span></a> (3.11)</p>
-<p>þar sem x vatnshæð (eða dýpi), m</p>
-<p>B ísogsstuðull vatnsdýpis, m/s</p>
-<p>t tími, s</p>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 57%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>Vatnshæð (eða dýpi)</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>B</p></td>
+<td><p>Ísogsstuðull vatnsdýpis</p></td>
+<td><p><span class="math notranslate nohighlight">\(m/\sqrt{s}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>t</p></td>
+<td><p>Tími</p></td>
+<td><p>s</p></td>
+</tr>
+</tbody>
+</table>
 <p>Vatnsdýpi vex stöðugt með tíma fyrir láréttar pórur, en í lóðréttum
 pórum gildir að vatnshæðin verður mest eins og jafna 3.9 sýnir.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Dæmi um gildi á stuðlunum A og B eru sýnd í töflu 3.2 fyrir nokkur efni.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<table class="docutils align-default">
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Tafla 3.2 </span><span class="caption-text"><em>Tafla 3.2 Ísogsstuðlar efna</em> (heimild: Newander og Elmarsson, 1994)</span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 13%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Efni</strong></p></th>
+<th class="head"><p><strong>Þéttleiki</strong></p></th>
+<th class="head"><p><strong>Stuðull fyrir ísogsmagn, A</strong></p></th>
+<th class="head"><p><strong>Stuðull fyrir ísogsdýpi, B</strong></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(kg/(m^2·\sqrt{s})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(×10^{-3} m/\sqrt{s}\)</span></p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td><p>Tafla 3.2
-Ísogsstuðlar
-efna (heimild;
-Nevander og
-Elmarsson,
-1994)</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Efni</p></td>
-<td><p>Þéttleiki</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>kg/m3</p>
-</td>
-<td><p>Stuðull fyrir
-ísogsmagn, A</p>
-<dl class="simple">
-<dt>kg/(m</dt><dd><p><sup>2</sup>·s)</p>
-</dd>
-</dl>
-</td>
-<td><p>Stuðull fyrir
-ísogsdýpi, B</p>
-<p>x
-10<sup>-3</sup>m/s</p>
-</td>
-</tr>
 <tr class="row-odd"><td><p>Tígulsteinn</p></td>
 <td><p>1700</p></td>
 <td><p>0,37</p></td>
 <td><p>1,4</p></td>
 </tr>
-<tr class="row-even"><td><p>Léttsteypa
-(sænsk)</p></td>
+<tr class="row-even"><td><p>Léttsteypa (sænsk)</p></td>
 <td><p>1900</p></td>
 <td><p>0,08</p></td>
 <td><p>0,4</p></td>
 </tr>
-<tr class="row-odd"><td><p>Sementsmúr
-(sænskur)</p></td>
+<tr class="row-odd"><td><p>Sementsmúr (sænskur)</p></td>
 <td><p>1900</p></td>
 <td><p>0,03</p></td>
 <td><p>0,5</p></td>
 </tr>
-<tr class="row-even"><td><p>Steypa v/s 0,3
-(sænsk)</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-even"><td><p>Steypa v/s 0,3 (sænsk)</p></td>
+<td></td>
 <td><p>0,010</p></td>
 <td><p>0,14</p></td>
 </tr>
-<tr class="row-odd"><td><p>Steypa v/s 0,5
-(sænsk)</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p>Steypa v/s 0,5 (sænsk)</p></td>
+<td></td>
 <td><p>0,020</p></td>
 <td><p>0,17</p></td>
 </tr>
-<tr class="row-even"><td><p>Steypa v/s 0,7
-(sænsk)</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-even"><td><p>Steypa v/s 0,7 (sænsk)</p></td>
+<td></td>
 <td><p>0,028</p></td>
 <td><p>0,25</p></td>
 </tr>
-<tr class="row-odd"><td><p>Timbur ||
-trefjum</p></td>
+<tr class="row-odd"><td><p>Timbur ∥ trefjum</p></td>
 <td><p>450</p></td>
 <td><p>0,016</p></td>
 <td><ul class="simple">
@@ -836,8 +816,7 @@ trefjum</p></td>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>Timbur 
-trefjar</p></td>
+<tr class="row-even"><td><p>Timbur ⊥ trefjar</p></td>
 <td><p>450</p></td>
 <td><p>0,004</p></td>
 <td><ul class="simple">
@@ -849,470 +828,373 @@ trefjar</p></td>
 </table>
 <p>Rakþrýstingur verður lægri yfir sveigðu vatnsyfirborði heldur en flötu,
 þar sem yfirborðskraftar sem verka á vatnssameindirnar eru hærri í
-fyrrnefnda tilvikinu.</p>
-<p>Jafna Kelvins segir til um samband pórustærðar og hlutfallsraka lofts
+fyrrnefnda tilvikinu. Jafna Kelvins segir til um samband pórustærðar og hlutfallsraka lofts
 yfir vatnsborði í slíkri póru (sem hlutfall af mettunarraka yfir sléttu
 yfirborði) , jafna 3.12;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.12</p>
+<div class="math notranslate nohighlight">
+\[\varphi = e^{\frac{2 \cdot \sigma \cdot M_w}{r \cdot \rho_w \cdot R \cdot T}}\]</div>
 </div>
-<p><a href="#id27"><span class="problematic" id="id28">|image12|</span></a> (3.12)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>(Thompson jafnan er <a href="#id29"><span class="problematic" id="id30">|image13|</span></a> )</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>þar sem  hlutfallsraki lofts (hlutfallstala 0 – 1) =p/p<sub>s</sub></p>
-<p>p mettunarrakaþrýstingur í póru</p>
-<p>p<sub>s</sub> mettunarrakaþrýstingur yfir sléttu yfirborði</p>
-<p> yfirborðsspenna (hitastigsháð), N/m</p>
-<p>M<sub>w</sub> mólmassi vatns, kg/mól</p>
-<p>r radíus póru, m</p>
-<p><sub>w</sub> eðlisþéttleiki vatns, kg/m<sup>3</sup></p>
-<p>R almenni gasfastinn R=8314,3 J/(kmol∙K)</p>
-<p>T hitastig, K</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>Thompson jafnan er:</p>
+<div class="math notranslate nohighlight">
+\[p=p_s \cdot e^{\frac{2 \cdot \sigma \cdot M_w}{r \cdot \rho_w \cdot R \cdot T}}\]</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\phi\)</span></p></td>
+<td><p>hlutfallsraki lofts (hlutfallstala 0 - 1)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\phi = \frac{p}{p_s}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>mettunarrakaprýstingur í pípu</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_s\)</span></p></td>
+<td><p>mettunarrakaprýstingur yfir sléttu yfirborði</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>yfirborðsspenna (hitastigsháð)</p></td>
+<td><p><span class="math notranslate nohighlight">\(N/m\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M_w\)</span></p></td>
+<td><p>mólmassi vatns</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/mol\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(r\)</span></p></td>
+<td><p>radíus pórunnar</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_w\)</span></p></td>
+<td><p>eðlisþéttleiki vatns</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>almenni gasfastinn</p></td>
+<td><p><span class="math notranslate nohighlight">\(8314.3,  [J/(kmol \cdot K)]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>hitastig</p></td>
+<td><p><span class="math notranslate nohighlight">\(K\)</span></p></td>
+</tr>
+</tbody>
+</table>
 <p>Undirþrýstingur í póru er iðulega settur sem (jafna 3.13);</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.13</p>
+<div class="math notranslate nohighlight">
+\[p_w = \frac{2 \cdot \sigma}{r}\]</div>
 </div>
-<p><a href="#id31"><span class="problematic" id="id32">|image14|</span></a> (3.13)</p>
 <p>Jafna 3.13 ásamt 3.12 gefur (jafna 3.14);</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.14</p>
+<div class="math notranslate nohighlight">
+\[p_w= - \frac{\rho_w \cdot R \cdot T}{M_w} ln(\varphi)\]</div>
 </div>
-<p><a href="#id33"><span class="problematic" id="id34">|image15|</span></a> (3.14)</p>
 <p>Jafna 3.14 gefur samband milli undirþrýstings í póru og rakaþrýstings,
-en undirþrýstingur í póru (e: suction) hentar vel sem mat á drifkrafti
+en undirþrýstingur í póru (e. suction) hentar vel sem mat á drifkrafti
 rakaflutnings vegna hárpípukrafta.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Útsveim og varmasveim</p>
+</section>
+<section id="utsveim-og-varmasveim">
+<h3><span class="section-number">3.3.4. </span>Útsveim og varmasveim<a class="headerlink" href="#utsveim-og-varmasveim" title="Permalink to this heading"></a></h3>
 <p>Í þeim tilvikum sem pórustærð í efni er svipuð eða minni heldur en “frí”
 fjarlægð milli vatnssameinda, þá ákvarðast hreyfing sameinda ekki af
 innbyrðis áhrifum þeirra heldur áhrifum frá yfirborðum póranna.
 Sameindirnar hreyfast innbyrðis óháð, slíkur rakaflutningur nefnist
-útsveim (e: effusion).</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+útsveim (e. effusion).</p>
 <p>Rakaflutningur á gufuformi í efni getur einnig orðið vegna áhrifa
 hitastiguls. Hitamunur í gasblöndu veldur aðskilnaði vegna mismunandi
 mólmassa gastegunda. Í röku lofti er sameindamassi vatnsgufu lægri
 heldur en mólmassi súrefnis og köfnunarefnis, vatnsgufan leitar því til
 heitari hlutans en súrefni og köfnunarefni til þess kaldari. Áhrif
-varmasveims (e: termodiffusion) verða helst merkjanleg í mjög póróttum
+varmasveims (e. termodiffusion) verða helst merkjanleg í mjög póróttum
 efnum og við mikinn hitastigul.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+</section>
 </section>
 <section id="utreikningur-a-rakaflutningi">
-<h2><span class="section-number">3.4. </span>3.4 Útreikningur á rakaflutningi<a class="headerlink" href="#utreikningur-a-rakaflutningi" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.4. </span>Útreikningur á rakaflutningi<a class="headerlink" href="#utreikningur-a-rakaflutningi" title="Permalink to this heading"></a></h2>
 <p>Rakaflutningur verður helst eftir þrem leiðum eins og þegar hefur verið
 nefnt; flæði, streymi í lofti og hárpípukröftum. Iðulega er erfitt að
 skilja á milli flutnings annarsvegar sem flæði og hinsvegar streymi í
 lofti (hliðstætt vandamál og varðar varmaflutning), en þó er vitað að
 áhrifa vegna streymis í lofti verður fyrst merkjanlegt við háan loftraka
-(oft  &gt; 80 – 85 %).</p>
+(oft <span class="math notranslate nohighlight">\(\varphi\)</span> &gt;  80 – 85 %).</p>
 <p>Rakaflutningur í hárpípum á sér aðeins stað frá efni með lágan
 flutningsstuðul til efnis með háan flutningsstuðul (frá grófpóróttu efni
 til fínpóróttara).</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Rakaflutningur verður hér reiknaður samkvæmt staðaluppkastinu TC 89 WI
 29.3:2003. Tilvísanir í staðalinn verða hér styttar í TC89.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Í efni reiknast þéttleiki rakaflutnings, kg/(m<sup>2</sup>·s) eins og
+<p>Í efni reiknast þéttleiki rakaflutnings, <span class="math notranslate nohighlight">\(kg/(m^2 \cdot s)\)</span> eins og
 jafna 3.15 sýnir;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.15</p>
+<div class="math notranslate nohighlight">
+\[g = g_v + g_l\]</div>
 </div>
-<p>g=g<sub>v</sub>+g<sub>l</sub> (3.15)</p>
-<p>þar sem g<sub>v</sub> rakaflutningur vegna flæðis (g<sub>p</sub>) og
-streymis í lofti (g<sub>c</sub>)</p>
-<p>g<sub>l</sub> hárpípuflutningur</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>rakaflutningur vegna flæðis og streymis í lofti, g<sub>v</sub>, er
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_v\)</span></p></td>
+<td><p>Rakaflutningur vegna flæðis (<span class="math notranslate nohighlight">\(g_p\)</span>) og streymis í lofti (<span class="math notranslate nohighlight">\(g_c\)</span>)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(g_l\)</span></p></td>
+<td><p>Hárpípuflutningur</p></td>
+</tr>
+</tbody>
+</table>
+<p>Rakaflutningur vegna flæðis og streymis í lofti, <span class="math notranslate nohighlight">\(g_v\)</span>, er
 skilgreint eins og jafna 3.16 sýnir;</p>
-<p><a href="#id35"><span class="problematic" id="id36">|image16|</span></a> (3.16)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.16</p>
+<div class="math notranslate nohighlight">
+\[g_v = - \frac{1}{\mu (\varphi)} \delta_0(T) \frac{\partial p_v}{\partial x} + \frac{g_a}{\rho_a} \frac{p_v}{R_{H_{2}O} \cdot T}\]</div>
 </div>
-<p>þar sem () mótstöðutala vatnsgufuflæðis við rakainnihald , -</p>
-<p><sub>0</sub>(T) gufuhleypni í lofti með hitastig T, kg/(m·Pa·s)</p>
-<p>p<sub>v</sub>/x stigull gufuþrýstings í lofti, Pa</p>
-<p>g<sub>a</sub> þéttleiki loftflutnings, kg/(m<sup>2</sup>,s)</p>
-<p><sub>a</sub> þéttleiki lofts, kg/m<sup>3</sup></p>
-<p>p<sub>v</sub> hlutfallsþrýstingur vatnsgufu, Pa</p>
-<p><a href="#id37"><span class="problematic" id="id38">|image17|</span></a></p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>þar sem</p>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-number">Tafla 3.3 </span><span class="caption-text"><em>Tákn og skýringar – Vatnsgufuflæði</em></span><a class="headerlink" href="#id3" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\mu(\varphi)\)</span></p></td>
+<td><p>mótstöðutala vatnsgufuflæðis við rakainnihald <span class="math notranslate nohighlight">\(\varphi\)</span></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\delta_0(T)\)</span></p></td>
+<td><p>gufuheypni í lofti með hitastig <span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/(m \cdot Pa \cdot s)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\delta p_v / \delta x\)</span></p></td>
+<td><p>stigull gufþrýstings í lofti</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(g_a\)</span></p></td>
+<td><p>þéttleiki loftflutnings</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/(m^2 \cdot s)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_a\)</span></p></td>
+<td><p>þéttleiki lofts</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_v\)</span></p></td>
+<td><p>hlutfallsþrýstingur vatnsgufu</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="math notranslate nohighlight">
+\[R_{H_{2}O} = \frac{R}{M_w} = \frac{8.314}{0.018}  = 461.889\]</div>
 <p>Gufuhleypni í lofti, er eins og jafna 3.17 sýnir (DIN 52615);</p>
-<p><a href="#id39"><span class="problematic" id="id40">|image18|</span></a> kg/(mPas) (3.17)</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.17</p>
+<div class="math notranslate nohighlight">
+\[\delta_0 = 2.0 \cdot 10^{-7} \cdot \frac{T^{0.81}}{P_a}, kg/(m \cdot Pa \cdot s)\]</div>
+</div>
 <p>Í fræðiritum (þetta var og er jafnvel víða venja enn) eru stuðlarnir við
 drifkraft rakaflæðis teknir saman í eina stærð, sbr. jöfnu 3.7.
-Stuðullinn er oft nefndur D<sub>x</sub> þar sem lágmerkið skýrir hvaða
+Stuðullinn er oft nefndur <span class="math notranslate nohighlight">\(D_x\)</span> þar sem lágmerkið skýrir hvaða
 drifkraftur er notaður; oft w fyrir rakainnihald og p fyrir
-rakaþrýsting, sem dæmi um þetta má nefna gildið <sub>p</sub>;
-<sub>p</sub>=<sub>0</sub>/. Ókostur aðferðarinnar er sá að
+rakaþrýsting, sem dæmi um þetta má nefna gildið <span class="math notranslate nohighlight">\(\delta_p; \delta_p=\delta_0/\mu\)</span>. Ókostur aðferðarinnar er sá að
 rakaflæðistuðullinn D er augljóslega háður drifkraftinum. Til er
 fjöldinn allur af mismunandi efnisgildum fyrir útreikning á
 rakaflutningi, umreiknistuðla fyrir öll algengustu gildi er t.d. að
 finna í Rb-blaðinu Rb (I3).001 ”Vindþéttilög í
 húsbyggingum-efniseiginleikar og frágangur”. Kosturinn við framsetningu
-staðaluppkastsins er að stuðullinn  er hrein hlutfallstala sem er
-efnisháð, og einungis þarf að velja  stuðulinn þannig að hann passi
+staðaluppkastsins er að stuðullinn <span class="math notranslate nohighlight">\(\mu\)</span> er hrein hlutfallstala sem er
+efnisháð, og einungis þarf að velja <span class="math notranslate nohighlight">\(\delta\)</span> stuðulinn þannig að hann passi
 fyrir valinn drifkraft.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Fyrir yfirborðslög (yfirborðsmótstöður, málningar o.f.l.) þá er
 jafngilda formið fyrir jöfnu 3.16 , eins og jafna 3.18 sýnir;</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p><a href="#id41"><span class="problematic" id="id42">|image19|</span></a> (3.18)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.18</p>
+<div class="math notranslate nohighlight">
+\[g_v = - \frac{1}{s_{d,s}} \delta_0 \cdot (p_{v,a} - p_{v,s}) + \frac{g_a}{\rho_a} \cdot \frac{p_{v,a}}{R_{H_{2}O} \cdot T_a}\]</div>
 </div>
 <p>Af samanburði milli jafnanna 3.16 og 3.18 sést að jafngildisþykkt
-loftlags, s<sub>d</sub>, fæst sem ; s<sub>d</sub>=·d, þar sem d er
+loftlags, <span class="math notranslate nohighlight">\(s_d\)</span>, fæst sem; <span class="math notranslate nohighlight">\(s_d= \mu \cdot d\)</span>, þar sem d er
 þykkt efnislags. Þá gildir almennt að mótstaða efnislags, eða yfirborðs,
 fæst sem (jafna 3.19);</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Z<sub>p</sub>=s<sub>d</sub>/<sub>0</sub>=d·/<sub>0</sub> (3.19)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.19</p>
+<div class="math notranslate nohighlight">
+\[Z_p = \frac{s_d}{\delta_0} = \frac{d \cdot \mu}{\delta_0}\]</div>
 </div>
 <p>Efnisgildi til útreikninga á rakaflutningi má finna t.d. í staðlinum ÍST
 EN 12524:2000, tækniblaðinu NBI 573.430 og handbókum eftir S. Geving og
 J. V. Thue (2002), Nevander og Elmarsson (1994). Rakaflæðimótstaða efna
-er alltaf háð hitastigi (sem leiðrétt er fyrir með <sub>0</sub>stuðlinum í jöfnum 3.14 og 3.16) og iðulega einnig rakainnihaldi efna,
+er alltaf háð hitastigi (sem leiðrétt er fyrir með <span class="math notranslate nohighlight">\(\delta_0\)</span>
+stuðlinum í jöfnum 3.14 og 3.16) og iðulega einnig rakainnihaldi efna,
 þar sem rakaflæðimótstaðan fellur almennt með hækkandi efnisraka.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Efnisframleiðendur og efnissalar, og einnig eldri rit, gefa stundum upp
-rakaflutningsmótstöðuna Z í stað s<sub>d</sub> gildis eins og nú
+rakaflutningsmótstöðuna Z í stað <span class="math notranslate nohighlight">\(s_d\)</span>  gildis eins og nú
 tíðkast. Þá þarf þó að skoða vandlega hvaða eining er á uppgefnu
-Z-gildinu (oft GPasm<sup>2</sup>/kg) og taka tillit til þess í
+Z-gildinu (oft <span class="math notranslate nohighlight">\(GPa \cdot s \cdot m^2 /kg\)</span>) og taka tillit til þess í
 útreikningunum.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Jafngildisþykkt yfirborðsloftlags (mótstaða við yfirborð),
-s<sub>d,s</sub>, er sýnd í töflu 3.3.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Tafla 3.3 Jafngildisþykkt yfirborðsloftlags (e: boundary layer)
-(heimild: TC 89 )</p>
-<div class="line-block">
-<div class="line"><a href="#id43"><span class="problematic" id="id44">|Shape3|</span></a></div>
-</div>
-<p>Yfirborð inni s<sub>d,si</sub> (m)</p>
-<p>Stefna varmaflutnings</p>
-<ul class="simple">
-<li><p>Lárétt 0,008</p></li>
-<li><p>Upp 0,004</p></li>
-<li><p>Niður 0,03</p></li>
-</ul>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Yfirborð úti (háð vindhraða v) s<sub>d,se</sub> (m)</p>
-<p><a href="#id45"><span class="problematic" id="id46">|image20|</span></a></p>
-<div class="line-block">
-<div class="line"><a href="#id47"><span class="problematic" id="id48">|Shape4|</span></a></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<span class="math notranslate nohighlight">\(s_{d,s}\)</span>, er sýnd í töflu 3.3.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-number">Tafla 3.4 </span><span class="caption-text"><em>Tafla 3.3 Jafngildisþykkt yfirborðsloftlags</em> <em>(e: boundary layer)</em> (heimild: TC 89)</span><a class="headerlink" href="#id4" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 67%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Yfirborð inni – Stefna varmaflutnings</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(s_{d,si}\)</span> (m)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lárétt</p></td>
+<td><p>0,008</p></td>
+</tr>
+<tr class="row-odd"><td><p>Upp</p></td>
+<td><p>0,004</p></td>
+</tr>
+<tr class="row-even"><td><p>Niður</p></td>
+<td><p>0,03</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Yfirborð úti</strong> (háð vindhraða <span class="math notranslate nohighlight">\(v\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(s_{d,se}\)</span> (m)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{67 + 90 \cdot v}\)</span></p></td>
+</tr>
+</tbody>
+</table>
 <p>Samantekt fyrir nokkur algeng byggingarefni er í töflu 3. 4 og fyrir
 algeng efnislög í töflu 3.5.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<table class="docutils align-default">
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-number">Tafla 3.5 </span><span class="caption-text"><em>Tafla 3.4 Rakaflæði­mótstaða efna,</em> <span class="math notranslate nohighlight">\(\mu\)</span> <em>(heimild: NBI 573.430, o.fl.)</em></span><a class="headerlink" href="#id5" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 11%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Efni</strong></p></th>
+<th class="head"><p><strong>Þéttleiki</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mu\)</span> <strong>við 35–70 % HR</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mu\)</span> <strong>við 70–80 % HR</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mu\)</span> <strong>við 80–90 % HR</strong></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\mu\)</span> <strong>við 90–95 % HR</strong></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p><em>(kg/m³)</em></p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td><p>Tafla 3.4
-Rakaflæð
-imótstaða
-efna, 
-(heimild:
-NBI
-573.430,
-o.fl.)</p></td>
+<tr class="row-odd"><td><p>Steinull</p></td>
+<td></td>
+<td><p>35–70</p></td>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Efni</p></td>
-<td><p>Þéttleiki</p>
-<p>(kg/m:s
-up:<cite>3</cite>)</p>
-</td>
-<td><p>Rakaflæði
-mótstaða,
- fyrir
-m
-ismunandi
-hlut
-fallsraka
-(% HR)</p></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>35 - 70</p></td>
-<td><p>70 - 80</p></td>
-<td><p>80 - 90</p></td>
-<td><p>90 - 95</p></td>
 </tr>
 <tr class="row-even"><td><p>Steinull</p></td>
 <td><p>15</p></td>
-<td><p>1,2 – 1,8</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td><p>1,2–1,8</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>Steinull</p></td>
+<tr class="row-odd"><td><p>Frauðplast, þanið</p></td>
 <td><p>200</p></td>
-<td><p>2,2 – 3,3</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td><p>2,2–3,3</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Fr
-auðplast,
-þanið</p></td>
+<tr class="row-even"><td><p>Frauðplast, þanið</p></td>
 <td><p>20</p></td>
-<td><p>19-29</p></td>
-<td><p>19-29</p></td>
-<td><p>19-29</p></td>
-<td><p>19-29</p></td>
+<td><p>19–29</p></td>
+<td><p>19–29</p></td>
+<td><p>19–29</p></td>
+<td><p>19–29</p></td>
 </tr>
-<tr class="row-odd"><td><p>Fr
-auðplast,
-þanið</p></td>
+<tr class="row-odd"><td><p>Frauðplast, sprautað</p></td>
 <td><p>30</p></td>
 <td><p>98</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Fr
-auðplast,
-sprautað</p></td>
-<td><p>20-60</p></td>
+<tr class="row-even"><td><p>Frauðplast, sprautað</p></td>
+<td><p>20–60</p></td>
 <td><p>150</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>Steypa
-v/s 0,5
-(norsk)</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>131-195</p></td>
-<td><p>82-131</p></td>
-<td><p>27-82</p></td>
-<td><p>9-27</p></td>
+<tr class="row-odd"><td><p>Steypa v/s 0,5 (norsk)</p></td>
+<td></td>
+<td><p>131–195</p></td>
+<td><p>82–131</p></td>
+<td><p>27–82</p></td>
+<td><p>9–27</p></td>
 </tr>
-<tr class="row-even"><td><p>Fura –
-þvert á
-tre
-fjastefnu</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>29-130</p></td>
-<td><p>13-51</p></td>
-<td><p>7,4-26</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-even"><td><p>Fura – þvert á trefjastefnu</p></td>
+<td></td>
+<td><p>29–130</p></td>
+<td><p>13–51</p></td>
+<td><p>7,4–26</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>K
-rossviður</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>29-130</p></td>
-<td><p>14-51</p></td>
-<td><p>8-25</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p>Krossviður</p></td>
+<td></td>
+<td><p>29–130</p></td>
+<td><p>14–51</p></td>
+<td><p>8–25</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>OSB plata</p></td>
 <td><p>650</p></td>
 <td><p>49</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>S
-pónaplata</p></td>
+<tr class="row-odd"><td><p>Spónaplata</p></td>
 <td><p>635</p></td>
 <td><p>37</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>16</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>Trétr
-efjaplata</p></td>
+<tr class="row-even"><td><p>Trétrefjaplata</p></td>
 <td><p>900</p></td>
 <td><p>102</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>EPDM
-dúkefni</p>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>60000</p>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p>EPDM dúkefni</p></td>
+<td></td>
+<td></td>
+<td><p>60000</p></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>PVC</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<td></td>
 <td></td>
 <td><p>40000</p></td>
 <td></td>
@@ -1320,138 +1202,80 @@ dúkefni</p>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<table class="docutils align-default">
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Tafla 3.6 </span><span class="caption-text"><em>Tafla 3.5 Rakaflæðimótstaða efnislaga,</em> <span class="math notranslate nohighlight">\(s_d\)</span> <em>(heimild: NBI 573.430)</em></span><a class="headerlink" href="#id6" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 13%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Efni</strong></p></th>
+<th class="head"><p><strong>Þykkt</strong></p></th>
+<th class="head"><p><strong>Jafngildisþykkt loftlags,</strong> <span class="math notranslate nohighlight">\(s_d\)</span></p></th>
+</tr>
+<tr class="row-even"><th class="head"></th>
+<th class="head"><p><em>(mm)</em></p></th>
+<th class="head"><p><em>(m)</em></p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td><p>Tafla 3.5 Rakaflæðimótstaða
-efnislaga,
-s<sub>d</sub>(heimild: NBI
-573.430)</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-odd"><td><p>Textíl teppi – með latex bakhlið</p></td>
+<td></td>
+<td><p>3,3–4,1</p></td>
 </tr>
-<tr class="row-even"><td><p>Efni</p></td>
-<td><p>Þykkt</p>
-<ol class="lowerroman simple" start="2000">
-<li></li>
-</ol>
-</td>
-<td><p>Jafngildisþykkt loftlags,
-s<sub>d</sub> (m)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Textil teppi- með latex
-bakhlið</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>3,3-4,1</p></td>
-</tr>
-<tr class="row-even"><td><p>Linoleum, HR 35-70%</p></td>
+<tr class="row-even"><td><p>Linoleum, HR 35–70%</p></td>
 <td><p>2,5</p></td>
 <td><p>10</p></td>
 </tr>
-<tr class="row-odd"><td><p>Linoleum, HR 70-80%</p></td>
+<tr class="row-odd"><td><p>Linoleum, HR 70–80%</p></td>
 <td><p>2,5</p></td>
 <td><p>5,3</p></td>
 </tr>
-<tr class="row-even"><td><p>Vinyl gólfdúkur, mjög
-lokaður</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
+<tr class="row-even"><td><p>Vinyl gólfdúkur, mjög lokaður</p></td>
+<td></td>
 <td><p>254</p></td>
 </tr>
-<tr class="row-odd"><td><p>Akryllatex málning</p></td>
+<tr class="row-odd"><td><p>Akrýllatex málning</p></td>
 <td><p>0,05</p></td>
-<td><p>0,14-0,53</p></td>
+<td><p>0,14–0,53</p></td>
 </tr>
-<tr class="row-even"><td><p>Alkydmálning, 2umf., mött
-vegg- og loftamálning</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>2,5-5</p></td>
+<tr class="row-even"><td><p>Alkýdmálning, 2umf., mött vegg- og loftamálning</p></td>
+<td></td>
+<td><p>2,5–5</p></td>
 </tr>
-<tr class="row-odd"><td><p>Epoxy gólfmálning-tveggja
-þátta, 2umf.</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>7,6-14</p></td>
+<tr class="row-odd"><td><p>Epoxy gólfmálning – tveggja þátta, 2umf.</p></td>
+<td></td>
+<td><p>7,6–14</p></td>
 </tr>
-<tr class="row-even"><td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>Polyethylen (PE)
-rakavarnarlag</p></td>
+<tr class="row-even"><td><p>Polyethylen (PE) rakavarnarlag</p></td>
 <td><p>0,15</p></td>
 <td><p>70</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>0,20</p></td>
 <td><p>90</p></td>
 </tr>
-<tr class="row-odd"><td><p>Tjörupappi (polyester
-vefur)</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
+<tr class="row-even"><td><p>Tjörupappi (polyester vefur)</p></td>
+<td></td>
 <td><p>100</p></td>
 </tr>
-<tr class="row-even"><td><p>PVC þakdúkur</p></td>
+<tr class="row-odd"><td><p>PVC þakdúkur</p></td>
 <td><p>1,4</p></td>
 <td><p>19</p></td>
 </tr>
-<tr class="row-odd"><td><p>Polyisobutylen (PIB)
-þakdúkur</p></td>
+<tr class="row-even"><td><p>Polyisobutylen (PIB) þakdúkur</p></td>
 <td><p>1,5</p></td>
 <td><p>390</p></td>
 </tr>
 </tbody>
 </table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Í eftirfarandi verður litið framhjá áhrifum loftflutnings í efni og
 hárpípuflutnings á rakaflutning (nema að því leyti sem þessi áhrif eru
 innifalinn í viðeigandi efnisgildum). Útreikningar taka hér einvörðu
 tillit til rakaflæðis.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Rakaflutningur, rakaástand og rakaþétting</p>
+<section id="rakaflutningur-rakaastand-og-rakaetting">
+<h3><span class="section-number">3.4.1. </span>Rakaflutningur, rakaástand og rakaþétting<a class="headerlink" href="#rakaflutningur-rakaastand-og-rakaetting" title="Permalink to this heading"></a></h3>
 <p>Við stöðug hita- og rakaskilyrði í umhverfi byggingarhluta þá næst
 rakajafnvægi í byggingarhluta þegar rakaástandið ákvarðast af rakaflæði,
 ef aðstæður eru þannig að rakaþétting á sér ekki stað.
@@ -1462,16 +1286,10 @@ Rakaþrýstingur í sniðinu, jafna 3.16, verður því aðeins línulegur að
 rakaflæðimótstaðan Z (jafna 3.19) sé óháð hitastigi og efnisraka,
 mettunarrakaaferillinn verður hinsvegar alltaf aðeins sveigður þar sem
 samband mettunarraka og hitastigs er ekki línulegt.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Þrátt fyrir að rakaflæðimótstaðan sé nánast alltaf hita- og rakaháð þá
 er venja í útreikningum við stöðug skilyrði að líta framhjá þessu, til
 einföldunar er gert ráð fyrir að bæði rakaþrýstingur og
 mettunarrakaþrýstingur í einsleitu efnislagi breytist línulega.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Mettunarrakaþrýstingur í efnislagi er því ákvarðaður útfrá hitastigi á
 yfirborðum efnislags og rakaþrýstingur í efninu útfrá rakaþrýstingi á
 yfirborðum. Reikningur rakaþrýstings í byggingarhluta sem samsettur er
@@ -1481,61 +1299,66 @@ fyrir lag og rakaþrýstingur reiknaður hlutfallslega útfrá
 umhverfisaðstæðum. Í þeim tilvikum sem reiknaður rakaþrýstingur er hærri
 heldur en mettunarþrýstingur í sniði þá á sér stað rakaþétting, annars
 ekki. Skoða þarf tvö tilvik (mynd 3.3);</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/kafli03_html_27d4066b35443648.png" id="shape5"><img alt="Shape5" id="shape5" src="../_images/kafli03_html_27d4066b35443648.png" style="width: 540px; height: 384px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Mynd 3.3 Raka- og mettunarrakaþrýstingur í sniði</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<ol class="upperroman simple">
-<li><p>Engin rakaþétting</p></li>
-</ol>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Raka_og_mettunarþrýstingur.png"><img alt="../_images/Raka_og_mettunar%C3%BEr%C3%BDstingur.png" src="../_images/Raka_og_mettunar%C3%BEr%C3%BDstingur.png" style="width: 90%;" /></a>
+</figure>
+<p class="centered">
+<strong>Mynd 3.3 Raka- og mettunarrakaþrýstingur í sniði</strong></p><p><strong>I. Engin rakapétting</strong></p>
 <p>Rakaflutning, á flatar- og tímaeiningu, í gegnum byggingarhluta má
 ákvarða í samræmi við (fyrri hluta) jöfnu 3.16, sem nú er umskrifuð eins
 og jafna 3.20 sýnir;</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.20</p>
+<div class="math notranslate nohighlight">
+\[g = \frac{1}{Z_T} \cdot (P-1 - p_2)\]</div>
 </div>
-<p><a href="#id49"><span class="problematic" id="id50">|image21|</span></a> (3.20)</p>
-<p>þar sem g rakaflutningur frá 1 til 2, kg/(m<sup>2</sup>·s)</p>
-<p>Z<sub>T</sub> heildarmótstaða gegn rakaflæði, m<sup>2</sup>·s·Pa/kg</p>
-<p>p<sub>1</sub>, p<sub>2</sub> rakaþrýstingur beggja vegna við
-byggingarhluta, Pa</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<ol class="upperroman simple" start="2">
-<li><p>Rakaþétting</p></li>
-</ol>
+<p>Þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td><p>rakaflutningur frá 1 til 2</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/(m^2 \cdot s)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(Z_T\)</span></p></td>
+<td><p>heildarmótstaða gegn rakaflæði</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^2 \cdot s \cdot Pa / kg\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_1, p_2\)</span></p></td>
+<td><p>rakaþrýstingur beggja vegna við byggingarhluta</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>II. Rakaþétting</strong></p>
 <p>Rakaþéttingin er til einföldunar öll reiknuð í “fyrsta kalda sniði” í
 byggingarhluta (á mynd 3.3 er það snið n+2, þegar rakaflutningur er frá
-1 til 2, og mettunarraki þar er p<sub>cond</sub>). Í því tilviki að
+1 til 2, og mettunarraki þar er <span class="math notranslate nohighlight">\(p_cond\)</span> ). Í því tilviki að
 rakaþétting reiknast verða í tveim eða fleiri sniðum, þá þarf að setja
 rakaþrýsting í innsta sniðinu jafnt og mettunarrakaþrýsting, og
 endurreikna dæmið frá þeim punkti og svo koll af kolli fyrir hvert snið
 utar þar sem rakþrýstingur fer yfir mettunarraka.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Reiknaðar eru mótstöður innan- og utan við þéttingarsniðið,
-Z<sub>inn</sub> og Z<sub>ut</sub>, og samsvarandi rakaflutningur, sjá
+<span class="math notranslate nohighlight">\(Z_{inn}\)</span> og <span class="math notranslate nohighlight">\(Z_{út}\)</span>, og samsvarandi rakaflutningur, sjá
 mynd 3.3;</p>
-<p><a href="#id51"><span class="problematic" id="id52">|image22|</span></a> (3.21)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.21</p>
+<div class="math notranslate nohighlight">
+\[g_{inn} = \frac{1}{Z_{inn}} \cdot (p_1 - p_{cond})\]</div>
 </div>
-<p><a href="#id53"><span class="problematic" id="id54">|image23|</span></a> (3.22)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.22</p>
+<div class="math notranslate nohighlight">
+\[g_{út} = \frac{1}{Z_{út}} \cdot (p_{cond} - p_{2})\]</div>
 </div>
-<p>g<sub>uppsafnað</sub>= g<sub>inn</sub> - g<sub>út</sub> (3.23)</p>
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 3.23</p>
+<div class="math notranslate nohighlight">
+\[g_{uppsafnað} = g_{inn} - g_{út}\]</div>
 </div>
 <p>Þegar útreikningar sýna að rakaþétting eigi sér stað þá þarf að meta
 yfir hversu langan tíma þetta ástand varir og athuga svo hvort
@@ -1554,16 +1377,9 @@ skilgreindum mörkum, og talinn saman tími sem skilyrðin eru uppfyllt.</p>
 </div>
 <p>Í Byggingarreglugerð, kafla 10.5, er fjallað almennt um raka (m.a. grein
 10.5.1);</p>
-<p>10.5.1. gr.</p>
-<p>Markmið.</p>
-<p>Mannvirki skulu þannig hönnuð og byggð að vatn eða raki geti ekki valdið
-skaða á mannvirki í heild eða einstökum hlutum þess eða skapað aðstæður
-sem valdið geta óþægindum, slysum eða verið hættulegar heilsu manna,
-s.s. vegna myndunar myglu eða varasamra örvera.</p>
-<p>Tryggja skal að grunnvatn, yfirborðsvatn, úrkoma, s.s. regn, slagregn,
-snjór eða krapi, raki í jarðvegi, neysluvatn, loftraki, byggingarraki
-eða þéttivatn geti hvorki skaðað mannvirki eða einstaka hluta þess, né
-rýrt eðlileg hollustuskilyrði innandyra.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/grein10_5_1.png"><img alt="../_images/grein10_5_1.png" src="../_images/grein10_5_1.png" style="width: 90%;" /></a>
+</figure>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -1572,9 +1388,6 @@ rýrt eðlileg hollustuskilyrði innandyra.</p>
 tímabundin eða varanleg, sé skaðleg. Í þessu sambandi er nauðsynlegt að
 leggja mat á áreiðanleika þeirra aðferða sem beitt er til að meta
 rakaástand í byggingarhluta á hönnunarstigi bygginga.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Í hefðbundnum útreikningum, eins og hér er fjallað um þarf að hafa
 eftirfarandi í huga;</p>
 <ol class="arabic simple">
@@ -1585,27 +1398,15 @@ skammti.</p></li>
 <li><p>Hæfni efna til að taka upp raka (tímabundið) án þess að skemmdir
 hljótist af.</p></li>
 </ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Það er því ástæða að hafa í huga að reiknislegt mat á rakaástandi er
 fremur gæðamat heldur en fræðilegt mat og því eðlilegt að halda sig
 frekar öruggu megin þegar niðurstöður eru metnar. Í þessu sambandi er
 eðlilegt að miða við að öryggi valinnar uppbyggingar sé nægjanlegt, t.d.
 að reiknuð útþornun sé umtalsvert meiri heldur en reiknuð rakauppsöfnun.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Reiknaður rakaflutningur í byggingarhluta og metin hætta á rakaþéttingu</p>
+</section>
+</section>
+<section id="reiknaur-rakaflutningur-i-byggingarhluta-og-metin-haetta-a-rakaettingu">
+<h2><span class="section-number">3.5. </span>Reiknaður rakaflutningur í byggingarhluta og metin hætta á rakaþéttingu<a class="headerlink" href="#reiknaur-rakaflutningur-i-byggingarhluta-og-metin-haetta-a-rakaettingu" title="Permalink to this heading"></a></h2>
 <p>Dæmi:</p>
 <p>Steyptur veggur einangraður að innan með 100 mm frauðplasti, múraður að
 innan með 20 mm sementsmúr, en að utan með 25 mm sementsmúr. Veggurinn
@@ -1614,563 +1415,36 @@ umf). – Efnisgildi fyrir rakaeiginleika tekin úr töflum 3.3 og 3.4,
 einangrunargildi samsvarandi og í kafla 2.</p>
 <p>Reiknað er hitastig og rakaástand í sniði fyrir aðstæður; inni 22 °C /
 45 %HR, úti -2 °C / 80 %HR (undir meðallagi fyrir janúar í Reykjavík).</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>Útreikningar og niðurstöður í töflu;</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<a class="reference internal image-reference" href="../_images/kafli03_html_9c541ecee96c9f07.png" id="picture-29"><img alt="../_images/kafli03_html_9c541ecee96c9f07.png" id="picture-29" src="../_images/kafli03_html_9c541ecee96c9f07.png" style="width: 576px; height: 323px;" /></a>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/útreikningur.png"><img alt="../_images/%C3%BAtreikningur.png" src="../_images/%C3%BAtreikningur.png" style="width: 90%;" /></a>
+</figure>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Niðurstöður sýna að við framangreindar aðstæður verður rakaþétting í
-veggnum svo nemur 0,0070 g/(m<sup>2</sup>,h), eða 5 g/m<sup>2</sup>,
+veggnum svo nemur <span class="math notranslate nohighlight">\(0,0070 g/(m^2,h)\)</span>, eða <span class="math notranslate nohighlight">\(5 g/m^2\)</span>,
 mánuð – rakaþéttingin er óveruleg þegar tekið er tillit til mögulegrar
 rakaupptöku veggjarins, en athuga ber að hitastig innra byrðis
 steypunnar er undir frostmarki og þéttingin mun því byggjast upp sem
 klakabrynja. Aðstæðurnar sem um ræðir munu þó sjaldan standa nema
 stuttan tíma í senn og þegar veggyfirborðið þiðnar þá getur steypan
 sennilega tekið við rakanum án vandkvæða.</p>
-<div class="line-block">
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/Mollier.png"><img alt="../_images/Mollier.png" src="../_images/Mollier.png" style="width: 90%;" /></a>
+</figure>
+<p class="centered">
+<strong>Línurit 3.3 Mollier línurit fyrir rakt loft</strong></p><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/kafli03_html_6808a09e3c34c867.png" id="picture-30"><img alt="../_images/kafli03_html_6808a09e3c34c867.png" id="picture-30" src="../_images/kafli03_html_6808a09e3c34c867.png" style="width: 520px; height: 690px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Línurit 3.3 Mollier línurit fyrir rakt loft</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>Tafla
-3.6
-M
-ettuna
-rraki;
-þrýs
-tingur
-og
-ra
-kamagn
-í
-lofti,
-háð
-hita
-stigi.
-Fyrir
-hi
-tastig
-undir
-fros
-tmarki
-er
-miðað
-við
-að
-stæður
-yfir
-ís.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Hiti</p>
-<p>(°C)</p>
-</td>
-<td><p>Þrýst.</p>
-<p>(Pa)</p>
-</td>
-<td><p>Raki</p>
-<dl class="simple">
-<dt>(g/m</dt><dd><dl class="field-list simple">
-<dt class="field-odd">sup<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-</dd>
-</dl>
-<p><cite>3</cite>)</p>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>Hiti</p>
-<p>(°C)</p>
-</td>
-<td><p>Þrýst.</p>
-<p>(Pa)</p>
-</td>
-<td><p>Raki</p>
-<dl class="simple">
-<dt>(g/m</dt><dd><dl class="field-list simple">
-<dt class="field-odd">sup<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-</dd>
-</dl>
-<p><cite>3</cite>)</p>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>Hiti</p>
-<p>(°C)</p>
-</td>
-<td><p>Þrýst.</p>
-<p>(Pa)</p>
-</td>
-<td><p>Raki</p>
-<dl class="simple">
-<dt>(g/m</dt><dd><dl class="field-list simple">
-<dt class="field-odd">sup<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
-</dd>
-</dl>
-<p><cite>3</cite>)</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-</tr>
-<tr class="row-odd"><td><p>30</p></td>
-<td><p>4245</p></td>
-<td><p>30,36</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>10</p></td>
-<td><p>1228</p></td>
-<td><p>9,40</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-10</p></td>
-<td><p>260</p></td>
-<td><p>2,14</p></td>
-</tr>
-<tr class="row-even"><td><p>29</p></td>
-<td><p>4005</p></td>
-<td><p>28,78</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>9</p></td>
-<td><p>1147</p></td>
-<td><p>8,83</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-11</p></td>
-<td><p>238</p></td>
-<td><p>1,97</p></td>
-</tr>
-<tr class="row-odd"><td><p>28</p></td>
-<td><p>3780</p></td>
-<td><p>27,24</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>8</p></td>
-<td><p>1072</p></td>
-<td><p>8,28</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-12</p></td>
-<td><p>225</p></td>
-<td><p>1,81</p></td>
-</tr>
-<tr class="row-even"><td><p>27</p></td>
-<td><p>3565</p></td>
-<td><p>25,80</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>7</p></td>
-<td><p>1001</p></td>
-<td><p>7,76</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-13</p></td>
-<td><p>199</p></td>
-<td><p>1,66</p></td>
-</tr>
-<tr class="row-odd"><td><p>26</p></td>
-<td><p>3360</p></td>
-<td><p>24,40</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>6</p></td>
-<td><p>935</p></td>
-<td><p>7,27</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-14</p></td>
-<td><p>181</p></td>
-<td><p>1,52</p></td>
-</tr>
-<tr class="row-even"><td><p>25</p></td>
-<td><p>3170</p></td>
-<td><p>23,04</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>5</p></td>
-<td><p>872</p></td>
-<td><p>6,80</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-15</p></td>
-<td><p>166</p></td>
-<td><p>1,39</p></td>
-</tr>
-<tr class="row-odd"><td><p>24</p></td>
-<td><p>2985</p></td>
-<td><p>21,80</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>4</p></td>
-<td><p>813</p></td>
-<td><p>6,37</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-16</p></td>
-<td><p>151</p></td>
-<td><p>1,27</p></td>
-</tr>
-<tr class="row-even"><td><p>23</p></td>
-<td><p>2815</p></td>
-<td><p>20,60</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>3</p></td>
-<td><p>757</p></td>
-<td><p>5,96</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-17</p></td>
-<td><p>137</p></td>
-<td><p>1,16</p></td>
-</tr>
-<tr class="row-odd"><td><p>22</p></td>
-<td><p>2640</p></td>
-<td><p>19,45</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>2</p></td>
-<td><p>705</p></td>
-<td><p>5,57</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-18</p></td>
-<td><p>125</p></td>
-<td><p>1,06</p></td>
-</tr>
-<tr class="row-even"><td><p>21</p></td>
-<td><p>2485</p></td>
-<td><p>18,35</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>1</p></td>
-<td><p>656</p></td>
-<td><p>5,20</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-19</p></td>
-<td><p>114</p></td>
-<td><p>0,97</p></td>
-</tr>
-<tr class="row-odd"><td><p>20</p></td>
-<td><p>2335</p></td>
-<td><p>17,29</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>0</p></td>
-<td><p>611</p></td>
-<td><p>4,84</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-20</p></td>
-<td><p>104</p></td>
-<td><p>0,88</p></td>
-</tr>
-<tr class="row-even"><td><p>19</p></td>
-<td><p>2195</p></td>
-<td><p>16,33</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-1</p></td>
-<td><p>563</p></td>
-<td><p>4,48</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-21</p></td>
-<td><p>94</p></td>
-<td><p>0,80</p></td>
-</tr>
-<tr class="row-odd"><td><p>18</p></td>
-<td><p>2060</p></td>
-<td><p>15,40</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-2</p></td>
-<td><p>517</p></td>
-<td><p>4,13</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-22</p></td>
-<td><p>85</p></td>
-<td><p>0,73</p></td>
-</tr>
-<tr class="row-even"><td><p>17</p></td>
-<td><p>1935</p></td>
-<td><p>14,50</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-3</p></td>
-<td><p>475</p></td>
-<td><p>3,82</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-23</p></td>
-<td><p>78</p></td>
-<td><p>0,67</p></td>
-</tr>
-<tr class="row-odd"><td><p>16</p></td>
-<td><p>1818</p></td>
-<td><p>13,65</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-4</p></td>
-<td><p>437</p></td>
-<td><p>3,52</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-24</p></td>
-<td><p>71</p></td>
-<td><p>0,61</p></td>
-</tr>
-<tr class="row-even"><td><p>15</p></td>
-<td><p>1703</p></td>
-<td><p>12,82</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-5</p></td>
-<td><p>402</p></td>
-<td><p>3,24</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-25</p></td>
-<td><p>64</p></td>
-<td><p>0,55</p></td>
-</tr>
-<tr class="row-odd"><td><p>14</p></td>
-<td><p>1596</p></td>
-<td><p>12,09</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-6</p></td>
-<td><p>368</p></td>
-<td><p>2,99</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-26</p></td>
-<td><p>58</p></td>
-<td><p>0,50</p></td>
-</tr>
-<tr class="row-even"><td><p>13</p></td>
-<td><p>1496</p></td>
-<td><p>11,37</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-7</p></td>
-<td><p>338</p></td>
-<td><p>2,75</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-27</p></td>
-<td><p>52</p></td>
-<td><p>0,46</p></td>
-</tr>
-<tr class="row-odd"><td><p>12</p></td>
-<td><p>1400</p></td>
-<td><p>10,68</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-8</p></td>
-<td><p>310</p></td>
-<td><p>2,53</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-28</p></td>
-<td><p>47</p></td>
-<td><p>0,41</p></td>
-</tr>
-<tr class="row-even"><td><p>11</p></td>
-<td><p>1311</p></td>
-<td><p>10,03</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-9</p></td>
-<td><p>284</p></td>
-<td><p>2,33</p></td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-29</p></td>
-<td><p>42</p></td>
-<td><p>0,38</p></td>
-</tr>
-<tr class="row-odd"><td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><div class="line-block">
-<div class="line"><br /></div>
-</div>
-</td>
-<td><p>-30</p></td>
-<td><p>37</p></td>
-<td><p>0,34</p></td>
-</tr>
-</tbody>
-</table>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p class="centered">
+<strong>Tafla 3.6 Mettunarraki; þrýstingur og rakamagn í lofti, háð hitastigi. Fyrir hitastig undir frostmarki
+er miðað við aðstæður yfir ís.</strong></p><figure class="align-center">
+<a class="reference internal image-reference" href="myndir/kafli03/Tafla3_6.png"><img alt="myndir/kafli03/Tafla3_6.png" src="myndir/kafli03/Tafla3_6.png" style="width: 90%;" /></a>
+</figure>
 </section>
 <section id="heimildir-og-itarefni">
-<h2><span class="section-number">3.5. </span>Heimildir og ítarefni<a class="headerlink" href="#heimildir-og-itarefni" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.6. </span>Heimildir og ítarefni<a class="headerlink" href="#heimildir-og-itarefni" title="Permalink to this heading"></a></h2>
 <p>Björn Marteinsson (1999) ” Loftræsing í íbúðarhúsum”, erindi á ráðstefnu
 Lagnafélags Íslands, birt í ráðstefnuriti</p>
 <p>DIN (1981) Wärmeschutz im Hochbau DIN 4108</p>
@@ -2210,15 +1484,6 @@ Norge</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="docutils container">
-<p>3.19</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</div>
 </section>
 </section>
 
@@ -2227,7 +1492,7 @@ Norge</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../kafli02/" class="btn btn-neutral float-left" title="2. Varmaflutningur, kólnunartölur og hitastig í sniði" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../kafli04/" class="btn btn-neutral float-right" title="4. 4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../kafli04/" class="btn btn-neutral float-right" title="4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

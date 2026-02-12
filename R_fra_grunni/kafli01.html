@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Inngangur &mdash; R frá grunni 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="2. Frá tilraun til gagna" href="kafli02.html" />
+    <link rel="prev" title="Formáli" href="formali.html" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            R frá grunni
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#um-essa-bok">1.1. Um þessa bók</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1.1.1. Um þessa bók</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#afer">1.1.1.1. aðferð()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hvernig-virkar-r">1.2. Hvernig virkar R?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vinnulag-i-r-rstudio">1.3. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">1.3.1. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#verkefnautanumhald-i-rstudio">1.3.1.1. Verkefnautanumhald í Rstudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slokkt-a-rstudio">1.3.1.2. Slökkt á Rstudio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#aferir-skipanir-foll">1.4. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1.4.1. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#help">1.4.1.1. help()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#help-search">1.4.1.2. help.search()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rsitesearch">1.4.1.3. RSiteSearch()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apropos">1.4.1.4. apropos()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#args">1.4.1.5. args()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#r-sem-vasareiknir">1.5. R sem vasareiknir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r-pakkar">1.6. R-pakkar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.6.1. R-pakkar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install-packages">1.6.1.1. install.packages()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#r-a-islensku">1.7. R á íslensku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gogn">1.8. Gögn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">1.9. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#skraning-gagna">2.1. Skráning gagna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#innlestur-gagna">2.2. Innlestur gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id1">2.2.1. Innlestur gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#read-table">2.2.1.1. read.table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#read-csv">2.2.1.2. read.csv()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#c">2.2.1.3. c()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#seq">2.2.1.4. seq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rep">2.2.1.5. rep()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#stasetning-skraa-ast">2.2.2. Staðsetning skráa<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#groft-yfirlit-gagna">2.3. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.3.1. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#view">2.3.1.1. View()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#names">2.3.1.2. names()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#head">2.3.1.3. head()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#str">2.3.1.4. str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#length">2.3.1.5. length()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#dim">2.3.1.6. dim()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#vontun-maelinga">2.4. Vöntun mælinga</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.1. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#is-na">2.4.1.1. is.na()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#na-omit">2.4.1.2. na.omit()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#oraunhaefum-maelingum-breytt-i-na">2.4.1.3. Óraunhæfum mælingum breytt í NA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#akvein-gildi-valin-ur-gagnatoflu">2.5. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.5.1. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#slice">2.5.1.1. slice()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#filter">2.5.1.2. filter()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#which">2.5.1.3. which()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#grep">2.5.1.4. grep()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#koun-breyta">2.6. Kóðun breyta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#a-flokkabreytur-skilgreindar">2.6.1. A: Flokkabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#factor">2.6.1.1. factor()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#levels">2.6.1.2. levels()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#b-talnabreytum-skipt-upp-i-bil">2.6.2. B: Talnabreytum skipt upp í bil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#cut">2.6.2.1. cut()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#c-flokkar-sameinair">2.6.3. C: Flokkar sameinaðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#d-dagsetningabreytur-skilgreindar">2.6.4. D: Dagsetningabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#as-date">2.6.4.1. as_date()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#e-leita-eftir-textastrengjum">2.6.5. E: Leitað eftir textastrengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#f-breytt-um-heiti-a-breytum">2.6.6. F: Breytt um heiti á breytum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rename">2.6.6.1. rename()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#g-vorpunum-beitt-a-talnabreytur">2.6.7. G: Vörpunum beitt á talnabreytur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#umroun-gagna">2.7. Umröðun gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id5">2.7.1. Umröðun gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#group-by">2.7.1.1. group_by()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#sort">2.7.1.2. sort()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#arrange">2.7.1.3. arrange()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#pivot-longer">2.7.1.4. pivot_longer()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#pivot-wider">2.7.1.5. pivot_wider()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#merge">2.7.1.6. merge()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fleiri-skipanir-fyrir-koun-breyta-ast">2.8. Fleiri skipanir fyrir kóðun breyta<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id6">2.8.1. Fleiri skipanir fyrir kóðun breyta<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#paste">2.8.1.1. paste()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#sprintf">2.8.1.2. sprintf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#separate">2.8.1.3. separate()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#substr">2.8.1.4. substr()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fleiri-skipanir-fyrir-sameiningu-gagna-ast">2.9. Fleiri skipanir fyrir sameiningu gagna<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id8">2.9.1. Fleiri skipanir fyrir sameiningu gagna<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#cbind">2.9.1.1. cbind()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rbind">2.9.1.2. rbind()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#leiksvaei-fyrir-r-koa">2.10. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Myndræn framsetning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#ggplot">3.1. ggplot()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#algengustu-grof">3.1.1. Algengustu gröf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#punktarit">3.1.1.1. Punktarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#stoplarit">3.1.1.2. Stöplarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#stularit">3.1.1.3. Stuðlarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#kassarit">3.1.1.4. Kassarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#normaldreifingarrit">3.1.1.5. Normaldreifingarrit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#asar">3.1.2. Ásar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#nofn-asa">3.1.2.1. Nöfn ása</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#nofn-kvara">3.1.2.2. Nöfn kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#hok-kvara">3.1.2.3. Hök kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#mork-kvara">3.1.2.4. Mörk kvarða</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#litir-og-takn">3.1.3. Litir og tákn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#grofum-skipt-upp-i-reiti">3.1.4. Gröfum skipt upp í reiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skipt-um-bakgrunn">3.1.5. Skipt um bakgrunn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#myndir-vistaar">3.1.6. Myndir vistaðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#id1">3.1.6.1. Myndir vistaðar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#ggsave">3.2. ggsave()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#leiksvaei-fyrir-r-koa">3.2.1. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Lýsandi tölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#talnabreytur">4.1. Talnabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id1">4.1.1. Talnabreytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#max">4.1.1.1. max()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#min">4.1.1.2. min()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mija">4.1.2. Miðja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#mean">4.1.2.1. mean()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#median">4.1.2.2. median()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#breytileiki">4.1.3. Breytileiki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#var">4.1.3.1. var()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#sd">4.1.3.2. sd()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#quantile">4.1.3.3. quantile()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samspil-tveggja-talnabreyta">4.1.4. Samspil tveggja talnabreyta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#cor">4.1.4.1. cor()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#flokkabreytur">4.2. Flokkabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#tini-og-hlutfall">4.2.1. Tíðni og hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#table">4.2.1.1. table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#prop-table">4.2.1.2. prop.table()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#arar-gagnlegar-skipanir">4.3. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.3.1. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#round">4.3.1.1. round()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#summary">4.3.1.2. summary()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#tapply">4.3.1.3. tapply()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#pipurtihattur">4.3.1.4. Pípurtiháttur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#leiksvaei-fyrir-r-koa">4.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Líkindafræðileg undirstaða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#likindareikningur">5.1. Líkindareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.1.1. Líkindareikningur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#factorial">5.1.1.1. factorial()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#choose">5.1.1.2. choose()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#strjalar-likindadreifingar">5.2. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id2">5.2.1. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dbinom">5.2.1.1. dbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pbinom">5.2.1.2. pbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dpois">5.2.1.3. dpois()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ppois">5.2.1.4. ppois()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samfelldar-likindadreifingar">5.3. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id3">5.3.1. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pnorm">5.3.1.1. pnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qnorm">5.3.1.2. qnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rnorm">5.3.1.3. rnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pt">5.3.1.4. pt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qt">5.3.1.5. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pchisq">5.3.1.6. pchisq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id4">5.3.1.7. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pf">5.3.1.8. pf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qf">5.3.1.9. qf()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#leiksvaei-fyrir-r-koa">5.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Ályktunartölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#slembiurtok-valin">6.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id1">6.1.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#sample">6.1.1.1. sample()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">6.2. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id2">6.2.1. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#replicate">6.2.1.1. replicate()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#oryggisbil-reikna-me-endurvalsafer">6.3. Öryggisbil reiknað með endurvalsaðferð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#leiksvaei-fyrir-r-koa">6.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Ályktanir um flokkabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-eitt-hlutfall">7.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id1">7.1.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#binom-test">7.1.1.1. binom.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-tvo-ea-fleiri-hlutfoll">7.2. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id2">7.2.1. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#prop-test">7.2.1.1. prop.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-tengslatoflur">7.3. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id3">7.3.1. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#chisq-test">7.3.1.1. chisq.test()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#fisher-test">7.3.1.2. fisher.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#leiksvaei-fyrir-r-koa">7.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Ályktanir um talnabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-dreifni">8.1. Ályktanir um dreifni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#dreifni-i-tveimur-yum">8.1.1. Dreifni í tveimur þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#var-test">8.1.1.1. var.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#dreifni-i-fleiri-yum">8.1.2. Dreifni í fleiri þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#bartlett-test">8.1.2.1. bartlett.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-mealtol">8.2. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id1">8.2.1. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-test">8.2.1.1. t.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-eitt-mealtal">8.2.2. Ályktanir um eitt meðaltal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-tveggja-mealtala">8.2.3. Ályktanir um mismun tveggja meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-fleiri-mealtala">8.2.4. Ályktanir um mismun fleiri meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-mealtala-parara-maelinga">8.2.5. Ályktanir um mismun meðaltala paraðra mælinga</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#levene-prof-fyrir-dreifni-ast">8.3. Levene próf fyrir dreifni<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#stikalaus-prof-ast">8.4. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id2">8.4.1. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#wilcox-test">8.4.1.1. wilcox.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#leiksvaei-fyrir-r-koa">8.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Einþátta fervikagreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#alyktanir-um-tvo-ea-fleiri-mealtol">9.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id1">9.1.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#aov">9.1.1.1. aov()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#anova">9.1.1.2. anova()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#eftiraprofanir">9.2. Eftiráprófanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id2">9.2.1. Eftiráprófanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#tukeyhsd">9.2.1.1. TukeyHSD()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#stikalaus-prof-ast">9.3. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id3">9.3.1. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#kruskal-test">9.3.1.1. kruskal.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#fleiri-en-tveir-aettir-ast">9.4. Fleiri en tveir þættir<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#leiksvaei-fyrir-r-koa">9.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Línuleg aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#linulegt-likan-smia">10.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id1">10.1.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#lm">10.1.1.1. lm()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#oryggisbil-fyrir-stula-likansins">10.2. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id2">10.2.1. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#confint">10.2.1.1. confint()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#matgaei-likansins-konnu">10.3. Mátgæði líkansins könnuð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#spagildi-og-spabil">10.4. Spágildi og spábil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id3">10.4.1. Spágildi og spábil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#predict">10.4.1.1. predict()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#prof-a-fylgnistuli">10.5. Próf á fylgnistuðli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#strjal-skyribreyta">10.6. Strjál skýribreyta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fleiri-skyribreytur-ast">10.7. Fleiri skýribreytur<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#leiksvaei-fyrir-r-koa">10.8. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#glm">11.1. glm()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">11.1.1. Tvíkosta aðhvarfsgreining með samfellda skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-strjala-skyribreytu">11.1.2. Tvíkosta aðhvarfsgreining með strjála skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#leiksvaei-fyrir-r-koa">11.1.3. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12.html">12. Knitr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#umbrot-a-texta">12.1. Umbrot á texta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#markdown-html-ea-docx">12.1.1. Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#jofnur">12.2. Jöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#klumpastillingar">12.3. Klumpastillingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#leiksvaei-fyrir-r-koa">12.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli13.html">13. Endurvalsaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#endurvalsafer-e-bootstrap-method">13.1. Endurvalsaðferð (e. Bootstrap method)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#oryggisbil-reiknu-me-endurvalsafer">13.1.1. Öryggisbil reiknuð með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli13.html#synidaemi">13.1.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#umraanaprof-e-permutation-test">13.2. Umraðanapróf (e. Permutation test)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer">13.2.1. Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli13.html#id1">13.2.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordalistar.html">Orðalistar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#islenskur-enskur-oralisti">Íslenskur-Enskur orðalisti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#enskur-islenskur-oralisti">Enskur-íslenskur orðalisti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_hofunda.html">Um höfunda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#anna-helga-jonsdottir">Anna Helga Jónsdóttir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#sigrun-helga-lund">Sigrún Helga Lund</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#bjarki-or-elvarsson">Bjarki Þór Elvarsson</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_R_leiksvaedi.html">Um R leiksvæði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#leiksvaein-eru-oflug">Leiksvæðin eru öflug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#datacamp">DataCamp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#vandamal-me-keyrslu">Vandamál með keyrslu</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">R frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Inngangur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/R_fra_grunni//projects/R_fra_grunni/kafli01.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="inngangur">
+<span id="c-inngangur"></span><h1><span class="section-number">1. </span>Inngangur<a class="headerlink" href="#inngangur" title="Permalink to this heading"></a></h1>
+<p>Tölfræði sem fræðigrein snýst um að vinna upplýsingar út frá tölulegum
+mælingum. Gróflega skiptist tölfræðin í tvo anga: að lýsa sem best þeim
+gögnum sem fyrirliggjandi eru og að draga ályktanir um almenna hópa eða
+þýði út frá mælingum á úrtaki. Í flestum tilfellum er unnið með mikið
+magn mælinga og því fer almenn tölfræði-og gagnavinnsla að mestu fram
+með aðstoð tölva. Sérhæfð tölfræðiforrit komu snemma fram á sjónarsviðið
+og eftir því sem að möguleikar þeirra, sem og reiknigeta tölva, jukust,
+varð beiting tölfræði víðfeðmari. Mikill fjöldi forrita eru sérsniðin
+fyrir tölfræði, bæði fyrir almenna og sértæka tölfræðiúrvinnslu. Þar ber
+helst að nefna R, S-Plus, SAS, STATA og SPSS sem öll hafa náð töluverðri
+útbreiðslu innan vissra geira. Einnig eru töflureiknar (t.d. Excel)
+mikið notaðir við tölfræðiúrvinnslu, en hafa skal þó í huga að
+töflureiknar eru almennt ekki ekki hannaðir sem tölfræðihugbúnaður. Mörg
+þessara forrita hafa það sammerkt að notkun þeirra er háð leyfi og
+notkun þeirra fyrir utan háskólaumhverfið takmörkuð sökum leyfisgjalda.</p>
+<p>Nú í seinni tíð hefur aukist áhersla á þróun opins tölfræðihugbúnaðar,
+þ.e. hugbúnaðar sem byggist á forritunarkóða er opinber og aðgengilegur
+fyrir alla. Slíkur hugbúnaður er yfirleitt ókeypis og mjög
+sveigjanlegur. Eitt vinsælasta tölfræðiforritið í dag, R, er gott dæmi
+um þessa þróun. R sem hugbúnaður á rætur að rekja aftur til
+tilraunaverkefnis tveggja prófessora í tölfræði rétt fyrir aldamót.
+Prófessoranir tveir, Ross Ihaka og Robert Gentleman við háskólann í
+Auckland Nýja Sjálandi, þróuðu hugbúnaðinn fyrst til kennslu. Síðar vatt
+þróunin uppá sig, ekki síst vegna þess að hún var opin og í mikilli
+samvinnu við notendur. Í dag er R bæði forritunarmál-og umhverfi fyrir
+alla almenna tölfræði-og gagnavinnslu. Stór þáttur í vinsældum R umfram
+önnur tölfræðiforrit er sveigjanleiki og fjöldi viðbóta, svonefndra
+pakka, sem bæta og auka möguleika forritsins. R hefur því orðið á
+seinustu árum eitt helsta verkfæri tölfræðinga og nú orðið eru flestar
+tölfræðiaðferðir fyrst forritaðar fyrir R, áður en önnur forrit taka þau
+upp.</p>
+<p>Fyrir þá sem hafa bakgrunn í forritun, þá tölum við oft jöfnum höndum um
+<em>forritið</em> R (forritið sem framkvæmir tölfræðiúrvinnsluna) og
+<em>forritunarmálið</em> R (skipanirnar sem að við gefum forritinu).
+Tölfræðiforritið R útfærir forritunarmál sem er sérsniðið fyrir tölfræði
+og gagnavinnslu. Ein af sérstöðum R sem forritunarmáls er að í því má
+finna sérsniðnar gagnategundir sem tengdar eru tölfræði. Þar má nefna
+flokkabreytur, talnabreytur og gagnatöflur, sambærilegar við töflur í
+gagnagrunni. Einnig er mikil áhersla lögð á myndræna framsetningu.</p>
+<p>R er til fyrir helstu stýrikerfi, þ.e. Windows, MacOsX og Linux. Hráasta
+viðmót R er skipanalína, en fjöldinn allur af hjálparforritum hafa verið
+þróuð til þess að styðja við notkun á R með einum eða öðrum hætti. Slík
+forrit kallast <em>notendaviðmót</em> og má þar einna helst nefna RStudio, sem
+hefur síðastliðin ár orðið eitt vinsælasta viðmótið fyrir R. RStudio
+hefur, auk mikils stuðnings við R og R-skipanaskrár, innbyggð tól fyrir
+sjálfvirka skýrslugerð, skjalastjórnun og gagnvirka greiningu með R.</p>
+<section id="um-essa-bok">
+<h2><span class="section-number">1.1. </span>Um þessa bók<a class="headerlink" href="#um-essa-bok" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">1.1.1. </span>Um þessa bók<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Þessi bók er skrifuð með það í huga að vera uppflettirit fyrir notendur
+sem eru að stíga sín fyrstu skref með R. Henni er því ekki ætlað að vera
+kennslubók í tölfræði. Gert er ráð fyrir að notandinn hafi annað hvort
+einhvern grunn í tölfræði eða geti aflað hans úr öðrum bókum.</p>
+<p>Bókin ýtir notandanum af stað í R með því að kynna til sögunnar helstu
+grunnatriði og vísa svo veginn að frekara ýtarefni. Bókinni er skipt í
+þematengda kafla þar sem í hverjum kafla er inngangur um efnið og því
+næst eru tilteknar aðferðir kynntar með dæmum um notkun. Undir lok
+kaflanna eru, eftir atvikum, undirkaflar með frekari útvíkkunum. Þeir
+kaflar eru stjörnumerktir og er lesandanum óhætt að geyma þá kafla til
+síðari tíma án þess að það komi að sök við frekari lestur bókarinnar.</p>
+<p>Í hvert sinn sem að ný aðferð (við munum ýmist nota orðin aðferð, fall
+eða skipun um R-skipanir) er kynnt til sögunnar verður yfirlit um helstu
+eiginleika hennar lýst með gulum kassa:</p>
+<section id="afer">
+<h4><span class="section-number">1.1.1.1. </span>aðferð()<a class="headerlink" href="#afer" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Með hverju á að mata aðferðina</p>
+<p><strong>Úttak:</strong> Hvað býr aðferðin til</p>
+<p><strong>Helstu stillingar:</strong> Hvað má fínstilla (ef við á)</p>
+</div>
+<hr class="docutils" />
+<p>Að því loknu taka við dæmi um beitingu aðferðarinnar í hvítum kössum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aðferð</span> <span class="n">sem</span> <span class="n">hægt</span> <span class="n">er</span> <span class="n">að</span> <span class="n">keyra</span> <span class="n">í</span> <span class="n">R</span>
+</pre></div>
+</div>
+<p>Allar skipanirnar byggja á aðgengilegum gögnum svo lesandinn getur hermt
+þær eftir á eigin tölvu til að dýpka skilninginn.</p>
+<p>Við gerum ráð fyrir að notandinn hafi bæði forritin R og RStudio
+uppsett. Hægt er að nálgast R af slóðinni <a class="reference external" href="http://cran.hafro.is">http://cran.hafro.is</a> og
+RStudio af <a class="reference external" href="http://www.rstudio.com/ide/">http://www.rstudio.com/ide/</a>. Einnig má benda á að til eru
+fjölmörg kennslumyndbönd um notkun R en þau má finna á
+<a class="reference external" href="http://kennslubanki.hi.is">http://kennslubanki.hi.is</a></p>
+</section>
+</section>
+</section>
+<section id="hvernig-virkar-r">
+<h2><span class="section-number">1.2. </span>Hvernig virkar R?<a class="headerlink" href="#hvernig-virkar-r" title="Permalink to this heading"></a></h2>
+<p>Fyrir þá sem ekki eru vanir því að forrita getur R virst framandi við
+fyrstu sýn. Þá getur verið gott að hugsa um R sem tóman verkfærakassa
+sem við munum síðar fylla af alls konar <em>hlutum</em>. Þessir hlutir geta
+verið af ýmsu tagi, allt frá gögnum til grafa, greininga og aðferða, svo
+dæmi séu nefnd.</p>
+<p>Í hvert sinn sem við komum að nýju verkefni er kassinn tómur. Síðan
+hefst <em>vinnulotan</em> okkar, þar sem við notum <em>skipanir</em> til að búa til
+nýja <em>hluti</em> í kassanum okkar. Í hvert sinn sem við framkvæmum skipun í
+R höfum við val um tvennt:</p>
+<ul class="simple">
+<li><p>Að skipunin spýti hlutnum sem við bjuggum til á skjáinn okkar og eyði
+honum svo jafnóðum (hendi honum úr kassanum um leið).</p></li>
+<li><p>Að skipunin <em>visti</em> hlutinn þannig að við getum nálgast hann aftur og
+unnið frekar með hann (geymi hann í kassanum).</p></li>
+</ul>
+<p>Í hluta <a class="reference internal" href="#s-adferdir"><span class="std std-numref">1.4</span></a> förum við nánar í það hvernig skipanir virka.</p>
+<p>R getur ekki vistað hluti nema þeir hafi eitthvað nafn. Það þýðir að
+allt í kassanum verður að hafa eitthvað heiti og gildir það jafnt um
+gögn sem aðferðir eða greiningar. Þegar við gefum hlut eitthvað heiti
+notum við ritháttinn:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{nafn &lt;- skipun}\]</div>
+<p>þar sem í stað <code class="docutils literal notranslate"><span class="pre">nafn</span></code> kemur nafnið sem við viljum gefa hlutnum og í
+stað <code class="docutils literal notranslate"><span class="pre">skipun</span></code> kemur sú skipun sem býr til hlutinn. Táknin þar á milli
+eru „minna en merkið“ og bandstrik. Skipunin getur samanstaðið af
+mörgum orðum svigum og alls kyns táknum. Ef við hins vegar skrifum bara
+skipunina, án þess að vista hana undir nafni, prentar R út það sem
+skipunin gerir á skjáinn, án þess að vista nokkuð.</p>
+<p>Tveir ólíkir hlutir geta ekki haft sama nafnið. Ef við búum til hlut sem
+hefur sama nafn og hlutur sem við höfðum áður búið til þá hverfur gamli
+hluturinn og sá nýji kemur í hans stað. Í R er heldur enginn <em>undo</em>
+takki, þ.e.a.s. ekki er hægt að afturkalla skipanir með neinum hætti.
+Það þýðir að ef við höfum breytt einhverjum hlut er engin leið að
+afturkalla þá breytingu nema með því að búa hlutinn aftur til. Það er þó
+ekkert til að óttast svo framanlega sem við vöndum vinnulagið okkar í R.
+Það er umfjöllunarefni næsta hluta.</p>
+</section>
+<section id="vinnulag-i-r-rstudio">
+<span id="s-vinnulag-i-r"></span><h2><span class="section-number">1.3. </span>Vinnulag í R/RStudio<a class="headerlink" href="#vinnulag-i-r-rstudio" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">1.3.1. </span>Vinnulag í R/RStudio<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Í R er lítið um músasmelli heldur byggist úrvinnslan á því að gefa
+forritinu tilteknar skipanir sem það vinnur síðan úr. Það er hvort
+tveggja í senn, einn af stærstu kostum R en jafnframt sá eiginleiki sem
+fælir marga frá forritinu í upphafi.</p>
+<p>Stærsti kosturinn við að gefa skipanir er sá að við getum skrásett
+nákvæmlega allar aðgerðir okkar og því getum við ekki einungis
+nákvæmlega endurtekið alla úrvinnslu heldur gert það með lítilli
+fyrirhöfn. Því margborgar sig að venja sig á skilvirkt vinnulag frá
+fyrsta degi þegar unnið er í R. Helsti gallinn við að gefa skipanir er
+sá að nöfnin á skipununum standa ekki á skjánum fyrir framan okkur
+heldur þurfum við að muna þær eða kunna að leita að þeim, en við munum
+koma að þessu síðar.</p>
+<p>Afar mikilvægt atriði í góðu vinnulagi í R er að útbúa sérstaka möppu á
+tölvunni fyrir sérhvert verkefni, þar sem skipanaskrár, gagnasöfn og
+annað sem kemur að vinnslu í R eru geymd. Þessa mappa er kölluð
+<em>vinnumappa</em>.</p>
+<p>Windows notendur þurfa að passa sig að nota ekki íslenska stafi né bil í
+heitinu á möppunni né geyma möppuna í möppum sem inniheldur íslenska
+stafi eða bil. Það er því ekki hægt að geyma möppuna í:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C\:kalli\My</span> <span class="pre">Documents\tolfraedi\Rverkefni</span></code></p>
+<p>þar sem það er bil í <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">documents</span></code>. Makka og Linux notendur þurfa
+ekki að hafa áhyggjur af þessu.</p>
+<p>Til að vinna í R opnum við forritið RStudio. Rstudio keyrir R fyrir
+okkur og við þurfum að gæta þess að vera búin að hlaða R niður en við
+opnum R ekki sérstaklega.</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/tikz2.svg" /></figure>
+<p>Í RStudio er viðmótinu skipt upp í fjóra glugga, eins og sjá má á
+myndinni hér fyrir ofan. Neðri vinstri glugginn er <em>keyrsluglugginn</em>,
+þar höfum við samskipti við R með því að slá inn skipanir. Þetta er
+staðurinn þar sem við <em>búum til hluti</em> og þar sem R sýnir okkur útkomur
+skipana þegar við biðjum um þær. Hér búum við til allt í
+verkfærakassanum okkar.</p>
+<p>Efri vinstri glugginn er <em>skipanaglugginn</em>. Þar geymum við allar þær
+skipanir sem við mötum inn í keyrslugluggann. Í þessum glugga er ekkert
+framkvæmt, heldur skrifum við niður <em>uppskriftir</em> af hlutunum sem við
+búum til. Byrjendum finnst oft gott að prófa sig fyrst áfram í
+keyrsluglugganum og færa svo þær skipanir „sem virkuðu“ yfir í
+skipanagluggann. Þegar meiri færni er náð verður betra að vinna alfarið
+í skipanaglugganum og hlaða síðan skipununum inn í keyrslugluggann þegar
+við viljum sjá útkomur þeirra.</p>
+<p>Skipanirnar sem við geymum í skipanaglugganum vistum við í sérstaka
+skrá, sem við köllum <em>skipanaskrá</em>. Skipanaskrá er alltaf lesin frá
+efstu línu og niður svo við þurfum að gæta þess að skrá þær skipanir sem
+við viljum framkvæma í réttri röð. Það að breyta hlut neðarlega í
+skipanaskrá hefur engin áhrif á þann hlut ofar í skránni. Á meðan við
+skráum alla þá úrvinnslu sem við viljum framkvæma í skipanaskránni
+þurfum við ekki að hafa nokkrar áhyggjur af því þó við framkvæmum mistök
+og eyðum út eða eyðileggjum hluti sem við vorum búin að búa til. Við
+lagfærum bara þá línu þar sem mistökin voru og keyrum allar skipanirnar
+aftur, frá efstu línu og niðurúr. Yfirleitt tekur það einungis
+örskotsstund.</p>
+<p>Auðvelt er að senda línur úr skipanaskránni okkar í keyrslugluggann. Við
+staðsetjum bendilinn í þeirri línu sem við viljum flytja, höldum svo
+niðri <kbd class="kbd docutils literal notranslate">⌘</kbd> + <kbd class="kbd docutils literal notranslate">⏎</kbd> á MacOs en <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">⏎</kbd> á Windows/linux.
+Þá afritast viðkomandi lína yfir í keyrslugluggann og skipunin er framkvæmd.
+Einnig er hægt að keyra alla skipanaskrána með því að smella á „source“
+hnappinn efst í hægra horninu á skipanaglugganum.</p>
+<p>Þið vitið eflaust að mismunandi tegundir af skrám hafa mismunandi
+endingar. Þannig er algengt að Word skrár hafi endinguna .docx og að
+Excel skrár hafi endinguna .xlsx. Skipanaskrár unnar í R hafa endinguna
+.R.</p>
+<p>Í efri hægri glugganum eru tveir flipar. Í öðrum flipanum sjáum við
+<em>vinnusvæðið</em> okkar. Það eru allir þeir hluti sem búnir hafa verið til í
+vinnulotunni, hvort sem það eru gögn sem hafa verið lesið inn eða
+tölfræðilíkön sem hafa verið vistuð. Þetta er með öðrum orðum allt það
+sem við erum búin að búa til í verkfærakassanum okkar. Í hinum glugganum
+má sjá skipanasöguna okkar, þ.e. lista yfir þær skipanir sem keyrðar
+hafa verið í vinnulotunni.</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/env.png" />
+</figure>
+<figure class="align-center">
+<img alt="Mynd" src="_images/hist.png" />
+</figure>
+<p>Í neðri glugganum hægra meginn eru fimm flipar. Þar sjáum við myndir sem
+teiknaðar eru í R og hjálpina sem hægt er að kalla á fyrir R-skipanir.
+Hægt er að leita í hjálpinni með því að slá inn leitarorð í
+leitargluggann í horninu hægra meginn, en nánar verður fjallað um
+hjálpina í R síðar í kaflanum.</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/help.png" />
+</figure>
+<figure class="align-center">
+<img alt="Mynd" src="_images/plot.png" />
+</figure>
+<p>Það fyrsta sem við gerum þegar við opnum RStudio er að staðsetja okkur í
+réttri möppu, þ.e.a.s. vinnumöppunni okkar. Við staðsetjum okkur í
+réttri möppu með því að velja <code class="docutils literal notranslate"><span class="pre">Session</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Working</span> <span class="pre">Directory</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Choose</span> <span class="pre">Directory</span></code> og
+velja þar möppuna. Rstudio sýnir okkur þá innhald möppunnar í
+úttaksglugganum undir <code class="docutils literal notranslate"><span class="pre">Files</span></code>.</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/files.png" />
+</figure>
+<p>Þegar RStudio er ræst í fyrsta skipti þarf að opna sérstaklega
+skipanaglugga með því að fara í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Document</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">script</span></code>. Þá birtist
+skipanagluggi á skjánum. Viljum við koma aftur að skipanaskrá sem
+viðhöfum áður unnið með förum við í <code class="docutils literal notranslate"><span class="pre">Open</span></code> í stað <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Document</span></code>.</p>
+<section id="verkefnautanumhald-i-rstudio">
+<h4><span class="section-number">1.3.1.1. </span>Verkefnautanumhald í Rstudio<a class="headerlink" href="#verkefnautanumhald-i-rstudio" title="Permalink to this heading"></a></h4>
+<p>Þegar unnið er að fleiri en tveim úrvinnslum í einu og/eða við viljum
+koma að sömu úrvinnslu síðar meir getur Rstudio auðveldað okkur lífið
+enn frekar með því að skilgreina <em>verkefni</em>. Verkefni eru sérstakar
+skrár með endingunni „.Rproj“. Þær halda utan um vinnumöppu notandans,
+tryggja að ný (og hrein) vinnulota er ræst (þ.a. niðurstöður annarra
+reikninga trufli ekki þá sem notandinn vill vinna með) og opnar þær
+skrár sem notandinn var að vinna með seinast. Hægt er að hafa sértækar
+stillingar fyrir sérhvert verkefni sem og að hafa mörg verkefni opin í
+einu, eitt í hverjum glugga. Nýtt verkefni er stofnað með því að velja
+<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span><code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">project</span></code> og svo í framhaldinu
+velja viðeigandi hluti í valglugga sem þá birtist:</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/project1.png" />
+</figure>
+<p>Hér hefur notandinn möguleika á því að tengja verkefni við þrjár gerðir
+af vinnumöppum: A) nýja vinnumöppu, B) tengja við vinnumöppu sem er til
+og geymir gagnasett, og C) vinnumöppur sem tengjast
+skjalastjórnunarkerfunum git og svn. Sé ný vinnumappa valin þá fær
+notandinn val um skilgreina verkefnið betur svo að Rstudio geti sett
+verkefnið rétt upp:</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/project2.png" />
+</figure>
+<p>Lesendur þessarar bókar munu að öllum líkindum velja fyrst um sinn <em>tómt
+verkefni</em> (e. empty project). Hinir tveir valmöguleikarnir bjóða upp á
+stillingar fyrir pakkasmíði og gagnvirkt vefviðmót fyrir R-forrit. Sé
+tómt verkefni valið er notandinn beðinn um að finna stað fyrir
+verkefnið.</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/project3.png" />
+</figure>
+<p>Rstudio býr þá til nýtt verkefni á þeim stað. Þá verður til skrá með
+endinguna <code class="docutils literal notranslate"><span class="pre">.Rproj</span></code>, sé smellt á hana opnast R, með vinnumöppuna sem
+við tilgreindum í vinnulotunni og opnar þær skipanaskrár sem síðast voru
+opnar þegar við unnum í verkefninu.</p>
+</section>
+<section id="slokkt-a-rstudio">
+<h4><span class="section-number">1.3.1.2. </span>Slökkt á Rstudio<a class="headerlink" href="#slokkt-a-rstudio" title="Permalink to this heading"></a></h4>
+<p>Þegar slökkt er á Rstudio er notandinn spurður um óvistaðar skrár:</p>
+<figure class="align-center">
+<img alt="Mynd" src="_images/shutdown.png" />
+</figure>
+<p>Hér hefur notandinn ekki vistað skránna „analysis.R“, sem líkast til er
+æskilegt að gera. Hin skráin „Workspace image (.RData)“ geymir þá hluti
+sem eru til í vinnulotunni hjá notandanum. Mörgum þykir þægilegt að
+geyma vinnusvæðið milli vinnulota, sérstaklega ef þungir útreikningar
+liggja að baki þeirra. Hafa skal þó í huga að hlutir úr geymdu
+vinnusvæði geta truflað úrvinnslu og því er æskilegt að geyma ekki
+vinnusvæðið milli vinnulota. Einnig er það ekki æskilegt vegna
+<em>rekjanleika</em>, betra er að allir hlutir séu skilgreindar í skipanaskrá
+sem er svo keyrð þegar þarf.</p>
+</section>
+</section>
+</section>
+<section id="aferir-skipanir-foll">
+<span id="s-adferdir"></span><h2><span class="section-number">1.4. </span>Aðferðir/skipanir/föll<a class="headerlink" href="#aferir-skipanir-foll" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">1.4.1. </span>Aðferðir/skipanir/föll<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<section id="help">
+<h4><span class="section-number">1.4.1.1. </span>help()<a class="headerlink" href="#help" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Nafn á falli</p>
+<p><strong>Úttak:</strong> Kallar fram hjálparsíðuna fyrir fallið</p>
+<p><strong>Helstu stillingar:</strong> package, help<span class="math notranslate nohighlight">\(\_\)</span>type</p>
+</div>
+<hr class="docutils" />
+<p>R hefur, eins og áður sagði, fjölda innbyggðra falla sem auðvelda
+notandanum að vinna með gögn auk þess sem auðvelt er fyrir notandann að
+smíða sín eigin föll. Til þess að fá yfirsýn yfir þessi innbyggðu föll
+hefur R innbyggða <em>hjálp</em> sem gefur okkur nánari upplýsingar um þá
+skipun/aðferð/fall sem við viljum fræðast meira um. Þannig gefur
+skipunin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>okkur nánari upplýsingar um skipunina <code class="docutils literal notranslate"><span class="pre">read.table()</span></code>. Nánari
+upplýsingar birtast þá í nýjum glugga á skjánum. Látið útlit
+hjálparinnar ekki fæla ykkur frá. Það er vissulega hrátt og gæti virst
+óskiljanlegt í fyrstu en læri maður að líta á úttakið réttum augum má
+finna þar miklar upplýsingar á fljótlegan hátt. Hjálpin í R fylgir
+eftirfarandi sniðmáti:</p>
+<ul class="simple">
+<li><p>Efst, undir <code class="docutils literal notranslate"><span class="pre">Description:</span></code>, kemur stutt lýsing á skipuninni.</p></li>
+<li><p>Þar á eftir kemur <code class="docutils literal notranslate"><span class="pre">Usage:</span></code> en þar sjást allar þær stillingar sem
+hægt er að gefa skipuninni. Yfirleitt eru flestar stillingarnar
+<em>sjálfgefnar</em> sem þýðir að ef við tilgreinum ekkert eru stillingarnar
+sjálfkrafa stilltar á algengustu gildin. Viljum við breyta einhverjum
+af stillingunum, þá tilgreinum við eingöngu þær stillingar sem við
+viljum breyta og hvaða gildi við viljum að séu á þeim stillingum.</p></li>
+<li><p>Næst er komið að <code class="docutils literal notranslate"><span class="pre">Arguments:</span></code>. Þar eru allar mögulegar stillingar
+sýndar, hvaða gildi er hægt að gefa þeim og hvaða áhrif það hefur.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Details:</span></code> gefur ítarlega lýsingu á þeirri „vinnu“ sem skipunin
+framkvæmir.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Value:</span></code> útskýrir hvers lags útkoma kemur út úr skipuninni.</p></li>
+<li><p>Undir <code class="docutils literal notranslate"><span class="pre">Note:</span></code> má finna ýmsar gagnlegar ábendingar.</p></li>
+<li><p>Í <code class="docutils literal notranslate"><span class="pre">References:</span></code> eru heimildir sem aðferðin byggir á.</p></li>
+<li><p>Oft reynast góðir molar í <code class="docutils literal notranslate"><span class="pre">See</span> <span class="pre">Also:</span></code>. Þar eru oft dæmi um aðrar
+skyldar aðferðir sem gætu reynst gagnlegar sem og heimasíður og
+fleira sem gæti komið að góðum notum.</p></li>
+<li><p>Að lokum má sjá dæmi um beitingu aðferðinnar í <code class="docutils literal notranslate"><span class="pre">Examples:</span></code>. Verið
+óspör að prófa þau dæmi til að kynnast aðferðinni betur.</p></li>
+</ul>
+<p>Stundum eru fleiri kaflar í hjálpinni en þetta eru þeir mikilvægustu.</p>
+</section>
+<section id="help-search">
+<h4><span class="section-number">1.4.1.2. </span>help.search()<a class="headerlink" href="#help-search" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Efnisatriði innan gæsalappa</p>
+<p><strong>Úttak:</strong> Leitar að efni í texta hjálparsíða R falla</p>
+<p><strong>Helstu stillingar:</strong> package, fields</p>
+</div>
+<hr class="docutils" />
+<p>Ef við þekkjum ekki nafnið á fallinu má leita eftir efnisatriði:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Þá er þó aðeins leitað í þeim <em>pökkum</em> sem hefur verið hlaðin niður á
+tölvuna sem unnið er á. Við förum nánar í pakka í hluta <a class="reference internal" href="#s-pakkar"><span class="std std-numref">1.6</span></a>.
+Það sama gildir um föllin <code class="docutils literal notranslate"><span class="pre">help()</span></code> og <code class="docutils literal notranslate"><span class="pre">help.search()</span></code>. Ef við viljum
+leita að skipunum sem gætu mögulega leynst í pökkum sem við höfum ekki
+hlaðið niður má nota skipunina <code class="docutils literal notranslate"><span class="pre">RSiteSearch()</span></code>.</p>
+</section>
+<section id="rsitesearch">
+<h4><span class="section-number">1.4.1.3. </span>RSiteSearch()<a class="headerlink" href="#rsitesearch" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Efnisatriði innan gæsalappa</p>
+<p><strong>Úttak:</strong> Leitar að föllum á heimasíðu R</p>
+<p><strong>Helstu stillingar:</strong> restrict, sortby</p>
+</div>
+<hr class="docutils" />
+<p>Til að leita á heimasíðu R eftir efnisatriði má nota</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSiteSearch</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>sem gefur notandanum lista yfir pakka og föll sem til eru á heimasíðu R
+í nýjum vafraglugga.</p>
+</section>
+<section id="apropos">
+<h4><span class="section-number">1.4.1.4. </span>apropos()<a class="headerlink" href="#apropos" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Textabrot innan gæsalappa</p>
+<p><strong>Úttak:</strong> Listi að föllum sem innihalda textabrotið</p>
+</div>
+<hr class="docutils" />
+<p>Ef allt annað bregst, en við munum part úr nafni fallsins, en þó ekki
+alveg allt, þá getum við notað fallið <code class="docutils literal notranslate"><span class="pre">apropos</span></code>. Það skilar lista af
+nöfnum falla sem hafa ákveðinn <code class="docutils literal notranslate"><span class="pre">strenghluta</span></code>, þ.e. nafnið á fallinu
+inniheldur þann textabút.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span> <span class="c1">## skilar villu ef foreign pakkinn</span>
+<span class="c1">## er ekki virkur i minni</span>
+<span class="n">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span> <span class="c1">## pakki sem inniheldur read.spss fallid</span>
+<span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Athugið að <code class="docutils literal notranslate"><span class="pre">apropos</span></code> skilar aðeins nöfnum falla sem eru í minni.</p>
+</section>
+<section id="args">
+<h4><span class="section-number">1.4.1.5. </span>args()<a class="headerlink" href="#args" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Nafn á falli</p>
+<p><strong>Úttak:</strong> Inntak fallsins</p>
+</div>
+<hr class="docutils" />
+<p>Vilji notandinn aðeins skoða hver inntökin í fallið eru er hægt að nota
+fallið <code class="docutils literal notranslate"><span class="pre">args</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">args</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+<span class="c1">## function (x, ...)</span>
+<span class="c1">## NULL</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="r-sem-vasareiknir">
+<h2><span class="section-number">1.5. </span>R sem vasareiknir<a class="headerlink" href="#r-sem-vasareiknir" title="Permalink to this heading"></a></h2>
+<p>Í R má framkvæma allar þær aðgerðir sem finna má á venjulegum
+vasareiknum. Þannig leggur skipunin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span>
+<span class="c1">## [1] 8</span>
+</pre></div>
+</div>
+<p>einfaldlega saman tölurnar 3 og 5. Á sama hátt og við erum vön notum við
+mínus (-), margföldun (*) og deilingu (/).</p>
+<p>Aðferðin ** hefur tölur í veldi. Skipunin</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">**</span><span class="mi">4</span>
+<span class="c1">## [1] 16</span>
+</pre></div>
+</div>
+<p>reiknar því stærðina <span class="math notranslate nohighlight">\(2^4\)</span>.</p>
+<p>Aðferðin <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> tekur rótina af tölunum sem við mötum hana með</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="c1">## [1] 3</span>
+</pre></div>
+</div>
+<p>skilar sem dæmi rótinni af 9.</p>
+<p>R beitir réttri röð reikniaðgerða. Það er að segja, það byrjar á því að
+hefja í veldi eða taka rætur, því næst margfaldar það eða deilir og að
+lokum leggur það saman eða dregur frá. Gefum við því skipunina</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">+</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1">## [1] 83</span>
+</pre></div>
+</div>
+<p>byrjar það á því að reikna <span class="math notranslate nohighlight">\(4^2\)</span> (16) síðan margfaldar það þá
+stærð með 5 (80) og leggur á endanum þrjá við (83).</p>
+<p>Við notum sviga á sama hátt í R og hefðbundnum vasareiknum. Ef við notum
+sviga þá byrjar R á því að reikna stæðuna sem stendur innan svigans eins
+og við viljum. Gætið ykkar samt á því að R skilur ekki skipunina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">## Error in eval(expr, envir, enclos): attempt to apply non-function</span>
+</pre></div>
+</div>
+<p>Ef við viljum margfalda töluna 3 við innihald svigans þá verðum við að
+muna eftir að setja margföldunarmerkið (*) á milli, þ.e. skrifa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">6</span><span class="o">-</span><span class="mi">8</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">## [1] 6</span>
+</pre></div>
+</div>
+<p>Þessi skipun reiknar stærðina
+<span class="math notranslate nohighlight">\(3 \cdot (6 - 8/2) = 3 \cdot (6-4) = 3\cdot 2\)</span> og gefur því
+útkomuna 6.</p>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">exp()</span></code> hefur e í það veldi sem hún er mötuð með. Viljum við
+hefja <span class="math notranslate nohighlight">\(e\)</span> í veldið 3, þ.e.a.s. reikna <span class="math notranslate nohighlight">\(e^3\)</span> gefum við
+skipunina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1">## [1] 20.08554</span>
+</pre></div>
+</div>
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">log()</span></code> tekur logarithma af því sem við mötum hana með. Gætið
+ykkar þó að sjálfgefna stillingin í R reiknar náttúrulega logarithmann
+(með grunntöluna <span class="math notranslate nohighlight">\(e\)</span>). Ef við viljum logarithma með grunntöluna 10
+notum við stillinguna <code class="docutils literal notranslate"><span class="pre">base=10</span></code>. Þá myndum við gefa skipunina</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">log</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">## [1] 1.518514</span>
+</pre></div>
+</div>
+<p>til að reikna log(33) svo dæmi sé nefnt.</p>
+<p>Viljum við geyma niðurstöður reikninga, eða aðgerða almennt, má alltaf
+vista niðurstöðurnar sem <code class="docutils literal notranslate"><span class="pre">hlut</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">a</span>
+<span class="c1">## [1] 2</span>
+<span class="n">b</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">b</span>
+<span class="c1">## [1] 3</span>
+</pre></div>
+</div>
+</section>
+<section id="r-pakkar">
+<span id="s-pakkar"></span><h2><span class="section-number">1.6. </span>R-pakkar<a class="headerlink" href="#r-pakkar" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">1.6.1. </span>R-pakkar<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<section id="install-packages">
+<h4><span class="section-number">1.6.1.1. </span>install.packages()<a class="headerlink" href="#install-packages" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> Nafn á pakka innan gæsalappa</p>
+<p><strong>Úttak:</strong> Pakki, og aðrir pakkar honum tengdur, er settur upp</p>
+<p><strong>Helstu stillingar:</strong> repos</p>
+</div>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">pakki</span></code> er samansafn af aðferðum, oft sérsniðnar fyrir ákveðna gerð
+af tölfræðiúrvinnslu. Til eru ótalmargir pakkar fyrir nánast hvaða
+tölfræðiaðferð sem er og þykir nú regla fremur en undantekning að
+glænýjar tölfræðiaðferðir séu kynntar til leiks fyrir tölfræðiheiminum
+sem nýr R pakki. Þegar R er hlaðið niður í fyrsta skipti kemur það með
+fjöldanum öllum af svokölluðum grunnpökkum en þurfum við pakka sem ekki
+tilheyra þessum grunnpökkum þurfum við að hlaða þeim niður á tölvuna
+okkar með aðferðinni <code class="docutils literal notranslate"><span class="pre">install.packages()</span></code>. Það þarf aðeins að gera
+einu sinni á hverri tölvu. Viljum við t.d ná í <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> pakkann gerum
+við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;ggplot2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ef við viljum svo vinna með aðferðirnar í tilteknum pakka þurfum við að
+láta R vita af því. Það þarf að gera í hvert sinn sem ný vinnulota hefst
+í R. Við gerum aðferðirnar úr pakkanum aðgengilegar með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Við getum hugsað það sem svo að með skipuninni <code class="docutils literal notranslate"><span class="pre">library()</span></code> stingum við
+pakka í samband við verkfærakassann okkar til að hafa aðgang að þeim
+skipunum sem þar er að finna.</p>
+</section>
+</section>
+</section>
+<section id="r-a-islensku">
+<h2><span class="section-number">1.7. </span>R á íslensku<a class="headerlink" href="#r-a-islensku" title="Permalink to this heading"></a></h2>
+<p>Íslenskir stafir eru oft til vandræða þegar skjöl eru opnuð í annarri
+gerð af stýrikerfi en þau voru búin til. Niðurstaðan verður þá í þessa
+átt</p>
+<figure class="align-default">
+<img alt="_images/stafirirugli.png" src="_images/stafirirugli.png" />
+</figure>
+<p>Ástæða þess er sú að stýrikerfi hafa enn ekki innleitt sameiginlegan
+staðal til að tákna stafi - og þessir staðlar eru ekki eingöngu ólíkir
+frá stýrikerfi til stýrikerfis, heldur einnig á milli tungumála- og
+heimshluta hjá sama stýrikerfi. Á íslenskum tölvum er algengast að
+<code class="docutils literal notranslate"><span class="pre">latin-1</span></code> staðallinn notaður á Windows tölvum á meðan nýrri <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>
+staðall er notaður á MacOSX/Linux tölvum.</p>
+<p>Þegar skjöl birtast á þennan hátt er mikilvægt að <strong>vista ekki skjalið</strong>
+heldur fara beint í <code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span>
+<code class="docutils literal notranslate"><span class="pre">Reopen</span> <span class="pre">with</span> <span class="pre">Encoding...</span></code> og velja þá</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ISO-8859-1</span></code> ef unnið er í MacOsX tölvu en skjalið var búið til í
+Windows tölvu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UTF-8</span></code> ef unnið er í Windows tölvu en skjalið var búið til í
+MacOsX tölvu.</p></li>
+</ul>
+<p>ef þið hyggist vinna áfram með skjalið borgar sig svo að fara í
+<code class="docutils literal notranslate"><span class="pre">File</span></code><span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">with</span> <span class="pre">Encoding...</span></code> og velja þar
+þann staðal sem tölvan ykkar notar.</p>
+<p>Einnig lenda MacOsX notendur stundum í því að íslenskir stafir birtast
+rétt í .R skrám en rangt á gröfum. Það er hægt að laga með því að gefa
+skipunina</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
+Þessa skipun þarf bara að gefa einu sinni á hverri tölvu, þ.e.a.s. ekki
+í hvert sinn sem R er ræst.</p>
+</section>
+<section id="gogn">
+<h2><span class="section-number">1.8. </span>Gögn<a class="headerlink" href="#gogn" title="Permalink to this heading"></a></h2>
+<p>Í þessari bók munum við notast við nokkur gagnasett.
+Gagnasettið sem við köllum <em>konnun</em> má finna í skránni <code class="docutils literal notranslate"><span class="pre">skra</span></code> sem hlaða
+niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
+<p>Skráin inniheldur eftirfarandi breytur:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Útskýring/gildi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>is</p></td>
+<td><p>Vannilla, Jarðaberja, Súkkulaði</p></td>
+</tr>
+<tr class="row-odd"><td><p>ferdatimi_skoli</p></td>
+<td><p>Tími í mínútum</p></td>
+</tr>
+<tr class="row-even"><td><p>styrikerfi_simi</p></td>
+<td><p>Android eða iOS</p></td>
+</tr>
+<tr class="row-odd"><td><p>ferdamati_skoli</p></td>
+<td><p>Með einkabíl, Gangandi/skokkandi,
+Með strætó, Hjólandi/rafhlaupahjól,
+Á annan hátt</p></td>
+</tr>
+<tr class="row-even"><td><p>systkini_fjoldi</p></td>
+<td><p>Fjöldi systkina</p></td>
+</tr>
+<tr class="row-odd"><td><p>dyr</p></td>
+<td><p>Ertu meira fyrir hunda eða ketti?</p></td>
+</tr>
+<tr class="row-even"><td><p>feministi</p></td>
+<td><p>Ég er feministi: Rétt eða Rangt</p></td>
+</tr>
+<tr class="row-odd"><td><p>staerdfraedi_gaman</p></td>
+<td><p>Einkunn: 1-10</p></td>
+</tr>
+<tr class="row-even"><td><p>smjor_kostar</p></td>
+<td><p>Hvað smjör kostar í bónus?  kr.</p></td>
+</tr>
+<tr class="row-odd"><td><p>napoleon_faeddur</p></td>
+<td><p>Hvenær var Napóleon fæddur? ár</p></td>
+</tr>
+<tr class="row-even"><td><p>stefnumot</p></td>
+<td><p>Á kaffihús, Á ísrúnt, Í fjallgöngu, í bíó</p></td>
+</tr>
+<tr class="row-odd"><td><p>messi_staerd</p></td>
+<td><p>Hvað er Messi stór?</p></td>
+</tr>
+<tr class="row-even"><td><p>kosid</p></td>
+<td><p>Ég hef kosið: Rétt eða Rangt</p></td>
+</tr>
+</tbody>
+</table>
+<p>Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.</p>
+<p>Í þessari bók verður einnig notað gagnasett sem heitir puls, puls
+gaganasettið má hlaða niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
+<p>Skráin inniheldur eftirfarandi breytur:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Útskýring/gildi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>likamsraekt</p></td>
+<td><p>Fjöldi klst. í líkamsræktar á viku</p></td>
+</tr>
+<tr class="row-odd"><td><p>fyrriPuls</p></td>
+<td><p>Fyrri púls, slög á mínútu</p></td>
+</tr>
+<tr class="row-even"><td><p>inngrip</p></td>
+<td><p>sat_kyrr eða hljop</p></td>
+</tr>
+<tr class="row-odd"><td><p>seinniPuls</p></td>
+<td><p>Seinni púls, slög á mínútu</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í þessari bók verður einnig notað gagnasett sem heitir pokarotta, pokarotta
+gaganasettið má hlaða niður hér:</p>
+<p><code class="docutils literal notranslate"><span class="pre">linkur</span></code></p>
+<p>Skráin inniheldur eftirfarandi breytur:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Breyta</p></th>
+<th class="head"><p>Útskýring/gildi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>stadsetning</p></td>
+<td><p>1 eða 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>tegund</p></td>
+<td><p>Vic eða other</p></td>
+</tr>
+<tr class="row-even"><td><p>kyn</p></td>
+<td><p>m eða f</p></td>
+</tr>
+<tr class="row-odd"><td><p>aldur</p></td>
+<td><p>ár</p></td>
+</tr>
+<tr class="row-even"><td><p>hofud_lengd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>hofud_breidd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-even"><td><p>heildarlengd</p></td>
+<td><p>í mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>lengd_skott</p></td>
+<td><p>í mm</p></td>
+</tr>
+</tbody>
+</table>
+<p>Þessum gögnum var safnað saman í námskeiði við Háskóla Íslands árið 2024.
+Nemendur voru beðnir um að svara ýmsum skemmtilegum spurningum um lífið.</p>
+<p>Vistið skránar í vinnumöppunni á vélinni ykkar en forðist að opna hana í
+töflureikni, sér í lagi Excel, undarlegustu hlutir geta gerst! Ef þið
+viljið skoða skrána opnið hana frekar í ritl, t.d. Notepad eða TextEdit.</p>
+<p>Við munum nota þessi sömu gögn í umfjöllun okkar um ályktunartölfræði.
+Við munum þá gera ráð fyrir að einstaklingarnir í gagnaskránni séu
+slembiúrtak úr stóru þýði nemenda og því getum við notað gögnin til að
+draga hinar ýmsu ályktanir um þýði nemenda.</p>
+<p>Í þessari bók er einnig unnið mikið með gagnasettið <code class="docutils literal notranslate"><span class="pre">kaupskra</span></code> sem inniheldur
+upplýsingar kaupverð, dagsetningu kaupsamnings og staðsetningu fasteignar.</p>
+<p>Kaupskrá má nálgast á: <a class="reference external" href="https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/">https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/</a>
+Þar er einnig hægt að nálgast upplýsingar um allar breytur í kaupskra.</p>
+</section>
+<section id="leiksvaei-fyrir-r-koa">
+<h2><span class="section-number">1.9. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="formali.html" class="btn btn-neutral float-left" title="Formáli" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kafli02.html" class="btn btn-neutral float-right" title="2. Frá tilraun til gagna" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

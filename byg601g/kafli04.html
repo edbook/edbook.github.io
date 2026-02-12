@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti &mdash; Húsagerð 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="5. 5 Veðurfar og inniaðstæður" href="kafli05.html" />
+    <link rel="prev" title="3. Raki, rakaflutningur og rakaþétting" href="kafli03.html" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Húsagerð
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Kafli - Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umfang-byggingarstarfsemi-og-almennar-krofur-til-mannvirkja">1.1. Umfang byggingarstarfsemi og almennar kröfur til mannvirkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#grunnkrofur-til-mannvirkja-i-evropusambandinu-eu-construction-products-regulation">1.1.1. Grunnkröfur til mannvirkja í Evrópusambandinu (EU; Construction Products Regulation )</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#byggingarlog-reglugerir-og-stalar">1.2. Byggingarlög, reglugerðir og staðlar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#husager-ekkingarsvi">1.3. Húsagerð – þekkingarsvið</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Varmaflutningur, kólnunartölur og hitastig í sniði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#almennt">2.1. Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#varmaflutningur-og-jafna-fourier-s">2.2. Varmaflutningur og jafna Fourier’s</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#varmastreymi">2.3. Varmastreymi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#varmageislun">2.4. Varmageislun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#geislun-milli-yfirbora">2.4.1. Geislun milli yfirborða</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#varmaflutningsmotstour-i-loftbilum-og-jarvegi">2.5. Varmaflutningsmótstöður í loftbilum og jarðvegi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#varmaflutningsmotstaa-byggingarhluta-og-hitastig-i-snii">2.6. Varmaflutningsmótstaða byggingarhluta og hitastig í sniði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#utreikningur-varmaflutningsmotstou-u-gildis-og-hitastigs-i-snii">2.6.1. Útreikningur varmaflutningsmótstöðu, U-gildis og hitastigs í sniði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#kuldabryr">2.6.2. Kuldabrýr</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#heimildir-og-itarefni">2.7. Heimildir og ítarefni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Raki, rakaflutningur og rakaþétting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#almennt">3.1. Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#raki-i-byggingarefnum-og-byggingum">3.2. Raki í byggingarefnum og byggingum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#byggingarraki">3.2.1. Byggingarraki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#loftraki">3.2.2. Loftraki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#urkoma-og-slagregn">3.2.3. Úrkoma og slagregn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#jarraki">3.2.4. Jarðraki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#rakaflutningur">3.3. Rakaflutningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rakaflaei">3.3.1. Rakaflæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rakastreymi-i-lofti">3.3.2. Rakastreymi í lofti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#harpipuflutningur">3.3.3. Hárpípuflutningur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#utsveim-og-varmasveim">3.3.4. Útsveim og varmasveim</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#utreikningur-a-rakaflutningi">3.4. Útreikningur á rakaflutningi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rakaflutningur-rakaastand-og-rakaetting">3.4.1. Rakaflutningur, rakaástand og rakaþétting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#reiknaur-rakaflutningur-i-byggingarhluta-og-metin-haetta-a-rakaettingu">3.5. Reiknaður rakaflutningur í byggingarhluta og metin hætta á rakaþéttingu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#heimildir-og-itarefni">3.6. Heimildir og ítarefni</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#almennt">4.1. Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lofthreyfing-vi-byggingu-og-loftrystingur">4.2. Lofthreyfing við byggingu og loftþrýstingur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ahrif-vinds">4.2.1. Áhrif vinds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-4-1">4.2.2. Dæmi 4.1.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#daemi-4-2">4.2.3. Dæmi 4.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rystibreyting-vegna-hitamunar-skorsteinsahrif">4.2.4. Þrýstibreyting vegna hitamunar (skorsteinsáhrif)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rakaflutningur-vegna-loftstreymis">4.3. Rakaflutningur vegna loftstreymis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loftettleiki-husa">4.4. 4.4 Loftþéttleiki húsa</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. 5 Veðurfar og inniaðstæður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#almennt">5.1. 5.1 Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#veurfar-a-islandi-og-samanburur-vi-erlendar-astaeur">5.2. 5.2 Veðurfar á Íslandi og samanburður við erlendar aðstæður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#aegindakrofur-og-inniloft">5.3. 5.3 Þægindakröfur og inniloft</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. 6 Byggingar - Lögun og fyrirkomulag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#inngangur">6.1. 6.1 Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#rymisorf-og-arfagreining">6.2. 6.2 Rýmisþörf og þarfagreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#staerarakvorun-og-byggingarstig">6.3. 6.3 Stærðarákvörðun og byggingarstig.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. 7. Byggingarhlutar og húsagerð</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#husager-og-efni">7.1. 7.1 Húsagerð og efni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#krofur-til-hjupflata-almennt">7.2. 7.2 Kröfur til hjúpflata almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#einstok-efni-efnislog-og-fragangur">7.3. 7.3 Einstök efni, efnislög og frágangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#byggingarhlutar">7.4. 7.4 Byggingarhlutar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#ok">7.5. 7.4.1 Þök</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#utveggir">7.6. 7.4.2 Útveggir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#gler-og-gluggar">7.7. 7.4.3 Gler og gluggar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#golf-og-undirstour">7.8. 7.4.4 Gólf og undirstöður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#fragangur-innanhuss">7.9. 7.4.5 Frágangur innanhúss</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. 8 Orkutap bygginga og hitunarþörf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#almennt">8.1. 8.1 Almennt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ist-en-iso-10077-1-2000">8.1.1. ÍST EN ISO 10077-1:2000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ist-en-832-1998">8.1.2. ÍST EN 832:1998</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#orkutap-huss">8.2. 8.2 Orkutap húss</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ist-en-iso-13789-1999">8.2.1. ÍST EN ISO 13789:1999</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#varmatap-um-byggingarhluta-samkvaemt-ist-en-832-1998">8.2.2. Varmatap um byggingarhluta samkvæmt ÍST EN 832:1998</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#loftskiptatap-byggingar">8.2.2.1. 8.2.2 Loftskiptatap byggingar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#ist-en-8321998-1">8.2.3. ÍST EN 832:1998</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#orkutap-huss-krofur-i-byggingarregluger-og-utreikningar">8.3. 8.3 Orkutap húss; kröfur í Byggingarreglugerð og útreikningar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. 9 Umhverfisvænar byggingar, vistferilsgreining og kostnaður</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. 10. Gallar, endurbætur og viðhald</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#almennt">10.1. 10.1 Almennt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#gallar-i-okum-og-veggjum">10.2. 10.2 Gallar í þökum og veggjum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#astand-og-vihaldsorf-husa">10.3. 10.3 Ástand og viðhaldsþörf húsa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#astandskonnun-husa-i-reykjavik">10.4. Ástandskönnun húsa í Reykjavík</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#utdrattur">10.4.1. Útdráttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#inngangur">10.4.2. Inngangur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html#framkvaemd-konnunar">11. Framkvæmd könnunar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html#niurstour-konnunar">12. Niðurstöður könnunar</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra.html">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Húsagerð</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">4. </span>Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/byg601g//projects/byg601g/kafli04.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="docutils container">
+<p>Háskóli Íslands – Umhverfis og byggingarverkfræðideild Húsagerð</p>
+<p>Björn Marteinsson</p>
+</div>
+<section id="lofthreyfing-vi-hus-rystimunur-yfir-byggingarhluta-og-loftskipti">
+<h1><span class="section-number">4. </span>Lofthreyfing við hús, þrýstimunur yfir byggingarhluta og loftskipti<a class="headerlink" href="#lofthreyfing-vi-hus-rystimunur-yfir-byggingarhluta-og-loftskipti" title="Permalink to this heading"></a></h1>
+<section id="almennt">
+<h2><span class="section-number">4.1. </span>Almennt<a class="headerlink" href="#almennt" title="Permalink to this heading"></a></h2>
+<p>Lofthreyfing og loftþrýstingur við byggingar hefur áhrif á þá áraun sem
+bygging verður fyrir; álag á byggingarhluta, loftskipti í byggingu,
+loftleka í gegnum byggingarhluta og jafnvel vatnsleka. Hér verður
+fjallað um lofthreyfinguna almennt og það þrýstifall sem hún veldur yfir
+byggingu í heild og einstaka byggingarhluta.</p>
+<p>Lofthreyfing í og við byggingu orsakast af þrýstimun sem á uppruna sinn
+í vindáhrifum, áhrifum hitamunar og vélrænni loftræsingu.</p>
+<div class="jafna admonition">
+<p class="admonition-title">Almennar líkingar og gildi</p>
+<div class="math notranslate nohighlight">
+\[\rho_a = \frac{p_a \cdot M_a}{R \cdot T} + \frac{p_w \cdot M_w}{R \cdot T} = \frac{p_a}{287.05 \cdot T} + \frac{p_w}{461.495 \cdot T}\]</div>
+</div>
+<p>þar sem:</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-number">Tafla 4.1 </span><span class="caption-text"><em>Skýringar á táknum – lofteiginleikar</em></span><a class="headerlink" href="#id1" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_a\)</span></p></td>
+<td><p>eðlisþéttleiki lofts</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_a\)</span></p></td>
+<td><p>loftþrýstingur (þurrt loft)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_w\)</span></p></td>
+<td><p>rakþrýstingur</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>hitastig</p></td>
+<td><p><span class="math notranslate nohighlight">\(K\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Kvik seigja lofts:</p>
+<div class="math notranslate nohighlight">
+\[\eta_a = (17.1 + 0.049 \cdot \theta) \cdot 10^{-6} \quad \text{N·s/m}^2\]</div>
+</section>
+<section id="lofthreyfing-vi-byggingu-og-loftrystingur">
+<h2><span class="section-number">4.2. </span>Lofthreyfing við byggingu og loftþrýstingur<a class="headerlink" href="#lofthreyfing-vi-byggingu-og-loftrystingur" title="Permalink to this heading"></a></h2>
+<section id="ahrif-vinds">
+<h3><span class="section-number">4.2.1. </span>Áhrif vinds<a class="headerlink" href="#ahrif-vinds" title="Permalink to this heading"></a></h3>
+<p>Hérlendis er vindur almennt langmikilvægasta orsök lofthreyfinga í og
+við byggingu. Þegar loftið lendir á fyrirstöðu þá breytir það um stefnu
+og missir jafnframt hluta af hreyfiorku sinni. Samkvæmt jöfnu
+Bernoulli’s þá er summan af hreyfiorku, þrýstiorku og stöðuorku fasti,
+en varðandi vindálag á byggingar má líta svo á að stöðuorkan breytist
+lítið.</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.1</p>
+<div class="math notranslate nohighlight">
+\[1/2 \cdot \rho \cdot v^2 + p_a + g \cdot h \cdot \rho = fasti\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>eðlisþéttleiki lofts (<span class="math notranslate nohighlight">\(\rho \approx 1{,}25 \ kg/m^3\)</span> við 10 °C og 101300 Pa)</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>vindhraði</p></td>
+<td><p><span class="math notranslate nohighlight">\(m/s\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_a\)</span></p></td>
+<td><p>loftþrýstingur í ótrufluðu streymi</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(g\)</span></p></td>
+<td><p>fallhröðun jarðar</p></td>
+<td><p><span class="math notranslate nohighlight">\(m/s^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(h\)</span></p></td>
+<td><p>hæð (yfir viðmiðunarplani)</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Venja er að gefa upp vindþrýsting á flatareiningu, p, sem (jafna 4.2);</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.2</p>
+<div class="math notranslate nohighlight">
+\[p = \mu \cdot q\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>þrýstingur</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>formstuðull</p></td>
+<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
+<td><p>grunnálag vinds</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>og</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.3</p>
+<div class="math notranslate nohighlight">
+\[q = 1/2 \cdot \rho v^2\]</div>
+</div>
+<p>Athuga skal að þrátt fyrir beina samsvörun milli jöfnu 4.3 og fyrsta lið
+í Bernoulli jöfnunni (4.1) þá er í ákvörðun vindálagsins ekki endilega
+gengið útfrá því að öll hreyfiorkan breytist í þrýsting, heldur er
+formstuðullinn ákvarðaður (með mælingum) þannig að jafna 4.2 gildir
+þegar grunnálagið er reiknað samkvæmt jöfnu 4.3.</p>
+<p>Formstuðla yfirborðs, <span class="math notranslate nohighlight">\(\mu\)</span>, má t.d. fá úr álagsstöðlum fyrir vindálag, mynd
+4.1.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="myndir/kafli04/formstudlar.png"><img alt="myndir/kafli04/formstudlar.png" src="myndir/kafli04/formstudlar.png" style="width: 90%;" /></a>
+</figure>
+<p class="centered">
+<strong>Mynd 4.1 Formstuðlar vindálags á byggingu (heimild: staðallinn DS 410,
+gömul útgáfa)</strong></p><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Í stöðlum er almennt miðað við að þrýstingur innanhúss geti verið ýmist
+undir- eða yfirþrýstingur miðað við þrýsting í ótrufluðu streymi
+utandyra. Formstuðull innri þrýstings er háður dreifingu lekastaða í
+hjúpfleti og hugsanlegum innri lokunum í húsinu.</p>
+<p>Í staðlinum DS 410 er gert ráð fyrir að formstuðull innanhúss geti verið
+hvort sem er 0,2 (yfirþrýstingur) eða -0,3 (undirþrýstingur) þegar gert
+er ráð fyrir að loftlekastaðir séu jafndreifðir á hjúpveggjum og engir
+skilveggir.</p>
+<p>Útfrá jöfnu 4.2 má þá reikna ástreymisþrýsting, og mismunaþrýsting fyrir
+byggingarhluta að einhverjum formstuðlum og vindhraða gefnum. Athuga
+skal að þrýstimunurinn er drifkraftur loftunar í rásinni, en þrýstimunur
+milli hitaðs rýmis og loftrásar getur einnig valdið loftskiptum milli
+rýmis og rásar, mynd 4.2.</p>
+</section>
+<section id="daemi-4-1">
+<h3><span class="section-number">4.2.2. </span>Dæmi 4.1.<a class="headerlink" href="#daemi-4-1" title="Permalink to this heading"></a></h3>
+<p>Reiknað þrýstifall yfir vegg vegna vinds sem stendur þvert á
+flötinn. Gert er ráð fyrir að loftlekastaðir dreifist jafnt á alla
+veggfleti (og því undirþrýstingur í húsinu).</p>
+<p>Vindhraði í ótrufluðu streymi v=5 m/s (algengur meðalvindhraði í
+Reykjavík).</p>
+<p>Formstuðull úti áveðurs <span class="math notranslate nohighlight">\(\mu_e = 0.7\)</span>, formstuðull inni
+<span class="math notranslate nohighlight">\(\mu_e= -0.3\)</span>, eðlisþéttleiki lofts <span class="math notranslate nohighlight">\(\rho_a = 1.25 kg/m^3\)</span></p>
+<p>Grunnálag vinds (jafna 4.3); <span class="math notranslate nohighlight">\(q= 1/2 \cdot \rho_a \cdot v^2\)</span>
+= <span class="math notranslate nohighlight">\(1/2 \cdot 1.25 \cdot 5^2 = 15.6 Pa\)</span></p>
+<p>Þrýstifall yfir vegginn (jafna 4.2); <span class="math notranslate nohighlight">\(\Delta p = \mu \cdot q = (0,7-(-0,3)) \cdot 15,6 Pa = 18.7 Pa\)</span></p>
+</section>
+<section id="daemi-4-2">
+<h3><span class="section-number">4.2.3. </span>Dæmi 4.2<a class="headerlink" href="#daemi-4-2" title="Permalink to this heading"></a></h3>
+<p>Reiknað þrýstifall yfir loftrás í þaki vegna vinds beint á
+rásina áveðurs.</p>
+<p>Vindhraði í ótrufluðu streymi v=5 m/s (algengur meðalvindhraði í
+Reykjavík).</p>
+<p>Formstuðull (formstuðlar við op inn í rásina verða þeir sömu og á
+veggfletina hvoru megin) áveðurs <span class="math notranslate nohighlight">\(\mu_1 = 0.7\)</span>, hlémegin
+<span class="math notranslate nohighlight">\(\mu_2 = -0.5\)</span> , þéttleiki lofts <span class="math notranslate nohighlight">\(\rho_a = 1.25 kg/m^3\)</span></p>
+<p>Grunnálag vinds (jafna 4.3); <span class="math notranslate nohighlight">\(q = 1/2 \cdot \rho_a \cdot v^2\)</span>
+<span class="math notranslate nohighlight">\(1/2 \cdot 1.25 kg/m^3 \cdot (5 m/s)^2 = 15,6 Pa\)</span></p>
+<p>Þrýstifall yfir rásina (jafna 4.2); <span class="math notranslate nohighlight">\(\Delta p = \mu \cdot q = (0.7 - (-0.5)) \cdot 15.6 Pa = 18.7 Pa\)</span></p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/mismunaþrýstingur.png"><img alt="_images/mismuna%C3%BEr%C3%BDstingur.png" src="_images/mismuna%C3%BEr%C3%BDstingur.png" style="width: 90%;" /></a>
+</figure>
+</section>
+<section id="rystibreyting-vegna-hitamunar-skorsteinsahrif">
+<h3><span class="section-number">4.2.4. </span>Þrýstibreyting vegna hitamunar (skorsteinsáhrif)<a class="headerlink" href="#rystibreyting-vegna-hitamunar-skorsteinsahrif" title="Permalink to this heading"></a></h3>
+<p>Loftsúla af hæð h mun valda loftþrýstingi <span class="math notranslate nohighlight">\(p_1\)</span> við neðri enda
+súlunnar, jafna 4.4;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.4</p>
+<div class="math notranslate nohighlight">
+\[p_1 = \rho_1 \cdot g_0 \cdot h + p_0\]</div>
+</div>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-number">Tafla 4.2 </span><span class="caption-text"><em>Skýringar á táknum – súlujöfnur</em></span><a class="headerlink" href="#id2" title="Varanlegur hlekkur á þessa töflu"></a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_1\)</span></p></td>
+<td><p>loftþrýstingur við botn súlu</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho_1\)</span></p></td>
+<td><p>eðlisþéttleiki lofts</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(g_0\)</span></p></td>
+<td><p>fallhröðun til jarðar</p></td>
+<td><p><span class="math notranslate nohighlight">\(m/s^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(h\)</span></p></td>
+<td><p>hæð súlu</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_0\)</span></p></td>
+<td><p>loftþrýstingur við topp súlu</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Eðlisþéttleiki lofts má finna útfrá almenna gaslögmálinu og samlagningu
+hlutþrýstings á þurru lofti og rakaþrýstingi, jafna 4.5;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.5</p>
+<div class="math notranslate nohighlight">
+\[\rho_a = \frac{p_a \cdot M_a}{R \cdot T} + \frac{p_w \cdot M_w}{R \cdot T} = \frac{p_a}{287.05 \cdot T} + \frac{p_w}{461.495 \cdot T}\]</div>
+</div>
+<p>þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\rho_a\)</span></p></td>
+<td><p>eðlisþéttleiki lofts</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(p_a\)</span></p></td>
+<td><p>loftþrýstingur (þurrt loft)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(p_w\)</span></p></td>
+<td><p>rakþrýstingur</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(M_a\)</span></p></td>
+<td><p>mólmassi þurrs lofts</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/kmol\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(M_w\)</span></p></td>
+<td><p>mólmassi vatns</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/kmol\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>hitastig</p></td>
+<td><p><span class="math notranslate nohighlight">\(K\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>almenni gasfastinn</p></td>
+<td><p><span class="math notranslate nohighlight">\(J/(kmol \cdot K)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Þéttleiki lofts breytist línulega í öfugu hlutfalli við breytingu á
+hitastigi, í jöfnu 4.4 má því nota gildi fyrir meðalþéttleika loftsins.</p>
+<p>Inniloft er hérlendis nánast alltaf hlýrra heldur en útiloft og af þessu
+hlýst þrýstimunur milli inni- og útilofts, hversu mikill þrýstimunurinn
+er fer eftir hitamun í lofti og hæð byggingar (eða loftrásar). Ef
+inniaðstæður eru táknaðar með lágmerki i og útiaðstæður með e, þá fæst
+heildarþrýstimunurinn sem, jafna 4.6;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.6</p>
+<div class="math notranslate nohighlight">
+\[\Delta p = p_i - p_e = g_0 \cdot h \cdot (\rho_i - \rho_e) ~ g_0 \cdot h \cdot \rho_i \cdot (1- \frac{T_i}{T_e})\]</div>
+</div>
+<p>Þrýstimunur milli úti- og inniaðstæða fer eftir staðsetningu tenginga
+(opa) milli rýmanna. Þessu má lýsa eins og sýnt er í mynd 4.3.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="_images/skorsteinsloftun1.png"><img alt="_images/skorsteinsloftun1.png" src="_images/skorsteinsloftun1.png" style="width: 90%;" /></a>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt><strong>Dæmi 4.3:</strong></dt><dd><p>Reiknaður þrýstimunur inni og úti við gólf einnar hæðar húss
+þar sem 0-lína þrýstifalls (opnir gluggar) liggur í hæðinni 1,5 m yfir
+gólfi. <span class="math notranslate nohighlight">\(\theta_i = 22°C\)</span>, <span class="math notranslate nohighlight">\(\theta_e = -2°C\)</span>, <span class="math notranslate nohighlight">\(\rho_m = 1.25 kg/m^3\)</span></p>
+</dd>
+</dl>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\Delta p = p_i - p_e ~ g_o \cdot h \cdot \rho_m \cdot (1 - \frac{T_i}{T_e})\\= 9.81 m/s^2 \cdot 1.5 m \cdot 1.25 kg/m^3 \cdot (1- \frac{(22+273)}{(-2+273)}) = -1.5 Pa\end{aligned}\end{align} \]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Dæmi 4.4:</strong>
+Reiknaður þrýstimunur inni og úti við gólf 5 hæða stigahúss
+sem loftræst er upp úr þaki, <span class="math notranslate nohighlight">\(\theta_i = 22°C\)</span>, <span class="math notranslate nohighlight">\(\theta_e = -2°C\)</span> <span class="math notranslate nohighlight">\(\rho_m = 1.25 kg/m^3\)</span>, hver hæð er 2,7 m.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\Delta p = p_i - p_e ~ g_o \cdot h \cdot \rho_m \cdot (1 - \frac{T_i}{T_e})\\= 9.81 m/s^2 \cdot (4 \cdot 2.7 m)  \cdot 1.25 kg/m^3 \cdot (1- \frac{(22+273)}{(-2+273)}) = -10.8 Pa\end{aligned}\end{align} \]</div>
+<p>Þrýstimunur vegna mismunahita er almennt lítill, og oftast mun minni
+heldur en þrýstimunur vegna vinds. Í einstaka tilvikum getur hitamunur
+þó haft umtalsverð áhrif, t.d. eru þekkt dæmi um að loftpoki í mæni á
+bröttum, loftræstum þökum hafi teppt loftun þakanna.</p>
+</section>
+</section>
+<section id="rakaflutningur-vegna-loftstreymis">
+<h2><span class="section-number">4.3. </span>Rakaflutningur vegna loftstreymis<a class="headerlink" href="#rakaflutningur-vegna-loftstreymis" title="Permalink to this heading"></a></h2>
+<p>Rakaflutningur vegna loftstreymis verður í samræmi við jöfnu 4.7;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.7</p>
+<div class="math notranslate nohighlight">
+\[G = w \cdot V_a\]</div>
+</div>
+<p>Þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(G\)</span></p></td>
+<td><p>rakaflutningur</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/s\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(w\)</span></p></td>
+<td><p>loftraki</p></td>
+<td><p><span class="math notranslate nohighlight">\(kg/m^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(V_a\)</span></p></td>
+<td><p>loftstreymi</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^3/s\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Streymi í vökva eða póróttu efni má skrifa eins og jafna 4.8 sýnir,
+jafnan er kennd við Darcy;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.8</p>
+<div class="math notranslate nohighlight">
+\[V_a = A \cdot \frac{B_0}{\eta} \cdot \frac{\partial p}{\partial x}\]</div>
+</div>
+<p>Þar sem</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+<col style="width: 30%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(V_a\)</span></p></td>
+<td><p>streymi</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^3/s\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(B_0\)</span></p></td>
+<td><p>loftheypni efnis (<em>e: air permeability</em>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(m^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\eta\)</span></p></td>
+<td><p>kvik seigja</p></td>
+<td><p><span class="math notranslate nohighlight">\(N \cdot s/m^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(dp/dx\)</span></p></td>
+<td><p>stigull þrýstings (t.d. loft-)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Pa\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Jafna 4.8 er umskrifað fyrir einsleitt efnislag þannig (jafna 4.9)</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.9</p>
+<div class="math notranslate nohighlight">
+\[V_a = A \cdot \frac{B_0}{\eta} \cdot \frac{\Delta p}{\Delta L}\]</div>
+</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\Delta L\)</span> lengd streymisrásar (þykkt efnislags), m</p>
+<p>… aðrar stærðir sem fyrr</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Iðulega eru efnisstuðlar og þykkt í jöfnu 4.9 teknar saman í eina stærð
+til einföldunar, jafna 4.10;</p>
+<div class="jafna admonition">
+<p class="admonition-title">Jafna 4.10</p>
+<div class="math notranslate nohighlight">
+\[R_l = \frac{\eta \cdot L}{B_0}\]</div>
+</div>
+<p>þar sem <span class="math notranslate nohighlight">\(R_l\)</span> lofthleypnimótstaða efnislags, <span class="math notranslate nohighlight">\(m^2 \cdot s \cdot Pa / m^3\)</span></p>
+<p>… aðrar stærðir sem fyrr</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Gildi fyrir lofthleypni eru iðulega gefin upp annarsvegar sem hreint
+efnisgildi, B<sub>0</sub> (sbr. jöfnur 4.8 og 4.9), hinsvegar sem samsett
+gildi úr efnisþykkt og seigju vökva eða lofttegundar, L/. Í töflu 4.1
+eru gefin upp slík gildi fyrir nokkur efni.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Tafla 4.1
+Lofthleypni
+efna (heimild:
+Nevander &amp;
+Elmarsson,
+1994)</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Efni</p></td>
+<td><p>Þéttleiki</p>
+<p>kg/m3</p>
+</td>
+<td><p>Lofthleypni
+L/</p>
+<p>x1
+0<sup>-6</sup>m:sup:
+<cite>3</cite>/(m∙s∙Pa)</p>
+</td>
+<td><p>Lofthleypni
+efnis
+B<sub>0</sub></p>
+<p>x
+10
+<sup>-12</sup>m<sup>2</sup></p>
+</td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Tígulsteinn</p></td>
+<td><p>1470</p></td>
+<td><p>0,005 – 0,05</p></td>
+<td><p>0,1 – 1</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Steypa</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>0,000005 –
+0,0005</p></td>
+<td><p>0,0001 – 0,01</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Frauðplast EPS</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>30 - 500</p></td>
+<td><p>500 - 10000</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Steinull  á
+yfirborð</p></td>
+<td><p>10 - 50</p></td>
+<td><p>80 - 400</p></td>
+<td><p>1500 - 7500</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Steinull ||
+yfirborði</p></td>
+<td><p>10 - 50</p></td>
+<td><p>160 - 800</p></td>
+<td><p>3000 - 15000</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Steinull  á
+yfirborð</p></td>
+<td><p>100 - 150</p></td>
+<td><p>15 – 50</p></td>
+<td><p>250 – 1000</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Steinull ||
+yfirborði</p></td>
+<td><p>100 - 150</p></td>
+<td><p>30 – 400</p></td>
+<td><p>500 - 2000</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Spænir -
+lausir</p></td>
+<td><p>100</p></td>
+<td><p>500 - 800</p></td>
+<td><p>11500</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fyrir þunn efnislög með ákveðna gerð þá er oft heppilegt að gefa upp
+mælt gildi fyrir efnislagið beint en ekki sem efnisstuðul eins og sýnt
+er í töflu 4.1. Dæmi um slík gildi eru sýnd í töflu 4.2.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Tafla 4.2
+Lofth
+leypnimótstaða
+efnislaga
+(heimild:
+Nevander &amp;
+Elmarsson,
+1994)</p></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Efni</p></td>
+<td><p>Lýsing</p></td>
+<td><p>Lofth
+leypnimótstaða</p>
+<p>x
+10<sup>6</sup>m:s
+up:<cite>2</cite>∙s∙Pa/
+m<sup>3</sup></p>
+</td>
+<td><p>Lofthleypni
+efnislags
+B
+<sub>0</sub>/L</p>
+<p>x
+10
+<sup>-12</sup>m</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Trétrefjaplata
+(opin)</p></td>
+<td><p>12,5 mm 260
+kg/m<sup>3</sup></p></td>
+<td><p>0,05</p></td>
+<td><p>300</p></td>
+</tr>
+<tr class="row-even"><td><p>Trétrefjaplata
+(opin)</p></td>
+<td><p>20 mm 280
+kg/m<sup>3</sup></p></td>
+<td><p>0,1</p></td>
+<td><p>175</p></td>
+</tr>
+<tr class="row-odd"><td><p>Trétrefjaplata
+(þétt)</p></td>
+<td><p>3,5 mm, 400
+kg/m<sup>3</sup></p></td>
+<td><p>10</p></td>
+<td><p>1,5</p></td>
+</tr>
+<tr class="row-even"><td><p>Pappír</p></td>
+<td><p>200
+g/m<sup>2</sup></p></td>
+<td><p>0,006</p></td>
+<td><p>2850</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tjörupappi
+(gegnvættur)</p></td>
+<td><p>600
+g/m<sup>2</sup></p></td>
+<td><p>9</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Tjörupappi
+(húðaður)</p></td>
+<td><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>25-100</p></td>
+<td><p>0,1-1,0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Lofthleypni flestra byggingarefna er mjög lítil, og rakaflutningur vegna
+lofstreymis þvert á byggingarhluta því almennt lítill í samanburði við
+t.d. rakaflæði. Þetta gildir þó alls ekki um t.d. létta
+steinullareinangrun, sem þarf því iðulega að verja með sérstakri
+vinþéttingu (gustlokun).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Loftstreymi í loftbilum og opum</strong></p>
+<p>Þegar loftstreymi einkennist af lagstreymi (e: laminar flow) þá gildir
+jafna 4.9 og streymið er í beinu hlutfalli við þrýstistigulinn;</p>
+<p>V~p</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Í þröngum loftbilum og opum má almennt gera ráð fyrir iðustreymi og þá
+gildir jafna 4.9 ekki lengur, streymið verður nú í hlutfalli við rótina
+af þrýstistigulnum;</p>
+<p>V~p</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Samsvarandi þá verður milliástand lag- og iðustreymis í hlutfalli við;</p>
+<p>V~p<sup></sup> , 0,5 &lt;  &lt; 1</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Í útreikningi á streymi um loftbil, rifur og göt þá þarf að hafa í huga
+að heildarþrýstifall yfir loftleiðina ræður streyminu; hluti þrýstifalls
+verður við inn- og útstreymi og hluti á leið lofts um rásina (gildir
+sérstaklega um rifur og göt í þykkum efnum miðað við gatstærð).
+Þrýstifall yfir loftrás er því almennt summan af minnst þrem tapliðum
+(mynd 4.4);</p>
+<p><a href="#id3"><span class="problematic" id="id4">|Line 510|</span></a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Í sumum tilvikum geta verið stakar mótstöður í loftrásinni sem taka þarf
+tillit til. Hlutfallslegt vægi þrýstitapsliðanna er háð innbyrðis
+stærðarhlutföllum, hrjúfleika, lengd rásar og lögun.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Inn- og útstreymistöp fyrir venjulegar aðstæður í byggingarefnum og
+byggingarhlutum (iðustreymi) má reikna samkvæmt jöfnu 4.11;</p>
+<p><a href="#id5"><span class="problematic" id="id6">|image6|</span></a> (4.11)</p>
+<p>þar sem  tapstuðull, ef gildið er ekki þekkt má nota =1,8 (sjá annars
+töflu 4.3)</p>
+<p> þéttleiki vökva eða lofttegundar</p>
+<p>V<sub>a</sub> streymi, m<sup>3</sup>/s</p>
+<p>A þverskurðarflatarmál, m<sup>2</sup></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Tafla 4.3 Þrýstitapstuðull rásar
+ (Andri Páll Hilmarsson, 2007)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Gerð rásar</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td><p>Þrýstitapstuðull,
+<a class="reference external" href="#sdfootnote1sym">1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Rör; D=33 mm, með plastraufum,
+L= 297 mm</p></td>
+<td><p>6,10</p></td>
+</tr>
+<tr class="row-even"><td><p>Rör; D=40 mm, með plastraufum,
+L= 400 mm</p></td>
+<td><p>4,50</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rör; D=33 mm, með neti, L= 340
+mm</p></td>
+<td><p>2,91</p></td>
+</tr>
+<tr class="row-even"><td><p>Rör; D=33 mm, opið, L= 297 mm</p></td>
+<td><p>1,70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rör; D=40 mm, opið, L= 400 mm</p></td>
+<td><p>1,77</p></td>
+</tr>
+<tr class="row-even"><td><p>Rás; 14x115mm krossviðarrás,
+þykkt 14mm (L= 14 mm)</p></td>
+<td><p>1,72</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rás; 15x100 mm skarð í 45 mm
+sperru (L=45 mm)</p></td>
+<td><p>1,50</p></td>
+</tr>
+<tr class="row-even"><td><p>Gat; D=26 mm í 45 mm sperru
+(L=45 mm)</p></td>
+<td><p>1,25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gat; D=38 mm í 45 mm sperru
+(L=45mm)</p></td>
+<td><p>1,14</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fyrir aflanga rás (eða loftbili) gildir fyrir lagstreymi svonefnd
+Hagen-Poiseuille jafna, 4.12, (sjá einnig mynd 4.5);</p>
+<div class="line-block">
+<div class="line"><a href="#id7"><span class="problematic" id="id8">|image7|</span></a></div>
+</div>
+<p><a href="#id9"><span class="problematic" id="id10">|image8|</span></a> (4.12)</p>
+<p>þar sem V<sub>a</sub> streymi, m<sup>3</sup>/s</p>
+<p>A þverskurðarflatarmál =b∙d, m<sup>2</sup></p>
+<p>b þykkt loftbils, m</p>
+<p> kvik seigja, N∙s/m<sup>2</sup></p>
+<p>p þrýstifall yfir streymislengd L, Pa Mynd 4.5 Loftrásir; stærðir</p>
+<p>L streymislengd, m</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fyrir sívala rás gildir fyrir lagstreymi jafna 4.13 (sjá einnig mynd
+4.5)</p>
+<p><a href="#id11"><span class="problematic" id="id12">|image9|</span></a> (4.13)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>þar sem A þverskurðarflatarmál =∙d<sup>2</sup>/4, m<sup>2</sup></p>
+<p>d þvermál gats, m</p>
+<p>… aðrar stærðir sem fyrr</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Heildarþrýstifall í streymi verður því í stökum rifum eða rörum, jöfnur
+4.14 og 4.15;</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Rifa: (4.14)</p>
+<p>Rör: (4.15)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Þegar gert er ráð fyrir að loftið (eða vökvinn) pressist ekki saman í
+streyminu (eðlileg forsenda við þessar aðstæður) þá er loftstreymið
+V<sub>a</sub> það sama í öllum sniðum í rásinni. Reiknað hlutfall
+V<sub>a</sub>/A fyrir mismunandi hluta rásar gefur þá meðalstreymishraða
+í sniðinu; v<sub>m</sub>=V<sub>a</sub>/A.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Í einstaka tilvikum er hægt að líta framhjá tapliðum vegna inn- og
+útstreymis og einfaldast reikningarnir þá nokkuð, í öðrum tilvikum
+verður að leysa annarargráðujöfnu 4.14 eða 4.15 fyrir loftstreyminu
+V<sub>a</sub> og reikna síðan meðal streymishraðann v<sub>m</sub> ef
+vill fyrir einstaka hluta rásarinnar.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Jöfnurnar 4.12 og 4.13 (og þá einnig hluti jafnanna 4.14 og 4.15) gilda
+einungis fyrir lagstreymi. Lagstreymi er talið gilda þegar eftirfarandi
+skilyrði er uppfyllt (viðmiðunargildi, ekki nákvæm mörk);</p>
+<p>Reynoldstalan &lt; 2300</p>
+<p>þar sem v<sub>m</sub> meðalstreymishraði, m/s</p>
+<p>d<sub>H</sub> streymiskennitala þversniðs, m d<sub>H</sub>=4A/U,
+A=flatarmál, U=ummál</p>
+<p> eðlisseigja, m<sup>2</sup>/s</p>
+<p>Fyrir Re&gt;2300 er hreint lagstreymi ekki endilega til staðar og athuga
+þarf sérstaklega hvaða áhrif þetta kann að hafa.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Iðulega er loftrás samsett úr rað- og samsíðatengingum ólíkra hluta
+loftrása. Heildarmótstöðu, og streymi í einstökum greinum, má þá finna
+með reikningum sem byggja á sömu aðferðum og notaðar eru til að reikna
+straum í rafrás sem einungis samanstendur af mótstöðum.</p>
+<p>Dæmi 4.5 Reiknað loftstreymi í loftrás þaks, og lofthraði í einstökum
+hlutum hennar.</p>
+<p>Heildarþrýstifall yfir rásina er 18,7 Pa (sjá Dæmi 4.2).</p>
+<p>Loftrásin er uppbyggð þannig;</p>
+<p>Loftbil (b∙d∙L, sjá mynd 4.4) 25∙550∙10000 mm,</p>
+<p>Op inn í og út úr loftbili eru tvö rör D40 mm hvoru megin,
+L<sub>rör</sub> = 300 mm.</p>
+<p>A<sub>rör</sub>=1256 mm<sup>2</sup> (eitt rör!)</p>
+<p>A<sub>loftb</sub>=13750 mm<sup>2</sup></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Meðallofthiti í rás; =5 °C; -&gt; =(17+0,049∙5) ∙10<sup>-6</sup> =
+17,2∙10<sup>-6</sup> N∙s/m<sup>2</sup></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Athuga skal að loftrásin er uppbyggð sem röð af rásum (rör-loftbil-rör)
+og þrýstitöp í rásin verða hér (streymistapi í sjálfum rörleggjunum
+sleppt);</p>
+<p>p = p<sub>inn</sub> + p<sub>út</sub> + p<sub>rás</sub> +
+p<sub>inn</sub> + p<sub>út</sub></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>rör loftbil rör</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Streymistap í rörum áveðurs (jafna 4.11) ;</p>
+<p>p<sub>áv</sub>=1,8∙(1,25/2)∙(V<sub>a</sub>/(2∙1256∙10<sup>-6</sup>))<sup>2</sup>= 178284∙V<sub>a</sub><sup>2</sup></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Streymistap í loftbili (jafna 4.12);</p>
+<p>p<sub>bil</sub>=(12∙ 17,2∙10<sup>-6</sup>∙ 10000∙10<sup>-3</sup> /
+((25∙10<sup>-3</sup>)<sup>2</sup> ∙13750∙10<sup>-6</sup>))
+∙V<sub>a</sub> = 240,2∙V<sub>a</sub></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Streymistap í rörum hlémegin (sama og áveðurs) ;</p>
+<p>p<sub>hlé</sub>= = 178284∙V<sub>a</sub><sup>2</sup></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Jafnan fyrir heildartapið verður;</p>
+<p>18,7 = 2∙178284∙V<sub>a</sub><sup>2</sup>+240,2∙V<sub>a</sub></p>
+<p>og reiknað streymi, V<sub>a</sub>, fæst sem;</p>
+<p>V<sub>a</sub>= 0,0069 m<sup>3</sup>/s</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Reiknaður meðallofthraði;</p>
+<p>Rör; v<sub>rör</sub>= 0,0069/(2∙1256∙10<sup>-6</sup>)) = 2,75 m/s (gefur
+Re=7990)</p>
+<p>Loftbil; v<sub>loftbil</sub>= 0,0069/(13750∙10<sup>-6</sup>)) = 0,50 m/s
+(gefur Re=1738)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Af dæminu má draga eftirfarandi ályktanir;</p>
+<p>1. Í þessu tilfelli þá skipta streymistöp í loftbilinu svo til engu máli
+borið saman við streymistöp vegna inn- og útstreymis (þetta gildir
+iðulega þegar um áberandi stakar þrengingar eða útvíkkanir er að ræða).</p>
+<p>2. Lofthraði í opum inn í bilið getur verið allnokkur (slagar í
+vindhraðann úti) og því hætta á að skafi inn í bilið ef ekkert er að
+gert.</p>
+<p>3. Loftstreymið er lítið, og þurrkun byggingarraka verður hæg (einkum
+yfir vetrartímann þegar loftið er kalt og tekur upp lítinn raka!).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="loftettleiki-husa">
+<h2><span class="section-number">4.4. </span>4.4 Loftþéttleiki húsa<a class="headerlink" href="#loftettleiki-husa" title="Permalink to this heading"></a></h2>
+<p>Loftþéttleiki bygginga er áhugaverður þar sem þéttleiki húss hefur áhrif
+á orkunotkun og almennt hve auðvelt er að stýra inniaðstæðum.
+Óhjákvæmilegt er að einhverjir loftlekar verða alltaf til staðar í
+veðurhjúp bygginga, þessi loftleki er iðulega vegna dreifðrar
+lofthleypni byggingarhluta almennt, en göt og rifur geta haft mikil
+áhrif.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Loftþéttleikinn er mældur þannig að opum er lokað (þegar útiloka á áhrif
+t.d. hurða alveg þá eru rifur þéttar með límbandi) og loftdælu í spjaldi
+komið fyrir í hurðargætt eða gluggaopi. Loftdælan er með mælibúnaði
+þannig að mæla má dælt loftmagn og settur er upp mismunanþrýstimælir sem
+mælir þrýstimun úti og inni. Mæling er almennt gerð fyrir annarsvegar
+undirþrýsting og hinsvegar yfirþrýsting í húsi, og meðaltal tekið af
+niðurstöðum. Útfrá mæliniðurstöðum má setja upp jöfnu loftleka við
+þrýstifall, jafnan fær almennt formið (jafna 4.16);</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>V<sub>a</sub>=a∙P<sup>b</sup> (4.16)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>þar sem V<sub>a</sub> loftmagn, m<sup>3</sup>/klst</p>
+<p>a,b stuðlar</p>
+<p>P þrýstimunur úti og inni, Pa</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Niðurstöður fyrir mæld loftskipti við 50 Pa í 231 húsi (flest í
+Reykjavík) eru sýndar í línuritum 4.1 og 4.2. Nánari umfjöllun um
+loftleka húsa og loftþéttleikamælingar má t.d. finna í Rb-blaði
+(I<sub>5</sub>).001 “Þéttleiki húsa” og grein eftir B. Marteinsson og J.
+Sigurjónsson (1997).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Áður var gerð krafa um hámarksloftskipti byggingar við 50 Pa, mælt eins
+og að ofan er lýst, en í gildandi byggingarreglugerð eru kröfur um
+mældan loftleka byggingarhluta við 50 Pa (Byggingarreglugerð, 2012);</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><em>Loftþéttleiki húsa.</em></p>
+<p><em>13.5.1. gr</em></p>
+<p><em>Kröfur</em></p>
+<p>Tryggja skal að hús séu nægjanlega loftþétt til að koma í veg fyrir
+orkutap og að dragsúgur valdi ekki óþægindum.</p>
+<p>Fyrir fullhitað húsnæði (Ti&gt;18°C) skal miða við að þéttleiki
+byggingarflata í hjúpfleti sé nægjanlegur þannig að lofthleypni mæld við
+50 Pa mismunaþrýsting sé minni heldur en töflugildi sýna.</p>
+<p>Loftþéttleiki byggingarhluta skal vera skv. töflu 13.03</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Tafla 13.03 Loftþéttleiki byggingarhluta</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Íbúðarhúsnæði og aðrar byggingar
+þar sem gerðar eru sambærilegar
+kröfur til innivistar</p></td>
+<td><p>q<sub>50</sub> &lt;
+3m<sup>3</sup>/m<sup>2</sup>,h</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Aðrar byggingar</p></td>
+<td><p>q<sub>50</sub> &lt;
+6m<sup>3</sup>/m<sup>2</sup>,h</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>q<sub>50</sub> er loftstreymi
+mælt við 50 Pa mismunaþrýsting.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Mæling eins og að ofan er lýst getur aðeins gefið meðalleka fyrir alla
+fleti byggingar. Með sérstökum búnaði má mæla einstaka byggingarhluta en
+erfitt er að útiloka jaðaráhrif (loftleka frá mælisvæði til aðliggjandi
+byggingarhluta) í slíkum mælingum.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Heimildir og ítarefni</strong></p>
+<p>Andri Páll Hilmarsson (2007) Loftun þaka og rakaálag, BSc ritgerð,
+Háskólinn í Reykjavík</p>
+<p>P. Blom (1990) Ventilation av isolerte skrå tak, PhD thesis, NTH
+HBT-rapport 1990:D 10, Oslo, Norge</p>
+<p>Byggingareglugerð nr. 112/2012 (sbr. reglug. nr. 1173/2012 og 350/2013),
+með áorðnum breytingum, Umhverfisráðuneytið, Reykjavík</p>
+<p>B. Marteinsson, J. Sigurjónsson (1997) “Air-tightness of Buildings and
+the Required Heating Load - are Current Design Criteria Appropriate for
+a Windy region?”, <em>Proc. International conference Cold Climate- HVAC’97,
+Reykjavík</em> 30.5 - 2.5 1997, 7p.</p>
+<p>DIF (1982) DS 410 Last på konstruktioner, 3. udgave juni 1982 (Dansk
+ingeniørforenings norm for), Teknisk forlag Normstyrelsens publikationer</p>
+<p>Jón Viðar Guðjónsson (1990) Loftun þaka með þunnu loftbili, lokaverkefni
+í byggingartæknifræði við Tækniskóla Íslands, Reykjavík</p>
+<p>Jón Viðar Guðjónsson og Ríkharður Kristjánsson (1991) “Loftun þaka með
+þunnu loftbili”, grein í Tæknivísir – blað byggingartæknifræðinema,
+Reykjavík</p>
+<p>K. Lierch (1986) Belüftete Dach- und Wandkonstruktionen, band 1-4,
+Bauverlag GmbH-Wiesbaden und Berlin, Germany</p>
+<p>J. Kronvall (1980) Air flows in building components, Report TVBH-1002,
+Division of building technology, Lund Institute of technology, Lund,
+Sweden</p>
+<p>L. E. Nevander, B. Elmarsson (1994) Fukthandboken, Svensk byggtjänst,
+Stockholm</p>
+<p>L. E. Nevander, I. Samuelsson (1976) Elementär byggnadsfysik, Kompendium
+i husbyggnadsteknik, Institutionen för byggnadsteknik, Tekniska
+Högskolan i Lund, Lund, Sverige</p>
+<p>Rb-blað (1985) Þéttleiki húsa, Rb-blað (I<sub>5</sub>).001,
+Rannsóknastofnun byggingariðnaðarins, Keldnaholt, Reykjavík</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="docutils container" id="sdfootnote1">
+<p><a class="reference external" href="#sdfootnote1anc">1</a> Tapstuðullinn er reiknaður fyrir alla
+rásina, að því gefnu að streymið einkennist af iðustreymi</p>
+</div>
+<div class="docutils container">
+<p>4.12</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli03.html" class="btn btn-neutral float-left" title="3. Raki, rakaflutningur og rakaþétting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kafli05.html" class="btn btn-neutral float-right" title="5. 5 Veðurfar og inniaðstæður" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Húsagerð | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

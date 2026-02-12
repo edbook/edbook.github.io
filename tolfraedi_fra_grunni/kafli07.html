@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Ályktanir um flokkabreytur &mdash; Tölfræði frá grunni 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="8. Ályktanir um talnabreytur" href="kafli08.html" />
+    <link rel="prev" title="6. Ályktunartölfræði" href="kafli06.html" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tölfræði frá grunni
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#framsetning">1.1. Framsetning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id1">1.1.1. Framsetning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#ahersluatrii-ensk-ying-ef-vi-a">1.1.1.1. Áhersluatriði (Ensk þýðing ef við á)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#yfirlit-yfir-efni-bokarinnar">1.2. Yfirlit yfir efni bókarinnar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#urtak-og-yi">2.1. Úrtak og þýði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id1">2.1.1. Úrtak og þýði</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#yi-population">2.1.1.1. Þýði (population)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#urtak-sample">2.1.1.2. Úrtak (sample)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#breytur">2.2. Breytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.2.1. Breytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#breyta-variable">2.2.1.1. Breyta (variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#flokkabreytur-categorical-variables">2.2.1.2. Flokkabreytur (categorical variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rou-flokkabreyta-ordinal-categorical-variable">2.2.1.3. Röðuð flokkabreyta (ordinal categorical variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#orou-flokkabreyta-categorical-variable">2.2.1.4. Óröðuð flokkabreyta (categorical variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#talnabreytur-numerical-variables">2.2.1.5. Talnabreytur (numerical variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#samfelldar-breytur-continuous-variables">2.2.1.6. Samfelldar breytur (continuous variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#strjalar-breytur-discrete-variables">2.2.1.7. Strjálar breytur (discrete variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#svarbreytur-og-skyribreytur-response-and-explanatory-variables">2.2.1.8. Svarbreytur og skýribreytur (response and explanatory variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#nyjar-breytur-bunar-til">2.2.2. Nýjar breytur búnar til</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#bjagi-og-breytileiki">2.3. Bjagi og breytileiki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.3.1. Bjagi og breytileiki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#breytileiki-variability">2.3.1.1. Breytileiki (variability)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#bjagi-bias">2.3.1.2. Bjagi (bias)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#urtakshogun">2.4. Úrtakshögun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.4.1. Úrtakshögun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#urtaksbjagi-sampling-bias">2.4.1.1. Úrtaksbjagi (Sampling bias)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#slembival-randomization">2.4.1.2. Slembival (randomization)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einfalt-og-lagskipt-slembiurtak">2.4.2. Einfalt og lagskipt slembiúrtak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#einfalt-slembiurtak-simple-random-sample">2.4.2.1. Einfalt slembiúrtak (simple random sample)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#lagskipt-slembiurtak-stratified-random-sample">2.4.2.2. Lagskipt slembiúrtak (stratified random sample)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#para-slembiurtak">2.4.3. Parað slembiúrtak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#para-slembiurtak-paired-random-sample">2.4.3.1. Parað slembiúrtak (paired random sample)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#hva-ef-slembiurtak-er-ogerlegt">2.4.4. Hvað ef slembiúrtak er ógerlegt?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#algengar-urtaksaferir-sem-ekki-eru-slembiurtok">2.4.5. Algengar úrtaksaðferðir sem ekki eru slembiúrtök</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#vontun-maelinga">2.4.6. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#vontun-maelinga-missing-values">2.4.6.1. Vöntun mælinga (missing values)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#blindun">2.5. Blindun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#rannsakandabjagi-og-lyfleysuahrif">2.5.1. Rannsakandabjagi og lyfleysuáhrif</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rannsakandabjagi-experimenters-bias">2.5.1.1. Rannsakandabjagi (experimenters bias)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#lyfleysa-placebo">2.5.1.2. Lyfleysa (placebo)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#lyfleysuahrif-placebo-effect">2.5.1.3. Lyfleysuáhrif (placebo effect)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#einblindar-og-tviblindar-rannsoknir">2.5.2. Einblindar og tvíblindar rannsóknir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#tviblindar-rannsoknir-double-blind-trials">2.5.2.1. Tvíblindar rannsóknir (double-blind trials)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#einblindar-rannsoknir-single-blind-trials">2.5.2.2. Einblindar rannsóknir (single-blind trials)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#orsakasamband">2.6. Orsakasamband</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id7">2.6.1. Orsakasamband</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#styr-tilraun-controlled-experiment">2.6.1.1. Stýrð tilraun (controlled experiment)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#hvaa-skilyri-aetti-styr-tilraun-a-uppfylla">2.6.1.2. Hvaða skilyrði ætti stýrð tilraun að uppfylla?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#orsakasamband-causation">2.6.1.3. Orsakasamband (causation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#daemi">2.7. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id8">2.7.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id9">2.7.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id10">2.7.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id11">2.7.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id12">2.7.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id13">2.7.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id14">2.7.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id15">2.7.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id16">2.7.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id17">2.7.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id18">2.7.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id19">2.7.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id20">2.7.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id21">2.7.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id22">2.7.15. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Myndræn framsetning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stoplarit-og-kokurit">3.1. Stöplarit og kökurit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#stoplarit">3.1.1. Stöplarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#stoplarit-bar-chart">3.1.1.1. Stöplarit (bar chart)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-stoplarit">3.1.1.2. Sýnidæmi: Stöplarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#kokurit">3.1.2. Kökurit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#kokurit-pie-chart">3.1.2.1. Kökurit (pie chart)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-kokurit">3.1.2.2. Sýnidæmi: Kökurit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#stularit">3.2. Stuðlarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#ss-studlarit">3.2.1. Stuðlarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#stularit-histogram">3.2.1.1. Stuðlarit (histogram)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-stularit">3.2.1.2. Sýnidæmi: Stuðlarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#logun-stularita-og-utlagar">3.2.2. Lögun stuðlarita og útlagar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#logun-dreifinga-shape-of-distributions">3.2.2.1. Lögun dreifinga (Shape of distributions)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#utlagar-outliers">3.2.2.2. Útlagar (Outliers)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#kassarit">3.3. Kassarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id2">3.3.1. Kassarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#kassarit-boxplot">3.3.1.1. Kassarit (Boxplot)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-kassarit">3.3.1.2. Sýnidæmi: Kassarit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#ast-iqr-reglan-fyrir-utlaga">3.3.2. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#id3">3.3.2.1. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan fyrir útlaga</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#ast-iqr-reglan-og-kassarit">3.3.3. 1.5 <span class="math notranslate nohighlight">\(\!\ast\!\)</span> IQR reglan og kassarit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#punktarit">3.4. Punktarit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id4">3.4.1. Punktarit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#punktarit-scatter-plot">3.4.1.1. Punktarit (scatter plot)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-punktarit">3.4.1.2. Sýnidæmi: Punktarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-punktarit-me-flokkabreytu">3.4.1.3. Sýnidæmi: Punktarit með flokkabreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#daemi">3.5. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id5">3.5.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id6">3.5.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id7">3.5.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id8">3.5.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id9">3.5.5. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Lýsandi tölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lysistaerir">4.1. Lýsistærðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id1">4.1.1. Lýsistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#lysistaer-statistic">4.1.1.1. Lýsistærð (statistic)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#visir-index">4.1.1.2. Vísir (index)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lysistaerir-fyrir-miju">4.2. Lýsistærðir fyrir miðju</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.2.1. Lýsistærðir fyrir miðju</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#mija-maelinga-central-tendency">4.2.1.1. Miðja mælinga (central tendency)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mija-spannar">4.2.2. Miðja spannar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#mija-spannar-mid-range">4.2.2.1. Miðja spannar (mid range)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-mija-spannar">4.2.2.2. Sýnidæmi: Miðja spannar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#tiasta-gildi">4.2.3. Tíðasta gildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#tiasta-gildi-mode">4.2.3.1. Tíðasta gildi (mode)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-tiasta-gildi">4.2.3.2. Sýnidæmi: Tíðasta gildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#migildi">4.2.4. Miðgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#migildi-median">4.2.4.1. Miðgildi (median)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-migildi-n-er-oddatala">4.2.4.2. Sýnidæmi: Miðgildi - <span class="math notranslate nohighlight">\(n\)</span> er oddatala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-migildi-n-er-slett-tala">4.2.4.3. Sýnidæmi: Miðgildi - <span class="math notranslate nohighlight">\(n\)</span> er slétt tala</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mealtal">4.2.5. Meðaltal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#mealtal-mean-arithmetic-mean">4.2.5.1. Meðaltal (mean, arithmetic mean)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-summutakn-og-visar">4.2.5.2. Sýnidæmi: Summutákn og vísar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-mealtal">4.2.5.3. Sýnidæmi: Meðaltal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#vegi-mealtal">4.2.6. Vegið meðaltal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#vegi-mealtal-weighted-mean">4.2.6.1. Vegið meðaltal (weighted mean)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-vegi-mealtal">4.2.6.2. Sýnidæmi: Vegið meðaltal</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samanburur-a-mealtali-og-migildi">4.2.7. Samanburður á meðaltali og miðgildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#id3">4.2.7.1. Samanburður á meðaltali og miðgildi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lysistaerir-fyrir-breytileika">4.3. Lýsistærðir fyrir breytileika</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id4">4.3.1. Lýsistærðir fyrir breytileika</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#breytileiki-maelinga-spread">4.3.1.1. Breytileiki mælinga (spread)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#sponn">4.3.2. Spönn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#sponn-range">4.3.2.1. Spönn (range)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-sponn">4.3.2.2. Sýnidæmi: Spönn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjorungamork">4.3.3. Fjórðungamörk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#fjorungamork-quartiles">4.3.3.1. Fjórðungamörk (quartiles)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-fjorungamork">4.3.3.2. Sýnidæmi: Fjórðungamörk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fimm-tolu-samantekt">4.3.4. Fimm tölu samantekt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#fimm-tolu-samantekt-five-number-summary">4.3.4.1. Fimm tölu samantekt (five-number summary)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-fimm-tolu-samantekt">4.3.4.2. Sýnidæmi: Fimm tölu samantekt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fjorungasponn">4.3.5. Fjórðungaspönn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#fjorungasponn-interquartile-range">4.3.5.1. Fjórðungaspönn (interquartile range)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-fjorungasponn">4.3.5.2. Sýnidæmi: Fjórðungaspönn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#prosentumork">4.3.6. Prósentumörk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#prosentumork-percentile">4.3.6.1. Prósentumörk (percentile)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#dreifni">4.3.7. Dreifni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#dreifni-variance">4.3.7.1. Dreifni (variance)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-dreifni">4.3.7.2. Sýnidæmi: Dreifni</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#staalfravik">4.3.8. Staðalfrávik</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#staalfravik-standard-deviation">4.3.8.1. Staðalfrávik (standard deviation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-staalfravik">4.3.8.2. Sýnidæmi: Staðalfrávik</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fravikshlutfall">4.3.9. Frávikshlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#fravikshlutfall-coefficient-of-variation">4.3.9.1. Frávikshlutfall (coefficient of variation)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samanburur-a-lysistaerum-fyrir-breytileika">4.3.10. Samanburður á lýsistærðum fyrir breytileika</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fylgnistuull">4.4. Fylgnistuðull</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#jafna-beinnar-linu">4.4.1. Jafna beinnar línu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#jafna-beinnar-linu-straight-line-equation">4.4.1.1. Jafna beinnar línu (straight line equation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#linulegt-samband">4.4.1.2. Línulegt samband</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#fylgnistuull-urtaks">4.4.2. Fylgnistuðull úrtaks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#fylgnistuull-urtaks-sample-coefficient-of-correlation">4.4.2.1. Fylgnistuðull úrtaks (sample coefficient of correlation)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#stefna-og-styrkleiki-linulegs-sambands">4.4.3. Stefna og styrkleiki línulegs sambands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#stefna-linulegs-sambands">4.4.3.1. Stefna línulegs sambands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#styrkleiki-linulegs-sambands">4.4.3.2. Styrkleiki línulegs sambands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lysistaerir-fyrir-samband-hlutfalla">4.5. Lýsistærðir fyrir samband hlutfalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ahaettuhlutfall">4.5.1. Áhættuhlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#ahaettuhlutfall-relative-risk">4.5.1.1. Áhættuhlutfall (relative risk)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#tulkun-ahaettuhlutfalls">4.5.1.2. Túlkun áhættuhlutfalls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-ahaettuhlutfall">4.5.1.3. Sýnidæmi: Áhættuhlutfall</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#gagnlikindahlutfall">4.5.2. Gagnlíkindahlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#gagnlikindi-odds">4.5.2.1. Gagnlíkindi (odds)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#gagnlikindahlutfall-odds-ratio">4.5.2.2. Gagnlíkindahlutfall (odds ratio)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#tulkun-gagnlikindahlutfalls">4.5.2.3. Túlkun gagnlíkindahlutfalls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-gagnlikindahlutfall">4.5.2.4. Sýnidæmi: Gagnlíkindahlutfall</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lysistaerir-fyrir-flokkunaraferir">4.6. Lýsistærðir fyrir flokkunaraðferðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id5">4.6.1. Lýsistærðir fyrir flokkunaraðferðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#sannar-og-falskar-jakvaear-og-neikvaear-maelingar">4.6.1.1. Sannar og falskar, jákvæðar og neikvæðar mælingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#naemi-sensitivity">4.6.1.2. Næmi (sensitivity)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#sertaeki-specificity">4.6.1.3. Sértæki (specificity)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-sertaeki">4.6.1.4. Sýnidæmi: Sértæki</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#jakvaett-forspargildi-positive-predictive-value">4.6.1.5. Jákvætt forspárgildi (positive predictive value)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#neikvaett-forspargildi-negative-predictive-value">4.6.1.6. Neikvætt forspárgildi (negative predictive value)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#samantekt-um-lysistaerir">4.7. Samantekt um lýsistærðir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#daemi">4.8. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id6">4.8.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id7">4.8.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id8">4.8.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id9">4.8.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id10">4.8.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id11">4.8.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id12">4.8.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id13">4.8.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id14">4.8.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id15">4.8.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id16">4.8.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id17">4.8.12. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Líkindafræðileg undirstaða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#slembistaerir">5.1. Slembistærðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.1.1. Slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#slembistaer-random-variable">5.1.1.1. Slembistærð (random variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithattur-slembistaera-syntax-for-random-variables">5.1.1.2. Ritháttur slembistærða (syntax for random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#strjalar-og-samfelldar-slembistaerir">5.1.2. Strjálar og samfelldar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#strjalar-slembistaerir-discrete-random-variables">5.1.2.1. Strjálar slembistærðir (discrete random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#samfelldar-slembistaerir-continuous-random-variables">5.1.2.2. Samfelldar slembistærðir (continuous random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#likindadreifing-slembistaera">5.1.3. Líkindadreifing slembistærða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithattur-fyrir-likindi-slembistaera">5.1.3.1. Ritháttur fyrir líkindi slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-rithattur-fyrir-likindi-slembistaera">5.1.3.2. Sýnidæmi: Ritháttur fyrir líkindi slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#likindadreifing-slembistaera-probability-distribution-of-random-variables">5.1.3.3. Líkindadreifing slembistærða (probability distribution of random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#strjalar-og-samfelldar-likindadreifingar">5.1.3.4. Strjálar og samfelldar líkindadreifingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#stiki-parameter">5.1.3.5. Stiki (parameter)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#staerfraeilegir-eiginleikar-slembistaera">5.2. Stærðfræðilegir eiginleikar slembistærða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#ohaar-og-einsdreifar-slembistaerir">5.2.1. Óháðar og einsdreifðar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ohaar-slembistaerir-independent-random-variables">5.2.1.1. Óháðar slembistærðir (independent random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#haar-slembistaerir-dependent-random-variables">5.2.1.2. Háðar slembistærðir (dependent random variables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ohaar-og-einsdreifar-slembistaerir-iid-random-variables">5.2.1.3. Óháðar og einsdreifðar slembistærðir (iid random variables)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#logmal-mikils-fjolda">5.2.2. Lögmál mikils fjölda</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#vaentigildi-slembistaera-expected-value">5.2.2.1. Væntigildi slembistærða (Expected value)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#logmal-mikils-fjolda-law-of-large-numbers">5.2.2.2. Lögmál mikils fjölda (law of large numbers)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dreifni-slembistaera-var-x">5.2.2.3. Dreifni slembistærða, <span class="math notranslate nohighlight">\(Var[X]\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#linuleg-umbreyting-a-samfelldum-slembistaerum">5.2.3. Línuleg umbreyting á samfelldum slembistærðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#linuleg-umbreyting-linear-transformation">5.2.3.1. Línuleg umbreyting (Linear transformation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#a-breyta-til-baka">5.2.3.2. Að breyta til baka</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#vaentigildi-og-dreifni-eftir-linulega-umbreytingu">5.2.3.3. Væntigildi og dreifni eftir línulega umbreytingu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#strjalar-likindadreifingar">5.3. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#massafall">5.3.1. Massafall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#massafall-mass-function">5.3.1.1. Massafall (mass function)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#reiknireglur-fyrir-strjalar-slembistaerir">5.3.2. Reiknireglur fyrir strjálar slembistærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#e-reglur">5.3.2.1. Reiknireglur fyrir strjálar slembistærðir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#tvikostadreifingin">5.3.3. Tvíkostadreifingin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#bernoulli-tilraun-bernoulli-trial">5.3.3.1. Bernoulli tilraun (Bernoulli trial)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#tvikostadreifingin-binomial-distribution">5.3.3.2. Tvíkostadreifingin (binomial distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#tviliustuullinn-binomial-coefficient">5.3.3.3. Tvíliðustuðullinn (binomial coefficient)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-tviliustuullinn">5.3.3.4. Sýnidæmi: Tvíliðustuðullinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-tvikostadreifingin">5.3.3.5. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ex-tvikostkronukast">5.3.3.6. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id4">5.3.3.7. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id5">5.3.3.8. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id6">5.3.3.9. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id7">5.3.3.10. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id8">5.3.3.11. Sýnidæmi: Tvíkostadreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#vaentigildi-og-dreifni-tvikostadreifingarinnar">5.3.3.12. Væntigildi og dreifni tvíkostadreifingarinnar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-vaentigildi-og-dreifni-tvikostadreifingarinnar">5.3.3.13. Sýnidæmi: Væntigildi og dreifni tvíkostadreifingarinnar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#poisson-dreifingin">5.3.4. Poisson dreifingin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#poisson-dreifingin-poisson-distribution">5.3.4.1. Poisson dreifingin (Poisson distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-poisson-dreifingin">5.3.4.2. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id9">5.3.4.3. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#poisson-dreifingin-logu-a-nyrri-einingu">5.3.4.4. Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-poisson-dreifingin-logu-a-nyrri-einingu">5.3.4.5. Sýnidæmi: Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id10">5.3.4.6. Sýnidæmi: Poisson dreifingin löguð að nýrri einingu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id11">5.3.4.7. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#vaentigildi-og-dreifni-poisson-dreifingar">5.3.4.8. Væntigildi og dreifni Poisson dreifingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id12">5.3.4.9. Sýnidæmi: Poisson dreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#samanburur-a-tvikosta-og-poisson-dreifingunni">5.3.4.10. Samanburður á tvíkosta- og Poisson dreifingunni</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samfelldar-likindadreifingar">5.4. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id13">5.4.1. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#reiknireglur-fyrir-samfelldar-slembistaerir">5.4.1.1. Reiknireglur fyrir samfelldar slembistærðir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dreififall-distribution-function">5.4.1.2. Dreififall (Distribution function)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ettifall-og-ettiferill-density-function-and-density-curve">5.4.1.3. Þéttifall og þéttiferill (Density function and density curve)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#normaldreifing">5.4.2. Normaldreifing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#normaldreifingin-normal-distribution">5.4.2.1. Normaldreifingin (normal distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#reglan">5.4.2.2. 68-95-99.7% reglan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#stolu-normaldreifing">5.4.2.3. Stöðluð normaldreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#stalaa-normaldreifingin-standardized-normal-distribution">5.4.2.4. Staðlaða normaldreifingin (Standardized normal distribution)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#samband-x-og-z">5.4.2.5. Samband <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Z\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#likur-normaldreifra-slembistaera">5.4.2.6. Líkur normaldreifðra slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#notkun-toflu-stoluu-normaldreifingarinnar">5.4.2.7. Notkun töflu stöðluðu normaldreifingarinnar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-normaldreifingin">5.4.2.8. Sýnidæmi: Normaldreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id14">5.4.2.9. Sýnidæmi: Normaldreifingin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithatturinn-z-a">5.4.2.10. Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id15">5.4.2.11. Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-rithatturinn-z-a">5.4.2.12. Sýnidæmi: Rithátturinn <span class="math notranslate nohighlight">\(z_{a}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#normaldreifingarrit">5.4.2.13. Normaldreifingarrit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#normaldreifingarrit-normal-probability-plot">5.4.2.14. Normaldreifingarrit (normal probability plot)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#arar-samfelldar-likindadreifingar">5.4.3. Aðrar samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#t-dreifing">5.4.3.1. t-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithatturinn-t-a-k">5.4.3.2. Rithátturinn <span class="math notranslate nohighlight">\(t_{a,(k)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-flett-upp-i-t-toflu">5.4.3.3. Sýnidæmi: Flett upp í t-töflu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#chi-2-dreifing">5.4.3.4. <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithatturinn-chi-2-a-k">5.4.3.5. Rithátturinn <span class="math notranslate nohighlight">\(\chi^2_{a,(k)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-flett-upp-i-chi-2-toflu">5.4.3.6. Sýnidæmi: Flett upp í <span class="math notranslate nohighlight">\(\chi^2\)</span>-töflu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#f-dreifing">5.4.3.7. F-dreifing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rithatturinn-f-a-v-1-v-2">5.4.3.8. Rithátturinn <span class="math notranslate nohighlight">\(F_{a,(v_1,v_2)}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-flett-upp-i-f-toflu">5.4.3.9. Sýnidæmi: Flett upp í F-töflu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#daemi">5.5. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id16">5.5.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id17">5.5.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id18">5.5.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id19">5.5.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id20">5.5.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id21">5.5.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id22">5.5.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id23">5.5.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id24">5.5.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id25">5.5.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id26">5.5.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id27">5.5.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id28">5.5.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id29">5.5.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id30">5.5.15. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id31">5.5.16. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id32">5.5.17. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id33">5.5.18. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id34">5.5.19. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id35">5.5.20. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id36">5.5.21. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id37">5.5.22. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id38">5.5.23. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Ályktunartölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#urtaksdreifing-lysistaerar">6.1. Úrtaksdreifing lýsistærðar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id1">6.1.1. Úrtaksdreifing lýsistærðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#urtaksdreifing-lysistaerar-sampling-distribution">6.1.1.1. Úrtaksdreifing lýsistærðar (sampling distribution)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#lysistaerin-mealtal">6.2. Lýsistærðin meðaltal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id2">6.2.1. Lýsistærðin meðaltal</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#reiknireglur-fyrir-vaentigildi-slembistaera">6.2.1.1. Reiknireglur fyrir væntigildi slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#reiknireglur-fyrir-dreifni-slembistaera">6.2.1.2. Reiknireglur fyrir dreifni slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-vaentigildi-summu-tveggja-slembistaera">6.2.1.3. Sýnidæmi: Væntigildi summu tveggja slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#vaentigildi-og-dreifni-mealtals-expected-value-and-variance-of-the-mean">6.2.1.4. Væntigildi og dreifni meðaltals (Expected value and variance of the mean)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#staalskekkja-standard-error">6.2.1.5. Staðalskekkja (standard error)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-vaentigildi-og-dreifni-mealtals">6.2.1.6. Sýnidæmi: Væntigildi og dreifni meðaltals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#likindadreifing-mealtals-normaldreifra-slembistaera">6.2.1.7. Líkindadreifing meðaltals normaldreifðra slembistærða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-likindadreifing-mealtals-normaldreifra-slembistaera">6.2.1.8. Sýnidæmi: Líkindadreifing meðaltals normaldreifðra slembistærða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#hofusetning-tolfraeinnar">6.3. Höfuðsetning tölfræðinnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id3">6.3.1. Höfuðsetning tölfræðinnar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#hofusetning-tolfraeinnar-central-limit-theorem">6.3.1.1. Höfuðsetning tölfræðinnar (Central limit theorem)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#metlar-og-profstaerir">6.4. Metlar og prófstærðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id4">6.4.1. Metlar og prófstærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#metill-estimator">6.4.1.1. Metill (estimator)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#metill-a-mealtal-slembistaerar">6.4.1.2. Metill á meðaltal slembistærðar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-metlar-bar-x">6.4.1.3. Sýnidæmi: Metlar - <span class="math notranslate nohighlight">\(\bar{X}\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#metill-a-dreifni-slembistaerar">6.4.1.4. Metill á dreifni slembistærðar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-metlar-s-2">6.4.1.5. Sýnidæmi: Metlar - <span class="math notranslate nohighlight">\(S^2\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#metill-a-hlutfalli-slembistaerar">6.4.1.6. Metill á hlutfalli slembistærðar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-metlar-p">6.4.1.7. Sýnidæmi: Metlar - <span class="math notranslate nohighlight">\(P\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#oryggisbil">6.5. Öryggisbil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id5">6.5.1. Öryggisbil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#oryggisbil-confidence-interval">6.5.1.1. Öryggisbil (confidence interval)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#oryggi-confidence-level">6.5.1.2. Öryggi (confidence level)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#oryggismork-ea-vikmork-confidence-limits">6.5.1.3. Öryggismörk eða vikmörk (confidence limits)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#villulikur-type-i-error">6.5.1.4. Villulíkur (Type I error)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#tilgatuprof">6.6. Tilgátupróf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id6">6.6.1. Tilgátupróf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#hugmyndafraei-tilgatuprofa">6.6.1.1. Hugmyndafræði tilgátuprófa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#tilgatur">6.6.2. Tilgátur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#nulltilgata-null-hypothesis">6.6.2.1. Núlltilgáta (null hypothesis)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#gagntilgata-alternative-hypothesis">6.6.2.2. Gagntilgáta (alternative hypothesis)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#attanir-tilgatuprofa">6.6.3. Áttanir tilgátuprófa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#einhlia-prof-one-sided-tests">6.6.3.1. Einhliða próf (one-sided tests)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#tvihlia-prof-two-sided-tests">6.6.3.2. Tvíhliða próf (two-sided tests)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#profstaerir">6.6.4. Prófstærðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#profstaer-test-statistic">6.6.4.1. Prófstærð (test statistic)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hofnunarsvaei-og-alpha-stig">6.6.5. Höfnunarsvæði og <span class="math notranslate nohighlight">\(\alpha\)</span>-stig</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#hofnun-nulltilgatu-rejection-of-null-hypothesis">6.6.5.1. Höfnun núlltilgátu (rejection of null hypothesis)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#hofnunarsvaei-tilgatuprofa-rejection-areas">6.6.5.2. Höfnunarsvæði tilgátuprófa (rejection areas)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#alpha-stig-alpha-level">6.6.5.3. <span class="math notranslate nohighlight">\(\alpha\)</span>-stig (<span class="math notranslate nohighlight">\(\alpha\)</span>-level)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#p-gildi">6.6.6. <span class="math notranslate nohighlight">\(p\)</span>-gildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#p-gildi-p-value">6.6.6.1. <span class="math notranslate nohighlight">\(p\)</span>-gildi (<span class="math notranslate nohighlight">\(p\)</span>-value)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#p-gildi-profstaera-sem-fylgja-stoluu-normaldreifingunni">6.6.6.2. <span class="math notranslate nohighlight">\(p\)</span>-gildi prófstærða sem fylgja stöðluðu normaldreifingunni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-p-gildi-profstaerar-sem-fylgir-stoluu-normaldreifingunni">6.6.6.3. Sýnidæmi: P-gildi prófstærðar sem fylgir stöðluðu normaldreifingunni</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#styrkur-profa-og-villur-af-ger-i-og-ii">6.6.7. Styrkur prófa og villur af gerð I og II</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#styrkur-power">6.6.7.1. Styrkur (power)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#villa-af-ger-i-type-i-error">6.6.7.2. Villa af gerð I (Type I Error)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#villa-af-ger-ii-type-ii-error">6.6.7.3. Villa af gerð II (Type II error)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#framkvaemd-tilgatuprofa">6.6.8. Framkvæmd tilgátuprófa</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#id7">6.6.8.1. Framkvæmd tilgátuprófa</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#samband-oryggisbila-og-tilgatuprofa">6.6.9. Samband öryggisbila og tilgátuprófa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#daemi">6.7. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id8">6.7.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id9">6.7.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id10">6.7.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id11">6.7.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id12">6.7.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id13">6.7.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id14">6.7.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id15">6.7.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id16">6.7.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id17">6.7.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id18">6.7.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id19">6.7.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id20">6.7.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id21">6.7.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id22">6.7.15. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id23">6.7.16. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id24">6.7.17. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id25">6.7.18. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Ályktanir um flokkabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-um-hlutfall-yis">7.1. Ályktanir um hlutfall þýðis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#normalnalgun">7.1.1. Normalnálgun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oryggisbil-og-tilgatuprof">7.1.2. Öryggisbil og tilgátupróf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oryggisbil-fyrir-hlutfall-yis">7.1.2.1. Öryggisbil fyrir hlutfall þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-hlutfall-yis">7.1.2.2. Tilgátupróf fyrir hlutfall þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-hlutfall-yis">7.1.2.3. Sýnidæmi: Ályktanir um hlutfall þýðis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-um-hlutfoll-tveggja-ya">7.2. Ályktanir um hlutföll tveggja þýða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">7.2.1. Ályktanir um hlutföll tveggja þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#oryggisbil-fyrir-hlutfoll-tveggja-ya">7.2.1.1. Öryggisbil fyrir hlutföll tveggja þýða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tilgatuprof-fyrir-hlutfoll-tveggja-ya">7.2.1.2. Tilgátupróf fyrir hlutföll tveggja þýða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-alyktanir-um-hlutfoll-tveggja-ya">7.2.1.3. Sýnidæmi: Ályktanir um hlutföll tveggja þýða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#alyktanir-um-hlutfoll-fleiri-ya">7.3. Ályktanir um hlutföll fleiri þýða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">7.3.1. Ályktanir um hlutföll fleiri þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#toflur-fyrir-ki-kvarat-prof">7.3.1.1. Töflur fyrir kí-kvaðrat próf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ki-kvarat-prof-fyrir-hlutfoll">7.3.1.2. Kí-kvaðrat próf fyrir hlutföll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tafla-maeldrar-tini">7.3.1.3. Tafla mældrar tíðni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tafla-vaentanlegrar-tini">7.3.1.4. Tafla væntanlegrar tíðni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tafla-profstaerar">7.3.1.5. Tafla prófstærðar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-ki-kvarat-prof-2x2-tafla">7.3.1.6. Sýnidæmi: Kí-kvaðrat próf - 2x2 tafla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-ki-kvarat-prof-2x3-tafla">7.3.1.7. Sýnidæmi: Kí-kvaðrat próf - 2x3 tafla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#matgaeaprof">7.3.2. Mátgæðapróf</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tengslatoflur">7.4. Tengslatöflur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7.4.1. Tengslatöflur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tengslatoflur-contingency-tables">7.4.1.1. Tengslatöflur (contingency tables)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#synidaemi-tengslatoflur">7.4.1.2. Sýnidæmi: Tengslatöflur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#daemi">7.5. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">7.5.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">7.5.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">7.5.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">7.5.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">7.5.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">7.5.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">7.5.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">7.5.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">7.5.9. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Ályktanir um talnabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-dreifni">8.1. Ályktanir um dreifni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-dreifni-i-einu-yi">8.1.1. Ályktanir um dreifni í einu þýði</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#oryggisbil-fyrir-dreifni-normaldreifs-yis">8.1.1.1. Öryggisbil fyrir dreifni normaldreifðs þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#tilgatuprof-fyrir-dreifni-normaldreifs-yis">8.1.1.2. Tilgátupróf fyrir dreifni normaldreifðs þýðis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-dreifni-yis">8.1.1.3. Sýnidæmi: Ályktanir um dreifni þýðis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-dreifni-tveggja-ya">8.1.2. Ályktanir um dreifni tveggja þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#tilgatuprof-fyrir-dreifni-tveggja-normaldreifra-ya">8.1.2.1. Tilgátupróf fyrir dreifni tveggja normaldreifðra þýða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-dreifni-tveggja-normaldreifra-ya">8.1.2.2. Sýnidæmi: Ályktanir um dreifni tveggja normaldreifðra þýða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-mealtol">8.2. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mealtal-yis">8.2.1. Ályktanir um meðaltal þýðis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#z-prof-og-oryggisbil">8.2.1.1. Z-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#z-oryggisbil-fyrir-mu">8.2.1.2. Z - öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#z-prof-fyrir-mu">8.2.1.3. Z-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-mealtal">8.2.1.4. Sýnidæmi: Ályktanir um meðaltal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-mu">8.2.1.5. Sýnidæmi: Ályktanir um <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-prof-og-oryggisbil">8.2.1.6. T-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-oryggisbil-fyrir-mu">8.2.1.7. T-öryggisbil fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-prof-fyrir-mu">8.2.1.8. T-próf fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-fyrir-mu">8.2.1.9. Sýnidæmi: Ályktanir fyrir <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mealtol-tveggja-ohara-ya">8.2.2. Ályktanir um meðaltöl tveggja óháðra þýða</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id1">8.2.2.1. Z-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#z-oryggisbil-fyrir-mismun-tveggja-mealtala">8.2.2.2. Z-öryggisbil fyrir mismun tveggja meðaltala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#z-prof-fyrir-mismun-tveggja-mealtala">8.2.2.3. Z-próf fyrir mismun tveggja meðaltala</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-mu-1-mu-2">8.2.2.4. Sýnidæmi: <span class="math notranslate nohighlight">\(\mu_1 - \mu_2\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id2">8.2.2.5. T-próf og öryggisbil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">8.2.2.6. T-öryggisbil fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-prof-fyrir-mismun-mealtala-tveggja-ya-gert-er-ra-fyrir-a-dreifnin-se-su-sama">8.2.2.7. T-próf fyrir mismun meðaltala tveggja þýða - gert er ráð fyrir að dreifnin sé sú sama</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-oryggisbil-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">8.2.2.8. T-öryggisbil fyrir mismun meðaltala tveggja þýða - ólík dreifni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-prof-fyrir-mismun-mealtala-tveggja-ya-olik-dreifni">8.2.2.9. T-próf fyrir mismun meðaltala tveggja þýða - ólík dreifni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-tvo-mealtol">8.2.2.10. Sýnidæmi: Ályktanir um tvö meðaltöl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#id3">8.2.2.11. Sýnidæmi: Ályktanir um tvö meðaltöl</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#tilgatuprof-fyrir-paraar-maelingar">8.2.3. Tilgátupróf fyrir paraðar mælingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-prof-fyrir-paraar-maelingar">8.2.3.1. T-pŕof fyrir paraðar mælingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#synidaemi-alyktanir-um-paraar-maelingar">8.2.3.2. Sýnidæmi: Ályktanir um paraðar mælingar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hvenaer-notum-vi-hvaa-prof">8.2.4. Hvenær notum við hvaða próf?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#daemi">8.3. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id4">8.3.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id5">8.3.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id6">8.3.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id7">8.3.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id8">8.3.5. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id9">8.3.6. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id10">8.3.7. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id11">8.3.8. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id12">8.3.9. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id13">8.3.10. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id14">8.3.11. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id15">8.3.12. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id16">8.3.13. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id17">8.3.14. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id18">8.3.15. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id19">8.3.16. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id20">8.3.17. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id21">8.3.18. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id22">8.3.19. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id23">8.3.20. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Fervikagreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#einatta-fervikagreining">9.1. Einþátta fervikagreining</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#fervikasummur">9.1.1. Fervikasummur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#rithattur-notaur-i-fervikagreiningu">9.1.1.1. Ritháttur notaður í fervikagreiningu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#fervikasummur-i-einhlia-fervikagreiningu-sums-of-squares-in-one-sided-anova">9.1.1.2. Fervikasummur í einhliða fervikagreiningu (Sums of squares in one-sided ANOVA)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#tilgatuprof-i-fervikagreiningu">9.1.2. Tilgátupróf í fervikagreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#tilgatuprof-fyrir-einhlia-fervikagreiningu">9.1.2.1. Tilgátupróf fyrir einhliða fervikagreiningu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#synidaemi-fervikagreining">9.1.2.2. Sýnidæmi: Fervikagreining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#daemi">9.2. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id1">9.2.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id2">9.2.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id3">9.2.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id4">9.2.4. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#einfalt-linulegt-ahvarf">10.1. Einfalt línulegt aðhvarf</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id1">10.1.1. Einfalt línulegt aðhvarf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#ahvarfsgreiningarlikani-simple-linear-regression-model">10.1.1.1. Aðhvarfsgreiningarlíkanið (simple linear regression model)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#afer-minnstu-kvarata">10.1.2. Aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#jafna-ahvarfslinu-minnstu-kvarata-least-squares-equation">10.1.2.1. Jafna aðhvarfslínu minnstu kvaðrata (least squares equation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#synidaemi-einfalt-linulegt-ahvarf">10.1.2.2. Sýnidæmi: Einfalt línulegt aðhvarf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#leifar">10.1.3. Leifar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#leifar-residuals">10.1.3.1. Leifar (residuals)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#bruun-og-bryggjun">10.1.4. Brúun og bryggjun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#bruun-interpolation">10.1.4.1. Brúun (interpolation)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#synidaemi-bruun">10.1.4.2. Sýnidæmi: Brúun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#bryggjun-extrapolation">10.1.4.3. Bryggjun (extrapolation)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#skyringarhlutfall">10.1.5. Skýringarhlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#r-2-i-ahvarfsgreiningu">10.1.5.1. <span class="math notranslate nohighlight">\(r^2\)</span> í aðhvarfsgreiningu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#synidaemi-skyringarhlutfall">10.1.5.2. Sýnidæmi: Skýringarhlutfall</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#utlagar-og-ahrifamikil-maeligildi">10.1.6. Útlagar og áhrifamikil mæligildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#alyktanir-i-ahvarfsgreiningu">10.2. Ályktanir í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#slembistaerin-varepsilon">10.2.1. Slembistærðin <span class="math notranslate nohighlight">\(\varepsilon\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#mat-a-sigma-2-i-einfoldu-linulegu-ahvarfi-estimate-of-sigma-2-in-simple-linear-regression">10.2.1.1. Mat á <span class="math notranslate nohighlight">\(\sigma^2\)</span> í einföldu línulegu aðhvarfi (estimate of <span class="math notranslate nohighlight">\(\sigma^2\)</span> in simple linear regression)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#oryggisbil-fyrir-beta-0-og-beta-1">10.2.2. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> og <span class="math notranslate nohighlight">\(\beta_1\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#oryggisbil-fyrir-beta-0-confidense-interval-for-beta-0">10.2.2.1. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_0\)</span> (confidense interval for <span class="math notranslate nohighlight">\(\beta_0\)</span>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#oryggisbil-fyrir-beta-1-confidence-interval-for-beta-1">10.2.2.2. Öryggisbil fyrir <span class="math notranslate nohighlight">\(\beta_1\)</span> (confidence interval for <span class="math notranslate nohighlight">\(\beta_1\)</span>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#spabil-fyrir-framtiarmaelingar">10.2.3. Spábil fyrir framtíðarmælingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#spabil-fyrir-framtiarmaelingar-prediction-interval-for-future-observations">10.2.3.1. Spábil fyrir framtíðarmælingar (prediction interval for future observations)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#prof-a-fylgnistuli-rho">10.2.4. Próf á fylgnistuðli (<span class="math notranslate nohighlight">\(\rho\)</span>)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#tilgatuprof-fyrir-rho">10.2.4.1. Tilgátupróf fyrir <span class="math notranslate nohighlight">\(\rho\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#synidaemi-prof-a-fylgnistuli">10.2.4.2. Sýnidæmi: Próf á fylgnistuðli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fervikagreining-i-ahvarfsgreiningu">10.3. Fervikagreining í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id2">10.3.1. Fervikagreining í aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#fervikasummur-i-einfoldu-linulegu-ahvarfi-sums-of-squares-in-a-simple-linear-regression-anova">10.3.1.1. Fervikasummur í einföldu línulegu aðhvarfi (sums of squares in a simple linear regression ANOVA)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#skyringarhlutfall-r-2">10.3.1.2. Skýringarhlutfall (<span class="math notranslate nohighlight">\(R^2\)</span>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#tilgatuprof-i-fervikagreiningu-fyrir-ahvarfsgreiningu">10.3.2. Tilgátupróf í fervikagreiningu fyrir aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#tilgatuprof-fyrir-einhlia-fervikagreiningu">10.3.2.1. Tilgátupróf fyrir einhliða fervikagreiningu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#daemi">10.4. Dæmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id3">10.4.1. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id4">10.4.2. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id5">10.4.3. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id6">10.4.4. Dæmi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id7">10.4.5. Dæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreiningarlikani">11.1. Tvíkosta aðhvarfsgreiningarlíkanið</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#id1">11.1.1. Tvíkosta aðhvarfsgreiningarlíkanið</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#tengifall-link-function">11.1.1.1. Tengifall (link function)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreiningarlikani-logistic-regression-model">11.1.1.2. Tvíkosta aðhvarfsgreiningarlíkanið (logistic regression model)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">11.2. Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#id2">11.2.1. Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#tvikosta-ahvarf-me-samfelldri-skyribreytu-logistic-regression-with-a-continuous-explanatory-variable">11.2.1.1. Tvíkosta aðhvarf með samfelldri skýribreytu (logistic regression with a continuous explanatory variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#synidaemi-tvikosta-ahvarfsgreining-me-samfelldri-skyribreytu">11.2.1.2. Sýnidæmi: Tvíkosta aðhvarfsgreining með samfelldri skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">11.3. Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#id3">11.3.1. Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#tvikosta-ahvarf-me-strjalli-skyribreytu-logistic-regression-with-a-discrete-explanatory-variable">11.3.1.1. Tvíkosta aðhvarf með strjálli skýribreytu (logistic regression with a discrete explanatory variable)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#synidaemi-tvikosta-ahvarfsgreining-me-strjalli-skyribreytu">11.3.1.2. Sýnidæmi: Tvíkosta aðhvarfsgreining með strjálli skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#likur-i-tvikosta-ahvarfsgreiningu">11.4. Líkur í tvíkosta aðhvarfsgreiningu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#id4">11.4.1. Líkur í tvíkosta aðhvarfsgreiningu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#tvikosta-ahvarf-og-likur-logistic-regression-and-probability">11.4.1.1. Tvíkosta aðhvarf og líkur (logistic regression and probability)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-samfelldri-skyribreytu">11.4.1.2. Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með samfelldri skýribreytu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli11.html#synidaemi-likur-i-tvikosta-ahvarfsgreiningu-me-strjalli-skyribreytu">11.4.1.3. Sýnidæmi: Líkur í tvíkosta aðhvarfsgreiningu með strjálli skýribreytu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="toflur_all_final.html">Töflur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-1-stolu-normaldreifing-z-gildi">T.1: Stöðluð normaldreifing - z-gildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-2-t-dreifing">T.2: t-dreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-3-chi-2-dreifing">T.3: <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-4-f-dreifing-a-0-90">T.4: F-dreifing - <span class="math notranslate nohighlight">\(a=0.90\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-5-f-dreifing-a-0-95">T.5: F-dreifing - <span class="math notranslate nohighlight">\(a=0.95\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-6-f-dreifing-a-0-975">T.6: F-dreifing - <span class="math notranslate nohighlight">\(a=0.975\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="toflur_all_final.html#t-7-f-dreifing-a-0-99">T.7: F-dreifing - <span class="math notranslate nohighlight">\(a=0.99\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="svor_final.html">Svör við dæmum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#kafli">2. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id1">3. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id2">4. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id3">5. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id4">6. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id5">7. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id6">8. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id7">9. kafli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="svor_final.html#id8">10. kafli</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordalistar.html">Orðalistar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#islenskur-enskur-oralisti">Íslenskur-Enskur orðalisti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#enskur-islenskur-oralisti">Enskur-íslenskur orðalisti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_hofunda.html">Um höfunda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#anna-helga-jonsdottir">Anna Helga Jónsdóttir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#sigrun-helga-lund">Sigrún Helga Lund</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thakkir.html">Þakkir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tölfræði frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Ályktanir um flokkabreytur</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/tolfraedi_fra_grunni//projects/tolfraedi_fra_grunni/kafli07.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="alyktanir-um-flokkabreytur">
+<span id="c-alyktanirumflokkabreytur"></span><h1><span class="section-number">7. </span>Ályktanir um flokkabreytur<a class="headerlink" href="#alyktanir-um-flokkabreytur" title="Permalink to this heading"></a></h1>
+<p>Nú er komið að því að beita ályktunartölfræði á breyturnar okkar. Við
+byrjum á því að skoða <em>álykanir um flokkabreytur</em> sem er umfjöllunarefni
+þessa kafla. Eins og við nefndum í kafla <a class="reference internal" href="kafli02.html#s-breytur"><span class="std std-numref">2.2</span></a>, þá segja
+útkomur flokkabreyta til um það hvaða flokki mælingarnar okkar tilheyra
+og eru því ekki mældar í neinum tilteknum einingum. Það er því
+merkingarlaust að tala um meðaltöl og staðalfrávik þegar unnið er með
+flokkabreytur. Hins vegar getum við unnið með <em>hlutföll</em> (e.
+proportions), það er við getum kannað hversu hátt hlutfall mælinganna
+lenti í tilteknum flokki.</p>
+<p>Í kafla <a class="reference internal" href="#s-eitthlutfall"><span class="std std-numref">7.1</span></a> byrjum við á að skoða tilgátupróf og
+öryggisbil fyrir <em>eitt hlutfall</em>, með öðrum orðum skoðum við hversu hátt
+hlutfall viðfangsefna þýðisins hefur tiltekið gildi flokkabreytu. Þar á
+eftir, í kafla <a class="reference internal" href="#s-tvohlutfoll"><span class="std std-numref">7.2</span></a>, könnum við hvernig bera má saman
+<em>hlutföll tveggja þýða</em>. Þá skoðum við hlutfall mælinga sem hljóta
+tiltekið gildi flokkabreytu í einu þýði og berum saman við hlutfallið í
+hinu þýðinu. Í kafla <a class="reference internal" href="#s-fleirihlutfoll"><span class="std std-numref">7.3</span></a> munum við sjá hvernig hægt
+er að útvíkka aðferðina til að skoða fleiri en tvö þýði. Loks í kafla
+<a class="reference internal" href="#s-tengslatoflur"><span class="std std-numref">7.4</span></a> kynnumst við svo tilgátuprófum fyrir svokallaðar
+tengslatöflur sem notuð eru til að kanna hvort samband sé milli tveggja
+flokkabreyta sem eru þá mældar á sama þýðinu.</p>
+<p>Eins og áður gerum við ráð fyrir að þýðið skiptist með einhverjum
+ákveðnum hætti og innihaldi því einhver raunveruleg hlutföll.
+Aðferðirnar okkar miðast að því að draga ályktanir um og meta hver þessi
+hlutföll eru.</p>
+<section id="alyktanir-um-hlutfall-yis">
+<span id="s-eitthlutfall"></span><h2><span class="section-number">7.1. </span>Ályktanir um hlutfall þýðis<a class="headerlink" href="#alyktanir-um-hlutfall-yis" title="Permalink to this heading"></a></h2>
+<p>Í þessum hluta munum við skoða bilmat og tilgátupróf fyrir eitt
+hlutfall, <span class="math notranslate nohighlight">\(p\)</span>, sem lýsir því hversu hátt hlutfall mælinga tekur
+eitt ákveðið gildi flokkabreytu. Sem dæmi má nefna skoðanakönnum þar sem
+fólk er spurt ,,styður þú ríkisstjórnina? “ Hlutfallið sem við skoðum er
+það hlutfall viðfangsefna sem svarar spurningunni játandi. Markmið
+rannsókna af þessu tagi er oftar en ekki að draga ályktanir um hlutfall
+alls þýðisins, <span class="math notranslate nohighlight">\(p\)</span>, sem við ekki þekkjum. Í þessu dæmi væri það að
+kanna hversu hátt hlutfall allra kjósanda styður ríkisstjórnina.</p>
+<p>Útkomur mælinganna sem framkvæmdar eru á úrtakinu eru notaðar til að
+finna mat á óþekkta hlutfallinu og notum við <span class="math notranslate nohighlight">\(\hat{p}\)</span> (lesið
+<span class="math notranslate nohighlight">\(p\)</span> -hatt) til að tákna það mat. Við metum þýðishlutfallið
+<span class="math notranslate nohighlight">\(p\)</span>, með úrtakshlutfallinu, það er</p>
+<div class="math notranslate nohighlight" id="equation-eq-phat">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq-phat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} = \frac{x}{n}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(x\)</span> er fjöldi þeirra mælinga sem hljóta viðkomandi útkomu
+(,,já“ í dæminu hér að ofan) og <span class="math notranslate nohighlight">\(n\)</span> er stærð úrtaksins.</p>
+<p>Tilgátuprófið í þessum hluta prófar núlltilgátuna hvort hlutfall
+þýðisins, <span class="math notranslate nohighlight">\(p\)</span>, séu jafnt einhverju ákveðnu gildi sem við köllum
+<span class="math notranslate nohighlight">\(p_0\)</span>. Núlltilgátuna ritum við <span class="math notranslate nohighlight">\(H_0: p= p_0\)</span>.</p>
+<section id="normalnalgun">
+<h3><span class="section-number">7.1.1. </span>Normalnálgun<a class="headerlink" href="#normalnalgun" title="Permalink to this heading"></a></h3>
+<p>Þegar við skoðum hvort flokkabreyta tekur ákveðið tiltekið gildi, getum
+litið á sérhverja mælingu sem Bernoulli tilraun (sjá kassa
+<a class="reference internal" href="kafli05.html#em-bernoulli"><span class="std std-numref">5.3.3.1</span></a> í kafla <a class="reference internal" href="kafli05.html#s-binom"><span class="std std-numref">5.3.3</span></a>). Ef mælingin hlýtur tiltekið
+gildi flokkabreytunnar lítum við á hana sem ,,heppnaða tilraun“, annars
+ekki. Mögulegar útkomur eru eingöngu tvær (í hópnum eða ekki), með sömu
+líkur í hvert sinn og þar sem við gerum alltaf þá kröfu að mælingarnar
+séu óháðar og einsdreifðar má líta á þær sem röð óháðra tilrauna.</p>
+<p>Þar sem við getum litið á hverja mælingu sem Bernoulli tilraun getum við
+sömuleiðis litið svo á að heildarfjöldi heppnaðra tilrauna fylgi
+tvíkostadreifingunni (sjá kassa <a class="reference internal" href="kafli05.html#em-tvikostadreifingin"><span class="std std-numref">5.3.3.2</span></a> í kafla
+<a class="reference internal" href="kafli05.html#s-binom"><span class="std std-numref">5.3.3</span></a>). Þá er stikinn <span class="math notranslate nohighlight">\(p\)</span> hlutfallið í dreifingunni og
+<span class="math notranslate nohighlight">\(n\)</span> er heildarfjöldi mælinga. Því er hægt að nota aðferðir byggðar
+á tvíkostadreifingunni til að álykta um <span class="math notranslate nohighlight">\(p\)</span>. Þær aðferðir eru hins
+vegar það stærðfræðilega erfiðar að ekki er unnt að reikna þær í
+höndunum.</p>
+<p>Þegar ákveðnum skilyrðum er uppfyllt líkist tvíkostadreifingin
+normaldreifingunni nægjanlega mikið til að hægt sé að beita aðferðum sem
+byggðar eru á eiginleikum normaldreifingarinnar til að draga ályktanir
+um slembistærðir sem í raun fylgja tvíkostadreifingu. Það köllum við að
+beita <em>normalnálgun</em>. Í þessum kafla munum við aðallega styðjast við
+aðferðir sem byggja á þeirri nálgun.</p>
+<p>Tilgátuprófið í þessum hluta byggir á normalnálgun. Við munum notast við
+þumalputtaregluna að séu  <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og  <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>
+ stærri en 15 má nota nálgunina. Það er ætíð mikilvægt að gæta þess að
+þessi skilyrði séu uppfyllt. Ef skilyrðin eru ekki uppfyllt má nota
+tilgátupróf sem byggir beint á tvíkostadreifingunni, eða þá
+<em>endurvalsaðferð</em> til að meta tilgátuprófið. Hvoruga aðferðina má reikna
+í höndunum en þær eru útfærðar í öllum helstu tölfræðihugbúnuðum.</p>
+</section>
+<section id="oryggisbil-og-tilgatuprof">
+<h3><span class="section-number">7.1.2. </span>Öryggisbil og tilgátupróf<a class="headerlink" href="#oryggisbil-og-tilgatuprof" title="Permalink to this heading"></a></h3>
+<section id="oryggisbil-fyrir-hlutfall-yis">
+<h4><span class="section-number">7.1.2.1. </span>Öryggisbil fyrir hlutfall þýðis<a class="headerlink" href="#oryggisbil-fyrir-hlutfall-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Séu skilyrðin fyrir að nota normalnálgunina uppfyllt, það er ef
+ <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og  <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>  eru stærri en 15 má reikna
+neðra öryggismark fyrir <span class="math notranslate nohighlight">\(p\)</span> með:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pnedra">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-eq-pnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
+<p>og efra öryggismarkið með</p>
+<div class="math notranslate nohighlight" id="equation-eq-pefra">
+<span class="eqno">(7.3)<a class="headerlink" href="#equation-eq-pefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\hat{p} = \frac{x}{n}\)</span> og <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> fæst með
+að fletta upp í töflu stöðluðu normaldreifingarinnar í kafla
+<a class="reference internal" href="toflur_all_final.html#a-normaltafla"><span class="std std-ref">T.1</span></a>.</p>
+<p>Öryggisbilið má því skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+&lt; p &lt;
+\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="tilgatuprof-fyrir-hlutfall-yis">
+<h4><span class="section-number">7.1.2.2. </span>Tilgátupróf fyrir hlutfall þýðis<a class="headerlink" href="#tilgatuprof-fyrir-hlutfall-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Séu skilyrðin fyrir að nota normalnálgunina uppfyllt, þ.e.a.s. ef
+ <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og  <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>  eru stærri en 15 má nota
+eftirfarandi tilgátupróf.</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[\text{H}_0: p = p_0\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pprofstaerd">
+<span class="eqno">(7.4)<a class="headerlink" href="#equation-eq-pprofstaerd" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[Z = \frac{X - np_0}{\sqrt{np_0(1-p_0)}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(X\)</span> er fjöldi heppnaðra tilrauna og <span class="math notranslate nohighlight">\(n\)</span> er stærð
+úrtaksins.</p>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
+eða <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span>. Gagntilgátan getur verið einhliða eða
+tvíhliða og má sjá þær ásamt höfnunarsvæðunum hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: p &lt; p_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: p &gt; p_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: p \neq p_0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha/2}\)</span> eða <span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha/2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-alyktanir-um-hlutfall-yis">
+<span id="e-p"></span><h4><span class="section-number">7.1.2.3. </span>Sýnidæmi: Ályktanir um hlutfall þýðis<a class="headerlink" href="#synidaemi-alyktanir-um-hlutfall-yis" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Fyrirtæki hér í borg ákvað að framkvæma skoðanakönnun til að kanna fylgi
+ríkisstjórnarinnar. Fyrirtæki þetta er með marga færa próffræðinga á
+sínum snærum svo við getum gert ráð fyrir að úrtakshögun og úrvinnsla
+hafi verið til fyrirmyndar. Niðurstaðan var að af þeim 8750 sem spurðir
+voru “styður þú ríkisstjórnina“ sögðu 4530 já og 4220 nei. Finnið 95%
+öryggisbil fyrir <span class="math notranslate nohighlight">\(p\)</span>, hlutfall þeirra sem styðja ríkisstjórnina.
+Taka skal fram að tölurnar í þessu dæmi eru uppspuni.</p>
+<p>Byrjum á að finna <span class="math notranslate nohighlight">\(p\)</span> með jöfnu <a class="reference internal" href="#equation-eq-phat">(7.1)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p} = \frac{x}{n} = \frac{4530}{8750} = 0.5177\]</div>
+<p>Skilyrðin um normalnálgun eru uppfyllt þar sem  <span class="math notranslate nohighlight">\(n\hat{p}\)</span>  og
+ <span class="math notranslate nohighlight">\(n(1-\hat{p})\)</span>  eru bæði stærri en 15 . Nú má reikna neðra
+öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pnedra">(7.2)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p} - z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} =
+0.5177 - 1.96 \cdot \sqrt{\frac{0.5177(1-0.5177)}{8750}} = 0.5072\]</div>
+<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-pefra">(7.3)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p} + z_{1-\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} =
+0.5177 + 1.96 \cdot \sqrt{\frac{0.5177(1-0.5177)}{8750}} =  0.5282\]</div>
+<p>Öryggisbilið má því skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[0.5072 &lt; \ p \ &lt; 0.5282\]</div>
+<p>Við áætlum því að 51.77% kjósenda styðji ríkisstjórnina og fullyrðum með
+95% vissu að það hlutfall liggi á bilinu frá 50.72% upp í 52.82%.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="alyktanir-um-hlutfoll-tveggja-ya">
+<span id="s-tvohlutfoll"></span><h2><span class="section-number">7.2. </span>Ályktanir um hlutföll tveggja þýða<a class="headerlink" href="#alyktanir-um-hlutfoll-tveggja-ya" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3><span class="section-number">7.2.1. </span>Ályktanir um hlutföll tveggja þýða<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Í þessum hluta munum við skoða bilmat og tilgátupróf þar sem hlutföll
+mælinga sem hljóta tiltekið gildi flokkabreytu eru borin saman milli
+tveggja þýða. Dæmi um slíkt væri að kanna hvort hlutfall kvenna sem
+styður ríkistjórnina sé jafnt hlutfalli karla sem séu þeirrar skoðunar.</p>
+<p>Þegar bera á saman hlutföll í tveimur þýðum er, til þæginda, venjan að
+kalla það þýði sem úrtakshlutfallið er hærra þýði 1 og hitt þýði 2. Við
+köllum hlutföll heppnaðra tilrauna í þýðunum tveimur <span class="math notranslate nohighlight">\(p_1\)</span> og
+<span class="math notranslate nohighlight">\(p_2\)</span>. Tekin eru slembiúrtök úr þýðunum tveimur af stærð
+<span class="math notranslate nohighlight">\(n_1\)</span> og <span class="math notranslate nohighlight">\(n_2\)</span> og úrtakshlutföllin, <span class="math notranslate nohighlight">\(\hat{p}_1\)</span> og
+<span class="math notranslate nohighlight">\(\hat{p}_2\)</span> notuð til að meta þýðishlutföllin <span class="math notranslate nohighlight">\(p_1\)</span> og
+<span class="math notranslate nohighlight">\(p_2\)</span>. Jöfnur þeirra eru</p>
+<div class="math notranslate nohighlight" id="equation-eq-p1hat">
+<span class="eqno">(7.5)<a class="headerlink" href="#equation-eq-p1hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\hat{p}_1 = \frac{x_1}{n_1}\end{aligned}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-p2hat">
+<span class="eqno">(7.6)<a class="headerlink" href="#equation-eq-p2hat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\begin{aligned}
+\hat{p}_2 = \frac{x_2}{n_2}\end{aligned}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(x_1\)</span> og <span class="math notranslate nohighlight">\(x_2\)</span> eru fjöldi heppnaðra tilrauna í
+úrtökunum tveimur.</p>
+<p>Tilgátuprófið í þessum hluta prófar núlltilgátuna hvort hlutföllin í
+hópunum tveimur séu jöfn. Núlltilgátuna ritum við
+<span class="math notranslate nohighlight">\(H_0: p_1 = p_2\)</span>.</p>
+<p>Líkt og þegar við könnum hlutfall eins þýðis notum við normalnálgun til
+að bera saman hlutföll tveggja þýða. Í þessu tilviki notum við
+þumalputtaregluna að séu  <span class="math notranslate nohighlight">\(n_1 \hat{p}_1\)</span>,
+ <span class="math notranslate nohighlight">\(n_1(1-\hat{p}_1)\)</span>, <span class="math notranslate nohighlight">\(n_2 \hat{p}_2\)</span>  og
+ <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri en 15 má beita normalnálgun .
+Ef skilyrðin eru ekki uppfyllt má nota tilgátupróf <em>endurvalsaðferð</em> til
+að meta tilgátuprófið eða framkvæma svokallað <em>Fishers próf</em>. Hvoruga
+aðferðina má reikna í höndunum en þær eru útfærðar í öllum helstu
+tölfræðihugbúnuðum.</p>
+<section id="oryggisbil-fyrir-hlutfoll-tveggja-ya">
+<h4><span class="section-number">7.2.1.1. </span>Öryggisbil fyrir hlutföll tveggja þýða<a class="headerlink" href="#oryggisbil-fyrir-hlutfoll-tveggja-ya" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Séu skilyrðin fyrir að nota normalnálgunina uppfyllt, þ.e.a.s. ef
+ <span class="math notranslate nohighlight">\(n_1\hat{p}_1\)</span>,  <span class="math notranslate nohighlight">\(n_1(1-\hat{p}_1)\)</span>, <span class="math notranslate nohighlight">\(n_2\hat{p}_2\)</span>
+ og  <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri en 15 má reikna neðra
+öryggismark fyrir muninn á <span class="math notranslate nohighlight">\(p_1\)</span> og <span class="math notranslate nohighlight">\(p_2\)</span> með:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvopnedra">
+<span class="eqno">(7.7)<a class="headerlink" href="#equation-eq-tvopnedra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 - z_{1-\alpha/2} \cdot
+\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}\]</div>
+<p>og efra öryggismarkið með</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvopefra">
+<span class="eqno">(7.8)<a class="headerlink" href="#equation-eq-tvopefra" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hat{p}_1 - \hat{p}_2 + z_{1-\alpha/2} \cdot
+\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(\hat{p}_1 = \frac{x_1}{n_1}\)</span>,
+<span class="math notranslate nohighlight">\(\hat{p}_2 = \frac{x_2}{n_2}\)</span> og <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> fæst með
+að fletta upp í töflu stöðluðu normaldreifingarinnar í kafla
+<a class="reference internal" href="toflur_all_final.html#a-normaltafla"><span class="std std-ref">T.1</span></a>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="tilgatuprof-fyrir-hlutfoll-tveggja-ya">
+<h4><span class="section-number">7.2.1.2. </span>Tilgátupróf fyrir hlutföll tveggja þýða<a class="headerlink" href="#tilgatuprof-fyrir-hlutfoll-tveggja-ya" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Séu skilyrðin fyrir að nota normalnálgunina uppfyllt, þ.e.a.s. ef
+ <span class="math notranslate nohighlight">\(n_1\hat{p}_1\)</span>,  <span class="math notranslate nohighlight">\(n_1(1-\hat{p}_1)\)</span>, <span class="math notranslate nohighlight">\(n_2\hat{p}_2\)</span>
+ og  <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri en 15 má nota eftirfarandi
+tilgátupróf:</p>
+<p>Núlltilgátan er:</p>
+<div class="math notranslate nohighlight">
+\[\text{H}_0: p_1 = p_2\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-tvopprof">
+<span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-tvopprof" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\hspace{5mm}
+Z = \frac{\frac{X_1}{n_1} - \frac{X_2}{n_2}}{\sqrt{\hat p(1- \hat p)\left(\frac{1}{n_1} + \frac{1}{n_2} \right)}},
+\ \ \text{þar sem} \ \ \hat p = \frac{X_1 + X_2}{n_1 + n_2}\]</div>
+<p>Ef núlltilgátan er sönn fylgir prófstærðin stöðluðu normaldreifingunni,
+eða <span class="math notranslate nohighlight">\(Z \sim N(0,1)\)</span>. Gagntilgátan getur verið einhliða eða
+tvíhliða og má sjá þær ásamt höfnunarsvæðunum hér að neðan.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gagntilgáta</p></th>
+<th class="head"><p>Hafna <span class="math notranslate nohighlight">\(H_0\)</span> ef:</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: p_1 &lt; p_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(H_1: p_1 &gt; p_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(H_1: p_1 \neq p_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(Z &lt; -z_{1-\alpha/2}\)</span> eða <span class="math notranslate nohighlight">\(Z &gt; z_{1-\alpha/2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+</section>
+<section id="synidaemi-alyktanir-um-hlutfoll-tveggja-ya">
+<span id="e-tvop"></span><h4><span class="section-number">7.2.1.3. </span>Sýnidæmi: Ályktanir um hlutföll tveggja þýða<a class="headerlink" href="#synidaemi-alyktanir-um-hlutfoll-tveggja-ya" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum aftur dæmi <a class="reference internal" href="#e-p"><span class="std std-numref">7.1.2.3</span></a>. Við fáum nú að vita að í raun voru úrtökin
+tvö, 4375 konur og 4375 karlar. Niðurstaðan var að af þeim 8750 sem
+spurðir voru “styður þú ríkisstjórnina“ sögðu 4530 já og 4220 nei. Af
+þeim 4530 sem sögðust styðja ríkistjórnina voru 2337 konur. Finnið 95%
+öryggisbil fyrir mun á hlutföllum kvenna og karla sem styðja
+ríkisstjórnina og kannið hvort munur sé á hlutföllum kvenna og karla sem
+styðja ríkisstjórnina. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>. Taka skal fram að
+þetta dæmi er uppspuni.</p>
+<p>Skilyrðin um normalnálgun eru uppfyllt þar sem  <span class="math notranslate nohighlight">\(n_1\hat{p}_1\)</span>,
+ <span class="math notranslate nohighlight">\(n_1(1-\hat{p}_1)\)</span>,  <span class="math notranslate nohighlight">\(n_2\hat{p}_2\)</span>  og
+ <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri en 15.</p>
+<p>Byrjum á að finna <span class="math notranslate nohighlight">\(\hat{p}_1\)</span> og <span class="math notranslate nohighlight">\(\hat{p}_2\)</span>. Gefið er í
+dæminu að fjöldi karla og fjöldi kvenna er jafn,
+<span class="math notranslate nohighlight">\(n_1 = n_2 = 4375\)</span>. Einnig var gefið að fjöldi kvenna sem sagðist
+styðja ríkisstjórnina er 2337 og fjöldi karla því 4530-2337 = 2193, því
+eru <span class="math notranslate nohighlight">\(x_1 = 2337\)</span> og <span class="math notranslate nohighlight">\(x_2 = 2193\)</span>.</p>
+<p>Reiknum nú <span class="math notranslate nohighlight">\(\hat{p}_1\)</span> og <span class="math notranslate nohighlight">\(\hat{p}_2\)</span> með jöfnum
+<a class="reference internal" href="#equation-eq-p1hat">(7.5)</a> og <a class="reference internal" href="#equation-eq-p2hat">(7.6)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p}_1 = \frac{x_1}{n_1} = \frac{2337}{4375} = 0.5342 \ \ \text{og}
+\ \ \hat{p}_2 = \frac{x_2}{n_2} = \frac{2193}{4375} = 0.5013\]</div>
+<p>Nú má reikna neðra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopnedra">(7.7)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p}_1 - \hat{p}_2 - z_{1-\alpha/2} \cdot
+\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}=\]</div>
+<div class="math notranslate nohighlight">
+\[0.5342 - 0.5013 - 1.96\sqrt{\frac{0.5342(1-0.5342)}{4375} + \frac{0.5013(1-0.5013)}{4375}} = 0.0119\]</div>
+<p>og efra öryggismark með jöfnu <a class="reference internal" href="#equation-eq-tvopefra">(7.8)</a></p>
+<div class="math notranslate nohighlight">
+\[\hat{p}_1 - \hat{p}_2 + z_{1-\alpha/2} \cdot
+\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}} =\]</div>
+<div class="math notranslate nohighlight">
+\[0.5342 - 0.5013 + 1.96\sqrt{\frac{0.5342(1-0.5342)}{4375} + \frac{0.5013(1-0.5013)}{4375}} = 0.0537\]</div>
+<p>Öryggisbilið má því skrifa sem</p>
+<div class="math notranslate nohighlight">
+\[0.0119 &lt; \ p_1 - p_2 \ &lt; 0.0537\]</div>
+<p>Til að kanna hvort munur sé á hlutföllunum förum við eftir samantektinni
+um framkvæmd tilgátuprófa.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á tveimur hlutföllum og notum við því próf
+fyrir mismun hlutfalla tveggja þýða. Við notum normalnálgun þar sem
+ <span class="math notranslate nohighlight">\(n_1 \hat{p}_1\)</span>,  <span class="math notranslate nohighlight">\(n_1(1 - \hat{p}_1)\)</span>,
+ <span class="math notranslate nohighlight">\(n_2\hat{p}_2\)</span>  og  <span class="math notranslate nohighlight">\(n_2(1-\hat{p}_2)\)</span>  eru öll stærri
+en 15.</p></li>
+<li><p>Við fengum uppgefið að nota <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna hvort munur sé á hlutföllum karla og kvenna sem
+styðja ríkisstjórnina. Við notum því tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; p_1 = p_2\\
+H_1&amp;:&amp; p_1 \neq p_2\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við vitum að <span class="math notranslate nohighlight">\(\hat{p}_1 = 0.5342\)</span> og
+<span class="math notranslate nohighlight">\(\hat{p}_2 = 0.5013\)</span>. Reiknum nú <span class="math notranslate nohighlight">\(\hat p\)</span>, sjá jöfnu
+<a class="reference internal" href="#equation-eq-tvopprof">(7.9)</a>, þar sem <span class="math notranslate nohighlight">\(\hat p\)</span> kemur fyrir í prófstærðinni</p>
+<div class="math notranslate nohighlight">
+\[\hat p= \frac{x_1 + x_2}{n_1 + n_2} = \frac{4530}{8750} = 0.5177\]</div>
+<p>Prófstærðina má svo reikna með jöfnu <a class="reference internal" href="#equation-eq-tvopprof">(7.9)</a></p>
+<div class="math notranslate nohighlight">
+\[z = \frac{\frac{x_1}{n_1} - \frac{x_2}{n_2}}{\sqrt{\hat p(1-\hat p)\left(\frac{1}{n_1} + \frac{1}{n_2} \right)}}
+= \frac{0.5342 - 0.5013}{\sqrt{0.5177(1-0.5177)\left(\frac{1}{4375} + \frac{1}{4375} \right)}} = 3.08\]</div>
+</li>
+<li><p>Við notum töflu stöðluðu normaldreifingarinnar til að finna
+höfnunarsvæðin: <span class="math notranslate nohighlight">\(z_{1-\alpha/2}\)</span> = <span class="math notranslate nohighlight">\(z_{0.975}\)</span> = 1.96.
+Við höfnum því núlltilgátunni ef <span class="math notranslate nohighlight">\(z&gt; 1.96\)</span> eða ef
+<span class="math notranslate nohighlight">\(z &lt; -1.96\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(z&gt; 1.96\)</span> svo prófstærðin
+fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum því að munur sé á hlutföllum
+kvenna og karla sem styðja ríkisstjórnina.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="_images/ztvihlida196.svg" src="_images/ztvihlida196.svg" /></figure>
+</div>
+</section>
+</section>
+</section>
+<section id="alyktanir-um-hlutfoll-fleiri-ya">
+<span id="s-fleirihlutfoll"></span><h2><span class="section-number">7.3. </span>Ályktanir um hlutföll fleiri þýða<a class="headerlink" href="#alyktanir-um-hlutfoll-fleiri-ya" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">7.3.1. </span>Ályktanir um hlutföll fleiri þýða<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Tilgátuna úr síðasta hluta má útvíkka þannig að hægt sé að bera saman
+hlutföll fleiri en tveggja þýða. Þá er ekki lengur hægt að nota aðferðir
+byggðar á nálgun normaldreifingarinnar heldur er stuðst við svokölluð
+kí-kvaðrat próf (<span class="math notranslate nohighlight">\(\chi^2\)</span>-próf). Aðferðina má einnig nota þegar
+bera á saman hlutföll tveggja þýða eins og í hlutanum hér að framan, þó
+aðeins ef gagntilgátan er tvíhliða. Þá munu Kí-kvaðrat prófið og prófið
+sem byggir á normalnálgun alltaf gefa sömu niðurstöðuna.</p>
+<p>Tilgátuprófið í þessum hluta prófar hvort hlutföll allra <span class="math notranslate nohighlight">\(d\)</span>
+þýðanna séu jöfn. Hana ritum við <span class="math notranslate nohighlight">\(H_0: p_1 = p_2 = ... = p_d\)</span>. Ef
+við höfnum henni getum við ályktað að hlutföllin séu ekki öll jöfn hvort
+öðru en það felur ekki endilega í sér að þau séu öll ólík. Beita þyrfti
+þróaðri tölfræðiaðferðum, utan efni þessar bókar, til að komast að raun
+um það.</p>
+<p>Eins og áður þurfa viss skilyrði að vera uppfyllt til að beita megi
+kí-kvaðrat prófi. Þeim skilyrðum er þó torvelt að lýsa án þess að þekkja
+aðferðina og því munum við koma aftur að þeim síðar. Kí-kvaðrat
+aðferðinni er sömuleiðis auðveldara að lýsa með dæmi en í orðum og förum
+við því þá leið hér á eftir.</p>
+<p>Áður en hægt er að framkvæma kí-kvaðrat próf er gott að búa til þrjár
+töflur sem hjálpa okkur við að reikna prófstærðina sem notuð er í
+prófinu. Í kassa <a class="reference internal" href="#em-ki-kvad-kassar"><span class="std std-numref">7.3.1.1</span></a> má sjá hvernig búa má til
+þessar þrjár töflur og í kassa <a class="reference internal" href="#em-ki-kvadprof"><span class="std std-numref">7.3.1.2</span></a> má sjá tilgáturnar
+og prófstærðina sem notuð er til að prófa tilgáturnar.</p>
+<section id="toflur-fyrir-ki-kvarat-prof">
+<span id="em-ki-kvad-kassar"></span><h4><span class="section-number">7.3.1.1. </span>Töflur fyrir kí-kvaðrat próf<a class="headerlink" href="#toflur-fyrir-ki-kvarat-prof" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Þegar framkvæma á kí-kvaðrat próf er gott að búa til þrjár töflur:</p>
+<ul class="simple">
+<li><p>Tafla mældrar tíðni: Inniheldur tíðni sem við fáum úr rannsókninni,
+táknuð með <span class="math notranslate nohighlight">\(o\)</span>.</p></li>
+<li><p>Tafla væntanlegrar tíðni: Inniheldur væntanlega tíðni, táknuð með
+<span class="math notranslate nohighlight">\(e\)</span>. Gildin fást með því að margfalda samtalstölurnar úr töflu
+mældrar tíðni úr þeim dálki og þeirri línu sem við erum stödd í og
+deila með heildarfjölda. Allar tölur í þessari töflu verða að vera
+hærri en 5 annars er ekki hægt að nota prófið.</p></li>
+<li><p>Tafla prófstærðar: Inniheldur framlag til prófstærðar reiknað með
+<span class="math notranslate nohighlight">\(\frac{(o-e)^2}{e}\)</span>. Að lokum eru allar tölurnar í töflu
+prófstærðar lagðar saman til að fá gildið á prófstærðinni (sjá kassa
+<a class="reference internal" href="#em-ki-kvadprof"><span class="std std-numref">7.3.1.2</span></a>).</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+</section>
+<section id="ki-kvarat-prof-fyrir-hlutfoll">
+<span id="em-ki-kvadprof"></span><h4><span class="section-number">7.3.1.2. </span>Kí-kvaðrat próf fyrir hlutföll<a class="headerlink" href="#ki-kvarat-prof-fyrir-hlutfoll" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[H_0: p_1 = p_2 = ... = p_d\]</div>
+<div class="math notranslate nohighlight">
+\[H_1: \text{hlutföllin eru ekki öll jöfn}\]</div>
+<p>Prófstærðin er:</p>
+<div class="math notranslate nohighlight" id="equation-eq-kikvadrat2">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-eq-kikvadrat2" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(l\)</span> er fjöldi lína, <span class="math notranslate nohighlight">\(d\)</span> er fjöldi dálka, <span class="math notranslate nohighlight">\(o\)</span>
+er mæld tíðni og <span class="math notranslate nohighlight">\(e\)</span> er væntanleg tíðni.</p>
+<p>Sé núlltilgátan sönn fylgir prófstærðin <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með
+(<span class="math notranslate nohighlight">\(l\)</span> - 1) <span class="math notranslate nohighlight">\(\cdot\)</span> (<span class="math notranslate nohighlight">\(d\)</span> - 1) fjölda frígráða.</p>
+<p>Hafna skal núlltilgátunni sé
+<span class="math notranslate nohighlight">\(\chi^2 &gt; \chi^2_{1-\alpha,((l - 1) \cdot (d - 1))}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<p>Þegar við vinnum með tvö þýði getum við hvort heldur notað aðferðina úr
+síðasta hluta sem byggði á normalnálgun eða kí-kvaðrat próf. Notum nú
+dæmið um ríkisstjórnina úr síðasta hluta (dæmi <a class="reference internal" href="#e-tvop"><span class="std std-numref">7.2.1.3</span></a>) til að
+skoða hvernig við búum til töflurnar þrjár sem við notum til að
+framkvæma kí-kvaðrat prófið.</p>
+</section>
+<section id="tafla-maeldrar-tini">
+<h4><span class="section-number">7.3.1.3. </span>Tafla mældrar tíðni<a class="headerlink" href="#tafla-maeldrar-tini" title="Permalink to this heading"></a></h4>
+<p>Fjöldi kvenna í úrtaki var 4375, fjöldi í karla úrtaki var 4375, fjöldi
+kvenna sem voru fylgjandi ríkisstjórninni voru 2337 og fjöldi karla sem
+voru fylgjandi ríkisstjórninni voru 2139. Setjum nú þessar upplýsingar
+sem við köllum mælda tíðni (e. observed frequency), upp í töflu. Köllum nú
+þessa töflu <em>töflu mældrar tíðni</em> og táknum gildi hennar með <span class="math notranslate nohighlight">\(o\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tafla mældrar tíðni</strong></p></th>
+<th class="head"><p>Konur</p></th>
+<th class="head"><p>Karlar</p></th>
+<th class="head"><p>Samtals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fylgjandi ríkisstjórninni</p></td>
+<td><p><strong>2337</strong></p></td>
+<td><p><strong>2193</strong></p></td>
+<td><p><strong>4530</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki fylgjandi ríkisstjórninni</p></td>
+<td><p>2038</p></td>
+<td><p>2182</p></td>
+<td><p><strong>4220</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Samtals</p></td>
+<td><p><strong>4375</strong></p></td>
+<td><p><strong>4375</strong></p></td>
+<td><p><strong>8750</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>Látum <span class="math notranslate nohighlight">\(d\)</span> tákna fjölda dálka í töflu sem þessari og <span class="math notranslate nohighlight">\(l\)</span>
+fjölda lína, að samtalsdálknum og samtalslínunni undanskildri. Þá köllum
+við töflu sem þessa <span class="math notranslate nohighlight">\(l\)</span>x<span class="math notranslate nohighlight">\(d\)</span>-töflu. Taflan hér að ofan er
+því 2x2-tafla.</p>
+</section>
+<section id="tafla-vaentanlegrar-tini">
+<h4><span class="section-number">7.3.1.4. </span>Tafla væntanlegrar tíðni<a class="headerlink" href="#tafla-vaentanlegrar-tini" title="Permalink to this heading"></a></h4>
+<p>Því næst búum við til aðra töflu sem inniheldur svonefnda <em>væntanlega
+tíðni</em> (e. expected frequency). Hún inniheldur þann fjölda sem búast mætti
+við að sjá í hverjum hóp ef núlltilgátan væri sönn. Sú tafla er þar af
+leiðandi af sömu stærð og tafla mældrar tíðni, í þessu tilviki 2x2.
+Köllum þessa töflu <em>töflu væntanlegrar tíðni</em> og táknum gildi hennar með
+<span class="math notranslate nohighlight">\(e\)</span>.</p>
+<p>Gildin í töflu væntanlegrar tíðni fást með því að margfalda
+samtalstölurnar úr töflu mældrar tíðni úr þeim dálki og þeirri línu sem
+við erum stödd í og deila með heildarfjölda. Skilyrðið sem þarf að gilda
+til að framkvæma megi kí-kvaðrat próf er að tölurnar í þessari töflu séu
+stærri en 5.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tafla væntanlegrar tíðni</strong></p></th>
+<th class="head"><p>Konur</p></th>
+<th class="head"><p>Karlar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fylgjandi ríkisstjórninni</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4375\cdot 4530}{8750} = 2265\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4375\cdot 4530}{8750} = 2265\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki fylgjandi ríkisstjórninni</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4375\cdot 4220}{8750} = 2110\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{4375\cdot 4220}{8750} = 2110\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tafla-profstaerar">
+<h4><span class="section-number">7.3.1.5. </span>Tafla prófstærðar<a class="headerlink" href="#tafla-profstaerar" title="Permalink to this heading"></a></h4>
+<p>Til að reikna út prófstærðina fyrir kí-kvaðrat prófið er best að búa til
+töflu sem inniheldur framlag til prófstærðarinnar. Köllum hana <em>töflu
+prófstærðar</em>. Taflan er að sömu stærð og töflunar hér að framan, í þessu
+tilfelli 2x2. Fyrir hvert pláss í töflunni reiknum við
+<span class="math notranslate nohighlight">\(\frac{(o-e)^2}{e}\)</span> þar sem <span class="math notranslate nohighlight">\(o\)</span> og <span class="math notranslate nohighlight">\(e\)</span> eru gildin í
+töflu mældrar tíðni og töflu væntanlegrar tíðni sem eru á sama stað í
+töflunum og það gildi sem verið er að reikna út. Skoðum nú aftur fyrstu
+töflurnar tvær og hvernig reikna má út gildin í töflu prófstærðar.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tafla mældrar tíðni</strong> (<span class="math notranslate nohighlight">\(o\)</span>)</p></th>
+<th class="head"><p>Konur</p></th>
+<th class="head"><p>Karlar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fylgjandi</p></td>
+<td><p>2337</p></td>
+<td><p>2193</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki fylgjandi</p></td>
+<td><p>2038</p></td>
+<td><p>2182</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tafla væntanlegrar tíðni</strong> (<span class="math notranslate nohighlight">\(e\)</span>)</p></th>
+<th class="head"><p>Konur</p></th>
+<th class="head"><p>Karlar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fylgjandi</p></td>
+<td><p>2265</p></td>
+<td><p>2265</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki fylgjandi</p></td>
+<td><p>2110</p></td>
+<td><p>2110</p></td>
+</tr>
+</tbody>
+</table>
+<p>Reiknum nú gildin í töflu prófstærðar með <span class="math notranslate nohighlight">\(\frac{(o-e)^2}{e}\)</span>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Tafla prófstærðar</strong></p></th>
+<th class="head"><p>Konur</p></th>
+<th class="head"><p>Karlar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fylgjandi</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(2337 - 2265)^2}{2265} = 2.29\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(2193 - 2265)^2}{2265} = 2.29\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki fylgjandi</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(2038 - 2110)^2}{2110} = 2.46\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(2182 - 2110)^2}{2110} = 2.46\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Til að reikna prófstærðina þurfum við að lokum að leggja saman allar
+tölurnar í töflu prófstærðar.</p>
+</section>
+<section id="synidaemi-ki-kvarat-prof-2x2-tafla">
+<h4><span class="section-number">7.3.1.6. </span>Sýnidæmi: Kí-kvaðrat próf - 2x2 tafla<a class="headerlink" href="#synidaemi-ki-kvarat-prof-2x2-tafla" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Skoðum aftur dæmið um ríkisstjórnina frá dæmi <a class="reference internal" href="#e-tvop"><span class="std std-numref">7.2.1.3</span></a>. Kannið nú
+hvort munur sé á stuðningi við ríkisstjórnina milli kynja með að nota
+kí-kvaðrat próf.</p>
+<p>Í dæmi sem þessu þarf að byrja á að búa til töflurnar þrjár. Við höfum
+þegar gert það fyrir þessi gögn og getum við því hafist handa við
+tilgátuprófið.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á tveimur hlutföllum með að nota
+kí-kvaðrat próf. Í töflunni fyrir væntanlega tíðni eru allar tölurnar
+stærri en 5 og því er í lagi að nota prófið.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna hvort munur sé á hlutfalli karla og kvenna sem
+styðja ríkisstjórnina. Við notum því tvíhliða próf. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; p_1 = p_2\\
+H_1&amp;:&amp; p_1 \neq p_2\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við notum töflu prófstærðar til að finna gildin sem fara inn í
+útreikningana fyrir prófstærðina. Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[\chi^2 = \sum \sum \frac{(o-e)^2}{e} = 2.29 + 2.29 + 2.46 + 2.46 = 9.50\]</div>
+</li>
+<li><p>Við flettum upp í kí-kvaðrat töflu með einni frígráðu til að finna
+höfnunarsvæðið. <span class="math notranslate nohighlight">\(\chi^2_{1-\alpha,((l-1)\cdot(d-1))}\)</span> =
+<span class="math notranslate nohighlight">\(\chi^2_{0.95,(1)}\)</span> = 3.84. Við höfnum því núlltilgátunni ef
+<span class="math notranslate nohighlight">\(\chi^2&gt; 3.84\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(\chi^2&gt; 3.84\)</span> svo
+prófstærðin fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum því að munur sé á hlutfalli
+kvenna og karla sem styðja ríkisstjórnina.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="_images/chisqdf1.svg" src="_images/chisqdf1.svg" /></figure>
+</div>
+<p>Aðferðirnar tvær, að nota normalnálgun og kí-kvaðrat prófið, munu alltaf
+gefa sömu niðurstöðu. Það gildir nefnilega að kí-kvaðrat prófstærðin er
+jöfn z-prófstærðinni í öðru veldi. Skoðum nú annað dæmi þar sem hóparnir
+sem við erum að skoða eru fleiri en 2.</p>
+</section>
+<section id="synidaemi-ki-kvarat-prof-2x3-tafla">
+<h4><span class="section-number">7.3.1.7. </span>Sýnidæmi: Kí-kvaðrat próf - 2x3 tafla<a class="headerlink" href="#synidaemi-ki-kvarat-prof-2x3-tafla" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Eftirfarandi gögn eru niðurstöður könnunar þar sem slembiúrtak úr þremur
+ráðuneytum hér á landi var tekið og fólk spurt hvort það væri ánægt með
+eftirlaunaáætlun ríkisins. Úrtak af stærð 100 var tekið úr fyrsta
+ráðuneytinu og úrtök af stærð 150 úr hinum tveimur.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Ráðuneyti 1</p></th>
+<th class="head"><p>Ráðuneyti 2</p></th>
+<th class="head"><p>Ráðuneyti 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ánægt með áætlun</p></td>
+<td><p>66</p></td>
+<td><p>85</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki ánægt með áætlun</p></td>
+<td><p>34</p></td>
+<td><p>65</p></td>
+<td><p>42</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í dæmi sem þessu þarf að byrja á að búa til töflurnar þrjár. Fyrsta
+taflan er sú sama og hér að ofan nema við bætum við samtalsdálki og
+-línu.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Mæld tíðni</strong> - <span class="math notranslate nohighlight">\(o\)</span></p></th>
+<th class="head"><p>Ráðuneyti 1</p></th>
+<th class="head"><p>Ráðuneyti 2</p></th>
+<th class="head"><p>Ráðuneyti 3</p></th>
+<th class="head"><p>Samtals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ánægt</p></td>
+<td><p>66</p></td>
+<td><p>85</p></td>
+<td><p>108</p></td>
+<td><p>259</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki ánægt</p></td>
+<td><p>34</p></td>
+<td><p>65</p></td>
+<td><p>42</p></td>
+<td><p>141</p></td>
+</tr>
+<tr class="row-even"><td><p>Samtals</p></td>
+<td><p>100</p></td>
+<td><p>150</p></td>
+<td><p>150</p></td>
+<td><p>400</p></td>
+</tr>
+</tbody>
+</table>
+<p>Gildin í töflu væntanlegrar tíðni fást með því að margfalda
+samtalstölurnar úr töflu mældrar tíðni úr þeim dálki og þeirri línu sem
+við erum stödd í og deila með heildarfjölda.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Væntanleg tíðni</strong> - <span class="math notranslate nohighlight">\(e\)</span></p></th>
+<th class="head"><p>Ráðuneyti 1</p></th>
+<th class="head"><p>Ráðuneyti 2</p></th>
+<th class="head"><p>Ráðuneyti 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ánægt</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{100\cdot 259}{400} = 64.75\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{150\cdot 259}{400} = 97.13\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{150\cdot 259}{400} = 97.13\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki ánægt</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{100\cdot 141}{400} = 35.25\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{150\cdot 141}{400} = 52.88\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{150\cdot 141}{400} = 52.88\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Reiknum nú gildin í töflu prófstærðar með <span class="math notranslate nohighlight">\(\frac{(o-e)^2}{e}\)</span></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Prófstærð</strong></p></th>
+<th class="head"><p>Ráðuneyti 1</p></th>
+<th class="head"><p>Ráðuneyti 2</p></th>
+<th class="head"><p>Ráðuneyti 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ánægt</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(66-64.75)^2}{64.75} = 0.02\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(85-97.13)^2}{97.13} = 1.51\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(108-97.13)^2}{97.13} = 1.22\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki ánægt</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(34-35.25)^2}{35.25} = 0.04\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(65-52.88)^2}{52.88} = 2.78\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(42-52.88)^2}{52.88} = 2.24\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Nú erum við tilbúin að hefjast handa við tilgátuprófið.</p>
+<ol class="arabic">
+<li><p>Við ætlum að álykta um mun á þremur hlutföllum með því að nota
+kí-kvaðrat próf. Í töflunni fyrir væntanlega tíðni eru allar tölurnar
+stærri en 5 og því er í lagi að nota prófið.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna tilgátuna hvort munur sé milli ráðuneyta á ánægju
+með eftirlaunaáætlun. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; p_1 = p_2 = p_3\\
+H_1&amp;:&amp; \text{$p_1, p_2, p_3,$ eru ekki öll jöfn}\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við notum töflu prófstærðar til að finna gildin sem fara inn í
+útreikningana fyrir prófstærðina. Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\chi^2 = &amp; \sum \sum \frac{(o-e)^2}{e} = 0.02 + 1.51 + 1.22 + 0.04 + 2.78 + 2.24\\
+= &amp; 7.81 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við flettum upp í kí-kvaðrat töflu með tveimur frígráðum til að finna
+höfnunarsvæðið. <span class="math notranslate nohighlight">\(\chi^2_{1-\alpha,((l-1)\cdot(d-1))}\)</span> =
+<span class="math notranslate nohighlight">\(\chi^2_{0.95,(2)}\)</span> = 5.99. Við höfnum því núlltilgátunni ef
+<span class="math notranslate nohighlight">\(\chi^2 &gt; 5.99\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(\chi^2&gt; 5.99\)</span> svo
+prófstærðin fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum því að munur sé á hlutfalli
+þeirra sem eru ánægðir með eftirlaunaáætlunina í ráðuneytunum þremur.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="_images/chisqdf2.svg" /></figure>
+</div>
+</section>
+</section>
+<section id="matgaeaprof">
+<h3><span class="section-number">7.3.2. </span>Mátgæðapróf<a class="headerlink" href="#matgaeaprof" title="Permalink to this heading"></a></h3>
+<p>Aðferðina í þessum hluta má einnig nota til að framkvæma svokölluð
+<em>mátgæðapróf</em> (e. goodness of fit tests). Þeim prófum beitum við þegar
+við höfum fyrirfram ákveðnar kenningar um það hver hlutföllin
+<span class="math notranslate nohighlight">\(p_1, \ldots, p_d\)</span> eigi að vera og við viljum kanna hvort að
+mælingarnar okkar samræmist þeirri kenningu.</p>
+<p>Tilgátuprófið er framkvæmt á nákvæmlega sama hátt, nema það verður
+einfaldara að reikna væntanlegu tíðnina, <span class="math notranslate nohighlight">\(e\)</span>, í töflu væntanlegrar
+tíðni. Væntanlega tíðnin í hverjum dálki er einfaldlega
+<span class="math notranslate nohighlight">\(n\cdot p_i\)</span>, þ.e. heildarfjöldi mælinga sinnum það hlutfall sem
+við gerum ráð fyrir að gildi fyrir þennan flokk. Prófstærðin er reiknuð
+á sama hátt en núna miðum við hana við gildið
+<span class="math notranslate nohighlight">\(\chi^2_{1-\alpha, d-1}\)</span>.</p>
+<p>Mátgæðapróf eru sérstök að því leyti að við viljum yfirleitt ekki hafna
+núlltilgátunni. Við notum þau því ekki til að draga miklar ályktanir,
+því ef við höfum fáar mælingar höfum við sennilega of lítinn styrk til
+að hafna núlltilgátunni þrátt fyrir að hún sé í raun ósönn og ef við
+höfum margar mælingar getum við hafnað núlltilgátunni þrátt fyrir að
+frávikin séu ekki ýkja mikil. Því notum við mátgæðapróf eingöngu til að
+fá vísbendingu um hvort niðurstöðurnar séu nokkuð í hrópandi mótsögn við
+kenningarnar okkar.</p>
+</section>
+</section>
+<section id="tengslatoflur">
+<span id="s-tengslatoflur"></span><h2><span class="section-number">7.4. </span>Tengslatöflur<a class="headerlink" href="#tengslatoflur" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><span class="section-number">7.4.1. </span>Tengslatöflur<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Í hluta <a class="reference internal" href="#s-fleirihlutfoll"><span class="std std-numref">7.3</span></a> sáum við hvernig bera má saman skiptingu
+flokkabreytu í mismunandi þýðum. Í þessum hluta munum við sjá hvernig
+bera má saman tvær flokkabreytur þar sem gögnum er aflað úr sama þýðinu.
+Til þess eru notaðar svokallaðar tengslatöflur og prófin ganga út á að
+svara spurningunni hvort breyturnar tvær séu óháðar. Prófstærðin sem
+notast er við er sú sama og áður og eru allir útreikningar því eins.
+Tilgáturnar eru þó settar fram á annan máta.</p>
+<p>Eins og í hluta <a class="reference internal" href="#s-fleirihlutfoll"><span class="std std-numref">7.3</span></a> má ekki framkvæma tilgátuprófið
+ef einhverjar tölur í töflu væntanlegrar tíðni eru minni en fimm. Þá má
+annað hvort framkvæma <em>endurvalsaðferð</em> til að framkvæma prófið eða þá
+að framkvæma <em>Fishers próf</em>. Þær aðferðir er sem fyrr ekki hægt að
+framkvæma í höndunum. Einnig er algengt að fara þá leið að <em>sameina suma
+flokka</em> annarrar eða beggja flokkabreytanna eins og lýst var í
+undirkafla <a class="reference internal" href="kafli02.html#ss-nyjarbreytur"><span class="std std-numref">2.2.2</span></a>. Er það einungis gert ef að skipting
+flokkanna í flokkabreytunni var óþarflega fín og flokkarnir tveir eða
+fleiri sem sameinaðir eru séu mjög líkir að eiginleikum.</p>
+<section id="tengslatoflur-contingency-tables">
+<h4><span class="section-number">7.4.1.1. </span>Tengslatöflur (contingency tables)<a class="headerlink" href="#tengslatoflur-contingency-tables" title="Permalink to this heading"></a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p>Tengslatöflur eru notaðar til að kanna hvort samband sé á milli tveggja
+flokkabreyta . Tilgáturnar eru</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \text{Það er ekki samband á milli breytanna tveggja}\\
+H_1&amp;:&amp; \text{Það er samband á milli breytanna tveggja}\end{aligned}\end{split}\]</div>
+<p>Prófstærðin er</p>
+<div class="math notranslate nohighlight" id="equation-eq-kikvadrat">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-kikvadrat" title="Varanlegur hlekkur á þessa jöfnu"></a></span>\[\chi^2 = \sum_{i = 1}^{l}\sum_{j = 1}^{d} \frac{(o_{ij}-e_{ij})^2}{e_{ij}}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(l\)</span> er fjöldi lína, <span class="math notranslate nohighlight">\(j\)</span> er fjöldi dálka, <span class="math notranslate nohighlight">\(o\)</span>
+er mæld tíðni og <span class="math notranslate nohighlight">\(e\)</span> er væntanleg tíðni. Sé núlltilgátan sönn
+fylgir prófstærðin <span class="math notranslate nohighlight">\(\chi^2\)</span>-dreifingu með (<span class="math notranslate nohighlight">\(l\)</span> - 1)
+<span class="math notranslate nohighlight">\(\cdot\)</span> (<span class="math notranslate nohighlight">\(d\)</span> - 1) fjölda frígráða. Hafna skal núlltilgátunni
+sé <span class="math notranslate nohighlight">\(\chi^2 &gt; \chi^2_{1-\alpha,((l - 1) \cdot (d - 1))}\)</span>.</p>
+</div>
+</section>
+<hr class="docutils" />
+<section id="synidaemi-tengslatoflur">
+<h4><span class="section-number">7.4.1.2. </span>Sýnidæmi: Tengslatöflur<a class="headerlink" href="#synidaemi-tengslatoflur" title="Permalink to this heading"></a></h4>
+<div class="admonition tip">
+<p class="admonition-title">Ábending</p>
+<p>Fyrirtæki hafði áhuga á að kanna hvort það væri samband á milli þess
+hvernig starfsmenn stæðu sig í þjálfunarprógrammi og hvernig þeir stæðu
+sig svo í vinnunni. Til að kanna hvort svo væri var tekið slembiúrtak af
+stærð 400. Niðurstöðurnar má sjá hér að neðan.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td></td>
+<td colspan="3"><p>Þjálfunarprógram</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>Neðan meðals</p></td>
+<td><p>Meðal</p></td>
+<td><p>Ofan meðals</p></td>
+</tr>
+<tr class="row-odd"><td rowspan="3"><p>Vinna</p></td>
+<td><p>Neðan meðals</p></td>
+<td><p>24</p></td>
+<td><p>59</p></td>
+<td><p>29</p></td>
+</tr>
+<tr class="row-even"><td><p>Meðal</p></td>
+<td><p>24</p></td>
+<td><p>79</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ofan meðals</p></td>
+<td><p>12</p></td>
+<td><p>49</p></td>
+<td><p>60</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kannið með viðeigandi tilgátuprófi hvort samand sé á milli hvernig
+starfsmenn stæðu sig í þjálfunarprógrammi og hvernig þeir stæðu sig svo
+í vinnunni.</p>
+<p>Byrjum á að búa til töflurnar þrjár. Fyrsta taflan er sú sama og hér að
+ofan nema við bætum við samtalsdálki og -línu.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Mæld tíðni</strong> - <span class="math notranslate nohighlight">\(o\)</span></p></th>
+<th class="head"><p>Neðan meðals</p></th>
+<th class="head"><p>Meðal</p></th>
+<th class="head"><p>Ofan meðals</p></th>
+<th class="head"><p>Samtals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Neðan meðals</p></td>
+<td><p>24</p></td>
+<td><p>59</p></td>
+<td><p>29</p></td>
+<td><p>112</p></td>
+</tr>
+<tr class="row-odd"><td><p>Meðal</p></td>
+<td><p>24</p></td>
+<td><p>79</p></td>
+<td><p>64</p></td>
+<td><p>167</p></td>
+</tr>
+<tr class="row-even"><td><p>Ofan meðals</p></td>
+<td><p>12</p></td>
+<td><p>49</p></td>
+<td><p>60</p></td>
+<td><p>121</p></td>
+</tr>
+<tr class="row-odd"><td><p>Samtals</p></td>
+<td><p>60</p></td>
+<td><p>187</p></td>
+<td><p>153</p></td>
+<td><p>400</p></td>
+</tr>
+</tbody>
+</table>
+<p>Gildin í töflu væntanlegrar tíðni fást með því að margfalda
+samtalstölurnar úr töflu mældrar tíðni úr þeim dálki og þeirri línu sem
+við erum stödd í og deila með heildarfjölda.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Væntanleg tíðni</strong> - <span class="math notranslate nohighlight">\(e\)</span></p></th>
+<th class="head"><p>Neðan meðals</p></th>
+<th class="head"><p>Meðal</p></th>
+<th class="head"><p>Ofan meðals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Neðan meðals</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{60 \cdot 112}{400} = 16.80\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{187 \cdot 112}{400} = 52.36\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{153 \cdot 112}{400} = 42.84\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Meðal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{60 \cdot 167}{400} = 25.05\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{187 \cdot 167}{400} = 78.07\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{153 \cdot 167}{400} = 63.88\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Ofan meðals</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{60 \cdot 121}{400} = 18.15\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{187 \cdot 121}{400} = 56.57\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{153 \cdot 121}{400} = 46.28\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Reiknum gildin í töflu prófstærðar með <span class="math notranslate nohighlight">\(\frac{(o-e)^2}{e}\)</span></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Prófstærð</strong></p></th>
+<th class="head"><p>Neðan meðals</p></th>
+<th class="head"><p>Meðal</p></th>
+<th class="head"><p>Ofan meðals</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Neðan meðals</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(24 - 16.80)^2}{16.80} = 3.09\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(59 - 52.36)^2}{52.36} = 0.84\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(29 - 42.84)^2}{42.84} = 4.47\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Meðal</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(24 - 25.05)^2}{25.05} = 0.04\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(79 - 78.07)^2}{78.07} = 0.01\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(64 - 63.88)^2}{63.88} = 0.00\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Ofan meðals</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(12 - 18.15)^2}{18.15} = 2.08\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(49 - 56.57)^2}{56.57} = 1.01\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{(60 - 46.28)^2}{46.28} = 4.07\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Nú erum við tilbúin að hefjast handa við tilgátuprófið.</p>
+<ol class="arabic">
+<li><p>Við höfum tengslatöflu og notum því kí-kvaðrat próf. Við höfum
+tengslatöflu því við erum að kanna hvort samband sé á milli tveggja
+breyta í einu þýði. Í töflunni fyrir væntanlega tíðni eru allar
+tölurnar stærri en 5 og því er í lagi að nota prófið.</p></li>
+<li><p>Notum <span class="math notranslate nohighlight">\(\alpha = 0.05.\)</span></p></li>
+<li><p>Við eigum að kanna hvort samband sé á milli árangurs í
+þjálfunarprógrammi og vinnu. Tilgáturnar eru:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+H_0&amp;:&amp; \text{Það er ekki samband á milli frammistöðu í þjálfun og vinnu}\\
+H_1&amp;:&amp; \text{Það er samband á milli frammistöðu í þjálfun og vinnu}\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við notum töflu prófstærðar til að finna gildin sem fara inn í
+útreikningana fyrir prófstærðina. Prófstærðin er:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\chi^2 &amp;= \sum \sum \frac{(o-e)^2}{e} = 3.09 + 0.84 + 4.47 \\
+&amp;+ 0.04 + 0.01 + 0.00 + 2.09 + 1.01 + 4.07 = 15.62 \end{aligned}\end{split}\]</div>
+</li>
+<li><p>Við flettum upp í kí-kvaðrat töflu með fjórum frígráðum til að finna
+höfnunarsvæðið. <span class="math notranslate nohighlight">\(\chi^2_{1-\alpha,((l-1)\cdot(d-1))}\)</span> =
+<span class="math notranslate nohighlight">\(\chi^2_{0.95,(4)}\)</span> = 9.488. Við höfnum því núlltilgátunni ef
+<span class="math notranslate nohighlight">\(\chi^2 &gt; 9.488\)</span>. Við sjáum að <span class="math notranslate nohighlight">\(\chi^2 &gt; 9.488\)</span> svo
+prófstærðin fellur á höfnunarsvæði.</p></li>
+<li><p>Við höfnum núlltilgátunni og ályktum því að samband sé á milli
+frammistöðu í þjálfunarprógrammi og vinnu.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Mynd" src="_images/chisqdf4.svg" /></figure>
+</div>
+</section>
+</section>
+</section>
+<section id="daemi">
+<h2><span class="section-number">7.5. </span>Dæmi<a class="headerlink" href="#daemi" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h3><span class="section-number">7.5.1. </span>Dæmi<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Í tilraun með áhrif mismunandi fóðrunar á frjósemi sauðfjár voru tveir
+fóðurflokkar kannaðir, A og B og fékkst eftirfarandi fjöldi einlembdra
+og tvílembdra áa í hvorum flokki:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Fóðurflokkur A</p></th>
+<th class="head"><p>Fóðurflokkur B</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Einlembdar</p></td>
+<td><p>60</p></td>
+<td><p>82</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tvílembdar</p></td>
+<td><p>132</p></td>
+<td><p>108</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kannið með viðeigandi tilgátuprófi hvort munur sé á milli frjósemi eftir
+fóðurflokkum. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">7.5.2. </span>Dæmi<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Um áramótin 2009 var gerð könnun meðal 2500 landsmanna um afstöðu þeirra
+til byggingar Norðlingaölduveitu. Niðurtöður könnunarinnar var sú að
+1577 sögðust hlynntir og 923 á móti. Finnið 95% öryggisbil fyrir
+hlutfall landsmanna sem hlyntir eru Norðlingaölduveitu.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">7.5.3. </span>Dæmi<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Skólayfirvöld í skóla nokkrum höfðu stóðu fyrir tilraun þar sem 230
+stúdentar voru valdir af handahófi og þeir spurðir tveggja spurninga.
+Fyrri spurningin var hvort þau ættu börn eða ekki og sú seinni var hvort
+þau væru í fullu námi eða ekki. Niðurstöðurnar má sjá hér að neðan:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tafla mældrar tíðni</p></th>
+<th class="head"><p>Á börn</p></th>
+<th class="head"><p>Á ekki börn</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Í fullu námi</p></td>
+<td><p>31</p></td>
+<td><p>170</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki í fullu námi</p></td>
+<td><p>15</p></td>
+<td><p>14</p></td>
+</tr>
+</tbody>
+</table>
+<p>Skólayfirvöld í skólanum ætla nú að greina þessi gögn með kí-kvaðrat
+prófi.</p>
+<ol class="loweralpha">
+<li><p>Hér að neðan má sjá töflu væntanlegrar tíðni en það vantar eitt
+gildi. Hvert er gildið?</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tafla væntanlegrar tíðni</p></th>
+<th class="head"><p>Á börn</p></th>
+<th class="head"><p>Á ekki börn</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Í fullu námi</p></td>
+<td></td>
+<td><p>160.8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki í fullu námi</p></td>
+<td><p>5.8</p></td>
+<td><p>23.2</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Hér að neðan má sjá töflu prófstærðar en það vantar eitt gildi. Hvert
+er gildið?</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tafla prófstærðar</p></th>
+<th class="head"><p>Á börn</p></th>
+<th class="head"><p>Á ekki börn</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Í fullu námi</p></td>
+<td><p>2.105</p></td>
+<td><p>0.526</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ekki í fullu námi</p></td>
+<td><p>14.593</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p>Hvaða gagntilgáta er viðeigandi fyrir gögn af þessu tagi?</p></li>
+</ol>
+</section>
+<section id="id7">
+<h3><span class="section-number">7.5.4. </span>Dæmi<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Lalli lífefnafræðingur er að vinna með 4x4 tengslatöflu. Hversu margar
+frígráður hefur prófstærðin sem hann á að nota?</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">7.5.5. </span>Dæmi<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<p>8. apríl 2011 stóð fyrirtæki nokkurt fyrir skoðanakönnun þar sem spurt
+var: ,,Ef kosið yrði um nýjustu Icesave lögin í dag, hvort myndir þú
+kjósa með eða á móti?“ 722 tóku afstöðu og af þeim sögðust 414 ætla að
+kjósa á móti lögunum. Göngum út frá að tilrunahögunin hafi verið í lagi.</p>
+<ol class="loweralpha simple">
+<li><p>Hvert er mat þitt á hlutfalli kjósenda sem ætluðu sér að kjósa á móti
+lögunum?</p></li>
+<li><p>Finnið neðra mark 95% öryggisbils fyrir hlutfall kjósenda sem ætluðu
+sér að kjósa á móti lögunum.</p></li>
+</ol>
+</section>
+<section id="id9">
+<h3><span class="section-number">7.5.6. </span>Dæmi<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<p>Fyrirtæki hér í bæ stóð fyrir skoðanakönnun þar sem fylgi forsetans var
+kannað. 200 einstaklingar sem búsettir eru á landsbyggðinni og 200
+einstaklingar búsettir á höfuðborgasvæðinu voru spurðir hvort þeir
+styðji forsetann. Af þeim einstaklingum sem búsettir eru á
+landsbyggðinni sögðust 108 styðja forsetann en 95 af þeim sem búa á
+höfuðborgarsvæðinu.</p>
+<ol class="loweralpha simple">
+<li><p>Finnið efra mark 95% öryggisbils fyrir mun á hlutfalli þeirra sem
+styðja forsetann á landsbyggðinni og hlutfalli þeirra sem styðja
+forsetann á höfuðborgarsvæðinu.</p></li>
+<li><p>Hvert er höfnunarsvæðið ef kanna á hvort hlutfall fólks sem styður
+forsetann sé mismunandi á landsbyggðinni og á höfuðborgarsvæðinu
+(notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>)?</p></li>
+</ol>
+</section>
+<section id="id10">
+<h3><span class="section-number">7.5.7. </span>Dæmi<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>Í boltalandinu í IKEA eru rauðir og bláir boltar. Siggi sæti veltir
+fyrir sér hvort jafnmargir boltar séu af hvorum lit og ákveður að nota
+tölfræðiþekkingu sína til að rannsaka það. Hann velur af handahófi 200
+bolta og telur allar rauðu boltana. Boltalandið í IKEA er mjög stórt og
+þar eru miklu fleiri en 200 boltar. Í úrtakinu hans Sigga sæta voru 104
+rauðir boltar.</p>
+<ol class="loweralpha simple">
+<li><p>Hvert er mat Sigga sæta á hlutfalli rauðra bolta í boltalandinu?</p></li>
+<li><p>Hvert er <span class="math notranslate nohighlight">\(95\%\)</span>-öryggisbil fyrir hlutfall rauðra bolta?</p></li>
+</ol>
+</section>
+<section id="id11">
+<h3><span class="section-number">7.5.8. </span>Dæmi<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<p>Til að kanna hvort hlutfall karla og kvenna með of hátt kólestról í
+blóðinu sé mismunandi hátt voru valdir af handahófi 500 karlmenn og 600
+konur og kólesteról í blóði þeirra mælt. 131 karlmaður mældist með of
+hátt kólesteról og 118 konur. Kannið með viðeigandi tilgátuprófi hvort
+hlutfall karla með of hátt kólesteról í blóði sé frábrugðið hlutfalli
+kvenna. (<span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>).</p>
+</section>
+<section id="id12">
+<h3><span class="section-number">7.5.9. </span>Dæmi<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>Skoðunarkönnun var framkvæmd í Bandaríkjunum til að kanna hvort samaband
+væri á milli kyns og stjórnmálaskoðana. 300 manns tóku þátt í könnuninni
+og talið hversu margir konur og karlar kjósa Demókrata, Repúblikana og
+voru óháðir. Niðurstöðurnar má sjá hér að neðan:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Demókrati</p></th>
+<th class="head"><p>Repúblikani</p></th>
+<th class="head"><p>Óháður</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Kona</p></td>
+<td><p>68</p></td>
+<td><p>56</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>Karl</p></td>
+<td><p>52</p></td>
+<td><p>72</p></td>
+<td><p>20</p></td>
+</tr>
+</tbody>
+</table>
+<p>Kannið með viðeigandi tilgátuprófi hvort samband sé á milli kyns og
+stjórnmálaskoðana. Notið <span class="math notranslate nohighlight">\(\alpha = 0.05\)</span>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli06.html" class="btn btn-neutral float-left" title="6. Ályktunartölfræði" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kafli08.html" class="btn btn-neutral float-right" title="8. Ályktanir um talnabreytur" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Tölfræði frá grunni | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

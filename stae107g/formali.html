@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formáli &mdash; Línuleg Algebra 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="1. Línuleg jöfnuhneppi" href="kafli01.html" />
+    <link rel="prev" title="Línuleg Algebra, Háskóli Íslands" href="index.html" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Línuleg Algebra
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Formáli</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#id1">1.1. Línuleg jöfnuhneppi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linuleg-jafna">1.1.1. Skilgreining: Línuleg jafna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linulegt-jofnuhneppi">1.1.2. Skilgreining: Línulegt jöfnuhneppi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-fjoldi-lausna">1.1.3. Setning: Fjöldi lausna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-jofnuhneppi-sem-hefur-enga-lausn">1.1.3.1. Sýnidæmi: Jöfnuhneppi sem hefur enga lausn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-jofnuhneppi-sem-hefur-eina-lausn">1.1.3.2. Sýnidæmi: Jöfnuhneppi sem hefur eina lausn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-jofnuhneppi-sem-hefur-oendalega-margar-lausnir">1.1.3.3. Sýnidæmi: Jöfnuhneppi sem hefur óendalega margar lausnir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-lausnamengi">1.1.4. Skilgreining: Lausnamengi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-jafngild">1.1.5. Skilgreining: Jafngild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fylki">1.2. Fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-staer-fylkis">1.2.1. Skilgreining: Stærð fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-stulafylki-og-auki-fylki">1.2.2. Skilgreining: Stuðlafylki og aukið fylki</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#einfaldar-linuagerir">1.3. Einfaldar línuaðgerðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-einfaldar-linuagerir">1.3.1. Setning: Einfaldar línuaðgerðir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-einfaldar-linuagerir">1.3.1.1. Sýnidæmi: Einfaldar línuaðgerðir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linujafngild">1.3.2. Skilgreining: Línujafngild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#rudd-efra-stallaform">1.4. (Rudd) efra stallaform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-nulllinur-og-forystustular">1.4.1. Skilgreining: Núlllínur og forystustuðlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-efri-stallager">1.4.2. Skilgreining: Efri stallagerð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-efri-stallager">1.4.2.1. Sýnidæmi: Efri stallagerð</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-rudd-efri-stallager">1.4.3. Skilgreining: Rudd efri stallagerð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-rudd-efri-stallager">1.4.3.1. Sýnidæmi: Rudd efri stallagerð</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-rutt-efra-stallaform-er-otviraett-akvara">1.4.4. Setning: Rutt efra stallaform er ótvírætt ákvarðað</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fjoldi-lausna-og-frjalsar-breytur">1.5. Fjöldi lausna og frjálsar breytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-frjalsar-breytur-og-grunnbreytur">1.5.1. Skilgreining: Frjálsar breytur og grunnbreytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-frjalsar-breytur-grunnbreytur-og-stikaframsetning">1.5.1.1. Sýnidæmi: Frjálsar breytur, grunnbreytur og stikaframsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-tilvist-og-fjoldi-lausna">1.5.2. Setning: Tilvist og fjöldi lausna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#gauss-eying">1.6. Gauss-eyðing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#aftur-a-bak-innsetning">1.6.1. Aftur-á-bak innsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#gauss-eying-reiknirit">1.6.2. Gauss-eyðing reiknirit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-gauss-eying">1.6.2.1. Sýnidæmi: Gauss-eyðing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#vigrar">1.7. Vigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-vigur">1.7.1. Skilgreining: Vigur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-dalkvigrar">1.7.1.1. Sýnidæmi: Dálkvigrar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-samlagning-vigra">1.7.2. Skilgreining: Samlagning vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-margfoldun-vigurs-me-tolu">1.7.3. Skilgreining: Margföldun vigurs með tölu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-samlagning-vigra-og-margfoldun-vigurs-me-tolu">1.7.3.1. Sýnidæmi: Samlagning vigra og margföldun vigurs með tölu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#reiknireglur-fyrir-vigra">1.7.4. Reiknireglur fyrir vigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#linulegar-samantektir">1.8. Línulegar samantektir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linulegar-samantektir">1.8.1. Skilgreining: Línulegar samantektir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-linulegar-samantektir">1.8.1.1. Sýnidæmi: Línulegar samantektir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#id2">1.8.1.2. Sýnidæmi: Línulegar samantektir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#spann-vigra">1.9. Spann vigra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-spann-vigra">1.9.1. Skilgreining: Spann vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#spann-tveggja-vigra-i-mathbb-r-2">1.9.2. Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#spann-tveggja-vigra-i-mathbb-r-3">1.9.3. Spann tveggja vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#margfeldi-fylkis-og-vigurs">1.10. Margfeldi fylkis og vigurs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-margfeldi-fylkis-og-vigurs">1.10.1. Skilgreining: Margfeldi fylkis og vigurs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-margfeldi-fylkis-og-vigurs">1.10.1.1. Sýnidæmi: Margfeldi fylkis og vigurs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#id3">1.10.1.2. Sýnidæmi: Margfeldi fylkis og vigurs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fylkjajafnan">1.11. Fylkjajafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-fylkjajafnan">1.11.1. Setning: Fylkjajafnan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-fylkjajafnan">1.11.1.1. Sýnidæmi: Fylkjajafnan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#id4">1.11.1.2. Sýnidæmi: Fylkjajafnan</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-fullyringar-um-fylkjajofnuna">1.11.2. Setning: Fullyrðingar um fylkjajöfnuna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-um-fylki-og-dalkvigur">1.11.3. Setning: Um fylki og dálkvigur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-ohliru-jofnuhneppi">1.11.4. Skilgreining: Óhliðruð jöfnuhneppi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-ohlira-jofnuhneppi">1.11.4.1. Sýnidæmi: Óhliðrað jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#folgin-og-stikaframsetning">1.11.5. Fólgin og stikaframsetning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-stikaframsetning">1.11.5.1. Sýnidæmi: Stikaframsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-hliru-jofnuhneppi">1.11.6. Skilgreining: Hliðruð jöfnuhneppi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-hlira-jofnuhneppi">1.11.6.1. Sýnidæmi: Hliðrað jöfnuhneppi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-lausnamengi-fylkjajofnunnar">1.11.7. Setning: Lausnamengi fylkjajöfnunnar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-lausnir-profaar">1.11.7.1. Sýnidæmi: Lausnir prófaðar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#linulega-ohaar-upptalningar-vigra">1.12. Línulega óháðar upptalningar vigra</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linulega-ohaar-upptalningar-vigra">1.12.1. Skilgreining: Línulega óháðar upptalningar vigra</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-linulega-ohair-vigrar">1.12.1.1. Sýnidæmi: Línulega óháðir vigrar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#id5">1.12.1.2. Sýnidæmi: Línulega óháðir vigrar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-dalkvigrar-fylkis-og-linulegt-ohaei">1.12.2. Setning: Dálkvigrar fylkis og línulegt óhæði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-of-margir-vigrar-linulega-ha">1.12.3. Setning: Of margir vigrar = línulega háð</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-linuleg-samantekt-og-linulegt-haei">1.12.4. Setning: Línuleg samantekt og línulegt hæði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#linulegar-varpanir">1.13. Línulegar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-linulegar-varpanir">1.13.1. Skilgreining: Línulegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-linulegar-varpanir-mathbb-r-n-rightarrow-mathbb-r-m">1.13.2. Setning: Línulegar varpanir <span class="math notranslate nohighlight">\(\mathbb{R}^n\rightarrow\mathbb{R}^m\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-eiginleikar-linulegra-varpana">1.13.3. Skilgreining: Eiginleikar línulegra varpana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-venjulegi-grunnurinn">1.13.4. Skilgreining: Venjulegi grunnurinn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-linuleg-vorpun-mathbb-r-2-rightarrow-mathbb-r-2">1.13.4.1. Sýnidæmi Línuleg vörpun <span class="math notranslate nohighlight">\(\mathbb{R}^2\rightarrow \mathbb{R}^2\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-venjulegi-grunnurinn">1.13.5. Setning: Venjulegi grunnurinn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#speglanir">1.13.6. Speglanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#strikkanir">1.13.7. Stríkkanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skekkingar">1.13.8. Skekkingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#ofanvorp">1.13.9. Ofanvörp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#eintaekar-og-ataekar-varpanir">1.14. Eintækar og átækar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#skilgreining-eintaekar-og-ataekar-varpanir">1.14.1. Skilgreining: Eintækar og átækar varpanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#synidaemi-eintaekar-og-ataekar-varpanir">1.14.1.1. Sýnidæmi: Eintækar og átækar varpanir</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-eintaek-linuleg-vorpun">1.14.2. Setning: Eintæk línuleg vörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#setning-ataek-linuleg-vorpun">1.14.3. Setning: Átæk línuleg vörpun</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Fylkjaaðgerðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#nokkrar-gerir-fylkja">2.1. Nokkrar gerðir fylkja</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#samlagning-og-skolun">2.2. Samlagning og skölun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-samlagning-fylkja">2.2.1. Setning: Samlagning fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-reglur-um-fylkjasamlagningu-og-margfoldun-me-tolu">2.2.2. Setning: Reglur um fylkjasamlagningu og margföldun með tölu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-samlagning-fylkja">2.2.2.1. Sýnidæmi: Samlagning fylkja</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-margfoldun-me-tolu">2.2.2.2. Sýnidæmi: Margföldun með tölu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fylkjamargfoldun">2.3. Fylkjamargföldun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-fylkjamargfoldun">2.3.1. Skilgreining: Fylkjamargföldun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-fylkjamargfoldun">2.3.1.1. Sýnidæmi: Fylkjamargföldun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-veldi-af-fylkjum">2.3.2. Skilgreining: Veldi af fylkjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#reikniafer-fyrir-fylkjamargfoldun">2.3.3. Reikniaðferð fyrir fylkjamargföldun</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#id1">2.3.3.1. Sýnidæmi: Fylkjamargföldun</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-eiginleikar-fylkjamargfoldunar">2.3.4. Setning: Eiginleikar fylkjamargföldunar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#bylt-fylki">2.4. Bylt fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-bylt-fylki">2.4.1. Skilgreining: Bylt fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-bylt-fylki">2.4.1.1. Sýnidæmi: Bylt fylki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-reiknireglur-fyrir-bylt-fylki">2.4.2. Setning: Reiknireglur fyrir bylt fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-hegun-byltra-fylkja">2.4.2.1. Sýnidæmi: Hegðun byltra fylkja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#andhverfur-fylkja">2.5. Andhverfur fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-andhverfur-fylkja">2.5.1. Skilgreining: Andhverfur fylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-andhverfa-er-otviraett-akvoru">2.5.2. Setning: Andhverfa er ótvírætt ákvörðuð</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-eru-fylkin-andhverfanleg">2.5.2.1. Sýnidæmi: Eru fylkin andhverfanleg?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-andhverfa-2-times-2-fylkja">2.5.3. Setning: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-andhverfa-2-times-2-fylkja">2.5.3.1. Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(2\times 2\)</span> fylkja</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-lausnir-fylkjajafna">2.5.4. Setning: Lausnir fylkjajafna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-fylkjajafna-leyst-me-andhverfu">2.5.4.1. Sýnidæmi: Fylkjajafna leyst með andhverfu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-reiknireglur-andhverfa">2.5.5. Setning: Reiknireglur andhverfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#reiknirit-andhverfa-n-times-n-fylkja">2.5.6. Reiknirit andhverfa <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-andhverfa-3-times3-fylkis">2.5.6.1. Sýnidæmi: Andhverfa <span class="math notranslate nohighlight">\(3\times3\)</span> fylkis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#andhverfanlegar-varpanir">2.6. Andhverfanlegar varpanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-andhverfanlegar-varpanir">2.6.1. Skilgreining: Andhverfanlegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-andhverfanlegar-linulegar-varpanir">2.6.2. Setning: Andhverfanlegar línulegar varpanir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-eintaekni-og-ataekni-linulegra-varpana">2.6.3. Setning: Eintækni og átækni línulegra varpana</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#setning-langa-setningin-um-andhverfanleg-fylki">2.6.4. Setning: Langa setningin um andhverfanleg fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-er-fylki-andhverfanlegt">2.6.4.1. Sýnidæmi: Er fylkið andhverfanlegt?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#lu-attun">2.7. LU-þáttun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skilgreining-lu-attun">2.7.1. Skilgreining: LU-þáttun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#reiknirit-lu-attunar">2.7.2. Reiknirit LU-þáttunar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-lu-attun">2.7.2.1. Sýnidæmi: LU-þáttun</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#synidaemi-lu-attun-til-ess-a-leysa-fylkjajofnu">2.7.2.2. Sýnidæmi: LU-þáttun til þess að leysa fylkjajöfnu</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Ákveður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#akveur-2-times-2-fylkja">3.1. Ákveður <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-akvea-2-times-2-fylkis">3.1.1. Skilgreining: Ákveða <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#akveur-n-times-n-fylkja">3.2. Ákveður <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hlutfylki">3.2.1. Skilgreining: Hlutfylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-hlutfylki">3.2.1.1. Sýnidæmi: Hlutfylki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-akvea-n-times-n-fylkis">3.2.2. Skilgreining: Ákveða <span class="math notranslate nohighlight">\(n \times n\)</span> fylkis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-akvea-3-times-3-fylkis">3.2.2.1. Sýnidæmi: Ákveða <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-onnur-afer-til-ess-a-reikna-akveu-3-times-3-fylkis">3.2.3. Skilgreining: Önnur aðferð til þess að reikna ákveðu <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#akveur-rihyrningsfylkja">3.3. Ákveður þríhyrningsfylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-akvea-rihyrningsfylkja">3.3.1. Setning: Ákveða þríhyrningsfylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-akveur-rihyrningsfylkja">3.3.1.1. Sýnidæmi: Ákveður þríhyrningsfylkja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#akveur-frumfylkja">3.4. Ákveður frumfylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-akvea-frumfylkja">3.4.1. Setning: Ákveða frumfylkja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-akveur-frumfylkja">3.4.1.1. Sýnidæmi: Ákveður frumfylkja</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#hjalparsetning">3.4.2. Hjálparsetning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#id1">3.4.3. Hjálparsetning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#eiginleikar-akvea">3.5. Eiginleikar ákveða</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-eiginleikar-akvea">3.5.1. Setning: Eiginleikar ákveða</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-hjaattafylki">3.5.2. Skilgreining: Hjáþáttafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-aoka-fylki">3.5.3. Skilgreining: Aðoka fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-andhverfujafna">3.5.4. Setning: Andhverfujafna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#regla-cramers">3.6. Regla Cramers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#rithattur">3.6.1. Ritháttur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-regla-cramers">3.6.2. Setning: Regla Cramers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-leysa-jofnuhneppi-me-reglu-cramers">3.6.2.1. Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#akveur-og-rumfraei">3.7. Ákveður og rúmfræði</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-samsiungur">3.7.1. Skilgreining: Samsíðungur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#skilgreining-samhliungur">3.7.2. Skilgreining: Samhliðungur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-flatarmal-og-rummal">3.7.3. Setning: Flatarmál og rúmmál</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-mynd-varpanna">3.7.4. Setning: Mynd varpanna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli03.html#setning-flatarmal-og-rummal-linulegra-varpanna">3.7.5. Setning: Flatarmál og rúmmál línulegra varpanna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli03.html#synidaemi-flatarmal-samsiungs">3.7.5.1. Sýnidæmi: Flatarmál samsíðungs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Vigurrúm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#vigurrum-og-hlutrum">4.1. Vigurrúm og hlutrúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vigurrum">4.1.1. Skilgreining: Vigurrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-vigurrum">4.1.1.1. Sýnidæmi: Vigurrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-hlutrum">4.1.2. Skilgreining: Hlutrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-hlutrum">4.1.2.1. Sýnidæmi: Hlutrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-alhaefing-linuleg-samantekt-og-spann">4.1.3. Skilgreining: Alhæfing línuleg samantekt og spann</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-spann-er-hlutrum">4.1.4. Setning: Spann er hlutrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-fleiri-hlutrum">4.1.4.1. Sýnidæmi: Fleiri hlutrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vigursumma">4.1.5. Skilgreining: Vigursumma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning">4.1.6. Setning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#null-col-ker-og-range">4.2. Null, Col, Ker og Range</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-nullrum-fylkis">4.2.1. Skilgreining: Núllrúm fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-nullrum-er-hlutrum">4.2.2. Setning: Núllrúm er hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-dalkrum-fylkis">4.2.3. Skilgreining: Dálkrúm fylkis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-dalkrum-er-hlutrum">4.2.4. Setning: Dálkrúm er hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samanburur-a-nullrumum-og-dalkrumum">4.2.5. Samanburður á núllrúmum og dálkrúmum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-nullrum">4.2.5.1. Sýnidæmi: Núllrúm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-dalkrum">4.2.5.2. Sýnidæmi: Dálkrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-kjarni-og-mynd-vorpunar">4.2.6. Skilgreining: Kjarni og mynd vörpunar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-kjarni-og-mynd-eru-hlutrum">4.2.7. Setning: Kjarni og mynd eru hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-eintaekni-og-ataekni-varpana">4.2.8. Setning: Eintækni og átækni varpana</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#grunnar-og-hnit">4.3. Grunnar og hnit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-grunnur">4.3.1. Skilgreining: Grunnur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-venjulegi-grunnurinn">4.3.1.1. Sýnidæmi: Venjulegi grunnurinn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-linulega-ohair-dalkvigrar-mynda-grunn">4.3.1.2. Sýnidæmi: Línulega óháðir dálkvigrar mynda grunn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-grunnar">4.3.1.3. Sýnidæmi: Grunnar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-um-spann-mengja">4.3.2. Setning: Um spann mengja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-grunnur-fyrir-nullrum">4.3.2.1. Sýnidæmi: Grunnur fyrir núllrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-a-finna-grunn-fyrir-dalkrum">4.3.3. Setning: Að finna grunn fyrir dálkrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-grunnur-fyrir-dalkrum">4.3.3.1. Sýnidæmi: Grunnur fyrir dálkrúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-tveir-eiginleikar-grunna">4.3.4. Setning: Tveir eiginleikar grunna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-um-tilvist-hnita">4.3.5. Setning: Um tilvist hnita</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-mathcal-b-hnit">4.3.6. Skilgreining: <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>-hnit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-hnitavigur-ve-x-mathcal-b">4.3.7. Skilgreining: Hnitavigur <span class="math notranslate nohighlight">\([\ve x]_{\mathcal{B}}\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-a-skipta-um-grunn">4.3.7.1. Sýnidæmi: Að skipta um grunn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-hnitavorpun">4.3.8. Skilgreining: Hnitavörpun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-hnitavorpun-er-linuleg">4.3.9. Setning: hnitavörpun er línuleg</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#vidd-og-rankur">4.4. Vídd og rankur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-linulegt-haei-mengja-staerri-en-grunns">4.4.1. Setning: Línulegt hæði mengja stærri en grunns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-um-staer-grunna">4.4.2. Setning: Um stærð grunna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-vidd">4.4.3. Skilgreining: Vídd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-vidd">4.4.3.1. Sýnidæmi: Vídd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-vidd-hlutrums">4.4.4. Setning: Vídd hlutrúms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-samsemd-linulegs-ohaeis-og-spanns">4.4.5. Setning: Samsemd línulegs óhæðis og spanns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-forystustular-og-vidd">4.4.6. Setning: Forystustuðlar og vídd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-linurum">4.4.7. Skilgreining: Línurúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-linujafngild-fylki-hafa-sama-linurum">4.4.8. Setning: Línujafngild fylki hafa sama línurúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-grunnur-fyrir-linurum">4.4.9. Setning: Grunnur fyrir línurúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-grunnur-fyrir-linurum">4.4.9.1. Sýnidæmi: Grunnur fyrir línurúm</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-rankur">4.4.10. Skilgreining: Rankur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-ranksetningin">4.4.11. Setning: Ranksetningin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-rankur-og-vidd">4.4.11.1. Sýnidæmi: Rankur og vídd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-vibot-vi-longu-setninguna-um-andhverfur">4.4.12. Setning: Viðbót við löngu setninguna um andhverfur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#hnitaskipti">4.5. Hnitaskipti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-hnitaskiptafylki">4.5.1. Skilgreining: Hnitaskiptafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-hnitaskiptafylki">4.5.2. Setning: Hnitaskiptafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-hnitaskiptafylki-yfir-i-venjulega-grunninn">4.5.3. Setning: Hnitaskiptafylki yfir í venjulega grunninn</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-hnitaskiptafylki-yfir-i-venjulega-grunninn">4.5.3.1. Sýnidæmi: Hnitaskiptafylki yfir í venjulega grunninn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-formula-fyrir-hnitaskiptifylki">4.5.4. Setning: Formúla fyrir hnitaskiptifylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#reiknirit-fyrir-hnitaskiptafylki">4.5.5. Reiknirit fyrir hnitaskiptafylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#synidaemi-hnitaskiptafylki">4.5.5.1. Sýnidæmi: Hnitaskiptafylki</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skilgreining-fylki-vorpunar-me-tilliti-til-grunns">4.5.6. Skilgreining: Fylki vörpunar með tilliti til grunns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#setning-fylki-fyrir-mismunandi-grunna">4.5.7. Setning: Fylki fyrir mismunandi grunna</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Eigingildi og eiginvigrar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#eigingildi-og-eiginvigur">5.1. Eigingildi og eiginvigur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-eigingildi-og-eiginvigur">5.1.1. Skilgreining: Eigingildi og eiginvigur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-eigingildi">5.1.1.1. Sýnidæmi: Eigingildi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-eigingildi">5.1.2. Setning: Eigingildi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-eigingild-og-eiginvigrar">5.1.2.1. Sýnidæmi: Eigingild og eiginvigrar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#eiginrum">5.2. Eiginrúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-eiginrum">5.2.1. Setning: Eiginrúm</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-eiginrum-fylkis">5.2.1.1. Sýnidæmi: Eiginrúm fylkis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-eigingildi-rihyrningsfylkja">5.2.2. Setning: Eigingildi þríhyrningsfylkja</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-eiginvigrar-linulega-ohair">5.2.3. Setning: Eiginvigrar línulega óháðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-0-sem-eigingildi">5.2.4. Setning: 0 sem eigingildi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#kennijafnan">5.3. Kennijafnan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-kennijafnan">5.3.1. Setning: Kennijafnan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-kennijafnan">5.3.1.1. Sýnidæmi: Kennijafnan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-margfeldni-eigingildis">5.3.1.2. Sýnidæmi: Margfeldni eigingildis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#amota-fylki">5.4. Ámóta fylki</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-amota">5.4.1. Skilgreining: Ámóta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-kennijafna-amota-fylkja">5.4.2. Setning: Kennijafna ámóta fylkja</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#hornalinugjorningar">5.5. Hornalínugjörningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-hornalinufylki">5.5.1. Skilgreining: Hornalínufylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-hornalinugeranlegt">5.5.2. Skilgreining: Hornalínugeranlegt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-hornalinugjorningar">5.5.2.1. Sýnidæmi: Hornalínugjörningar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-hornalinugeranleg-fylki">5.5.3. Setning: Hornalínugeranleg fylki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-er-fylki-hornalinugeranlegt">5.5.3.1. Sýnidæmi: Er fylkið hornalínugeranlegt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-vidd-eiginrums">5.5.4. Setning: Vídd eiginrúms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#eiginvigrar-linulegra-varpana">5.6. Eiginvigrar línulegra varpana</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana">5.6.1. Skilgreining: Eigingildi og eiginvigrar línulegra varpana</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-eiginvigrar-linulegra-varpana">5.6.1.1. Sýnidæmi: Eiginvigrar línulegra varpana</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#setning-fylki-linulegra-varpana-i-v">5.6.2. Setning: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-fylki-linulegra-varpana-i-v">5.6.2.1. Sýnidæmi: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#synidaemi-hornalinugjorningur">5.6.2.2. Sýnidæmi: Hornalínugjörningur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Innfeldi og hornrétt ofanvörp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#innfeldi">6.1. Innfeldi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-innfeldi">6.1.1. Skilgreining: Innfeldi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-innfeldi">6.1.1.1. Sýnidæmi: Innfeldi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknireglur-um-innfeldi-a-r-n">6.1.2. Reiknireglur um innfeldi á <span class="math notranslate nohighlight">\(\R^n\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#lengd">6.2. Lengd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-lengd">6.2.1. Skilgreining: Lengd</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-lengd-vigurs">6.2.1.1. Sýnidæmi: Lengd vigurs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknireglur-um-lengd">6.2.2. Reiknireglur um lengd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-einingarvigur">6.2.3. Skilgreining: Einingarvigur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#fjarlaegir-i-r-n">6.3. Fjarlægðir í <span class="math notranslate nohighlight">\(\R^n\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-fjarlaeg-milli-punkta-i-r-n">6.3.1. Skilgreining: Fjarlægð milli punkta í <span class="math notranslate nohighlight">\(\R^n\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-fjarlaeg-milli-punkta">6.3.1.1. Sýnidæmi: Fjarlægð milli punkta</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#reiknireglur-um-fjarlaegir">6.3.2. Reiknireglur um fjarlægðir</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#hornrettir-vigrar">6.4. Hornréttir vigrar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-hornrett">6.4.1. Skilgreining: Hornrétt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-horn-milli-vigra">6.4.2. Skilgreining: Horn milli vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#regla-pyagorasar">6.4.3. Regla Pýþagórasar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#hornrett-fyllirum">6.5. Hornrétt fyllirúm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-hornrett-fyllirum">6.5.1. Skilgreining: Hornrétt fyllirúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-hornrett-fyllirum">6.5.2. Setning: Hornrétt fyllirúm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#verstae-og-verstolu-mengi">6.6. Þverstæð og þverstöðluð mengi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-verstae-og-verstolu-mengi">6.6.1. Skilgreining: Þverstæð og þverstöðluð mengi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-verstae-og-verstolu-mengi">6.6.1.1. Sýnidæmi: Þverstæð og þverstöðluð mengi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-verstae-mengi">6.6.1.2. Sýnidæmi: Þverstæð mengi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-verstae-mengi-eru-linulega-oha">6.6.2. Setning: Þverstæð mengi eru línulega óháð</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#verstaeir-og-verstalair-grunnar">6.7. Þverstæðir og þverstaðlaðir grunnar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-verstaeir-og-verstalair-grunnar">6.7.1. Skilgreining: Þverstæðir og þverstaðlaðir grunnar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-hnit-m-t-t-verstaera-og-verstalaa-grunna">6.7.2. Skilgreining: Hnit m.t.t. þverstæðra og þverstaðlaða grunna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-hnit-vigurs-m-t-t-grunns">6.7.2.1. Sýnidæmi: Hnit vigurs m.t.t. grunns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-anna-daemi-um-hnit-vigurs-m-t-t-grunns">6.7.2.2. Sýnidæmi: Annað dæmi um hnit vigurs m.t.t. grunns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#hornrett-ofanvarp">6.8. Hornrétt ofanvarp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-hornrett-ofanvarp">6.8.1. Skilgreining: Hornrétt ofanvarp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-hornrett-ofanvarp">6.8.1.1. Sýnidæmi: Hornrétt ofanvarp</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-hornrett-ofanvarp-a-hlutrum">6.8.2. Skilgreining: Hornrétt ofanvarp á hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#eiginleikar-ofanvarps">6.8.3. Eiginleikar ofanvarps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-hornrettir-grunnar-fyrir-hlutrum">6.8.4. Setning: Hornréttir grunnar fyrir hlutrúm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-hornrett-liun-e-orthogonal-decomposition">6.8.5. Setning: Hornrétt liðun (e. orthogonal decomposition)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-fylki-fyrir-ofanvarp">6.8.6. Skilgreining: Fylki fyrir ofanvarp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#gram-schmidt">6.9. Gram-Schmidt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-afer-gram-schmidt">6.9.1. Setning: Aðferð Gram-Schmidt</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-gram-schmidt">6.9.1.1. Sýnidæmi: Gram-Schmidt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#a-finna-verstalaan-grunn-fyrir-hlutrum-w">6.9.1.2. Að finna þverstaðlaðan grunn fyrir hlutrúm <span class="math notranslate nohighlight">\(W\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#afer-minnstu-kvarata">6.10. Aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skilgreining-afer-minnstu-kvarata">6.10.1. Skilgreining: Aðferð minnstu kvaðrata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#setning-lausnarmengi-afer-minnstu-kvarata">6.10.2. Setning: Lausnarmengi aðferð minnstu kvaðrata</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#synidaemi-afer-minnstu-kvarata">6.10.2.1. Sýnidæmi: Aðferð minnstu kvaðrata</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordaskra.html">Orðaskrá</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Línuleg Algebra</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Formáli</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/stae107g//projects/stae107g/formali.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="formali">
+<h1>Formáli<a class="headerlink" href="#formali" title="Permalink to this heading"></a></h1>
+<p>Þetta kennsluefni er ætlað til stuðnings við kennslu í áföngunum Línuleg algebra (STÆ107G) og Línuleg algebra A (STÆ106G).
+Efnið byggir á tveimur glærupökkum sem notaðir hafa verið við kennslu á þessum áföngum. Höfundar þeirra eru Rögnvaldur Möller
+annarsvegar og Sigrún Helga Lund og Pawel Bartoszek hinsvegar.</p>
+<p>Sumarstarfsmennirnir Agla Þórarinsdóttir, Matthías Andri Hrafnkelsson og Sigurbjörg Rannveig Stefánsdóttir
+sáu um samantekt og uppsetningu efnis og var það gert sumarið 2024.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Línuleg Algebra, Háskóli Íslands" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kafli01.html" class="btn btn-neutral float-right" title="1. Línuleg jöfnuhneppi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Línuleg Algebra | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

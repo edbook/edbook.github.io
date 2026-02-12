@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15. Kafli - Heimildir &mdash; Efnisfræði 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="_static/button.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="prev" title="14. Kafli - Fylliefni" href="kafli14.html" />
+
+
+
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script>ggbAppletId = [];</script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Efnisfræði
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Kafli – Kynning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umfang-svisins">1.1. Umfang sviðsins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#heimildir">1.2. Heimildir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Kafli - Gerð og uppbygging efna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#frumeindir-e-atom">2.1. Frumeindir (e. atom)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#frumeinda-massi-mol-og-avogadros-talan">2.1.1. Frumeinda massi, mól og Avogadros-talan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam">2.1.2. Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#orka-i-bindingum-og-kraftar-milli-frumeinda">2.2. Orka í bindingum og kraftar milli frumeinda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#efnafraeilegir-bindingar-myndun-sameinda">2.3. Efnafræðilegir bindingar (myndun sameinda)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#jonabindingar">2.3.1. Jónabindingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#kovalentbindingar">2.3.2. Kóvalentbindingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#malmbindingar">2.3.3. Málmbindingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#van-der-waal-bindingar">2.3.4. van der Waal bindingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#vetnisbindingar">2.3.5. Vetnisbindingar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#yfirlit-yfir-efnabindingar">2.3.6. Yfirlit yfir efnabindingar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#kristallar">2.4. Kristallar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#skrikerfi-e-slip-system">2.4.1. Skriðkerfi (e. slip system)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#efni-sem-ekki-mynda-kristalla">2.5. Efni sem ekki mynda kristalla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#efni-eru-uppbygg-ur-fjollium">2.5.1. Efni eru uppbyggð úr fjölliðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#blandefni-disperse-material-og-eytur-kolloider">2.5.2. Blandefni (disperse material) og þeytur (kolloider)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#gel">2.5.3. Gel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#heimildir">2.6. Heimildir</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Kafli - Holrýmd og efnisþéttleiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#ettleiki-og-porur">3.1. Þéttleiki og pórur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#porudreifing-og-porufjarlaeg">3.2. Pórudreifing og pórufjarlægð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#maelingar-a-ettleika-holrymd-porudreifingu-og-vatnsdraegni">3.3. Mælingar á þéttleika, holrýmd, pórudreifingu og vatnsdrægni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Kafli - Varmi og einangrun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#geislun">4.1. Geislun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#streymi">4.2. Streymi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#leini">4.3. Leiðni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samsiatengt-hlitengt-likan">4.3.1. Samsíðatengt/hliðtengt líkan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ratengt-likan">4.3.2. Raðtengt líkan</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#maeling-leinitolu">4.4. Mæling leiðnitölu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#einangrunarefni-tegundir-og-framleisluaferir">4.5. Einangrunarefni – tegundir og framleiðsluaðferðir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#heimildir">4.5.1. Heimildir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Kafli - Raki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#rakarystingur-og-rakainnihald-lofts">5.1. Rakaþrýstingur og rakainnihald lofts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#undirrystingur-i-poru-harpipu">5.1.1. Undirþrýstingur í póru (hárpípu)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rishae-h-i-harpipu">5.1.2. Rishæð, H, í hárpípu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#vatn-i-byggingarefnum">5.2. Vatn í byggingarefnum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rakaupptaka-efna">5.2.1. Rakaupptaka efna</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.2.2. Rakaupptaka efna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#rakaflutningur">5.3. Rakaflutningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#vatnsflutningur-vegna-mismunarystings-i-vatni">5.3.1. Vatnsflutningur vegna mismunaþrýstings í vatni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#flutningur-me-harpipukroftum">5.3.2. Flutningur með hárpípukröftum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#harpipukraftar-almennt">5.3.2.1. Hárpípukraftar almennt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#rakaflutningur-vegna-gufurystings">5.3.3. Rakaflutningur vegna gufuþrýstings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Kafli - Styrkur og stífleiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#einasa-spennuastand">6.1. Einása spennuástand</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#vinnulina-og-brotorka">6.1.1. Vinnulína og brotorka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#formbreytingar-og-formbreytingarferlar">6.1.2. Formbreytingar og formbreytingarferlar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#skeraraun">6.1.3. Skeráraun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hofuspennur">6.1.4. Höfuðspennur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#seigja-stokk-ea-seig-efni">6.1.5. Seigja; stökk eða seig efni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#hersla-malma">6.1.6. Hersla málma</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#einsatta-isotrop-og-misatta-anisotrop-efni">6.1.7. Einsátta (isotrop) og misátta (anisotrop) efni</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#tviasa-spennuastand">6.2. Tvíása spennuástand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#timaha-ahrif-e-rheology">6.3. Tímaháð áhrif (e. rheology)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#spennulosun-relaksation">6.3.1. Spennulosun (relaksation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#reyta-e-fatigue-d-udmattelse">6.4. Þreyta (e. fatigue, d. udmattelse)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#vinam-og-slitstyrkur">6.5. Viðnám og slitstyrkur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#efnisprofanir-styrkprofanir">6.6. Efnisprófanir (styrkprófanir)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#atrii-sem-hafa-ahrif-a-mat-a-profunarniurstoum">6.6.1. Atriði sem hafa áhrif á mat á prófunarniðurstöðum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#heimildir">6.6.2. Heimildir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Kafli - Rúmmálsstöðugleiki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#hitahaar-staerarbreytingar">7.1. Hitaháðar stærðarbreytingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#rakahaar-staerarbreytingar">7.2. Rakaháðar stærðarbreytingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#heimildir">7.2.1. Heimildir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Kafli - Niðurbrot efna og ending</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#efnafraeilegt-ferli">8.1. Efnafræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#raf-efnafraeilegt-ferli">8.2. Raf-efnafræðilegt ferli</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#taeringarvorn-og-spennuroin">8.2.1. Tæringarvörn og spennuröðin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#elisfraeilegt-ferli">8.3. Eðlisfræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#liffraeilegt-ferli">8.4. Líffræðilegt ferli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#geislun">8.5. Geislun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#samantekt">8.6. Samantekt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Kafli - Hitastigsháðar breytingar og bruni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#breyting-efniseiginleika-vi-hatt-hitastig">9.1. Breyting efniseiginleika við hátt hitastig</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#niurbrot-efna">9.2. Niðurbrot efna</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Kafli - Stál</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#framleisla-stals">10.1. Framleiðsla stáls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fasalinurit">10.2. Fasalínurit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#kolefnisinnihalds-stals-og-fasalinurit">10.3. Kolefnisinnihalds stáls og fasalínurit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#fasar-og-eiginleikar-samantekt-byggt-a-callister">10.3.1. Fasar og eiginleikar – samantekt (byggt á Callister)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#hersla-me-teygju">10.4. Hersla með teygju</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#hitamehondlun-og-kaeling-stals">10.5. Hitameðhöndlun og kæling stáls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#kaldhering-e-cold-working">10.5.1. Kaldherðing (e. cold working)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#glaeing-e-annealing">10.5.2. Glæðing (e. annealing)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#normalisering-e-normalizing">10.5.3. Normalísering (e. normalizing)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#snoggkaeling-e-quenching">10.5.4. Snöggkæling (e. quenching)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#seighersla-e-tempering">10.5.5. Seighersla (e. tempering)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#samantekt">10.5.6. Samantekt</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#stalgerir-og-einkenni">10.6. Stálgerðir og einkenni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#suuhaeft-stal">10.6.1. Suðuhæft stál</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#byggingastal">10.6.2. Byggingastál</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#bendistal">10.6.3. Bendistál</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">11. Kafli - Gler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#samsetning">11.1. Samsetning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#eiginleikar">11.2. Eiginleikar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#ruugler-framleisla">11.3. Rúðugler - framleiðsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#hert-gler">11.4. Hert gler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#oryggisgler">11.5. Öryggisgler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#ending">11.6. Ending</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12.html">12. Kafli - Fjölliður</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#framleisla">12.1. Framleiðsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#uppbygging">12.2. Uppbygging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#styrkeiginleikar-fjolliu-efna">12.3. Styrkeiginleikar fjölliðu efna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#nokkrar-mikilvaegar-tegundir-plastefna">12.4. Nokkrar mikilvægar tegundir plastefna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#hitadeigt-plast-e-thermoplastic-polymer-s-termoplast">12.4.1. Hitadeigt plast (e: thermoplastic polymer, s:termoplast)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#hitafast-plast-e-thermosetting-polymer-s-hardplast">12.4.2. Hitafast plast (e:thermosetting polymer, s: härdplast)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#gummi">12.4.3. Gúmmí</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli13.html">13. Kafli - Lím</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#uppbygging-lims-og-hersla">13.1. Uppbygging líms og hersla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#lim-me-bindiefni-i-lausn">13.1.1. Lím með bindiefni í lausn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#margatta-lim">13.1.2. Margþátta lím</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#hitaha-lim">13.1.3. Hitaháð lím</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli14.html">14. Kafli - Fylliefni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#steinefni">14.1. Steinefni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#kornastaerardreifing">14.2. Kornastærðardreifing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#lifraen-ohreinindi">14.3. Lífræn óhreinindi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#berggreining">14.4. Berggreining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#saltmaeling">14.5. Saltmæling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#alkaliprof">14.6. Alkalípróf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#raki">14.7. Raki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#mettivatn">14.8. Mettivatn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#kornarumyngd">14.9. Kornarúmþyngd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#frostol">14.10. Frostþol</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Kafli - Heimildir</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Efnisfræði</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">15. </span>Kafli - Heimildir</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/byg302g//projects/byg302g/heimildir.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="kafli-heimildir">
+<h1><span class="section-number">15. </span>Kafli - Heimildir<a class="headerlink" href="#kafli-heimildir" title="Permalink to this heading"></a></h1>
+<div class="docutils container" id="id1">
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bre11<span class="fn-bracket">]</span></span>
+<p>Kenneth Breiðfjörð. Byggingarefni á íslandi. uppruni, flutningar til landsins ásamt kolefnisspori timburs. Master's thesis, Háskóli Íslands, 2011.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>dSdSRB23<span class="fn-bracket">]</span></span>
+<p>Rodrigo Mero Sarmento da Silva and Aline da Silva Ramos Barboza. Concrete modeling using micromechanical multiphase models and multiscale analysis. <em>Rev. IBRACON Estrut. Mater.</em>, 2023.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Gre19<span class="fn-bracket">]</span></span>
+<p>GreenChemUofT. Green marketing in the plastic era: honesty or hype? Sep 2019. URL: <a class="reference external" href="https://greenchemuoft.wordpress.com/2019/09/13/green-marketing-in-the-plastic-era-honesty-or-hype/">https://greenchemuoft.wordpress.com/2019/09/13/green-marketing-in-the-plastic-era-honesty-or-hype/</a>.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oAN00<span class="fn-bracket">]</span></span>
+<p>F.R. Gottfredsen og Anders Nielsen. <em>Bygningsmaterialer grundlæggende egenskaber</em>. Polyteknisk Forlag, 2000.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oJS78<span class="fn-bracket">]</span></span>
+<p>Guðmundur Halldórsson og Jón Sigurjónsson. <em>Einangrun húsa</em>. Rannsóknastofnun byggingariðnaðarins, 2 edition, 1978.</p>
+</div>
+<div class="citation" id="id2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oPV02<span class="fn-bracket">]</span></span>
+<p>Björn Marteinsson og Páll Valdimarsson. Efnis- og orkunotkun vegna bygginga á íslandi. <em>Árbók VFÍ/TFÍ</em>, 14(1):223–228, 2002.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sig16<span class="fn-bracket">]</span></span>
+<p>Jón Sigurjónsson. <em>Rb-blað: Tré - trjátegundir og efniseiginleikar viðarins</em>. Nýsköpunarmiðstöð Íslands, 2016.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TF21<span class="fn-bracket">]</span></span>
+<p>Emil Engelund Thybring and Maria Fredriksson. Wood modification as a tool to understand moisture in wood. <em>Forests</em>, 12(3):372, mar 2021.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WDCR20<span class="fn-bracket">]</span></span>
+<p>Jr. William D. Callister and David G. Rethwisch. <em>Callister's Materials Science and Engineering</em>. Wiley, 2020.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli14.html" class="btn btn-neutral float-left" title="14. Kafli - Fylliefni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Efnisfræði | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script>
+    window.addEventListener("load", function () {
+        for (var i in ggbAppletId) {
+            ggbAppletId[i].inject(i);
+        }
+    });
+</script>
+
+
+ 
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+       /* HI: #10099F, VoN: #EB7125, orginal #01447B */
+       background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+      /* orginal #343131, HÍ grár dekkri: #EEEEEE, HÍ svartur: #262626 */
+      background: #262626;
+    }
+</style>
+
+
+</body>
+</html>

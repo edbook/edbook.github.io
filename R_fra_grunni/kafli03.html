@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Myndræn framsetning &mdash; R frá grunni 0.2.0</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+        <script src="_static/js/eqt.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+    
+    a.tooltip strong {
+        line-height: 30px;
+    }
+    
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+    
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+    
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+    
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+    /*CSS3*/
+    
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+    /* - Begin equation reference style - */
+    
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+    
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+    
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+    
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+    
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+    /* - End - */
+</style>
+
+
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="4. Lýsandi tölfræði" href="kafli04.html" />
+    <link rel="prev" title="2. Frá tilraun til gagna" href="kafli02.html" /> 
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+   
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            R frá grunni
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="formali.html">Formáli</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">1. Inngangur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#um-essa-bok">1.1. Um þessa bók</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id1">1.1.1. Um þessa bók</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#afer">1.1.1.1. aðferð()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#hvernig-virkar-r">1.2. Hvernig virkar R?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#vinnulag-i-r-rstudio">1.3. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id2">1.3.1. Vinnulag í R/RStudio</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#verkefnautanumhald-i-rstudio">1.3.1.1. Verkefnautanumhald í Rstudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#slokkt-a-rstudio">1.3.1.2. Slökkt á Rstudio</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#aferir-skipanir-foll">1.4. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id3">1.4.1. Aðferðir/skipanir/föll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#help">1.4.1.1. help()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#help-search">1.4.1.2. help.search()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#rsitesearch">1.4.1.3. RSiteSearch()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#apropos">1.4.1.4. apropos()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#args">1.4.1.5. args()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#r-sem-vasareiknir">1.5. R sem vasareiknir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#r-pakkar">1.6. R-pakkar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli01.html#id4">1.6.1. R-pakkar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli01.html#install-packages">1.6.1.1. install.packages()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#r-a-islensku">1.7. R á íslensku</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#gogn">1.8. Gögn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#leiksvaei-fyrir-r-koa">1.9. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">2. Frá tilraun til gagna</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#skraning-gagna">2.1. Skráning gagna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#innlestur-gagna">2.2. Innlestur gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id1">2.2.1. Innlestur gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#read-table">2.2.1.1. read.table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#read-csv">2.2.1.2. read.csv()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#c">2.2.1.3. c()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#seq">2.2.1.4. seq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rep">2.2.1.5. rep()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#stasetning-skraa-ast">2.2.2. Staðsetning skráa<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#groft-yfirlit-gagna">2.3. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id2">2.3.1. Gróft yfirlit gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#view">2.3.1.1. View()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#names">2.3.1.2. names()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#head">2.3.1.3. head()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#str">2.3.1.4. str()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#length">2.3.1.5. length()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#dim">2.3.1.6. dim()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#vontun-maelinga">2.4. Vöntun mælinga</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id3">2.4.1. Vöntun mælinga</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#is-na">2.4.1.1. is.na()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#na-omit">2.4.1.2. na.omit()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#oraunhaefum-maelingum-breytt-i-na">2.4.1.3. Óraunhæfum mælingum breytt í NA</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#akvein-gildi-valin-ur-gagnatoflu">2.5. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id4">2.5.1. Ákveðin gildi valin úr gagnatöflu</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#slice">2.5.1.1. slice()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#filter">2.5.1.2. filter()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#which">2.5.1.3. which()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#grep">2.5.1.4. grep()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#koun-breyta">2.6. Kóðun breyta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#a-flokkabreytur-skilgreindar">2.6.1. A: Flokkabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#factor">2.6.1.1. factor()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#levels">2.6.1.2. levels()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#b-talnabreytum-skipt-upp-i-bil">2.6.2. B: Talnabreytum skipt upp í bil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#cut">2.6.2.1. cut()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#c-flokkar-sameinair">2.6.3. C: Flokkar sameinaðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#d-dagsetningabreytur-skilgreindar">2.6.4. D: Dagsetningabreytur skilgreindar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#as-date">2.6.4.1. as_date()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#e-leita-eftir-textastrengjum">2.6.5. E: Leitað eftir textastrengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#f-breytt-um-heiti-a-breytum">2.6.6. F: Breytt um heiti á breytum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rename">2.6.6.1. rename()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#g-vorpunum-beitt-a-talnabreytur">2.6.7. G: Vörpunum beitt á talnabreytur</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#umroun-gagna">2.7. Umröðun gagna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id5">2.7.1. Umröðun gagna</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#group-by">2.7.1.1. group_by()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#sort">2.7.1.2. sort()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#arrange">2.7.1.3. arrange()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#pivot-longer">2.7.1.4. pivot_longer()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#pivot-wider">2.7.1.5. pivot_wider()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#merge">2.7.1.6. merge()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fleiri-skipanir-fyrir-koun-breyta-ast">2.8. Fleiri skipanir fyrir kóðun breyta<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id6">2.8.1. Fleiri skipanir fyrir kóðun breyta<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#paste">2.8.1.1. paste()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#sprintf">2.8.1.2. sprintf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#separate">2.8.1.3. separate()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#substr">2.8.1.4. substr()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#fleiri-skipanir-fyrir-sameiningu-gagna-ast">2.9. Fleiri skipanir fyrir sameiningu gagna<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli02.html#id8">2.9.1. Fleiri skipanir fyrir sameiningu gagna<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#cbind">2.9.1.1. cbind()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli02.html#rbind">2.9.1.2. rbind()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#leiksvaei-fyrir-r-koa">2.10. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Myndræn framsetning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ggplot">3.1. ggplot()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#algengustu-grof">3.1.1. Algengustu gröf</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#punktarit">3.1.1.1. Punktarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stoplarit">3.1.1.2. Stöplarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stularit">3.1.1.3. Stuðlarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kassarit">3.1.1.4. Kassarit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#normaldreifingarrit">3.1.1.5. Normaldreifingarrit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#asar">3.1.2. Ásar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nofn-asa">3.1.2.1. Nöfn ása</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nofn-kvara">3.1.2.2. Nöfn kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hok-kvara">3.1.2.3. Hök kvarða</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mork-kvara">3.1.2.4. Mörk kvarða</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#litir-og-takn">3.1.3. Litir og tákn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grofum-skipt-upp-i-reiti">3.1.4. Gröfum skipt upp í reiti</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skipt-um-bakgrunn">3.1.5. Skipt um bakgrunn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#myndir-vistaar">3.1.6. Myndir vistaðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.1.6.1. Myndir vistaðar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ggsave">3.2. ggsave()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#leiksvaei-fyrir-r-koa">3.2.1. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">4. Lýsandi tölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#talnabreytur">4.1. Talnabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id1">4.1.1. Talnabreytur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#max">4.1.1.1. max()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#min">4.1.1.2. min()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#mija">4.1.2. Miðja</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#mean">4.1.2.1. mean()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#median">4.1.2.2. median()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#breytileiki">4.1.3. Breytileiki</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#var">4.1.3.1. var()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#sd">4.1.3.2. sd()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#quantile">4.1.3.3. quantile()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#samspil-tveggja-talnabreyta">4.1.4. Samspil tveggja talnabreyta</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#cor">4.1.4.1. cor()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#flokkabreytur">4.2. Flokkabreytur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#tini-og-hlutfall">4.2.1. Tíðni og hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#table">4.2.1.1. table()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#prop-table">4.2.1.2. prop.table()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#arar-gagnlegar-skipanir">4.3. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#id2">4.3.1. Aðrar gagnlegar skipanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#round">4.3.1.1. round()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#summary">4.3.1.2. summary()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#tapply">4.3.1.3. tapply()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli04.html#pipurtihattur">4.3.1.4. Pípurtiháttur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#leiksvaei-fyrir-r-koa">4.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">5. Líkindafræðileg undirstaða</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#likindareikningur">5.1. Líkindareikningur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id1">5.1.1. Líkindareikningur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#factorial">5.1.1.1. factorial()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#choose">5.1.1.2. choose()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#strjalar-likindadreifingar">5.2. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id2">5.2.1. Strjálar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dbinom">5.2.1.1. dbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pbinom">5.2.1.2. pbinom()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#dpois">5.2.1.3. dpois()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#ppois">5.2.1.4. ppois()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samfelldar-likindadreifingar">5.3. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#id3">5.3.1. Samfelldar líkindadreifingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pnorm">5.3.1.1. pnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qnorm">5.3.1.2. qnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#rnorm">5.3.1.3. rnorm()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pt">5.3.1.4. pt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qt">5.3.1.5. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pchisq">5.3.1.6. pchisq()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#id4">5.3.1.7. qt()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#pf">5.3.1.8. pf()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli05.html#qf">5.3.1.9. qf()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#leiksvaei-fyrir-r-koa">5.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">6. Ályktunartölfræði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#slembiurtok-valin">6.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id1">6.1.1. Slembiúrtök valin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#sample">6.1.1.1. sample()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">6.2. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli06.html#id2">6.2.1. Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli06.html#replicate">6.2.1.1. replicate()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#oryggisbil-reikna-me-endurvalsafer">6.3. Öryggisbil reiknað með endurvalsaðferð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#leiksvaei-fyrir-r-koa">6.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">7. Ályktanir um flokkabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-eitt-hlutfall">7.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id1">7.1.1. Ályktanir um eitt hlutfall</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#binom-test">7.1.1.1. binom.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-tvo-ea-fleiri-hlutfoll">7.2. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id2">7.2.1. Ályktanir um tvö eða fleiri hlutföll</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#prop-test">7.2.1.1. prop.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#alyktanir-um-tengslatoflur">7.3. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli07.html#id3">7.3.1. Ályktanir um tengslatöflur</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#chisq-test">7.3.1.1. chisq.test()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli07.html#fisher-test">7.3.1.2. fisher.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#leiksvaei-fyrir-r-koa">7.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">8. Ályktanir um talnabreytur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-dreifni">8.1. Ályktanir um dreifni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#dreifni-i-tveimur-yum">8.1.1. Dreifni í tveimur þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#var-test">8.1.1.1. var.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#dreifni-i-fleiri-yum">8.1.2. Dreifni í fleiri þýðum</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#bartlett-test">8.1.2.1. bartlett.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#alyktanir-um-mealtol">8.2. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id1">8.2.1. Ályktanir um meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#t-test">8.2.1.1. t.test()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-eitt-mealtal">8.2.2. Ályktanir um eitt meðaltal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-tveggja-mealtala">8.2.3. Ályktanir um mismun tveggja meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-fleiri-mealtala">8.2.4. Ályktanir um mismun fleiri meðaltala</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#alyktanir-um-mismun-mealtala-parara-maelinga">8.2.5. Ályktanir um mismun meðaltala paraðra mælinga</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#levene-prof-fyrir-dreifni-ast">8.3. Levene próf fyrir dreifni<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#stikalaus-prof-ast">8.4. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#id2">8.4.1. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli08.html#wilcox-test">8.4.1.1. wilcox.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#leiksvaei-fyrir-r-koa">8.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">9. Einþátta fervikagreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#alyktanir-um-tvo-ea-fleiri-mealtol">9.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id1">9.1.1. Ályktanir um tvö eða fleiri meðaltöl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#aov">9.1.1.1. aov()</a></li>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#anova">9.1.1.2. anova()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#eftiraprofanir">9.2. Eftiráprófanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id2">9.2.1. Eftiráprófanir</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#tukeyhsd">9.2.1.1. TukeyHSD()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#stikalaus-prof-ast">9.3. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#id3">9.3.1. Stikalaus próf<span class="math notranslate nohighlight">\(^\ast\)</span></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli09.html#kruskal-test">9.3.1.1. kruskal.test()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#fleiri-en-tveir-aettir-ast">9.4. Fleiri en tveir þættir<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#leiksvaei-fyrir-r-koa">9.5. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">10. Línuleg aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#linulegt-likan-smia">10.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id1">10.1.1. Línulegt líkan smíðað</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#lm">10.1.1.1. lm()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#oryggisbil-fyrir-stula-likansins">10.2. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id2">10.2.1. Öryggisbil fyrir stuðla líkansins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#confint">10.2.1.1. confint()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#matgaei-likansins-konnu">10.3. Mátgæði líkansins könnuð</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#spagildi-og-spabil">10.4. Spágildi og spábil</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#id3">10.4.1. Spágildi og spábil</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli10.html#predict">10.4.1.1. predict()</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#prof-a-fylgnistuli">10.5. Próf á fylgnistuðli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#strjal-skyribreyta">10.6. Strjál skýribreyta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fleiri-skyribreytur-ast">10.7. Fleiri skýribreytur<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#leiksvaei-fyrir-r-koa">10.8. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">11. Tvíkosta aðhvarfsgreining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#glm">11.1. glm()</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">11.1.1. Tvíkosta aðhvarfsgreining með samfellda skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#tvikosta-ahvarfsgreining-me-strjala-skyribreytu">11.1.2. Tvíkosta aðhvarfsgreining með strjála skýribreytu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli11.html#leiksvaei-fyrir-r-koa">11.1.3. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12.html">12. Knitr</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#umbrot-a-texta">12.1. Umbrot á texta</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#markdown-html-ea-docx">12.1.1. Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#latex-pdf-ast">12.1.2. LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#jofnur">12.2. Jöfnur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#klumpastillingar">12.3. Klumpastillingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#leiksvaei-fyrir-r-koa">12.4. Leiksvæði fyrir R kóða</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli13.html">13. Endurvalsaðferðir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#endurvalsafer-e-bootstrap-method">13.1. Endurvalsaðferð (e. Bootstrap method)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#oryggisbil-reiknu-me-endurvalsafer">13.1.1. Öryggisbil reiknuð með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli13.html#synidaemi">13.1.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#umraanaprof-e-permutation-test">13.2. Umraðanapróf (e. Permutation test)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli13.html#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer">13.2.1. Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="kafli13.html#id1">13.2.1.1. Sýnidæmi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ordalistar.html">Orðalistar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#islenskur-enskur-oralisti">Íslenskur-Enskur orðalisti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ordalistar.html#enskur-islenskur-oralisti">Enskur-íslenskur orðalisti</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_hofunda.html">Um höfunda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#anna-helga-jonsdottir">Anna Helga Jónsdóttir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#sigrun-helga-lund">Sigrún Helga Lund</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_hofunda.html#bjarki-or-elvarsson">Bjarki Þór Elvarsson</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="um_R_leiksvaedi.html">Um R leiksvæði</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#leiksvaein-eru-oflug">Leiksvæðin eru öflug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#datacamp">DataCamp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="um_R_leiksvaedi.html#vandamal-me-keyrslu">Vandamál með keyrslu</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">R frá grunni</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Myndræn framsetning</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/edbook/haskoli-islands/blob/main/projects/R_fra_grunni//projects/R_fra_grunni/kafli03.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="myndraen-framsetning">
+<span id="c-myndraen"></span><h1><span class="section-number">3. </span>Myndræn framsetning<a class="headerlink" href="#myndraen-framsetning" title="Permalink to this heading"></a></h1>
+<p>Myndræn framsetning er gífurlega mikilvæg á öllum stigum
+tölfræðiúrvinnslu. Með nokkrum gröfum má fljótt fá tilfinningu fyrir
+gögnum og því mælum alltaf með því fljótlega eftir innlestur gagna áður
+en lengra er haldið með frekari tölfræðiúrvinnslu. Sömuleiðis eru gröf
+oft og tíðum einstaklega heppileg til að setja fram niðurstöður
+rannsókna og að lokum gegna þau einnig mikilvægu hlutverki við að kanna
+hvort forsendur ýmissa tölfræðiprófa séu uppfylltar.</p>
+<p>Í grunnpakkanum sem fylgir R má finna ýmsar aðferðir til að búa til gröf
+(t.d. <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, <code class="docutils literal notranslate"><span class="pre">barplot()</span></code>, <code class="docutils literal notranslate"><span class="pre">boxplot()</span></code> og <code class="docutils literal notranslate"><span class="pre">histogram()</span></code>). Þær
+eru mjög auðveldar í notkun en gröfin sem þær skila eru ekki sérlega
+fögur. Það hefur færst mikið í vöxt að R-notendur noti aðferðir sem
+tilheyra pakka sem kallast <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> til að búa til gröf. Með honum má
+útbúa yndisfögur gröf og er hann umfjöllunarefni þessa kafla.</p>
+<p>Ólíkt því sem gengur og gerist munum við einungis nota eina aðferð
+<code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> en með henni fylgja ótalmargar viðbætur sem gera okkur
+kleift að teikna fjölbreytt gröf.</p>
+<section id="ggplot">
+<h2><span class="section-number">3.1. </span>ggplot()<a class="headerlink" href="#ggplot" title="Permalink to this heading"></a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn á gagnatöflu og nöfn á aðalbreytum grafsins</p>
+<p><strong>Úttak:</strong> graf</p>
+<p><strong>Helstu stillingar:</strong> ótalmargar!</p>
+</div>
+<hr class="docutils" />
+<p>Skipunin <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> er ætíð mötuð á sama hátt. Fyrst kemur nafnið á
+gagnatöflunni sem geymir gögnin, þá útlitsstillingin <code class="docutils literal notranslate"><span class="pre">aes()</span></code> og innan
+hennar nöfnin á aðalbreytum grafsins. Þar fyrir aftan kemur viðbót sem
+tilgreinir hvers konar graf skal teikna og einnig er hægt að bæta við
+ótal fleiri viðbótum til að merkja og breyta ásum, lagskipta grafinu
+eftir breytum og svo mætti lengi telja. Viðbætur bætast við með <code class="docutils literal notranslate"><span class="pre">+</span></code> í
+stað þess að vera mataðar inn í fallið. Það mun sjást í hverju dæmi hér
+fyrir neðan.</p>
+<p>Í þessum kafla munum við teikna algengustu gerðir grafa með viðbótunum
+<code class="docutils literal notranslate"><span class="pre">geom_point(),</span> <span class="pre">geom_bar(),</span> <span class="pre">geom_histogram(),</span> <span class="pre">geom_boxplot</span></code> og
+<code class="docutils literal notranslate"><span class="pre">stat_qq()</span></code>.</p>
+<section id="algengustu-grof">
+<h3><span class="section-number">3.1.1. </span>Algengustu gröf<a class="headerlink" href="#algengustu-grof" title="Permalink to this heading"></a></h3>
+<section id="punktarit">
+<h4><span class="section-number">3.1.1.1. </span>Punktarit<a class="headerlink" href="#punktarit" title="Permalink to this heading"></a></h4>
+<p>Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
+smíðuð með viðbótinni <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">geom_point()</span></code>. Eftirfarandi skipun gefur
+okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
+í gagnatöflunni <code class="docutils literal notranslate"><span class="pre">pokarotta</span></code>. Skýribreytan <code class="docutils literal notranslate"><span class="pre">heildarlengd</span></code> er á x-ás og
+svarbreytan <code class="docutils literal notranslate"><span class="pre">hofud_lengd</span></code> á y-ás, þær eru báðar tilgreindar inn í útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/punktarit1.svg" src="_images/punktarit1.svg" /></figure>
+</section>
+<section id="stoplarit">
+<h4><span class="section-number">3.1.1.2. </span>Stöplarit<a class="headerlink" href="#stoplarit" title="Permalink to this heading"></a></h4>
+<p>Stöplarit eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_bar</span></code>. Þar sem stöplarit
+eru einungis notuð til að lýsa einni breytu er aðeins sú breyta
+tilgreind inní <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/isBar.svg" src="_images/isBar.svg" /></figure>
+</section>
+<section id="stularit">
+<h4><span class="section-number">3.1.1.3. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Permalink to this heading"></a></h4>
+<p>Viðbótin <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> teiknar stuðlarit. Viljum við teikna
+stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> gerum við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/ferdatimiHist.svg" src="_images/ferdatimiHist.svg" /></figure>
+<p>Stilla má breidd súlnanna með <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> stillingunni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/ferdatimiHist10.svg" src="_images/ferdatimiHist10.svg" /></figure>
+</section>
+<section id="kassarit">
+<h4><span class="section-number">3.1.1.4. </span>Kassarit<a class="headerlink" href="#kassarit" title="Permalink to this heading"></a></h4>
+<p>Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
+eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_boxplot()</span></code>. Viljum við teikna
+kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">systkini_fjoldi</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code> gerum
+við það með:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">systkini_fjoldi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/systkiniIs.svg" src="_images/systkiniIs.svg" /></figure>
+<p>Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
+setja <code class="docutils literal notranslate"><span class="pre">factor(0)</span></code> inn sem eins konar gervibreytu. Neðangreind skipun
+teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> án lagskiptingar:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">factor</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/gerviIs.svg" src="_images/gerviIs.svg" /></figure>
+</section>
+<section id="normaldreifingarrit">
+<h4><span class="section-number">3.1.1.5. </span>Normaldreifingarrit<a class="headerlink" href="#normaldreifingarrit" title="Permalink to this heading"></a></h4>
+<p>Normaldreifingarrit eru gerð með viðbótinni <code class="docutils literal notranslate"><span class="pre">stat_qq()</span></code>.
+Normaldreifingarrit fyrir breytuna <code class="docutils literal notranslate"><span class="pre">hofud_lengd</span></code> fæst með:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">sample</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">stat_qq</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/normalPossum.svg" src="_images/normalPossum.svg" /></figure>
+<p>Takið eftir að nú stendur <code class="docutils literal notranslate"><span class="pre">sample=</span></code> í stað <code class="docutils literal notranslate"><span class="pre">x=</span></code> í <code class="docutils literal notranslate"><span class="pre">aes()</span></code>
+stillingunni.</p>
+</section>
+</section>
+<section id="asar">
+<h3><span class="section-number">3.1.2. </span>Ásar<a class="headerlink" href="#asar" title="Permalink to this heading"></a></h3>
+<section id="nofn-asa">
+<h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Permalink to this heading"></a></h4>
+<p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
+tilgreinir merkingu ása.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/isBarAsar.svg" src="_images/isBarAsar.svg" /></figure>
+<p>Við getum enn fremur merkt og stillt kvarðana á hvorum ás fyrir sig að
+vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
+<code class="docutils literal notranslate"><span class="pre">scale_x_continuous()</span></code> en sé hún strjál notum við
+<code class="docutils literal notranslate"><span class="pre">scale_x_discrete()</span></code>. Að sama skapi skiptum við <code class="docutils literal notranslate"><span class="pre">x</span></code> út fyrir <code class="docutils literal notranslate"><span class="pre">y</span></code>
+ef við viljum merkja og stilla kvarðana á y-ás.</p>
+</section>
+<section id="nofn-kvara">
+<h4><span class="section-number">3.1.2.2. </span>Nöfn kvarða<a class="headerlink" href="#nofn-kvara" title="Permalink to this heading"></a></h4>
+<p>Til að breyta heitum á kvörðum mötum við stillinguna <code class="docutils literal notranslate"><span class="pre">labels</span></code> með þeim
+heitum sem við viljum nota. Þannig merkjum við sem dæmi flokkana á
+stöplaritinu hér að ofan með viðbótinni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span> <span class="o">+</span>
+<span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/isBarAsarOgHok.svg" src="_images/isBarAsarOgHok.svg" /></figure>
+<p>Takið eftir einu til viðbótar. Hér skiptum við skipuninni upp í tvær
+línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
+plúsinn við enda línunnar. Ef plúsinn kemur í upphafi næstu línu er sú
+lína hunsuð og við fáum jafnvel villu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Uppáhalds ís&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span><span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
+<span class="c1">## Error in `+.gg`:</span>
+<span class="c1">## ! Cannot use `+` with a single argument.</span>
+<span class="c1">## ℹ Did you accidentally put `+` on a new line?</span>
+</pre></div>
+</div>
+</section>
+<section id="hok-kvara">
+<h4><span class="section-number">3.1.2.3. </span>Hök kvarða<a class="headerlink" href="#hok-kvara" title="Permalink to this heading"></a></h4>
+<p>Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
+með stillingunni <code class="docutils literal notranslate"><span class="pre">breaks()</span></code>. Viljum við sem dæmi láta merkingarnar á
+y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
+gerum við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="n">scale_y_continuous</span><span class="p">(</span><span class="n">breaks</span> <span class="o">=</span> <span class="n">seq</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">120</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/hokkvarda.svg" src="_images/hokkvarda.svg" /></figure>
+</section>
+<section id="mork-kvara">
+<h4><span class="section-number">3.1.2.4. </span>Mörk kvarða<a class="headerlink" href="#mork-kvara" title="Permalink to this heading"></a></h4>
+<p>Mörk kvarða eru stillt með viðbótunum <code class="docutils literal notranslate"><span class="pre">xlim()</span></code> og <code class="docutils literal notranslate"><span class="pre">ylim()</span></code>. Þær eru
+mataðar með endamörkum kvarðanna.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span>
+<span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="n">ylim</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">120</span><span class="p">)</span><span class="o">+</span><span class="n">xlim</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/lim.svg" src="_images/lim.svg" /></figure>
+</section>
+</section>
+<section id="litir-og-takn">
+<h3><span class="section-number">3.1.3. </span>Litir og tákn<a class="headerlink" href="#litir-og-takn" title="Permalink to this heading"></a></h3>
+<p>Litir og tákn eru góðar leið til að lagskipta gröfum. Í <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> eru
+tvenns konar leiðir til að lita. Annars vegar með að lita punktana eða
+línurnar á grafinu sjálfu en þá er notuð stillingin <code class="docutils literal notranslate"><span class="pre">color</span></code>. Hins
+vegar má fylla upp í fleti á grafinu með stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>.
+Stillingarnar eru tilgreindar inní útlitsstillingunni <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
+<p>Við getum lagskipt punktaritinu yfir hæð og þyngd nemenda eftir kynjum
+pokarotta með því að lita punktana ólíkt eftir því hvoru kyninu pokarotta
+tilheyrir. Það er því gert með stillingunni <code class="docutils literal notranslate"><span class="pre">color</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/kynlitur.svg" src="_images/kynlitur.svg" /></figure>
+<p>Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
+eftir því hvort þeir nota iOS eða Android gerum við það með
+stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>, því þá viljum við lita fleti grafsins ólíkt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/isBarStyrikerfi.svg" src="_images/isBarStyrikerfi.svg" /></figure>
+<p>Ef við bætum stillingunni <code class="docutils literal notranslate"><span class="pre">position=’dodge’</span></code> inní viðbótina
+<code class="docutils literal notranslate"><span class="pre">geom_bar()</span></code> koma stöplar grafsins hvor við hliðina á öðrum:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;dodge&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/isBarStyrikerfiDodge.svg" src="_images/isBarStyrikerfiDodge.svg" /></figure>
+<p>Oft eru tákn heppilegri en litir til að lagskipta gröfum. Til dæmis geta
+litmyndir verið dýrar í tímaritum og svart-hvítar lausnir því heppilegri
+kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn með
+því að nota <code class="docutils literal notranslate"><span class="pre">shape</span></code> á sama hátt og <code class="docutils literal notranslate"><span class="pre">color</span></code> var notað hér að ofan:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="n">kyn</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/kynform.svg" src="_images/kynform.svg" /></figure>
+</section>
+<section id="grofum-skipt-upp-i-reiti">
+<h3><span class="section-number">3.1.4. </span>Gröfum skipt upp í reiti<a class="headerlink" href="#grofum-skipt-upp-i-reiti" title="Permalink to this heading"></a></h3>
+<p>Önnur góð leið til að lagskipta gröfum er með því að skipta þeim upp í
+reiti. Það er gert með skipuninni <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code>. Hægt er að skipta
+gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.</p>
+<p>Viljum við skipta punktaritinu yfir lengd pokarotta og lengd hala þeirra
+upp eftir því hvaðan þær eru gerum við það með skipuninni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">tegund</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/tegundfacet.svg" src="_images/tegundfacet.svg" /></figure>
+<p>Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
+og hvaðan þær eru gerum við það með:
+Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
+og hvaðan þær eru gerum við það með:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kyntegund</span><span class="o">&lt;-</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span> <span class="o">+</span>
+<span class="n">facet_grid</span><span class="p">(</span><span class="n">kyn</span><span class="o">~</span><span class="n">tegund</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/kyntegund.svg" src="_images/kyntegund.svg" /></figure>
+<p>Svo mætti hæglega halda áfram og lagskipta með bæði reitaskiptingu og táknum í sama
+grafinu.</p>
+</section>
+<section id="skipt-um-bakgrunn">
+<h3><span class="section-number">3.1.5. </span>Skipt um bakgrunn<a class="headerlink" href="#skipt-um-bakgrunn" title="Permalink to this heading"></a></h3>
+<p>Grái, sjálfgefni, bakgrunnurinn á ggplot gröfum getur stundum verið
+óviðeigandi og vilja margir hafa hvítan bakgrunn þess í stað. Til eru
+tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
+<code class="docutils literal notranslate"><span class="pre">theme_bw()</span></code> og gefur þessa niðurstöðu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+<span class="o">+</span> <span class="n">theme_bw</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/pokarottamynd.svg" src="_images/pokarottamynd.svg" /></figure>
+<p>sú seinni er <code class="docutils literal notranslate"><span class="pre">theme_classic()</span></code> og gefur þessa niðurstöðu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+<span class="o">+</span> <span class="n">theme_classic</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/classic.svg" src="_images/classic.svg" /></figure>
+</section>
+<section id="myndir-vistaar">
+<h3><span class="section-number">3.1.6. </span>Myndir vistaðar<a class="headerlink" href="#myndir-vistaar" title="Permalink to this heading"></a></h3>
+<section id="id1">
+<h4><span class="section-number">3.1.6.1. </span>Myndir vistaðar<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Til að geyma myndirnar sem við búum til, veljið <code class="docutils literal notranslate"><span class="pre">Plots</span></code> flipann í
+neðra vinstra glugganum í RStudio myndina og veljið þar <code class="docutils literal notranslate"><span class="pre">Export</span></code>. Þar
+má velja <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> eða <code class="docutils literal notranslate"><span class="pre">.jpg/.png/.eps</span></code> skrá.</p>
+</section>
+</section>
+</section>
+<section id="ggsave">
+<h2><span class="section-number">3.2. </span>ggsave()<a class="headerlink" href="#ggsave" title="Permalink to this heading"></a></h2>
+<div class="admonition attention">
+<p class="admonition-title">Athugið</p>
+<p><strong>Inntak:</strong> nafn grafsins</p>
+<p><strong>Inntak:</strong> vistað graf á því sniði sem er búið að tilgreina</p>
+<p><strong>Helstu stillingar:</strong> plot, width, height, dpi</p>
+</div>
+<hr class="docutils" />
+<p>Einnig vistar skipunin <code class="docutils literal notranslate"><span class="pre">ggsave()</span></code> það graf sem er á skjánum því sinni
+undir því nafni sem þið gefið. Sú skipun er mjög handhæg t.d. þegar mörg
+gröf eru teiknuð, þá eru engir músarsmellir nauðsynlegir. Skipunin hefur
+m.a. stillinguna <code class="docutils literal notranslate"><span class="pre">plot</span></code> og þá vistar hún ekki grafið á skjánum, heldur
+grafið sem er vistað undir því nafni sem við tilgreinum stillingunni. Ef
+við viljum vista grafið á skjánum á <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> sniði undir nafninu
+<code class="docutils literal notranslate"><span class="pre">graf</span></code> gefum við skipunina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ef við viljum vista grafið á <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> sniði gefum við skipunina</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.pdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>og ef við viljum ekki vista grafið á skjánum, heldur graf sem við höfum
+vistað sem hlut undir nafninu <code class="docutils literal notranslate"><span class="pre">mynd1</span></code> þá gefum við skipunina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.pdf&#39;</span><span class="p">,</span> <span class="n">mynd1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Að lokum eru til aðrar aðferðir til að vista myndar, svo sem <code class="docutils literal notranslate"><span class="pre">pdf()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">jpeg()</span></code>, <code class="docutils literal notranslate"><span class="pre">postscript()</span></code> og fleiri. Kannið hjálpina fyrir þessar
+aðferðir.</p>
+<section id="leiksvaei-fyrir-r-koa">
+<h3><span class="section-number">3.2.1. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h3>
+<p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
+<div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
+puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
+
+# Setjid ykkar eigin koda her fyrir nedan:
+# Sem daemi, skipunin head(puls) skilar fyrstu nokkrar radirnar i gognunum
+# asamt dalkarheitum.
+head(puls)</code></div></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli02.html" class="btn btn-neutral float-left" title="2. Frá tilraun til gagna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="kafli04.html" class="btn btn-neutral float-right" title="4. Lýsandi tölfræði" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
+      <span class="lastupdated">Síðast uppfært 2026-02-12 16:49.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>   
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+    /* Sidebar */
+    
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+</body>
+</html>

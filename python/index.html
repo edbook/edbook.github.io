@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="is" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fyrirlestrarnótur um Python &mdash; Fyrirlestrarnótur um Python 2021</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/css/python.css?v=3b593547" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=5ba13d6b" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c7d967d5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+
+<!-- hoverrole.py css code -->
+<style type="text/css">
+    a.tooltip {
+        outline: none;
+        border-bottom: thin dotted;
+        background: #ffeedd
+    }
+
+    a.tooltip strong {
+        line-height: 30px;
+    }
+
+    a.tooltip:hover {
+        text-decoration: none;
+    }
+
+    a.tooltip span {
+        z-index: 10;
+        display: none;
+        padding: 14px 20px;
+        margin-top: -30px;
+        margin-left: 12px;
+        width: 310px;
+        line-height: 16px;
+    }
+
+    a.tooltip:hover span {
+        display: inline;
+        position: absolute;
+        color: #111;
+        border: 1px solid #DCA;
+        background: #fffAF0;
+    }
+
+    .callout {
+        z-index: 20;
+        position: absolute;
+        top: 30px;
+        border: 0;
+        left: -12px;
+    }
+
+    /*CSS3*/
+    a.tooltip span {
+        border-radius: 4px;
+        box-shadow: 5px 5px 8px #CCC;
+    }
+</style>
+<!-- End hoverrole.py css code -->
+
+<style type="text/css">
+    .sagecell .CodeMirror-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .sagecell .CodeMirror {
+        height: auto;
+    }
+
+    /* - Begin equation reference style - */
+    h6.eqno {
+        display: inline-block;
+        padding-left: 10px;
+    }
+
+    h6 .headerlink {
+        display: inline-block !important;
+    }
+
+    h6 .headerlink:after {
+        visibility: hidden !important;
+    }
+
+    h6 .headerlink:hover:after {
+        visibility: visible !important;
+    }
+
+    .eqno:hover>.headerlink:after {
+        visibility: visible !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    table>caption>.headerlink {
+        visibility: hidden !important;
+    }
+
+    /* - End - */
+</style>
+<style type="text/css">
+    /* .ace_content .ace_layer .ace_line_group .ace_line * { */
+    /*     font-size: 15px !important; */
+    /* } */
+    /* div[class^='highlight'] pre {font-size:15px} */
+    div.code-block-caption {
+        margin-bottom: 4px
+    }
+</style>
+
+    <link rel="index" title="Atriðaskrá" href="genindex.html" />
+    <link rel="search" title="Leit" href="search.html" />
+    <link rel="next" title="1 Inngangur: Um Python." href="kafli01.html" />
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+
+ 
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Fyrirlestrarnótur um Python
+              <img src="_static/haskoli_islands-edbook.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">Inngangur: Um Python.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">Dæmi um Python forrit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">Umhverfi fyrir Python: Jupyter og Colab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">Grunnatriði Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">Söfn: Eitt nafn en mörg gildi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">Helstu aðgerðir fyrir söfn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">Uppflettitöflur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">Skrár</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">Teikning með Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">NumPy pakkinn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">Reiknað með fylkjum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12.html">Dæmi um hagnýtingu fylkjareikninga</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli13.html">Slembitölur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli14.html">Millikafli: Um reiknifræði og gagnavísindi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli15.html">Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kafli16.html">Hlutbundin forritun</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="verkefnafyrirsogn.html">V E R K E F N I</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Fyrirlestrarnótur um Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Fyrirlestrarnótur um Python</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fyrirlestrarnotur-um-python">
+<h1>Fyrirlestrarnótur um Python<a class="headerlink" href="#fyrirlestrarnotur-um-python" title="Link to this heading"></a></h1>
+<p>Höfundur efnis: Kristján Jónasson</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kafli01.html">Inngangur: Um Python.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#einfalt-og-aulaert-mal">Einfalt og auðlært mál</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#fallasafn-og-pakkar">Fallasafn og pakkar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#utbreisla">Útbreiðsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#framkvaemd-forrita">Framkvæmd forrita</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#umhverfi-til-a-skrifa-python-forrit">Umhverfi til að skrifa Python-forrit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#gildi-eru-togu-en-breytur-ekki">Gildi eru töguð en breytur ekki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli01.html#python-leibeiningar-a-netinu">Python-leiðbeiningar á netinu</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli02.html">Dæmi um Python forrit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#tafla-yfir-veldi">Tafla yfir veldi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#collatz-runur">Collatz-runur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#forrit-fyrir-collatz-runur">Forrit fyrir Collatz-runur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli02.html#python-atrii-sem-koma-fyrir-i-forritinu-collatz">Python atriði sem koma fyrir í forritinu Collatz</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli03.html">Umhverfi fyrir Python: Jupyter og Colab</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#notkun-google-colab">Notkun Google Colab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#uppsetning-jupyterlab-a-eigin-tolvu">Uppsetning JupyterLab á eigin tölvu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#vinnubaekur">Vinnubækur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#colab-og-jupyterlab-skipanir">Colab og JupyterLab skipanir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#vistun-vinnuboka-a-pdf-snii">Vistun vinnubóka á PDF-sniði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#markdown-og-latex">Markdown og Latex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli03.html#colab-og-jupyterlab-leibeiningar-a-netinu">Colab- og JupyterLab-leiðbeiningar á netinu</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli04.html">Grunnatriði Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#breytur-og-tog">Breytur og tög</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#agerir-og-virkjar">Aðgerðir og virkjar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#gildisgjof">Gildisgjöf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#utprentun-og-innlestur">Útprentun og innlestur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#f-strengir">F-strengir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#foll-notanda-ny-foll">Föll notanda (ný föll)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#hvernig-virka-foll">Hvernig virka föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#innbygg-foll">Innbyggð föll</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#fallbreytur">Fallbreytur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#styriskipanir">Stýriskipanir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#ef-setningar">Ef-setningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#for-lykkjur">For-lykkjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#while-lykkjur">While-lykkjur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli04.html#skipanirnar-continue-og-break">Skipanirnar <em>continue</em> og <em>break</em></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#skilyrt-gildi">Skilyrt gildi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli04.html#lokaaefingin">Lokaæfingin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli05.html">Söfn: Eitt nafn en mörg gildi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#inngangur">Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#strengir">Strengir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#listar">Listar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#listaagerir">Listaaðgerðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#visa-i-stok">Vísað í stök</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#samskeyting-og-margfoldun">Samskeyting og margföldun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#gildisgjof-gefur-tilvisun">Gildisgjöf gefur tilvísun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#baett-vi-lista">Bætt við lista</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#aferir">Aðferðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli05.html#fleiri-listafoll">Fleiri listaföll</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#samstaeur">Samstæður</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#mengi">Mengi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli05.html#itrarar">Ítrarar</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli06.html">Helstu aðgerðir fyrir söfn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#foll-til-a-bua-til-sofn-ea-breyta-tegund-safns">Föll til að búa til söfn eða breyta tegund safns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#agerir-sem-duga-a-oll-sofn">Aðgerðir sem duga á öll söfn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#foll-sem-duga-a-sofn-af-tolum-ea-rokgildum">Föll sem duga á söfn af tölum eða rökgildum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#agerir-sem-duga-a-allar-runur">Aðgerðir sem duga á allar runur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#foll-sem-duga-bara-a-lista">Föll sem duga bara á lista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#for-lykkjur-og-sofn">For-lykkjur og söfn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli06.html#yfirgrip-comprehension">Yfirgrip (<em>comprehension</em>)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli07.html">Uppflettitöflur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#viskiptavinaskra-a-pappir">Viðskiptavinaskrá á pappír</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#igildi-spjaldskrar-i-tolvu">Ígildi spjaldskrár í tölvu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#varpanir-i-staerfraei">Varpanir í stærðfræði</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#oranotkun">Orðanotkun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#agerir-og-utfaersla">Aðgerðir og útfærsla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#uppflettitoflur-i-python">Uppflettitöflur í Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#helstu-python-agerir-fyrir-uppflettitoflur">Helstu Python-aðgerðir fyrir uppflettitöflur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli07.html#yfirgrip-fyrir-uppflettitoflur">Yfirgrip fyrir uppflettitöflur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli08.html">Skrár</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#yfirlit">Yfirlit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#innlestur-skraa">Innlestur skráa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#linuskiptatakn">Línuskiptatákn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#with-skipun">With-skipun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#hefbundinn-innlestur-textaskrar-af-diski">Hefðbundinn innlestur textaskrár af diski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#innlestur-textaskrar-af-vefnum">Innlestur textaskrár af vefnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#uppflettitafla-lesin-ur-skra">Uppflettitafla lesin úr skrá</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#csv-skrar">CSV-skrár</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#daemi-um-csv-skra">Dæmi um CSV-skrá</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#innlestur-me-pakkanum-csv">Innlestur með pakkanum csv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#csv-lestur-ur-lista-af-strengjum">CSV-lestur úr lista af strengjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#csv-skra-lesin-af-vefnum">CSV-skrá lesin af vefnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#skrar-afmarkaar-me-bilum">Skrár afmarkaðar með bilum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#na-i-dalk-i-csv-skra">Náð í dálk í CSV-skrá</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#skrar-skrifaar-ut">Skrár skrifaðar út</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli08.html#skraakerfi">Skráakerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#mopputre">Möpputré</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#heimamappa">Heimamappa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#nuverandi-mappa">Núverandi mappa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#sloir">Slóðir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli08.html#einingin-pathlib">Einingin pathlib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli09.html">Teikning með Matplotlib</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#inngangur">Inngangur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#einfaldar-myndir">Einfaldar myndir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#undirbuningur-teikningar">Undirbúningur teikningar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#punktarit-og-linurit">Punktarit og línurit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#sulurit">Súlurit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#teikningar-af-gognum-i-skram">Teikningar af gögnum í skrám</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#innlestur-talnagagna-i-dalkum">Innlestur talnagagna í dálkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-teikningu-talnagagna">Dæmi um teikningu talnagagna</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#toflur-yfir-matplotlib-skipanir">Töflur yfir Matplotlib-skipanir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#rju-daemi-um-teikningar">Þrjú dæmi um teikningar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-plot">Dæmi um plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-legend">Dæmi um legend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#daemi-um-hist">Dæmi um hist</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli09.html#teikning-af-grofum-falla">Teikning af gröfum falla</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#einfalt-graf">Einfalt graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#finna-graf">Fínna graf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#kosinus-baett-vi">Kósínus bætt við</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli09.html#graf-visisfallsins-exp-x">Graf vísisfallsins exp(x)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli10.html">NumPy pakkinn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#inngangur">Inngangur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#vigrar-og-fylki-i-staerfraei">Vigrar og fylki í stærðfræði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#um-ori-fylki">Um orðið Fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#import-skipanir-fyrir-numpy">Import-skipanir fyrir NumPy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#vigrar-i-numpy">Vigrar í NumPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#vigur-gefi-gildi">Vigur gefið gildi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#einstok-stok-og-hlutvigrar">Einstök stök og hlutvigrar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#einfold-utprentun-vigra">Einföld útprentun vigra</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#foll-af-vigrum">Föll af vigrum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#aferir-i-sta-falla">Aðferðir í stað falla</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#foll-til-a-bua-til-vigra">Föll til að búa til vigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#utreikningur-me-vigrum">Útreikningur með vigrum</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#reikna-me-vigrum-i-staerfraei">Reiknað með vigrum í stærðfræði</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#plus-minus-margfoldun-og-deiling-i-numpy">Plús, mínus, margföldun og deiling í NumPy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#venjulegum-staerfraeifollum-beitt-a-vigra">Venjulegum stærðfræðiföllum beitt á vigra</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#rokvigrar-og-rokvisun">Rökvigrar og rökvísun</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#rokvigrar-logical-vectors">Rökvigrar (<em>logical vectors</em>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#rokvisun-logical-indexing">Rökvísun (<em>logical indexing</em>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#stakvisir-rokvirkjar">Stakvísir rökvirkjar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#fylki-i-numpy">Fylki í NumPy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#fylki-er-listi-af-listum">Fylki er listi af listum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#stok-fylkis-linur-og-dalkar">Stök fylkis, línur og dálkar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#nullfylki">Núllfylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#bylting">Bylting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#afpokkun">Afpökkun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#foll-af-fylkjum">Föll af fylkjum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#foll-til-a-bua-til-fylki">Föll til að búa til fylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#breytt-um-logun">Breytt um lögun</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#utskrift-vigra-og-fylkja">Útskrift vigra og fylkja</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#utprentun-a-skja">Útprentun á skjá</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#stjorn-utprentunar">Stjórn útprentunar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#utprentun-me-savetxt">Útprentun með <em>savetxt</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#utskrift-i-skra">Útskrift í skrá</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#innlestur-ur-skram">Innlestur úr skrám</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#talnalestur">Talnalestur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#innlestur-skraa-me-textadalkum">Innlestur skráa með textadálkum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli10.html#csv-skar-ur-excel">CSV-skár úr Excel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli10.html#listi-yfir-skrar-a-cs-hi-is-python">Listi yfir skrár á cs.hi.is/python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli11.html">Reiknað með fylkjum</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#grunnreikniagerir">Grunnreikniaðgerðir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#nullfylki-og-einingafylki">Núllfylki og einingafylki</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#lausn-jofnuhneppa">Lausn jöfnuhneppa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#jofnuhneppi-me-n-oekktum">Jöfnuhneppi með n óþekktum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli11.html#andhverfur-og-akveur">Andhverfur og ákveður</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli12.html">Dæmi um hagnýtingu fylkjareikninga</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#fylkjamargfoldun-og-tolvugrafik">Fylkjamargföldun og tölvugrafík</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#fylki-og-net">Fylki og net</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#grannafylki">Grannafylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#vegir-i-netum">Vegir í netum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#legufylki">Legufylki</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#flaeinet">Flæðinet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#lindir-og-osar">Lindir og ósar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#hamarksflaei">Hámarksflæði</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli12.html#linuleg-hreyfikerfi">Línuleg hreyfikerfi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#skilgreining-linulegra-hreyfikerfa">Skilgreining línulegra hreyfikerfa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#roun-mannfjolda-ea-stofnstaerar">Þróun mannfjölda eða stofnstærðar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#diffurjafna-fyrir-hreyfingu-hlutar">Diffurjafna fyrir hreyfingu hlutar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli12.html#diffurjofnu-breytt-i-linulegt-hreyfikerfi">Diffurjöfnu breytt í línulegt hreyfikerfi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli13.html">Slembitölur</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#random-einingin">Random-einingin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#slembitolur-me-numpy">Slembitölur með NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#upphafsstilling-slembitalna">Upphafsstilling slembitalna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#slembiro-og-slembiurtak">Slembiröð og slembiúrtak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli13.html#gervigogn-og-ahvarf">Gervigögn og aðhvarf</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli14.html">Millikafli: Um reiknifræði og gagnavísindi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#hva-eru-reiknifraei-og-gagnavisindi">Hvað eru reiknifræði og gagnavísindi?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#undirgreinar-reiknifraei-og-gagnavisinda">Undirgreinar reiknifræði og gagnavísinda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli14.html#python-pakkar-fyrir-visindalega-reikninga">Python-pakkar fyrir vísindalega reikninga</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli15.html">Pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#pandas-gogn">Pandas gögn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#smii-gagnatafla">Smíði gagnatafla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#helstu-pandas-skipanir">Helstu Pandas-skipanir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#innbygg-python-foll-og-pandas">Innbyggð Python föll og Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#pandas-og-teikningar">Pandas og teikningar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#fleiri-pandas-aefingar">Fleiri Pandas æfingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli15.html#punktrithattur">Punktritháttur</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kafli16.html">Hlutbundin forritun</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="kafli16.html#um-hlutbundna-forritun">Um hlutbundna forritun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kafli16.html#hlutbundin-forritun-i-python">Hlutbundin forritun í Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#skilgreining-klasa">Skilgreining klasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#notkun-klasa">Notkun klasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#daemi-um-hlutbundna-forritun-dimmer">Dæmi um hlutbundna forritun: Dimmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#lifandi-matplotlib-mynd">Lifandi Matplotlib mynd</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="kafli16.html#erfir-i-python">Erfðir í Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#utfaersla-flatarmyndaklasa">Útfærsla flatarmyndaklasa</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kafli16.html#retthyrningur-sem-snyst">Rétthyrningur sem snýst</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="verkefnafyrirsogn.html">V E R K E F N I</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kafli01.html" class="btn btn-neutral float-right" title="1 Inngangur: Um Python." accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p></p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<style>
+    /* Sidebar header (and topbar for mobile) */
+    .wy-side-nav-search,
+    .wy-nav-top {
+        background: #10099F;
+    }
+
+    /* Sidebar */
+    .wy-nav-side {
+        background: #262626;
+    }
+</style>
+
+
+
+
+</body>
+</html>

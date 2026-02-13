@@ -1,31 +1,31 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3. Myndræn framsetning &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -631,7 +631,7 @@
            <div itemprop="articleBody">
              
   <section id="myndraen-framsetning">
-<span id="c-myndraen"></span><h1><span class="section-number">3. </span>Myndræn framsetning<a class="headerlink" href="#myndraen-framsetning" title="Permalink to this heading"></a></h1>
+<span id="c-myndraen"></span><h1><span class="section-number">3. </span>Myndræn framsetning<a class="headerlink" href="#myndraen-framsetning" title="Link to this heading"></a></h1>
 <p>Myndræn framsetning er gífurlega mikilvæg á öllum stigum
 tölfræðiúrvinnslu. Með nokkrum gröfum má fljótt fá tilfinningu fyrir
 gögnum og því mælum alltaf með því fljótlega eftir innlestur gagna áður
@@ -649,7 +649,7 @@ tilheyra pakka sem kallast <code class="docutils literal notranslate"><span clas
 <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> en með henni fylgja ótalmargar viðbætur sem gera okkur
 kleift að teikna fjölbreytt gröf.</p>
 <section id="ggplot">
-<h2><span class="section-number">3.1. </span>ggplot()<a class="headerlink" href="#ggplot" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1. </span>ggplot()<a class="headerlink" href="#ggplot" title="Link to this heading"></a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á gagnatöflu og nöfn á aðalbreytum grafsins</p>
@@ -669,9 +669,9 @@ fyrir neðan.</p>
 <code class="docutils literal notranslate"><span class="pre">geom_point(),</span> <span class="pre">geom_bar(),</span> <span class="pre">geom_histogram(),</span> <span class="pre">geom_boxplot</span></code> og
 <code class="docutils literal notranslate"><span class="pre">stat_qq()</span></code>.</p>
 <section id="algengustu-grof">
-<h3><span class="section-number">3.1.1. </span>Algengustu gröf<a class="headerlink" href="#algengustu-grof" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.1. </span>Algengustu gröf<a class="headerlink" href="#algengustu-grof" title="Link to this heading"></a></h3>
 <section id="punktarit">
-<h4><span class="section-number">3.1.1.1. </span>Punktarit<a class="headerlink" href="#punktarit" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.1.1. </span>Punktarit<a class="headerlink" href="#punktarit" title="Link to this heading"></a></h4>
 <p>Punktarit eru einföld og skýr leið til að setja fram gögn. Þau eru
 smíðuð með viðbótinni <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">geom_point()</span></code>. Eftirfarandi skipun gefur
 okkur punktarit sem lýsir sambandi heildarlengdar og lengdar höfuðs pokarotta
@@ -681,10 +681,11 @@ svarbreytan <code class="docutils literal notranslate"><span class="pre">hofud_l
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/punktarit1.svg" src="_images/punktarit1.svg" /></figure>
+<img alt="_images/punktarit1.svg" src="_images/punktarit1.svg" />
+</figure>
 </section>
 <section id="stoplarit">
-<h4><span class="section-number">3.1.1.2. </span>Stöplarit<a class="headerlink" href="#stoplarit" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.1.2. </span>Stöplarit<a class="headerlink" href="#stoplarit" title="Link to this heading"></a></h4>
 <p>Stöplarit eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_bar</span></code>. Þar sem stöplarit
 eru einungis notuð til að lýsa einni breytu er aðeins sú breyta
 tilgreind inní <code class="docutils literal notranslate"><span class="pre">aes()</span></code>.</p>
@@ -692,26 +693,29 @@ tilgreind inní <code class="docutils literal notranslate"><span class="pre">aes
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/isBar.svg" src="_images/isBar.svg" /></figure>
+<img alt="_images/isBar.svg" src="_images/isBar.svg" />
+</figure>
 </section>
 <section id="stularit">
-<h4><span class="section-number">3.1.1.3. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.1.3. </span>Stuðlarit<a class="headerlink" href="#stularit" title="Link to this heading"></a></h4>
 <p>Viðbótin <code class="docutils literal notranslate"><span class="pre">geom_histogram()</span></code> teiknar stuðlarit. Viljum við teikna
 stuðlarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> gerum við það með skipuninni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/ferdatimiHist.svg" src="_images/ferdatimiHist.svg" /></figure>
+<img alt="_images/ferdatimiHist.svg" src="_images/ferdatimiHist.svg" />
+</figure>
 <p>Stilla má breidd súlnanna með <code class="docutils literal notranslate"><span class="pre">binwidth</span></code> stillingunni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_histogram</span><span class="p">(</span><span class="n">binwidth</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/ferdatimiHist10.svg" src="_images/ferdatimiHist10.svg" /></figure>
+<img alt="_images/ferdatimiHist10.svg" src="_images/ferdatimiHist10.svg" />
+</figure>
 </section>
 <section id="kassarit">
-<h4><span class="section-number">3.1.1.4. </span>Kassarit<a class="headerlink" href="#kassarit" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.1.4. </span>Kassarit<a class="headerlink" href="#kassarit" title="Link to this heading"></a></h4>
 <p>Kassarit eru mjög hentug til að bera saman dreifingu tveggja breyta. Þau
 eru tilgreind með viðbótinni <code class="docutils literal notranslate"><span class="pre">geom_boxplot()</span></code>. Viljum við teikna
 kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">systkini_fjoldi</span></code> lagskipt eftir breytunni <code class="docutils literal notranslate"><span class="pre">is</span></code> gerum
@@ -720,7 +724,8 @@ við það með:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/systkiniIs.svg" src="_images/systkiniIs.svg" /></figure>
+<img alt="_images/systkiniIs.svg" src="_images/systkiniIs.svg" />
+</figure>
 <p>Hægt er að teikna kassarit af einni breytu án lagskiptingar með því að
 setja <code class="docutils literal notranslate"><span class="pre">factor(0)</span></code> inn sem eins konar gervibreytu. Neðangreind skipun
 teiknar kassarit af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> án lagskiptingar:</p>
@@ -728,32 +733,35 @@ teiknar kassarit af breytunni <code class="docutils literal notranslate"><span c
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/gerviIs.svg" src="_images/gerviIs.svg" /></figure>
+<img alt="_images/gerviIs.svg" src="_images/gerviIs.svg" />
+</figure>
 </section>
 <section id="normaldreifingarrit">
-<h4><span class="section-number">3.1.1.5. </span>Normaldreifingarrit<a class="headerlink" href="#normaldreifingarrit" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.1.5. </span>Normaldreifingarrit<a class="headerlink" href="#normaldreifingarrit" title="Link to this heading"></a></h4>
 <p>Normaldreifingarrit eru gerð með viðbótinni <code class="docutils literal notranslate"><span class="pre">stat_qq()</span></code>.
 Normaldreifingarrit fyrir breytuna <code class="docutils literal notranslate"><span class="pre">hofud_lengd</span></code> fæst með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">sample</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">stat_qq</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/normalPossum.svg" src="_images/normalPossum.svg" /></figure>
+<img alt="_images/normalPossum.svg" src="_images/normalPossum.svg" />
+</figure>
 <p>Takið eftir að nú stendur <code class="docutils literal notranslate"><span class="pre">sample=</span></code> í stað <code class="docutils literal notranslate"><span class="pre">x=</span></code> í <code class="docutils literal notranslate"><span class="pre">aes()</span></code>
 stillingunni.</p>
 </section>
 </section>
 <section id="asar">
-<h3><span class="section-number">3.1.2. </span>Ásar<a class="headerlink" href="#asar" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.2. </span>Ásar<a class="headerlink" href="#asar" title="Link to this heading"></a></h3>
 <section id="nofn-asa">
-<h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Link to this heading"></a></h4>
 <p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
 tilgreinir merkingu ása.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/isBarAsar.svg" src="_images/isBarAsar.svg" /></figure>
+<img alt="_images/isBarAsar.svg" src="_images/isBarAsar.svg" />
+</figure>
 <p>Við getum enn fremur merkt og stillt kvarðana á hvorum ás fyrir sig að
 vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
 <code class="docutils literal notranslate"><span class="pre">scale_x_continuous()</span></code> en sé hún strjál notum við
@@ -761,7 +769,7 @@ vild. Séum við að merkja samfellda breytu á x-ás notum við viðbótina
 ef við viljum merkja og stilla kvarðana á y-ás.</p>
 </section>
 <section id="nofn-kvara">
-<h4><span class="section-number">3.1.2.2. </span>Nöfn kvarða<a class="headerlink" href="#nofn-kvara" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.2.2. </span>Nöfn kvarða<a class="headerlink" href="#nofn-kvara" title="Link to this heading"></a></h4>
 <p>Til að breyta heitum á kvörðum mötum við stillinguna <code class="docutils literal notranslate"><span class="pre">labels</span></code> með þeim
 heitum sem við viljum nota. Þannig merkjum við sem dæmi flokkana á
 stöplaritinu hér að ofan með viðbótinni:</p>
@@ -770,7 +778,8 @@ stöplaritinu hér að ofan með viðbótinni:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/isBarAsarOgHok.svg" src="_images/isBarAsarOgHok.svg" /></figure>
+<img alt="_images/isBarAsarOgHok.svg" src="_images/isBarAsarOgHok.svg" />
+</figure>
 <p>Takið eftir einu til viðbótar. Hér skiptum við skipuninni upp í tvær
 línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
 plúsinn við enda línunnar. Ef plúsinn kemur í upphafi næstu línu er sú
@@ -784,7 +793,7 @@ lína hunsuð og við fáum jafnvel villu:</p>
 </div>
 </section>
 <section id="hok-kvara">
-<h4><span class="section-number">3.1.2.3. </span>Hök kvarða<a class="headerlink" href="#hok-kvara" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.2.3. </span>Hök kvarða<a class="headerlink" href="#hok-kvara" title="Link to this heading"></a></h4>
 <p>Að sama skapi má auðveldlega stilla hvar hök kvarðanna á x- og y-ás eru
 með stillingunni <code class="docutils literal notranslate"><span class="pre">breaks()</span></code>. Viljum við sem dæmi láta merkingarnar á
 y-ás í punktaritinu hér fyrir ofan hlaupa á hverjum 10 millimetrium í stað 5
@@ -794,10 +803,11 @@ gerum við það með skipuninni:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/hokkvarda.svg" src="_images/hokkvarda.svg" /></figure>
+<img alt="_images/hokkvarda.svg" src="_images/hokkvarda.svg" />
+</figure>
 </section>
 <section id="mork-kvara">
-<h4><span class="section-number">3.1.2.4. </span>Mörk kvarða<a class="headerlink" href="#mork-kvara" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.2.4. </span>Mörk kvarða<a class="headerlink" href="#mork-kvara" title="Link to this heading"></a></h4>
 <p>Mörk kvarða eru stillt með viðbótunum <code class="docutils literal notranslate"><span class="pre">xlim()</span></code> og <code class="docutils literal notranslate"><span class="pre">ylim()</span></code>. Þær eru
 mataðar með endamörkum kvarðanna.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span>
@@ -805,11 +815,12 @@ mataðar með endamörkum kvarðanna.</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/lim.svg" src="_images/lim.svg" /></figure>
+<img alt="_images/lim.svg" src="_images/lim.svg" />
+</figure>
 </section>
 </section>
 <section id="litir-og-takn">
-<h3><span class="section-number">3.1.3. </span>Litir og tákn<a class="headerlink" href="#litir-og-takn" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.3. </span>Litir og tákn<a class="headerlink" href="#litir-og-takn" title="Link to this heading"></a></h3>
 <p>Litir og tákn eru góðar leið til að lagskipta gröfum. Í <code class="docutils literal notranslate"><span class="pre">ggplot()</span></code> eru
 tvenns konar leiðir til að lita. Annars vegar með að lita punktana eða
 línurnar á grafinu sjálfu en þá er notuð stillingin <code class="docutils literal notranslate"><span class="pre">color</span></code>. Hins
@@ -822,7 +833,8 @@ tilheyrir. Það er því gert með stillingunni <code class="docutils literal n
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/kynlitur.svg" src="_images/kynlitur.svg" /></figure>
+<img alt="_images/kynlitur.svg" src="_images/kynlitur.svg" />
+</figure>
 <p>Viljum við hins vegar lagskipta stöplaritinu yfir uppáhalds ís nemenda
 eftir því hvort þeir nota iOS eða Android gerum við það með
 stillingunni <code class="docutils literal notranslate"><span class="pre">fill</span></code>, því þá viljum við lita fleti grafsins ólíkt.</p>
@@ -830,14 +842,16 @@ stillingunni <code class="docutils literal notranslate"><span class="pre">fill</
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/isBarStyrikerfi.svg" src="_images/isBarStyrikerfi.svg" /></figure>
+<img alt="_images/isBarStyrikerfi.svg" src="_images/isBarStyrikerfi.svg" />
+</figure>
 <p>Ef við bætum stillingunni <code class="docutils literal notranslate"><span class="pre">position=’dodge’</span></code> inní viðbótina
 <code class="docutils literal notranslate"><span class="pre">geom_bar()</span></code> koma stöplar grafsins hvor við hliðina á öðrum:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;dodge&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/isBarStyrikerfiDodge.svg" src="_images/isBarStyrikerfiDodge.svg" /></figure>
+<img alt="_images/isBarStyrikerfiDodge.svg" src="_images/isBarStyrikerfiDodge.svg" />
+</figure>
 <p>Oft eru tákn heppilegri en litir til að lagskipta gröfum. Til dæmis geta
 litmyndir verið dýrar í tímaritum og svart-hvítar lausnir því heppilegri
 kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn með
@@ -846,10 +860,11 @@ kostur. Tilgreina má að skipta gröfum upp með því að nota ólík tákn me
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/kynform.svg" src="_images/kynform.svg" /></figure>
+<img alt="_images/kynform.svg" src="_images/kynform.svg" />
+</figure>
 </section>
 <section id="grofum-skipt-upp-i-reiti">
-<h3><span class="section-number">3.1.4. </span>Gröfum skipt upp í reiti<a class="headerlink" href="#grofum-skipt-upp-i-reiti" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.4. </span>Gröfum skipt upp í reiti<a class="headerlink" href="#grofum-skipt-upp-i-reiti" title="Link to this heading"></a></h3>
 <p>Önnur góð leið til að lagskipta gröfum er með því að skipta þeim upp í
 reiti. Það er gert með skipuninni <code class="docutils literal notranslate"><span class="pre">facet_grid()</span></code>. Hægt er að skipta
 gröfunum hvort sem heldur eftir x-ás eða y-ás eða jafnvel báðum.</p>
@@ -860,7 +875,8 @@ upp eftir því hvaðan þær eru gerum við það með skipuninni:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/tegundfacet.svg" src="_images/tegundfacet.svg" /></figure>
+<img alt="_images/tegundfacet.svg" src="_images/tegundfacet.svg" />
+</figure>
 <p>Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
 og hvaðan þær eru gerum við það með:
 Viljum við skipta grafinu í reiti eftir bæði kyni pokarotta
@@ -870,12 +886,13 @@ og hvaðan þær eru gerum við það með:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/kyntegund.svg" src="_images/kyntegund.svg" /></figure>
+<img alt="_images/kyntegund.svg" src="_images/kyntegund.svg" />
+</figure>
 <p>Svo mætti hæglega halda áfram og lagskipta með bæði reitaskiptingu og táknum í sama
 grafinu.</p>
 </section>
 <section id="skipt-um-bakgrunn">
-<h3><span class="section-number">3.1.5. </span>Skipt um bakgrunn<a class="headerlink" href="#skipt-um-bakgrunn" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.5. </span>Skipt um bakgrunn<a class="headerlink" href="#skipt-um-bakgrunn" title="Link to this heading"></a></h3>
 <p>Grái, sjálfgefni, bakgrunnurinn á ggplot gröfum getur stundum verið
 óviðeigandi og vilja margir hafa hvítan bakgrunn þess í stað. Til eru
 tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
@@ -885,19 +902,21 @@ tvær þægilegar stillingar til að breyta um bakgrunn. Sú fyrri er
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/pokarottamynd.svg" src="_images/pokarottamynd.svg" /></figure>
+<img alt="_images/pokarottamynd.svg" src="_images/pokarottamynd.svg" />
+</figure>
 <p>sú seinni er <code class="docutils literal notranslate"><span class="pre">theme_classic()</span></code> og gefur þessa niðurstöðu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">hofud_lengd</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
 <span class="o">+</span> <span class="n">theme_classic</span><span class="p">()</span>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/classic.svg" src="_images/classic.svg" /></figure>
+<img alt="_images/classic.svg" src="_images/classic.svg" />
+</figure>
 </section>
 <section id="myndir-vistaar">
-<h3><span class="section-number">3.1.6. </span>Myndir vistaðar<a class="headerlink" href="#myndir-vistaar" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.6. </span>Myndir vistaðar<a class="headerlink" href="#myndir-vistaar" title="Link to this heading"></a></h3>
 <section id="id1">
-<h4><span class="section-number">3.1.6.1. </span>Myndir vistaðar<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.1.6.1. </span>Myndir vistaðar<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>Til að geyma myndirnar sem við búum til, veljið <code class="docutils literal notranslate"><span class="pre">Plots</span></code> flipann í
 neðra vinstra glugganum í RStudio myndina og veljið þar <code class="docutils literal notranslate"><span class="pre">Export</span></code>. Þar
 má velja <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> eða <code class="docutils literal notranslate"><span class="pre">.jpg/.png/.eps</span></code> skrá.</p>
@@ -905,7 +924,7 @@ má velja <code class="docutils literal notranslate"><span class="pre">.pdf</spa
 </section>
 </section>
 <section id="ggsave">
-<h2><span class="section-number">3.2. </span>ggsave()<a class="headerlink" href="#ggsave" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2. </span>ggsave()<a class="headerlink" href="#ggsave" title="Link to this heading"></a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn grafsins</p>
@@ -936,7 +955,7 @@ vistað sem hlut undir nafninu <code class="docutils literal notranslate"><span 
 <code class="docutils literal notranslate"><span class="pre">jpeg()</span></code>, <code class="docutils literal notranslate"><span class="pre">postscript()</span></code> og fleiri. Kannið hjálpina fyrir þessar
 aðferðir.</p>
 <section id="leiksvaei-fyrir-r-koa">
-<h3><span class="section-number">3.2.1. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.2.1. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h3>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -960,7 +979,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

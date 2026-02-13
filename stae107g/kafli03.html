@@ -1,33 +1,33 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3. Ákveður &mdash; Línuleg Algebra 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -736,13 +736,13 @@
            <div itemprop="articleBody">
              
   <section id="akveur">
-<h1><span class="section-number">3. </span>Ákveður<a class="headerlink" href="#akveur" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">3. </span>Ákveður<a class="headerlink" href="#akveur" title="Link to this heading"></a></h1>
 <p>Ákveða (e. determinant) er fall frá <span class="math notranslate nohighlight">\(\mathbb{R}^{n \times n}\rightarrow \mathbb{R}\)</span> sem úthlutar <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> tölu <span class="math notranslate nohighlight">\(\det(A)\)</span>.
 Ákveða er einungis skilgreind fyrir ferningsfylki. Hana má nota t.d. til þess að segja til um hvort fylki sé andhverfanlegt. Ef ákveða fylkis er <span class="math notranslate nohighlight">\(0\)</span> er fylkið ekki andhverfanlegt.</p>
 <section id="akveur-2-times-2-fylkja">
-<h2><span class="section-number">3.1. </span>Ákveður <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkja<a class="headerlink" href="#akveur-2-times-2-fylkja" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.1. </span>Ákveður <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkja<a class="headerlink" href="#akveur-2-times-2-fylkja" title="Link to this heading"></a></h2>
 <section id="skilgreining-akvea-2-times-2-fylkis">
-<h3><span class="section-number">3.1.1. </span>Skilgreining: Ákveða <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkis<a class="headerlink" href="#skilgreining-akvea-2-times-2-fylkis" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.1.1. </span>Skilgreining: Ákveða <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkis<a class="headerlink" href="#skilgreining-akvea-2-times-2-fylkis" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p><strong>Ákveða</strong> <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylkis <span class="math notranslate nohighlight">\(A=\begin{bmatrix}a &amp; b\\ c &amp; d \end{bmatrix}\)</span> er talan</p>
@@ -767,16 +767,16 @@ d &amp; -b \\
 </section>
 </section>
 <section id="akveur-n-times-n-fylkja">
-<h2><span class="section-number">3.2. </span>Ákveður <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja<a class="headerlink" href="#akveur-n-times-n-fylkja" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.2. </span>Ákveður <span class="math notranslate nohighlight">\(n \times n\)</span> fylkja<a class="headerlink" href="#akveur-n-times-n-fylkja" title="Link to this heading"></a></h2>
 <section id="skilgreining-hlutfylki">
-<h3><span class="section-number">3.2.1. </span>Skilgreining: Hlutfylki<a class="headerlink" href="#skilgreining-hlutfylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.2.1. </span>Skilgreining: Hlutfylki<a class="headerlink" href="#skilgreining-hlutfylki" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Fylkið sem fæst með því að fjarlægja <span class="math notranslate nohighlight">\(i\)</span>-tu línu og <span class="math notranslate nohighlight">\(j\)</span>-ta dálk <span class="math notranslate nohighlight">\(A\)</span>
 kallast <strong>hlutfylki</strong>, <span class="math notranslate nohighlight">\(A_{ij}\)</span>, og hefur stærð <span class="math notranslate nohighlight">\((n-1)\times (n-1)\)</span>.</p>
 </div>
 <section id="synidaemi-hlutfylki">
-<h4><span class="section-number">3.2.1.1. </span>Sýnidæmi: Hlutfylki<a class="headerlink" href="#synidaemi-hlutfylki" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.2.1.1. </span>Sýnidæmi: Hlutfylki<a class="headerlink" href="#synidaemi-hlutfylki" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Hver eru hlutfylki, <span class="math notranslate nohighlight">\(A_{ij}\)</span>, fylkisins</p>
@@ -820,7 +820,7 @@ A_{23} =\begin{bmatrix}
 </section>
 </section>
 <section id="skilgreining-akvea-n-times-n-fylkis">
-<h3><span class="section-number">3.2.2. </span>Skilgreining: Ákveða <span class="math notranslate nohighlight">\(n \times n\)</span> fylkis<a class="headerlink" href="#skilgreining-akvea-n-times-n-fylkis" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.2.2. </span>Skilgreining: Ákveða <span class="math notranslate nohighlight">\(n \times n\)</span> fylkis<a class="headerlink" href="#skilgreining-akvea-n-times-n-fylkis" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p><strong>Ákveða</strong> <span class="math notranslate nohighlight">\(n \times n\)</span> fylkis <span class="math notranslate nohighlight">\(A\)</span> er skilgreind</p>
@@ -830,7 +830,7 @@ a_{11}\det(A_{11})-a_{12}\det(A_{12})+...+ (-1)^{1+n} a_{1n}\det(A_{1n})\\
 = \sum_{j=1}^{n}(-1)^{1+j}a_{1j}\det(A_{1j})\end{split}\]</div>
 </div>
 <section id="synidaemi-akvea-3-times-3-fylkis">
-<h4><span class="section-number">3.2.2.1. </span>Sýnidæmi: Ákveða <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis<a class="headerlink" href="#synidaemi-akvea-3-times-3-fylkis" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.2.2.1. </span>Sýnidæmi: Ákveða <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis<a class="headerlink" href="#synidaemi-akvea-3-times-3-fylkis" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Finnum ákveðu <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis</p>
@@ -886,27 +886,28 @@ Við sjáum að ákveða fylkis sem hefur núlllínu eða núlldálk er alltaf <
 </section>
 </section>
 <section id="skilgreining-onnur-afer-til-ess-a-reikna-akveu-3-times-3-fylkis">
-<h3><span class="section-number">3.2.3. </span>Skilgreining: Önnur aðferð til þess að reikna ákveðu <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis<a class="headerlink" href="#skilgreining-onnur-afer-til-ess-a-reikna-akveu-3-times-3-fylkis" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.2.3. </span>Skilgreining: Önnur aðferð til þess að reikna ákveðu <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkis<a class="headerlink" href="#skilgreining-onnur-afer-til-ess-a-reikna-akveu-3-times-3-fylkis" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Reikna má ákveðu <span class="math notranslate nohighlight">\(3 \times 3\)</span> fylkist með því að endurtaka fyrstu tvo dálka hægra megin við fylkið og leggja saman og draga frá þær 6 hornalínur sem þannig myndast.</p>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/akveda.png"><img alt="_images/akveda.png" src="_images/akveda.png" style="width: 376.75000000000006px; height: 223.85000000000002px;" /></a>
+<a class="reference internal image-reference" href="_images/akveda.png"><img alt="_images/akveda.png" src="_images/akveda.png" style="width: 376.75000000000006px; height: 223.85000000000002px;" />
+</a>
 </figure>
 <p>Engin sambærileg regla gildir fyrir <span class="math notranslate nohighlight">\(n \geq 4\)</span>.</p>
 </section>
 </section>
 <section id="akveur-rihyrningsfylkja">
-<h2><span class="section-number">3.3. </span>Ákveður þríhyrningsfylkja<a class="headerlink" href="#akveur-rihyrningsfylkja" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.3. </span>Ákveður þríhyrningsfylkja<a class="headerlink" href="#akveur-rihyrningsfylkja" title="Link to this heading"></a></h2>
 <section id="setning-akvea-rihyrningsfylkja">
-<h3><span class="section-number">3.3.1. </span>Setning: Ákveða þríhyrningsfylkja<a class="headerlink" href="#setning-akvea-rihyrningsfylkja" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.3.1. </span>Setning: Ákveða þríhyrningsfylkja<a class="headerlink" href="#setning-akvea-rihyrningsfylkja" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Ef <span class="math notranslate nohighlight">\(A\)</span> er þríhyrningsfylki þá er ákveða þess margfeldi stakanna á hornalínunni.</p>
 </div>
 <section id="synidaemi-akveur-rihyrningsfylkja">
-<h4><span class="section-number">3.3.1.1. </span>Sýnidæmi: Ákveður þríhyrningsfylkja<a class="headerlink" href="#synidaemi-akveur-rihyrningsfylkja" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.3.1.1. </span>Sýnidæmi: Ákveður þríhyrningsfylkja<a class="headerlink" href="#synidaemi-akveur-rihyrningsfylkja" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Finna á ákveður eftirfarandi</p>
@@ -965,14 +966,14 @@ C =\begin{bmatrix}
 </section>
 </section>
 <section id="akveur-frumfylkja">
-<h2><span class="section-number">3.4. </span>Ákveður frumfylkja<a class="headerlink" href="#akveur-frumfylkja" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.4. </span>Ákveður frumfylkja<a class="headerlink" href="#akveur-frumfylkja" title="Link to this heading"></a></h2>
 <p>Frumfylki eru þau fylki sem fást þegar einni einfaldri línuaðgerð er beitt á einingarfylki.</p>
 <div class="advorun admonition">
 <p class="admonition-title">Aðvörun</p>
 <p>Línuaðgerðir varðveita almennt ekki ákveður, heldur breyta þeim með mjög reglulegum hætti.</p>
 </div>
 <section id="setning-akvea-frumfylkja">
-<h3><span class="section-number">3.4.1. </span>Setning: Ákveða frumfylkja<a class="headerlink" href="#setning-akvea-frumfylkja" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.4.1. </span>Setning: Ákveða frumfylkja<a class="headerlink" href="#setning-akvea-frumfylkja" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(E\)</span> vera frumfylki. Ákveða frumfylkis er</p>
@@ -984,7 +985,7 @@ C =\begin{bmatrix}
 \end{cases}\end{split}\]</div>
 </div>
 <section id="synidaemi-akveur-frumfylkja">
-<h4><span class="section-number">3.4.1.1. </span>Sýnidæmi: Ákveður frumfylkja<a class="headerlink" href="#synidaemi-akveur-frumfylkja" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.4.1.1. </span>Sýnidæmi: Ákveður frumfylkja<a class="headerlink" href="#synidaemi-akveur-frumfylkja" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p><strong>1</strong>. Umskipting. Látum <span class="math notranslate nohighlight">\(E\)</span> vera frumfylkið sem fæst með því að leggja margfeldi af einni línu við aðra, þ.e.a.s umskipting.
@@ -1047,7 +1048,7 @@ Ef <span class="math notranslate nohighlight">\(U\)</span> er efri stallagerð <
 </section>
 </section>
 <section id="hjalparsetning">
-<h3><span class="section-number">3.4.2. </span>Hjálparsetning<a class="headerlink" href="#hjalparsetning" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.4.2. </span>Hjálparsetning<a class="headerlink" href="#hjalparsetning" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Ef ferningsfylki <span class="math notranslate nohighlight">\(A\)</span> má umbreyta í fylki af efri stallagerð <span class="math notranslate nohighlight">\(U\)</span> með umskiptingu og víxlunum og</p>
@@ -1062,7 +1063,7 @@ Ef <span class="math notranslate nohighlight">\(U\)</span> er efri stallagerð <
 efra þríhyrningsfylkisins reiknuð með því að margfalda stökin á hornalínunni.</p>
 </section>
 <section id="id1">
-<h3><span class="section-number">3.4.3. </span>Hjálparsetning<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.4.3. </span>Hjálparsetning<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Ef ferningsfylki <span class="math notranslate nohighlight">\(A\)</span> hefur tvær eins línur <span class="math notranslate nohighlight">\(i=j\)</span> þá er <span class="math notranslate nohighlight">\(\det(A)=0\)</span>.
@@ -1071,9 +1072,9 @@ Enn fremur, ef ein lína í <span class="math notranslate nohighlight">\(A\)</sp
 </section>
 </section>
 <section id="eiginleikar-akvea">
-<h2><span class="section-number">3.5. </span>Eiginleikar ákveða<a class="headerlink" href="#eiginleikar-akvea" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.5. </span>Eiginleikar ákveða<a class="headerlink" href="#eiginleikar-akvea" title="Link to this heading"></a></h2>
 <section id="setning-eiginleikar-akvea">
-<h3><span class="section-number">3.5.1. </span>Setning: Eiginleikar ákveða<a class="headerlink" href="#setning-eiginleikar-akvea" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.5.1. </span>Setning: Eiginleikar ákveða<a class="headerlink" href="#setning-eiginleikar-akvea" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Þá gildir</p>
@@ -1091,7 +1092,7 @@ Jafnan helst einnig ef annað fylkið er ekki andhverfanlegt, þá er ákveðan 
 </div>
 </section>
 <section id="skilgreining-hjaattafylki">
-<h3><span class="section-number">3.5.2. </span>Skilgreining: Hjáþáttafylki<a class="headerlink" href="#skilgreining-hjaattafylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.5.2. </span>Skilgreining: Hjáþáttafylki<a class="headerlink" href="#skilgreining-hjaattafylki" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Fyrir hlutfylki <span class="math notranslate nohighlight">\(A_{ij}\)</span> skilgreinum við <strong>hjáþátt</strong> <span class="math notranslate nohighlight">\(C_{ij}\)</span> í sæti <span class="math notranslate nohighlight">\((i,j)\)</span> með</p>
@@ -1108,7 +1109,7 @@ C_{n1} &amp; C_{n2} &amp; \dots &amp; C_{nn}
 </div>
 </section>
 <section id="skilgreining-aoka-fylki">
-<h3><span class="section-number">3.5.3. </span>Skilgreining: Aðoka fylki<a class="headerlink" href="#skilgreining-aoka-fylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.5.3. </span>Skilgreining: Aðoka fylki<a class="headerlink" href="#skilgreining-aoka-fylki" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(C\)</span> vera hjáþáttafylki <span class="math notranslate nohighlight">\(A\)</span>. Þá skilgreinum við <strong>aðoka fylkið</strong>
@@ -1118,7 +1119,7 @@ C_{n1} &amp; C_{n2} &amp; \dots &amp; C_{nn}
 </div>
 </section>
 <section id="setning-andhverfujafna">
-<h3><span class="section-number">3.5.4. </span>Setning: Andhverfujafna<a class="headerlink" href="#setning-andhverfujafna" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.5.4. </span>Setning: Andhverfujafna<a class="headerlink" href="#setning-andhverfujafna" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera andhverfanlegt <span class="math notranslate nohighlight">\(n \times n\)</span> fylki þá er</p>
@@ -1129,10 +1130,10 @@ C_{n1} &amp; C_{n2} &amp; \dots &amp; C_{nn}
 </section>
 </section>
 <section id="regla-cramers">
-<h2><span class="section-number">3.6. </span>Regla Cramers<a class="headerlink" href="#regla-cramers" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.6. </span>Regla Cramers<a class="headerlink" href="#regla-cramers" title="Link to this heading"></a></h2>
 <p>Regla Cramers er fræðileg niðurstaða sem gefur beina lausn á <span class="math notranslate nohighlight">\(A \textbf{x} = \textbf{b}\)</span>. Þó er oftast fljótlegra að leysa jöfnuhneppi beint heldur en að nota hana.</p>
 <section id="rithattur">
-<h3><span class="section-number">3.6.1. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.6.1. </span>Ritháttur<a class="headerlink" href="#rithattur" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Ritháttur</p>
 <p>Látum <span class="math notranslate nohighlight">\(A=[\bf{a}_1\dots\bf{a}_n]\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki og <span class="math notranslate nohighlight">\(\textbf{b}\in \mathbb{R}^n\)</span> vera vigur.
@@ -1142,7 +1143,7 @@ C_{n1} &amp; C_{n2} &amp; \dots &amp; C_{nn}
 </div>
 </section>
 <section id="setning-regla-cramers">
-<h3><span class="section-number">3.6.2. </span>Setning: Regla Cramers<a class="headerlink" href="#setning-regla-cramers" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.6.2. </span>Setning: Regla Cramers<a class="headerlink" href="#setning-regla-cramers" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera andhverfanlegt <span class="math notranslate nohighlight">\(n \times n\)</span> fylki, og <span class="math notranslate nohighlight">\(\textbf{b}\in \mathbb{R}^n\)</span> vera vigur.
@@ -1151,7 +1152,7 @@ C_{n1} &amp; C_{n2} &amp; \dots &amp; C_{nn}
 \[\textbf{x}_i = \frac{\det A_i(\textbf{b})}{\det(A)}\]</div>
 </div>
 <section id="synidaemi-leysa-jofnuhneppi-me-reglu-cramers">
-<h4><span class="section-number">3.6.2.1. </span>Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers<a class="headerlink" href="#synidaemi-leysa-jofnuhneppi-me-reglu-cramers" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.6.2.1. </span>Sýnidæmi: Leysa jöfnuhneppi með reglu Cramers<a class="headerlink" href="#synidaemi-leysa-jofnuhneppi-me-reglu-cramers" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Leysið eftirfarandi jöfnuhneppi með því að nota reglu Cramers</p>
@@ -1211,9 +1212,9 @@ x_3 = \frac{\det A_3(\textbf{b})}{\det A}=-4.\]</div>
 </section>
 </section>
 <section id="akveur-og-rumfraei">
-<h2><span class="section-number">3.7. </span>Ákveður og rúmfræði<a class="headerlink" href="#akveur-og-rumfraei" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">3.7. </span>Ákveður og rúmfræði<a class="headerlink" href="#akveur-og-rumfraei" title="Link to this heading"></a></h2>
 <section id="skilgreining-samsiungur">
-<h3><span class="section-number">3.7.1. </span>Skilgreining: Samsíðungur<a class="headerlink" href="#skilgreining-samsiungur" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.7.1. </span>Skilgreining: Samsíðungur<a class="headerlink" href="#skilgreining-samsiungur" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(u=(u_1,u_2)\)</span> og <span class="math notranslate nohighlight">\(v=(v_1,v_2)\)</span> vera tvo vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.  <strong>Samsíðungurinn</strong> (e. paralellogram) sem vigrarnir ákvarða er ferhyrningurinn með hornpunkta <span class="math notranslate nohighlight">\((0,0), (u_1,u_2), (v_1,v_2),\)</span>
@@ -1221,7 +1222,7 @@ og <span class="math notranslate nohighlight">\((u_1+v_1,u_2+v_2)\)</span>.</p>
 </div>
 </section>
 <section id="skilgreining-samhliungur">
-<h3><span class="section-number">3.7.2. </span>Skilgreining: Samhliðungur<a class="headerlink" href="#skilgreining-samhliungur" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.7.2. </span>Skilgreining: Samhliðungur<a class="headerlink" href="#skilgreining-samhliungur" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(u=(u_1,u_2,u_3), v=(v_1,v_2,v_3)\)</span> og <span class="math notranslate nohighlight">\(w=(w_1,w_2,w_3)\)</span> vera vigra í <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.
@@ -1235,7 +1236,7 @@ og <span class="math notranslate nohighlight">\((u_1+v_1,u_2+v_2)\)</span>.</p>
 </div>
 </section>
 <section id="setning-flatarmal-og-rummal">
-<h3><span class="section-number">3.7.3. </span>Setning: Flatarmál og rúmmál<a class="headerlink" href="#setning-flatarmal-og-rummal" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.7.3. </span>Setning: Flatarmál og rúmmál<a class="headerlink" href="#setning-flatarmal-og-rummal" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p><strong>1.</strong> Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(2 \times 2\)</span> fylki. Flatarmál samsíðungana sem dálkvigrar <span class="math notranslate nohighlight">\(A\)</span> ákvarða er <span class="math notranslate nohighlight">\(\det A\)</span>.</p>
@@ -1244,7 +1245,7 @@ og <span class="math notranslate nohighlight">\((u_1+v_1,u_2+v_2)\)</span>.</p>
 <p>Rifjum upp að mynd mengis <span class="math notranslate nohighlight">\(S \subseteq \R\)</span> er mengið <span class="math notranslate nohighlight">\(T(S)=\{T(s) : s \in S\}\)</span>.</p>
 </section>
 <section id="setning-mynd-varpanna">
-<h3><span class="section-number">3.7.4. </span>Setning: Mynd varpanna<a class="headerlink" href="#setning-mynd-varpanna" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.7.4. </span>Setning: Mynd varpanna<a class="headerlink" href="#setning-mynd-varpanna" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p><strong>1.</strong> Látum <span class="math notranslate nohighlight">\(T: \R^2 \rightarrow \R^2\)</span> vera línulega vörpun og <span class="math notranslate nohighlight">\(S\)</span> vera samsíðunginn sem ákvarðast af <span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(v\)</span> í <span class="math notranslate nohighlight">\(\R^2\)</span>.
@@ -1254,7 +1255,7 @@ og <span class="math notranslate nohighlight">\((u_1+v_1,u_2+v_2)\)</span>.</p>
 </div>
 </section>
 <section id="setning-flatarmal-og-rummal-linulegra-varpanna">
-<h3><span class="section-number">3.7.5. </span>Setning: Flatarmál og rúmmál línulegra varpanna<a class="headerlink" href="#setning-flatarmal-og-rummal-linulegra-varpanna" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">3.7.5. </span>Setning: Flatarmál og rúmmál línulegra varpanna<a class="headerlink" href="#setning-flatarmal-og-rummal-linulegra-varpanna" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p><strong>1.</strong> Gerum ráð fyrir að <span class="math notranslate nohighlight">\(T\colon \R^2 \rightarrow \R^2\)</span> sé línuleg vörpun með fylki <span class="math notranslate nohighlight">\(A\)</span>, og <span class="math notranslate nohighlight">\(S\)</span> vera samsíðunginn sem ákvarðast af <span class="math notranslate nohighlight">\(u\)</span> og <span class="math notranslate nohighlight">\(v\)</span> í <span class="math notranslate nohighlight">\(\R^2\)</span>.
@@ -1267,7 +1268,7 @@ og <span class="math notranslate nohighlight">\((u_1+v_1,u_2+v_2)\)</span>.</p>
 \[\{ \text{rúmmál} \ T(S)\} = |\det A | \cdot \{ \text{rúmmál} \ S \}\]</div>
 </div>
 <section id="synidaemi-flatarmal-samsiungs">
-<h4><span class="section-number">3.7.5.1. </span>Sýnidæmi: Flatarmál samsíðungs<a class="headerlink" href="#synidaemi-flatarmal-samsiungs" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">3.7.5.1. </span>Sýnidæmi: Flatarmál samsíðungs<a class="headerlink" href="#synidaemi-flatarmal-samsiungs" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Reikna á flatarmál samsíðungsins sem ákvarðaður er af hornpunktunum <span class="math notranslate nohighlight">\((-1,-2), (0,2), (3,-1)\)</span> og <span class="math notranslate nohighlight">\((4,3)\)</span>.</p>
@@ -1286,7 +1287,8 @@ og <span class="math notranslate nohighlight">\((4+1,3+2)=(5,5)\)</span>.</p>
 <p>Þar sem <span class="math notranslate nohighlight">\(|\det A| = |-15|\)</span> er flatarmál samsíðungsins <span class="math notranslate nohighlight">\(15\)</span>.</p>
 </div>
 <figure class="align-center">
-<a class="reference internal image-reference" href="_images/kafli3mynd2.svg"><img alt="_images/kafli3mynd2.svg" height="362" src="_images/kafli3mynd2.svg" width="310" /></a>
+<a class="reference internal image-reference" href="_images/kafli3mynd2.svg"><img alt="_images/kafli3mynd2.svg" src="_images/kafli3mynd2.svg" style="width: 310.0px; height: 362.0px;" />
+</a>
 </figure>
 </section>
 </section>
@@ -1305,7 +1307,7 @@ og <span class="math notranslate nohighlight">\((4+1,3+2)=(5,5)\)</span>.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Línuleg Algebra | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:16.
       </span></p>
   </div>
 

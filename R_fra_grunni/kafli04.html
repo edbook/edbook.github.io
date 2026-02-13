@@ -1,31 +1,31 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4. Lýsandi tölfræði &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -631,7 +631,7 @@
            <div itemprop="articleBody">
              
   <section id="lysandi-tolfraei">
-<span id="c-lysandi"></span><h1><span class="section-number">4. </span>Lýsandi tölfræði<a class="headerlink" href="#lysandi-tolfraei" title="Permalink to this heading"></a></h1>
+<span id="c-lysandi"></span><h1><span class="section-number">4. </span>Lýsandi tölfræði<a class="headerlink" href="#lysandi-tolfraei" title="Link to this heading"></a></h1>
 <p>Í þessum kafla munum við fjalla um algengar lýsistærðir sem notaðar eru
 til að lýsa gögnum. Við munum skipta umfjölluninni upp eftir því hvort
 verið sé að vinna með talnabreytur eða flokkabreytur. Fyrir
@@ -643,9 +643,9 @@ teknar fyrir í hluta <a class="reference internal" href="#s-flokkabreytur"><spa
 <a class="reference internal" href="#s-adrargagnlegar"><span class="std std-numref">4.3</span></a> um aðrar gagnlegar skipanir. Þar munum við sjá
 aðferðirnar <code class="docutils literal notranslate"><span class="pre">round()</span></code>, <code class="docutils literal notranslate"><span class="pre">summary()</span></code> og <code class="docutils literal notranslate"><span class="pre">tapply()</span></code>.</p>
 <section id="talnabreytur">
-<span id="s-talnabreytur"></span><h2><span class="section-number">4.1. </span>Talnabreytur<a class="headerlink" href="#talnabreytur" title="Permalink to this heading"></a></h2>
+<span id="s-talnabreytur"></span><h2><span class="section-number">4.1. </span>Talnabreytur<a class="headerlink" href="#talnabreytur" title="Link to this heading"></a></h2>
 <section id="id1">
-<h3><span class="section-number">4.1.1. </span>Talnabreytur<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.1.1. </span>Talnabreytur<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p>Í þessum hluta munum við skoða lýsistærðir fyrir talnabreytur. Við
 byrjum á að sjá hvernig við getum auðveldlega fundið hæsta og lægsta
 gildið sem breytan tekur en snúum okkur svo að lýsistærðum sem lýsa
@@ -654,7 +654,7 @@ miðju og breytileika talnabreyta. Það er oft svo að það vantar mælingar
 hana má nota í nær öllum aðferðunum sem fjallað verður um í þessum
 hluta.</p>
 <section id="max">
-<h4><span class="section-number">4.1.1.1. </span>max()<a class="headerlink" href="#max" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.1.1. </span>max()<a class="headerlink" href="#max" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -676,7 +676,7 @@ mata aðferðina með nafni breytunnar.</p>
 </div>
 </section>
 <section id="min">
-<h4><span class="section-number">4.1.1.2. </span>min()<a class="headerlink" href="#min" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.1.2. </span>min()<a class="headerlink" href="#min" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -699,9 +699,9 @@ mata aðferðina með nafni breytunnar.</p>
 </section>
 </section>
 <section id="mija">
-<h3><span class="section-number">4.1.2. </span>Miðja<a class="headerlink" href="#mija" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.1.2. </span>Miðja<a class="headerlink" href="#mija" title="Link to this heading"></a></h3>
 <section id="mean">
-<h4><span class="section-number">4.1.2.1. </span>mean()<a class="headerlink" href="#mean" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.2.1. </span>mean()<a class="headerlink" href="#mean" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -723,7 +723,7 @@ aðferðina með nafni breytunnar.</p>
 </div>
 </section>
 <section id="median">
-<h4><span class="section-number">4.1.2.2. </span>median()<a class="headerlink" href="#median" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.2.2. </span>median()<a class="headerlink" href="#median" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -746,9 +746,9 @@ mata aðferðina með nafni breytunnar:</p>
 </section>
 </section>
 <section id="breytileiki">
-<h3><span class="section-number">4.1.3. </span>Breytileiki<a class="headerlink" href="#breytileiki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.1.3. </span>Breytileiki<a class="headerlink" href="#breytileiki" title="Link to this heading"></a></h3>
 <section id="var">
-<h4><span class="section-number">4.1.3.1. </span>var()<a class="headerlink" href="#var" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.3.1. </span>var()<a class="headerlink" href="#var" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -769,7 +769,7 @@ aðferðina með nafni breytunnar:</p>
 </div>
 </section>
 <section id="sd">
-<h4><span class="section-number">4.1.3.2. </span>sd()<a class="headerlink" href="#sd" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.3.2. </span>sd()<a class="headerlink" href="#sd" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -791,7 +791,7 @@ mata aðferðina með nafni breytunnar:</p>
 </div>
 </section>
 <section id="quantile">
-<h4><span class="section-number">4.1.3.3. </span>quantile()<a class="headerlink" href="#quantile" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.3.3. </span>quantile()<a class="headerlink" href="#quantile" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri/breytu</p>
@@ -812,9 +812,9 @@ sem er.</p>
 </section>
 </section>
 <section id="samspil-tveggja-talnabreyta">
-<h3><span class="section-number">4.1.4. </span>Samspil tveggja talnabreyta<a class="headerlink" href="#samspil-tveggja-talnabreyta" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.1.4. </span>Samspil tveggja talnabreyta<a class="headerlink" href="#samspil-tveggja-talnabreyta" title="Link to this heading"></a></h3>
 <section id="cor">
-<h4><span class="section-number">4.1.4.1. </span>cor()<a class="headerlink" href="#cor" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.1.4.1. </span>cor()<a class="headerlink" href="#cor" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á tveimur vigrum/breytum</p>
@@ -838,14 +838,14 @@ breytanna!</p>
 </section>
 </section>
 <section id="flokkabreytur">
-<span id="s-flokkabreytur"></span><h2><span class="section-number">4.2. </span>Flokkabreytur<a class="headerlink" href="#flokkabreytur" title="Permalink to this heading"></a></h2>
+<span id="s-flokkabreytur"></span><h2><span class="section-number">4.2. </span>Flokkabreytur<a class="headerlink" href="#flokkabreytur" title="Link to this heading"></a></h2>
 <p>Í þessum hluta reiknum við út lýsistærðir fyrir flokkabreytur. Við
 byrjum á að sjá hvernig finna má tíðni og hlutföll á auðveldan hátt og
 skoðum svo lýsistærðir sem lýsa sambandi tveggja flokkabreyta.</p>
 <section id="tini-og-hlutfall">
-<h3><span class="section-number">4.2.1. </span>Tíðni og hlutfall<a class="headerlink" href="#tini-og-hlutfall" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.2.1. </span>Tíðni og hlutfall<a class="headerlink" href="#tini-og-hlutfall" title="Link to this heading"></a></h3>
 <section id="table">
-<span id="rf-table"></span><h4><span class="section-number">4.2.1.1. </span>table()<a class="headerlink" href="#table" title="Permalink to this heading"></a></h4>
+<span id="rf-table"></span><h4><span class="section-number">4.2.1.1. </span>table()<a class="headerlink" href="#table" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á flokkabreyt(um)</p>
@@ -875,7 +875,7 @@ neðan.</p>
 </div>
 </section>
 <section id="prop-table">
-<span id="rf-prop-table"></span><h4><span class="section-number">4.2.1.2. </span>prop.table()<a class="headerlink" href="#prop-table" title="Permalink to this heading"></a></h4>
+<span id="rf-prop-table"></span><h4><span class="section-number">4.2.1.2. </span>prop.table()<a class="headerlink" href="#prop-table" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> tafla - úttak úr <code class="docutils literal notranslate"><span class="pre">table()</span></code></p>
@@ -931,11 +931,11 @@ næmi (e. sensitivity) og sértæki (e. specificity).</p>
 </section>
 </section>
 <section id="arar-gagnlegar-skipanir">
-<span id="s-adrargagnlegar"></span><h2><span class="section-number">4.3. </span>Aðrar gagnlegar skipanir<a class="headerlink" href="#arar-gagnlegar-skipanir" title="Permalink to this heading"></a></h2>
+<span id="s-adrargagnlegar"></span><h2><span class="section-number">4.3. </span>Aðrar gagnlegar skipanir<a class="headerlink" href="#arar-gagnlegar-skipanir" title="Link to this heading"></a></h2>
 <section id="id2">
-<h3><span class="section-number">4.3.1. </span>Aðrar gagnlegar skipanir<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">4.3.1. </span>Aðrar gagnlegar skipanir<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <section id="round">
-<h4><span class="section-number">4.3.1.1. </span>round()<a class="headerlink" href="#round" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.3.1.1. </span>round()<a class="headerlink" href="#round" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> gildi, vigur, tafla…</p>
@@ -958,7 +958,7 @@ aukastöfum sé skilað gerum við það með:</p>
 </div>
 </section>
 <section id="summary">
-<h4><span class="section-number">4.3.1.2. </span>summary()<a class="headerlink" href="#summary" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.3.1.2. </span>summary()<a class="headerlink" href="#summary" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> allt milli himins og jarðar</p>
@@ -1018,7 +1018,7 @@ gagnatöflu og fáum við þá upplýsingar um allar breyturnar í töflunni.</p
 </div>
 </section>
 <section id="tapply">
-<span id="rf-tapply"></span><h4><span class="section-number">4.3.1.3. </span>tapply()<a class="headerlink" href="#tapply" title="Permalink to this heading"></a></h4>
+<span id="rf-tapply"></span><h4><span class="section-number">4.3.1.3. </span>tapply()<a class="headerlink" href="#tapply" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á talnabreytu, nafn á flokkabreytu og nafn á aðferð
@@ -1043,7 +1043,7 @@ ferðatíma í skóla eftir ferðamáta gerum við það með:</p>
 </div>
 </section>
 <section id="pipurtihattur">
-<h4><span class="section-number">4.3.1.4. </span>Pípurtiháttur<a class="headerlink" href="#pipurtihattur" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">4.3.1.4. </span>Pípurtiháttur<a class="headerlink" href="#pipurtihattur" title="Link to this heading"></a></h4>
 <p>Hingað til hafið þið kynnst allskyns skipunum í R og ættuð að vera
 orðin nokkuð kunnug R umhverfinu. Þegar skipanir eru orðanr langar
 og flóknar getur verið gott að nota pípurithátt. Táknið <code class="docutils literal notranslate"><span class="pre">%&gt;%</span></code>
@@ -1100,7 +1100,8 @@ er að gera þetta með pípurithætti.</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/mynd_pipu_4.svg" src="_images/mynd_pipu_4.svg" /></figure>
+<img alt="_images/mynd_pipu_4.svg" src="_images/mynd_pipu_4.svg" />
+</figure>
 <p>Skoðum fleiri dæmi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">select</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">summary</span><span class="p">()</span>
 <span class="c1">## ferdamati_skoli</span>
@@ -1141,7 +1142,7 @@ eftir breytunni <code class="docutils literal notranslate"><span class="pre">is<
 </section>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h2><span class="section-number">4.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">4.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h2>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -1164,7 +1165,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

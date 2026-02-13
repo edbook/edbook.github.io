@@ -1,34 +1,33 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>11. Diffrun &mdash; Undirbúningur í stærðfræði 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/button.css" type="text/css" />
-      <link rel="stylesheet" href="_static/button.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/button.css?v=898d8a91" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
     <!-- hoverrole.py css code -->
     <style type="text/css">
@@ -574,9 +573,9 @@
            <div itemprop="articleBody">
              
   <section id="diffrun">
-<h1><span class="section-number">11. </span>Diffrun<a class="headerlink" href="#diffrun" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">11. </span>Diffrun<a class="headerlink" href="#diffrun" title="Link to this heading"></a></h1>
 <section id="skyringardaemi">
-<h2><span class="section-number">11.1. </span>Skýringardæmi<a class="headerlink" href="#skyringardaemi" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">11.1. </span>Skýringardæmi<a class="headerlink" href="#skyringardaemi" title="Link to this heading"></a></h2>
 <p>Áður en við skilgreinum <a class="tooltip"  href="https://www.stae.is/os/leita/derivative"  target="_blank">
   afleiðu
     <span>en: <i>derivative</i>
@@ -591,7 +590,8 @@
 Eftir keppnina er staðsetningartækið skoðað og það sýnir að staðsetningu bílsins sem fall af tíma megi lýsa með formúlunni:</p>
 <div class="math notranslate nohighlight">
 \[s(t) = 5t^2\]</div>
-<img alt="_images/bill.svg" class="align-center" src="_images/bill.svg" /><p>þar sem <span class="math notranslate nohighlight">\(t \in [0, 10]\)</span> táknar tímann frá upphafi spyrnunnar mældan í sekúndum og <span class="math notranslate nohighlight">\(s(t)\)</span> er vegalengdin sem bíllinn var þá búinn að keyra mæld í metrum.</p>
+<img alt="_images/bill.svg" class="align-center" src="_images/bill.svg" />
+<p>þar sem <span class="math notranslate nohighlight">\(t \in [0, 10]\)</span> táknar tímann frá upphafi spyrnunnar mældan í sekúndum og <span class="math notranslate nohighlight">\(s(t)\)</span> er vegalengdin sem bíllinn var þá búinn að keyra mæld í metrum.</p>
 <p>Þessi formúla segir okkur til dæmis að eftir fjórar sekúndur var bíllinn búinn að keyra 80 metra því <span class="math notranslate nohighlight">\(s(4) = 5 \cdot 4^2 = 80\)</span>; og eftir átta sekúndur var bíllinn búinn að keyra <span class="math notranslate nohighlight">\(320\)</span> metra þar eð <span class="math notranslate nohighlight">\(s(8) = 5\cdot 8^2 =320\)</span>.</p>
 <p>Eins og við má búast er <span class="math notranslate nohighlight">\(s(0) = 0\)</span> sem þýðir að eftir núll sekúndur stóð bíllinn enn óhreyfður, og <span class="math notranslate nohighlight">\(s(10) = 500\)</span>, í samræmi við að bíllinn hafi keyrt brautina sem var <span class="math notranslate nohighlight">\(500\)</span> metrar á tíu sekúndum.</p>
 <p>Úr formúlunni er þó hægt að fá meiri upplýsingar heldur en bara staðsetningu bílsins.
@@ -609,7 +609,8 @@ Lengdin á þessu tímabili er fjórar sekúndur. Meðalhraði bílsins á tím
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\frac{230}{4} = 57.5 \text{ m/s}\]</div>
-<img alt="_images/bill1.svg" class="align-center" src="_images/bill1.svg" /><p>Hér er hallatala línunar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((8, s(8) = 320)\)</span> jöfn <span class="math notranslate nohighlight">\(57.5\)</span>.</p>
+<img alt="_images/bill1.svg" class="align-center" src="_images/bill1.svg" />
+<p>Hér er hallatala línunar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((8, s(8) = 320)\)</span> jöfn <span class="math notranslate nohighlight">\(57.5\)</span>.</p>
 </div></blockquote>
 <ul class="simple">
 <li><p>Skoðum næst meðalhraða bílsins frá fjórum upp í sex sekúndur.
@@ -619,7 +620,8 @@ Lengdin á tímabilinu er <span class="math notranslate nohighlight">\(6 − 4 =
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\frac{100}{2} = 50 \text{ m/s}.\]</div>
-<img alt="_images/bill2.svg" class="align-center" src="_images/bill2.svg" /><p>Hér er hallatala línunnar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((6, s(6) = 180)\)</span> jöfn <span class="math notranslate nohighlight">\(50\)</span>.</p>
+<img alt="_images/bill2.svg" class="align-center" src="_images/bill2.svg" />
+<p>Hér er hallatala línunnar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((6, s(6) = 180)\)</span> jöfn <span class="math notranslate nohighlight">\(50\)</span>.</p>
 </div></blockquote>
 <ul class="simple">
 <li><p>Skoðum meðalhraða bílsins frá fjórum upp í fimm sekúndur. Hann er:</p></li>
@@ -627,7 +629,8 @@ Lengdin á tímabilinu er <span class="math notranslate nohighlight">\(6 − 4 =
 <blockquote>
 <div><div class="math notranslate nohighlight">
 \[\frac{5 \cdot 5^2 - 5 \cdot 4^2}{5 -4} = \frac{45}{1} = 45 \text{ m/s}.\]</div>
-<img alt="_images/bill3.svg" class="align-center" src="_images/bill3.svg" /><p>Hér er hallatala línunar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((5, s(5) = 125)\)</span> jöfn <span class="math notranslate nohighlight">\(45\)</span>.</p>
+<img alt="_images/bill3.svg" class="align-center" src="_images/bill3.svg" />
+<p>Hér er hallatala línunar á milli <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> og <span class="math notranslate nohighlight">\((5, s(5) = 125)\)</span> jöfn <span class="math notranslate nohighlight">\(45\)</span>.</p>
 </div></blockquote>
 <ul class="simple">
 <li><p>Meðalhraði bílsins frá fjórum upp í fjórar og hálfa sekúndu er:</p></li>
@@ -690,7 +693,8 @@ Með öðrum orðum þá má lýsa hraða bílsins af tíma með fallinu sem gef
 <p>Af þessu má lesa að hraði bílsins á sekúndu fjögur er <span class="math notranslate nohighlight">\(4\cdot 10=40\)</span> m/s og hraði bílsins á sekúndu átta er <span class="math notranslate nohighlight">\(8\cdot 10=80\)</span> m/s.
 Munum að bíllinn byrjar kyrrstæður svo það kemur ekki á óvart að <span class="math notranslate nohighlight">\(v(0)=0\)</span> sem má túlka sem svo að hraði bílsins á sekúndunni núll sé núll.</p>
 <blockquote>
-<div><img alt="_images/bill4.svg" class="align-center" src="_images/bill4.svg" /></div></blockquote>
+<div><img alt="_images/bill4.svg" class="align-center" src="_images/bill4.svg" />
+</div></blockquote>
 <p>Hér sjáum við línu sem er með hallatöluna <span class="math notranslate nohighlight">\(40\)</span> í punktinum <span class="math notranslate nohighlight">\((4, s(4) = 80)\)</span> sem gefur okkur línuna <span class="math notranslate nohighlight">\(y = 40x -80\)</span>.</p>
 <p>Aðferðin sem hér var notuð kallast  <a class="tooltip"  href="https://www.stae.is/os/leita/derivation"  target="_blank">
   diffrun
@@ -706,7 +710,7 @@ Hraði bílsins í tímapunktinum <span class="math notranslate nohighlight">\(t
 \[\lim_{t\to t_0}\frac{k(t)-k(t_0)}{t-t_0}.\]</div>
 </section>
 <section id="skilgreining">
-<h2><span class="section-number">11.2. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">11.2. </span>Skilgreining<a class="headerlink" href="#skilgreining" title="Link to this heading"></a></h2>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <blockquote>
@@ -806,7 +810,7 @@ Takið eftir að</p>
 </div>
 </section>
 <section id="reiknireglur">
-<h2><span class="section-number">11.3. </span>Reiknireglur<a class="headerlink" href="#reiknireglur" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">11.3. </span>Reiknireglur<a class="headerlink" href="#reiknireglur" title="Link to this heading"></a></h2>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <blockquote>
@@ -838,7 +842,7 @@ Takið eftir að</p>
 </div>
 </section>
 <section id="ekktar-afleiur">
-<h2><span class="section-number">11.4. </span>Þekktar afleiður<a class="headerlink" href="#ekktar-afleiur" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">11.4. </span>Þekktar afleiður<a class="headerlink" href="#ekktar-afleiur" title="Link to this heading"></a></h2>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <blockquote>
@@ -1004,7 +1008,7 @@ Notum okkur líka þekktu afleiðurnar <span class="math notranslate nohighlight
   <div role="contentinfo">
     <p>
          Edbook fellur undir <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons</a> höfundarréttarleyfi2026, Undirbúningur í stærðfræði | Version 0.2.0.
-      Síðast uppfært 2026-02-13 10:06.
+      Síðast uppfært 2026-02-13 14:16.
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="CC" alt="Creative Commons License" style="border-width:0" width="80px" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" align="right"/></a>
   Efnið er sett upp í <a href="https://github.com/edbook">Edbook</a> en það kerfi samanstendur af <a href="http://sphinx-doc.org/">Sphinx</a> ásamt sérsniðnum viðbótum. <a href="https://github.com/snide/sphinx_rtd_theme">Þemað</a> kemur frá <a href="https://readthedocs.org">Read the Docs</a>.
   Unnið með styrk úr <a href="http://sjodir.hi.is/kennslumalasjodur">Kennslumálasjóði Háskóla Íslands.</a>

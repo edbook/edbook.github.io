@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>13. Endurvalsaðferðir &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="endurvalsaferir">
-<span id="c-endurvalsadferdir"></span><h1><span class="section-number">13. </span>Endurvalsaðferðir<a class="headerlink" href="#endurvalsaferir" title="Permalink to this heading"></a></h1>
+<span id="c-endurvalsadferdir"></span><h1><span class="section-number">13. </span>Endurvalsaðferðir<a class="headerlink" href="#endurvalsaferir" title="Link to this heading"></a></h1>
 <p>Eins og var minnst á í fyrri köflum þá er hægt
 að nota aðrar aðferðir til að reikna prófstærðir og öryggisbil
 þegar forkröfur tilgátuprófa eru ekki uppfyllt. Hingað til hafið
@@ -642,14 +642,14 @@ slembistærðarinnar sem lýsistærðin er reiknuð út frá. Í þessum kafla l
 öfluga og gífurlega mikið notaða aðferð sem hægt er að nota þegar þessar
 forsendur eru ekki til staðar.</p>
 <section id="endurvalsafer-e-bootstrap-method">
-<h2><span class="section-number">13.1. </span>Endurvalsaðferð (e. Bootstrap method)<a class="headerlink" href="#endurvalsafer-e-bootstrap-method" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.1. </span>Endurvalsaðferð (e. Bootstrap method)<a class="headerlink" href="#endurvalsafer-e-bootstrap-method" title="Link to this heading"></a></h2>
 <p>Endurvalsaðferð er stikalaus aðferð til að meta úrtaksdreifingu lýsistærðar.
 Það að hún sé stikalaus þýðir að hún gerir engar forsendur um
 líkindadreifingu breytunnar sjálfrar. Endurvalsaðferðin var fyrst lögð til af
 Bradley Efron árið 1970. Hún byggist á að velja ný endurvalsúrtök úr úrtakinu
 sem við höfum í höndunum.</p>
 <section id="oryggisbil-reiknu-me-endurvalsafer">
-<h3><span class="section-number">13.1.1. </span>Öryggisbil reiknuð með endurvalsaðferð:<a class="headerlink" href="#oryggisbil-reiknu-me-endurvalsafer" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">13.1.1. </span>Öryggisbil reiknuð með endurvalsaðferð:<a class="headerlink" href="#oryggisbil-reiknu-me-endurvalsafer" title="Link to this heading"></a></h3>
 <p><strong>1.</strong>  Hermið endurvalsúrtök af breytunni ykkar, af sömu stærð og fjöldi
 mælinganna sem þið hafið en með <em>ísetningu</em> það er það má
 velja sama gildið endurtekið.</p>
@@ -663,7 +663,7 @@ quantile(tmp, c(0.025, 0.0975))
 </pre></div>
 </div>
 <section id="synidaemi">
-<h4><span class="section-number">13.1.1.1. </span>Sýnidæmi<a class="headerlink" href="#synidaemi" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">13.1.1.1. </span>Sýnidæmi<a class="headerlink" href="#synidaemi" title="Link to this heading"></a></h4>
 <p>Skoðum hvernig við getum fundið öryggisbil fyrir meðaltal reiknað með endurvalsaðferð.
 Veljum breytunna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> úr <code class="docutils literal notranslate"><span class="pre">konnun</span></code> gagnasafninu.
 Byrjum að teikna viðeigandi mynd af breytunni.</p>
@@ -671,7 +671,8 @@ Byrjum að teikna viðeigandi mynd af breytunni.</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/endurvals1.svg" src="_images/endurvals1.svg" /></figure>
+<img alt="_images/endurvals1.svg" src="_images/endurvals1.svg" />
+</figure>
 <p>Næst skulum við herma endurvalsúrtök af breytunni <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> fyrir meðaltalið 100.000 sinnum.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>urtok &lt;- replicate(100000, mean(sample(konnun$ferdatimi_skoli, replace=T), na.rm=T))
 </pre></div>
@@ -681,7 +682,8 @@ Byrjum að teikna viðeigandi mynd af breytunni.</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/endurvals2.svg" src="_images/endurvals2.svg" /></figure>
+<img alt="_images/endurvals2.svg" src="_images/endurvals2.svg" />
+</figure>
 <p>Sjáum að dreifingin lýkist normaldreifingu…. Lögmál mikils fjölda …</p>
 <p>Reiknum svo loks öryggisbilið</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">urtok</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">))</span>
@@ -703,7 +705,7 @@ heldur en endurvalsaðferð.</p>
 </section>
 </section>
 <section id="umraanaprof-e-permutation-test">
-<h2><span class="section-number">13.2. </span>Umraðanapróf (e. Permutation test)<a class="headerlink" href="#umraanaprof-e-permutation-test" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">13.2. </span>Umraðanapróf (e. Permutation test)<a class="headerlink" href="#umraanaprof-e-permutation-test" title="Link to this heading"></a></h2>
 <p>Umraðanapróf eru eins og endurvalsaðferð, stikalaus aðferð til að framkvæma tilgátupróf.
 Umraðanapróf eru notuð til að draga ályktanir um úrtaksdreifingu
 lýsistærðar. Þau byggja á eins og nafnið gefur til kynna að umraða
@@ -721,7 +723,7 @@ Gagntilgátan (<span class="math notranslate nohighlight">\(H_1\)</span>) er sú
 <p>Í þessu námskeiði skoðum við einungis umraðanapróf þegar við erum með eina lýsistærð
 sem við ætlum að bera saman í tveimur hópum.</p>
 <section id="tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer">
-<h3><span class="section-number">13.2.1. </span>Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:<a class="headerlink" href="#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">13.2.1. </span>Tilgátupróf fyrir mismun tveggja lýsistærða reiknað með endurvalsaðferð:<a class="headerlink" href="#tilgatuprof-fyrir-mismun-tveggja-lysistaera-reikna-me-endurvalsafer" title="Link to this heading"></a></h3>
 <p><em>Höfum talnabreytu A og flokkbreytu B (sem hefur aðeins tvo flokka) sem segir til um
 hvorum hópi hver mæling tilheyrir.</em></p>
 <p><strong>1.</strong>  Reiknið mismun lýsistærðanna í hópunm tveimur.
@@ -748,7 +750,7 @@ quantile(tmp, c(0.025, 0.975))
 </pre></div>
 </div>
 <section id="id1">
-<h4><span class="section-number">13.2.1.1. </span>Sýnidæmi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">13.2.1.1. </span>Sýnidæmi<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>Höldum áfram að nota talnabreytuna <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> og veljum flokkabreytuna
 <code class="docutils literal notranslate"><span class="pre">ferdamati_skoli_okutaeki</span></code> sem við bjuggum til í kafla 2.6 sem segir til um hvort
 nemedur ferðist í skóla með ökutæki eða ekki. Byrjum að teikna graf:</p>
@@ -760,7 +762,8 @@ nemedur ferðist í skóla með ökutæki eða ekki. Byrjum að teikna graf:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/endurvals3.svg" src="_images/endurvals3.svg" /></figure>
+<img alt="_images/endurvals3.svg" src="_images/endurvals3.svg" />
+</figure>
 <p>Ætlum að skoða muninn á meðaltölum eftir því hvort nemendur
 ferðist með ökutæki í skóla eða ekki. Reiknum fyrst meðaltölin í hópunum.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tapply(konnun$ferdatimi_skoli, konnun$ferdamati_skoli_okutaeki, mean, na.rm=T)
@@ -787,7 +790,8 @@ sample(konnun$ferdamati_skoli_okutaeki, replace=T), mean, na.rm=T)))
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/endurvals4.svg" src="_images/endurvals4.svg" /></figure>
+<img alt="_images/endurvals4.svg" src="_images/endurvals4.svg" />
+</figure>
 <p>Loks reyknum við öryggisbil</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">quantile</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.975</span><span class="p">))</span>
 <span class="c1">##</span>
@@ -813,7 +817,7 @@ sample(konnun$ferdamati_skoli_okutaeki, replace=T), mean, na.rm=T)))
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

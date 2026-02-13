@@ -1,33 +1,33 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5. Eigingildi og eiginvigrar &mdash; Línuleg Algebra 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"R": "{\\mathbb{R}}", "ve": ["{\\textbf #1}", 1], "spn": "{\\text{Span}}", "nul": "{\\text{Nul}} \\ ", "col": "{\\text{Col}} \\ ", "ker": "{\\text{Ker}} \\ ", "range": "{\\text{Range}} \\ ", "dim": "{\\text{dim}}", "row": "{\\text{Row}} \\ ", "rnk": "{\\text{Rank}} \\ "}}})</script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -736,11 +736,11 @@
            <div itemprop="articleBody">
              
   <section id="eigingildi-og-eiginvigrar">
-<h1><span class="section-number">5. </span>Eigingildi og eiginvigrar<a class="headerlink" href="#eigingildi-og-eiginvigrar" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">5. </span>Eigingildi og eiginvigrar<a class="headerlink" href="#eigingildi-og-eiginvigrar" title="Link to this heading"></a></h1>
 <section id="eigingildi-og-eiginvigur">
-<h2><span class="section-number">5.1. </span>Eigingildi og eiginvigur<a class="headerlink" href="#eigingildi-og-eiginvigur" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.1. </span>Eigingildi og eiginvigur<a class="headerlink" href="#eigingildi-og-eiginvigur" title="Link to this heading"></a></h2>
 <section id="skilgreining-eigingildi-og-eiginvigur">
-<h3><span class="section-number">5.1.1. </span>Skilgreining: Eigingildi og eiginvigur<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigur" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.1.1. </span>Skilgreining: Eigingildi og eiginvigur<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigur" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Ef til er vigur
@@ -754,7 +754,7 @@ Við þessar aðstæður segjum við að eigingildið <span class="math notransl
 tilheyri hvort öðru.</p>
 </div>
 <section id="synidaemi-eigingildi">
-<h4><span class="section-number">5.1.1.1. </span>Sýnidæmi: Eigingildi<a class="headerlink" href="#synidaemi-eigingildi" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.1.1.1. </span>Sýnidæmi: Eigingildi<a class="headerlink" href="#synidaemi-eigingildi" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Látum <span class="math notranslate nohighlight">\(A=\begin{bmatrix} 2&amp;0\\0&amp;1 \end{bmatrix}\)</span> og
@@ -772,14 +772,14 @@ tilheyri hvort öðru.</p>
 </section>
 </section>
 <section id="setning-eigingildi">
-<h3><span class="section-number">5.1.2. </span>Setning: Eigingildi<a class="headerlink" href="#setning-eigingildi" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.1.2. </span>Setning: Eigingildi<a class="headerlink" href="#setning-eigingildi" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Tala <span class="math notranslate nohighlight">\(\lambda\)</span> er
 eigingildi fylkis <span class="math notranslate nohighlight">\(A\)</span> ef og aðeins ef <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span>.</p>
 </div>
 <section id="synidaemi-eigingild-og-eiginvigrar">
-<h4><span class="section-number">5.1.2.1. </span>Sýnidæmi: Eigingild og eiginvigrar<a class="headerlink" href="#synidaemi-eigingild-og-eiginvigrar" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.1.2.1. </span>Sýnidæmi: Eigingild og eiginvigrar<a class="headerlink" href="#synidaemi-eigingild-og-eiginvigrar" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Finnið eigingildi og eiginvigra</p>
@@ -819,9 +819,9 @@ er eiginvigur sem svarar til eigingildisins 5.</p>
 </section>
 </section>
 <section id="eiginrum">
-<h2><span class="section-number">5.2. </span>Eiginrúm<a class="headerlink" href="#eiginrum" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.2. </span>Eiginrúm<a class="headerlink" href="#eiginrum" title="Link to this heading"></a></h2>
 <section id="setning-eiginrum">
-<h3><span class="section-number">5.2.1. </span>Setning: Eiginrúm<a class="headerlink" href="#setning-eiginrum" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.2.1. </span>Setning: Eiginrúm<a class="headerlink" href="#setning-eiginrum" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n\times n\)</span> fylki og <span class="math notranslate nohighlight">\(\lambda\)</span>
@@ -831,7 +831,7 @@ að viðbættum núllvigrinum <span class="math notranslate nohighlight">\(\text
 og táknað með <span class="math notranslate nohighlight">\(E(\lambda)\)</span>. Eiginrúmið er núllrúm fylkisins <span class="math notranslate nohighlight">\(A-\lambda I\)</span>.</p>
 </div>
 <section id="synidaemi-eiginrum-fylkis">
-<h4><span class="section-number">5.2.1.1. </span>Sýnidæmi: Eiginrúm fylkis<a class="headerlink" href="#synidaemi-eiginrum-fylkis" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.2.1.1. </span>Sýnidæmi: Eiginrúm fylkis<a class="headerlink" href="#synidaemi-eiginrum-fylkis" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Gefið er að 3 og 4 eru eigingildi fylkisins <span class="math notranslate nohighlight">\(A\)</span>. Finnið
@@ -878,7 +878,7 @@ og því er <span class="math notranslate nohighlight">\(E(4)=\spn{\begin{bmatri
 </section>
 </section>
 <section id="setning-eigingildi-rihyrningsfylkja">
-<h3><span class="section-number">5.2.2. </span>Setning: Eigingildi þríhyrningsfylkja<a class="headerlink" href="#setning-eigingildi-rihyrningsfylkja" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.2.2. </span>Setning: Eigingildi þríhyrningsfylkja<a class="headerlink" href="#setning-eigingildi-rihyrningsfylkja" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Ef <span class="math notranslate nohighlight">\(A\)</span> er <span class="math notranslate nohighlight">\(n \times n\)</span> þríhyrningsfylki þá eru eigingildi <span class="math notranslate nohighlight">\(A\)</span>
@@ -886,7 +886,7 @@ stökin á hornalínunni.</p>
 </div>
 </section>
 <section id="setning-eiginvigrar-linulega-ohair">
-<h3><span class="section-number">5.2.3. </span>Setning: Eiginvigrar línulega óháðir<a class="headerlink" href="#setning-eiginvigrar-linulega-ohair" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.2.3. </span>Setning: Eiginvigrar línulega óháðir<a class="headerlink" href="#setning-eiginvigrar-linulega-ohair" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(\textbf{v}_1, \dots \textbf{v}_r\)</span> vera eiginvigra sem svara til ólíkra eigingilda
@@ -899,7 +899,7 @@ stökin á hornalínunni.</p>
 </div>
 </section>
 <section id="setning-0-sem-eigingildi">
-<h3><span class="section-number">5.2.4. </span>Setning: 0 sem eigingildi<a class="headerlink" href="#setning-0-sem-eigingildi" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.2.4. </span>Setning: 0 sem eigingildi<a class="headerlink" href="#setning-0-sem-eigingildi" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Talan 0 er eigingildi fylkisins <span class="math notranslate nohighlight">\(A\)</span> þá og því aðeins að <span class="math notranslate nohighlight">\(A\)</span> er óandhverfanlegt.</p>
@@ -907,15 +907,15 @@ stökin á hornalínunni.</p>
 </section>
 </section>
 <section id="kennijafnan">
-<h2><span class="section-number">5.3. </span>Kennijafnan<a class="headerlink" href="#kennijafnan" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.3. </span>Kennijafnan<a class="headerlink" href="#kennijafnan" title="Link to this heading"></a></h2>
 <section id="setning-kennijafnan">
-<h3><span class="section-number">5.3.1. </span>Setning: Kennijafnan<a class="headerlink" href="#setning-kennijafnan" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.3.1. </span>Setning: Kennijafnan<a class="headerlink" href="#setning-kennijafnan" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Jafnan <span class="math notranslate nohighlight">\(\det(A-\lambda I)=0\)</span> kallast <strong>kennijafna</strong> (e. characteristic equation) fylkisins A.</p>
 </div>
 <section id="synidaemi-kennijafnan">
-<h4><span class="section-number">5.3.1.1. </span>Sýnidæmi: Kennijafnan<a class="headerlink" href="#synidaemi-kennijafnan" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.1. </span>Sýnidæmi: Kennijafnan<a class="headerlink" href="#synidaemi-kennijafnan" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Finnum eigingildi og eignvigra fylkisins</p>
@@ -1013,7 +1013,7 @@ Ef að margliðan þéttast þannig að einhver núllstöð <span class="math no
 </div>
 </section>
 <section id="synidaemi-margfeldni-eigingildis">
-<h4><span class="section-number">5.3.1.2. </span>Sýnidæmi: Margfeldni eigingildis<a class="headerlink" href="#synidaemi-margfeldni-eigingildis" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.2. </span>Sýnidæmi: Margfeldni eigingildis<a class="headerlink" href="#synidaemi-margfeldni-eigingildis" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Finnið eigingildin</p>
@@ -1041,9 +1041,9 @@ Ef að margliðan þéttast þannig að einhver núllstöð <span class="math no
 </section>
 </section>
 <section id="amota-fylki">
-<h2><span class="section-number">5.4. </span>Ámóta fylki<a class="headerlink" href="#amota-fylki" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.4. </span>Ámóta fylki<a class="headerlink" href="#amota-fylki" title="Link to this heading"></a></h2>
 <section id="skilgreining-amota">
-<h3><span class="section-number">5.4.1. </span>Skilgreining: Ámóta<a class="headerlink" href="#skilgreining-amota" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.4.1. </span>Skilgreining: Ámóta<a class="headerlink" href="#skilgreining-amota" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Tvö <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru sögð <strong>ámóta</strong>
@@ -1061,7 +1061,7 @@ og fylkið <span class="math notranslate nohighlight">\(B\)</span> sé ámóta f
 </div>
 </section>
 <section id="setning-kennijafna-amota-fylkja">
-<h3><span class="section-number">5.4.2. </span>Setning: Kennijafna ámóta fylkja<a class="headerlink" href="#setning-kennijafna-amota-fylkja" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.4.2. </span>Setning: Kennijafna ámóta fylkja<a class="headerlink" href="#setning-kennijafna-amota-fylkja" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Ef <span class="math notranslate nohighlight">\(A\)</span> og <span class="math notranslate nohighlight">\(B\)</span> eru ámóta fylki þá hafa þau sömu kennijöfnur
@@ -1095,9 +1095,9 @@ með sömu margfeldni en séu samt ekki ámóta.</p>
 </section>
 </section>
 <section id="hornalinugjorningar">
-<h2><span class="section-number">5.5. </span>Hornalínugjörningar<a class="headerlink" href="#hornalinugjorningar" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.5. </span>Hornalínugjörningar<a class="headerlink" href="#hornalinugjorningar" title="Link to this heading"></a></h2>
 <section id="skilgreining-hornalinufylki">
-<h3><span class="section-number">5.5.1. </span>Skilgreining: Hornalínufylki<a class="headerlink" href="#skilgreining-hornalinufylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.5.1. </span>Skilgreining: Hornalínufylki<a class="headerlink" href="#skilgreining-hornalinufylki" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Við segjum að <span class="math notranslate nohighlight">\(n \times n\)</span> fylki <span class="math notranslate nohighlight">\(D\)</span> sé <strong>hornalínufylki</strong>
@@ -1112,7 +1112,7 @@ d_1 &amp; 0 &amp; \cdots &amp; 0 \\
 </div>
 </section>
 <section id="skilgreining-hornalinugeranlegt">
-<h3><span class="section-number">5.5.2. </span>Skilgreining: Hornalínugeranlegt<a class="headerlink" href="#skilgreining-hornalinugeranlegt" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.5.2. </span>Skilgreining: Hornalínugeranlegt<a class="headerlink" href="#skilgreining-hornalinugeranlegt" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Ferningsfylki <span class="math notranslate nohighlight">\(A\)</span> sem er ámóta hornalínufylki er sagt <strong>hornalínugeranlegt</strong> (e. diagonalizable).
@@ -1127,7 +1127,7 @@ fylki <span class="math notranslate nohighlight">\(P\)</span> þannig að <span 
 <p><strong>4.</strong> Smiðum fylkið <span class="math notranslate nohighlight">\(D\)</span> úr eigingildum í skrefi 1.</p>
 </div></blockquote>
 <section id="synidaemi-hornalinugjorningar">
-<h4><span class="section-number">5.5.2.1. </span>Sýnidæmi: Hornalínugjörningar<a class="headerlink" href="#synidaemi-hornalinugjorningar" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.5.2.1. </span>Sýnidæmi: Hornalínugjörningar<a class="headerlink" href="#synidaemi-hornalinugjorningar" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Hornulínugerið fylkið <span class="math notranslate nohighlight">\(A\)</span> ef hægt er</p>
@@ -1219,14 +1219,14 @@ D=\begin{bmatrix}
 </section>
 </section>
 <section id="setning-hornalinugeranleg-fylki">
-<h3><span class="section-number">5.5.3. </span>Setning: Hornalínugeranleg fylki<a class="headerlink" href="#setning-hornalinugeranleg-fylki" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.5.3. </span>Setning: Hornalínugeranleg fylki<a class="headerlink" href="#setning-hornalinugeranleg-fylki" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki. Ef fylkið <span class="math notranslate nohighlight">\(A\)</span> hefur <span class="math notranslate nohighlight">\(n\)</span>
 ólík eigingildi þá er fylkið <span class="math notranslate nohighlight">\(A\)</span> hornalínugeranlegt.</p>
 </div>
 <section id="synidaemi-er-fylki-hornalinugeranlegt">
-<h4><span class="section-number">5.5.3.1. </span>Sýnidæmi: Er fylkið hornalínugeranlegt<a class="headerlink" href="#synidaemi-er-fylki-hornalinugeranlegt" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.5.3.1. </span>Sýnidæmi: Er fylkið hornalínugeranlegt<a class="headerlink" href="#synidaemi-er-fylki-hornalinugeranlegt" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Er fylkið <span class="math notranslate nohighlight">\(A=\begin{bmatrix} 1 &amp; 2 &amp; 3\\ 0 &amp; 4 &amp; 5 \\ 0 &amp; 0 &amp; 6\end{bmatrix}\)</span> hornalínugeranlegt?</p>
@@ -1240,7 +1240,7 @@ fylki með 3 ólík eigingildi. Fylkið er því hornalínugeranlegt.</p>
 </section>
 </section>
 <section id="setning-vidd-eiginrums">
-<h3><span class="section-number">5.5.4. </span>Setning: Vídd eiginrúms<a class="headerlink" href="#setning-vidd-eiginrums" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.5.4. </span>Setning: Vídd eiginrúms<a class="headerlink" href="#setning-vidd-eiginrums" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(A\)</span> vera <span class="math notranslate nohighlight">\(n \times n\)</span> fylki sem hefur ólíku eigingildin <span class="math notranslate nohighlight">\(\lambda_1, \dots, \lambda_p\)</span> (með <span class="math notranslate nohighlight">\(p\leq n\)</span>). Þá gildir eftirfarandi.</p>
@@ -1257,9 +1257,9 @@ Til þess þarf kennijafnan að þáttast að fullu í línulega þætti og víd
 </section>
 </section>
 <section id="eiginvigrar-linulegra-varpana">
-<h2><span class="section-number">5.6. </span>Eiginvigrar línulegra varpana<a class="headerlink" href="#eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.6. </span>Eiginvigrar línulegra varpana<a class="headerlink" href="#eiginvigrar-linulegra-varpana" title="Link to this heading"></a></h2>
 <section id="skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana">
-<h3><span class="section-number">5.6.1. </span>Skilgreining: Eigingildi og eiginvigrar línulegra varpana<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.1. </span>Skilgreining: Eigingildi og eiginvigrar línulegra varpana<a class="headerlink" href="#skilgreining-eigingildi-og-eiginvigrar-linulegra-varpana" title="Link to this heading"></a></h3>
 <div class="skilgreining admonition">
 <p class="admonition-title">Skilgreining</p>
 <p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera vigurrúm og <span class="math notranslate nohighlight">\(T\text{:}V \rightarrow V\)</span> vera
@@ -1269,7 +1269,7 @@ línulega vörpun. Ef til er vigur <span class="math notranslate nohighlight">\(
 eiginvigur <span class="math notranslate nohighlight">\(T\)</span> sem svara til <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
 </div>
 <section id="synidaemi-eiginvigrar-linulegra-varpana">
-<h4><span class="section-number">5.6.1.1. </span>Sýnidæmi: Eiginvigrar línulegra varpana<a class="headerlink" href="#synidaemi-eiginvigrar-linulegra-varpana" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.6.1.1. </span>Sýnidæmi: Eiginvigrar línulegra varpana<a class="headerlink" href="#synidaemi-eiginvigrar-linulegra-varpana" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Skoðum vörpunina <span class="math notranslate nohighlight">\(T\text{:}\mathbb{P}_1 \rightarrow \mathbb{P}_1\)</span>,
@@ -1286,7 +1286,7 @@ Einnig ef við tökum <span class="math notranslate nohighlight">\(p(x)=1\)</spa
 </section>
 </section>
 <section id="setning-fylki-linulegra-varpana-i-v">
-<h3><span class="section-number">5.6.2. </span>Setning: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#setning-fylki-linulegra-varpana-i-v" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.6.2. </span>Setning: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#setning-fylki-linulegra-varpana-i-v" title="Link to this heading"></a></h3>
 <div class="setning admonition">
 <p class="admonition-title">Setning</p>
 <p>Látum <span class="math notranslate nohighlight">\(T:\mathbb{R}^n\rightarrow\mathbb{R}^n\)</span> vera línulega vörpun með fylkið <span class="math notranslate nohighlight">\(A\)</span>. Gerum ráð fyrir að
@@ -1295,7 +1295,7 @@ Einnig ef við tökum <span class="math notranslate nohighlight">\(p(x)=1\)</spa
 <span class="math notranslate nohighlight">\(D=P^{-1}AP\)</span> er þá fylki vörpunarinnar m.t.t. grunnsins <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>.</p>
 </div>
 <section id="synidaemi-fylki-linulegra-varpana-i-v">
-<h4><span class="section-number">5.6.2.1. </span>Sýnidæmi: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#synidaemi-fylki-linulegra-varpana-i-v" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.6.2.1. </span>Sýnidæmi: Fylki línulegra varpana í <span class="math notranslate nohighlight">\(V\)</span><a class="headerlink" href="#synidaemi-fylki-linulegra-varpana-i-v" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Látum <span class="math notranslate nohighlight">\(V\)</span> vera n-vítt vigurrúm og <span class="math notranslate nohighlight">\(T\text{:}V \rightarrow V\)</span> vera línulega
@@ -1338,7 +1338,7 @@ r_1 \\ \vdots \\ r_n
 </div>
 </section>
 <section id="synidaemi-hornalinugjorningur">
-<h4><span class="section-number">5.6.2.2. </span>Sýnidæmi: Hornalínugjörningur<a class="headerlink" href="#synidaemi-hornalinugjorningur" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.6.2.2. </span>Sýnidæmi: Hornalínugjörningur<a class="headerlink" href="#synidaemi-hornalinugjorningur" title="Link to this heading"></a></h4>
 <div class="daemi admonition">
 <p class="admonition-title">Dæmi</p>
 <p>Látum <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 &amp; 1\\ 5 &amp; 6 \end{bmatrix}\)</span> vera venjulega fylkið
@@ -1405,7 +1405,7 @@ Getum því skrifað</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, Línuleg Algebra | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:16.
       </span></p>
   </div>
 

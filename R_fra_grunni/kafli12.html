@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>12. Knitr &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="knitr">
-<span id="c-knitr"></span><h1><span class="section-number">12. </span>Knitr<a class="headerlink" href="#knitr" title="Permalink to this heading"></a></h1>
+<span id="c-knitr"></span><h1><span class="section-number">12. </span>Knitr<a class="headerlink" href="#knitr" title="Link to this heading"></a></h1>
 <p>Í kafla <a class="reference internal" href="kafli01.html#c-inngangur"><span class="std std-numref">1</span></a> er fjallað um hvernig við getum framkvæmt
 tölfræðiúrvinnslu með því að skrifa skipanir í skipanaskrá (.R). Ef við
 þurfum að skrifa skýrslu, grein eða annað þar sem úrvinnslunni og
@@ -667,7 +667,7 @@ skjalinu okkar, annars er litið á hann sem venjulegan texta. Þó er
 einnig er hægt að kalla á R-úttök í textann en hvernig að þessu er
 staðið fer eftir hvaða snið er valið.</p>
 <section id="umbrot-a-texta">
-<h2><span class="section-number">12.1. </span>Umbrot á texta<a class="headerlink" href="#umbrot-a-texta" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.1. </span>Umbrot á texta<a class="headerlink" href="#umbrot-a-texta" title="Link to this heading"></a></h2>
 <p>Áður en vinnslan hefst er nauðsynlegt að ákveða hvaða tól eigi að nota
 við umbrot á texta og á hvaða sniði skýrslan á að vera. LaTeX notendur
 geta á auðveldan hátt prjónað saman LaTeX kóða og R-kóða en það er ekki
@@ -675,7 +675,7 @@ nauðsynlegt að tileinka sér LaTeX til að nota <code class="docutils literal 
 er til staðar en það er að nota ívafsmálið (e. markup language) Markdown en
 það er mjög einfalt í notkun.</p>
 <section id="markdown-html-ea-docx">
-<h3><span class="section-number">12.1.1. </span>Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)<a class="headerlink" href="#markdown-html-ea-docx" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">12.1.1. </span>Markdown (<code class="docutils literal notranslate"><span class="pre">.html</span></code> eða <code class="docutils literal notranslate"><span class="pre">.docx</span></code>)<a class="headerlink" href="#markdown-html-ea-docx" title="Link to this heading"></a></h3>
 <p>Til að búa til nýja R-Markdown skrá í RStudio veljið <code class="docutils literal notranslate"><span class="pre">File</span></code>,
 <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">File</span></code> og <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">Markdown</span></code>. Þar eruð þið beðin um að velja á hvaða
 sniði skýrslan á að vera. Ef <code class="docutils literal notranslate"><span class="pre">Word</span></code> er valið þarf Word að vera uppsett
@@ -760,7 +760,7 @@ fleiri myllumerkjum:</p>
 </div>
 </section>
 <section id="latex-pdf-ast">
-<h3><span class="section-number">12.1.2. </span>LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#latex-pdf-ast" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">12.1.2. </span>LaTeX (<code class="docutils literal notranslate"><span class="pre">.pdf</span></code>)<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#latex-pdf-ast" title="Link to this heading"></a></h3>
 <p>Það er fyrir utan efni þessara bókar að kenna á LaTeX en finna má
 ógrynni af efni um LaTeX á netinu. Í þessum undirkafla er því gert ráð
 fyrir LaTeX kunnáttu.</p>
@@ -795,7 +795,7 @@ einstaklinganna í <code class="docutils literal notranslate"><span class="pre">
 </section>
 </section>
 <section id="jofnur">
-<h2><span class="section-number">12.2. </span>Jöfnur<a class="headerlink" href="#jofnur" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.2. </span>Jöfnur<a class="headerlink" href="#jofnur" title="Link to this heading"></a></h2>
 <p>Eins og fram kom hér að ofan er LaTeX kunnátta ekki nauðsynleg þegar
 unnið er með <code class="docutils literal notranslate"><span class="pre">knitr</span></code> pakkann en einn af styrkleikum LaTeX er hversu
 auðvelt er að skrifa stærðfræðitákn og hversu fögur útkoman verður. Þó
@@ -827,7 +827,7 @@ sem inniheldur LaTeX kóðann í <code class="docutils literal notranslate"><spa
 þurfið þið að laga villuna og ýta svo aftur á <code class="docutils literal notranslate"><span class="pre">Knit</span></code> takkann.</p>
 </section>
 <section id="klumpastillingar">
-<h2><span class="section-number">12.3. </span>Klumpastillingar<a class="headerlink" href="#klumpastillingar" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.3. </span>Klumpastillingar<a class="headerlink" href="#klumpastillingar" title="Link to this heading"></a></h2>
 <p>Á milli R-klumpa getið þið skrifað texta sem lýsir greiningunni sem þið
 eruð að framkvæma. Sjálfgefnu stillingar R-klumpa eru:</p>
 <ul class="simple">
@@ -939,7 +939,7 @@ ylab(&quot;Fjöldi&quot;)
 </div>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h2><span class="section-number">12.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">12.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h2>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -962,7 +962,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

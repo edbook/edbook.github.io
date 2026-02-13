@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5. Líkindafræðileg undirstaða &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="likindafraeileg-undirstaa">
-<span id="c-likindafraedi"></span><h1><span class="section-number">5. </span>Líkindafræðileg undirstaða<a class="headerlink" href="#likindafraeileg-undirstaa" title="Permalink to this heading"></a></h1>
+<span id="c-likindafraedi"></span><h1><span class="section-number">5. </span>Líkindafræðileg undirstaða<a class="headerlink" href="#likindafraeileg-undirstaa" title="Link to this heading"></a></h1>
 <p>Góður skilningur á tölfræði krefst góðrar undirstöðu í líkindafræði. Í
 kafla <a class="reference internal" href="#s-likindareikningur"><span class="std std-numref">5.1</span></a> verða kynntar aðferðinar
 <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> og <code class="docutils literal notranslate"><span class="pre">choose()</span></code> sem eru mjög gagnlegar í
@@ -645,11 +645,11 @@ kafla <a class="reference internal" href="#s-strjalar"><span class="std std-numr
 munum við sjá sambærilegar skipanir fyrir samfelldar líkindadreifingar:
 <code class="docutils literal notranslate"><span class="pre">\cdotnorm</span></code>, <code class="docutils literal notranslate"><span class="pre">\cdotchisq</span></code>, <code class="docutils literal notranslate"><span class="pre">\cdott</span></code> og <code class="docutils literal notranslate"><span class="pre">\cdotf</span></code>.</p>
 <section id="likindareikningur">
-<span id="s-likindareikningur"></span><h2><span class="section-number">5.1. </span>Líkindareikningur<a class="headerlink" href="#likindareikningur" title="Permalink to this heading"></a></h2>
+<span id="s-likindareikningur"></span><h2><span class="section-number">5.1. </span>Líkindareikningur<a class="headerlink" href="#likindareikningur" title="Link to this heading"></a></h2>
 <section id="id1">
-<h3><span class="section-number">5.1.1. </span>Líkindareikningur<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.1.1. </span>Líkindareikningur<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <section id="factorial">
-<h4><span class="section-number">5.1.1.1. </span>factorial()<a class="headerlink" href="#factorial" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.1.1.1. </span>factorial()<a class="headerlink" href="#factorial" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> tala sem við viljum reikna aðfeldi fyrir</p>
@@ -666,7 +666,7 @@ með þeirri tölu sem við viljum finna aðfeldið að og fáum til baka
 <p>Munið að <span class="math notranslate nohighlight">\(5! = 5\cdot4\cdot3\cdot2\cdot1\)</span>.</p>
 </section>
 <section id="choose">
-<h4><span class="section-number">5.1.1.2. </span>choose()<a class="headerlink" href="#choose" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.1.1.2. </span>choose()<a class="headerlink" href="#choose" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> tvær tölur sem við viljum reikna tvíliðustuðul fyrir</p>
@@ -684,15 +684,15 @@ Við mötum aðferðina með tölunum <span class="math notranslate nohighlight"
 </section>
 </section>
 <section id="strjalar-likindadreifingar">
-<span id="s-strjalar"></span><h2><span class="section-number">5.2. </span>Strjálar líkindadreifingar<a class="headerlink" href="#strjalar-likindadreifingar" title="Permalink to this heading"></a></h2>
+<span id="s-strjalar"></span><h2><span class="section-number">5.2. </span>Strjálar líkindadreifingar<a class="headerlink" href="#strjalar-likindadreifingar" title="Link to this heading"></a></h2>
 <section id="id2">
-<h3><span class="section-number">5.2.1. </span>Strjálar líkindadreifingar<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.2.1. </span>Strjálar líkindadreifingar<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <p>Í þessum hluta munum við kynnast aðferðunum <code class="docutils literal notranslate"><span class="pre">dbinom()</span></code>, <code class="docutils literal notranslate"><span class="pre">pbinom()</span></code>,
 <code class="docutils literal notranslate"><span class="pre">dpois()</span></code> og <code class="docutils literal notranslate"><span class="pre">ppois()</span></code>. Föllin sem byrja á <code class="docutils literal notranslate"><span class="pre">d</span></code> gefa okkur
 <em>massafallið</em> (e. probability mass function) en föllin sem byrja á <code class="docutils literal notranslate"><span class="pre">p</span></code>
 gefa okkur <em>dreififallið</em> (e. probability distribution funciton).</p>
 <section id="dbinom">
-<h4><span class="section-number">5.2.1.1. </span>dbinom()<a class="headerlink" href="#dbinom" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.2.1.1. </span>dbinom()<a class="headerlink" href="#dbinom" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> útkoma úr tvíkostadreifingu, stikar tvíkostadreifingarinnar</p>
@@ -731,7 +731,7 @@ skrifum við:</p>
 </div>
 </section>
 <section id="pbinom">
-<h4><span class="section-number">5.2.1.2. </span>pbinom()<a class="headerlink" href="#pbinom" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.2.1.2. </span>pbinom()<a class="headerlink" href="#pbinom" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> útkoma úr tvíkostadreifingu, stikar tvíkostadreifingarinnar</p>
@@ -756,10 +756,11 @@ eða tvo) þegar krónu er kastað upp fjórum sinnum skrifum við:</p>
 Sambærilega mynd mætti teikna fyrir <code class="docutils literal notranslate"><span class="pre">dpois()</span></code> og
 <code class="docutils literal notranslate"><span class="pre">ppois()</span></code> sem fjallað er um hér að neðan.</p>
 <figure class="align-center" id="f-dpbinom">
-<img alt="Mynd" src="_images/dpbinom-1.svg" /></figure>
+<img alt="Mynd" src="_images/dpbinom-1.svg" />
+</figure>
 </section>
 <section id="dpois">
-<h4><span class="section-number">5.2.1.3. </span>dpois()<a class="headerlink" href="#dpois" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.2.1.3. </span>dpois()<a class="headerlink" href="#dpois" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> útkoma úr Poisson dreifingu, stiki Poisson dreifingarinnar</p>
@@ -792,7 +793,7 @@ dreifingu með <span class="math notranslate nohighlight">\(\lambda = 1.5\)</spa
 <span class="math notranslate nohighlight">\(P(X=2)\)</span> og <span class="math notranslate nohighlight">\(P(X=3)\)</span>.</p>
 </section>
 <section id="ppois">
-<h4><span class="section-number">5.2.1.4. </span>ppois()<a class="headerlink" href="#ppois" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.2.1.4. </span>ppois()<a class="headerlink" href="#ppois" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> útkoma úr Poisson dreifingu, stikar Poisson dreifingarinnar</p>
@@ -818,16 +819,16 @@ kúnna á mínútu er 1.5 skrifum við:</p>
 </section>
 </section>
 <section id="samfelldar-likindadreifingar">
-<span id="s-samfelldar"></span><h2><span class="section-number">5.3. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#samfelldar-likindadreifingar" title="Permalink to this heading"></a></h2>
+<span id="s-samfelldar"></span><h2><span class="section-number">5.3. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#samfelldar-likindadreifingar" title="Link to this heading"></a></h2>
 <section id="id3">
-<h3><span class="section-number">5.3.1. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">5.3.1. </span>Samfelldar líkindadreifingar<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <p>Í þessum hluta munum við kynnast aðferðunum sem byrja á <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">q</span></code> og
 <code class="docutils literal notranslate"><span class="pre">r</span></code>. Aðferðirnar sem byrja á <code class="docutils literal notranslate"><span class="pre">p</span></code> skila okkur <em>dreififalli</em> (e.
 probability distribution funciton), aðferðirnar sem byrja á <code class="docutils literal notranslate"><span class="pre">q</span></code> skila
 okkur <em>hlutfallsmörkum</em> (e. quantiles) og aðferðirnar sem byja á <code class="docutils literal notranslate"><span class="pre">r</span></code>
 skila okkur slembitölu úr dreifingunni.</p>
 <section id="pnorm">
-<h4><span class="section-number">5.3.1.1. </span>pnorm()<a class="headerlink" href="#pnorm" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.1. </span>pnorm()<a class="headerlink" href="#pnorm" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> viðmiðunargildi</p>
@@ -862,7 +863,7 @@ normaldreifingu taki gildi sem er minna en 0.8 á meðan</p>
 meðaltalið 2 og staðalfrávikið 1.2 taki gildi sem er minna en 0.8.</p>
 </section>
 <section id="qnorm">
-<h4><span class="section-number">5.3.1.2. </span>qnorm()<a class="headerlink" href="#qnorm" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.2. </span>qnorm()<a class="headerlink" href="#qnorm" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> líkur</p>
@@ -896,10 +897,11 @@ okkur á vinstri hönd í normaldreifingu með meðaltal 165 og staðalfrávik
 Sambærilegar myndir mætti teikna fyrir aðrar dreifingar
 sem fjallað er um hér að neðan.</p>
 <figure class="align-center" id="f-pqnorm">
-<img alt="Mynd" src="_images/pqnorm-1.svg" /></figure>
+<img alt="Mynd" src="_images/pqnorm-1.svg" />
+</figure>
 </section>
 <section id="rnorm">
-<h4><span class="section-number">5.3.1.3. </span>rnorm()<a class="headerlink" href="#rnorm" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.3. </span>rnorm()<a class="headerlink" href="#rnorm" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> fjöldi gilda sem skal herma</p>
@@ -921,7 +923,7 @@ og staðalfrávik 12 og geyma þær í breytunni <code class="docutils literal n
 </div>
 </section>
 <section id="pt">
-<h4><span class="section-number">5.3.1.4. </span>pt()<a class="headerlink" href="#pt" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.4. </span>pt()<a class="headerlink" href="#pt" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> viðmiðunargildi, stiki t-dreifingar</p>
@@ -941,7 +943,7 @@ t-dreifingu. Skipunin</p>
 frígráður taki gildi sem er minna en 0.8.</p>
 </section>
 <section id="qt">
-<h4><span class="section-number">5.3.1.5. </span>qt()<a class="headerlink" href="#qt" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.5. </span>qt()<a class="headerlink" href="#qt" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> líkur, stiki t-dreifingar</p>
@@ -963,7 +965,7 @@ Við reiknum <span class="math notranslate nohighlight">\(t_{a, (k)}\)</span> me
 <p>þar sem <code class="docutils literal notranslate"><span class="pre">a</span></code> eru tilteknu líkurnar og <code class="docutils literal notranslate"><span class="pre">k</span></code> eru tilteknu frígráðurnar.</p>
 </section>
 <section id="pchisq">
-<h4><span class="section-number">5.3.1.6. </span>pchisq()<a class="headerlink" href="#pchisq" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.6. </span>pchisq()<a class="headerlink" href="#pchisq" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> viðmiðunargildi, stiki kí-kvaðratdreifingar</p>
@@ -982,7 +984,7 @@ kí- kvaðrat dreifingu. Skipunin</p>
 með 5 frígráður taki gildi sem er minna en 0.8.</p>
 </section>
 <section id="id4">
-<h4><span class="section-number">5.3.1.7. </span>qt()<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.7. </span>qt()<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> líkur, stiki kí-kvaðratdreifingar</p>
@@ -1006,7 +1008,7 @@ skipuninni</p>
 <p>þar sem <code class="docutils literal notranslate"><span class="pre">a</span></code> eru tilteknu líkurnar og <code class="docutils literal notranslate"><span class="pre">k</span></code> eru tilteknu frígráðurnar.</p>
 </section>
 <section id="pf">
-<h4><span class="section-number">5.3.1.8. </span>pf()<a class="headerlink" href="#pf" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.8. </span>pf()<a class="headerlink" href="#pf" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> viðmiðunargildi, stikar F-dreifingar</p>
@@ -1026,7 +1028,7 @@ minna en gefna viðmiðunargildið. Þ.e.a.s. reiknar <span class="math notransl
 frígráður taki gildi sem er minna en 0.8.</p>
 </section>
 <section id="qf">
-<h4><span class="section-number">5.3.1.9. </span>qf()<a class="headerlink" href="#qf" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">5.3.1.9. </span>qf()<a class="headerlink" href="#qf" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> líkur, stiki F-dreifingar</p>
@@ -1052,7 +1054,7 @@ frígráðurnar.</p>
 </section>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h2><span class="section-number">5.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">5.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h2>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -1075,7 +1077,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

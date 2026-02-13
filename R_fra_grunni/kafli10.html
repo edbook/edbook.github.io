@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10. Línuleg aðhvarfsgreining &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="linuleg-ahvarfsgreining">
-<span id="c-linulegtadhvarf"></span><h1><span class="section-number">10. </span>Línuleg aðhvarfsgreining<a class="headerlink" href="#linuleg-ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<span id="c-linulegtadhvarf"></span><h1><span class="section-number">10. </span>Línuleg aðhvarfsgreining<a class="headerlink" href="#linuleg-ahvarfsgreining" title="Link to this heading"></a></h1>
 <p>Aðhvarfsgreining er notuð til að kanna samband milli einnar samfelldrar
 svarbreytu og einnar eða fleiri skýribreyta sem geta hvort sem heldur
 verið samfelldar eða strjálar. Í einfaldasta tilvikinu er eingöngu ein
@@ -649,11 +649,11 @@ og í kafla <a class="reference internal" href="#s-lmspa"><span class="std std-n
 fallinu <code class="docutils literal notranslate"><span class="pre">predict()</span></code>. Að lokum fjallar kafli <a class="reference internal" href="#s-onnurprof"><span class="std std-numref">10.5</span></a> um
 hvernig framkvæma má tilgátupróf fyrir fylgnistuðul með <code class="docutils literal notranslate"><span class="pre">cor.test()</span></code>.</p>
 <section id="linulegt-likan-smia">
-<span id="s-likanmetid"></span><h2><span class="section-number">10.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#linulegt-likan-smia" title="Permalink to this heading"></a></h2>
+<span id="s-likanmetid"></span><h2><span class="section-number">10.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#linulegt-likan-smia" title="Link to this heading"></a></h2>
 <section id="id1">
-<h3><span class="section-number">10.1.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.1.1. </span>Línulegt líkan smíðað<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <section id="lm">
-<h4><span class="section-number">10.1.1.1. </span>lm()<a class="headerlink" href="#lm" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">10.1.1.1. </span>lm()<a class="headerlink" href="#lm" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> formúlan sem við viljum meta, gögnin sem við byggjum á</p>
@@ -727,11 +727,11 @@ aðhvarfsgreiningarhlutnum <code class="docutils literal notranslate"><span clas
 </section>
 </section>
 <section id="oryggisbil-fyrir-stula-likansins">
-<span id="s-lmoryggis"></span><h2><span class="section-number">10.2. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#oryggisbil-fyrir-stula-likansins" title="Permalink to this heading"></a></h2>
+<span id="s-lmoryggis"></span><h2><span class="section-number">10.2. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#oryggisbil-fyrir-stula-likansins" title="Link to this heading"></a></h2>
 <section id="id2">
-<h3><span class="section-number">10.2.1. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.2.1. </span>Öryggisbil fyrir stuðla líkansins<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <section id="confint">
-<h4><span class="section-number">10.2.1.1. </span>confint()<a class="headerlink" href="#confint" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">10.2.1.1. </span>confint()<a class="headerlink" href="#confint" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> metið líkan</p>
@@ -759,7 +759,7 @@ er að það sé 95%.</p>
 </section>
 </section>
 <section id="matgaei-likansins-konnu">
-<span id="s-lmleifar"></span><h2><span class="section-number">10.3. </span>Mátgæði líkansins könnuð<a class="headerlink" href="#matgaei-likansins-konnu" title="Permalink to this heading"></a></h2>
+<span id="s-lmleifar"></span><h2><span class="section-number">10.3. </span>Mátgæði líkansins könnuð<a class="headerlink" href="#matgaei-likansins-konnu" title="Link to this heading"></a></h2>
 <p>Forsenda aðhvarfsgreiningar er að leifar hennar séu óháðar og
 normaldreifðar, með sömu dreifni. Leifarnar má nálgast með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>lm1$resid
@@ -779,14 +779,15 @@ hér mötum við skipunina <code class="docutils literal notranslate"><span clas
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/mynd10_1.svg" src="_images/mynd10_1.svg" /></figure>
+<img alt="_images/mynd10_1.svg" src="_images/mynd10_1.svg" />
+</figure>
 </section>
 <section id="spagildi-og-spabil">
-<span id="s-lmspa"></span><h2><span class="section-number">10.4. </span>Spágildi og spábil<a class="headerlink" href="#spagildi-og-spabil" title="Permalink to this heading"></a></h2>
+<span id="s-lmspa"></span><h2><span class="section-number">10.4. </span>Spágildi og spábil<a class="headerlink" href="#spagildi-og-spabil" title="Link to this heading"></a></h2>
 <section id="id3">
-<h3><span class="section-number">10.4.1. </span>Spágildi og spábil<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">10.4.1. </span>Spágildi og spábil<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <section id="predict">
-<h4><span class="section-number">10.4.1.1. </span>predict()<a class="headerlink" href="#predict" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">10.4.1.1. </span>predict()<a class="headerlink" href="#predict" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> metið líkan, gagnatafla með gildum skýribreytanna sem á að
@@ -816,7 +817,7 @@ langri pokarottu:</p>
 </section>
 </section>
 <section id="prof-a-fylgnistuli">
-<span id="s-onnurprof"></span><h2><span class="section-number">10.5. </span>Próf á fylgnistuðli<a class="headerlink" href="#prof-a-fylgnistuli" title="Permalink to this heading"></a></h2>
+<span id="s-onnurprof"></span><h2><span class="section-number">10.5. </span>Próf á fylgnistuðli<a class="headerlink" href="#prof-a-fylgnistuli" title="Link to this heading"></a></h2>
 <p>Tilgátupróf fyrir <span class="math notranslate nohighlight">\(\rho\)</span> má framkvæma með <code class="docutils literal notranslate"><span class="pre">cor.test()</span></code>
 aðferðinni. Við þurfum að mata aðferðina með heitunum á breytunum sem
 við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
@@ -839,7 +840,7 @@ breytanna <code class="docutils literal notranslate"><span class="pre">lengd_sko
 þegar við prófuðum núlltilgátuna <span class="math notranslate nohighlight">\(H_0: \beta_1=0\)</span>.</p>
 </section>
 <section id="strjal-skyribreyta">
-<span id="s-lmstrjal"></span><h2><span class="section-number">10.6. </span>Strjál skýribreyta<a class="headerlink" href="#strjal-skyribreyta" title="Permalink to this heading"></a></h2>
+<span id="s-lmstrjal"></span><h2><span class="section-number">10.6. </span>Strjál skýribreyta<a class="headerlink" href="#strjal-skyribreyta" title="Link to this heading"></a></h2>
 <p>Í kafla <a class="reference internal" href="kafli09.html#c-fervikagreining"><span class="std std-numref">9</span></a> fjölluðum við um einþátta
 fervikagreiningu en líta má á fervikagreiningu sem sértilfelli af
 aðhvarfsgreiningu þegar skýribreyta er strjál. Einþátta fervikagreiningu
@@ -915,7 +916,7 @@ leggja gildið á viðkomandi stika við matið fyrir viðmiðunarflokkinn.</p>
 </ul>
 </section>
 <section id="fleiri-skyribreytur-ast">
-<span id="s-lmfleiribreytur"></span><h2><span class="section-number">10.7. </span>Fleiri skýribreytur<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#fleiri-skyribreytur-ast" title="Permalink to this heading"></a></h2>
+<span id="s-lmfleiribreytur"></span><h2><span class="section-number">10.7. </span>Fleiri skýribreytur<span class="math notranslate nohighlight">\(^\ast\)</span><a class="headerlink" href="#fleiri-skyribreytur-ast" title="Link to this heading"></a></h2>
 <p>Eins og fjallað var um í hluta <a class="reference internal" href="kafli09.html#s-aovfleiribreytur"><span class="std std-numref">9.4</span></a> má mata
 <code class="docutils literal notranslate"><span class="pre">aov()</span></code> aðferðina með fleiri en einum þætti. Sömu sögu er að segja um
 <code class="docutils literal notranslate"><span class="pre">lm()</span></code> aðferðina. Mötum við hana með fleiri en einni samfelldri breytu
@@ -929,7 +930,7 @@ farið í það nánar hér en líkt og greint var frá í kafla
 aðferðirnar komið að góðum notum þegar velja á skýribreytur í líkanið.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h2><span class="section-number">10.8. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">10.8. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h2>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -952,7 +953,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

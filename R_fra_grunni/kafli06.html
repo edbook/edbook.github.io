@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6. Ályktunartölfræði &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="alyktunartolfraei">
-<span id="c-alyktunartolfraedi"></span><h1><span class="section-number">6. </span>Ályktunartölfræði<a class="headerlink" href="#alyktunartolfraei" title="Permalink to this heading"></a></h1>
+<span id="c-alyktunartolfraedi"></span><h1><span class="section-number">6. </span>Ályktunartölfræði<a class="headerlink" href="#alyktunartolfraei" title="Link to this heading"></a></h1>
 <p>Góð leið til að átta sig á líkindadreifingum gagna er með hermunum. Í
 þessum kafla munum við annars vegar fjalla um hvernig velja má
 <em>slembiúrtök</em> í R og hins vegar fjalla um <em>endurvalsaðferðir</em>.
@@ -645,11 +645,11 @@ skipunina <code class="docutils literal notranslate"><span class="pre">sample()<
 með henni fram á virkni höfuðsetningar tölfræðinnar. Að því loknu notum
 við sömu skipun til að reikna öryggisbil í kafla <a class="reference internal" href="#s-oryggisbil"><span class="std std-numref">6.3</span></a>.</p>
 <section id="slembiurtok-valin">
-<span id="s-slembiurtak"></span><h2><span class="section-number">6.1. </span>Slembiúrtök valin<a class="headerlink" href="#slembiurtok-valin" title="Permalink to this heading"></a></h2>
+<span id="s-slembiurtak"></span><h2><span class="section-number">6.1. </span>Slembiúrtök valin<a class="headerlink" href="#slembiurtok-valin" title="Link to this heading"></a></h2>
 <section id="id1">
-<h3><span class="section-number">6.1.1. </span>Slembiúrtök valin<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">6.1.1. </span>Slembiúrtök valin<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <section id="sample">
-<h4><span class="section-number">6.1.1.1. </span>sample()<a class="headerlink" href="#sample" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">6.1.1.1. </span>sample()<a class="headerlink" href="#sample" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> nafn á vigri og stærð úrtaks</p>
@@ -729,11 +729,11 @@ Hvenær fæddist Napóleon? Gerum við það með:</p>
 </section>
 </section>
 <section id="endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar">
-<span id="s-urtaksdreifing"></span><h2><span class="section-number">6.2. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar" title="Permalink to this heading"></a></h2>
+<span id="s-urtaksdreifing"></span><h2><span class="section-number">6.2. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#endurvalsafer-til-a-meta-urtaksdreifingu-lysistaerar" title="Link to this heading"></a></h2>
 <section id="id2">
-<h3><span class="section-number">6.2.1. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">6.2.1. </span>Endurvalsaðferð til að meta úrtaksdreifingu lýsistærðar<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <section id="replicate">
-<h4><span class="section-number">6.2.1.1. </span>replicate()<a class="headerlink" href="#replicate" title="Permalink to this heading"></a></h4>
+<h4><span class="section-number">6.2.1.1. </span>replicate()<a class="headerlink" href="#replicate" title="Link to this heading"></a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> fjöldi hermana, fall sem skal beita í hverri hermun</p>
@@ -753,7 +753,8 @@ breytunni.</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/mynd6_1.svg" src="_images/mynd6_1.svg" /></figure>
+<img alt="_images/mynd6_1.svg" src="_images/mynd6_1.svg" />
+</figure>
 <p>Á stuðlaritinu sést að líkindadreifing breytunnar <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code> er
 langt frá því að vera normaldreifð, þar sem hún er mjög hægri skekkt með
 útlaga til hægri að auki. Hins vegar er <em>meðaltal</em> <code class="docutils literal notranslate"><span class="pre">ferdatimi_skoli</span></code>
@@ -781,7 +782,8 @@ vera normaldreifð:</p>
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/mynd6_2.svg" src="_images/mynd6_2.svg" /></figure>
+<img alt="_images/mynd6_2.svg" src="_images/mynd6_2.svg" />
+</figure>
 <p>Athugið að hér er lykilatriði að nægjanlega mörg viðfangsefni séu valin
 í hverju og einu gerviúrtaki. Sé eingöngu valið gerviúrtak af stærð 3 í
 hvert skipti er útkoman langt frá því að vera normaldreifð, eins og sjá
@@ -797,12 +799,13 @@ geom_histogram()
 </pre></div>
 </div>
 <figure class="align-center">
-<img alt="_images/mynd6_3.svg" src="_images/mynd6_3.svg" /></figure>
+<img alt="_images/mynd6_3.svg" src="_images/mynd6_3.svg" />
+</figure>
 </section>
 </section>
 </section>
 <section id="oryggisbil-reikna-me-endurvalsafer">
-<span id="s-oryggisbil"></span><h2><span class="section-number">6.3. </span>Öryggisbil reiknað með endurvalsaðferð<a class="headerlink" href="#oryggisbil-reikna-me-endurvalsafer" title="Permalink to this heading"></a></h2>
+<span id="s-oryggisbil"></span><h2><span class="section-number">6.3. </span>Öryggisbil reiknað með endurvalsaðferð<a class="headerlink" href="#oryggisbil-reikna-me-endurvalsafer" title="Link to this heading"></a></h2>
 <p>Gerviúrtökin sem fengust með skipuninni <code class="docutils literal notranslate"><span class="pre">replicate()</span></code> má einnig nota
 til að reikna öryggisbil fyrir meðalferðatíma í skóla. 95% öryggisbil er
 smíðað þannig að það innihaldi sanna gildið á stikanum í 95% tilvika ef
@@ -818,7 +821,7 @@ reikna 2.5% og 97.5% prósentumörk þessara 1000 meðaltala.</p>
 <p>95% öryggisbilið er því <span class="math notranslate nohighlight">\([16.81950, 22.01025 ]\)</span>.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h2><span class="section-number">6.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">6.4. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h2>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -841,7 +844,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

@@ -1,32 +1,32 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="is" >
+<html class="writer-html5" lang="is" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>11. Tvíkosta aðhvarfsgreining &mdash; R frá grunni 0.2.0</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/eqt.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/datacamp-custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/edbook.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/css/eqt.css?v=14aa8dc6" />
+      <link rel="stylesheet" type="text/css" href="_static/css/datacamp-custom.css?v=1b632803" />
+      <link rel="stylesheet" type="text/css" href="_static/css/edbook.css?v=13b926f9" />
+
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script src="_static/js/eqt.js"></script>
-        <script src="_static/translations.js"></script>
-        <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
-        <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/favicon_2.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=1cc6c4d9"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/eqt.js?v=555177ae"></script>
+      <script src="_static/translations.js?v=f9187303"></script>
+      <script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+      <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script src="_static/js/theme.js"></script>
 
 <!-- hoverrole.py css code -->
@@ -632,7 +632,7 @@
            <div itemprop="articleBody">
              
   <section id="tvikosta-ahvarfsgreining">
-<span id="c-tvikostaadhvarf"></span><h1><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining<a class="headerlink" href="#tvikosta-ahvarfsgreining" title="Permalink to this heading"></a></h1>
+<span id="c-tvikostaadhvarf"></span><h1><span class="section-number">11. </span>Tvíkosta aðhvarfsgreining<a class="headerlink" href="#tvikosta-ahvarfsgreining" title="Link to this heading"></a></h1>
 <p>Á eftir línulegri aðhvarfsgreiningu, sem við fjölluðum um í kafla
 <a class="reference internal" href="kafli10.html#c-linulegtadhvarf"><span class="std std-numref">10</span></a>, er tvíkosta aðhvarfsgreining sennilega mest
 notaða aðhvarfsgreiningarlíkanið. Í R er tvíkosta aðhvarfsgreining
@@ -645,7 +645,7 @@ aðhvarfsgreiningu. Í raun má nota fallið <code class="docutils literal notra
 fjölda annarra alhæfðra línulegra aðhvarfsgreiningarlíkana en það er
 utan efnis þessarar bókar.</p>
 <section id="glm">
-<h2><span class="section-number">11.1. </span>glm()<a class="headerlink" href="#glm" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">11.1. </span>glm()<a class="headerlink" href="#glm" title="Link to this heading"></a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Athugið</p>
 <p><strong>Inntak:</strong> formúla, gögn (tvíkosta breyta~breyta, gögn)</p>
@@ -663,7 +663,7 @@ aðhvarfsgreining er framkvæmd þegar skýribreytan er samfelld en í kafla
 strjál. Við munum finna möt á stikum líkansins, framkvæma tilgátupróf
 fyrir þá og reikna öryggisbil.</p>
 <section id="tvikosta-ahvarfsgreining-me-samfellda-skyribreytu">
-<span id="s-tvikostasamfelld"></span><h3><span class="section-number">11.1.1. </span>Tvíkosta aðhvarfsgreining með samfellda skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu" title="Permalink to this heading"></a></h3>
+<span id="s-tvikostasamfelld"></span><h3><span class="section-number">11.1.1. </span>Tvíkosta aðhvarfsgreining með samfellda skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-samfellda-skyribreytu" title="Link to this heading"></a></h3>
 <p>Tvíkosta aðhvarfsgreiningu má nota til að meta hvort nemendur sem koma
 gangandi eða skokkandi í skólann séu ólíklegri til að vera lengi á leiðinni
 í skólann heldur en þeir sem ferðast á skólann á annan máta. Líkanið metum
@@ -749,7 +749,7 @@ viljum skoða, það er <span class="math notranslate nohighlight">\([0.7694803,
 inniheldur ekki 1 í samræmi við það að við höfnuðum núlltilgátunni.</p>
 </section>
 <section id="tvikosta-ahvarfsgreining-me-strjala-skyribreytu">
-<span id="s-tvikostastrjal"></span><h3><span class="section-number">11.1.2. </span>Tvíkosta aðhvarfsgreining með strjála skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-strjala-skyribreytu" title="Permalink to this heading"></a></h3>
+<span id="s-tvikostastrjal"></span><h3><span class="section-number">11.1.2. </span>Tvíkosta aðhvarfsgreining með strjála skýribreytu<a class="headerlink" href="#tvikosta-ahvarfsgreining-me-strjala-skyribreytu" title="Link to this heading"></a></h3>
 <p>Tvíkosta aðhvarfsgreiningu má einnig beita á strjála skýribreytu. Til
 dæmis til að meta hvort nemendur sem eru femínistar séu líklegri til að
 vera kattamanneskjur heldur en þeir sem eru ekki femínistar. Líkanið metum við með
@@ -826,7 +826,7 @@ aðhvarfsgreiningunni má finna með skipuninni:</p>
 við það að við höfnuðum núlltilgátunni.</p>
 </section>
 <section id="leiksvaei-fyrir-r-koa">
-<h3><span class="section-number">11.1.3. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Permalink to this heading"></a></h3>
+<h3><span class="section-number">11.1.3. </span>Leiksvæði fyrir R kóða<a class="headerlink" href="#leiksvaei-fyrir-r-koa" title="Link to this heading"></a></h3>
 <p>Hér fyrir neðan er hægt að skrifa R kóða og keyra hann. Notið þetta svæði til að prófa ykkur áfram með skipanir kaflans. Athugið að við höfum þegar sett inn skipun til að lesa inn <code class="docutils literal notranslate"><span class="pre">puls</span></code> gögnin sem eru notuð gegnum alla bókina.</p>
 <div data-datacamp-exercise data-lang="r"><code data-type="sample-code"># Gogn sott og sett i breytuna puls.
 puls <- read.table ("https://raw.githubusercontent.com/edbook/haskoli-islands/main/pulsAll.csv", header=TRUE, sep=";")
@@ -850,7 +850,7 @@ head(puls)</code></div></section>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2026, R frá grunni | Version 0.2.0.
-      <span class="lastupdated">Síðast uppfært 2026-02-13 10:05.
+      <span class="lastupdated">Síðast uppfært 2026-02-13 14:15.
       </span></p>
   </div>
 

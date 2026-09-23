@@ -353,14 +353,14 @@
 <h3><span class="section-number">5.3.2  </span>Vísað í stök<a class="headerlink" href="#visa-i-stok" title="Link to this heading"></a></h3>
 <p>Eins og fyrr segir má vísa í einstök stök í lista með <code class="code docutils literal notranslate"><span class="pre">L[i]</span></code> þar sem i er heiltala með númeri staks, og <strong>hlutlistar</strong> (<em>slices</em>) fást eins og fyrir strengi, sbr. eftirfarandi dæmi:</p>
 <blockquote>
-<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'abc'</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 
 <span class="c1"># Forritið að ofan prentar út:</span>
 <span class="n">abc</span> <span class="mf">4.33</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">'abc'</span><span class="p">,</span> <span class="mf">4.33</span><span class="p">]</span>
 <span class="p">[</span><span class="mf">4.33</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -582,7 +582,7 @@ tekur í minni. Finnið út hve mikið minni <code class="code docutils literal 
 4 Einar
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nöfn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ása&quot;</span><span class="p">,</span> <span class="s2">&quot;Bjarni&quot;</span><span class="p">,</span> <span class="s2">&quot;Dóra&quot;</span><span class="p">,</span> <span class="s2">&quot;Einar&quot;</span><span class="p">]</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nöfn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Ása"</span><span class="p">,</span> <span class="s2">"Bjarni"</span><span class="p">,</span> <span class="s2">"Dóra"</span><span class="p">,</span> <span class="s2">"Einar"</span><span class="p">]</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="n">nafn</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">nöfn</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span><span class="n">nafn</span><span class="p">)</span>
 

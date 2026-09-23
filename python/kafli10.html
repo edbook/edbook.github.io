@@ -368,7 +368,7 @@ stakið er líka númer 0. Ef x er <span class="math notranslate nohighlight">\(
 for-lykkju, og þá er hægt að nota f-strengi, sbr. eftirfarandi dæmi</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">5.55</span><span class="p">,</span><span class="mf">7.77</span><span class="p">])</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">ai</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">ai</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"a[</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">] = </span><span class="si">{</span><span class="n">ai</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>sem mundi prenta</p>
@@ -933,7 +933,7 @@ er dæmi til skýringar:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Lát x = np.array([0.000002, 1.25, 12.345]). Þá prentar print(x) út:
 - með suppress=False:   [2.000e-06 1.250e+00 1.235e+01]
 - með suppress=True:    [ 0.000  1.250 12.345]
-- án floadmode=&quot;fixed&quot;: [ 0.     1.25  12.345]
+- án floadmode="fixed": [ 0.     1.25  12.345]
 </pre></div>
 </div>
 </section>
@@ -941,7 +941,7 @@ er dæmi til skýringar:</p>
 <h3><span class="section-number">10.6.3  </span>Útprentun með <em>savetxt</em><a class="headerlink" href="#utprentun-me-savetxt" title="Link to this heading"></a></h3>
 <p>Annar möguleiki til að fá snyrtilega útprentun er að nota <code class="docutils literal notranslate"><span class="pre">savetxt</span></code>-fallið með sniði:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">stdout</span>
-<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;%w.df&quot;</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="n">stdout</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">"%w.df"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>þar sem w er breidd hvers sviðs (hverrar tölu) og d er fjöldi aukastafa (t.d.
@@ -951,10 +951,10 @@ verður að vita fyrirfram hver mesta breidd dálks þarf að vera.</p>
 <section id="utskrift-i-skra">
 <h3><span class="section-number">10.6.4  </span>Útskrift í skrá<a class="headerlink" href="#utskrift-i-skra" title="Link to this heading"></a></h3>
 <p>Til að skrifa fylki í skrá má nota annaðhvort <code class="docutils literal notranslate"><span class="pre">print</span></code> eða <code class="docutils literal notranslate"><span class="pre">savetxt</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>      <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;skrá.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>      <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"skrá.txt"</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
           <span class="nb">print</span><span class="p">(</span><span class="n">fylki</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 <span class="n">eða</span><span class="p">:</span>
-      <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;skrá.txt&quot;</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%5.2f</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">"skrá.txt"</span><span class="p">,</span> <span class="n">fylki</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">"</span><span class="si">%5.2f</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Svo væri líka hægt að nota lykkju og f-strengi, sbr. kafla <a class="reference internal" href="kafli08.html#skrar-skrifaar-ut"><span class="std std-numref">8.4</span></a> og <a class="reference internal" href="#einfold-utprentun-vigra"><span class="std std-numref">10.2.3</span></a>.</p>
@@ -968,15 +968,15 @@ verður að vita fyrirfram hver mesta breidd dálks þarf að vera.</p>
 Skráin verður að hafa jafnmörg svið (jafnmargar tölur) í hverri línu og sjálfgefið er að sviðin séu afmörkuð með bilum (sbr. kafla <a class="reference internal" href="kafli08.html#csv-lestur-bilafmark"><span class="std std-numref">8.3.4</span></a>). Fyrir utan
 textaskrár sem geymdar eru í núverandi möppu getur <code class="docutils literal notranslate"><span class="pre">loadtxt</span></code> lesið skrár sem
 eru á netinu án vandkvæða. Hér eru nokkur dæmi sem skýra notkunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s1">&#39;datafile.txt&#39;</span>                 <span class="c1">#</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s1">'datafile.txt'</span>                 <span class="c1">#</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span>                  <span class="c1"># les alla skrána inn í eitt fylki A</span>
 <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span>              <span class="c1"># les þriggja línu skrá inn í þrjá vigra</span>
 <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>            <span class="c1"># les þriggja dálka skrá inn í þrjá vigra</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>      <span class="c1"># sleppir fyrstu línunni</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>   <span class="c1"># les bara fyrstu tvo dálkana</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>   <span class="c1"># les csv-skrá</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://cs.hi.is/python/&#39;</span>      <span class="c1">#</span>
-<span class="n">netskrá</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s1">&#39;hiti-urkoma.txt&#39;</span>     <span class="c1"># skrá á netinu</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>   <span class="c1"># les csv-skrá</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://cs.hi.is/python/'</span>      <span class="c1">#</span>
+<span class="n">netskrá</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s1">'hiti-urkoma.txt'</span>     <span class="c1"># skrá á netinu</span>
 <span class="p">(</span><span class="n">ár</span><span class="p">,</span><span class="n">hiti</span><span class="p">,</span><span class="n">úrk</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">netskrá</span><span class="p">)</span><span class="o">.</span><span class="n">T</span> <span class="c1"># les hana inn í þrjá vigra</span>
 </pre></div>
 </div>
@@ -1006,7 +1006,7 @@ eftirfarandi dæmi.</p>
 <p>Skráin <a class="reference external" href="https://cs.hi.is/python/malmar.txt" rel="noopener noreferrer" target="_blank">https://cs.hi.is/python/malmar.txt</a> er með streng í fyrsta dálki,
 kommutölu í öðrum dálki og heiltölu í þeim þriðja. Hún er líka með titillínu.
 Hér er forrit sem les skrána</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s2">&quot;https://cs.hi.is/python/malmar.txt&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s2">"https://cs.hi.is/python/malmar.txt"</span>
 <span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="n">málmur</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">eðlisþ</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
@@ -1017,7 +1017,7 @@ Hér er forrit sem les skrána</p>
 </pre></div>
 </div>
 <p>Forritið prentar út</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[&#39;Ál&#39;, &#39;Járn&#39;, &#39;Kopar&#39;, &#39;Gull&#39;]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>['Ál', 'Járn', 'Kopar', 'Gull']
 [ 2.7   7.87  8.96 19.3 ]
 [ 933 1538 1085 1064]
 </pre></div>
@@ -1048,12 +1048,12 @@ málmanöfnin með <code class="docutils literal notranslate"><span class="pre">
 </div></blockquote>
 <p>Þetta var gert með tölvuna stillta á íslensku og þá koma kommur í stað punkta í eðlisþyngdirnar. CSV-skrána má lesa inn með:</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s2">&quot;https://cs.hi.is/python/allir-malmar.txt&quot;</span>
-<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;str&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">skrá</span> <span class="o">=</span> <span class="s2">"https://cs.hi.is/python/allir-malmar.txt"</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">skrá</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">'str'</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="n">efnatákn</span>    <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">nafn</span>        <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 <span class="n">sætistala</span>   <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">A3</span>          <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="n">A3</span>          <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">char</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s2">","</span><span class="p">,</span> <span class="s2">"."</span><span class="p">)</span>
 <span class="n">eðlisþyngd</span>  <span class="o">=</span> <span class="n">A3</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">bræðslumark</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">enskt_nafn</span>  <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
@@ -1103,9 +1103,9 @@ prófa ýmsar aðferðir til að lesa skrár og vinna með gögn í NumPy (eða 
 en hún er með dálka aðskilda með kommu og runu af bilum. Til að lesa hana má
 nota:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">nafn</span><span class="p">,</span> <span class="n">sími</span><span class="p">,</span> <span class="n">heimili</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
-    <span class="s1">&#39;https://cs.hi.is/python/simaskra.txt&#39;</span><span class="p">,</span>
+    <span class="s1">'https://cs.hi.is/python/simaskra.txt'</span><span class="p">,</span>
     <span class="n">skip_header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span>
+    <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">','</span><span class="p">,</span>
     <span class="n">autostrip</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">dtype</span> <span class="o">=</span> <span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </pre></div>

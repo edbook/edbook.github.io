@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>4. Lýsandi tölfræði &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>4. Lýsandi tölfræði &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -1069,7 +1069,7 @@ af meðaltalinu og skila með tveimur aukastöfum. Án pípunar er það gert sv
 <p>Ef við viljum skoða meðalferðatíma í skóla hjá þeim sem ferðast með strætó
 eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">konnun</span>
-<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Með strætó&quot;</span><span class="p">)</span>
+<span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">"Með strætó"</span><span class="p">)</span>
 <span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">select</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span>
 <span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">group_by</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span>
 <span class="n">konnun1</span> <span class="o">&lt;-</span> <span class="n">summarize</span><span class="p">(</span><span class="n">konnun1</span><span class="p">,</span> <span class="n">Meðalferðatími</span><span class="o">=</span><span class="n">mean</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span>
@@ -1083,7 +1083,7 @@ eftir því hvaða ís þeim finnst bestur. Byrjum að gera þetta án pípunar.
 <p>Hér þurftum við að búa til nýtt gagnasett og yfirskrifa það. Mun einfaldara
 er að gera þetta með pípurithætti.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">%&gt;%</span>
-   <span class="nb">filter</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Með strætó&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>
+   <span class="nb">filter</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">"Með strætó"</span><span class="p">)</span> <span class="o">%&gt;%</span>
    <span class="n">select</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="ow">is</span><span class="p">)</span> <span class="o">%&gt;%</span>
    <span class="n">group_by</span><span class="p">(</span><span class="ow">is</span><span class="p">)</span> <span class="o">%&gt;%</span>
    <span class="n">summarise</span><span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">ferdatimi_skoli</span><span class="p">))</span>
@@ -1127,9 +1127,9 @@ eftir breytunni <code class="docutils literal notranslate"><span class="pre">is<
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>konnun %&gt;%
    filter(!is.na(smjor_kostar)) %&gt;%
    group_by(stefnumot) %&gt;%
-   summarise(&quot;Miðgildi&quot;=median(smjor_kostar),
-   &quot;Meðaltal&quot; = mean(smjor_kostar),
-   &quot;Staðalfrávik&quot; = sd(smjor_kostar)) %&gt;% kable()
+   summarise("Miðgildi"=median(smjor_kostar),
+   "Meðaltal" = mean(smjor_kostar),
+   "Staðalfrávik" = sd(smjor_kostar)) %&gt;% kable()
 
 ## stefnumot      Miðgildi    Meðaltal    Staðalfrávik
 ## Á kaffihús           500.0              577.5676     209.5798
@@ -1164,8 +1164,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9. Einþátta fervikagreining &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>9. Einþátta fervikagreining &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -693,7 +693,7 @@ fervikagreiningu hvort munur sé á meðallend pokarotta eftir kyni. Byrjum á �
 kassarit af lengdarmælingum eftir kyni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gogn</span> <span class="o">&lt;-</span> <span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">pokarotta</span><span class="p">)</span> <span class="c1"># sleppum NA gildum</span>
 <span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">gogn</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">heildarlengd</span><span class="p">))</span><span class="o">+</span><span class="n">geom_boxplot</span><span class="p">()</span> <span class="o">+</span>
-<span class="n">xlab</span><span class="p">(</span><span class="s2">&quot;kyn&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">&quot;Lengd pokarotta (cm)&quot;</span><span class="p">)</span>
+<span class="n">xlab</span><span class="p">(</span><span class="s2">"kyn"</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s2">"Lengd pokarotta (cm)"</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
@@ -706,7 +706,7 @@ kassarit af lengdarmælingum eftir kyni:</p>
 <span class="c1">##  Bartlett test of homogeneity of variances</span>
 <span class="c1">##</span>
 <span class="c1">## data:  heildarlengd by kyn</span>
-<span class="c1">## Bartlett&#39;s K-squared = 0.06666, df = 1, p-value = 0.7963</span>
+<span class="c1">## Bartlett's K-squared = 0.06666, df = 1, p-value = 0.7963</span>
 </pre></div>
 </div>
 <p>Eins og sjá má er p-gildið = 0.7963 og getum því ekki hafnað
@@ -731,7 +731,7 @@ aðferðina.</p>
 <span class="c1">## likamsraektf   1  49.12    49.116    2.6867     0.1043 ***</span>
 <span class="c1">## Residuals    102  1864.71  18.281</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 </pre></div>
 </div>
 <p>Hér sjáum við SSTr = 49.12 og SSE = 1864.71 ásamt viðeigandi frígráðum (1
@@ -742,10 +742,10 @@ fyrir tilgátuprófið er svo lengst til hægri
 (<span class="math notranslate nohighlight">\(0.1043\)</span>). Eins og sjá má er ýmislegt annað að finna
 í <code class="docutils literal notranslate"><span class="pre">aov()</span></code> úttakinu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">fervik</span><span class="p">)</span>
-<span class="c1">##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;</span>
-<span class="c1">##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;</span>
-<span class="c1">##  [9] &quot;na.action&quot;     &quot;contrasts&quot;     &quot;xlevels&quot;       &quot;call&quot;</span>
-<span class="c1">## [13] &quot;terms&quot;         &quot;model&quot;</span>
+<span class="c1">##  [1] "coefficients"  "residuals"     "effects"       "rank"</span>
+<span class="c1">##  [5] "fitted.values" "assign"        "qr"            "df.residual"</span>
+<span class="c1">##  [9] "na.action"     "contrasts"     "xlevels"       "call"</span>
+<span class="c1">## [13] "terms"         "model"</span>
 </pre></div>
 </div>
 <p>Viljum við t.d. nálgast leifarnar gerum við það með:</p>
@@ -837,7 +837,7 @@ flokkabreytum og búum við því til gagnasafn þar sem ekki vantar neinar
 mælingar.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="o">&lt;-</span><span class="n">na</span><span class="o">.</span><span class="n">omit</span><span class="p">(</span><span class="n">pokarotta</span><span class="p">)</span>
 <span class="n">ggplot</span><span class="p">(</span><span class="n">puls</span><span class="o">.</span><span class="n">na</span><span class="p">,</span><span class="n">aes</span><span class="p">(</span><span class="n">kyn</span><span class="p">,</span> <span class="n">heildarlengd</span><span class="p">,</span> <span class="n">lty</span><span class="o">=</span><span class="n">tegund</span><span class="p">))</span><span class="o">+</span>
-<span class="n">stat_summary</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">tegund</span><span class="p">),</span><span class="n">fun</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geo</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">)</span>
+<span class="n">stat_summary</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">group</span><span class="o">=</span><span class="n">tegund</span><span class="p">),</span><span class="n">fun</span><span class="o">.</span><span class="n">y</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span><span class="n">geo</span><span class="o">=</span><span class="s1">'line'</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
@@ -862,7 +862,7 @@ prófum hina þættina tvo.</p>
 <span class="c1">## kyn:tegund   1    5.43    5.426    0.2925   0.5898</span>
 <span class="c1">## Residuals    100  1854.4  18.648</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 </pre></div>
 </div>
 <p>Við notum svo <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðina til að fá fervikasummurnar, p-gildi
@@ -880,7 +880,7 @@ fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
 <span class="c1">## tegund         1  4.45     4.452    0.2417     0.6240</span>
 <span class="c1">## Residuals    101  1860.26  18.418</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 </pre></div>
 </div>
 <p>Takið eftir að <code class="docutils literal notranslate"><span class="pre">anova()</span></code> aðferðin skilar okkur fervikasummum af gerð I
@@ -888,7 +888,7 @@ fjarlægjum því víxlhrifin úr líkaninu og metum það upp á nýtt.</p>
 (type III SS) og í <code class="docutils literal notranslate"><span class="pre">car</span></code> pakkanum má finna aðferðina <code class="docutils literal notranslate"><span class="pre">Anova()</span></code> en
 með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
 <code class="docutils literal notranslate"><span class="pre">drop1()</span></code> aðferðinni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">drop1</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.3</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">drop1</span><span class="p">(</span><span class="n">fervik</span><span class="mf">.3</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="s2">"F"</span><span class="p">)</span>
 <span class="c1">## Single term deletions</span>
 <span class="c1">##</span>
 <span class="c1">## Model:</span>
@@ -898,7 +898,7 @@ með henni er hægt að fá fervikasummur af gerð II. Skoðum nú úttakið úr
 <span class="c1">## kyn          1   41.725      1902.0  306.25   2.2654   0.1354</span>
 <span class="c1">## tegund       1   4.452       1864.7  304.19   0.2417   0.6340</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 </pre></div>
 </div>
 <p>Sjá má á úttakinu að báðar breyturnar eru ekki marktækar. Hér höfum við því ekki
@@ -937,8 +937,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

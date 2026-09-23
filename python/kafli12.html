@@ -591,8 +591,8 @@ SciPy, í falli sem heitir <code class="docutils literal notranslate"><span clas
 <span class="n">flow</span> <span class="o">=</span> <span class="n">ssp</span><span class="o">.</span><span class="n">csgraph</span><span class="o">.</span><span class="n">maximum_flow</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">sink</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">res</span> <span class="o">=</span> <span class="n">flow</span><span class="o">.</span><span class="n">residual</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">res</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hámarksflæði = </span><span class="si">{</span><span class="n">flow</span><span class="o">.</span><span class="n">flow_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tilsvarandi flæðinet:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hámarksflæði = </span><span class="si">{</span><span class="n">flow</span><span class="o">.</span><span class="n">flow_value</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Tilsvarandi flæðinet:"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>

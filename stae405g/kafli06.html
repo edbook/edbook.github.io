@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Upphafsgildisverkefni &mdash; Töluleg greining (STÆ405G) 26.03.02.0+8ce624d</title>
+  <title>6. Upphafsgildisverkefni &mdash; Töluleg greining (STÆ405G) 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -898,7 +898,7 @@ að</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">w</span> <span class="o">=</span> <span class="n">euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">alpha</span><span class="p">);</span>
 <span class="o">%</span>   <span class="n">function</span> <span class="n">w</span> <span class="o">=</span> <span class="n">euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">alpha</span><span class="p">)</span>
 <span class="o">%</span> <span class="n">Aðferð</span> <span class="n">Eulers</span> <span class="n">fyrir</span> <span class="n">afleiðujöfnuhneppi</span>
-<span class="o">%</span>         <span class="n">x</span><span class="s1">&#39;(t)=f(t,x(t)), x(0)=alpha.</span>
+<span class="o">%</span>         <span class="n">x</span><span class="s1">'(t)=f(t,x(t)), x(0)=alpha.</span>
 <span class="o">%</span> <span class="n">Inn</span> <span class="n">fara</span><span class="p">:</span> <span class="n">f</span> <span class="o">-</span> <span class="n">fallið</span> <span class="n">f</span>
 <span class="o">%</span>           <span class="n">t</span> <span class="o">-</span> <span class="n">vigur</span> <span class="n">með</span> <span class="n">skiptingu</span> <span class="n">á</span> <span class="n">t</span><span class="o">-</span><span class="n">ás</span><span class="o">.</span>
 <span class="o">%</span>           <span class="n">alpha</span> <span class="o">-</span> <span class="n">upphafsgildið</span> <span class="n">í</span> <span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span>
@@ -925,7 +925,7 @@ að</p>
 <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">101</span><span class="p">);</span>
 <span class="o">&gt;&gt;</span> <span class="n">w</span><span class="o">=</span><span class="n">euler</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
 <span class="o">&gt;&gt;</span> <span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">sqrt</span><span class="p">(</span><span class="n">t</span><span class="o">.^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">w</span><span class="p">)</span>
-<span class="o">&gt;&gt;</span> <span class="n">title</span><span class="p">(</span><span class="s1">&#39;Skekkja í aðferð Eulers&#39;</span><span class="p">);</span> <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">);</span> <span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;x-w&#39;</span><span class="p">);</span>
+<span class="o">&gt;&gt;</span> <span class="n">title</span><span class="p">(</span><span class="s1">'Skekkja í aðferð Eulers'</span><span class="p">);</span> <span class="n">xlabel</span><span class="p">(</span><span class="s1">'t'</span><span class="p">);</span> <span class="n">ylabel</span><span class="p">(</span><span class="s1">'x-w'</span><span class="p">);</span>
 </pre></div>
 </div>
 <img alt="_images/7euler.png" src="_images/7euler.png" />
@@ -1265,7 +1265,7 @@ skrefastærðin, 0.1 stærsta leyfilega skrefastærðin og þolmörkin eru
 <p>Hér á undan þá notðum við þolmörkin <span class="math notranslate nohighlight">\(10^{-10}\)</span> sem skilaði okkur
 103 misstórum tímagildum á bilinu <span class="math notranslate nohighlight">\([0,5]\)</span>. Svona getum við teiknað
 upp stærðina á tímaskrefunum.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">)</span><span class="o">-</span><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">end</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="n">end</span><span class="p">)</span><span class="o">-</span><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">end</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="s1">'*'</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="_images/7rkf45t.png" src="_images/7rkf45t.png" />
@@ -1359,7 +1359,7 @@ nokkurn tíma í útreikningum ef f er flókið fall.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">function</span> <span class="n">w</span> <span class="o">=</span> <span class="n">adams_bashforth_2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
 <span class="o">%</span>   <span class="n">w</span> <span class="o">=</span> <span class="n">adams</span><span class="p">{</span><span class="n">_</span><span class="p">}</span><span class="n">bashforth</span><span class="p">{</span><span class="n">_</span><span class="p">}</span><span class="mi">2</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
 <span class="o">%</span> <span class="n">Nálgar</span> <span class="n">lausn</span> <span class="n">upphafsgildisverkefnisins</span>
-<span class="o">%</span>   <span class="n">x</span><span class="s1">&#39; = f(t,x)</span>
+<span class="o">%</span>   <span class="n">x</span><span class="s1">' = f(t,x)</span>
 <span class="o">%</span>   <span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="o">=</span> <span class="n">x1</span>
 <span class="o">%</span> <span class="n">í</span> <span class="n">punktunum</span> <span class="n">í</span> <span class="n">t</span> <span class="n">með</span> <span class="mi">2</span><span class="n">ja</span> <span class="n">þrepa</span> <span class="n">Adams</span><span class="o">-</span><span class="n">Bashforth</span> <span class="n">aðferð</span><span class="o">.</span>
 <span class="o">%</span> <span class="n">Stakið</span> <span class="n">x2</span> <span class="n">er</span> <span class="n">nálgunargildi</span> <span class="n">á</span> <span class="n">x</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span>
@@ -1563,8 +1563,8 @@ samleitin og við höfum</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, Töluleg greining (STÆ405G) | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, Töluleg greining (STÆ405G) | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Brúun &mdash; Töluleg greining (STÆ405G) 26.03.02.0+8ce624d</title>
+  <title>3. Brúun &mdash; Töluleg greining (STÆ405G) 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -2490,7 +2490,7 @@ Grunnföllin þrjú eru <span class="math notranslate nohighlight">\(f_1(x)=1\)<
     <span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">m</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">A</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">m</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.*</span><span class="n">x</span><span class="p">;</span>
 <span class="n">end</span>
 <span class="o">%</span> <span class="n">Reiknum</span> <span class="n">úr</span> <span class="n">úr</span> <span class="n">normaljöfnuhneppinu</span> <span class="n">A</span><span class="o">^</span><span class="n">TAc</span><span class="o">=</span><span class="n">A</span><span class="o">^</span><span class="n">Ty</span><span class="p">:</span>
-<span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">A</span><span class="s1">&#39;*A)\(A&#39;</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">A</span><span class="s1">'*A)\(A'</span><span class="o">*</span><span class="n">y</span><span class="p">);</span>
 
 <span class="o">%</span> <span class="n">Teikning</span> <span class="n">undirbúin</span>
 <span class="n">N</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
@@ -2503,9 +2503,9 @@ Grunnföllin þrjú eru <span class="math notranslate nohighlight">\(f_1(x)=1\)<
     <span class="n">Y</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">horner</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">hlidrun</span><span class="p">,</span> <span class="n">X</span><span class="p">(</span><span class="n">j</span><span class="p">));</span>
 <span class="n">end</span>
 <span class="n">figure</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
-<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">),</span> <span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">title</span><span class="p">(</span><span class="s1">&#39;Adferd minnstu fervika fyrir marglidu af stigi 2&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">'*'</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">'x'</span><span class="p">),</span> <span class="n">ylabel</span><span class="p">(</span><span class="s1">'y'</span><span class="p">)</span>
+<span class="n">title</span><span class="p">(</span><span class="s1">'Adferd minnstu fervika fyrir marglidu af stigi 2'</span><span class="p">)</span>
 <span class="nb">print</span>
 </pre></div>
 </div>
@@ -2527,8 +2527,8 @@ Grunnföllin þrjú eru <span class="math notranslate nohighlight">\(f_1(x)=1\)<
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, Töluleg greining (STÆ405G) | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, Töluleg greining (STÆ405G) | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

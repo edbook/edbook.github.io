@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Myndræn framsetning &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>3. Myndræn framsetning &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -756,7 +756,7 @@ stillingunni.</p>
 <h4><span class="section-number">3.1.2.1. </span>Nöfn ása<a class="headerlink" href="#nofn-asa" title="Link to this heading"></a></h4>
 <p>Viðbætur má einnig nota til að merkja ása á gröfum. Viðbótin <code class="docutils literal notranslate"><span class="pre">labs()</span></code>
 tilgreinir merkingu ása.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"Uppáhalds ís"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Fjöldi"</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
@@ -773,8 +773,8 @@ ef við viljum merkja og stilla kvarðana á y-ás.</p>
 <p>Til að breyta heitum á kvörðum mötum við stillinguna <code class="docutils literal notranslate"><span class="pre">labels</span></code> með þeim
 heitum sem við viljum nota. Þannig merkjum við sem dæmi flokkana á
 stöplaritinu hér að ofan með viðbótinni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Uppáhalds ís&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Fjöldi&quot;</span><span class="p">)</span> <span class="o">+</span>
-<span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span> <span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span><span class="o">+</span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">"Uppáhalds ís"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">"Fjöldi"</span><span class="p">)</span> <span class="o">+</span>
+<span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Jarðaberjaís"</span><span class="p">,</span><span class="s2">"Súkkulaðiís"</span><span class="p">,</span> <span class="s2">"Vanilluís"</span><span class="p">))</span>
 </pre></div>
 </div>
 <figure class="align-center">
@@ -784,8 +784,8 @@ stöplaritinu hér að ofan með viðbótinni:</p>
 línur til að gera kóðann læsilegri. Þá þurfum við að passa okkur að hafa
 plúsinn við enda línunnar. Ef plúsinn kemur í upphafi næstu línu er sú
 lína hunsuð og við fáum jafnvel villu:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">&#39;Uppáhalds ís&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">&#39;Fjöldi&#39;</span><span class="p">)</span>
-<span class="o">+</span> <span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Jarðaberjaís&quot;</span><span class="p">,</span><span class="s2">&quot;Súkkulaðiís&quot;</span><span class="p">,</span><span class="s2">&quot;Vanilluís&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="ow">is</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">()</span> <span class="o">+</span> <span class="n">xlab</span><span class="p">(</span><span class="s1">'Uppáhalds ís'</span><span class="p">)</span> <span class="o">+</span> <span class="n">ylab</span><span class="p">(</span><span class="s1">'Fjöldi'</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">scale_x_discrete</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Jarðaberjaís"</span><span class="p">,</span><span class="s2">"Súkkulaðiís"</span><span class="p">,</span><span class="s2">"Vanilluís"</span><span class="p">))</span>
 <span class="c1">## Error in `+.gg`:</span>
 <span class="c1">## ! Cannot use `+` with a single argument.</span>
 <span class="c1">## ℹ Did you accidentally put `+` on a new line?</span>
@@ -846,7 +846,7 @@ stillingunni <code class="docutils literal notranslate"><span class="pre">fill</
 </figure>
 <p>Ef við bætum stillingunni <code class="docutils literal notranslate"><span class="pre">position=’dodge’</span></code> inní viðbótina
 <code class="docutils literal notranslate"><span class="pre">geom_bar()</span></code> koma stöplar grafsins hvor við hliðina á öðrum:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;dodge&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="ow">is</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">styrikerfi_simi</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_bar</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">"dodge"</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center">
@@ -939,16 +939,16 @@ m.a. stillinguna <code class="docutils literal notranslate"><span class="pre">pl
 grafið sem er vistað undir því nafni sem við tilgreinum stillingunni. Ef
 við viljum vista grafið á skjánum á <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> sniði undir nafninu
 <code class="docutils literal notranslate"><span class="pre">graf</span></code> gefum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.jpg&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">'graf.jpg'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Ef við viljum vista grafið á <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> sniði gefum við skipunina</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.pdf&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">'graf.pdf'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>og ef við viljum ekki vista grafið á skjánum, heldur graf sem við höfum
 vistað sem hlut undir nafninu <code class="docutils literal notranslate"><span class="pre">mynd1</span></code> þá gefum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">&#39;graf.pdf&#39;</span><span class="p">,</span> <span class="n">mynd1</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ggsave</span><span class="p">(</span><span class="s1">'graf.pdf'</span><span class="p">,</span> <span class="n">mynd1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Að lokum eru til aðrar aðferðir til að vista myndar, svo sem <code class="docutils literal notranslate"><span class="pre">pdf()</span></code>,
@@ -978,8 +978,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

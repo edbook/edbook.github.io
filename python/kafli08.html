@@ -322,8 +322,8 @@ línuskiptatákn (<em>line feed</em>, <em>line break</em> eða <em>newline chara
 notaður til að fara í nýja línu í textaskrá. Hann er kóðaður með tölunni 10 og
 oft táknaður með stafasamstæðunni <code class="docutils literal notranslate"><span class="pre">\n</span></code>, m.a. í Python. Það er líka hægt að
 nota hann í <code class="docutils literal notranslate"><span class="pre">print</span></code>-köllum, t.d.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>       <span class="c1"># prentar x og y hvort á sína línuna</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># prentar líka á tvær línur).</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>       <span class="c1"># prentar x og y hvort á sína línuna</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="se">\n</span><span class="s2">y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># prentar líka á tvær línur).</span>
 </pre></div>
 </div>
 </section>
@@ -377,10 +377,10 @@ Kári 178
 </pre></div>
 </div>
 <p>og eftirfarandi forritsbútur sé framkvæmdur:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="n">hauslína</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
    <span class="n">línur</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="n">skráin</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -399,10 +399,10 @@ afgangi gilda sinna.</p>
 <p class="admonition-title">Sýnidæmi: Skrá lesin og prentuð</p>
 <p>Hér er forrit sem les línur skrár hverja á fætur annarri og prentar þær út.
 Byrjað er á að lesa hauslínuna sér.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="n">hauslína</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hauslína:, hauslína&quot;</span><span class="p">)</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aðrar línur:&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">"Hauslína:, hauslína"</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">"Aðrar línur:"</span><span class="p">)</span>
    <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
       <span class="n">strengur</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
       <span class="nb">print</span><span class="p">(</span><span class="n">strengur</span><span class="p">)</span>
@@ -419,10 +419,10 @@ Kári 178
 </div>
 <p>Þegar skrá er lesin öll í einu með <code class="docutils literal notranslate"><span class="pre">read</span></code> er hægt að nota <code class="docutils literal notranslate"><span class="pre">splitlines</span></code> til
 að losna við línuskiptatáknin, svona:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="n">L</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 
-<span class="c1"># Nú er L listinn [&#39;Nafn Hæð&#39;, &#39;Bára 171&#39;, &#39;Jóna 168&#39;, &#39;Kári 178&#39;]</span>
+<span class="c1"># Nú er L listinn ['Nafn Hæð', 'Bára 171', 'Jóna 168', 'Kári 178']</span>
 </pre></div>
 </div>
 <div class="aefing admonition">
@@ -474,7 +474,7 @@ og svo lengjast þeir í hverri umferð for-lykkjunnar. Við notum tækifærið 
 sýnum samspil <em>enumerate</em> og <em>zip</em>, sbr. æfingu afast í <a class="reference internal" href="kafli05.html#itrarar"><span class="std std-numref">kafla
 5.6</span></a>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">"https://cs.hi.is/python/data.txt"</span><span class="p">)</span>
 <span class="n">nöfn</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">hæðir</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -484,7 +484,7 @@ sýnum samspil <em>enumerate</em> og <em>zip</em>, sbr. æfingu afast í <a clas
    <span class="n">hæðir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hæð</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">nr</span><span class="p">,(</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nöfn</span><span class="p">,</span> <span class="n">hæðir</span><span class="p">)):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nr</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nr</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Út prentast:</p>
@@ -509,14 +509,14 @@ Notast er við sömu skrá og síðast.</p>
 loknum innlestri er taflan prentuð. Takið eftir hvernig <code class="docutils literal notranslate"><span class="pre">items</span></code> er notað
 til að renna samhliða í gegn um pör nafna og hæða.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">&quot;https://cs.hi.is/python/data.txt&quot;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="s2">"https://cs.hi.is/python/data.txt"</span><span class="p">)</span>
 <span class="n">tafla</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
    <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="o">=</span> <span class="n">lína</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
    <span class="n">tafla</span><span class="p">[</span><span class="n">nafn</span><span class="p">]</span> <span class="o">=</span> <span class="n">hæð</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="ow">in</span> <span class="n">tafla</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">&quot;</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">"</span>
 </pre></div>
 </div>
 <p>Út prentast:</p>
@@ -535,7 +535,7 @@ með aðstoð dict og zip og prentum hana út eins og fyrr:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">tafla</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">nöfn</span><span class="p">,</span><span class="n">hæðir</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span><span class="n">hæð</span><span class="p">)</span> <span class="ow">in</span> <span class="n">tafla</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">&quot;</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">hæð</span><span class="si">}</span><span class="s2">"</span>
 </pre></div>
 </div>
 </div>
@@ -619,10 +619,10 @@ lesa, sbr. eftirfarandi dæmi.</p>
 <p>Gerum ráð fyrir að skráin í kafla <a class="reference internal" href="#daemi-um-csv-skra"><span class="std std-numref">8.3.1</span></a> sé geymd í
 <code class="docutils literal notranslate"><span class="pre">simaskra.txt</span></code>. Eftirfarandi forrit mundi lesa hana inn og prenta á skjá:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simaskra.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"simaskra.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
    <span class="k">for</span> <span class="n">röð</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
-      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">20</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">7</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">20</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">7</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">röð</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Við sjáum að lesarinn <em>reader</em> er ítrari sem skilar lista með atriðum hverrar
@@ -645,16 +645,16 @@ skrifa <code class="docutils literal notranslate"><span class="pre">next(reader)
 <p>Ef gefinn er listi af strengjum sem hver um sig inniheldur svið afmörkuð með
 kommum eða öðrum táknum þá er hægt að nota csv-pakkann til að ná í þessi svið
 alveg eins og um væri að ræða línur í skrá. Hér er einfalt dæmi:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">línur</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;grænn, 0.1, 0.6, 0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;blár, 0, 0.2, 0.9&quot;</span><span class="p">,</span> <span class="s2">&quot;gulur, 1, 0.9, 0&quot;</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">línur</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"grænn, 0.1, 0.6, 0.1"</span><span class="p">,</span> <span class="s2">"blár, 0, 0.2, 0.9"</span><span class="p">,</span> <span class="s2">"gulur, 1, 0.9, 0"</span><span class="p">]</span>
 <span class="n">rdr</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">línur</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">L</span> <span class="ow">in</span> <span class="n">rdr</span><span class="p">:</span>
    <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>sem prentar út:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[&#39;grænn&#39;, &#39;0.1&#39;, &#39;0.6&#39;, &#39;0.1&#39;]
-[&#39;blár&#39;, &#39;0&#39;, &#39;0.2&#39;, &#39;0.9&#39;]
-[&#39;gulur&#39;, &#39;1&#39;, &#39;0.9&#39;, &#39;0&#39;]
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>['grænn', '0.1', '0.6', '0.1']
+['blár', '0', '0.2', '0.9']
+['gulur', '1', '0.9', '0']
 </pre></div>
 </div>
 <div class="aefing admonition">
@@ -670,15 +670,15 @@ alveg eins og um væri að ræða línur í skrá. Hér er einfalt dæmi:</p>
 Til að lesa þessa skrá beint af netinu með csv-lesara þarf að fara krókaleið og
 lesa fyrst líkt og gert er í fyrra sýnidæminu í kafla <a class="reference internal" href="#hefbundinn-innlestur-textaskrar-af-diski"><span class="std std-numref">8.2.3</span></a> áður en lesaranum er beitt á strengjalistann
 sem kemur út úr því. Hér er forritsbútur sem útfærir þetta:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://cs.hi.is/python/simaskra.txt&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">"https://cs.hi.is/python/simaskra.txt"</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlopen</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()]</span>
-<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">';'</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="n">nafn</span><span class="p">,</span> <span class="n">sími</span><span class="p">,</span> <span class="n">heimili</span><span class="p">)</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">nafn</span><span class="si">:</span><span class="s1">19</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">sími</span><span class="si">:</span><span class="s1">7</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">heimili</span><span class="si">:</span><span class="s1">20</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">nafn</span><span class="si">:</span><span class="s1">19</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">sími</span><span class="si">:</span><span class="s1">7</span><span class="si">}</span><span class="s1">  </span><span class="si">{</span><span class="n">heimili</span><span class="si">:</span><span class="s1">20</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -699,8 +699,8 @@ Gull      19.30        1064
 </div>
 <p>Eftirfarandi forritsbútur mundi lesa skrána:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;malmar.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span>
-   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"malmar.txt"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span>
+   <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">' '</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
    <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>     <span class="c1"># titillína lesin (og henni hent)</span>
    <span class="k">for</span> <span class="n">lína</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
       <span class="n">málmur</span> <span class="o">=</span> <span class="n">lína</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -753,10 +753,10 @@ aftast í hverja línu.</p>
 <p class="admonition-title">Sýnidæmi: Skráaskrift með write</p>
 <p>Forrit sem býr til skrá <code class="docutils literal notranslate"><span class="pre">xy.dat</span></code> með strengjunum „x=3“ og „y=4“. Takið eftir að
 hægt er að skrifa f-strengi með write.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;xy.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"xy.dat"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
    <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;x = </span><span class="si">{x}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;y = </span><span class="si">{y}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"x = </span><span class="si">{x}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+   <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"y = </span><span class="si">{y}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -766,10 +766,10 @@ eftirfarandi dæmi</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Skráaskrift með print</p>
 <p>Eftirfarandi forrit býr til eins skrá og dæmið að framan.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;xy1.dat&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"xy1.dat"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
   <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -965,11 +965,11 @@ reyndar þannig að það skiptir engu máli hvaða slóð var notuð til að b�
 <code class="docutils literal notranslate"><span class="pre">Format,</span> <span class="pre">Stats,</span> <span class="pre">Old</span></code>. Að því loknu skrifast <code class="docutils literal notranslate"><span class="pre">True,</span> <span class="pre">Notes</span></code> (aðalnafn
 <em>Notes.txt</em>):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="n">mappa</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="n">mappa</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"."</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mappa</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;, &quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="s2">", "</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
-<span class="n">nótur</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;../Notes.txt&quot;</span><span class="p">)</span>
+<span class="n">nótur</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"../Notes.txt"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">nótur</span><span class="o">.</span><span class="n">exists</span><span class="p">(),</span> <span class="n">nótur</span><span class="o">.</span><span class="n">stem</span><span class="p">())</span>
 </pre></div>
 </div>

@@ -224,10 +224,10 @@
 <p>Eitt af því sem tölvur eru góðar í er að framkvæma sömu hlutina aftur og aftur. Ein einfaldasta leiðin til að endurtaka skipanir í Python er að nota <em>for</em>-skipun. Hér er dæmi um Python-forrit sem reiknar og skrifar út önnur og þriðju veldi talnanna 1 til 5:</p>
 <div class="literal-block-wrapper docutils container" id="veldatafla">
 <div class="code-block-caption"><span class="caption-number">Forrit 2.1 </span><span class="caption-text">Veldatafla</span><a class="headerlink" href="#veldatafla" title="Link to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; k  k²   k³&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;–––––––––––&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">" k  k²   k³"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"–––––––––––"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">k</span><span class="o">**</span><span class="mi">3</span><span class="si">:</span><span class="s2">4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">k</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">k</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">k</span><span class="o">**</span><span class="mi">3</span><span class="si">:</span><span class="s2">4</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -267,14 +267,14 @@ og svo er næsta tala reiknuð aftur og aftur skv.</p>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">collatz_runa</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># finnur og skrifar út Collatz-runu sem byrjar á n</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;runa: &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'runa: '</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">''</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">', '</span><span class="p">)</span>
         <span class="n">n</span> <span class="o">=</span> <span class="n">næsta</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
 <span class="c1"># Forrit sem prentar út Collatz-runur sem byrja á 2, 3,...,7:</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nokkrar Collatz-runur&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Nokkrar Collatz-runur'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">n0</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
     <span class="n">collatz_runa</span><span class="p">(</span><span class="n">n0</span><span class="p">)</span>
 </pre></div>
@@ -291,7 +291,7 @@ annaðhvort <strong>athugasemd</strong> (<em>comment</em>) sem byrjar á <code c
 hvað fallið gerir. Nánar tiltekið er ritað:</p>
 <blockquote>
 <div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>    <span class="n">eða</span><span class="p">:</span>  <span class="k">def</span><span class="w"> </span><span class="nf">nafn</span><span class="p">(</span><span class="n">stiki1</span><span class="p">,</span> <span class="n">stiki2</span><span class="o">...</span> <span class="p">):</span>
-   <span class="c1"># lýsing-á-hvað-fallið-gerir           &#39;&#39;&#39;lýsing-á-hvað-fallið-gerir&#39;&#39;&#39;</span>
+   <span class="c1"># lýsing-á-hvað-fallið-gerir           '''lýsing-á-hvað-fallið-gerir'''</span>
    <span class="n">skilgreining</span><span class="o">-</span><span class="n">falls</span>                     <span class="n">skilgreining</span><span class="o">-</span><span class="n">falls</span>
 </pre></div>
 </div>

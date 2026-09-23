@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. Inngangur &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>1. Inngangur &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -981,7 +981,7 @@ fleira sem gæti komið að góðum notum.</p></li>
 </div>
 <hr class="docutils" />
 <p>Ef við þekkjum ekki nafnið á fallinu má leita eftir efnisatriði:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">"efnisatridi"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Þá er þó aðeins leitað í þeim <em>pökkum</em> sem hefur verið hlaðin niður á
@@ -1000,7 +1000,7 @@ hlaðið niður má nota skipunina <code class="docutils literal notranslate"><s
 </div>
 <hr class="docutils" />
 <p>Til að leita á heimasíðu R eftir efnisatriði má nota</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSiteSearch</span><span class="p">(</span><span class="s2">&quot;efnisatridi&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RSiteSearch</span><span class="p">(</span><span class="s2">"efnisatridi"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>sem gefur notandanum lista yfir pakka og föll sem til eru á heimasíðu R
@@ -1018,10 +1018,10 @@ hlaðið niður má nota skipunina <code class="docutils literal notranslate"><s
 alveg allt, þá getum við notað fallið <code class="docutils literal notranslate"><span class="pre">apropos</span></code>. Það skilar lista af
 nöfnum falla sem hafa ákveðinn <code class="docutils literal notranslate"><span class="pre">strenghluta</span></code>, þ.e. nafnið á fallinu
 inniheldur þann textabút.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span> <span class="c1">## skilar villu ef foreign pakkinn</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apropos</span><span class="p">(</span><span class="s1">'spss'</span><span class="p">)</span> <span class="c1">## skilar villu ef foreign pakkinn</span>
 <span class="c1">## er ekki virkur i minni</span>
 <span class="n">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span> <span class="c1">## pakki sem inniheldur read.spss fallid</span>
-<span class="n">apropos</span><span class="p">(</span><span class="s1">&#39;spss&#39;</span><span class="p">)</span>
+<span class="n">apropos</span><span class="p">(</span><span class="s1">'spss'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Athugið að <code class="docutils literal notranslate"><span class="pre">apropos</span></code> skilar aðeins nöfnum falla sem eru í minni.</p>
@@ -1141,7 +1141,7 @@ tilheyra þessum grunnpökkum þurfum við að hlaða þeim niður á tölvuna
 okkar með aðferðinni <code class="docutils literal notranslate"><span class="pre">install.packages()</span></code>. Það þarf aðeins að gera
 einu sinni á hverri tölvu. Viljum við t.d ná í <code class="docutils literal notranslate"><span class="pre">ggplot2</span></code> pakkann gerum
 við það með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">&quot;ggplot2&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"ggplot2"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Ef við viljum svo vinna með aðferðirnar í tilteknum pakka þurfum við að
@@ -1185,7 +1185,7 @@ MacOsX tölvu.</p></li>
 <p>Einnig lenda MacOsX notendur stundum í því að íslenskir stafir birtast
 rétt í .R skrám en rangt á gröfum. Það er hægt að laga með því að gefa
 skipunina</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;defaults write org.R-project.R force.LANG en_US.UTF-8&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span><span class="p">(</span><span class="s2">"defaults write org.R-project.R force.LANG en_US.UTF-8"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>og endurræsa svo Rstudio. Þá ættu íslensku stafirnir að birtast rétt.
@@ -1350,8 +1350,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

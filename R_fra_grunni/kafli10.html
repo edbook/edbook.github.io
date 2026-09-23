@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Línuleg aðhvarfsgreining &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>10. Línuleg aðhvarfsgreining &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -684,10 +684,10 @@ heildarlengd pokarottu. Hér er svarbreytan <code class="docutils literal notran
 skýribreytan.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lm1</span><span class="o">&lt;-</span><span class="n">lm</span><span class="p">(</span><span class="n">lengd_skott</span><span class="o">~</span><span class="n">heildarlengd</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">pokarotta</span><span class="p">)</span>
 <span class="n">names</span><span class="p">(</span><span class="n">lm1</span><span class="p">)</span>
-<span class="c1">##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;</span>
-<span class="c1">##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;</span>
-<span class="c1">##  [9] &quot;na.action&quot;     &quot;xlevels&quot;       &quot;call&quot;          &quot;terms&quot;</span>
-<span class="c1">## [13] &quot;model&quot;</span>
+<span class="c1">##  [1] "coefficients"  "residuals"     "effects"       "rank"</span>
+<span class="c1">##  [5] "fitted.values" "assign"        "qr"            "df.residual"</span>
+<span class="c1">##  [9] "na.action"     "xlevels"       "call"          "terms"</span>
+<span class="c1">## [13] "model"</span>
 </pre></div>
 </div>
 <p>Eins og þið sjáið eru þarna heilmargt að finna. Þar við bætist að
@@ -707,7 +707,7 @@ aðhvarfsgreiningarhlutnum <code class="docutils literal notranslate"><span clas
 <span class="c1">## (Intercept)    14.61613    3.23648  4.516   1.7e-05 ***</span>
 <span class="c1">## haed           0.25713    0.03712   6.927   3.94e-10 ***</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="c1">##</span>
 <span class="c1">## Residual standard error: 1.624 on 102 degrees of freedom</span>
 <span class="c1">## Multiple R-squared:  0.32, Adjusted R-squared:  0.3133</span>
@@ -808,7 +808,7 @@ langri pokarottu:</p>
 </pre></div>
 </div>
 <p>Aðferðina má einnig nota til að fá spábil:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">interval</span><span class="o">=</span><span class="s2">&quot;prediction&quot;</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">heildarlengd</span><span class="o">=</span><span class="mi">90</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">predict</span><span class="p">(</span><span class="n">lm1</span><span class="p">,</span><span class="n">interval</span><span class="o">=</span><span class="s2">"prediction"</span><span class="p">,</span><span class="n">newdata</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">heildarlengd</span><span class="o">=</span><span class="mi">90</span><span class="p">))</span>
 <span class="c1">##        fit      lwr         upr</span>
 <span class="c1">## 1 37.75827  34.5149   41.00164</span>
 </pre></div>
@@ -824,7 +824,7 @@ við ætlum að kanna fylgnina á milli. Viljum við kanna fylgnina á milli
 breytanna <code class="docutils literal notranslate"><span class="pre">lengd_skott</span></code> og <code class="docutils literal notranslate"><span class="pre">heildarlengd</span></code> notum við skipunina:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cor.test(pokarotta$lengd_skott,pokarotta$heildarlengd)
 ##
-##  Pearson&#39;s product-moment correlation
+##  Pearson's product-moment correlation
 ##
 ## data:  pokarotta$lengd_skott and pokarotta$heildarlengd
 ## t = 6.9275, df = 102, p-value = 3.935e-10
@@ -876,7 +876,7 @@ aðferðinni:</p>
 <span class="c1">## kyn            1  49.12   49.116    2.6867    0.1043</span>
 <span class="c1">## Residuals    102 1864.71  18.281</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 </pre></div>
 </div>
 <p>en við getum einnig fengið möt á stikum líkansins með <code class="docutils literal notranslate"><span class="pre">summary()</span></code>
@@ -895,7 +895,7 @@ aðferðinni:</p>
 <span class="c1">## (Intercept)            87.9070     0.6520  134.819  &lt;2e-16 ***</span>
 <span class="c1">## kyn                    -1.3955     0.8514  -1.639    0.104</span>
 <span class="c1">## ---</span>
-<span class="c1">## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span>
+<span class="c1">## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 <span class="c1">##</span>
 <span class="c1">## Residual standard error: 4.276 on 102 degrees of freedom</span>
 <span class="c1">##   (22 observations deleted due to missingness)</span>
@@ -952,8 +952,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

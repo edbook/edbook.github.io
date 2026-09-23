@@ -255,10 +255,10 @@ listabókstafur). Smellið gjarna á þessa skrá og skoðið hana í Excel.</p>
 atkvæða, bætir við dálki með hlutfalli atkvæðanna sem hver flokkur fékk, og
 birtir loks þessa auknu töflu:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/python/kosningar.xlsx&quot;</span><span class="p">)</span>
+<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"http://cs.hi.is/python/kosningar.xlsx"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Atkvæði&quot;</span><span class="p">])</span>
-<span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Hlutf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Atkvæði&quot;</span><span class="p">]</span><span class="o">/</span><span class="n">n</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kosn</span><span class="p">[</span><span class="s2">"Atkvæði"</span><span class="p">])</span>
+<span class="n">kosn</span><span class="p">[</span><span class="s2">"Hlutf"</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">"Atkvæði"</span><span class="p">]</span><span class="o">/</span><span class="n">n</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -272,9 +272,9 @@ töflunni sem birtist:</p>
 <p class="admonition-title">Æfing</p>
 <p>Afritið Sýnidæmið yfir í vinnubók og keyrið það. Prófið að nota print í
 stað display. Bætið svo við samtals-línu með:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Samtals&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-<span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Samtals&quot;</span><span class="p">,</span> <span class="s2">&quot;Stafur&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">&quot;Samtals&quot;</span><span class="p">,</span> <span class="s2">&quot;Flokkur&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Samtals"</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Samtals"</span><span class="p">,</span> <span class="s2">"Stafur"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="n">kosn</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"Samtals"</span><span class="p">,</span> <span class="s2">"Flokkur"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">""</span>
 </pre></div>
 </div>
 <p>(seinni tvær línurnar eru tilkomnar vegna þess að það á ekki að leggja saman
@@ -282,7 +282,7 @@ stafina og listana). Bætið líka við dálki „Atkv-sætis“ með atkvæði 
 hvert þingsæti með því að deila í atkvæðin með þingsætunum. Loks er hægt að
 birta hlutfallið sem prósentu og einum aukastaf, og aftasta dálkinn án
 aukastafa með skipununum:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">birt</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">&quot;Hlutf&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.1%}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;Atkv-sætis&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.0f}</span><span class="s2">&quot;</span><span class="p">})</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">birt</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">format</span><span class="p">({</span><span class="s2">"Hlutf"</span><span class="p">:</span> <span class="s2">"</span><span class="si">{:.1%}</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"Atkv-sætis"</span><span class="p">:</span> <span class="s2">"</span><span class="si">{:.0f}</span><span class="s2">"</span><span class="p">})</span>
 <span class="n">display</span><span class="p">(</span><span class="n">birt</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -325,11 +325,11 @@ nota kallið</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi:</p>
 <p>Skipanirnar:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nafn&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ari&quot;</span><span class="p">,</span> <span class="s2">&quot;Ása&quot;</span><span class="p">],</span> <span class="s2">&quot;aldur&quot;</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span><span class="mi">18</span><span class="p">]}</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nafn"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Ari"</span><span class="p">,</span> <span class="s2">"Ása"</span><span class="p">],</span> <span class="s2">"aldur"</span><span class="p">:[</span><span class="mi">12</span><span class="p">,</span><span class="mi">18</span><span class="p">]}</span>
 <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-<span class="n">slembi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">])</span>
+<span class="n">slembi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">slembi</span><span class="p">)</span>
 </pre></div>
@@ -536,8 +536,8 @@ er svo rætt í næsta kafla.</p>
 <section id="pandas-og-teikningar">
 <h2><span class="section-number">15.5  </span>Pandas og teikningar<a class="headerlink" href="#pandas-og-teikningar" title="Link to this heading"></a></h2>
 <p>Matplotlib teikniskipanir geta notað dálka í Pandas-töflum sem viðföng. Til dæmis, ef <code class="docutils literal notranslate"><span class="pre">xy.xlsx</span></code> hefði tvo dálka, „x“ og „y“, þá mætti teikna línurit af þeim með skipununum:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">readexcel</span><span class="p">(</span><span class="s2">&quot;xy.xlsx&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">readexcel</span><span class="p">(</span><span class="s2">"xy.xlsx"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"x"</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s2">"y"</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Í eftirfarandi dæmi eru Pandas-dálkar notaðir sem viðföng í skipanirnar <code class="code docutils literal notranslate"><span class="pre">bar</span></code> og <code class="code docutils literal notranslate"><span class="pre">xticks</span></code>.</p>
@@ -546,12 +546,12 @@ er svo rætt í næsta kafla.</p>
 <p>Hér er dæmi sem teiknar súlurit af kosningaúrslitunum 2017 sem voru
 á dagskrá í sýnidæmi í grein <a class="reference internal" href="#pandas-gogn"><span class="std std-numref">15.1</span></a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/python/kosningar.xlsx&quot;</span><span class="p">)</span>
+<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"http://cs.hi.is/python/kosningar.xlsx"</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kosn</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Atkvæði&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tomato&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Stafur&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Atkvæði&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Úrslit alþingiskosninga 2017&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">"Atkvæði"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tomato"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="p">[</span><span class="s2">"Stafur"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Atkvæði'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Úrslit alþingiskosninga 2017'</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Hér er x listinn [0,1,2…9] (það voru 10 framboðslistar). Lista ef liti má finna
@@ -575,26 +575,26 @@ notar hornklofa til að vísa í töfludálka. Í Javascript er hægt að skilgr
 hluti (<em>objects</em>) sem svara að mörgu leyti til uppflettitaflna í Python. Þar er
 hægt að nota hornklofa til að fletta upp eiginleikum hluta, en maður hefur
 val og getur líka notað punkt. Eftirfarandi er löglegt Javascript forrit:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">einst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;nafn&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Jón&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aldur&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">33</span><span class="p">}</span>
-<span class="nx">einst</span><span class="p">[</span><span class="s1">&#39;sími&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">888</span><span class="o">-</span><span class="mf">7777</span>
-<span class="nx">einst</span><span class="p">.</span><span class="nx">kennitala</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;111213-3210&#39;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">einst</span><span class="p">[</span><span class="s2">&quot;nafn&quot;</span><span class="p">],</span><span class="w"> </span><span class="nx">einst</span><span class="p">.</span><span class="nx">aldur</span><span class="p">,</span><span class="w"> </span><span class="nx">einst</span><span class="p">.</span><span class="nx">sími</span><span class="p">)</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">einst</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s1">'nafn'</span><span class="o">:</span><span class="w"> </span><span class="s1">'Jón'</span><span class="p">,</span><span class="w"> </span><span class="s1">'aldur'</span><span class="o">:</span><span class="w"> </span><span class="mf">33</span><span class="p">}</span>
+<span class="nx">einst</span><span class="p">[</span><span class="s1">'sími'</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">888</span><span class="o">-</span><span class="mf">7777</span>
+<span class="nx">einst</span><span class="p">.</span><span class="nx">kennitala</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'111213-3210'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">einst</span><span class="p">[</span><span class="s2">"nafn"</span><span class="p">],</span><span class="w"> </span><span class="nx">einst</span><span class="p">.</span><span class="nx">aldur</span><span class="p">,</span><span class="w"> </span><span class="nx">einst</span><span class="p">.</span><span class="nx">sími</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Það sama á svo við um Pandas: Það er hægt að nota punkt til að vísa í dálka í
 Pandas gagnatöflum. Þetta er nefnt <em>punktritháttur</em> (<em>dot notation</em>). Þannig
 mætti hafa sýnidæmið í kafla <a class="reference internal" href="#pandas-gogn"><span class="std std-numref">15.1</span></a> svona:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;http://cs.hi.is/python/kosningar.xlsx&quot;</span><span class="p">)</span>
+<span class="n">kosn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"http://cs.hi.is/python/kosningar.xlsx"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="p">)</span>
-<span class="n">kosn</span><span class="p">[</span><span class="s2">&quot;Hlutf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="o">/</span><span class="n">n</span>
+<span class="n">kosn</span><span class="p">[</span><span class="s2">"Hlutf"</span><span class="p">]</span> <span class="o">=</span> <span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="o">/</span><span class="n">n</span>
 <span class="n">display</span><span class="p">(</span><span class="n">kosn</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>og miðparturinn í sýnidæminu í kafla <a class="reference internal" href="#pandas-og-teikningar"><span class="std std-numref">15.5</span></a> yrði:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kosn</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tomato&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="o">.</span><span class="n">Atkvæði</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tomato"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">kosn</span><span class="o">.</span><span class="n">Stafur</span><span class="p">)</span>
 </pre></div>
 </div>

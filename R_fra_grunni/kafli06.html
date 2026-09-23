@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Ályktunartölfræði &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>6. Ályktunartölfræði &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -679,16 +679,16 @@ nota ef við vildum velja ákveðinn fjölda viðfangsefna úr endanlegu þýði
 Látum til gamans útkomumengið okkar vera jólasveinana 13. Við búum til
 vigurinn <code class="docutils literal notranslate"><span class="pre">jolasveinar</span></code> sem inniheldur heiti allra jólasveinanna með
 skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jolasveinar</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;Stekkjastaur&quot;</span><span class="p">,</span> <span class="s2">&quot;Giljagaur&quot;</span><span class="p">,</span> <span class="s2">&quot;Stufur&quot;</span><span class="p">,</span> <span class="s2">&quot;Thvorusleikir&quot;</span><span class="p">,</span>
-<span class="s2">&quot;Pottaskefill&quot;</span><span class="p">,</span> <span class="s2">&quot;Askasleikir&quot;</span><span class="p">,</span> <span class="s2">&quot;Hurdaskellir&quot;</span><span class="p">,</span> <span class="s2">&quot;Skyrgamur&quot;</span><span class="p">,</span> <span class="s2">&quot;Bjugnakraekir&quot;</span><span class="p">,</span>
-<span class="s2">&quot;Gluggagaegir&quot;</span><span class="p">,</span> <span class="s2">&quot;Gattathefur&quot;</span><span class="p">,</span> <span class="s2">&quot;Ketkrokur&quot;</span><span class="p">,</span> <span class="s2">&quot;Kertasnikir&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jolasveinar</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Stekkjastaur"</span><span class="p">,</span> <span class="s2">"Giljagaur"</span><span class="p">,</span> <span class="s2">"Stufur"</span><span class="p">,</span> <span class="s2">"Thvorusleikir"</span><span class="p">,</span>
+<span class="s2">"Pottaskefill"</span><span class="p">,</span> <span class="s2">"Askasleikir"</span><span class="p">,</span> <span class="s2">"Hurdaskellir"</span><span class="p">,</span> <span class="s2">"Skyrgamur"</span><span class="p">,</span> <span class="s2">"Bjugnakraekir"</span><span class="p">,</span>
+<span class="s2">"Gluggagaegir"</span><span class="p">,</span> <span class="s2">"Gattathefur"</span><span class="p">,</span> <span class="s2">"Ketkrokur"</span><span class="p">,</span> <span class="s2">"Kertasnikir"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Takið eftir því hvernig við setjum gæsalappir utanum nafnið á hverjum
 einasta jólasveini. Þær mega ekki gleymast því þá gefur R villu.
 Skipunin</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span><span class="p">(</span><span class="n">jolasveinar</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-<span class="c1">## [1] &quot;Stufur&quot;       &quot;Hurdaskellir&quot; &quot;Stekkjastaur&quot; &quot;Gattathefur&quot;</span>
+<span class="c1">## [1] "Stufur"       "Hurdaskellir" "Stekkjastaur" "Gattathefur"</span>
 </pre></div>
 </div>
 <p>velur fjögur ólík gildi úr vigrinum <code class="docutils literal notranslate"><span class="pre">jolasveinar</span></code> af handahófi,
@@ -702,19 +702,19 @@ Skipunin</p>
 möguleiki að velja 14 ólíka jólasveina. Ef við notum stillinguna
 <code class="docutils literal notranslate"><span class="pre">replace=TRUE</span></code> og gefum skipunina</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span><span class="p">(</span><span class="n">jolasveinar</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
-<span class="c1">##  [1] &quot;Giljagaur&quot;     &quot;Thvorusleikir&quot; &quot;Pottaskefill&quot;  &quot;Stekkjastaur&quot;</span>
-<span class="c1">##  [5] &quot;Stufur&quot;        &quot;Thvorusleikir&quot; &quot;Stekkjastaur&quot;  &quot;Stufur&quot;</span>
-<span class="c1">##  [9] &quot;Bjugnakraekir&quot; &quot;Stufur&quot;        &quot;Gluggagaegir&quot;  &quot;Giljagaur&quot;</span>
-<span class="c1">## [13] &quot;Stekkjastaur&quot;  &quot;Gattathefur&quot;</span>
+<span class="c1">##  [1] "Giljagaur"     "Thvorusleikir" "Pottaskefill"  "Stekkjastaur"</span>
+<span class="c1">##  [5] "Stufur"        "Thvorusleikir" "Stekkjastaur"  "Stufur"</span>
+<span class="c1">##  [9] "Bjugnakraekir" "Stufur"        "Gluggagaegir"  "Giljagaur"</span>
+<span class="c1">## [13] "Stekkjastaur"  "Gattathefur"</span>
 </pre></div>
 </div>
 <p>lendum við hins vegar í engum vandræðum, því þá megum við velja sama
 jólasveininn aftur og aftur. Þessa stillingu er kjörið að nota þegar við
 viljum líkja eftir slembnu fyrirbæri sem er mælt aftur og aftur. Til
 dæmis má gefa skipanirnar</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">krona</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">&quot;thorskur&quot;</span><span class="p">,</span><span class="s2">&quot;landvaettir&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">krona</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="s2">"thorskur"</span><span class="p">,</span><span class="s2">"landvaettir"</span><span class="p">)</span>
 <span class="n">sample</span><span class="p">(</span><span class="n">krona</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
-<span class="c1">## [1] &quot;landvaettir&quot; &quot;landvaettir&quot; &quot;thorskur&quot;    &quot;thorskur&quot;</span>
+<span class="c1">## [1] "landvaettir" "landvaettir" "thorskur"    "thorskur"</span>
 </pre></div>
 </div>
 <p>til að líkja eftir krónukasti sem er framkvæmt fjórum sinnum.</p>
@@ -843,8 +843,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

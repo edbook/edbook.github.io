@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11. Tvíkosta aðhvarfsgreining &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>11. Tvíkosta aðhvarfsgreining &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -668,7 +668,7 @@ fyrir þá og reikna öryggisbil.</p>
 gangandi eða skokkandi í skólann séu ólíklegri til að vera lengi á leiðinni
 í skólann heldur en þeir sem ferðast á skólann á annan máta. Líkanið metum
 við með neðangreindri skipun og það borgar sig að vista líkanið sem hlut.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glm1</span><span class="o">&lt;-</span><span class="n">glm</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s1">&#39;Gangandi / skokkandi&#39;</span><span class="o">~</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;binomial&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glm1</span><span class="o">&lt;-</span><span class="n">glm</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s1">'Gangandi / skokkandi'</span><span class="o">~</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">'binomial'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fyrsta inntakið í skipunina er formúla. Á vinstri hönd hennar verður að
@@ -686,8 +686,8 @@ aðhvarfsgreiningarinnar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">glm1</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">## Call:</span>
-<span class="c1">## glm(formula = ferdamati_skoli == &quot;Gangandi / skokkandi&quot; ~ ferdatimi_skoli,</span>
-<span class="c1">##     family = &quot;binomial&quot;, data = konnun)</span>
+<span class="c1">## glm(formula = ferdamati_skoli == "Gangandi / skokkandi" ~ ferdatimi_skoli,</span>
+<span class="c1">##     family = "binomial", data = konnun)</span>
 <span class="c1">##</span>
 <span class="c1">## Coefficients:</span>
 <span class="c1">##                 Estimate Std. Error z value Pr(&gt;|z|)</span>
@@ -754,7 +754,7 @@ inniheldur ekki 1 í samræmi við það að við höfnuðum núlltilgátunni.</
 dæmis til að meta hvort nemendur sem eru femínistar séu líklegri til að
 vera kattamanneskjur heldur en þeir sem eru ekki femínistar. Líkanið metum við með
 neðangreindri skipun:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glm2</span><span class="o">&lt;-</span><span class="n">glm</span><span class="p">(</span><span class="n">feministi</span><span class="o">==</span><span class="s1">&#39;Rétt&#39;</span><span class="o">~</span><span class="n">dyr</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;binomial&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">glm2</span><span class="o">&lt;-</span><span class="n">glm</span><span class="p">(</span><span class="n">feministi</span><span class="o">==</span><span class="s1">'Rétt'</span><span class="o">~</span><span class="n">dyr</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">konnun</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">'binomial'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Skipunin lítur á nákvæmlega sama hátt út og í kafla
@@ -765,7 +765,7 @@ aðhvarfsgreiningarinnar:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">summary</span><span class="p">(</span><span class="n">glm2</span><span class="p">)</span>
 <span class="c1">##</span>
 <span class="c1">## Call:</span>
-<span class="c1">## glm(formula = feministi == &quot;Rétt&quot; ~ dyr, family = &quot;binomial&quot;,</span>
+<span class="c1">## glm(formula = feministi == "Rétt" ~ dyr, family = "binomial",</span>
 <span class="c1">##     data = konnun)</span>
 <span class="c1">##</span>
 <span class="c1">## Coefficients:</span>
@@ -849,8 +849,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

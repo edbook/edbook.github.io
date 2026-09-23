@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Frá tilraun til gagna &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>2. Frá tilraun til gagna &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -800,7 +800,7 @@ hafa sérstaka undirmöppu sem geymir einvörðungu gögnin.</p>
 Byrjið á því að
 vista þær í vinnumöppunni ykkar, þ.e.a.s. sömu möppu og þið geymið
 skipanaskrána ykkar. Þá má lesa þau inn í R með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;konnun.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"konnun.csv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fyrst tilgreinum við nafnið á skránni: <code class="docutils literal notranslate"><span class="pre">konnun.csv</span></code>. Þar á eftir
@@ -820,7 +820,7 @@ mælingar (t.d. 999, NA osfrv).</p></li>
 vista sem flokkabreytur.</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">puls</span></code> gögninn innihalda <code class="docutils literal notranslate"><span class="pre">tab</span></code> í stað kommu eða semíkommu og eru lesinn inn í R með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;nyrripuls.tsv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">puls</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">"nyrripuls.tsv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Það getur stundum verið auðveldara að nota:</p>
@@ -833,8 +833,8 @@ vista sem flokkabreytur.</p></li>
 <p><strong>Úttak:</strong> gagnatafla</p>
 <p><strong>Helstu stillingar:</strong> header, sep, dec, na.strings, stringsAsFactors, encoding</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;konnun.csv&quot;</span><span class="p">)</span>
-<span class="n">pokarotta</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;pokarotta.csv&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">konnun</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">"konnun.csv"</span><span class="p">)</span>
+<span class="n">pokarotta</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">"pokarotta.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Við notum <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> þegar  <code class="docutils literal notranslate"><span class="pre">sep=&quot;,&quot;</span></code> og notum <code class="docutils literal notranslate"><span class="pre">read.csv2()</span></code> þegar <code class="docutils literal notranslate"><span class="pre">sep=&quot;;&quot;</span></code>.</p>
@@ -846,10 +846,10 @@ sem ekki má er að láta nöfn byrja á tölustaf. Það væri því ekki í la
 að gefa töflunni heitið <code class="docutils literal notranslate"><span class="pre">1tilraun</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">kaupskra</span></code> gagnasettið er að finna á <a class="reference external" href="https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/">https://fasteignaskra.is/gogn/grunngogn-til-nidurhals/kaupskra-fasteigna/</a>. Hlaðið
 skránni niður og opnið með <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> eða notið</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kaupskra</span> <span class="o">&lt;-</span> <span class="n">read_csv2</span><span class="p">(</span><span class="s2">&quot;https://www.skra.is/library/Skrar/kaupskra/kaupskra.csv&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kaupskra</span> <span class="o">&lt;-</span> <span class="n">read_csv2</span><span class="p">(</span><span class="s2">"https://www.skra.is/library/Skrar/kaupskra/kaupskra.csv"</span><span class="p">,</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">locale</span> <span class="o">=</span> <span class="n">locale</span><span class="p">(</span><span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;ISO8859-1&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">locale</span> <span class="o">=</span> <span class="n">locale</span><span class="p">(</span><span class="n">encoding</span> <span class="o">=</span> <span class="s2">"ISO8859-1"</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Ef við sláum</p>
@@ -953,27 +953,27 @@ staðsett annars staðar flækist málið lítið eitt.</p>
 <img alt="Mynd" src="_images/tikz1.svg" />
 </figure>
 <p>Viljum við t.d. lesa Gagnaskrá_1 inn í R gefum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;Gagnaskrá_1&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'Gagnaskrá_1'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Til þess að lesa Gagnaskrá_3 þurfum við að bæta við nafninu á möppunni
 sem hún er í, þ.e.a.s. Gagnamappa_1:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;Gagnamappa_1/Gagnaskrá_3&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'Gagnamappa_1/Gagnaskrá_3'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Til þess að lesa inn Gagnaskrá_2 er hægt bakka upp í yfirmöppuna með því
 að vísa í hana með „..“ og svo fara í Gagnamöppu_2:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;../Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'../Gagnamappa_2/Gagnaskrá_2'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Skipunin að ofan vísar afstætt í Gagnaskrá_2. Einnig er hægt að víst
 algilt á skránna. Sé yfirmappann staðsett sem fyrsta mappa á
 stýrikerfisdisk má lesa skránna inn svona fyrir linux/MacOsX</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;/Yfirmappa/Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'/Yfirmappa/Gagnamappa_2/Gagnaskrá_2'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>og fyrir Windows (að því gefnu að stýrikerfis sé á c drifi):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;c:/Yfirmappa/Gagnamappa_2/Gagnaskrá_2&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dat</span> <span class="o">&lt;-</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s1">'c:/Yfirmappa/Gagnamappa_2/Gagnaskrá_2'</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1024,10 +1024,10 @@ gagnatöflu.</p>
 <hr class="docutils" />
 <p>Þannig gefur skipunin</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">names</span><span class="p">(</span><span class="n">konnun</span><span class="p">)</span>
-<span class="c1">##  [1] &quot;is&quot;              &quot;ferdatimi_skoli&quot;  &quot;styrikerfi_simi&quot; &quot;ferdamati_skoli&quot;</span>
-<span class="c1">##  [5] &quot;systkini_fjoldi&quot; &quot;dyr&quot;              &quot;feministi&quot;       &quot;staerdfraedi_gaman&quot;</span>
-<span class="c1">##  [9] &quot;smjor_kostar&quot;    &quot;napoleon_faeddur&quot; &quot;stefnumot&quot;       &quot;messi_staerd&quot;</span>
-<span class="c1">##  [13] &quot;kosid&quot;</span>
+<span class="c1">##  [1] "is"              "ferdatimi_skoli"  "styrikerfi_simi" "ferdamati_skoli"</span>
+<span class="c1">##  [5] "systkini_fjoldi" "dyr"              "feministi"       "staerdfraedi_gaman"</span>
+<span class="c1">##  [9] "smjor_kostar"    "napoleon_faeddur" "stefnumot"       "messi_staerd"</span>
+<span class="c1">##  [13] "kosid"</span>
 </pre></div>
 </div>
 <p>nöfnin á öllum þeim breytum sem tilheyra gagnatöflunni <code class="docutils literal notranslate"><span class="pre">dat</span></code>.
@@ -1084,20 +1084,20 @@ að nota skipunina <code class="docutils literal notranslate"><span class="pre">
 hvaða breytu og gefur einnig stutt yfirlit yfir það á hvaða bili
 mælingarnar liggja. Í okkar tilviki væri skipunin:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">konnun</span><span class="p">)</span>
-<span class="c1">## &#39;data.frame&#39;:     201 obs. of  13 variables:</span>
-<span class="c1">##  $ is                : chr [1:201] &quot;Jarðaberja&quot; &quot;Vanilla&quot; &quot;Súkkulaði&quot; &quot;Jarðaberja&quot; ...</span>
+<span class="c1">## 'data.frame':     201 obs. of  13 variables:</span>
+<span class="c1">##  $ is                : chr [1:201] "Jarðaberja" "Vanilla" "Súkkulaði" "Jarðaberja" ...</span>
 <span class="c1">## $ ferdatimi_skoli   : num [1:201] 15 20 8 12 15 42 20 7 15 25 ...</span>
-<span class="c1">## $ styrikerfi_simi   : chr [1:201] &quot;Android&quot; &quot;iOS&quot; &quot;iOS&quot; &quot;Android&quot; ...</span>
-<span class="c1">## $ ferdamati_skoli   : chr [1:201] &quot;Með einkabíl&quot; &quot;Með einkabíl&quot; &quot;Með einkabíl&quot; &quot;Gangandi / skokkandi&quot; ...</span>
+<span class="c1">## $ styrikerfi_simi   : chr [1:201] "Android" "iOS" "iOS" "Android" ...</span>
+<span class="c1">## $ ferdamati_skoli   : chr [1:201] "Með einkabíl" "Með einkabíl" "Með einkabíl" "Gangandi / skokkandi" ...</span>
 <span class="c1">## $ systkini_fjoldi   : num [1:201] 1 2 3 2 2 5 2 3 2 2 ...</span>
-<span class="c1">## $ dyr               : chr [1:201] &quot;Hunda&quot; &quot;Hunda&quot; &quot;Hunda&quot; &quot;Ketti&quot; ...</span>
-<span class="c1">## $ feministi         : chr [1:201] &quot;Rétt&quot; &quot;Rétt&quot; &quot;Rangt&quot; &quot;Rétt&quot; ...</span>
+<span class="c1">## $ dyr               : chr [1:201] "Hunda" "Hunda" "Hunda" "Ketti" ...</span>
+<span class="c1">## $ feministi         : chr [1:201] "Rétt" "Rétt" "Rangt" "Rétt" ...</span>
 <span class="c1">## $ staerdfraedi_gaman: int [1:201] 9 8 7 3 9 7 7 7 9 8 ...</span>
 <span class="c1">## $ smjor_kostar      : num [1:201] 750 700 800 700 1100 437 1490 279 1400 1200 ...</span>
 <span class="c1">## $ napoleon_faeddur  : num [1:201] 1750 1784 1778 1870 1779 ...</span>
-<span class="c1">## $ stefnumot         : chr [1:201] &quot;Á kaffihús&quot; &quot;Á ísrúnt&quot; &quot;Á ísrúnt&quot; &quot;Á ísrúnt&quot; ...</span>
+<span class="c1">## $ stefnumot         : chr [1:201] "Á kaffihús" "Á ísrúnt" "Á ísrúnt" "Á ísrúnt" ...</span>
 <span class="c1">## $ messi_staerd      : num [1:201] 170 168 170 160 169 174 169 179 170 170 ...</span>
-<span class="c1">## $ kosid             : chr [1:201] &quot;Rétt&quot; &quot;Rangt&quot; &quot;Rangt&quot; &quot;Rétt&quot; ...</span>
+<span class="c1">## $ kosid             : chr [1:201] "Rétt" "Rangt" "Rangt" "Rétt" ...</span>
 </pre></div>
 </div>
 <p>Við mælum eindregið með að nota ávalt <code class="docutils literal notranslate"><span class="pre">str()</span></code> skipunina til að kanna
@@ -1348,7 +1348,7 @@ gagnatöflu sem inniheldur aðeins þá sem eiga engin systkini með:</p>
 </div>
 <p>Ef við viljum skoða gögn þeirra sem finnst jarðaberjaís bestur og kunna
 betur við hunda heldur en ketti (takið eftir að hér er ekki búin til ný gagnatafla):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">filter</span><span class="p">(</span><span class="n">konnun</span><span class="p">,</span> <span class="ow">is</span><span class="o">==</span><span class="s2">&quot;Jarðaberja&quot;</span><span class="p">,</span> <span class="n">dyr</span><span class="o">==</span><span class="s2">&quot;Hunda&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">filter</span><span class="p">(</span><span class="n">konnun</span><span class="p">,</span> <span class="ow">is</span><span class="o">==</span><span class="s2">"Jarðaberja"</span><span class="p">,</span> <span class="n">dyr</span><span class="o">==</span><span class="s2">"Hunda"</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">##    is          ferdatimi_skoli   styrikerfi_simi   ferdamati_skoli</span>
@@ -1443,7 +1443,7 @@ skilyrðunum er uppfyllt.</p>
 við viljum sem dæmi búa til flokkabreytur út frá textastrengjum.
 Eftirfarandi skipun finnur til dæmis vísi allra þeirra ferdamati_skoli sem
 innihalda textastrenginn <code class="docutils literal notranslate"><span class="pre">skokkandi</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep(&quot;skokkandi&quot;, konnun$ferdamati_skoli)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep("skokkandi", konnun$ferdamati_skoli)
 ## [1]  4   8   12  13  24  25  57  59  67
 ## [10] 77  93  96  97  100 117 119 122 130
 ## [19] 131 132 133 136 139 142 147 148 158
@@ -1453,10 +1453,10 @@ innihalda textastrenginn <code class="docutils literal notranslate"><span class=
 </div>
 <p>Ef við gefum stillinguna <code class="docutils literal notranslate"><span class="pre">value=TRUE</span></code> fáum við mælingarnar sem pössuðu
 við leitarskilyrðið en ekki bara vísa þeirra:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep(&quot;skokkandi&quot;, konnun$ferdamati_skoli, value=TRUE)
-##   [1] &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot;
-##   [4] &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot;
-##   [7] &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot; &quot;Gangandi / skokkandi&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep("skokkandi", konnun$ferdamati_skoli, value=TRUE)
+##   [1] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
+##   [4] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
+##   [7] "Gangandi / skokkandi" "Gangandi / skokkandi" "Gangandi / skokkandi"
 ....
 </pre></div>
 </div>
@@ -1535,13 +1535,13 @@ af þeim breytum séu rétt teiknuð og margt fleira.</p>
 í flokkabreytu. Viljum við endurskýra nöfnin á flokkunum í breytunni
 <code class="docutils literal notranslate"><span class="pre">onothaefur_samningur</span></code> er ágætt að byrja á að keyra skipunina</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(kaupskra$onothaefur_samningur)
-## [1] &quot;0&quot; &quot;1&quot;
+## [1] "0" "1"
 </pre></div>
 </div>
 <p>því hún skilar okkur núverandi nöfnum. Viljum við breyta nöfnunum á
 flokkunum í <code class="docutils literal notranslate"><span class="pre">Nothæfur</span> <span class="pre">samningur</span></code> og <code class="docutils literal notranslate"><span class="pre">Ónothæfur</span> <span class="pre">samningur</span></code> gerum
 við það með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(kaupskra$onothaefur_samningur)&lt;-c(&quot;Nothæfur samningur&quot;,&quot;Ónothæfur samningur&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(kaupskra$onothaefur_samningur)&lt;-c("Nothæfur samningur","Ónothæfur samningur")
 </pre></div>
 </div>
 <p>Hér þarf að passa að röðunin sé rétt miðað við gömlu heitin, annars
@@ -1589,7 +1589,7 @@ notum við gildið 15 (fallegra væri að nota
 </pre></div>
 </div>
 <p>Við getum svo notað <code class="docutils literal notranslate"><span class="pre">levels()</span></code> skipunina til að endurskýra flokkana:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(konnun$systkini_fjoldi_stig)&lt;-c(&quot;Engin&quot;,&quot;Nokkur&quot;,&quot;Mörg&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(konnun$systkini_fjoldi_stig)&lt;-c("Engin","Nokkur","Mörg")
 table(konnun$systkini_fjoldi_stig)
 ##
 ##    Engin    Nokkur   Mörg
@@ -1613,21 +1613,21 @@ og <code class="docutils literal notranslate"><span class="pre">ekki_med_okutaek
 Búum fyrst til afrit af breytunni og sjáum í hvaða röð flokkarnir eru taldir upp:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>konnun$ferdamati_skoli_okutaeki &lt;- konnun$ferdatimi_skoli
 levels(konnun$ferdamati_skoli_okutaeki)
-## [1] &quot;Á annan hátt&quot;  &quot;Á hjóli/ rafhlaupahjóli&quot;  &quot;Gangandi/ skokkandi&quot;
-## [4] &quot;Með einkabíl&quot;  &quot;Með strætó&quot;
+## [1] "Á annan hátt"  "Á hjóli/ rafhlaupahjóli"  "Gangandi/ skokkandi"
+## [4] "Með einkabíl"  "Með strætó"
 </pre></div>
 </div>
 <p>Flokkarnir sem við ætlum að sameina eru fyrstu þrír flokkarnir sem eru
 taldir upp. Því skrifum við <code class="docutils literal notranslate"><span class="pre">ekki_med_okutaeki</span></code> í fyrstu þrjú sætin en
 <code class="docutils literal notranslate"><span class="pre">með_okutakei</span></code> í síðustu tv- sætin.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>levels(konnun$ferdamati_skoli_okutaeki) &lt;-
-c(&#39;ekki_med_okutaeki&#39;,&#39;ekki_med_okutaeki&#39;,&#39;ekki_med_okutaeki&#39;, &#39;med_okutaeki&#39;, &#39;med_okutaeki&#39;)
+c('ekki_med_okutaeki','ekki_med_okutaeki','ekki_med_okutaeki', 'med_okutaeki', 'med_okutaeki')
 </pre></div>
 </div>
 <p>Nýja sameinaða breytan hefur eingöngu tvo flokka:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>str(konnun$ferdamati_skoli_okutaeki)
-##  Factor w/ 2 levels &quot;ekki_med_okutaeki&quot;,&quot;med_okutaeki
-&quot;: 2 2 2 1 2 2 1 2 2 1 ...
+##  Factor w/ 2 levels "ekki_med_okutaeki","med_okutaeki
+": 2 2 2 1 2 2 1 2 2 1 ...
 </pre></div>
 </div>
 <p>Einnig má gera þetta með að nota <code class="docutils literal notranslate"><span class="pre">fct_recode()</span></code> skipunina úr forcats pakkanum.
@@ -1642,9 +1642,9 @@ Hana má nota svona:</p>
 </div>
 <p>Búum svo til nýju flokkana</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>konnun$ferdamati_skoli_okutaeki&lt;- fct_recode(konnun$ferdamati_skoli_okutaeki,
-&quot;ekki_med_okutaeki&quot; = &quot;Á hjóli / rafhlaupahjóli&quot;,&quot;ekki_med_okutaeki&quot;
-= &quot;Gangandi / skokkandi&quot;, &quot;ekki_med_okutaeki&quot; = &quot;Á annan hátt&quot;,
-&quot;med_okutaeki&quot; = &quot;Með einkabíl&quot;, &quot;med_okutaeki&quot; = &quot;Með strætó&quot;)
+"ekki_med_okutaeki" = "Á hjóli / rafhlaupahjóli","ekki_med_okutaeki"
+= "Gangandi / skokkandi", "ekki_med_okutaeki" = "Á annan hátt",
+"med_okutaeki" = "Með einkabíl", "med_okutaeki" = "Með strætó")
 </pre></div>
 </div>
 </section>
@@ -1667,7 +1667,7 @@ tilgreinum við hvernig dagsetningarnar eru skráðar. Kemur ártalið fyrst,
 svo mánuðurinn og svo dagurinn eða jafnvel öfugt? Eru dagar og mánuðir
 aðgreindir með punkti eða bandstriki? Allt það má tilgreina með
 auðveldum hætti og má sjá öll möguleg snið með því að skoða:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;lubridate&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">"lubridate"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Segjum að við séum að vinna með gagnasettið <code class="docutils literal notranslate"><span class="pre">afmaeli</span></code>  sem samanstendur af nöfnum og afmælisdögum.
@@ -1678,14 +1678,14 @@ við innlestur (þar sem hún inniheldur ekki bara tölur, heldur líka
 punkta). Því þarf að mata <code class="docutils literal notranslate"><span class="pre">as.Date()</span></code> með
 <code class="docutils literal notranslate"><span class="pre">as.character(afmaeli$dagsetning)</span></code>, skipun sem breytir flokkabreytu í
 orðabreytu.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>afmaeli$dagsetning &lt;- as.Date(as.character(afmaeli$dagsetning), format=&#39;%d.%m.%Y&#39; )
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>afmaeli$dagsetning &lt;- as.Date(as.character(afmaeli$dagsetning), format='%d.%m.%Y' )
 </pre></div>
 </div>
 <p>Nú eru dagsetningarnar komnar á rétt form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">afmaeli</span><span class="p">)</span>
-<span class="c1">## &#39;data.frame&#39;:    37 obs. of  2 variables:</span>
-<span class="c1">##  $ nafn    : Factor  &quot;Margrét&quot;,&quot;Dagur&quot; ...</span>
-<span class="c1">##  $ dagsetning  : Date, format: &quot;2003-01-11&quot; &quot;2005-10-05&quot; ...</span>
+<span class="c1">## 'data.frame':    37 obs. of  2 variables:</span>
+<span class="c1">##  $ nafn    : Factor  "Margrét","Dagur" ...</span>
+<span class="c1">##  $ dagsetning  : Date, format: "2003-01-11" "2005-10-05" ...</span>
 </pre></div>
 </div>
 </section>
@@ -1699,14 +1699,14 @@ sáum í kassa <a class="reference internal" href="#rf-grep"><span class="std st
 til nýja breytu, <code class="docutils literal notranslate"><span class="pre">ibud</span></code> sem geymir hvort hús sé íbúðarhúsnæði
 þá má útbúa hana með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kaupskra$ibud &lt;- NA
-kaupskra$ibud[grep(&quot;Fjolbyli|Serbyli&quot;, kaupskra$tegund)] &lt;- &quot;Íbúðarhúsnæði&quot;
-kaupskra$ibud[grep(&quot;Atvinnuhusnaedi|Annað|Bilskur/skur|Sumarhus&quot;, kaupskra$tegund)] &lt;- &quot;Ekki íbúðarhúsnæði&quot;
+kaupskra$ibud[grep("Fjolbyli|Serbyli", kaupskra$tegund)] &lt;- "Íbúðarhúsnæði"
+kaupskra$ibud[grep("Atvinnuhusnaedi|Annað|Bilskur/skur|Sumarhus", kaupskra$tegund)] &lt;- "Ekki íbúðarhúsnæði"
 </pre></div>
 </div>
 <p>Nú er orðin til ný breyta sem inniheldur hvort hús sé íbúðarhúsnæði. Breytan er sjálfkrafa orðabreyta
 fyrst við gáfum henni orðagildi.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>str(kaupskra$ibud)
-##  chr [1:169636] &quot;Ekki íbúðarhúsnæði&quot; &quot;Ekki íbúðarhúsnæði&quot; ...
+##  chr [1:169636] "Ekki íbúðarhúsnæði" "Ekki íbúðarhúsnæði" ...
 </pre></div>
 </div>
 <p>Getum líka notað <code class="docutils literal notranslate"><span class="pre">str_detect()</span></code> skipunina úr stringr pakkanum til að búa til breytur.
@@ -1715,13 +1715,13 @@ fyrst við gáfum henni orðagildi.</p>
 Nú er orðin til ný breyta sem inniheldur hvort hús sé íbúðarhúsnæði. Breytan er sjálfkrafa orðabreyta
 fyrst við gáfum henni orðagildi.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>str(kaupskra$ibud)
-##  chr [1:169636] &quot;Ekki íbúðarhúsnæði&quot; &quot;Ekki íbúðarhúsnæði&quot; ...
+##  chr [1:169636] "Ekki íbúðarhúsnæði" "Ekki íbúðarhúsnæði" ...
 </pre></div>
 </div>
 <p>Getum líka notað <code class="docutils literal notranslate"><span class="pre">str_detect()</span></code> skipunina úr stringr pakkanum til að búa til breytur.
 Þá er hægt t.d. að búa til nýja breytu <code class="docutils literal notranslate"><span class="pre">Laugarvegur</span></code> sem geymir TRUE ef eignin er
 á Laugarveginum.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kaupskra$Laugarvegur&lt;-str_detect(kaupskra$heimilisfang, &quot;Laugarvegur&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kaupskra$Laugarvegur&lt;-str_detect(kaupskra$heimilisfang, "Laugarvegur")
 </pre></div>
 </div>
 <p>Skoðum hvaða eignir eru á Laugarveginum</p>
@@ -1729,7 +1729,7 @@ fyrst við gáfum henni orðagildi.</p>
 ## [1]  75723  75724  75725  75726  75727  75728  75729  75730
 ## [9]  75731  75732  75733  75734  75735  75736  75737  75903
 ## [17] 75904  75905  75906  75907  75908  75909  75910  75911
-kaupskra$Laugarvegur&lt;-str_detect(kaupskra$heimilisfang, &quot;Laugarvegur&quot;)
+kaupskra$Laugarvegur&lt;-str_detect(kaupskra$heimilisfang, "Laugarvegur")
 </pre></div>
 </div>
 <p>Skoðum hvaða eignir eru á Laugarveginum</p>
@@ -1941,7 +1941,7 @@ breytum, <code class="docutils literal notranslate"><span class="pre">fyrriPuls<
 eina breytu, <code class="docutils literal notranslate"><span class="pre">pulsmaeling</span></code>, sem geymir púlsmælinguna og aðra breytu,
 <code class="docutils literal notranslate"><span class="pre">nr.maelingar</span></code> sem tilgreinir hvort mælingin eigi við fyrri eða seinni
 púlsmælinguna. Þetta er framkvæmt með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pulslangt</span> <span class="o">&lt;-</span> <span class="n">puls</span> <span class="o">%&gt;%</span> <span class="n">pivot_longer</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="p">,</span><span class="n">seinniPuls</span><span class="p">),</span> <span class="n">names_to</span><span class="o">=</span><span class="s2">&quot;nr.maelingar&quot;</span><span class="p">,</span> <span class="n">values_to</span><span class="o">=</span><span class="s2">&quot;pulsmaeling&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pulslangt</span> <span class="o">&lt;-</span> <span class="n">puls</span> <span class="o">%&gt;%</span> <span class="n">pivot_longer</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">fyrriPuls</span><span class="p">,</span><span class="n">seinniPuls</span><span class="p">),</span> <span class="n">names_to</span><span class="o">=</span><span class="s2">"nr.maelingar"</span><span class="p">,</span> <span class="n">values_to</span><span class="o">=</span><span class="s2">"pulsmaeling"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fyrst tökum við fram hvaða gagnatöflu við erum að vinna með og pípum henni í skipunina,
@@ -2105,8 +2105,8 @@ til að sameina vigrana. Þannig getum við búið til nýja breytur sem
 tilgreinir í hvaða sveitarfélag og hvaða póstnúmer ein er í.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>kaupskra$sveitarf_post &lt;- paste(kaupskra$sveitarfelag, kaupskra$postnr)
 str(kaupskra$sveitarf_post)
-##  chr [1:169636] &quot;Kópavogsbær 200&quot; &quot;Hafnarfjarðarkaupstaður 220&quot;
-##  &quot;Reykjavíkurborg 104&quot; ...
+##  chr [1:169636] "Kópavogsbær 200" "Hafnarfjarðarkaupstaður 220"
+##  "Reykjavíkurborg 104" ...
 </pre></div>
 </div>
 </section>
@@ -2122,8 +2122,8 @@ str(kaupskra$sveitarf_post)
 sérstökum skiptitáknum og skipta þeim út fyrir gildin úr öðru inntaki
 fallsins. Vilji maður t.d. búa til streng sem gefur manni dagsetningu þá
 er það hægt með:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sprintf</span><span class="p">(</span><span class="s1">&#39;Dagurinn í dag er </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">Sys</span><span class="o">.</span><span class="n">Date</span><span class="p">())</span>
-<span class="c1">## [1] &quot;Dagurinn í dag er 2024-16-05&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sprintf</span><span class="p">(</span><span class="s1">'Dagurinn í dag er </span><span class="si">%s</span><span class="s1">'</span><span class="p">,</span> <span class="n">Sys</span><span class="o">.</span><span class="n">Date</span><span class="p">())</span>
+<span class="c1">## [1] "Dagurinn í dag er 2024-16-05"</span>
 </pre></div>
 </div>
 <p>þar sem <span class="math notranslate nohighlight">\(\%\)</span>s er skiptitáknið.</p>
@@ -2141,7 +2141,7 @@ er það hægt með:</p>
 hún slítur í sundur breytur eftir einhverju tákni og býr til tvær eða
 fleiri nýjar. Þannig getum við skipt dagsetningunni upp í þrjár breytur:
 dag, mánuð og ár með skipuninni:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kaupskra_nytt</span> <span class="o">&lt;-</span> <span class="n">separate</span><span class="p">(</span><span class="n">kaupskra</span><span class="p">,</span> <span class="n">utgdag</span><span class="p">,</span> <span class="n">into</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s1">&#39;ar&#39;</span><span class="p">,</span><span class="s1">&#39;manudur&#39;</span><span class="p">,</span><span class="s1">&#39;dagur&#39;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kaupskra_nytt</span> <span class="o">&lt;-</span> <span class="n">separate</span><span class="p">(</span><span class="n">kaupskra</span><span class="p">,</span> <span class="n">utgdag</span><span class="p">,</span> <span class="n">into</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s1">'ar'</span><span class="p">,</span><span class="s1">'manudur'</span><span class="p">,</span><span class="s1">'dagur'</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">'-'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Hér má sjá nýju gagnatöfluna, með þremur nýjum breytum:</p>
@@ -2169,9 +2169,9 @@ dag, mánuð og ár með skipuninni:</p>
 þriðja til sjöunda bókstafinn, eða álíka. Ef við viljum sem dæmi bara fá
 fyrstu þrjá stafina í nöfnunum á námskeiðunum, þá gerum við það með:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>substr(kaupskra$tegund, 1,3)
-##   [1] &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Fjo&quot;
-##   [11] &quot;Atv&quot; &quot;Atv&quot; &quot;Fjo&quot; &quot;Fjo&quot; &quot;Fjo&quot; &quot;Fjo&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Fjo&quot; &quot;Fjo&quot;
-##   [21] &quot;Fjo&quot; &quot;Fjo&quot; &quot;Atv&quot; &quot;Fjo&quot; &quot;Fjo&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot; &quot;Atv&quot;
+##   [1] "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Atv" "Fjo"
+##   [11] "Atv" "Atv" "Fjo" "Fjo" "Fjo" "Fjo" "Atv" "Atv" "Fjo" "Fjo"
+##   [21] "Fjo" "Fjo" "Atv" "Fjo" "Fjo" "Atv" "Atv" "Atv" "Atv" "Atv"
 ....
 </pre></div>
 </div>
@@ -2240,8 +2240,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

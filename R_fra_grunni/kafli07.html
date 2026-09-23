@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Ályktanir um flokkabreytur &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>7. Ályktanir um flokkabreytur &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -771,7 +771,7 @@ felst að flokkabreytan með fleiri en tvo flokka sé tilgreind á undan
 </div>
 <p>Sé þessu snúið öfugt fæst villa og ekki er hægt að meta tilgátuprófið:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>prop.test(table(konnun$dyr, konnun$is))
-## Error in prop.test(table(konnun$dyr, konnun$is)) : &#39;x&#39; must have 2 columns
+## Error in prop.test(table(konnun$dyr, konnun$is)) : 'x' must have 2 columns
 </pre></div>
 </div>
 </section>
@@ -799,7 +799,7 @@ ekki öryggisbil eins og <code class="docutils literal notranslate"><span class=
 Við byrjum á að búa til töflu mældrar tíðni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(konnun$is,konnun$kosid))
 ##
-##  Pearson&#39;s Chi-squared test
+##  Pearson's Chi-squared test
 ##
 ## data:  table(konnun$is, konnun$kosid)
 ## X-squared = 0.41817, df = 2, p-value = 0.8113
@@ -825,7 +825,7 @@ við. Sjáum til dæmis hvað gerist ef við viljum skoða samband þess að ver
 hvert nemendur vilja helst fara á stefnumót:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(konnun$dyr,konnun$stefnumot))
 ##
-##  Pearson&#39;s Chi-squared test
+##  Pearson's Chi-squared test
 ##
 ## data:  table(dkonnunat$dyr, konnun$stefnumot)
 ## X-squared = 6.8392, df = 3, p-value = 0.0772
@@ -839,7 +839,7 @@ hvert nemendur vilja helst fara á stefnumót:</p>
 er tilgreint með stillingunni <code class="docutils literal notranslate"><span class="pre">simulate.p.value</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>chisq.test(table(konnun$dyr,konnun$stefnumot), simulate.p.value=T)
 ##
-##  Pearson&#39;s Chi-squared test with simulated p-value (based on 2000
+##  Pearson's Chi-squared test with simulated p-value (based on 2000
 ##  replicates)
 ##
 ## data:  table(konnun$dyr, konnun$stefnumot)
@@ -850,7 +850,7 @@ er tilgreint með stillingunni <code class="docutils literal notranslate"><span 
 með skipuninni <code class="docutils literal notranslate"><span class="pre">fisher.test()</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fisher.test(table(konnun$dyr, konnun$stefnumot))
 ##
-##  Fisher&#39;s Exact Test for Count Data
+##  Fisher's Exact Test for Count Data
 ##
 ## data:  table(konnun$dyr, konnun$stefnumot)
 ## p-value = 0.07907
@@ -894,8 +894,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

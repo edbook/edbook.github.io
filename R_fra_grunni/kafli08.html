@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. Ályktanir um talnabreytur &mdash; R frá grunni 26.03.02.0+8ce624d</title>
+  <title>8. Ályktanir um talnabreytur &mdash; R frá grunni 26.09.23.0+5cef042</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=b4602b6e"></script>
+      <script src="_static/documentation_options.js?v=601867d7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -711,11 +711,11 @@ stillingunni <code class="docutils literal notranslate"><span class="pre">altern
 </table>
 <p>Viljum við kanna hvort dreifni í ferðatíma sé mismunandi á milli þeirra sem koma gangandi í skólann
 og þeirra sem gera það ekki (takið eftir að gögnin eru á löngu sniði):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&quot;Gangandi / skokkandi&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>var.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=="Gangandi / skokkandi")
 ##
 ##  F test to compare two variances
 ##
-## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
 ## F = 5.4739, num df = 166, denom df = 33, p-value = 2.875e-07
 ## alternative hypothesis: true ratio of variances is not equal to 1
 ## 95 percent confidence interval:
@@ -766,7 +766,7 @@ einhverra tveggja ferðamáta gerum við það með:</p>
 ##  Bartlett test of homogeneity of variances
 ##
 ## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli
-## Bartlett&#39;s K-squared = 31.33, df = 4, p-value = 2.622e-06
+## Bartlett's K-squared = 31.33, df = 4, p-value = 2.622e-06
 </pre></div>
 </div>
 <p>Við sjáum að gildið á prófstærðinni er <span class="math notranslate nohighlight">\(31.33\)</span> og p-gildið er
@@ -868,9 +868,9 @@ tvíhliða gagntilgátu.</p></li>
 </ul>
 <p>Segjum sem svo að við viljum bera saman fyrri púls nemenda eftir kynjum.
 Þar sem ferðatímagögnin eru á löngu sniði gefum við skipunina:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>t.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=='Gangandi / skokkandi')
 ##
-## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
 ## t = 9.5068, df = 118.32, p-value = 2.889e-16
 ## alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
 ## 95 percent confidence interval:
@@ -893,9 +893,9 @@ interval: <span class="math notranslate nohighlight">\([11.28187,17.21830]\)</sp
 bera á saman. Í þessu tilviki komum við ferðatímagögnunum á vítt snið með
 aðstoð skipunarinnar <code class="docutils literal notranslate"><span class="pre">pivot_wider</span></code>, sem kynnt var í kassa
 <a class="reference internal" href="kafli02.html#rf-spread"><span class="std std-numref">2.7.1.5</span></a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ferdirvitt</span> <span class="o">&lt;-</span> <span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">mutate</span><span class="p">(</span><span class="n">fotgangandi</span><span class="o">=</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">&quot;Gangandi / skokkandi&quot;</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ferdirvitt</span> <span class="o">&lt;-</span> <span class="n">konnun</span> <span class="o">%&gt;%</span> <span class="n">mutate</span><span class="p">(</span><span class="n">fotgangandi</span><span class="o">=</span><span class="p">(</span><span class="n">ferdamati_skoli</span><span class="o">==</span><span class="s2">"Gangandi / skokkandi"</span><span class="p">))</span>
                   <span class="o">%&gt;%</span> <span class="n">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="o">=</span><span class="n">fotgangandi</span><span class="p">,</span>
-                  <span class="n">values_from</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="n">names_prefix</span><span class="o">=</span><span class="s2">&quot;Gangandi_&quot;</span><span class="p">)</span>
+                  <span class="n">values_from</span><span class="o">=</span><span class="n">ferdatimi_skoli</span><span class="p">,</span> <span class="n">names_prefix</span><span class="o">=</span><span class="s2">"Gangandi_"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Athugið að ef við hefðum ekki notað stillinguna <code class="docutils literal notranslate"><span class="pre">names_prefix</span></code> hefðum við fengið dálkanöfnin
@@ -955,8 +955,8 @@ Sjálfgefið er að hafa öryggið <span class="math notranslate nohighlight">\(
 kanna mun á fyrri og seinni. Byrjum á því að búa til tvær minni
 gagnatöflur, eina fyrir þá nemendur sem hlupu og aðra fyrir þá sem hlupu
 ekki.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pulshljop</span> <span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span> <span class="n">inngrip</span><span class="o">==</span><span class="s1">&#39;hljop&#39;</span><span class="p">)</span>
-<span class="n">pulskyrr</span><span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span> <span class="n">inngrip</span><span class="o">==</span><span class="s1">&#39;sat_kyrr&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pulshljop</span> <span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span> <span class="n">inngrip</span><span class="o">==</span><span class="s1">'hljop'</span><span class="p">)</span>
+<span class="n">pulskyrr</span><span class="o">&lt;-</span> <span class="nb">filter</span><span class="p">(</span><span class="n">puls</span><span class="p">,</span> <span class="n">inngrip</span><span class="o">==</span><span class="s1">'sat_kyrr'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Könnum tilgátuna að púlsinn sé frábrugðinn fyrir og eftir krónukastið
@@ -1059,11 +1059,11 @@ munurinn á dreifingu breytanna tveggja sé hliðrun um fasta tölu og því á
 ## alternative hypothesis: true location is not equal to 20
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wilcox.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli==&#39;Gangandi / skokkandi&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wilcox.test(konnun$ferdatimi_skoli~konnun$ferdamati_skoli=='Gangandi / skokkandi')
 ##
 ##  Wilcoxon rank sum test with continuity correction
 ##
-## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == &quot;Gangandi / skokkandi&quot;
+## data:  konnun$ferdatimi_skoli by konnun$ferdamati_skoli == "Gangandi / skokkandi"
 ## W = 4847.5, p-value = 6.877e-11
 ## alternative hypothesis: true location shift is not equal to 0
 </pre></div>
@@ -1112,8 +1112,8 @@ head(puls)</code></div></section>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, R frá grunni | Version 26.03.02.0+8ce624d.
-      <span class="lastupdated">Síðast uppfært 2026-03-02 11:46.
+    <p>&#169; Copyright 2026, R frá grunni | Version 26.09.23.0+5cef042.
+      <span class="lastupdated">Síðast uppfært 2026-09-23 13:22.
       </span></p>
   </div>
 

@@ -312,8 +312,8 @@ með dæmi um ólögleg breytunöfn)?</p></li>
 &lt; &gt; &lt;= &gt;= == !=  # samanburðarvirkar (eins og í Java eða C)
 and or not       # rökvirkjar
 &lt;&lt; &gt;&gt; &amp; ~ ^      # bitavirkjar, eins og í C, ~ er fyllitala og ^ er xor
-str + str        # samskeyting strengja (&quot;ab&quot; + &quot;12&quot; gefur &quot;ab12&quot;)
-str*n            # fjölföldun strengs (&quot;ab&quot;*3 er &quot;ababab&quot;)
+str + str        # samskeyting strengja ("ab" + "12" gefur "ab12")
+str*n            # fjölföldun strengs ("ab"*3 er "ababab")
 (...)            # svigar stýra röð útreiknings
 </pre></div>
 </div>
@@ -401,7 +401,7 @@ skipanir yfir í vinnubók. Notið tækifærið og prófið vinnubókarskipanir
 til að velja allt í reit og flytja það til vinstri (shift/tab,
 <em>unindent</em>), sbr. <a class="reference internal" href="kafli03.html#vinnubokarritilskipanir"><span class="std std-numref">Tafla 3.4:</span></a>. Keyrið, sláið inn
 tölu, og prófið líka að slá inn eitthvað annað en tölu.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sláðu inn tölu: &#39;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Sláðu inn tölu: '</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
@@ -411,7 +411,7 @@ tölu, og prófið líka að slá inn eitthvað annað en tölu.</p>
 að nota <code class="code docutils literal notranslate"><span class="pre">end=&quot;;&quot;</span></code> og <code class="code docutils literal notranslate"><span class="pre">sep=&quot;,&quot;</span></code> og prófið líka að breyta
 <code class="code docutils literal notranslate"><span class="pre">print</span></code> í <code class="code docutils literal notranslate"><span class="pre">display</span></code>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;AB&quot;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">"AB"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">s</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -426,7 +426,7 @@ að nota <code class="code docutils literal notranslate"><span class="pre">end=&
 saman strengi (textabúta), breytur og gildi (segðir). Breytur og gildi eru sett
 innan slaufusviga og þeim getur líka fylgt snið á eftir tvípunkti, sem sé:</p>
 <blockquote>
-<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;texti </span><span class="si">{</span><span class="n">segð</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> ...&#39;</span>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">'texti </span><span class="si">{</span><span class="n">segð</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> texti </span><span class="si">{</span><span class="n">segð</span><span class="si">:</span><span class="s1">snið</span><span class="si">}</span><span class="s1"> ...'</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -484,9 +484,9 @@ láta dálka í töflu standast á: forritið í sýnidæminu í grein <a class=
 notar f-strengi til að sníða (<em>„formatera“</em>) litla töflu. Hér eru þrjú dæmi í
 viðbót:</p>
 <blockquote>
-<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">&#39;hæð = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">, breidd = </span><span class="si">{</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span>
-<span class="sa">f</span><span class="s2">&quot;A = </span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, B = </span><span class="si">{</span><span class="n">B</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="sa">f</span><span class="s1">&#39;Halló </span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s1"> og vertu velkomin(n)&#39;</span>
+<div><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s1">'hæð = </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">, breidd = </span><span class="si">{</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="si">}</span><span class="s1">'</span>
+<span class="sa">f</span><span class="s2">"A = </span><span class="si">{</span><span class="n">A</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, B = </span><span class="si">{</span><span class="n">B</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
+<span class="sa">f</span><span class="s1">'Halló </span><span class="si">{</span><span class="n">nafn</span><span class="si">}</span><span class="s1"> og vertu velkomin(n)'</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -589,7 +589,7 @@ skjölun um allt safnið sjálfkrafa.</p>
 <div class="math notranslate nohighlight">
 \[R = \frac{\pi r^2 h}{3}\]</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rúmmál_keilu</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;skilar rúmmáli keilu með hæð h og radíus grunnflatar r&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''skilar rúmmáli keilu með hæð h og radíus grunnflatar r'''</span>
     <span class="n">pí</span> <span class="o">=</span> <span class="mf">3.14159265</span>
     <span class="n">R</span> <span class="o">=</span> <span class="n">pí</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">/</span><span class="mi">3</span>
     <span class="k">return</span> <span class="n">R</span>
@@ -600,7 +600,7 @@ skjölun um allt safnið sjálfkrafa.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Forrit sem reiknar rúmmál tveggja keila</span>
 <span class="n">R1</span> <span class="o">=</span> <span class="n">rúmmál_keilu</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">R2</span> <span class="o">=</span> <span class="n">rúmmál_keilu</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rúmmál keilanna eru </span><span class="si">{</span><span class="n">R1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og </span><span class="si">{</span><span class="n">R2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Rúmmál keilanna eru </span><span class="si">{</span><span class="n">R1</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og </span><span class="si">{</span><span class="n">R2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fallið prentar út <code class="code docutils literal notranslate"><span class="pre">Rúmmál</span> <span class="pre">keilanna</span> <span class="pre">eru</span> <span class="pre">37.699</span> <span class="pre">og</span> <span class="pre">2.094</span></code></p>
@@ -639,7 +639,7 @@ tilheyrandi kalli fyrir hring með radíus 1. Þetta forrit prentar út
     <span class="k">return</span> <span class="n">F</span><span class="p">,</span><span class="n">U</span>
 
 <span class="p">(</span><span class="n">F</span><span class="p">,</span><span class="n">U</span><span class="p">)</span> <span class="o">=</span> <span class="n">flat_og_um</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og ummálið </span><span class="si">{</span><span class="n">U</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> og ummálið </span><span class="si">{</span><span class="n">U</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -648,8 +648,8 @@ tilheyrandi kalli fyrir hring með radíus 1. Þetta forrit prentar út
 <p>Þetta fall prentar línu með stjörnum. Ef kallað er með
 <code class="code docutils literal notranslate"><span class="pre">prenta_stjörnur(10)</span></code> prentar það <code class="code docutils literal notranslate"><span class="pre">**********</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">prenta_stjörnur</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;prentar línu með n stjörnum&#39;&#39;&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="s2">&quot;*&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">'''prentar línu með n stjörnum'''</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="s2">"*"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fallið notar virkjann <code class="code docutils literal notranslate"><span class="pre">*</span></code> til að fjölfalda streng; sjá kafla
@@ -759,7 +759,7 @@ Hér er Python-forrit sem reiknar flatarmál þríhyrnings með hliðarlengdir
 <span class="n">c</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
 <span class="n">F</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">c</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Flatarmálið er </span><span class="si">{</span><span class="n">F</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -788,13 +788,13 @@ með <code class="code docutils literal notranslate"><span class="pre">math.pi</
 <div><div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Bulla tvisvar</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gera_tvisvar</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;framkvæmir f tvisvar&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''framkvæmir f tvisvar'''</span>
     <span class="n">f</span><span class="p">()</span>
     <span class="n">f</span><span class="p">()</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">bulla</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;skrifar &quot;bull&quot;&#39;&#39;&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bull&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">'''skrifar "bull"'''</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"bull"</span><span class="p">)</span>
 
 <span class="n">b</span> <span class="o">=</span> <span class="n">bulla</span>         <span class="c1"># b er fallbreyta</span>
 <span class="n">gera_tvisvar</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>   <span class="c1"># prentar bull tvisvar</span>
@@ -822,7 +822,7 @@ skipti fyrir öll Í Python, eins og hér er sýnt:</p>
 <p>Í þessu dæmi er heildið <span class="math notranslate nohighlight">\((*)\)</span> nálgað með ósamsettri trapisureglu og einnig heildið
 <span class="math notranslate nohighlight">\(\int_0^1 h(x)dx\)</span> þar sem <span class="math notranslate nohighlight">\(h(x)=e^x\)</span>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">trap1</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;heildi f frá a til b með ósamsettri trapisureglu&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''heildi f frá a til b með ósamsettri trapisureglu'''</span>
     <span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span>
     <span class="k">return</span> <span class="n">I</span>
 
@@ -832,8 +832,8 @@ skipti fyrir öll Í Python, eins og hér er sýnt:</p>
 
 <span class="n">I1</span> <span class="o">=</span> <span class="n">trap1</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">I2</span> <span class="o">=</span> <span class="n">trap1</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;I1=</span><span class="si">{</span><span class="n">I1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, I2=</span><span class="si">{</span><span class="n">I2</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="c1"># prentar &quot;I1=0.648, I2=1.859&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'I1=</span><span class="si">{</span><span class="n">I1</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, I2=</span><span class="si">{</span><span class="n">I2</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="c1"># prentar "I1=0.648, I2=1.859"</span>
 </pre></div>
 </div>
 <p>Nákvæm gildi á þessum heildum eru I1 = 0.659 og I2 = 1.718. Takið
@@ -887,15 +887,15 @@ undan else-kaflanum eins og næsta sýnidæmi sýnir:</p>
 <div class="synidaemi admonition">
 <p class="admonition-title">Sýnidæmi: Notkun ef-setningar</p>
 <p>Þetta dæmi les aldur tveggja manna Jóns og Páls og athugar hvor er eldri.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ajons</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Aldur Jóns: &quot;</span><span class="p">))</span>
-<span class="n">apals</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Aldur Páls: &quot;</span><span class="p">))</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ajons</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Aldur Jóns: "</span><span class="p">))</span>
+<span class="n">apals</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Aldur Páls: "</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">ajons</span> <span class="o">&gt;</span> <span class="n">apals</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jón er eldri en Páll&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Jón er eldri en Páll"</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">ajons</span> <span class="o">==</span> <span class="n">apals</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jón og Páll eru jafngamlir&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Jón og Páll eru jafngamlir"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Páll er eldri en Jón&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;–og hér heldur forritið áfram&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Páll er eldri en Jón"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"–og hér heldur forritið áfram"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -929,10 +929,10 @@ möguleikar á range fallinu:</p>
 <p>Eftirfarandi forrit reiknar kvaðratrætur og önnur veldi talnanna 2, 3, 4 og
 5. Það sýnir notkun á nokkrum atriðum sem fjallað hefur verið um hér á undan.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x     √x     x²&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;―――――――――――――――&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'x     √x     x²'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'―――――――――――――――'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">:</span><span class="s1">.4f</span><span class="si">}</span><span class="s1">   </span><span class="si">{</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s1">2</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Fallið prentar út eftirfarandi töflu</p>

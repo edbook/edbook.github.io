@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Kafli - Gerð og uppbygging efna &mdash; Efnisfræði 26.10.05.0+762ce30</title>
+  <title>2. Kafli - Gerð og uppbygging efna &mdash; Efnisfræði 26.10.19.0+ab4b90d</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="_static/favicon_2.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=07f8e904"></script>
+      <script src="_static/documentation_options.js?v=c4bb74c7"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -168,32 +168,71 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Kafli - Gerð og uppbygging efna</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#frumeindir-e-atom">2.1. Frumeindir (e. atom)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#frumeinda-massi-mol-og-avogadros-talan">2.1.1. Frumeinda massi, mól og Avogadros-talan</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam">2.1.2. Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#frumeindir">2.1. Frumeindir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rafeindahvel">2.1.1. Rafeindahvel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frumefni-og-lotukerfi">2.1.2. Frumefni og lotukerfið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samsaetur">2.1.3. Samsætur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frumeindamassi-mol-og-avogadros-talan">2.1.4. Frumeindamassi, mól og Avogadros-talan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mol">2.1.5. Mól</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#orka-i-bindingum-og-kraftar-milli-frumeinda">2.2. Orka í bindingum og kraftar milli frumeinda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#efnafraeilegir-bindingar-myndun-sameinda">2.3. Efnafræðilegir bindingar (myndun sameinda)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#jonabindingar">2.3.1. Jónabindingar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#kovalentbindingar">2.3.2. Kóvalentbindingar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#malmbindingar">2.3.3. Málmbindingar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#van-der-waal-bindingar">2.3.4. van der Waal bindingar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vetnisbindingar">2.3.5. Vetnisbindingar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#yfirlit-yfir-efnabindingar">2.3.6. Yfirlit yfir efnabindingar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sameindir">2.2. Sameindir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sameindamassi">2.2.1. Sameindamassi</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#kristallar">2.4. Kristallar</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#skrikerfi-e-slip-system">2.4.1. Skriðkerfi (e. slip system)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orka-i-bindingum-og-kraftar-milli-frumeinda">2.3. Orka í bindingum og kraftar milli frumeinda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kraftar-milli-frumeinda-og-sameinda">2.4. Kraftar milli frumeinda og sameinda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lennardjones-likani">2.4.1. Lennard–Jones líkanið</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kraftar-milli-einda">2.4.2. Kraftar milli einda</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#efni-sem-ekki-mynda-kristalla">2.5. Efni sem ekki mynda kristalla</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#efni-eru-uppbygg-ur-fjollium">2.5.1. Efni eru uppbyggð úr fjölliðum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blandefni-disperse-material-og-eytur-kolloider">2.5.2. Blandefni (disperse material) og þeytur (kolloider)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gel">2.5.3. Gel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#efnafraeilegir-bindingar">2.5. Efnafræðilegir bindingar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fyrsta-stigs-efnafraeilegar-bindingar">2.5.1. Fyrsta stigs efnafræðilegar bindingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#jonatengi">2.5.1.1. Jónatengi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#samgild-tengi">2.5.1.2. Samgild tengi</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#heimildir">2.6. Heimildir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#malmbindingar">2.5.2. Málmbindingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#malmtengi">2.5.2.1. Málmtengi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#annars-stigs-efnafraeilegar-bindingar">2.5.3. Annars stigs efnafræðilegar bindingar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#van-der-waals-bindingar">2.5.3.1. van der Waals-bindingar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vetnistengi">2.5.3.2. Vetnistengi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#yfirlit-yfir-efnafraeilegar-bindingar">2.5.4. Yfirlit yfir efnafræðilegar bindingar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#uppbygging-efna">2.6. Uppbygging efna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kristalbygging">2.6.1. Kristalbygging</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fjoldi-frumeinda-i-kristaleiningu">2.6.1.1. Fjöldi frumeinda í kristaleiningu</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#grindargallar">2.6.2. Grindargallar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#punktgallar">2.6.2.1. Punktgallar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linugallar-misgengi">2.6.2.2. Línugallar – misgengi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#skri-og-skrikerfi">2.6.2.3. Skrið og skriðkerfi</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#okristollu-efni">2.6.3. Ókristölluð efni</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fjolliur">2.6.3.1. Fjölliður</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timbur">2.6.3.2. Timbur</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plastefni">2.6.3.3. Plastefni</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gummi">2.6.3.4. Gúmmí</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#blandefni">2.7. Blandefni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einsleit-og-misleit-efni">2.7.1. Einsleit og misleit efni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fasar-og-dreif-efni">2.7.2. Fasar og dreifð efni</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eytur">2.7.3. Þeytur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kvoulausnir">2.7.4. Kvoðulausnir</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gel">2.7.5. Gel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#heimildir">2.8. Heimildir</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="kafli03.html">3. Kafli - Holrýmd og efnisþéttleiki</a><ul>
@@ -476,111 +515,126 @@
   <section id="kafli-ger-og-uppbygging-efna">
 <h1><span class="section-number">2. </span>Kafli - Gerð og uppbygging efna<a class="headerlink" href="#kafli-ger-og-uppbygging-efna" title="Link to this heading"></a></h1>
 <p>Viðeigandi efnisnotkun er háð þekkingu á grunneiginleikum efnanna.  Allir eiginleikar efna byggja á gerð þeirra og uppbyggingu, sérstaklega gildir að styrkur, stífleiki, rafleiðni og ending eru beint háðir grunnuppbyggingu þeirra.  Við getum skoðað uppbyggingu efna á mismunandi skölum, frumeindaskala, kristaluppbyggingu á míkróskala og póruuppbyggingu á makróskala. Í þessum kafla verður fjallað um frumeindabyggingu, tengigerðir og kristalbyggingu en holrýmd og póruuppbyggingu er lýst nánar í 3. kafla.</p>
-<p>Aðeins skal líta á kaflann hér sem samantekt á nauðsynlegum hugtökum.</p>
-<section id="frumeindir-e-atom">
-<h2><span class="section-number">2.1. </span>Frumeindir (e. atom)<a class="headerlink" href="#frumeindir-e-atom" title="Link to this heading"></a></h2>
-<p>Frumeindir eru byggðar upp úr þremur tegundum einda; jákvætt hlaðin róteind (e. proton), óhlaðin nifteind (e. neutron) og neikvætt hlaðin rafeind (e. electron).
-Kjarninn (e. nucleus) er iðulega samsettur úr jafnmörgum róteindum (fjöldi; Z) og nifteindum (fjöldi; N) –
-vetni og mismunandi ísótópar eru undantekning frá þessu. Í frumeind sem er óhlaðin útávið þá er fjöldi rafeinda sá sami og róteinda (Z).
-Í módeli Bohr’s er gert ráð fyrir að rafeindirnar raðist á sammiðja hvel (e. electron shell) um kjarnann.
-Hvert rafeindahvel getur innihaldið mest <span class="math notranslate nohighlight">\(2\cdot n^2\)</span> rafeindir, þar sem <span class="math notranslate nohighlight">\(n\)</span> er númer hvels innanfrá.</p>
-<table class="docutils align-default" id="id14">
-<caption><span class="caption-number">Tafla 2.1 </span><span class="caption-text">Heiti rafeindahvels talið innanfrá</span><a class="headerlink" href="#id14" title="Link to this table"></a></caption>
-<colgroup>
-<col style="width: 30.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-<col style="width: 10.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Hver nr. (n)</p></th>
-<th class="head"><p>1</p></th>
-<th class="head"><p>2</p></th>
-<th class="head"><p>3</p></th>
-<th class="head"><p>4</p></th>
-<th class="head"><p>5</p></th>
-<th class="head"><p>6</p></th>
-<th class="head"><p>7</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Heiti</p></td>
-<td><p>K</p></td>
-<td><p>L</p></td>
-<td><p>M</p></td>
-<td><p>N</p></td>
-<td><p>O</p></td>
-<td><p>P</p></td>
-<td><p>Q</p></td>
-</tr>
-</tbody>
-</table>
-<p>Ysta hvelið hverju sinni (valenshvelið) getur þó mest haft 8 rafeindir, og er einungis stöðugt ef það er fullsetið. <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
-<figure class="align-center">
+<section id="frumeindir">
+<h2><span class="section-number">2.1. </span>Frumeindir<a class="headerlink" href="#frumeindir" title="Link to this heading"></a></h2>
+<p>Öll efni eru byggð upp af <strong>frumeindum</strong> (e. <em>atoms</em>). Frumeind er minnsta eining frumefnis sem heldur efnafræðilegum eiginleikum þess.</p>
+<p>Frumeindir eru byggðar upp úr þremur tegundum einda:</p>
+<ul class="simple">
+<li><p><strong>róteindum</strong> (e. <em>protons</em>), sem hafa jákvæða rafhleðslu,</p></li>
+<li><p><strong>nifteindum</strong> (e. <em>neutrons</em>), sem eru óhlaðnar,</p></li>
+<li><p><strong>rafeindum</strong> (e. <em>electrons</em>), sem hafa neikvæða rafhleðslu.</p></li>
+</ul>
+<p>Róteindir og nifteindir mynda <strong>kjarna</strong> (e. <em>nucleus</em>) frumeindarinnar en rafeindirnar eru umhverfis kjarnann. Rafeindir eru miklu léttari en róteindir og nifteindir og því er nánast allur massi frumeindarinnar í kjarnanum.</p>
+<p>Fjöldi róteinda í kjarna er kallaður <strong>sætistala</strong>, <span class="math notranslate nohighlight">\(Z\)</span>, og ákvarðar um hvaða frumefni er að ræða. Í óhlaðinni frumeind er fjöldi rafeinda sá sami og fjöldi róteinda og heildarhleðsla frumeindarinnar því núll.</p>
+<p>Ef frumeind tekur til sín eða gefur frá sér rafeindir myndast <strong>jón</strong>. Frumeind sem tekur til sín rafeindir verður neikvætt hlaðin en frumeind sem gefur frá sér rafeindir verður jákvætt hlaðin.</p>
+<section id="rafeindahvel">
+<h3><span class="section-number">2.1.1. </span>Rafeindahvel<a class="headerlink" href="#rafeindahvel" title="Link to this heading"></a></h3>
+<p>Í einföldu Bohr-líkani frumeindarinnar er gert ráð fyrir að rafeindir raðist á mismunandi rafeindahvel (e. <em>electron shells</em>) umhverfis kjarnann.</p>
+<p>Rafeindir í ysta hveli frumeindarinnar kallast <strong>gildisrafeindir</strong> (e. <em>valence electrons</em>). Þær hafa mikil áhrif á efnafræðilega eiginleika frumefnisins og hvernig það myndar efnatengi við önnur atóm. Við komum aftur að þessu þegar fjallað verður um efnatengi síðar í kaflanum.</p>
+<figure class="align-center" id="id14">
 <a class="reference internal image-reference" href="_images/bohr-model-nitrogen-atom.png"><img alt="_images/bohr-model-nitrogen-atom.png" src="_images/bohr-model-nitrogen-atom.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.1 </span><span class="caption-text">Einfalt Bohr-líkan af köfnunarefnisfrumeind.</span><a class="headerlink" href="#id14" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<section id="frumeinda-massi-mol-og-avogadros-talan">
-<h3><span class="section-number">2.1.1. </span>Frumeinda massi, mól og Avogadros-talan<a class="headerlink" href="#frumeinda-massi-mol-og-avogadros-talan" title="Link to this heading"></a></h3>
-<div class="video_wrapper" style="">
-<iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wPGVQu3UXpw" style="border: 0; height: 430px; width: 100%">
-</iframe></div><p>Frumeind vegur mjög lítið, eða stærðargráðan <span class="math notranslate nohighlight">\(10^{-27}\)</span> kg, því er til einföldunar iðulega
-notaður hlutfallslegur frumeindamassi, <span class="math notranslate nohighlight">\(A_r\)</span>; <span class="math notranslate nohighlight">\(\require{\mhchem}\)</span></p>
-<div class="math notranslate nohighlight">
-\[A_r = \frac{m}{m_u}\]</div>
-<p>þar sem</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 33.3%" />
-<col style="width: 33.3%" />
-<col style="width: 33.3%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
-<td><p>frumeindamassi</p></td>
-<td><p>kg</p></td>
-</tr>
-<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(m_u\)</span></p></td>
-<td><p>frumeinda-massa-einingin (atomic mass unit)</p>
-<p>= 1/12 af massa <span class="math notranslate nohighlight">\(\ce{C12}\)</span> frumeindar, eða <span class="math notranslate nohighlight">\(m_u = 1,6605 \cdot 10^{-27} \textrm{kg}\)</span></p>
-</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>massi frumeinda er iðulega gefinn upp í fjölda frumeinda-massa-eininga, <span class="math notranslate nohighlight">\(u\)</span>, <span class="math notranslate nohighlight">\(1u = m_u\)</span></p>
-<p>Mól er það efnismagn sem hefur jafnmargar grunneiningar eins og eru í 12 g af <span class="math notranslate nohighlight">\(\ce{C12}\)</span>
-frumeindum, þessi tala er nefnd Avogadros-talan;
-<span class="math notranslate nohighlight">\(N_A = 6,022 \cdot 10^{23} \textrm{einingar}\)</span>.</p>
-<div class="hint admonition">
-<p class="admonition-title">Vísbending</p>
-<p>Athuga skal að uppgefinn hlutfallslegur frumeindamassi efnis, <span class="math notranslate nohighlight">\(A_r\)</span>, fyrir eitt mól af efninu
-er jafngildir mólmassa í einingunni g/mól.</p>
-</div>
-<p>Til að finna massa frumefnis í grömmum þegar massinn er gefinn í frumeinda-massaeiningum
-(u), þá gildir</p>
-<div class="math notranslate nohighlight">
-\[m_{grömm} = \frac{m_{amu}}{N_A}\]</div>
-<p>Lotukerfið (skipting þess í svið og upplýsingar um eiginleika). Í góðri töflu má finna ýmis konar efnisupplýsingar.</p>
+</section>
+<section id="frumefni-og-lotukerfi">
+<h3><span class="section-number">2.1.2. </span>Frumefni og lotukerfið<a class="headerlink" href="#frumefni-og-lotukerfi" title="Link to this heading"></a></h3>
+<p><strong>Frumefni</strong> er efni sem eingöngu er gert úr frumeindum með sama fjölda róteinda. Frumefnunum er raðað í <strong>lotukerfið</strong> eftir sætistölu.</p>
+<p>Frumefni í sama dálki lotukerfisins hafa oft svipaða efnafræðilega eiginleika. Það tengist meðal annars fjölda gildisrafeinda þeirra.</p>
+<p>Í lotukerfinu má finna ýmsar upplýsingar um frumefnin, meðal annars sætistölu, frumeindamassa og efnafræðilegt tákn.</p>
 
 <a href="https://ptable.com/?lang=is#Eiginleikar">
     <span class="button">Gagnvirkt lotukerfi á íslensku</span>
-</a><div class="tip admonition">
-<p class="admonition-title">Dæmi (2.3 í bókinni)</p>
-<p>Dæmi (2.3 í bókinni):
-Ákvarðið sameindamassann (molekylmassen) fyrir gifs (“calciumsulfat, dihydrat”)
-<span class="math notranslate nohighlight">\(\ce{CaSO4, 2H2O}\)</span></p>
-<p>Lausn: Ekki ljóst hvort beðið er um mólmassa eða massa á einni sameind (sbr. Dæmi 2.4!); reikna bæði:</p>
-<ul class="simple">
-<li><p>Mólmassinn fæst þegar lagður er saman hlutfallslegur frumeindamassi (atomvægt)- tafla 15, fyrir allar einingarnar.</p></li>
-<li><p>Sameindamassinn = mólmassi/Avogadrostalan,</p></li>
-</ul>
-<table class="docutils align-default" id="id15">
-<caption><span class="caption-number">Tafla 2.2 </span><span class="caption-text">Lausn á dæmi 2.3 í bókinni</span><a class="headerlink" href="#id15" title="Link to this table"></a></caption>
+</a></section>
+<section id="samsaetur">
+<h3><span class="section-number">2.1.3. </span>Samsætur<a class="headerlink" href="#samsaetur" title="Link to this heading"></a></h3>
+<p>Frumeindir sama frumefnis hafa alltaf sama fjölda róteinda en geta haft mismunandi fjölda nifteinda. Slíkar frumeindir kallast <strong>samsætur</strong> (e. <em>isotopes</em>).</p>
+<p>Kolefni er dæmi um frumefni sem hefur fleiri en eina samsætu. Kolefni-12, kolefni-13 og kolefni-14 hafa öll sex róteindir og eru því öll kolefni, en þau hafa mismunandi fjölda nifteinda og þar með mismunandi massa.</p>
+</section>
+<section id="frumeindamassi-mol-og-avogadros-talan">
+<h3><span class="section-number">2.1.4. </span>Frumeindamassi, mól og Avogadros-talan<a class="headerlink" href="#frumeindamassi-mol-og-avogadros-talan" title="Link to this heading"></a></h3>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wPGVQu3UXpw" style="border: 0; height: 430px; width: 100%">
+</iframe></div><p>Massi einstakrar frumeindar er mjög lítill, af stærðargráðunni <span class="math notranslate nohighlight">\(10^{-27}\)</span> kg. Því er hentugra að nota <strong>frumeindamassaeininguna</strong>, <span class="math notranslate nohighlight">\(u\)</span>.</p>
+<p>Ein frumeindamassaeining er skilgreind sem <span class="math notranslate nohighlight">\(1/12\)</span> af massa kolefnis-12 frumeindar:</p>
+<div class="math notranslate nohighlight">
+\[1u = 1,6605 \cdot 10^{-27}\,\textrm{kg}\]</div>
+<p>Hlutfallslegur frumeindamassi, <span class="math notranslate nohighlight">\(A_r\)</span>, er skilgreindur sem:</p>
+<div class="math notranslate nohighlight">
+\[A_r = \frac{m}{m_u}\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(m\)</span> er massi frumeindarinnar og <span class="math notranslate nohighlight">\(m_u\)</span> er frumeindamassaeiningin.</p>
+<p>Frumeindamassi frumefnis sem gefinn er upp í lotukerfinu er yfirleitt vegið meðaltal massa þeirra samsæta frumefnisins sem finnast í náttúrunni. Þess vegna er gildið ekki endilega heil tala.</p>
+</section>
+<section id="mol">
+<h3><span class="section-number">2.1.5. </span>Mól<a class="headerlink" href="#mol" title="Link to this heading"></a></h3>
+<p>Frumeindir og sameindir eru svo smáar að jafnvel í mjög litlu sýnilegu magni efnis er gríðarlegur fjöldi einda. Til þess að lýsa slíku efnismagni er einingin <strong>mól</strong> notuð.</p>
+<p>Eitt mól inniheldur</p>
+<div class="math notranslate nohighlight">
+\[N_A = 6,022 \cdot 10^{23}\]</div>
+<p>eindir. Talan <span class="math notranslate nohighlight">\(N_A\)</span> kallast <strong>Avogadros-talan</strong>.</p>
+<p><strong>Mólmassi</strong>, <span class="math notranslate nohighlight">\(M\)</span>, segir til um massa eins móls af efni og er yfirleitt gefinn upp í g/mól.</p>
+<div class="hint admonition">
+<p class="admonition-title">Vísbending</p>
+<p>Tölugildi frumeindamassa frumefnis í <span class="math notranslate nohighlight">\(u\)</span> er það sama og tölugildi mólmassa þess í g/mól.</p>
+<p>Kolefni með frumeindamassann <span class="math notranslate nohighlight">\(12u\)</span> hefur því mólmassann um 12 g/mól.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Gott að vita: Hversu smátt getum við séð?</p>
+<p>Þegar fjallað er um uppbyggingu efna er gagnlegt að hafa tilfinningu fyrir
+þeim stærðargráðum sem um ræðir.</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(1\,\mu\textrm{m} = 10^{-6}\,\textrm{m}\)</span> (míkrómetri)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1\,\textrm{nm} = 10^{-9}\,\textrm{m}\)</span> (nanómetri)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1\,\textrm{Å} = 10^{-10}\,\textrm{m}\)</span> (ångström)</div>
+<div class="line"><span class="math notranslate nohighlight">\(1\,\textrm{pm} = 10^{-12}\,\textrm{m}\)</span> (píkómetri)</div>
+</div>
+<p>Algengar frumeindir hafa radíus af stærðargráðunni 0,5–2 Å, eða um
+50–200 pm. Sameindir eru einnig á þessum mjög smáa skala.</p>
+<p>Vatnssameind er aðeins nokkrir ångström að stærð.</p>
+<p>Til samanburðar er þvermál mannshárs af stærðargráðunni tugir míkrómetra.
+Frumeindir og sameindir eru því mörgum stærðargráðum minni en það sem
+hægt er að sjá með berum augum.</p>
+<p><strong>Ljóssmásjá</strong> getur stækkað sýni um það bil þúsundfalt og greint smáatriði
+niður undir brot úr míkrómetra.</p>
+<p><strong>Rafeindasmásjár</strong> geta greint mun smærri byggingu og gera okkur kleift
+að rannsaka efni niður á nanómetrakvarða.</p>
+</div>
+</section>
+</section>
+<section id="sameindir">
+<h2><span class="section-number">2.2. </span>Sameindir<a class="headerlink" href="#sameindir" title="Link to this heading"></a></h2>
+<p>Frumeindir geta tengst saman og myndað <strong>sameindir</strong> (e. <em>molecules</em>). Sameind er því samsett úr tveimur eða fleiri frumeindum sem tengjast saman. Frumeindirnar geta verið af sama frumefni eða mismunandi frumefnum.</p>
+<p>Til dæmis er súrefnissameind, <span class="math notranslate nohighlight">\(O_2\)</span>, gerð úr tveimur súrefnisfrumeindum. Vatnssameind, <span class="math notranslate nohighlight">\(H_2O\)</span>, er hins vegar gerð úr tveimur vetnisfrumeindum og einni súrefnisfrumeind.</p>
+<p>Efnaformúla sameindar segir þannig bæði til um <strong>hvaða frumefni</strong> mynda sameindina og <strong>hversu margar frumeindir</strong> eru af hverju frumefni.</p>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="_images/vatn.png"><img alt="_images/vatn.png" src="_images/vatn.png" style="width: 40%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.2 </span><span class="caption-text">Vatnssameind, <span class="math notranslate nohighlight">\(H_2O\)</span>, er gerð úr tveimur vetnisfrumeindum og einni súrefnisfrumeind.</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="sameindamassi">
+<h3><span class="section-number">2.2.1. </span>Sameindamassi<a class="headerlink" href="#sameindamassi" title="Link to this heading"></a></h3>
+<p><strong>Sameindamassi</strong> fæst með því að leggja saman frumeindamassa allra frumeindanna sem mynda sameindina.</p>
+<p>Vatn, <span class="math notranslate nohighlight">\(H_2O\)</span>, inniheldur tvær vetnisfrumeindir og eina súrefnisfrumeind. Frumeindamassi vetnis er um <span class="math notranslate nohighlight">\(1,008\,u\)</span> og frumeindamassi súrefnis um <span class="math notranslate nohighlight">\(16,00\,u\)</span>.</p>
+<p>Sameindamassi vatns er því</p>
+<div class="math notranslate nohighlight">
+\[2 \cdot 1,008 + 16,00 = 18,016\,u\]</div>
+<p>eða um <span class="math notranslate nohighlight">\(18,02\,u\)</span>.</p>
+<p>Á sama hátt fæst <strong>mólmassi</strong> vatns:</p>
+<div class="math notranslate nohighlight">
+\[M(H_2O) \approx 18,02\,\textrm{g/mól}\]</div>
+<p>Tölugildi sameindamassa í <span class="math notranslate nohighlight">\(u\)</span> og mólmassa í g/mól eru því þau sömu.</p>
+<div class="example admonition">
+<p class="admonition-title">Dæmi: Mólmassi gifs</p>
+<p>Reiknum mólmassa gifs, kalsíumsúlfat-tvíhýdrats,</p>
+<div class="math notranslate nohighlight">
+\[CaSO_4 \cdot 2H_2O\]</div>
+<p>Mólmassinn fæst með því að leggja saman mólmassa allra
+frumeindanna í efnasambandinu.</p>
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 25.0%" />
 <col style="width: 25.0%" />
@@ -589,9 +643,9 @@ er jafngildir mólmassa í einingunni g/mól.</p>
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Frumefni</p></th>
-<th class="head"><p>Massi/mól [g/mól]</p></th>
-<th class="head"><p>Fjöldi móla</p></th>
-<th class="head"><p>Alls [g]</p></th>
+<th class="head"><p>Mólmassi [g/mól]</p></th>
+<th class="head"><p>Fjöldi</p></th>
+<th class="head"><p>Alls [g/mól]</p></th>
 </tr>
 </thead>
 <tbody>
@@ -601,14 +655,14 @@ er jafngildir mólmassa í einingunni g/mól.</p>
 <td><p>40,08</p></td>
 </tr>
 <tr class="row-odd"><td><p>S</p></td>
-<td><p>32,064</p></td>
+<td><p>32,06</p></td>
 <td><p>1</p></td>
-<td><p>30,064</p></td>
+<td><p>32,06</p></td>
 </tr>
 <tr class="row-even"><td><p>O</p></td>
-<td><p>16</p></td>
+<td><p>16,00</p></td>
 <td><p>6</p></td>
-<td><p>96</p></td>
+<td><p>96,00</p></td>
 </tr>
 <tr class="row-odd"><td><p>H</p></td>
 <td><p>1,008</p></td>
@@ -617,193 +671,453 @@ er jafngildir mólmassa í einingunni g/mól.</p>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
-<td><p>mólmassi =</p></td>
-<td><p>172,176</p></td>
+<td></td>
+<td><p><strong>172,17</strong></p></td>
 </tr>
 </tbody>
 </table>
-<p><span class="math notranslate nohighlight">\(\text{sameindamassi} = \frac{\text{mólmassi}}{N_A} = \frac{172,176 \text{g/mól}}{6,02\cdot10^{23}\text{eindir}/\text{mól}} = 2,86\cdot10^{-22}\text{g}/\text{eind}\)</span></p>
+<p>Mólmassi gifs er því um</p>
+<div class="math notranslate nohighlight">
+\[M = 172,17\,\textrm{g/mól}\]</div>
+<p>Massi einnar sameindar fæst síðan með því að deila mólmassanum
+með Avogadros-tölunni:</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{172,17}{6,022\cdot10^{23}}
+  \approx 2,86\cdot10^{-22}\,\textrm{g}\]</div>
 </div>
-</section>
-<section id="innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam">
-<h3><span class="section-number">2.1.2. </span>Innskot: Hvað má sjá smáa hluti ? (eða stækkun í mismunandi gerðum af smásjám).<a class="headerlink" href="#innskot-hva-ma-sja-smaa-hluti-ea-staekkun-i-mismunandi-gerum-af-smasjam" title="Link to this heading"></a></h3>
-<div class="line-block">
-<div class="line"><span class="math notranslate nohighlight">\(1 \mu \textrm{m} = 10^{-6} \textrm{m}\)</span> (míkrómeter)</div>
-<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{nm} = 10^{-9} \textrm{m}\)</span> (nanómeter)</div>
-<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{Å} = 10^{-10} \textrm{m}\)</span> (Ångström)</div>
-<div class="line"><span class="math notranslate nohighlight">\(1 \textrm{pm} = 10^{-12} \textrm{m}\)</span> (píkómeter)</div>
-</div>
-<p>Stærðargráður „smárra“ eininga;</p>
-<p>Algeng frumefni hafa frumefnaradía á bilinu 0,5-2 Å (1 Ångström = <span class="math notranslate nohighlight">\(10^{-10}\)</span> m) eða 50-200 pm.</p>
-<p>Stærð vatnssameindar (sjá t.d. Wikipedia; water);</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="_images/vatn.png"><img alt="_images/vatn.png" src="_images/vatn.png" style="width: 40%;" />
-</a>
-</figure>
-<p>Mannshár er með þvermál á bilinu 17-181 <span class="math notranslate nohighlight">\(\mu \textrm{m}\)</span> (1 <span class="math notranslate nohighlight">\(\mu \textrm{m}\)</span> = <span class="math notranslate nohighlight">\(10^{-6}\)</span> m), eða 0,017-0,181 mm.
-(<a class="reference external" href="http://hypertextbook.com/facts/1999/BrianLey.shtml">http://hypertextbook.com/facts/1999/BrianLey.shtml</a>).</p>
-<p>Uppleysni; minnsta stærð sem greina má</p>
-<p>Með berum augum getur maður með venjulega sjón greint á milli grófgerðs hárs og
-fíngerðs hárs, uppleysni augans gæti því verið um 0,02 mm?</p>
-<p>Ljóssmásjá (Holland 1590 – 1608);</p>
-<p>Stækkun allt að 1 000 X, og uppleysni þá allt að 0,2 <span class="math notranslate nohighlight">\(\mu\)</span> m. Stafræn ljóssmásjá (sjá t.d. www.lsw.com), dæmigerð stækkun 400 X, uppleysni allt
-að 0,5 <span class="math notranslate nohighlight">\(\mu\)</span> m.</p>
-<p>Rafeindasmásjá (e: scanning electron microscope, SEM);
-Stækkun 1 000 – 1 000 000 X, og uppleysni allt að 10 nm (100 Å)</p>
 </section>
 </section>
 <section id="orka-i-bindingum-og-kraftar-milli-frumeinda">
-<h2><span class="section-number">2.2. </span>Orka í bindingum og kraftar milli frumeinda<a class="headerlink" href="#orka-i-bindingum-og-kraftar-milli-frumeinda" title="Link to this heading"></a></h2>
-<figure><iframe src='https://hi.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=24fb07ae-23e9-4068-9002-b04d00a47940' width=100% height=400 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><p>Lennard- Jones (Breti, setti tilgátuna fram 1931) ;</p>
-<p>Orkan er</p>
+<h2><span class="section-number">2.3. </span>Orka í bindingum og kraftar milli frumeinda<a class="headerlink" href="#orka-i-bindingum-og-kraftar-milli-frumeinda" title="Link to this heading"></a></h2>
+</section>
+<section id="kraftar-milli-frumeinda-og-sameinda">
+<h2><span class="section-number">2.4. </span>Kraftar milli frumeinda og sameinda<a class="headerlink" href="#kraftar-milli-frumeinda-og-sameinda" title="Link to this heading"></a></h2>
+<p>Frumeindir og sameindir hafa jákvæðar og neikvæðar hleðslur. Vegna dreifingar
+þessara hleðslna verka bæði <strong>aðdráttarkraftar</strong> og <strong>fráhrindikraftar</strong> milli einda.</p>
+<p>Þegar tvær eindir eru langt hvor frá annarri eru kraftarnir milli þeirra litlir.
+Þegar þær nálgast hvor aðra verður aðdráttur milli þeirra meiri. Ef þær koma
+hins vegar mjög nálægt hvor annarri verða fráhrindikraftar ráðandi.</p>
+<p>Því myndast ákveðin <strong>jafnvægisfjarlægð</strong>, <span class="math notranslate nohighlight">\(r_0\)</span>, þar sem aðdráttar- og
+fráhrindikraftarnir vega hvor annan upp. Við þessa fjarlægð er kerfið í stöðugu
+jafnvægi og stöðuorka þess er í lágmarki.</p>
+<section id="lennardjones-likani">
+<h3><span class="section-number">2.4.1. </span>Lennard–Jones líkanið<a class="headerlink" href="#lennardjones-likani" title="Link to this heading"></a></h3>
+<figure><iframe src='https://hi.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=24fb07ae-23e9-4068-9002-b04d00a47940' width=100% height=400 style=padding: 0px; border: 1px solid #464646; frameborder='0'></iframe></figure><p>Samband stöðuorku tveggja einda og fjarlægðarinnar milli þeirra má lýsa með
+svokölluðu <strong>Lennard–Jones líkani</strong>.</p>
 <div class="math notranslate nohighlight">
-\[\Phi_r = \Phi_0\cdot\left[\left(\frac{r_0}{r}\right)^{12}-2\cdot\left(\frac{r_0}{r}\right)^{6}\right]\]</div>
-<figure class="align-center">
+\[\Phi_r =
+\Phi_0
+\left[
+\left(\frac{r_0}{r}\right)^{12}
+-
+2\left(\frac{r_0}{r}\right)^6
+\right]\]</div>
+<p>þar sem <span class="math notranslate nohighlight">\(r\)</span> er fjarlægðin milli eindanna, <span class="math notranslate nohighlight">\(r_0\)</span> er
+jafnvægisfjarlægðin og <span class="math notranslate nohighlight">\(\Phi_0\)</span> lýsir dýpt orkudalsins.</p>
+<figure class="align-center" id="id16">
 <a class="reference internal image-reference" href="_images/LennardJonesPotentialet.png"><img alt="_images/LennardJonesPotentialet.png" src="_images/LennardJonesPotentialet.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.3 </span><span class="caption-text">Stöðuorka sem fall af fjarlægð milli einda samkvæmt Lennard–Jones líkaninu.</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<p>Krafturinn</p>
+<p>Lágmark ferilsins samsvarar jafnvægisfjarlægðinni <span class="math notranslate nohighlight">\(r_0\)</span>. Til þess að
+færa eindirnar í sundur frá þessari stöðu þarf að leggja til orku. Dýpt
+orkudalsins gefur því vísbendingu um hversu sterk tengslin milli eindanna eru.</p>
+</section>
+<section id="kraftar-milli-einda">
+<h3><span class="section-number">2.4.2. </span>Kraftar milli einda<a class="headerlink" href="#kraftar-milli-einda" title="Link to this heading"></a></h3>
+<p>Krafturinn milli eindanna tengist breytingu stöðuorkunnar með fjarlægð:</p>
 <div class="math notranslate nohighlight">
-\[F_r = -\frac{\delta\Phi_r}{\delta r} = 12\cdot\frac{\Phi_r}{r_0} \cdot \left[\left(\frac{r_0}{r}\right)^{13}-\left(\frac{r_0}{r}\right)^{7}\right]\]</div>
-<figure class="align-center">
+\[F_r = -\frac{d\Phi_r}{dr}\]</div>
+<p>Við jafnvægisfjarlægðina <span class="math notranslate nohighlight">\(r_0\)</span> er krafturinn núll. Ef eindirnar færast
+aðeins lengra í sundur verður aðdráttarkraftur ráðandi og leitast við að færa
+þær aftur í jafnvægisstöðu. Ef þær færast nær hvor annarri verður
+fráhrindikraftur ráðandi.</p>
+<figure class="align-center" id="id17">
 <a class="reference internal image-reference" href="_images/LennardJonesKraften.png"><img alt="_images/LennardJonesKraften.png" src="_images/LennardJonesKraften.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.4 </span><span class="caption-text">Aðdráttar- og fráhrindikraftar milli einda sem fall af fjarlægð.</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<p>Jafnframt gildir (almennt);</p>
+<div class="important admonition">
+<p class="admonition-title">Tengingin við eiginleika efna</p>
+<p>Kraftar og bindingar milli einda hafa bein áhrif á eiginleika efna.</p>
 <ul class="simple">
-<li><p>Efni með háa bindiorku (<span class="math notranslate nohighlight">\(\Phi_0\)</span>) hafa hátt bræðsluhitastig, og mynda fast efni við stofuhita..</p></li>
-<li><p>Fjaðurstuðull <span class="math notranslate nohighlight">\(E_{mod}=\frac{\delta F_r}{\delta r}\)</span>, .. því dýpri og krappari sem “dældin” á <span class="math notranslate nohighlight">\(\Phi-r\)</span> línuritinu
-er, því stífara er efnið..</p></li>
+<li><p><strong>Sterkari bindingar</strong> þýða að meiri orku þarf til að aðskilja eindirnar.
+Efni með sterkar bindingar hafa því almennt hærra bræðsluhitastig.</p></li>
+<li><p><strong>Lögun orkudalsins</strong> tengist stífleika efnisins. Því brattari sem
+orkukúrfan er í kringum jafnvægisstöðuna, því meiri kraft þarf til að
+breyta fjarlægðinni milli eindanna og því stífara er efnið.</p></li>
 </ul>
+</div>
 </section>
-<section id="efnafraeilegir-bindingar-myndun-sameinda">
-<h2><span class="section-number">2.3. </span>Efnafræðilegir bindingar (myndun sameinda)<a class="headerlink" href="#efnafraeilegir-bindingar-myndun-sameinda" title="Link to this heading"></a></h2>
-<p>Frumeindir mynda sameindir og kristalla með fyrsta stigs efnafræðilegum bindingum (e. primary chemical bonds). Þrjár efnafræðilegar bindingar eru skilgreindar sem frumbindingar; 1) Jónabiningar (e. ionic bond), 2) Kóvalentbindingar (e. covalent bond) og 3) málmbindingar (e. metalic bond). Í öllum þessum bindingum eru það rafeindirnar á ysta hvelinu (valenshvelinu) sem leika höfuðhlutverk. Bindingarnar verða til vegna viðleitni frumeindanna til þess að gera valenshvelið stöðugt, þ.e. fylla það rafeindum.</p>
-<p>Auk þessara frysta stigs bindinga eru skilgreindar annars stigs bindingar. Annars stigs bindingar eru veikari en fyrsta stigs bindingar. Van der Waal bindingar og vetnisbindingar eru algengustu annars stigs bindingarnar.</p>
-<section id="jonabindingar">
-<h3><span class="section-number">2.3.1. </span>Jónabindingar<a class="headerlink" href="#jonabindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+</section>
+<section id="efnafraeilegir-bindingar">
+<h2><span class="section-number">2.5. </span>Efnafræðilegir bindingar<a class="headerlink" href="#efnafraeilegir-bindingar" title="Link to this heading"></a></h2>
+<p>Gerð efnafræðilegra bindinga hefur mikil áhrif á eiginleika efna. Bindingarnar
+ráða meðal annars hvernig frumeindir raðast saman og hversu auðvelt er að færa
+þær úr jafnvægisstöðu.</p>
+<p>Efnafræðilegum bindingum má skipta í tvo meginflokka:</p>
+<ul class="simple">
+<li><p><strong>fyrsta stigs efnafræðilegar bindingar</strong>, sem eru sterkar bindingar milli frumeinda. Í þessum bindingum eru það rafeindirnar á ysta hvelinu (valenshvelinu) sem leika höfuðhlutverk. Bindingarnar verða til vegna viðleitni frumeindanna til þess að gera valenshvelið stöðugt, þ.e. fylla það rafeindum.</p></li>
+<li><p><strong>annars stigs efnafræðilegar bindingar</strong>, sem eru veikari og verka meðal annars milli sameinda. Annars stigs bindingar eru veikari en fyrsta stigs bindingar. Van der Waal bindingar og vetnisbindingar eru algengustu annars stigs bindingarnar.</p></li>
+</ul>
+<section id="fyrsta-stigs-efnafraeilegar-bindingar">
+<h3><span class="section-number">2.5.1. </span>Fyrsta stigs efnafræðilegar bindingar<a class="headerlink" href="#fyrsta-stigs-efnafraeilegar-bindingar" title="Link to this heading"></a></h3>
+<p>Fyrsta stigs efnafræðilegar bindingar (e. <em>primary chemical bonds</em>) myndast
+með þátttöku rafeinda í ysta rafeindahveli frumeindanna, þ.e.
+gildisrafeindanna.</p>
+<p>Þær skiptast í þrjár megingerðir:</p>
+<ul class="simple">
+<li><p>jónatengi,</p></li>
+<li><p>samgild tengi,</p></li>
+<li><p>málmtengi.</p></li>
+</ul>
+<section id="jonatengi">
+<h4><span class="section-number">2.5.1.1. </span>Jónatengi<a class="headerlink" href="#jonatengi" title="Link to this heading"></a></h4>
+<p><strong>Jónatengi</strong> (e. <em>ionic bond</em>) myndast þegar ein eða fleiri rafeindir flytjast
+frá einni frumeind til annarrar. Við það myndast jákvætt og neikvætt hlaðnar
+jónir. Gagnstæðar rafhleðslur jónanna dragast að hvor annarri og mynda
+bindinguna.</p>
+<p>Matarsalt, <span class="math notranslate nohighlight">\(NaCl\)</span>, er dæmi um efni þar sem jónatengi eru ráðandi.
+Natríumfrumeind, <span class="math notranslate nohighlight">\(Na\)</span>, gefur frá sér eina gildisrafeind og verður að
+jákvæðri <span class="math notranslate nohighlight">\(Na^+\)</span> jón. Klórfrumeind, <span class="math notranslate nohighlight">\(Cl\)</span>, tekur við rafeindinni
+og verður að neikvæðri <span class="math notranslate nohighlight">\(Cl^-\)</span> jón.</p>
+<figure class="align-center" id="id18">
 <a class="reference internal image-reference" href="_images/jonabinding.png"><img alt="_images/jonabinding.png" src="_images/jonabinding.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.5 </span><span class="caption-text">Myndun jónatengis.</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6DtrrWA5nkE" style="border: 0; height: 430px; width: 100%">
 </iframe></div></section>
-<section id="kovalentbindingar">
-<h3><span class="section-number">2.3.2. </span>Kóvalentbindingar<a class="headerlink" href="#kovalentbindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+<section id="samgild-tengi">
+<h4><span class="section-number">2.5.1.2. </span>Samgild tengi<a class="headerlink" href="#samgild-tengi" title="Link to this heading"></a></h4>
+<p><strong>Samgilt tengi</strong> (e. <em>covalent bond</em>) myndast þegar tvær frumeindir deila
+einum eða fleiri rafeindapörum. Þannig geta frumeindirnar náð stöðugri
+rafeindaskipan í ysta rafeindahveli (kallað valenshvel).</p>
+<p>Samgild tengi eru til dæmis milli frumeindanna í sameindum vetnis,
+súrefnis og köfnunarefnis.</p>
+<p>Efni þar sem sterk samgild tengi mynda samfellda byggingu geta haft mikinn
+styrk en eru oft stökk.</p>
+<figure class="align-center" id="id19">
 <a class="reference internal image-reference" href="_images/kovalentbinding.png"><img alt="_images/kovalentbinding.png" src="_images/kovalentbinding.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.6 </span><span class="caption-text">Samgild tengi myndast þegar frumeindir deila rafeindum.</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5I_1jRGSR9E" style="border: 0; height: 430px; width: 100%">
 </iframe></div></section>
+</section>
 <section id="malmbindingar">
-<h3><span class="section-number">2.3.3. </span>Málmbindingar<a class="headerlink" href="#malmbindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+<h3><span class="section-number">2.5.2. </span>Málmbindingar<a class="headerlink" href="#malmbindingar" title="Link to this heading"></a></h3>
+<section id="malmtengi">
+<h4><span class="section-number">2.5.2.1. </span>Málmtengi<a class="headerlink" href="#malmtengi" title="Link to this heading"></a></h4>
+<p><strong>Málmtengi</strong> (e. <em>metallic bond</em>) eru einkennandi fyrir málma. Í málmi eru
+gildisrafeindirnar ekki bundnar við einstakar frumeindir heldur geta þær
+hreyfst tiltölulega frjálst milli jákvætt hlaðinna málmjóna.</p>
+<p>Oft er þessu lýst þannig að jákvæðar málmjónir séu umkringdar sameiginlegu
+<strong>rafeindaskýi</strong>. Aðdráttur milli jákvæðu jónanna og neikvæða
+rafeindaskýsins heldur efninu saman.</p>
+<figure class="align-center" id="id20">
 <a class="reference internal image-reference" href="_images/malmbinding.png"><img alt="_images/malmbinding.png" src="_images/malmbinding.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.7 </span><span class="caption-text">Í málmtengi eru gildisrafeindir ekki bundnar við eina ákveðna frumeind.</span><a class="headerlink" href="#id20" title="Link to this image"></a></p>
+</figcaption>
 </figure>
+<p>Þessi uppbygging skýrir ýmsa mikilvæga eiginleika málma. Frjáls hreyfing
+rafeindanna stuðlar að góðri <strong>rafleiðni og varmaleiðni</strong>. Jafnframt geta
+frumeindalög í málmgrindinni færst til án þess að bindingar rofni varanlega;
+ný tengsl myndast þegar frumeindirnar færast. Þetta á þátt í því að margir
+málmar geta <strong>formbreyst plastískt</strong> án þess að brotna.</p>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/b1y2Q6YX1bQ" style="border: 0; height: 430px; width: 100%">
 </iframe></div></section>
-<section id="van-der-waal-bindingar">
-<h3><span class="section-number">2.3.4. </span>van der Waal bindingar<a class="headerlink" href="#van-der-waal-bindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+</section>
+<section id="annars-stigs-efnafraeilegar-bindingar">
+<h3><span class="section-number">2.5.3. </span>Annars stigs efnafræðilegar bindingar<a class="headerlink" href="#annars-stigs-efnafraeilegar-bindingar" title="Link to this heading"></a></h3>
+<p><strong>Annars stigs efnafræðilegar bindingar</strong> eru almennt mun veikari en fyrsta
+stigs bindingar. Þær byggjast á aðdráttarkröftum milli jákvæðra og neikvæðra
+hleðslusvæða í frumeindum eða sameindum.</p>
+<p>Tvær mikilvægar gerðir eru:</p>
+<ul class="simple">
+<li><p>van der Waals-bindingar,</p></li>
+<li><p>vetnistengi.</p></li>
+</ul>
+<section id="van-der-waals-bindingar">
+<h4><span class="section-number">2.5.3.1. </span>van der Waals-bindingar<a class="headerlink" href="#van-der-waals-bindingar" title="Link to this heading"></a></h4>
+<p>Rafeindir eru á stöðugri hreyfingu og dreifing þeirra um frumeind eða
+sameind getur því tímabundið orðið ósamhverf. Þá getur myndast tímabundin
+hleðsluskipting, eða <strong>tvískaut</strong> (e. <em>dipole</em>).</p>
+<p>Slík hleðsluskipting getur haft áhrif á nærliggjandi eindir og valdið
+aðdráttarkröftum milli þeirra. Þessir kraftar kallast <strong>van der
+Waals-kraftar</strong>.</p>
+<figure class="align-center" id="id21">
 <a class="reference internal image-reference" href="_images/VanDerWaalbinding.png"><img alt="_images/VanDerWaalbinding.png" src="_images/VanDerWaalbinding.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.8 </span><span class="caption-text">van der Waals-binding vegna hleðsludreifingar milli nálægra einda.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 </section>
-<section id="vetnisbindingar">
-<h3><span class="section-number">2.3.5. </span>Vetnisbindingar<a class="headerlink" href="#vetnisbindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+<section id="vetnistengi">
+<h4><span class="section-number">2.5.3.2. </span>Vetnistengi<a class="headerlink" href="#vetnistengi" title="Link to this heading"></a></h4>
+<p><strong>Vetnistengi</strong> (e. <em>hydrogen bond</em>) er annars stigs binding sem getur
+myndast milli sameinda þegar vetni er bundið við mjög rafneikvæða frumeind.</p>
+<p>Vatn er mikilvægt dæmi. Innan hverrar vatnssameindar eru vetnis- og
+súrefnisfrumeindir tengdar með samgildum tengjum. Hleðslan dreifist hins
+vegar ekki jafnt um sameindina. Súrefnishluti hennar verður lítillega
+neikvæður en vetnishlutinn lítillega jákvæður.</p>
+<p>Þessi hleðsluskipting veldur aðdrætti milli nálægra vatnssameinda og þar
+myndast vetnistengi.</p>
+<figure class="align-center" id="id22">
 <a class="reference internal image-reference" href="_images/vetnisbinding.png"><img alt="_images/vetnisbinding.png" src="_images/vetnisbinding.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.9 </span><span class="caption-text">Vetnistengi milli vatnssameinda.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 </section>
-<section id="yfirlit-yfir-efnabindingar">
-<h3><span class="section-number">2.3.6. </span>Yfirlit yfir efnabindingar<a class="headerlink" href="#yfirlit-yfir-efnabindingar" title="Link to this heading"></a></h3>
-<figure class="align-center">
+</section>
+<section id="yfirlit-yfir-efnafraeilegar-bindingar">
+<h3><span class="section-number">2.5.4. </span>Yfirlit yfir efnafræðilegar bindingar<a class="headerlink" href="#yfirlit-yfir-efnafraeilegar-bindingar" title="Link to this heading"></a></h3>
+<p>Efnafræðilegar bindingar hafa mismunandi styrk og eðli og hafa því
+mismunandi áhrif á eiginleika efna. Gerð bindinganna er einn af þeim
+grunnþáttum sem tengja saman innri byggingu efnis og eiginleika
+þess.</p>
+<figure class="align-center" id="id23">
 <a class="reference internal image-reference" href="_images/Efnabindingar.png"><img alt="_images/Efnabindingar.png" src="_images/Efnabindingar.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.10 </span><span class="caption-text">Yfirlit yfir helstu gerðir efnafræðilegra bindinga.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 </section>
 </section>
-<section id="kristallar">
-<h2><span class="section-number">2.4. </span>Kristallar<a class="headerlink" href="#kristallar" title="Link to this heading"></a></h2>
-<p>Frumeindir geta tengst þannig að þær myndi reglulega, samfellda kristalla og er innbyrðis
-röðun þeirra þá með ýmsu móti. Efnið mun taka minnstu pökkun sem það ræður við, það er minnsta orkan. Minnsta kerfið eða kristaleiningin lýsir kristallinum. Það eru til 14 mismunandi kristaleiningar.</p>
-<figure class="align-center">
+<section id="uppbygging-efna">
+<h2><span class="section-number">2.6. </span>Uppbygging efna<a class="headerlink" href="#uppbygging-efna" title="Link to this heading"></a></h2>
+<p>Föst efni geta haft mismunandi innri uppbyggingu. Í kristölluðum efnum
+raðast frumeindir, jónir eða sameindir reglulega, en í ókristölluðum
+efnum er röðunin minni.</p>
+<p>Hér verður fjallað um kristalbyggingu, galla í kristalgrindinni og
+ókristölluð efni.</p>
+<section id="kristalbygging">
+<h3><span class="section-number">2.6.1. </span>Kristalbygging<a class="headerlink" href="#kristalbygging" title="Link to this heading"></a></h3>
+<p>Í <strong>kristölluðum efnum</strong> raðast frumeindir, jónir eða sameindir reglulega
+í þrívíðu mynstri. Þessa reglulegu uppröðun má lýsa með
+<strong>kristalgrind</strong> (e. <em>crystal lattice</em>).</p>
+<p>Minnsta eining kristalgrindarinnar sem hægt er að endurtaka í þrjár
+víddir þannig að hún myndi alla kristalgrindina kallast <strong>kristaleining</strong>
+(e. <em>unit cell</em>).</p>
+<figure class="align-center" id="id24">
 <a class="reference internal image-reference" href="_images/Kristallar.png"><img alt="_images/Kristallar.png" src="_images/Kristallar.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.11 </span><span class="caption-text">Regluleg uppröðun einda í kristölluðu efni.</span><a class="headerlink" href="#id24" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<p>BCC (“Body center cubic”) eining (myndin fengin úr Callister, 2003)</p>
-<figure class="align-center">
+<p>Stöðug kristalbygging leitast við að hafa sem lægsta mögulega orku.
+Við uppröðun eindanna þarf jafnframt að vera rafhlutleysi og pökkun
+þeirra verður eins þétt og aðstæður leyfa.</p>
+<p>Margar mismunandi kristalgrindur eru mögulegar. Alls eru skilgreindar
+14 mismunandi grindargerðir, sem byggjast á mismunandi lögun
+kristaleiningarinnar og uppröðun einda innan hennar.</p>
+<p>Meðal þekktustu og algengustu kristalbygginganna eru þrjár
+teningslaga grindur:</p>
+<ul class="simple">
+<li><p><strong>einföld teningsgrind</strong> (e. <em>simple cubic</em>, SC),</p></li>
+<li><p><strong>rúmmiðjuð teningsgrind</strong> (e. <em>body-centered cubic</em>, BCC),</p></li>
+<li><p><strong>hliðmiðjuð teningsgrind</strong> (e. <em>face-centered cubic</em>, FCC).</p></li>
+</ul>
+<p>Í einfaldri teningsgrind, SC, eru frumeindir staðsettar í hornum
+kristaleiningarinnar.</p>
+<p>Í rúmmiðjaðri teningsgrind, BCC, eru frumeindir í hornunum og auk þess ein
+frumeind í miðju kristaleiningarinnar.</p>
+<p>Í hliðmiðjaðri teningsgrind, FCC, eru frumeindir í hornunum og í miðju
+hvers flatar kristaleiningarinnar.</p>
+<figure class="align-center" id="id25">
 <a class="reference internal image-reference" href="_images/BCC.png"><img alt="_images/BCC.png" src="_images/BCC.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.12 </span><span class="caption-text">BCC kristaleining (Rúmmiðjuð teningsgrind).</span><a class="headerlink" href="#id25" title="Link to this image"></a></p>
+</figcaption>
 </figure>
-<p>Kristallagerð er iðulega lýst með samtals fjölda frumeinda sem eru í einingunni, fyrir
-BCC einingu er talan n=8*1/8 +1=2. Útfrá frumeindaradíus má reikna kantstærðir
-einingar og þannig reikna út m.a. þéttleika efnis byggt á grunnuppbyggingu þess.
-Kristallauppbyggingin er sjaldnast gallalaus;</p>
-<div class="video_wrapper" style="">
-<iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Rm-i1c7zr6Q" style="border: 0; height: 430px; width: 100%">
-</iframe></div><figure class="align-center">
-<a class="reference internal image-reference" href="_images/punktfejl.png"><img alt="_images/punktfejl.png" src="_images/punktfejl.png" style="width: 70%;" />
-</a>
-</figure>
-<p>Útfrá kristalgerð efnis má reikna út “op” í kristalnum og þannig sjá hvaða innskotsefni
-geta komist fyrir án þess að valda spennu í efninu.
-Línu- og “skrúfu” gallar í efni valda innri spennu, sem gerir að verkum að efnið gefur sig
-frekar útfrá slíkum göllum;</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="_images/liniefejl.png"><img alt="_images/liniefejl.png" src="_images/liniefejl.png" style="width: 70%;" />
-</a>
-</figure>
-<p>Það ber síðan að hafa í huga að þegar efni, jafnvel kristallað, er samsett úr mismunandi
-frumefnum (eða sama frumefni með mismunandi kristallagerð) þá er efnið ekki endilega
-eins kristallað í heild sinni.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="_images/smasjarmynd.png"><img alt="_images/smasjarmynd.png" src="_images/smasjarmynd.png" style="width: 70%;" />
-</a>
-</figure>
-<p>Smásjármynd af steypujárni með mismunandi uppbyggingu (myndin tekin úr : W. D.
-Callister (2003) Materials Science and Engineering – an Introduction)</p>
-<section id="skrikerfi-e-slip-system">
-<h3><span class="section-number">2.4.1. </span>Skriðkerfi (e. slip system)<a class="headerlink" href="#skrikerfi-e-slip-system" title="Link to this heading"></a></h3>
-<p>Gallar (e. dislocation) í kristalgerðinni geta hreyfst til innan kristalsins. Þessi hreyfing er ekki jafn auðveld í allar áttir. Oftast er eitthvað ákveðið plan sem gallinn á auðveldar með að hreyfast eftir. Slíkt plan er kallað skriðplan (e. slip plane), áttin sem gallinn hreyfist eftir kallast þá skriðstefna (e. slip direction). Saman mynda skriðplanið og skriðstefnan svokallað skriðkerfi (e. slip system). Skriðkerfi er háð kristaluppbyggingu efnisins. Skriðplanið þéttpakkaðasta planið innan kristalsins og skriðstefnan er þéttpakkaðasta stefnan innan skriðplansins. Myndin sýnir skriðkerfi fyrir FCC kristal. Þetta skriðplan hefur þrjár skriðstefnur. Innan kristaleiningarinnar eru fjögur slík plön. Þess vegna eru 4x3 = 12 einstök skriðkerfi í FCC kristal. Sjá töflu.</p>
-<p>Málmar sem eru með FCC eða BCC kristalbyggingu eru með töluvert mörg skriðkerfi (amk. 12). Slíkir málmar eru seigir (e. ductile), þ.e. þeir geta formbreyst mikið áður en þeir brotna, vegna þess að skriðkerfi gera efninu kleift að formbreytast plastískt. Málmar byggðir HCP kristaleiningar með fáum skriðkerfum eru oftast stökkir (e. brittle).</p>
-<p>Þegar við setjum álag á efni sem er byggt upp sem kristall þá mun efnið formbreytast eftir þéttsetnustu stefnunni í þéttsetnasta planinu, því í skriðkerfinu eru stystar bindingar og auðveldast að mynda nýjar.  Því fleiri slík plön sem eru í kristallinum þeim mun seigara er efnið, því hver eind hefur fleiri „undankomu“ leiðir til að tengjast nýjum eindum undir álagi.</p>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/F7e_iWCUfI4" style="border: 0; height: 430px; width: 100%">
-</iframe></div>
-<a href="https://www.youtube.com/watch?v=ku6u7yqNwAc&list=RDCMUCkFj-5ptpNAk3JDN4_vwiVQ&index=2">
-    <span class="button">Annað myndband um FCC og HCP</span>
-</a></section>
+</iframe></div><div class="video_wrapper" style="">
+<iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ku6u7yqNwAc" style="border: 0; height: 430px; width: 100%">
+</iframe></div><section id="fjoldi-frumeinda-i-kristaleiningu">
+<h4><span class="section-number">2.6.1.1. </span>Fjöldi frumeinda í kristaleiningu<a class="headerlink" href="#fjoldi-frumeinda-i-kristaleiningu" title="Link to this heading"></a></h4>
+<p>Frumeindir á mörkum kristaleiningar tilheyra fleiri en einni
+kristaleiningu. Frumeind sem er í horni tenings tilheyrir átta
+aðliggjandi kristaleiningum og telst því sem <span class="math notranslate nohighlight">\(1/8\)</span> frumeindar
+í hverri þeirra. Frumeind sem er í miðju flatar tilheyrir tveimur
+kristaleiningum og telst því sem <span class="math notranslate nohighlight">\(1/2\)</span> frumeind.</p>
+<p>Því tilheyrir að meðaltali:</p>
+<ul class="simple">
+<li><p><strong>1 frumeind</strong> einfaldri teningsgrind (SC) (n=8*1/8=1),</p></li>
+<li><p><strong>2 frumeindir</strong> rúmmiðjaðri teningsgrind (BCC) (n=1+8*1/8=2),</p></li>
+<li><p><strong>4 frumeindir</strong> hliðmiðjaðri teningsgrind (FCC) (n=6*1/2+8*1/8=4).</p></li>
+</ul>
+<p>Rúmmiðjaðar og hliðmiðjaðar teningsgrindur eru algengar í málmum.
+Kristalbygging sama efnis getur jafnvel breyst með hitastigi. Járn er
+dæmi um efni sem getur tekið bæði BCC- og FCC-kristalbyggingu við
+mismunandi hitastig.</p>
+<div class="video_wrapper" style="">
+<iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Rm-i1c7zr6Q" style="border: 0; height: 430px; width: 100%">
+</iframe></div></section>
 </section>
-<section id="efni-sem-ekki-mynda-kristalla">
-<h2><span class="section-number">2.5. </span>Efni sem ekki mynda kristalla<a class="headerlink" href="#efni-sem-ekki-mynda-kristalla" title="Link to this heading"></a></h2>
-<section id="efni-eru-uppbygg-ur-fjollium">
-<h3><span class="section-number">2.5.1. </span>Efni eru uppbyggð úr fjölliðum<a class="headerlink" href="#efni-eru-uppbygg-ur-fjollium" title="Link to this heading"></a></h3>
-<p>Hver fjölliða er keðja af frumefnum, en fjölliður tengjast innbyrðis lauslega og óreglulega
-með t.d. vetnisbindingum.</p>
+<section id="grindargallar">
+<h3><span class="section-number">2.6.2. </span>Grindargallar<a class="headerlink" href="#grindargallar" title="Link to this heading"></a></h3>
+<p>Raunveruleg kristölluð efni hafa ekki fullkomna kristalbyggingu. Í
+kristalgrindinni eru ýmiss konar <strong>grindargallar</strong> (e. <em>lattice defects</em>),
+þ.e. frávik frá reglulegri uppröðun frumeindanna.</p>
+<p>Grindargallar hafa mikil áhrif á eiginleika efna og þá sérstaklega
+aflfræðilega eiginleika þeirra. Þeir hafa meðal annars áhrif á hvernig
+kristölluð efni formbreytast þegar þau verða fyrir álagi.</p>
+<p>Grindargöllum má meðal annars skipta í:</p>
+<ul class="simple">
+<li><p>punktgalla,</p></li>
+<li><p>línugalla eða misgengi.</p></li>
+</ul>
+<section id="punktgallar">
+<h4><span class="section-number">2.6.2.1. </span>Punktgallar<a class="headerlink" href="#punktgallar" title="Link to this heading"></a></h4>
+<p><strong>Punktgallar</strong> (e. <em>point defects</em>) eru staðbundin frávik í
+kristalgrindinni. Þeir geta meðal annars myndast þegar frumeind vantar,
+auka frumeind kemur fyrir á milli reglulegra grindarstaða eða þegar
+frumeind af annarri gerð tekur sæti í kristalgrindinni.</p>
+<p>Helstu dæmi um punktgalla eru:</p>
+<ul class="simple">
+<li><p><strong>eyða</strong> (e. <em>vacancy</em>), þegar frumeind vantar á grindarstað,</p></li>
+<li><p><strong>innskotsfrumeind</strong> (e. <em>interstitial atom</em>), þegar aukafrumeind
+situr á milli reglulegra grindarstaða,</p></li>
+<li><p><strong>staðgengilsfrumeind</strong> (e. <em>substitutional atom</em>), þegar frumeind
+af annarri gerð kemur í stað frumeindar í kristalgrindinni.</p></li>
+</ul>
+<figure class="align-center" id="id26">
+<a class="reference internal image-reference" href="_images/punktfejl.png"><img alt="_images/punktfejl.png" src="_images/punktfejl.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.13 </span><span class="caption-text">Dæmi um punktgalla í kristalgrind.</span><a class="headerlink" href="#id26" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="linugallar-misgengi">
+<h4><span class="section-number">2.6.2.2. </span>Línugallar – misgengi<a class="headerlink" href="#linugallar-misgengi" title="Link to this heading"></a></h4>
+<p><strong>Línugallar</strong>, einnig kallaðir <strong>misgengi</strong> (e. <em>dislocations</em>), eru
+gallar sem ná eftir línu í kristalgrindinni.</p>
+<p>Einfalt dæmi er þegar aukalegt hálft frumeindaplan liggur inni í
+kristalgrindinni. Regluleg uppröðun frumeindanna raskast þá í kringum
+enda hálfplansins.</p>
+<figure class="align-center" id="id27">
+<a class="reference internal image-reference" href="_images/liniefejl.png"><img alt="_images/liniefejl.png" src="_images/liniefejl.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.14 </span><span class="caption-text">Línugalli í kristalgrind.</span><a class="headerlink" href="#id27" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Misgengi skipta miklu máli fyrir aflfræðilega eiginleika kristallaðra efna.
+Hreyfing misgengja gerir frumeindaplönum kleift að færast hvert miðað
+við annað án þess að öll tengi milli tveggja heilla frumeindaplana
+þurfi að rofna samtímis.</p>
+<p>Þetta er ein af meginforsendum þess að málmar geti formbreyst plastískt.</p>
+</section>
+<section id="skri-og-skrikerfi">
+<h4><span class="section-number">2.6.2.3. </span>Skrið og skriðkerfi<a class="headerlink" href="#skri-og-skrikerfi" title="Link to this heading"></a></h4>
+<p>Þegar misgengi færist eftir kristalgrindinni geta frumeindaplön færst
+hvert miðað við annað. Slík hreyfing kallast <strong>skriðhreyfing</strong> (e. <em>slip</em>).</p>
+<p>Skriðhreyfing verður helst eftir ákveðnum flötum og í ákveðnar stefnur innan
+kristalgrindarinnar. Samsetning skriðflatar og skriðstefnu kallast
+<strong>skriðkerfi</strong> (e. <em>slip system</em>).</p>
+<p>Skriðhreyfing á auðveldast með að eiga sér stað þar sem frumeindirnar liggja
+þétt saman.  Því hefur kristalbygging efnisins áhrif á hversu auðveldlega
+það getur formbreyst plastískt. Skriðkerfi er háð kristaluppbyggingu efnisins.
+Skriðplanið þéttpakkaðasta planið innan kristalsins og skriðstefnan er
+þéttpakkaðasta stefnan innan skriðplansins. Skriðplan í FCC kristan hefur þrjár
+skriðstefnur. Innan kristaleiningarinnar eru fjögur slík plön.
+Þess vegna eru 4x3 = 12 einstök skriðkerfi í FCC kristal.</p>
+<p>Hreyfing misgengja og virkni skriðkerfa eru þannig mikilvægur hluti af
+skýringu á sveigjanleika og plastískri formbreytingu málma. Málmar sem eru með FCC eða BCC kristalbyggingu eru með töluvert mörg
+skriðkerfi (amk. 12). Slíkir málmar eru seigir (e. ductile), þ.e.
+þeir geta formbreyst mikið áður en þeir brotna, vegna þess að
+skriðkerfi gera efninu kleift að formbreytast plastískt.
+Málmar byggðir HCP kristaleiningar með fáum skriðkerfum eru oftast
+stökkir (e. brittle).</p>
+<p>Þegar við setjum álag á efni sem er byggt upp sem kristall
+þá mun efnið formbreytast eftir þéttsetnustu stefnunni í
+þéttsetnasta planinu, því í skriðkerfinu eru stystar bindingar
+og auðveldast að mynda nýjar.  Því fleiri slík plön sem eru í
+kristallinum þeim mun seigara er efnið, því hver eind hefur
+fleiri „undankomu“ leiðir til að tengjast nýjum eindum undir álagi.</p>
+</section>
+</section>
+<section id="okristollu-efni">
+<h3><span class="section-number">2.6.3. </span>Ókristölluð efni<a class="headerlink" href="#okristollu-efni" title="Link to this heading"></a></h3>
+<p>Ekki eru öll föst efni kristölluð. Í <strong>ókristölluðum efnum</strong>
+(e. <em>non-crystalline materials</em>) er ekki regluleg langdræg uppröðun
+frumeinda eða sameinda eins og í kristölluðum efnum.</p>
+<p>Það getur þó verið ákveðin staðbundin röðun milli næstu einda. Uppbyggingin
+er því ekki algerlega tilviljanakennd, en mynstrið endurtekur sig ekki
+reglulega um allt efnið.</p>
+<p>Ókristölluð efni geta meðal annars verið byggð úr löngum sameindakeðjum
+eða óreglulegu þrívíðu neti.</p>
+<p>Dæmi um ókristölluð efni eru meðal annars:</p>
+<ul class="simple">
+<li><p>gler,</p></li>
+<li><p>ýmis plastefni,</p></li>
+<li><p>gúmmí,</p></li>
+<li><p>lífræn efni á borð við timbur.</p></li>
+</ul>
+<p>Ókristölluð efni hafa almennt ekki eitt skýrt bræðslumark. Við hitun
+mýkjast þau oft yfir ákveðið hitastigsbil, öfugt við kristölluð efni þar
+sem bráðnun á sér stað við ákveðnara hitastig.</p>
+<section id="fjolliur">
+<h4><span class="section-number">2.6.3.1. </span>Fjölliður<a class="headerlink" href="#fjolliur" title="Link to this heading"></a></h4>
+<p>Mörg ókristölluð efni eru byggð úr <strong>fjölliðum</strong> (e. <em>polymers</em>).
+Fjölliða er stór sameind sem samanstendur af mörgum minni byggingareiningum
+sem tengjast saman í langar keðjur.</p>
+<p>Innan fjölliðukeðjunnar eru yfirleitt sterk fyrsta stigs efnatengi en
+milli keðjanna geta verið veikari annars stigs bindingar, svo sem
+van der Waals-bindingar og vetnistengi.</p>
+<p>Uppröðun keðjanna er oft óregluleg og því myndast ekki regluleg
+kristalgrind um allt efnið.</p>
 <div class="video_wrapper" style="">
 <iframe allowfullscreen="true" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/EP0zfm_FVqc" style="border: 0; height: 430px; width: 100%">
-</iframe></div><p>Dæmi:</p>
+</iframe></div></section>
+<section id="timbur">
+<h4><span class="section-number">2.6.3.2. </span>Timbur<a class="headerlink" href="#timbur" title="Link to this heading"></a></h4>
+<p><strong>Timbur</strong> er náttúrulegt efni sem er að stórum hluta byggt úr
+fjölliðum.</p>
+<p>Helstu fjölliðurnar í viði eru:</p>
 <ul class="simple">
-<li><p>Timbur</p></li>
-<li><p>Plastefni</p></li>
-<li><p>Gúmmí</p></li>
+<li><p><strong>beðmi</strong> (e. <em>cellulose</em>),</p></li>
+<li><p><strong>hálfbeðmi</strong> (e. <em>hemicellulose</em>),</p></li>
+<li><p><strong>tréni</strong> (e. <em>lignin</em>).</p></li>
 </ul>
-<p><strong>Timbur</strong></p>
-<p>Timbur er byggt úr mismunandi náttúrulegum fjölliðum (e. polymer). Fjölliðurnar eru kallaðar beðmi (e. cellulose), hálfbeðmi (e. hemicellulose) og tréni (e. lignin).</p>
-<figure class="align-center">
+<p>Þessar fjölliður raðast saman í flókna innri byggingu sem hefur mikil
+áhrif á styrk, stífleika og rakaeiginleika timburs.</p>
+<figure class="align-center" id="id28">
 <a class="reference internal image-reference" href="_images/timbur.png"><img alt="_images/timbur.png" src="_images/timbur.png" style="width: 70%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.15 </span><span class="caption-text">Uppbygging timburs úr náttúrulegum fjölliðum.</span><a class="headerlink" href="#id28" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 <p><span class="bibtex-citation" id="id1">[<a class="reference internal" href="#id8" title="Emil Engelund Thybring and Maria Fredriksson. Wood modification as a tool to understand moisture in wood. Forests, 12(3):372, mar 2021.">TF21</a>]</span></p>
-<p><strong>Plastefni</strong></p>
-<p>Plastefni eru manngerðar fjölliður.</p>
+</section>
+<section id="plastefni">
+<h4><span class="section-number">2.6.3.3. </span>Plastefni<a class="headerlink" href="#plastefni" title="Link to this heading"></a></h4>
+<p><strong>Plastefni</strong> eru að mestu byggð úr manngerðum fjölliðum.</p>
+<p>Eiginleikar plastefna ráðast meðal annars af gerð fjölliðukeðjanna,
+lengd þeirra, tengingum milli keðja og því hvernig keðjurnar raðast
+saman.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="_images/plast1.png"><img alt="_images/plast1.png" src="_images/plast1.png" style="width: 70%;" />
 </a>
@@ -813,42 +1127,184 @@ með t.d. vetnisbindingum.</p>
 </a>
 </figure>
 <p><span class="bibtex-citation" id="id2">[<a class="reference internal" href="#id9" title="GreenChemUofT. Green marketing in the plastic era: honesty or hype? Sep 2019. URL: https://greenchemuoft.wordpress.com/2019/09/13/green-marketing-in-the-plastic-era-honesty-or-hype/.">Gre19</a>]</span></p>
-<p><strong>Gúmmí</strong></p>
-<p>Gúmmí (e. rubber or elastomer) getur ýmist verið náttúrlegt gúmmí eða gerviefni. Náttúrulegt gúmmí er fengið úr gúmmítrjám, gervigúmmí er búið til með fjölliðun á jarðolíuefnum.</p>
 </section>
-<section id="blandefni-disperse-material-og-eytur-kolloider">
-<h3><span class="section-number">2.5.2. </span>Blandefni (disperse material) og þeytur (kolloider)<a class="headerlink" href="#blandefni-disperse-material-og-eytur-kolloider" title="Link to this heading"></a></h3>
-<p>Efni geta verið uppbyggð sem blanda tveggja eða fleiri ólíkra efna sem ekki tengjast
-einhverju af áður nefndum efnafræðilegum böndum heldur fremur eðlisfræðilega
-(“læsast” saman), blandefni, eða að fast efni er hrært upp í leysiefni (þeyta)
-Í þessum tilvikum er iðulega aðeins eitt efni sem myndar samfelldan fasa
-(dispersionsmidlet) og hin efnin eru dreifð, (dispergeret) í samfellda fasanum.</p>
-<p>Dæmi:</p>
+<section id="gummi">
+<h4><span class="section-number">2.6.3.4. </span>Gúmmí<a class="headerlink" href="#gummi" title="Link to this heading"></a></h4>
+<p><strong>Gúmmí</strong> (e. <em>rubber</em> eða <em>elastomer</em>) er fjölliðuefni þar sem
+sameindakeðjurnar geta aflagast mikið og færst til innbyrðis.</p>
+<p>Gúmmí getur verið náttúrulegt eða framleitt með efnasmíði. Náttúrulegt
+gúmmí er unnið úr latexi gúmmítrjáa en margar gerðir gervigúmmís eru
+framleiddar með fjölliðun hráefna úr jarðolíu.</p>
+<p>Sveigjanleiki og teygjanleiki gúmmís tengist því að langar
+fjölliðukeðjurnar geta rétt úr sér við álag og tekið aftur upp
+fyrri lögun þegar álaginu er létt af.</p>
+</section>
+</section>
+</section>
+<section id="blandefni">
+<h2><span class="section-number">2.7. </span>Blandefni<a class="headerlink" href="#blandefni" title="Link to this heading"></a></h2>
+<section id="einsleit-og-misleit-efni">
+<h3><span class="section-number">2.7.1. </span>Einsleit og misleit efni<a class="headerlink" href="#einsleit-og-misleit-efni" title="Link to this heading"></a></h3>
+<p>Efni sem aðeins samanstendur af einu efni er sagt vera <strong>einsleitt</strong>
+(e. <em>homogeneous</em>). Þetta á þó fyrst og fremst við þegar efnið er skoðað
+á stórsæjum skala. Efni sem virðist einsleitt með berum augum getur haft
+mun flóknari uppbyggingu þegar það er skoðað í smásjá.</p>
+<p>Mörg byggingarefni eru samsett úr fleiri en einu efni og eru því
+<strong>misleit</strong> (e. <em>heterogeneous</em>).</p>
+<p>Dæmi um misleit efni eru:</p>
 <ul class="simple">
-<li><p>Trefjaplast (plast; samfelldi fasinn + trefjar)</p></li>
-<li><p>Steypa (Hörðnuð; hörðnuð sementsefja; samfelldi fasinn + fylliefni)</p></li>
-<li><p>Málning (blaut; leysiefni; samfelldi fasinn + fylliefni)</p></li>
+<li><p>steinsteypa, sem samanstendur meðal annars af sementsefju, sandi og möl,</p></li>
+<li><p>plastefni sem innihalda fylliefni</p></li>
+<li><p>trefjaplast, sem samanstendur af glertrefjum og fjölliðum</p></li>
 </ul>
-<p><strong>Steypa</strong></p>
-<figure class="align-center">
+<p>Einsleitir hlutar misleits efnis kallast <strong>fasar</strong> (e. <em>phases</em>).
+Fasi hefur sömu efnafræðilegu og eðlisfræðilegu eiginleika alls staðar
+innan síns svæðis.</p>
+<p>Steinsteypa er gott dæmi um fjölfasa efni. Í henni má meðal annars
+greina sementsefju og steinefni sem mismunandi fasa.</p>
+<figure class="align-center" id="id29">
 <a class="reference internal image-reference" href="_images/steypa.jpg"><img alt="_images/steypa.jpg" src="_images/steypa.jpg" style="width: 100%;" />
 </a>
+<figcaption>
+<p><span class="caption-number">Mynd 2.16 </span><span class="caption-text">Uppbygging steinsteypu á mismunandi stærðarskölum, frá efnisþáttum
+sements og sementsefju á míkróskala yfir í steinefni, múr og
+steinsteypu á stærri skala.</span><a class="headerlink" href="#id29" title="Link to this image"></a></p>
+</figcaption>
 </figure>
 <p><span class="bibtex-citation" id="id3">[<a class="reference internal" href="#id10" title="Rodrigo Mero Sarmento da Silva and Aline da Silva Ramos Barboza. Concrete modeling using micromechanical multiphase models and multiscale analysis. Rev. IBRACON Estrut. Mater., 2023.">dSdSRB23</a>]</span></p>
+<p>Trefjaplast er annað dæmi um misleitt efni. Það er <strong>samsett efni</strong>
+(e. <em>composite material</em>) þar sem glertrefjar eru umluktar
+fjölliðum (plasti).</p>
+<p>Fasarnir tveir gegna mismunandi hlutverkum. Glertrefjarnar veita efninu
+styrk og stífleika en plastið heldur trefjunum saman og flytur
+krafta á milli þeirra.</p>
+</section>
+<section id="fasar-og-dreif-efni">
+<h3><span class="section-number">2.7.2. </span>Fasar og dreifð efni<a class="headerlink" href="#fasar-og-dreif-efni" title="Link to this heading"></a></h3>
+<p>Ef efni samanstendur af tveimur fösum getur annar fasinn verið
+fíndreifður í hinum. Slíkt efni kallast <strong>dreift efni</strong>
+(e. <em>disperse system</em>).</p>
+<p>Fasinn sem er dreifður kallast <strong>dreifður fasi</strong> en fasinn sem myndar
+samfellda umhverfið kallast <strong>samfelldur fasi</strong>.</p>
+<p>Báðir fasarnir geta verið fast efni, vökvi eða gas og því geta myndast
+margar mismunandi gerðir dreifikerfa.</p>
+<table class="docutils align-default" id="id30">
+<caption><span class="caption-number">Tafla 2.1 </span><span class="caption-text">Dæmi um tveggja fasa dreifð efni</span><a class="headerlink" href="#id30" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 18.0%" />
+<col style="width: 18.0%" />
+<col style="width: 25.0%" />
+<col style="width: 39.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dreifður fasi</p></th>
+<th class="head"><p>Samfelldur fasi</p></th>
+<th class="head"><p>Heiti</p></th>
+<th class="head"><p>Dæmi</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fast efni</p></td>
+<td><p>Fast efni</p></td>
+<td><p>Föst lausn</p></td>
+<td><p>Sumar málmblöndur og gler</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fast efni</p></td>
+<td><p>Vökvi</p></td>
+<td><p>Sviflausn</p></td>
+<td><p>Málning fyrir hörðnun eða þornun</p></td>
+</tr>
+<tr class="row-even"><td><p>Fast efni</p></td>
+<td><p>Gas</p></td>
+<td><p>Reykur</p></td>
+<td><p>Ryk í lofti</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vökvi</p></td>
+<td><p>Fast efni</p></td>
+<td><p>Föst þeyta</p></td>
+<td><p>Steinsteypa í hörðnun</p></td>
+</tr>
+<tr class="row-even"><td><p>Vökvi</p></td>
+<td><p>Vökvi</p></td>
+<td><p>Þeyta</p></td>
+<td><p>Málning</p></td>
+</tr>
+<tr class="row-odd"><td><p>Vökvi</p></td>
+<td><p>Gas</p></td>
+<td><p>Úði</p></td>
+<td><p>Þoka í andrúmslofti</p></td>
+</tr>
+<tr class="row-even"><td><p>Gas</p></td>
+<td><p>Fast efni</p></td>
+<td><p>Föst froða</p></td>
+<td><p>Frauðplast</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gas</p></td>
+<td><p>Vökvi</p></td>
+<td><p>Froða</p></td>
+<td><p>Frauðplast í framleiðslu</p></td>
+</tr>
+</tbody>
+</table>
+<p>Í raunverulegum byggingarefnum er ekki alltaf hægt að greina skýrt á milli
+dreifða fasans og samfellda fasans.</p>
+<p>Í frauðplasti má til dæmis líta bæði á plastið og loftið sem samfelldan fasa,
+eftir því hvernig uppbyggingin er skoðuð. Á sama hátt getur verið erfitt að
+ákvarða hvort fasti eða fljótandi fasinn sé samfelldur meðan sement er að
+harðna.</p>
+</section>
+<section id="eytur">
+<h3><span class="section-number">2.7.3. </span>Þeytur<a class="headerlink" href="#eytur" title="Link to this heading"></a></h3>
+<p><strong>Þeyta</strong> (e. <em>emulsion</em>) myndast þegar tveimur vökvum, sem leysast ekki
+upp hvor í öðrum, er blandað saman þannig að annar vökvinn dreifist sem
+smáir dropar í hinum.</p>
+<p>Vökvinn sem myndar dropana er <strong>dreifði fasinn</strong> en vökvinn sem umlykur
+dropana myndar <strong>samfellda fasann</strong>.</p>
+<p>Þeytur hafa tilhneigingu til að skiljast aftur í tvo fasa. Til þess að
+gera þær stöðugri má nota efni sem safnast á mörkum fasanna og draga úr
+tilhneigingu dropanna til að sameinast.</p>
+<p>Dæmi um þeytu er málning.</p>
+</section>
+<section id="kvoulausnir">
+<h3><span class="section-number">2.7.4. </span>Kvoðulausnir<a class="headerlink" href="#kvoulausnir" title="Link to this heading"></a></h3>
+<p><strong>Kvoðulausn</strong> (e. <em>colloid</em>) er blanda þar sem mjög smáar agnir eins efnis
+eru dreifðar í öðru efni.</p>
+<p>Stærð agnanna skiptir máli fyrir hegðun blöndunnar. Í kvoðulausn eru
+agnirnar yfirleitt á stærðarbilinu frá um <span class="math notranslate nohighlight">\(1\)</span> nm upp í
+<span class="math notranslate nohighlight">\(1000\)</span> nm.</p>
+<p>Ef agnirnar eru minni en um <span class="math notranslate nohighlight">\(1\)</span> nm er frekar talað um <strong>lausn</strong>.
+Ef þær eru stærri en um <span class="math notranslate nohighlight">\(1000\)</span> nm verður til grófari blanda þar sem
+agnirnar geta með tímanum fallið til botns.</p>
+<p>Þessu má lýsa á einfaldan hátt:</p>
+<ul class="simple">
+<li><p><strong>lausn:</strong> agnir minni en um <span class="math notranslate nohighlight">\(1\)</span> nm,</p></li>
+<li><p><strong>kvoðulausn:</strong> agnir um <span class="math notranslate nohighlight">\(1\)</span>–<span class="math notranslate nohighlight">\(1000\)</span> nm,</p></li>
+<li><p><strong>grófari blanda:</strong> agnir stærri en um <span class="math notranslate nohighlight">\(1000\)</span> nm.</p></li>
+</ul>
+<p>Í kvoðulausn eru agnirnar því nógu smáar til að haldast dreifðar í
+samfellda fasanum í langan tíma.</p>
+<p>Agnum í kvoðulausn er haldið í stöðugri hreyfingu vegna árekstra við
+sameindir umhverfisins. Þessi óreglulega hreyfing kallast
+<strong>Brown-hreyfing</strong> (e. <em>Brownian motion</em>).</p>
+<p>Yfirborð agnanna getur einnig verið rafhlaðið. Agnir með sömu hleðslu
+hrinda hver annarri frá sér og það getur komið í veg fyrir að þær
+sameinist í stærri agnir og falli til botns.</p>
 </section>
 <section id="gel">
-<h3><span class="section-number">2.5.3. </span>Gel<a class="headerlink" href="#gel" title="Link to this heading"></a></h3>
-<p>Sambland vökva og fasts efnis, þar sem bæði efnin mynda samfelldan fasa
-(kerfisuppbygging eins og í vatnsfylltum svampi).
-Gelið getur tekið upp vökva og eykur þá rúmmál sitt, en rýrnar á ný við vökvatap.</p>
-<p>Dæmi;</p>
-<ul class="simple">
-<li><p>Alkalí-kísil gel</p></li>
-</ul>
+<h3><span class="section-number">2.7.5. </span>Gel<a class="headerlink" href="#gel" title="Link to this heading"></a></h3>
+<p><strong>Gel</strong> myndast þegar agnir í kvoðulausn tengjast saman og mynda
+samhangandi þrívítt net. Vökvinn verður þá bundinn innan netsins og
+efnið fær fasta eða hálffasta lögun.</p>
+<p>Gel er því kerfi þar sem bæði fastur og fljótandi fasi eru samfelldir.
+Fasti fasinn myndar grind eða net en vökvinn fyllir rýmið innan þess.</p>
+<p>Myndun gels úr kvoðulausn kallast <strong>gelmyndun</strong>.</p>
+<p>Gel eru mikilvæg í byggingarefnum. Við hvörf sements við vatn myndast
+til dæmis efni með gelkennda byggingu. Sú bygging hefur afgerandi áhrif
+á eiginleika harðnaðrar sementsefju.</p>
 </section>
 </section>
 <section id="heimildir">
-<h2><span class="section-number">2.6. </span>Heimildir<a class="headerlink" href="#heimildir" title="Link to this heading"></a></h2>
+<h2><span class="section-number">2.8. </span>Heimildir<a class="headerlink" href="#heimildir" title="Link to this heading"></a></h2>
 <div class="docutils container" id="id4">
 <div role="list" class="citation-list">
 <div class="citation" id="id7" role="doc-biblioentry">
@@ -903,8 +1359,8 @@ Gelið getur tekið upp vökva og eykur þá rúmmál sitt, en rýrnar á ný vi
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2026, Efnisfræði | Version 26.10.05.0+762ce30.
-      <span class="lastupdated">Síðast uppfært 2026-10-05 18:07.
+    <p>&#169; Copyright 2026, Efnisfræði | Version 26.10.19.0+ab4b90d.
+      <span class="lastupdated">Síðast uppfært 2026-10-19 16:14.
       </span></p>
   </div>
 
